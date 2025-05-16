@@ -1,3 +1,14 @@
+<div style="display: flex; align-items: center;">
+  <div style="flex: 1; padding-right: 20px;">
+    <img src="./doc/pp.jpeg" alt="César Debeunne" style="width: 150px; border-radius: 50%;"/>
+  </div>
+  <div style="flex: 2;">
+    <h2>César Debeunne</h2>
+    Post Doctoral Researcher @ ISAE-SUPAERO
+    <p><strong>Email:</strong> cesar.debeunne@isae-supaero.fr </p>
+  </div>
+</div>
+
 I am a post doc researcher at ISAE-SUPAERO. I am currently working on state-estimation for robotics application, mostly focusing on Visual Sensors. I have done my PhD under Damien Vivet's supervision on Visual Navigation for Lava Tubes exploration. 
 
 # Publications 📚
