@@ -7,6 +7,10 @@ I am a post doc researcher at ISAE-SUPAERO. I am currently working on state-esti
 - **César Debeunne, Damien Vivet.** "A review of visual-LiDAR fusion based simultaneous localization and mapping." In: *Sensors.* Vol. 20, 7, 2020.
 
 - **César Debeunne, Alex Torres, Damien Vivet.** "SaDVIO: Sparsify and Densify VIO for UGV Traversability Estimation." In: *IEEE Robotics and Automation Letters.* Vol. 9, 10, 2024.
+<p align='left'>
+    <img src="./doc/sadvio.gif" alt="drawing" width="400"/>
+</p>
+
 
 ## International Conference Papers
 
