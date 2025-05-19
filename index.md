@@ -61,6 +61,7 @@ I am a post doc researcher at ISAE-SUPAERO. I am currently working on state-esti
         <img src="https://github-readme-stats.vercel.app/api/pin/?username=ISAE-PNX&amp;repo=SaDVIO&amp;title_color=ac4142" align="center" />
       </a>
     </div>
+  </div>
   <div class="row">
     <div class="col-sm-6">
       <a href="https://github.com/ISAE-PNX/Traversability" target="_blank">
