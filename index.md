@@ -3,11 +3,12 @@
     <img src="./doc/pp.jpeg" alt="César Debeunne" style="width: 150px; border-radius: 50%;"/>
   </div>
   <div style="flex: 2;">
-    <h2>César Debeunne</h2>
     Post Doctoral Researcher @ ISAE-SUPAERO
     <p><strong>Email:</strong> cesar.debeunne@isae-supaero.fr </p>
   </div>
 </div>
+
+<p> </p>
 
 I am a post doc researcher at ISAE-SUPAERO. I am currently working on state-estimation for robotics application, mostly focusing on Visual Sensors. I have done my PhD under Damien Vivet's supervision on Visual Navigation for Lava Tubes exploration. 
 
@@ -37,7 +38,7 @@ I am a post doc researcher at ISAE-SUPAERO. I am currently working on state-esti
     <img src="./doc/sparsif.png" alt="drawing" width="300"/>
 </p>
 
-- **César Debeunne, Damien Vivet, Alex Torres.** "Non-Recovering Field-of-View Imaging-Based SLAM for Lava Tubes Exploration." In: *17th Symposium on Advanced Space Technologies in Robotics and Automation.* 2023.
+- **César Debeunne, Damien Vivet, Alex Torres.** "Non-Recovering Field-of-View Imaging-Based SLAM for Lava Tubes Exploration." In: *17th Symposium on Advanced Space Technologies in Robotics and Automation.* 2023. [[paper](https://hal.science/hal-04248151v1/file/ASTRA___Non_recovering_FoV.pdf),[video](https://youtu.be/TW5_tfyVznA)]
 <p align='center'>
     <img src="./doc/nofov.gif" alt="drawing" width="300"/>
 </p>
