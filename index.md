@@ -12,7 +12,7 @@
 
 <p> </p>
 
-I am a post doc researcher at ISAE-SUPAERO. I am currently working on state-estimation for robotics application, mostly focusing on Visual Sensors. I have done my PhD under Damien Vivet's supervision on Visual Navigation for Lava Tubes exploration. 
+I am a post doc researcher at ISAE-SUPAERO. I am currently working on state-estimation for ground robotics, mostly focusing on Visual Sensors. I have done my PhD under Damien Vivet's supervision on Visual Navigation for Lava Tubes exploration. 
 
 # Publications 📚
 
@@ -52,6 +52,31 @@ I am a post doc researcher at ISAE-SUPAERO. I am currently working on state-esti
     <img src="./doc/cosyslam.png" alt="drawing" width="300"/>
 </p>
 
+# Code 💻
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6">
+      <a href="https://github.com/ISAE-PNX/SaDVIO" target="_blank">
+        <img src="https://github-readme-stats.vercel.app/api/pin/?username=ISAE-PNX&amp;repo=SaDVIO&amp;title_color=ac4142" align="center" />
+      </a>
+    </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <a href="https://github.com/ISAE-PNX/Traversability" target="_blank">
+        <img src="https://github-readme-stats.vercel.app/api/pin/?username=ISAE-PNX&amp;repo=Traversability&amp;title_color=ac4142" align="center" />
+      </a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <a href="https://github.com/ISAE-PNX/LidarStereoCalib" target="_blank">
+        <img src="https://github-readme-stats.vercel.app/api/pin/?username=ISAE-PNX&amp;repo=LidarStereoCalib&amp;title_color=ac4142" align="center" />
+      </a>
+    </div>
+  </div>
+</div>
+
 # Datasets 📦
 
 - [Non Overlapping FoV](https://doi.org/10.34849/SEVFJB)
@@ -61,7 +86,7 @@ I am a post doc researcher at ISAE-SUPAERO. I am currently working on state-esti
 
 - [Martian Dataset](https://doi.org/10.34849/DGLZPE)
 <p align='center'>
-    <img src="./doc/apdx_nofov_dataset.png" alt="drawing" width="300"/>
+    <img src="./doc/apdx_martian_dataset.png" alt="drawing" width="300"/>
 </p>
 
 - [Mine Museum Dataset](https://doi.org/10.34849/IV45CZ)
