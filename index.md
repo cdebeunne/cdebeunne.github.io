@@ -51,3 +51,20 @@ I am a post doc researcher at ISAE-SUPAERO. I am currently working on state-esti
 <p align='center'>
     <img src="./doc/cosyslam.png" alt="drawing" width="300"/>
 </p>
+
+# Datasets 
+
+- [Non Overlapping FoV](https://doi.org/10.34849/SEVFJB)
+<p align='center'>
+    <img src="./doc/apdx_nofov_dataset.png" alt="drawing" width="300"/>
+</p>
+
+- [Martian Dataset](https://doi.org/10.34849/DGLZPE)
+<p align='center'>
+    <img src="./doc/apdx_nofov_dataset.png" alt="drawing" width="300"/>
+</p>
+
+- [Mine Museum Dataset](https://doi.org/10.34849/IV45CZ)
+<p align='center'>
+    <img src="./doc/apdx_mine_dataset.png" alt="drawing" width="300"/>
+</p>
