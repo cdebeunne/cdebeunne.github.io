@@ -52,7 +52,7 @@ I am a post doc researcher at ISAE-SUPAERO. I am currently working on state-esti
     <img src="./doc/cosyslam.png" alt="drawing" width="300"/>
 </p>
 
-# Datasets 
+# Datasets 📦
 
 - [Non Overlapping FoV](https://doi.org/10.34849/SEVFJB)
 <p align='center'>
