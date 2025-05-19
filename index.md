@@ -5,6 +5,8 @@
   <div style="flex: 2;">
     Post Doctoral Researcher @ ISAE-SUPAERO
     <p><strong>Email:</strong> cesar.debeunne@isae-supaero.fr </p>
+    <a href="https://github.com/cdebeunne/cdebeunne.github.io/raw/main/doc/CV_debeunneAnglais.pdf" download>Resume</a> - <a href="https://scholar.google.com/citations?user=tR3VY9IAAAAJ&hl=fr">Scholar</a> - <a href="https://github.com/cdebeunne">Github</a>
+
   </div>
 </div>
 
