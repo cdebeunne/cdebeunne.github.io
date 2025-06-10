@@ -1,7 +1,6 @@
 <map id="isae::APoseEstimator" name="isae::APoseEstimator">
-<area shape="rect" id="node1" title=" " alt="" coords="5,93,165,120"/>
-<area shape="rect" id="node2" href="$classisae_1_1_epipolar_pose_estimator.html" title=" " alt="" coords="213,5,417,32"/>
-<area shape="rect" id="node3" href="$classisae_1_1_epipolar_pose_estimator_custom.html" title=" " alt="" coords="213,57,417,98"/>
-<area shape="rect" id="node4" href="$classisae_1_1_e_s_k_f_estimator.html" title=" " alt="" coords="239,123,392,149"/>
-<area shape="rect" id="node5" href="$classisae_1_1_pn_p_pose_estimator.html" title=" " alt="" coords="228,173,403,200"/>
+<area shape="rect" id="node1" title="Abstract class for relative pose estimation between two frames." alt="" coords="230,5,390,32"/>
+<area shape="rect" id="node2" href="$classisae_1_1_epipolar_pose_estimator.html" title="EpipolarPoseEstimator class for estimating the pose between two frames using Essential Matrix." alt="" coords="5,80,209,107"/>
+<area shape="rect" id="node3" href="$classisae_1_1_e_s_k_f_estimator.html" title="ESKFEstimator class for estimating the transformation between two frames using an EKF." alt="" coords="233,80,387,107"/>
+<area shape="rect" id="node4" href="$classisae_1_1_pn_p_pose_estimator.html" title="PnPPoseEstimator class for estimating the transformation between two frames using PnP." alt="" coords="411,80,585,107"/>
 </map>

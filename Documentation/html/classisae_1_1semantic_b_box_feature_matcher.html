@@ -73,14 +73,17 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Class for matching 2D bouding box features.  
+ <a href="classisae_1_1semantic_b_box_feature_matcher.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="semantic_b_box_feature_matcher_8h_source.html">semanticBBoxFeatureMatcher.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for isae::semanticBBoxFeatureMatcher:</div>
 <div class="dyncontent">
 <div class="center"><img src="classisae_1_1semantic_b_box_feature_matcher__inherit__graph.png" border="0" usemap="#isae_1_1semantic_b_box_feature_matcher_inherit__map" alt="Inheritance graph"/></div>
 <map name="isae_1_1semantic_b_box_feature_matcher_inherit__map" id="isae_1_1semantic_b_box_feature_matcher_inherit__map">
-<area shape="rect" title=" " alt="" coords="5,80,205,121"/>
-<area shape="rect" href="classisae_1_1_a_feature_matcher.html" title=" " alt="" coords="21,5,189,32"/>
+<area shape="rect" title="Class for matching 2D bouding box features." alt="" coords="5,80,205,121"/>
+<area shape="rect" href="classisae_1_1_a_feature_matcher.html" title="Class for matching features between two sets of features." alt="" coords="21,5,189,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -88,8 +91,8 @@ Collaboration diagram for isae::semanticBBoxFeatureMatcher:</div>
 <div class="dyncontent">
 <div class="center"><img src="classisae_1_1semantic_b_box_feature_matcher__coll__graph.png" border="0" usemap="#isae_1_1semantic_b_box_feature_matcher_coll__map" alt="Collaboration graph"/></div>
 <map name="isae_1_1semantic_b_box_feature_matcher_coll__map" id="isae_1_1semantic_b_box_feature_matcher_coll__map">
-<area shape="rect" title=" " alt="" coords="5,80,205,121"/>
-<area shape="rect" href="classisae_1_1_a_feature_matcher.html" title=" " alt="" coords="21,5,189,32"/>
+<area shape="rect" title="Class for matching 2D bouding box features." alt="" coords="5,80,205,121"/>
+<area shape="rect" href="classisae_1_1_a_feature_matcher.html" title="Class for matching features between two sets of features." alt="" coords="21,5,189,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -105,26 +108,40 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac5f819ff77b676c9f49073a67459a608 inherit pub_methods_classisae_1_1_a_feature_matcher"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_a_feature_matcher.html#ac5f819ff77b676c9f49073a67459a608">AFeatureMatcher</a> (std::shared_ptr&lt; <a class="el" href="classisae_1_1_a_feature_detector.html">AFeatureDetector</a> &gt; detector)</td></tr>
 <tr class="separator:ac5f819ff77b676c9f49073a67459a608 inherit pub_methods_classisae_1_1_a_feature_matcher"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a29835e1d1a12848eb1ec6b9e088e17df inherit pub_methods_classisae_1_1_a_feature_matcher"><td class="memItemLeft" align="right" valign="top">virtual uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_a_feature_matcher.html#a29835e1d1a12848eb1ec6b9e088e17df">match</a> (std::vector&lt; std::shared_ptr&lt; <a class="el" href="classisae_1_1_a_feature.html">AFeature</a> &gt;&gt; &amp;features1, std::vector&lt; std::shared_ptr&lt; <a class="el" href="classisae_1_1_a_feature.html">AFeature</a> &gt;&gt; &amp;features2, std::vector&lt; std::shared_ptr&lt; <a class="el" href="classisae_1_1_a_feature.html">AFeature</a> &gt;&gt; &amp;features_init, <a class="el" href="namespaceisae.html#ac61c2f881f902dbfef491caaa5135c9c">vec_match</a> &amp;matches, <a class="el" href="namespaceisae.html#ac61c2f881f902dbfef491caaa5135c9c">vec_match</a> &amp;matches_with_ldmks, int searchAreaWidth=51, int searchAreaHeight=51)</td></tr>
+<tr class="memdesc:a29835e1d1a12848eb1ec6b9e088e17df inherit pub_methods_classisae_1_1_a_feature_matcher"><td class="mdescLeft">&#160;</td><td class="mdescRight">Match features between two sets of features.  <a href="classisae_1_1_a_feature_matcher.html#a29835e1d1a12848eb1ec6b9e088e17df">More...</a><br /></td></tr>
 <tr class="separator:a29835e1d1a12848eb1ec6b9e088e17df inherit pub_methods_classisae_1_1_a_feature_matcher"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ff0e10928bec401e8a720333b0f5eee inherit pub_methods_classisae_1_1_a_feature_matcher"><td class="memItemLeft" align="right" valign="top">virtual uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_a_feature_matcher.html#a5ff0e10928bec401e8a720333b0f5eee">ldmk_match</a> (std::shared_ptr&lt; <a class="el" href="classisae_1_1_image_sensor.html">ImageSensor</a> &gt; &amp;sensor1, <a class="el" href="namespaceisae.html#a77ff2ade1f4fd13fa30f33c347c0d635">vec_shared</a>&lt; <a class="el" href="classisae_1_1_a_landmark.html">ALandmark</a> &gt; &amp;ldmks, int searchAreaWidth=51, int searchAreaHeight=51)</td></tr>
+<tr class="memdesc:a5ff0e10928bec401e8a720333b0f5eee inherit pub_methods_classisae_1_1_a_feature_matcher"><td class="mdescLeft">&#160;</td><td class="mdescRight">Match landmarks with features in a given sensor.  <a href="classisae_1_1_a_feature_matcher.html#a5ff0e10928bec401e8a720333b0f5eee">More...</a><br /></td></tr>
 <tr class="separator:a5ff0e10928bec401e8a720333b0f5eee inherit pub_methods_classisae_1_1_a_feature_matcher"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_methods_classisae_1_1_a_feature_matcher"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classisae_1_1_a_feature_matcher')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classisae_1_1_a_feature_matcher.html">isae::AFeatureMatcher</a></td></tr>
 <tr class="memitem:af6c904aa41ddf4e71e7b2f39831990a5 inherit pro_methods_classisae_1_1_a_feature_matcher"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_a_feature_matcher.html#af6c904aa41ddf4e71e7b2f39831990a5">getPossibleMatchesBetween</a> (const std::vector&lt; std::shared_ptr&lt; <a class="el" href="classisae_1_1_a_feature.html">AFeature</a> &gt;&gt; &amp;features1, const std::vector&lt; std::shared_ptr&lt; <a class="el" href="classisae_1_1_a_feature.html">AFeature</a> &gt;&gt; &amp;features2, const std::vector&lt; std::shared_ptr&lt; <a class="el" href="classisae_1_1_a_feature.html">AFeature</a> &gt;&gt; &amp;features_init, const uint &amp;searchAreaWidth, const uint &amp;searchAreaHeight, <a class="el" href="namespaceisae.html#a1b23acb62d12dec1b83eb3d7b49362f0">vec_feat_matches</a> &amp;matches, <a class="el" href="namespaceisae.html#ad99bd484f3db08c3ef6875f0d11ebc4a">vec_feat_matches_scores</a> &amp;all_scores)</td></tr>
+<tr class="memdesc:af6c904aa41ddf4e71e7b2f39831990a5 inherit pro_methods_classisae_1_1_a_feature_matcher"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get possible matches between two sets of features.  <a href="classisae_1_1_a_feature_matcher.html#af6c904aa41ddf4e71e7b2f39831990a5">More...</a><br /></td></tr>
 <tr class="separator:af6c904aa41ddf4e71e7b2f39831990a5 inherit pro_methods_classisae_1_1_a_feature_matcher"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac7786589d2280c7f9bd3b65ef98c6bca inherit pro_methods_classisae_1_1_a_feature_matcher"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceisae.html#ac61c2f881f902dbfef491caaa5135c9c">vec_match</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_a_feature_matcher.html#ac7786589d2280c7f9bd3b65ef98c6bca">filterMatches</a> (<a class="el" href="namespaceisae.html#a1b23acb62d12dec1b83eb3d7b49362f0">vec_feat_matches</a> &amp;matches12, <a class="el" href="namespaceisae.html#a1b23acb62d12dec1b83eb3d7b49362f0">vec_feat_matches</a> &amp;matches21, <a class="el" href="namespaceisae.html#ad99bd484f3db08c3ef6875f0d11ebc4a">vec_feat_matches_scores</a> &amp;all_scores12, <a class="el" href="namespaceisae.html#ad99bd484f3db08c3ef6875f0d11ebc4a">vec_feat_matches_scores</a> &amp;all_scores21)</td></tr>
+<tr class="memdesc:ac7786589d2280c7f9bd3b65ef98c6bca inherit pro_methods_classisae_1_1_a_feature_matcher"><td class="mdescLeft">&#160;</td><td class="mdescRight">Filter matches based on the first and second best match scores.  <a href="classisae_1_1_a_feature_matcher.html#ac7786589d2280c7f9bd3b65ef98c6bca">More...</a><br /></td></tr>
 <tr class="separator:ac7786589d2280c7f9bd3b65ef98c6bca inherit pro_methods_classisae_1_1_a_feature_matcher"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classisae_1_1_a_feature_matcher"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classisae_1_1_a_feature_matcher')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classisae_1_1_a_feature_matcher.html">isae::AFeatureMatcher</a></td></tr>
 <tr class="memitem:aaab5308a9804b4b1cf00ef208c938630 inherit pro_attribs_classisae_1_1_a_feature_matcher"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classisae_1_1_a_feature_detector.html">AFeatureDetector</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_a_feature_matcher.html#aaab5308a9804b4b1cf00ef208c938630">_detector</a></td></tr>
 <tr class="separator:aaab5308a9804b4b1cf00ef208c938630 inherit pro_attribs_classisae_1_1_a_feature_matcher"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08f922f472e655d06c1da002e50e2691 inherit pro_attribs_classisae_1_1_a_feature_matcher"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_a_feature_matcher.html#a08f922f472e655d06c1da002e50e2691">_first_second_match_score_ratio</a> = 0.9</td></tr>
+<tr class="memitem:a08f922f472e655d06c1da002e50e2691 inherit pro_attribs_classisae_1_1_a_feature_matcher"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_a_feature_matcher.html#a08f922f472e655d06c1da002e50e2691">_first_second_match_score_ratio</a></td></tr>
+<tr class="memdesc:a08f922f472e655d06c1da002e50e2691 inherit pro_attribs_classisae_1_1_a_feature_matcher"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p>feature detector for distance measurement </p>
+</blockquote>
+ <a href="classisae_1_1_a_feature_matcher.html#a08f922f472e655d06c1da002e50e2691">More...</a><br /></td></tr>
 <tr class="separator:a08f922f472e655d06c1da002e50e2691 inherit pro_attribs_classisae_1_1_a_feature_matcher"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6b50dc31aef868ce7f3cb165bcd8f80a inherit pro_attribs_classisae_1_1_a_feature_matcher"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_a_feature_matcher.html#a6b50dc31aef868ce7f3cb165bcd8f80a">_feature_label</a></td></tr>
+<tr class="memdesc:a6b50dc31aef868ce7f3cb165bcd8f80a inherit pro_attribs_classisae_1_1_a_feature_matcher"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p>ratio between the first and second best match score to consider a match valid </p>
+</blockquote>
+ <a href="classisae_1_1_a_feature_matcher.html#a6b50dc31aef868ce7f3cb165bcd8f80a">More...</a><br /></td></tr>
 <tr class="separator:a6b50dc31aef868ce7f3cb165bcd8f80a inherit pro_attribs_classisae_1_1_a_feature_matcher"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Class for matching 2D bouding box features. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a31da985946a2f81116dae9ae3757e7ad"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a31da985946a2f81116dae9ae3757e7ad">&#9670;&nbsp;</a></span>semanticBBoxFeatureMatcher() <span class="overload">[1/2]</span></h2>
 

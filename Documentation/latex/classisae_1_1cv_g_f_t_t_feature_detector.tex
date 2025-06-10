@@ -2,6 +2,11 @@
 \label{classisae_1_1cv_g_f_t_t_feature_detector}\index{isae::cvGFTTFeatureDetector@{isae::cvGFTTFeatureDetector}}
 
 
+Class for detecting and computing G\+F\+TT (Good Features To Track) features using Open\+CV.  
+
+
+
+
 {\ttfamily \#include $<$cv\+G\+F\+T\+T\+Feature\+Detector.\+h$>$}
 
 
@@ -28,13 +33,16 @@ Collaboration diagram for isae\+::cv\+G\+F\+T\+T\+Feature\+Detector\+:\nopagebre
 \mbox{\hyperlink{classisae_1_1cv_g_f_t_t_feature_detector_a7a0cd6e0612f94a8087a12612f48ebf1}{cv\+G\+F\+T\+T\+Feature\+Detector}} (int n, int n\+\_\+per\+\_\+cell, double max\+\_\+matching\+\_\+dist=64)
 \item 
 void \mbox{\hyperlink{classisae_1_1cv_g_f_t_t_feature_detector_abfd8f3bb583d2f5938a7afac201d26f1}{init}} () override
-\item 
-double \mbox{\hyperlink{classisae_1_1cv_g_f_t_t_feature_detector_a2a2c6640cb70f7a1b34964a710617606}{get\+Dist}} (const cv\+::\+Mat \&desc1, const cv\+::\+Mat \&desc2) const override
-\item 
+\begin{DoxyCompactList}\small\item\em Virtual function to initialize the feature detector. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classisae_1_1cv_g_f_t_t_feature_detector_a81a9a393aaad35c23bacd41c289c1883}{compute\+Dist}} (const cv\+::\+Mat \&desc1, const cv\+::\+Mat \&desc2) const override
+\begin{DoxyCompactList}\small\item\em Virtual function to compute the distance between two feature descriptors. \end{DoxyCompactList}\item 
 std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$ $>$ \mbox{\hyperlink{classisae_1_1cv_g_f_t_t_feature_detector_ad8fac5dc9b52e2a938d6277784a91ae7}{detect\+And\+Compute\+Grid}} (const cv\+::\+Mat \&img, const cv\+::\+Mat \&mask, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$ existing\+\_\+features) override
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Virtual function to detect and compute features in a grid (bucketting). \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
+
+\doxysubsection{Detailed Description}
+Class for detecting and computing G\+F\+TT (Good Features To Track) features using Open\+CV. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classisae_1_1cv_g_f_t_t_feature_detector_a7a0cd6e0612f94a8087a12612f48ebf1}\label{classisae_1_1cv_g_f_t_t_feature_detector_a7a0cd6e0612f94a8087a12612f48ebf1}} 
@@ -46,25 +54,49 @@ std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feat
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classisae_1_1cv_g_f_t_t_feature_detector_a81a9a393aaad35c23bacd41c289c1883}\label{classisae_1_1cv_g_f_t_t_feature_detector_a81a9a393aaad35c23bacd41c289c1883}} 
+\index{isae::cvGFTTFeatureDetector@{isae::cvGFTTFeatureDetector}!computeDist@{computeDist}}
+\index{computeDist@{computeDist}!isae::cvGFTTFeatureDetector@{isae::cvGFTTFeatureDetector}}
+\doxysubsubsection{\texorpdfstring{computeDist()}{computeDist()}}
+{\footnotesize\ttfamily double isae\+::cv\+G\+F\+T\+T\+Feature\+Detector\+::compute\+Dist (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{desc1,  }\item[{const cv\+::\+Mat \&}]{desc2 }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Virtual function to compute the distance between two feature descriptors. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em desc1} & The first feature descriptor. \\
+\hline
+{\em desc2} & The second feature descriptor. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classisae_1_1_a_feature_detector_ab4a121be21f0eaeb2ef8fef4b936c07a}{isae\+::\+A\+Feature\+Detector}}.
+
 \mbox{\Hypertarget{classisae_1_1cv_g_f_t_t_feature_detector_ad8fac5dc9b52e2a938d6277784a91ae7}\label{classisae_1_1cv_g_f_t_t_feature_detector_ad8fac5dc9b52e2a938d6277784a91ae7}} 
 \index{isae::cvGFTTFeatureDetector@{isae::cvGFTTFeatureDetector}!detectAndComputeGrid@{detectAndComputeGrid}}
 \index{detectAndComputeGrid@{detectAndComputeGrid}!isae::cvGFTTFeatureDetector@{isae::cvGFTTFeatureDetector}}
 \doxysubsubsection{\texorpdfstring{detectAndComputeGrid()}{detectAndComputeGrid()}}
-{\footnotesize\ttfamily std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$ $>$ isae\+::cv\+G\+F\+T\+T\+Feature\+Detector\+::detect\+And\+Compute\+Grid (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{img,  }\item[{const cv\+::\+Mat \&}]{mask,  }\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$}]{existing\+\_\+features = {\ttfamily std\+:\+:vector$<$std\+:\+:shared\+\_\+ptr$<$\mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}}$>$$>$()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$ $>$ isae\+::cv\+G\+F\+T\+T\+Feature\+Detector\+::detect\+And\+Compute\+Grid (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{img,  }\item[{const cv\+::\+Mat \&}]{mask,  }\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$}]{existing\+\_\+features }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
+
+
+Virtual function to detect and compute features in a grid (bucketting). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em img} & The input image in which to detect features. \\
+\hline
+{\em mask} & An optional mask to specify regions of interest in the image. \\
+\hline
+{\em existing\+\_\+features} & A vector of existing features to consider (optional). \\
+\hline
+\end{DoxyParams}
 
 
 Reimplemented from \mbox{\hyperlink{classisae_1_1_a_open_c_v_feature_detector_a9392ff264585ce082aec6162073fdf18}{isae\+::\+A\+Open\+C\+V\+Feature\+Detector}}.
-
-\mbox{\Hypertarget{classisae_1_1cv_g_f_t_t_feature_detector_a2a2c6640cb70f7a1b34964a710617606}\label{classisae_1_1cv_g_f_t_t_feature_detector_a2a2c6640cb70f7a1b34964a710617606}} 
-\index{isae::cvGFTTFeatureDetector@{isae::cvGFTTFeatureDetector}!getDist@{getDist}}
-\index{getDist@{getDist}!isae::cvGFTTFeatureDetector@{isae::cvGFTTFeatureDetector}}
-\doxysubsubsection{\texorpdfstring{getDist()}{getDist()}}
-{\footnotesize\ttfamily double isae\+::cv\+G\+F\+T\+T\+Feature\+Detector\+::get\+Dist (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{desc1,  }\item[{const cv\+::\+Mat \&}]{desc2 }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
-
-
-
-Implements \mbox{\hyperlink{classisae_1_1_a_feature_detector_ad59496a4d75c886d38c61ef258958cd9}{isae\+::\+A\+Feature\+Detector}}.
 
 \mbox{\Hypertarget{classisae_1_1cv_g_f_t_t_feature_detector_abfd8f3bb583d2f5938a7afac201d26f1}\label{classisae_1_1cv_g_f_t_t_feature_detector_abfd8f3bb583d2f5938a7afac201d26f1}} 
 \index{isae::cvGFTTFeatureDetector@{isae::cvGFTTFeatureDetector}!init@{init}}
@@ -73,6 +105,10 @@ Implements \mbox{\hyperlink{classisae_1_1_a_feature_detector_ad59496a4d75c886d38
 {\footnotesize\ttfamily void isae\+::cv\+G\+F\+T\+T\+Feature\+Detector\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
+
+Virtual function to initialize the feature detector. 
+
+This method should be called before using the detector. 
 
 Implements \mbox{\hyperlink{classisae_1_1_a_feature_detector_a3c92c62951b8003db8428af449830850}{isae\+::\+A\+Feature\+Detector}}.
 

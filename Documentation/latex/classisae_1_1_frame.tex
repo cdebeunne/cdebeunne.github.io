@@ -2,6 +2,11 @@
 \label{classisae_1_1_frame}\index{isae::Frame@{isae::Frame}}
 
 
+A \mbox{\hyperlink{classisae_1_1_frame}{Frame}} class representing a set of sensors and landmarks at a specific timestamp.  
+
+
+
+
 {\ttfamily \#include $<$frame.\+h$>$}
 
 
@@ -25,14 +30,14 @@ Collaboration diagram for isae\+::Frame\+:\nopagebreak
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classisae_1_1_frame_a3668ac17874ef03416c80e5bc8382449}{Frame}} ()
+\mbox{\hyperlink{classisae_1_1_frame_ab98f9bcc310d4178f5ec22017eb4df10}{Frame}} ()=default
 \item 
 void \mbox{\hyperlink{classisae_1_1_frame_ae36dcd629922573e1467cae0b97527a6}{init}} (const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_image_sensor}{Image\+Sensor}} $>$$>$ \&sensors, unsigned long long timestamp)
-\item 
+\begin{DoxyCompactList}\small\item\em Initialization of a frame with images. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classisae_1_1_frame_a42eda3609cf575dae0b3f3b42e6403ef}{init}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_i_m_u}{I\+MU}} $>$ \&imu, unsigned long long timestamp)
-\item 
+\begin{DoxyCompactList}\small\item\em Initialization of a frame with \mbox{\hyperlink{classisae_1_1_i_m_u}{I\+MU}}. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classisae_1_1_frame_abad4a5fd26de05ea1193dd12fa159f15}{init}} (const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_sensor}{A\+Sensor}} $>$$>$ \&sensors, unsigned long long timestamp)
-\item 
+\begin{DoxyCompactList}\small\item\em Initialization of a frame with a set of Sensors. \end{DoxyCompactList}\item 
 std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_image_sensor}{Image\+Sensor}} $>$ $>$ \mbox{\hyperlink{classisae_1_1_frame_a1e2a391d00b61baeeb314087861a2386}{get\+Sensors}} () const
 \item 
 std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_i_m_u}{I\+MU}} $>$ \mbox{\hyperlink{classisae_1_1_frame_a79a5dbf881e512de96f70d21ac513872}{get\+I\+MU}} () const
@@ -40,13 +45,13 @@ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_i_m_u}{I\+MU}} $>$ \mbo
 void \mbox{\hyperlink{classisae_1_1_frame_a761c6a37649e97c865f740f74b362192}{set\+I\+MU}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_i_m_u}{I\+MU}} $>$ \&imu, Eigen\+::\+Affine3d T\+\_\+s\+\_\+f)
 \item 
 void \mbox{\hyperlink{classisae_1_1_frame_a30805199addd2da2d62ddb68662cef6a}{clean\+Sensors}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em free all the pointers related to sensors \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classisae_1_1_frame_a4d38dac10478b0a40b983c40d7049b60}{set\+World2\+Frame\+Transform}} (Eigen\+::\+Affine3d T\+\_\+f\+\_\+w)
-\item 
+\begin{DoxyCompactList}\small\item\em Set the pose of the world wrt the frame. \end{DoxyCompactList}\item 
 Eigen\+::\+Affine3d \mbox{\hyperlink{classisae_1_1_frame_ad74b730253d421a1dbe03c27c125a0fa}{get\+World2\+Frame\+Transform}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Get the pose of the world wrt to the frame. \end{DoxyCompactList}\item 
 Eigen\+::\+Affine3d \mbox{\hyperlink{classisae_1_1_frame_a2b9f26052f968d55c18a1160d88a7255}{get\+Frame2\+World\+Transform}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Get the pose of the frame in the world frame. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classisae_1_1_frame_a17e2046019db1bbe8a2d91f84cc3211f}{add\+Landmark}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_landmark}{A\+Landmark}} $>$ ldmk)
 \item 
 void \mbox{\hyperlink{classisae_1_1_frame_abdf16326f602a45cd5f1557e9b87c89d}{add\+Landmarks}} (\mbox{\hyperlink{namespaceisae_a4b744e0e080a733838eb133deda894aa}{isae\+::typed\+\_\+vec\+\_\+landmarks}} ldmks)
@@ -66,7 +71,7 @@ void \mbox{\hyperlink{classisae_1_1_frame_a20be2dc1d5d93259a332b1f62e196172}{set
 void \mbox{\hyperlink{classisae_1_1_frame_a3ecd3692b6519b239e2b0ff33e991a82}{unset\+Key\+Frame}} ()
 \item 
 bool \mbox{\hyperlink{classisae_1_1_frame_a175151a6b731be7875d5e2ab3f09cb87}{is\+Key\+Frame}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Return true if the frame is a keyframe, false otherwise. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classisae_1_1_frame_a2f9ad57cd43a0b94accc4c306ca7160d}{has\+Prior}} () const
 \item 
 void \mbox{\hyperlink{classisae_1_1_frame_aac2cb6ed9e15cc188355847ff6eb5d61}{set\+Prior}} (Eigen\+::\+Affine3d T\+\_\+prior, \mbox{\hyperlink{namespaceisae_a381cf9a79c09e3831978a493e7a50552}{Vector6d}} inf\+\_\+prior)
@@ -83,20 +88,25 @@ Eigen\+::\+Matrix\+Xd \mbox{\hyperlink{classisae_1_1_frame_ac888c419a565dd1740fd
 \begin{DoxyCompactItemize}
 \item 
 int \mbox{\hyperlink{classisae_1_1_frame_ab01334ab8977b67dbf9fdeac3676c0b3}{\+\_\+id}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Unique ID for the frame, assigned at initialization. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Static Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 static int \mbox{\hyperlink{classisae_1_1_frame_addc97d5c0c0fa01cc08108a4c19803c4}{\+\_\+frame\+\_\+count}} = 0
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Static counter for frame I\+Ds. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+A \mbox{\hyperlink{classisae_1_1_frame}{Frame}} class representing a set of sensors and landmarks at a specific timestamp. 
+
+A frame is the core component of a S\+L\+AM system. It gathers measurements for one or more sensors (e.\+g., cameras, I\+M\+Us) at a specific timestamp. It contains pointers to sensor objects as well as pointer to landmarks that serves for mapping and localization. A frame will be located in space with its pose and eventually, a covariance will be assoiated to it. If a frame is considered as a keyframe, it will be incorporated in a map. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classisae_1_1_frame_a3668ac17874ef03416c80e5bc8382449}\label{classisae_1_1_frame_a3668ac17874ef03416c80e5bc8382449}} 
+\mbox{\Hypertarget{classisae_1_1_frame_ab98f9bcc310d4178f5ec22017eb4df10}\label{classisae_1_1_frame_ab98f9bcc310d4178f5ec22017eb4df10}} 
 \index{isae::Frame@{isae::Frame}!Frame@{Frame}}
 \index{Frame@{Frame}!isae::Frame@{isae::Frame}}
 \doxysubsubsection{\texorpdfstring{Frame()}{Frame()}}
-{\footnotesize\ttfamily isae\+::\+Frame\+::\+Frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily isae\+::\+Frame\+::\+Frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
 
 
 
@@ -125,6 +135,10 @@ static int \mbox{\hyperlink{classisae_1_1_frame_addc97d5c0c0fa01cc08108a4c19803c
 \doxysubsubsection{\texorpdfstring{cleanSensors()}{cleanSensors()}}
 {\footnotesize\ttfamily void isae\+::\+Frame\+::clean\+Sensors (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+
+
+free all the pointers related to sensors 
+
 \mbox{\Hypertarget{classisae_1_1_frame_ac888c419a565dd1740fdb893726d4179}\label{classisae_1_1_frame_ac888c419a565dd1740fdb893726d4179}} 
 \index{isae::Frame@{isae::Frame}!getdTCov@{getdTCov}}
 \index{getdTCov@{getdTCov}!isae::Frame@{isae::Frame}}
@@ -136,6 +150,10 @@ static int \mbox{\hyperlink{classisae_1_1_frame_addc97d5c0c0fa01cc08108a4c19803c
 \index{getFrame2WorldTransform@{getFrame2WorldTransform}!isae::Frame@{isae::Frame}}
 \doxysubsubsection{\texorpdfstring{getFrame2WorldTransform()}{getFrame2WorldTransform()}}
 {\footnotesize\ttfamily Eigen\+::\+Affine3d isae\+::\+Frame\+::get\+Frame2\+World\+Transform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the pose of the frame in the world frame. 
 
 \mbox{\Hypertarget{classisae_1_1_frame_a79a5dbf881e512de96f70d21ac513872}\label{classisae_1_1_frame_a79a5dbf881e512de96f70d21ac513872}} 
 \index{isae::Frame@{isae::Frame}!getIMU@{getIMU}}
@@ -191,6 +209,10 @@ static int \mbox{\hyperlink{classisae_1_1_frame_addc97d5c0c0fa01cc08108a4c19803c
 \doxysubsubsection{\texorpdfstring{getWorld2FrameTransform()}{getWorld2FrameTransform()}}
 {\footnotesize\ttfamily Eigen\+::\+Affine3d isae\+::\+Frame\+::get\+World2\+Frame\+Transform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
+
+
+Get the pose of the world wrt to the frame. 
+
 \mbox{\Hypertarget{classisae_1_1_frame_a2f9ad57cd43a0b94accc4c306ca7160d}\label{classisae_1_1_frame_a2f9ad57cd43a0b94accc4c306ca7160d}} 
 \index{isae::Frame@{isae::Frame}!hasPrior@{hasPrior}}
 \index{hasPrior@{hasPrior}!isae::Frame@{isae::Frame}}
@@ -203,11 +225,19 @@ static int \mbox{\hyperlink{classisae_1_1_frame_addc97d5c0c0fa01cc08108a4c19803c
 \doxysubsubsection{\texorpdfstring{init()}{init()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
 {\footnotesize\ttfamily void isae\+::\+Frame\+::init (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_sensor}{A\+Sensor}} $>$$>$ \&}]{sensors,  }\item[{unsigned long long}]{timestamp }\end{DoxyParamCaption})}
 
+
+
+Initialization of a frame with a set of Sensors. 
+
 \mbox{\Hypertarget{classisae_1_1_frame_ae36dcd629922573e1467cae0b97527a6}\label{classisae_1_1_frame_ae36dcd629922573e1467cae0b97527a6}} 
 \index{isae::Frame@{isae::Frame}!init@{init}}
 \index{init@{init}!isae::Frame@{isae::Frame}}
 \doxysubsubsection{\texorpdfstring{init()}{init()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
 {\footnotesize\ttfamily void isae\+::\+Frame\+::init (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_image_sensor}{Image\+Sensor}} $>$$>$ \&}]{sensors,  }\item[{unsigned long long}]{timestamp }\end{DoxyParamCaption})}
+
+
+
+Initialization of a frame with images. 
 
 \mbox{\Hypertarget{classisae_1_1_frame_a42eda3609cf575dae0b3f3b42e6403ef}\label{classisae_1_1_frame_a42eda3609cf575dae0b3f3b42e6403ef}} 
 \index{isae::Frame@{isae::Frame}!init@{init}}
@@ -215,11 +245,19 @@ static int \mbox{\hyperlink{classisae_1_1_frame_addc97d5c0c0fa01cc08108a4c19803c
 \doxysubsubsection{\texorpdfstring{init()}{init()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
 {\footnotesize\ttfamily void isae\+::\+Frame\+::init (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_i_m_u}{I\+MU}} $>$ \&}]{imu,  }\item[{unsigned long long}]{timestamp }\end{DoxyParamCaption})}
 
+
+
+Initialization of a frame with \mbox{\hyperlink{classisae_1_1_i_m_u}{I\+MU}}. 
+
 \mbox{\Hypertarget{classisae_1_1_frame_a175151a6b731be7875d5e2ab3f09cb87}\label{classisae_1_1_frame_a175151a6b731be7875d5e2ab3f09cb87}} 
 \index{isae::Frame@{isae::Frame}!isKeyFrame@{isKeyFrame}}
 \index{isKeyFrame@{isKeyFrame}!isae::Frame@{isae::Frame}}
 \doxysubsubsection{\texorpdfstring{isKeyFrame()}{isKeyFrame()}}
 {\footnotesize\ttfamily bool isae\+::\+Frame\+::is\+Key\+Frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Return true if the frame is a keyframe, false otherwise. 
 
 \mbox{\Hypertarget{classisae_1_1_frame_a8ee5f76d2842d408908bd0e9843b7899}\label{classisae_1_1_frame_a8ee5f76d2842d408908bd0e9843b7899}} 
 \index{isae::Frame@{isae::Frame}!setdTCov@{setdTCov}}
@@ -251,6 +289,10 @@ static int \mbox{\hyperlink{classisae_1_1_frame_addc97d5c0c0fa01cc08108a4c19803c
 \doxysubsubsection{\texorpdfstring{setWorld2FrameTransform()}{setWorld2FrameTransform()}}
 {\footnotesize\ttfamily void isae\+::\+Frame\+::set\+World2\+Frame\+Transform (\begin{DoxyParamCaption}\item[{Eigen\+::\+Affine3d}]{T\+\_\+f\+\_\+w }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+
+
+Set the pose of the world wrt the frame. 
+
 \mbox{\Hypertarget{classisae_1_1_frame_a3ecd3692b6519b239e2b0ff33e991a82}\label{classisae_1_1_frame_a3ecd3692b6519b239e2b0ff33e991a82}} 
 \index{isae::Frame@{isae::Frame}!unsetKeyFrame@{unsetKeyFrame}}
 \index{unsetKeyFrame@{unsetKeyFrame}!isae::Frame@{isae::Frame}}
@@ -266,11 +308,19 @@ static int \mbox{\hyperlink{classisae_1_1_frame_addc97d5c0c0fa01cc08108a4c19803c
 \doxysubsubsection{\texorpdfstring{\_frame\_count}{\_frame\_count}}
 {\footnotesize\ttfamily int isae\+::\+Frame\+::\+\_\+frame\+\_\+count = 0\hspace{0.3cm}{\ttfamily [static]}}
 
+
+
+Static counter for frame I\+Ds. 
+
 \mbox{\Hypertarget{classisae_1_1_frame_ab01334ab8977b67dbf9fdeac3676c0b3}\label{classisae_1_1_frame_ab01334ab8977b67dbf9fdeac3676c0b3}} 
 \index{isae::Frame@{isae::Frame}!\_id@{\_id}}
 \index{\_id@{\_id}!isae::Frame@{isae::Frame}}
 \doxysubsubsection{\texorpdfstring{\_id}{\_id}}
 {\footnotesize\ttfamily int isae\+::\+Frame\+::\+\_\+id}
+
+
+
+Unique ID for the frame, assigned at initialization. 
 
 
 

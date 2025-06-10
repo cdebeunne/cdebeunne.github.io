@@ -73,14 +73,17 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p><a class="el" href="classisae_1_1_epipolar_pose_estimator.html" title="EpipolarPoseEstimator class for estimating the pose between two frames using Essential Matrix.">EpipolarPoseEstimator</a> class for estimating the pose between two frames using Essential Matrix.  
+ <a href="classisae_1_1_epipolar_pose_estimator.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_epipolar_pose_estimator_8h_source.html">EpipolarPoseEstimator.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for isae::EpipolarPoseEstimator:</div>
 <div class="dyncontent">
 <div class="center"><img src="classisae_1_1_epipolar_pose_estimator__inherit__graph.png" border="0" usemap="#isae_1_1_epipolar_pose_estimator_inherit__map" alt="Inheritance graph"/></div>
 <map name="isae_1_1_epipolar_pose_estimator_inherit__map" id="isae_1_1_epipolar_pose_estimator_inherit__map">
-<area shape="rect" title=" " alt="" coords="5,80,209,107"/>
-<area shape="rect" href="classisae_1_1_a_pose_estimator.html" title=" " alt="" coords="27,5,187,32"/>
+<area shape="rect" title="EpipolarPoseEstimator class for estimating the pose between two frames using Essential Matrix." alt="" coords="5,80,209,107"/>
+<area shape="rect" href="classisae_1_1_a_pose_estimator.html" title="Abstract class for relative pose estimation between two frames." alt="" coords="27,5,187,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -88,8 +91,8 @@ Collaboration diagram for isae::EpipolarPoseEstimator:</div>
 <div class="dyncontent">
 <div class="center"><img src="classisae_1_1_epipolar_pose_estimator__coll__graph.png" border="0" usemap="#isae_1_1_epipolar_pose_estimator_coll__map" alt="Collaboration graph"/></div>
 <map name="isae_1_1_epipolar_pose_estimator_coll__map" id="isae_1_1_epipolar_pose_estimator_coll__map">
-<area shape="rect" title=" " alt="" coords="5,80,209,107"/>
-<area shape="rect" href="classisae_1_1_a_pose_estimator.html" title=" " alt="" coords="27,5,187,32"/>
+<area shape="rect" title="EpipolarPoseEstimator class for estimating the pose between two frames using Essential Matrix." alt="" coords="5,80,209,107"/>
+<area shape="rect" href="classisae_1_1_a_pose_estimator.html" title="Abstract class for relative pose estimation between two frames." alt="" coords="27,5,187,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -100,9 +103,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8effa7b7d2fd51095ff7556664a617af"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_epipolar_pose_estimator.html#a8effa7b7d2fd51095ff7556664a617af">estimateTransformBetween</a> (const std::shared_ptr&lt; <a class="el" href="classisae_1_1_frame.html">Frame</a> &gt; &amp;frame1, const std::shared_ptr&lt; <a class="el" href="classisae_1_1_frame.html">Frame</a> &gt; &amp;frame2, <a class="el" href="namespaceisae.html#a70bf0a9838eb50b6a3fe2be9b79e25be">typed_vec_match</a> &amp;typed_matches, Eigen::Affine3d &amp;dT, Eigen::MatrixXd &amp;covdT) override</td></tr>
 <tr class="separator:a8effa7b7d2fd51095ff7556664a617af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aedf72ca0cefc598b2a6bebfd52f22c1e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_epipolar_pose_estimator.html#aedf72ca0cefc598b2a6bebfd52f22c1e">estimateTransformSensors</a> (const std::shared_ptr&lt; <a class="el" href="classisae_1_1_image_sensor.html">ImageSensor</a> &gt; &amp;sensor1, const std::shared_ptr&lt; <a class="el" href="classisae_1_1_image_sensor.html">ImageSensor</a> &gt; &amp;sensor2, <a class="el" href="namespaceisae.html#ac61c2f881f902dbfef491caaa5135c9c">vec_match</a> &amp;matches, Eigen::Affine3d &amp;dT, Eigen::MatrixXd &amp;covdT)</td></tr>
+<tr class="memdesc:aedf72ca0cefc598b2a6bebfd52f22c1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">A particular implementation of the pose estimation between two sensors.  <a href="classisae_1_1_epipolar_pose_estimator.html#aedf72ca0cefc598b2a6bebfd52f22c1e">More...</a><br /></td></tr>
 <tr class="separator:aedf72ca0cefc598b2a6bebfd52f22c1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="classisae_1_1_epipolar_pose_estimator.html" title="EpipolarPoseEstimator class for estimating the pose between two frames using Essential Matrix.">EpipolarPoseEstimator</a> class for estimating the pose between two frames using Essential Matrix. </p>
+<p>&#160; Beware: the pose estimated with Essential matrix is up to a scale factor. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a8effa7b7d2fd51095ff7556664a617af"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8effa7b7d2fd51095ff7556664a617af">&#9670;&nbsp;</a></span>estimateTransformBetween() <span class="overload">[1/2]</span></h2>
 
@@ -258,6 +265,9 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>A particular implementation of the pose estimation between two sensors. </p>
+<p>It was implemented for the non overlapping FoV case. </p>
 
 </div>
 </div>

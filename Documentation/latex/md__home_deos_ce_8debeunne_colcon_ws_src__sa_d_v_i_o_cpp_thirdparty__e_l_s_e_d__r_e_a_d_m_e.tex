@@ -1,11 +1,11 @@
 To install Open\+CV ...
 
- \hypertarget{md__home_deos_ce_8debeunne_colcon_ws_src__sa_d_v_i_o_cpp_thirdparty__e_l_s_e_d__r_e_a_d_m_e_autotoc_md0}{}\doxysection{E\+L\+S\+E\+D\+: Enhanced Line S\+Egment Drawing}\label{md__home_deos_ce_8debeunne_colcon_ws_src__sa_d_v_i_o_cpp_thirdparty__e_l_s_e_d__r_e_a_d_m_e_autotoc_md0}
+ \hypertarget{md__home_deos_ce_8debeunne_colcon_ws_src__sa_d_v_i_o_cpp_thirdparty__e_l_s_e_d__r_e_a_d_m_e_autotoc_md7}{}\doxysection{E\+L\+S\+E\+D\+: Enhanced Line S\+Egment Drawing}\label{md__home_deos_ce_8debeunne_colcon_ws_src__sa_d_v_i_o_cpp_thirdparty__e_l_s_e_d__r_e_a_d_m_e_autotoc_md7}
 \href{https://colab.research.google.com/github/iago-suarez/ELSED/blob/main/Python_ELSED.ipynb}{\texttt{ }} \href{https://arxiv.org/abs/2108.03144}{\texttt{ }} \href{https://iago-suarez.com/ELSED}{\texttt{ }}
 
 This repository contains the source code of \href{https://doi.org/10.1016/j.patcog.2022.108619}{\texttt{ {\bfseries{E\+L\+S\+E\+D\+: Enhanced Line S\+Egment Drawing}}}} the fastest line segment detector in the literature. It is ideal for resource-\/limited devices like drones of smartphones. Visit the \href{https://iago-suarez.com/ELSED}{\texttt{ {\bfseries{Project Webpage}}}} to try it online!
 
-\hypertarget{md__home_deos_ce_8debeunne_colcon_ws_src__sa_d_v_i_o_cpp_thirdparty__e_l_s_e_d__r_e_a_d_m_e_autotoc_md1}{}\doxysubsection{Dependencies}\label{md__home_deos_ce_8debeunne_colcon_ws_src__sa_d_v_i_o_cpp_thirdparty__e_l_s_e_d__r_e_a_d_m_e_autotoc_md1}
+\hypertarget{md__home_deos_ce_8debeunne_colcon_ws_src__sa_d_v_i_o_cpp_thirdparty__e_l_s_e_d__r_e_a_d_m_e_autotoc_md8}{}\doxysubsection{Dependencies}\label{md__home_deos_ce_8debeunne_colcon_ws_src__sa_d_v_i_o_cpp_thirdparty__e_l_s_e_d__r_e_a_d_m_e_autotoc_md8}
 The code depends on Open\+CV (tested with version 4.\+1.\+1). $<$details$>$
 
 In Ubuntu 18.\+04 compile it from sources with the following instructions\+:
@@ -25,7 +25,7 @@ In Ubuntu 18.\+04 compile it from sources with the following instructions\+:
 \end{DoxyCode}
 
 
-$<$/details$>$\hypertarget{md__home_deos_ce_8debeunne_colcon_ws_src__sa_d_v_i_o_cpp_thirdparty__e_l_s_e_d__r_e_a_d_m_e_autotoc_md2}{}\doxysubsubsection{Using E\+L\+S\+E\+D from python}\label{md__home_deos_ce_8debeunne_colcon_ws_src__sa_d_v_i_o_cpp_thirdparty__e_l_s_e_d__r_e_a_d_m_e_autotoc_md2}
+$<$/details$>$\hypertarget{md__home_deos_ce_8debeunne_colcon_ws_src__sa_d_v_i_o_cpp_thirdparty__e_l_s_e_d__r_e_a_d_m_e_autotoc_md9}{}\doxysubsubsection{Using E\+L\+S\+E\+D from python}\label{md__home_deos_ce_8debeunne_colcon_ws_src__sa_d_v_i_o_cpp_thirdparty__e_l_s_e_d__r_e_a_d_m_e_autotoc_md9}
 To install the python wrappers you just have to run\+: 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{sudo apt-\/get install libopencv-\/dev}
@@ -42,7 +42,7 @@ And you can start playing with it\+:
 \DoxyCodeLine{img = cv2.imread('my\_favourite\_img.jpg', cv2.IMREAD\_GRAYSCALE)}
 \DoxyCodeLine{segments, scores = pyelsed.detect(img)}
 \end{DoxyCode}
-\hypertarget{md__home_deos_ce_8debeunne_colcon_ws_src__sa_d_v_i_o_cpp_thirdparty__e_l_s_e_d__r_e_a_d_m_e_autotoc_md3}{}\doxysubsubsection{Using E\+L\+S\+E\+D from C++}\label{md__home_deos_ce_8debeunne_colcon_ws_src__sa_d_v_i_o_cpp_thirdparty__e_l_s_e_d__r_e_a_d_m_e_autotoc_md3}
+\hypertarget{md__home_deos_ce_8debeunne_colcon_ws_src__sa_d_v_i_o_cpp_thirdparty__e_l_s_e_d__r_e_a_d_m_e_autotoc_md10}{}\doxysubsubsection{Using E\+L\+S\+E\+D from C++}\label{md__home_deos_ce_8debeunne_colcon_ws_src__sa_d_v_i_o_cpp_thirdparty__e_l_s_e_d__r_e_a_d_m_e_autotoc_md10}
 The code contains a demo detecting large and short line segments in one image. The code can be compiled with Cmake\+:
 
 
@@ -61,7 +61,7 @@ The result for the provided image should be\+:
 \DoxyCodeLine{ELSED detected: 305 (large) segments}
 \DoxyCodeLine{ELSED detected: 391 (short) segments}
 \end{DoxyCode}
-\hypertarget{md__home_deos_ce_8debeunne_colcon_ws_src__sa_d_v_i_o_cpp_thirdparty__e_l_s_e_d__r_e_a_d_m_e_autotoc_md4}{}\doxysubsubsection{Cite}\label{md__home_deos_ce_8debeunne_colcon_ws_src__sa_d_v_i_o_cpp_thirdparty__e_l_s_e_d__r_e_a_d_m_e_autotoc_md4}
+\hypertarget{md__home_deos_ce_8debeunne_colcon_ws_src__sa_d_v_i_o_cpp_thirdparty__e_l_s_e_d__r_e_a_d_m_e_autotoc_md11}{}\doxysubsubsection{Cite}\label{md__home_deos_ce_8debeunne_colcon_ws_src__sa_d_v_i_o_cpp_thirdparty__e_l_s_e_d__r_e_a_d_m_e_autotoc_md11}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{@article\{suarez2022elsed,}

@@ -2,6 +2,11 @@
 \label{classisae_1_1_a_open_c_v_feature_detector}\index{isae::AOpenCVFeatureDetector@{isae::AOpenCVFeatureDetector}}
 
 
+\mbox{\hyperlink{classisae_1_1_a_open_c_v_feature_detector}{A\+Open\+C\+V\+Feature\+Detector}} class for detecting and computing features using Open\+CV.  
+
+
+
+
 {\ttfamily \#include $<$a\+Open\+C\+V\+Feature\+Detector.\+h$>$}
 
 
@@ -28,22 +33,27 @@ Collaboration diagram for isae\+::A\+Open\+C\+V\+Feature\+Detector\+:\nopagebrea
 \mbox{\hyperlink{classisae_1_1_a_open_c_v_feature_detector_a3fafc8e14954b4d69f2a2fdc9e82ecab}{A\+Open\+C\+V\+Feature\+Detector}} (int n, int n\+\_\+per\+\_\+cell)
 \item 
 void \mbox{\hyperlink{classisae_1_1_a_open_c_v_feature_detector_a3affc6ff6dbb3b2c2e862a9c64ed24e4}{detect\+And\+Compute}} (const cv\+::\+Mat \&img, const cv\+::\+Mat \&mask, std\+::vector$<$ cv\+::\+Key\+Point $>$ \&keypoints, cv\+::\+Mat \&descriptors, int n\+\_\+points=0)
-\item 
+\begin{DoxyCompactList}\small\item\em Virtual function to detect and compute features in an image. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classisae_1_1_a_open_c_v_feature_detector_a6745a7c3da57cb038f32f1220b44b86c}{compute\+Descriptor}} (const cv\+::\+Mat \&img, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$ \&features)
-\item 
+\begin{DoxyCompactList}\small\item\em Virtual function to compute descriptors for a set of features. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classisae_1_1_a_open_c_v_feature_detector_aa13a3c33f2e9c0c0ba9262f6999e9afd}{retain\+Best}} (std\+::vector$<$ cv\+::\+Key\+Point $>$ \&\+\_\+keypoints, int n)
-\item 
+\begin{DoxyCompactList}\small\item\em Retain the n best keypoints based on their response. \end{DoxyCompactList}\item 
 std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$ $>$ \mbox{\hyperlink{classisae_1_1_a_open_c_v_feature_detector_a9392ff264585ce082aec6162073fdf18}{detect\+And\+Compute\+Grid}} (const cv\+::\+Mat \&img, const cv\+::\+Mat \&mask, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$ existing\+\_\+features=std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$())
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Virtual function to detect and compute features in a grid (bucketting). \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
 cv\+::\+Ptr$<$ cv\+::\+Feature\+Detector $>$ \mbox{\hyperlink{classisae_1_1_a_open_c_v_feature_detector_a5485e07489af94321cf2996230dd657d}{\+\_\+detector}}
 \item 
 cv\+::\+Ptr$<$ cv\+::\+Descriptor\+Extractor $>$ \mbox{\hyperlink{classisae_1_1_a_open_c_v_feature_detector_a5abdc357e397b4c39829e209ebfe927b}{\+\_\+descriptor}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+Stores the opencv detector \end{quote}
+\end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classisae_1_1_a_open_c_v_feature_detector}{A\+Open\+C\+V\+Feature\+Detector}} class for detecting and computing features using Open\+CV. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classisae_1_1_a_open_c_v_feature_detector_a3fafc8e14954b4d69f2a2fdc9e82ecab}\label{classisae_1_1_a_open_c_v_feature_detector_a3fafc8e14954b4d69f2a2fdc9e82ecab}} 
@@ -63,6 +73,17 @@ cv\+::\+Ptr$<$ cv\+::\+Descriptor\+Extractor $>$ \mbox{\hyperlink{classisae_1_1_
 
 
 
+Virtual function to compute descriptors for a set of features. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em img} & The input image from which to compute descriptors. \\
+\hline
+{\em features} & A vector of features for which to compute descriptors. \\
+\hline
+\end{DoxyParams}
+
+
 Implements \mbox{\hyperlink{classisae_1_1_a_feature_detector_a1c1d096dc988a4b91c67f5705dfce437}{isae\+::\+A\+Feature\+Detector}}.
 
 \mbox{\Hypertarget{classisae_1_1_a_open_c_v_feature_detector_a3affc6ff6dbb3b2c2e862a9c64ed24e4}\label{classisae_1_1_a_open_c_v_feature_detector_a3affc6ff6dbb3b2c2e862a9c64ed24e4}} 
@@ -73,14 +94,44 @@ Implements \mbox{\hyperlink{classisae_1_1_a_feature_detector_a1c1d096dc988a4b91c
 
 
 
+Virtual function to detect and compute features in an image. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em img} & The input image in which to detect features. \\
+\hline
+{\em mask} & An optional mask to specify regions of interest in the image. \\
+\hline
+{\em keypoints} & Output vector to store detected keypoints. \\
+\hline
+{\em descriptors} & Output matrix to store computed descriptors. \\
+\hline
+{\em n\+\_\+points} & The number of points to detect (optional, default is 0 which means all). \\
+\hline
+\end{DoxyParams}
+
+
 Implements \mbox{\hyperlink{classisae_1_1_a_feature_detector_ac969a8bbf6b0391dde2349a38e12bfec}{isae\+::\+A\+Feature\+Detector}}.
 
 \mbox{\Hypertarget{classisae_1_1_a_open_c_v_feature_detector_a9392ff264585ce082aec6162073fdf18}\label{classisae_1_1_a_open_c_v_feature_detector_a9392ff264585ce082aec6162073fdf18}} 
 \index{isae::AOpenCVFeatureDetector@{isae::AOpenCVFeatureDetector}!detectAndComputeGrid@{detectAndComputeGrid}}
 \index{detectAndComputeGrid@{detectAndComputeGrid}!isae::AOpenCVFeatureDetector@{isae::AOpenCVFeatureDetector}}
 \doxysubsubsection{\texorpdfstring{detectAndComputeGrid()}{detectAndComputeGrid()}}
-{\footnotesize\ttfamily std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$ $>$ isae\+::\+A\+Open\+C\+V\+Feature\+Detector\+::detect\+And\+Compute\+Grid (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{img,  }\item[{const cv\+::\+Mat \&}]{mask,  }\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$}]{existing\+\_\+features = {\ttfamily std\+:\+:vector$<$std\+:\+:shared\+\_\+ptr$<$\mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}}$>$$>$()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$ $>$ isae\+::\+A\+Open\+C\+V\+Feature\+Detector\+::detect\+And\+Compute\+Grid (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{img,  }\item[{const cv\+::\+Mat \&}]{mask,  }\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$}]{existing\+\_\+features = {\ttfamily std\+:\+:vector$<$~std\+:\+:shared\+\_\+ptr$<$~\mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}}~$>$$>$()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
+
+
+Virtual function to detect and compute features in a grid (bucketting). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em img} & The input image in which to detect features. \\
+\hline
+{\em mask} & An optional mask to specify regions of interest in the image. \\
+\hline
+{\em existing\+\_\+features} & A vector of existing features to consider (optional). \\
+\hline
+\end{DoxyParams}
 
 
 Implements \mbox{\hyperlink{classisae_1_1_a_feature_detector_a821f4dfb0b50649ae737319a1ed1fe07}{isae\+::\+A\+Feature\+Detector}}.
@@ -97,12 +148,22 @@ Reimplemented in \mbox{\hyperlink{classisae_1_1cv_g_f_t_t_feature_detector_ad8fa
 
 
 
+Retain the n best keypoints based on their response. 
+
+
+
 \doxysubsection{Member Data Documentation}
 \mbox{\Hypertarget{classisae_1_1_a_open_c_v_feature_detector_a5abdc357e397b4c39829e209ebfe927b}\label{classisae_1_1_a_open_c_v_feature_detector_a5abdc357e397b4c39829e209ebfe927b}} 
 \index{isae::AOpenCVFeatureDetector@{isae::AOpenCVFeatureDetector}!\_descriptor@{\_descriptor}}
 \index{\_descriptor@{\_descriptor}!isae::AOpenCVFeatureDetector@{isae::AOpenCVFeatureDetector}}
 \doxysubsubsection{\texorpdfstring{\_descriptor}{\_descriptor}}
 {\footnotesize\ttfamily cv\+::\+Ptr$<$cv\+::\+Descriptor\+Extractor$>$ isae\+::\+A\+Open\+C\+V\+Feature\+Detector\+::\+\_\+descriptor\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\begin{quote}
+Stores the opencv detector \end{quote}
+
 
 \mbox{\Hypertarget{classisae_1_1_a_open_c_v_feature_detector_a5485e07489af94321cf2996230dd657d}\label{classisae_1_1_a_open_c_v_feature_detector_a5485e07489af94321cf2996230dd657d}} 
 \index{isae::AOpenCVFeatureDetector@{isae::AOpenCVFeatureDetector}!\_detector@{\_detector}}

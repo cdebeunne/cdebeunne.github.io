@@ -1,9 +1,9 @@
 <map id="isae::AOpenCVFeatureDetector" name="isae::AOpenCVFeatureDetector">
-<area shape="rect" id="node1" title=" " alt="" coords="224,107,447,133"/>
-<area shape="rect" id="node3" href="$classisae_1_1cv_b_r_i_s_k_feature_detector.html" title=" " alt="" coords="495,5,711,32"/>
-<area shape="rect" id="node4" href="$classisae_1_1cv_f_a_s_t_feature_detector.html" title=" " alt="" coords="498,56,707,83"/>
-<area shape="rect" id="node5" href="$classisae_1_1cv_g_f_t_t_feature_detector.html" title=" " alt="" coords="497,107,708,133"/>
-<area shape="rect" id="node6" href="$classisae_1_1cv_k_a_z_e_feature_detector.html" title=" " alt="" coords="497,157,709,184"/>
-<area shape="rect" id="node7" href="$classisae_1_1cv_o_r_b_feature_detector.html" title=" " alt="" coords="500,208,705,235"/>
-<area shape="rect" id="node2" href="$classisae_1_1_a_feature_detector.html" title=" " alt="" coords="5,107,176,133"/>
+<area shape="rect" id="node1" title="AOpenCVFeatureDetector class for detecting and computing features using OpenCV." alt="" coords="224,107,447,133"/>
+<area shape="rect" id="node3" href="$classisae_1_1cv_b_r_i_s_k_feature_detector.html" title="Class for detecting and computing BRISK features using OpenCV." alt="" coords="495,5,711,32"/>
+<area shape="rect" id="node4" href="$classisae_1_1cv_f_a_s_t_feature_detector.html" title="Class for detecting and computing FAST features using OpenCV." alt="" coords="498,56,707,83"/>
+<area shape="rect" id="node5" href="$classisae_1_1cv_g_f_t_t_feature_detector.html" title="Class for detecting and computing GFTT (Good Features To Track) features using OpenCV." alt="" coords="497,107,708,133"/>
+<area shape="rect" id="node6" href="$classisae_1_1cv_k_a_z_e_feature_detector.html" title="Class for detecting and computing KAZE features using OpenCV." alt="" coords="497,157,709,184"/>
+<area shape="rect" id="node7" href="$classisae_1_1cv_o_r_b_feature_detector.html" title="Class for detecting and computing ORB features using OpenCV." alt="" coords="500,208,705,235"/>
+<area shape="rect" id="node2" href="$classisae_1_1_a_feature_detector.html" title="Abstract class for feature detectors." alt="" coords="5,107,176,133"/>
 </map>

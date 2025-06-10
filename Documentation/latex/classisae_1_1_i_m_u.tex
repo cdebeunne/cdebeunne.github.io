@@ -2,12 +2,16 @@
 \label{classisae_1_1_i_m_u}\index{isae::IMU@{isae::IMU}}
 
 
+An Inertial Measurement Unit (\mbox{\hyperlink{classisae_1_1_i_m_u}{I\+MU}}) sensor class.  
+
+
+
+
 {\ttfamily \#include $<$I\+M\+U.\+h$>$}
 
 
 
-Inheritance diagram for isae\+::I\+MU\+:
-\nopagebreak
+Inheritance diagram for isae\+::I\+MU\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -16,8 +20,7 @@ Inheritance diagram for isae\+::I\+MU\+:
 \end{figure}
 
 
-Collaboration diagram for isae\+::I\+MU\+:
-\nopagebreak
+Collaboration diagram for isae\+::I\+MU\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -80,32 +83,49 @@ void \mbox{\hyperlink{classisae_1_1_i_m_u_a4e00222e4a46f3f5438ad14b4b44f67d}{set
 std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_i_m_u}{I\+MU}} $>$ \mbox{\hyperlink{classisae_1_1_i_m_u_a43a1faddbf4a00a69ec4602e938930fd}{get\+Last\+I\+MU}} ()
 \item 
 bool \mbox{\hyperlink{classisae_1_1_i_m_u_a13bd77a973ff36409d64d0dfcac7db31}{process\+I\+MU}} ()
-\item 
-void \mbox{\hyperlink{classisae_1_1_i_m_u_a00dd9671b1f1229a14e3411aaa8e1248}{estimate\+Transform}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&frame1, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&frame2, Eigen\+::\+Affine3d \&dT)
-\item 
+\begin{DoxyCompactList}\small\item\em Process \mbox{\hyperlink{classisae_1_1_i_m_u}{I\+MU}} data to compute pre integration deltas and covariances. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classisae_1_1_i_m_u_aead22f652ff9875513c4d809614bf17a}{estimate\+Transform\+I\+MU}} (Eigen\+::\+Affine3d \&dT)
+\begin{DoxyCompactList}\small\item\em Estimate the transformation between the Last KF and the current frame with pre integration deltas. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classisae_1_1_i_m_u_a48c1128051566a04818f4c4d954b7b9f}{bias\+Delta\+Correction}} (Eigen\+::\+Vector3d d\+\_\+ba, Eigen\+::\+Vector3d d\+\_\+bg)
-\item 
+\begin{DoxyCompactList}\small\item\em Update deltas with biases variations. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classisae_1_1_i_m_u_ab36ef0bc113b3a31dea0e3c2d9f2e6f7}{update\+Biases}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Update biases w.\+r.\+t the previous KF (e.\+g. after optimization) \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
-\item 
-unsigned long long \mbox{\hyperlink{classisae_1_1_i_m_u_aff4a022e41aa445998bb13e2c81afbc2}{\+\_\+timestamp\+\_\+imu}}
-\item 
-Eigen\+::\+Affine3d \mbox{\hyperlink{classisae_1_1_i_m_u_adb9a2f9735174c7cffc5a1aa8da9c0d1}{\+\_\+\+T\+\_\+w\+\_\+f\+\_\+imu}}
 \item 
 Eigen\+::\+Matrix3d \mbox{\hyperlink{classisae_1_1_i_m_u_aea757fb6fb353612d81ccb30aa42371d}{\+\_\+\+J\+\_\+d\+R\+\_\+bg}}
 \item 
 Eigen\+::\+Matrix3d \mbox{\hyperlink{classisae_1_1_i_m_u_aebf1f508ae12fe5714700253094f6aac}{\+\_\+\+J\+\_\+dv\+\_\+ba}}
-\item 
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+Jacobian of the delta rotation w.\+r.\+t the gyro bias \end{quote}
+\end{DoxyCompactList}\item 
 Eigen\+::\+Matrix3d \mbox{\hyperlink{classisae_1_1_i_m_u_a2158e1c9f95b6adb19afdead9056362f}{\+\_\+\+J\+\_\+dv\+\_\+bg}}
-\item 
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+Jacobian of the delta velocity w.\+r.\+t the accel bias \end{quote}
+\end{DoxyCompactList}\item 
 Eigen\+::\+Matrix3d \mbox{\hyperlink{classisae_1_1_i_m_u_a256c0ab7a9cfc8b74f9d1cd6ae6302ce}{\+\_\+\+J\+\_\+dp\+\_\+ba}}
-\item 
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+Jacobian of the delta velocity w.\+r.\+t the gyro bias \end{quote}
+\end{DoxyCompactList}\item 
 Eigen\+::\+Matrix3d \mbox{\hyperlink{classisae_1_1_i_m_u_aafe4d3f23dc321a0f3952204d059d8e9}{\+\_\+\+J\+\_\+dp\+\_\+bg}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+Jacobian of the delta position w.\+r.\+t the accel bias \end{quote}
+\end{DoxyCompactList}\item 
+unsigned long long \mbox{\hyperlink{classisae_1_1_i_m_u_aff4a022e41aa445998bb13e2c81afbc2}{\+\_\+timestamp\+\_\+imu}}
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+Jacobian of the delta position w.\+r.\+t the gyro bias \end{quote}
+\end{DoxyCompactList}\item 
+Eigen\+::\+Affine3d \mbox{\hyperlink{classisae_1_1_i_m_u_adb9a2f9735174c7cffc5a1aa8da9c0d1}{\+\_\+\+T\+\_\+w\+\_\+f\+\_\+imu}}
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+Timestamp stored to avoid dependency on the frame \end{quote}
+\end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
+
+\doxysubsection{Detailed Description}
+An Inertial Measurement Unit (\mbox{\hyperlink{classisae_1_1_i_m_u}{I\+MU}}) sensor class. 
+
+This class represents an \mbox{\hyperlink{classisae_1_1_i_m_u}{I\+MU}} sensor that provides acceleration and gyroscope measurements. It handles the preintegration of \mbox{\hyperlink{classisae_1_1_i_m_u}{I\+MU}} data for use in S\+L\+AM systems. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classisae_1_1_i_m_u_a30041a87a771b101616dcba0e74a2121}\label{classisae_1_1_i_m_u_a30041a87a771b101616dcba0e74a2121}} 
@@ -135,11 +155,19 @@ Eigen\+::\+Matrix3d \mbox{\hyperlink{classisae_1_1_i_m_u_aafe4d3f23dc321a0f39522
 \doxysubsubsection{\texorpdfstring{biasDeltaCorrection()}{biasDeltaCorrection()}}
 {\footnotesize\ttfamily void isae\+::\+I\+M\+U\+::bias\+Delta\+Correction (\begin{DoxyParamCaption}\item[{Eigen\+::\+Vector3d}]{d\+\_\+ba,  }\item[{Eigen\+::\+Vector3d}]{d\+\_\+bg }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{classisae_1_1_i_m_u_a00dd9671b1f1229a14e3411aaa8e1248}\label{classisae_1_1_i_m_u_a00dd9671b1f1229a14e3411aaa8e1248}} 
-\index{isae::IMU@{isae::IMU}!estimateTransform@{estimateTransform}}
-\index{estimateTransform@{estimateTransform}!isae::IMU@{isae::IMU}}
-\doxysubsubsection{\texorpdfstring{estimateTransform()}{estimateTransform()}}
-{\footnotesize\ttfamily void isae\+::\+I\+M\+U\+::estimate\+Transform (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&}]{frame1,  }\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&}]{frame2,  }\item[{Eigen\+::\+Affine3d \&}]{dT }\end{DoxyParamCaption})}
+
+
+Update deltas with biases variations. 
+
+\mbox{\Hypertarget{classisae_1_1_i_m_u_aead22f652ff9875513c4d809614bf17a}\label{classisae_1_1_i_m_u_aead22f652ff9875513c4d809614bf17a}} 
+\index{isae::IMU@{isae::IMU}!estimateTransformIMU@{estimateTransformIMU}}
+\index{estimateTransformIMU@{estimateTransformIMU}!isae::IMU@{isae::IMU}}
+\doxysubsubsection{\texorpdfstring{estimateTransformIMU()}{estimateTransformIMU()}}
+{\footnotesize\ttfamily void isae\+::\+I\+M\+U\+::estimate\+Transform\+I\+MU (\begin{DoxyParamCaption}\item[{Eigen\+::\+Affine3d \&}]{dT }\end{DoxyParamCaption})}
+
+
+
+Estimate the transformation between the Last KF and the current frame with pre integration deltas. 
 
 \mbox{\Hypertarget{classisae_1_1_i_m_u_a5d2ea611b5ddccd699dbe9e81e3d5f40}\label{classisae_1_1_i_m_u_a5d2ea611b5ddccd699dbe9e81e3d5f40}} 
 \index{isae::IMU@{isae::IMU}!getAcc@{getAcc}}
@@ -237,7 +265,11 @@ Eigen\+::\+Matrix3d \mbox{\hyperlink{classisae_1_1_i_m_u_aafe4d3f23dc321a0f39522
 \doxysubsubsection{\texorpdfstring{processIMU()}{processIMU()}}
 {\footnotesize\ttfamily bool isae\+::\+I\+M\+U\+::process\+I\+MU (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{classisae_1_1_i_m_u_addcd35617be749935dfadfedec43f79f}\label{classisae_1_1_i_m_u_addcd35617be749935dfadfedec43f79f}} 
+
+
+Process \mbox{\hyperlink{classisae_1_1_i_m_u}{I\+MU}} data to compute pre integration deltas and covariances. 
+
+This function processes the \mbox{\hyperlink{classisae_1_1_i_m_u}{I\+MU}} data to compute the deltas in position, velocity, and orientation on S\+O(3) It is based on \char`\"{}\+On-\/\+Manifold Preintegration for Real-\/\+Time Visual-\/\+Inertial Odometry\char`\"{} by Forster et al. Source\+: \href{https://arxiv.org/abs/1512.02363}{\texttt{ https\+://arxiv.\+org/abs/1512.\+02363}} \mbox{\Hypertarget{classisae_1_1_i_m_u_addcd35617be749935dfadfedec43f79f}\label{classisae_1_1_i_m_u_addcd35617be749935dfadfedec43f79f}} 
 \index{isae::IMU@{isae::IMU}!setBa@{setBa}}
 \index{setBa@{setBa}!isae::IMU@{isae::IMU}}
 \doxysubsubsection{\texorpdfstring{setBa()}{setBa()}}
@@ -293,6 +325,10 @@ Eigen\+::\+Matrix3d \mbox{\hyperlink{classisae_1_1_i_m_u_aafe4d3f23dc321a0f39522
 
 
 
+Update biases w.\+r.\+t the previous KF (e.\+g. after optimization) 
+
+
+
 \doxysubsection{Member Data Documentation}
 \mbox{\Hypertarget{classisae_1_1_i_m_u_a256c0ab7a9cfc8b74f9d1cd6ae6302ce}\label{classisae_1_1_i_m_u_a256c0ab7a9cfc8b74f9d1cd6ae6302ce}} 
 \index{isae::IMU@{isae::IMU}!\_J\_dp\_ba@{\_J\_dp\_ba}}
@@ -300,11 +336,23 @@ Eigen\+::\+Matrix3d \mbox{\hyperlink{classisae_1_1_i_m_u_aafe4d3f23dc321a0f39522
 \doxysubsubsection{\texorpdfstring{\_J\_dp\_ba}{\_J\_dp\_ba}}
 {\footnotesize\ttfamily Eigen\+::\+Matrix3d isae\+::\+I\+M\+U\+::\+\_\+\+J\+\_\+dp\+\_\+ba}
 
+
+
+\begin{quote}
+Jacobian of the delta velocity w.\+r.\+t the gyro bias \end{quote}
+
+
 \mbox{\Hypertarget{classisae_1_1_i_m_u_aafe4d3f23dc321a0f3952204d059d8e9}\label{classisae_1_1_i_m_u_aafe4d3f23dc321a0f3952204d059d8e9}} 
 \index{isae::IMU@{isae::IMU}!\_J\_dp\_bg@{\_J\_dp\_bg}}
 \index{\_J\_dp\_bg@{\_J\_dp\_bg}!isae::IMU@{isae::IMU}}
 \doxysubsubsection{\texorpdfstring{\_J\_dp\_bg}{\_J\_dp\_bg}}
 {\footnotesize\ttfamily Eigen\+::\+Matrix3d isae\+::\+I\+M\+U\+::\+\_\+\+J\+\_\+dp\+\_\+bg}
+
+
+
+\begin{quote}
+Jacobian of the delta position w.\+r.\+t the accel bias \end{quote}
+
 
 \mbox{\Hypertarget{classisae_1_1_i_m_u_aea757fb6fb353612d81ccb30aa42371d}\label{classisae_1_1_i_m_u_aea757fb6fb353612d81ccb30aa42371d}} 
 \index{isae::IMU@{isae::IMU}!\_J\_dR\_bg@{\_J\_dR\_bg}}
@@ -318,11 +366,23 @@ Eigen\+::\+Matrix3d \mbox{\hyperlink{classisae_1_1_i_m_u_aafe4d3f23dc321a0f39522
 \doxysubsubsection{\texorpdfstring{\_J\_dv\_ba}{\_J\_dv\_ba}}
 {\footnotesize\ttfamily Eigen\+::\+Matrix3d isae\+::\+I\+M\+U\+::\+\_\+\+J\+\_\+dv\+\_\+ba}
 
+
+
+\begin{quote}
+Jacobian of the delta rotation w.\+r.\+t the gyro bias \end{quote}
+
+
 \mbox{\Hypertarget{classisae_1_1_i_m_u_a2158e1c9f95b6adb19afdead9056362f}\label{classisae_1_1_i_m_u_a2158e1c9f95b6adb19afdead9056362f}} 
 \index{isae::IMU@{isae::IMU}!\_J\_dv\_bg@{\_J\_dv\_bg}}
 \index{\_J\_dv\_bg@{\_J\_dv\_bg}!isae::IMU@{isae::IMU}}
 \doxysubsubsection{\texorpdfstring{\_J\_dv\_bg}{\_J\_dv\_bg}}
 {\footnotesize\ttfamily Eigen\+::\+Matrix3d isae\+::\+I\+M\+U\+::\+\_\+\+J\+\_\+dv\+\_\+bg}
+
+
+
+\begin{quote}
+Jacobian of the delta velocity w.\+r.\+t the accel bias \end{quote}
+
 
 \mbox{\Hypertarget{classisae_1_1_i_m_u_adb9a2f9735174c7cffc5a1aa8da9c0d1}\label{classisae_1_1_i_m_u_adb9a2f9735174c7cffc5a1aa8da9c0d1}} 
 \index{isae::IMU@{isae::IMU}!\_T\_w\_f\_imu@{\_T\_w\_f\_imu}}
@@ -330,11 +390,23 @@ Eigen\+::\+Matrix3d \mbox{\hyperlink{classisae_1_1_i_m_u_aafe4d3f23dc321a0f39522
 \doxysubsubsection{\texorpdfstring{\_T\_w\_f\_imu}{\_T\_w\_f\_imu}}
 {\footnotesize\ttfamily Eigen\+::\+Affine3d isae\+::\+I\+M\+U\+::\+\_\+\+T\+\_\+w\+\_\+f\+\_\+imu}
 
+
+
+\begin{quote}
+Timestamp stored to avoid dependency on the frame \end{quote}
+
+
 \mbox{\Hypertarget{classisae_1_1_i_m_u_aff4a022e41aa445998bb13e2c81afbc2}\label{classisae_1_1_i_m_u_aff4a022e41aa445998bb13e2c81afbc2}} 
 \index{isae::IMU@{isae::IMU}!\_timestamp\_imu@{\_timestamp\_imu}}
 \index{\_timestamp\_imu@{\_timestamp\_imu}!isae::IMU@{isae::IMU}}
 \doxysubsubsection{\texorpdfstring{\_timestamp\_imu}{\_timestamp\_imu}}
 {\footnotesize\ttfamily unsigned long long isae\+::\+I\+M\+U\+::\+\_\+timestamp\+\_\+imu}
+
+
+
+\begin{quote}
+Jacobian of the delta position w.\+r.\+t the gyro bias \end{quote}
+
 
 
 

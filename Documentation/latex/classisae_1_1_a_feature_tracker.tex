@@ -2,7 +2,7 @@
 \label{classisae_1_1_a_feature_tracker}\index{isae::AFeatureTracker@{isae::AFeatureTracker}}
 
 
-Feature tracker that requires the two Feature\+Sets to have small differences.  
+Implements feature tracking between two images.  
 
 
 
@@ -26,18 +26,20 @@ Inheritance diagram for isae\+::A\+Feature\+Tracker\+:\nopagebreak
 \mbox{\hyperlink{classisae_1_1_a_feature_tracker_af9ad00224c6bc27992f1a82b30b9887d}{A\+Feature\+Tracker}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature_detector}{A\+Feature\+Detector}} $>$ detector)
 \item 
 virtual uint \mbox{\hyperlink{classisae_1_1_a_feature_tracker_a0d8602a7f6a388354886f8ddb7e3087d}{track}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_image_sensor}{isae\+::\+Image\+Sensor}} $>$ \&sensor1, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_image_sensor}{isae\+::\+Image\+Sensor}} $>$ \&sensor2, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$ \&features\+\_\+to\+\_\+track, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$ \&features\+\_\+init, \mbox{\hyperlink{namespaceisae_ac61c2f881f902dbfef491caaa5135c9c}{vec\+\_\+match}} \&tracks, \mbox{\hyperlink{namespaceisae_ac61c2f881f902dbfef491caaa5135c9c}{vec\+\_\+match}} \&tracks\+\_\+with\+\_\+ldmk, int search\+\_\+width=21, int search\+\_\+height=21, int nlvls\+\_\+pyramids=3, double max\+\_\+err=10, bool backward=false)=0
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Track features between two sensors. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
 std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature_detector}{A\+Feature\+Detector}} $>$ \mbox{\hyperlink{classisae_1_1_a_feature_tracker_a25ea10aaac3fc5728c6254442c21df7f}{\+\_\+detector}}
-\item 
+\begin{DoxyCompactList}\small\item\em feature detector for feature init \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{classisae_1_1_a_feature_tracker_ab701452873601bc8e45b7abdb3368886}{\+\_\+feature\+\_\+label}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em label for the features \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-Feature tracker that requires the two Feature\+Sets to have small differences. 
+Implements feature tracking between two images. 
+
+Contrary to feature matching, feature tracking doesn\textquotesingle{}t require a set of features on the second image. It uses optical flow to estimate the motion of features from the first image to the second image. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classisae_1_1_a_feature_tracker_a4aaf0812387c4bed0f4a3e5fbfd47932}\label{classisae_1_1_a_feature_tracker_a4aaf0812387c4bed0f4a3e5fbfd47932}} 
@@ -63,6 +65,35 @@ Feature tracker that requires the two Feature\+Sets to have small differences.
 
 
 
+Track features between two sensors. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sensor1} & First sensor containing the features to track \\
+\hline
+{\em sensor2} & Second sensor where the features will be tracked \\
+\hline
+{\em features\+\_\+to\+\_\+track} & Vector of features to track from sensor1 \\
+\hline
+{\em features\+\_\+init} & Vector of features initialized in sensor1 \\
+\hline
+{\em tracks} & Output vector to store matched features \\
+\hline
+{\em tracks\+\_\+with\+\_\+ldmk} & Output vector to store matched features with landmarks \\
+\hline
+{\em search\+\_\+width} & Width of the search area for tracking (default is 21) \\
+\hline
+{\em search\+\_\+height} & Height of the search area for tracking (default is 21) \\
+\hline
+{\em nlvls\+\_\+pyramids} & Number of pyramid levels for tracking (default is 3) \\
+\hline
+{\em max\+\_\+err} & Maximum error for tracking (default is 10) \\
+\hline
+{\em backward} & Whether to track features backward to filter outliers (default is false) \\
+\hline
+\end{DoxyParams}
+
+
 Implemented in \mbox{\hyperlink{classisae_1_1_line2_d_feature_tracker_ae9c9f4a610c75ca4e30868c6b6bbd79c}{isae\+::\+Line2\+D\+Feature\+Tracker}}, \mbox{\hyperlink{classisae_1_1semantic_b_box_feature_tracker_a187926d11565d3b73bcdd98701643fdc}{isae\+::semantic\+B\+Box\+Feature\+Tracker}}, and \mbox{\hyperlink{classisae_1_1_point2_d_feature_tracker_adf319ea9a428db3ee456eefded0f5d3e}{isae\+::\+Point2\+D\+Feature\+Tracker}}.
 
 
@@ -74,11 +105,19 @@ Implemented in \mbox{\hyperlink{classisae_1_1_line2_d_feature_tracker_ae9c9f4a61
 \doxysubsubsection{\texorpdfstring{\_detector}{\_detector}}
 {\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classisae_1_1_a_feature_detector}{A\+Feature\+Detector}}$>$ isae\+::\+A\+Feature\+Tracker\+::\+\_\+detector\hspace{0.3cm}{\ttfamily [protected]}}
 
+
+
+feature detector for feature init 
+
 \mbox{\Hypertarget{classisae_1_1_a_feature_tracker_ab701452873601bc8e45b7abdb3368886}\label{classisae_1_1_a_feature_tracker_ab701452873601bc8e45b7abdb3368886}} 
 \index{isae::AFeatureTracker@{isae::AFeatureTracker}!\_feature\_label@{\_feature\_label}}
 \index{\_feature\_label@{\_feature\_label}!isae::AFeatureTracker@{isae::AFeatureTracker}}
 \doxysubsubsection{\texorpdfstring{\_feature\_label}{\_feature\_label}}
 {\footnotesize\ttfamily std\+::string isae\+::\+A\+Feature\+Tracker\+::\+\_\+feature\+\_\+label\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+label for the features 
 
 
 

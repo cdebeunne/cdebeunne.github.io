@@ -2,6 +2,11 @@
 \label{classisae_1_1_line2_d_feature_tracker}\index{isae::Line2DFeatureTracker@{isae::Line2DFeatureTracker}}
 
 
+Class for tracking 2D line features.  
+
+
+
+
 {\ttfamily \#include $<$Line2\+D\+Feature\+Tracker.\+h$>$}
 
 
@@ -30,9 +35,12 @@ Collaboration diagram for isae\+::Line2\+D\+Feature\+Tracker\+:\nopagebreak
 \mbox{\hyperlink{classisae_1_1_line2_d_feature_tracker_ade4c8e2e2499abd8c800a15836bf0048}{Line2\+D\+Feature\+Tracker}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature_detector}{A\+Feature\+Detector}} $>$ detector)
 \item 
 uint \mbox{\hyperlink{classisae_1_1_line2_d_feature_tracker_ae9c9f4a610c75ca4e30868c6b6bbd79c}{track}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_image_sensor}{isae\+::\+Image\+Sensor}} $>$ \&sensor1, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_image_sensor}{isae\+::\+Image\+Sensor}} $>$ \&sensor2, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$ \&features\+\_\+to\+\_\+track, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$ \&features\+\_\+init, \mbox{\hyperlink{namespaceisae_ac61c2f881f902dbfef491caaa5135c9c}{vec\+\_\+match}} \&tracks, \mbox{\hyperlink{namespaceisae_ac61c2f881f902dbfef491caaa5135c9c}{vec\+\_\+match}} \&tracks\+\_\+with\+\_\+ldmk, int search\+\_\+width=21, int search\+\_\+height=21, int nlvls\+\_\+pyramids=3, double max\+\_\+err=10, bool backward=false) override
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Track features between two sensors. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
+
+\doxysubsection{Detailed Description}
+Class for tracking 2D line features. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classisae_1_1_line2_d_feature_tracker_ab95333da0abfebece1991e33777c6bdb}\label{classisae_1_1_line2_d_feature_tracker_ab95333da0abfebece1991e33777c6bdb}} 
@@ -56,6 +64,35 @@ uint \mbox{\hyperlink{classisae_1_1_line2_d_feature_tracker_ae9c9f4a610c75ca4e30
 \doxysubsubsection{\texorpdfstring{track()}{track()}}
 {\footnotesize\ttfamily uint isae\+::\+Line2\+D\+Feature\+Tracker\+::track (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_image_sensor}{isae\+::\+Image\+Sensor}} $>$ \&}]{sensor1,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_image_sensor}{isae\+::\+Image\+Sensor}} $>$ \&}]{sensor2,  }\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$ \&}]{features\+\_\+to\+\_\+track,  }\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$ \&}]{features\+\_\+init,  }\item[{\mbox{\hyperlink{namespaceisae_ac61c2f881f902dbfef491caaa5135c9c}{vec\+\_\+match}} \&}]{tracks,  }\item[{\mbox{\hyperlink{namespaceisae_ac61c2f881f902dbfef491caaa5135c9c}{vec\+\_\+match}} \&}]{tracks\+\_\+with\+\_\+ldmk,  }\item[{int}]{search\+\_\+width = {\ttfamily 21},  }\item[{int}]{search\+\_\+height = {\ttfamily 21},  }\item[{int}]{nlvls\+\_\+pyramids = {\ttfamily 3},  }\item[{double}]{max\+\_\+err = {\ttfamily 10},  }\item[{bool}]{backward = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
+
+
+Track features between two sensors. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sensor1} & First sensor containing the features to track \\
+\hline
+{\em sensor2} & Second sensor where the features will be tracked \\
+\hline
+{\em features\+\_\+to\+\_\+track} & Vector of features to track from sensor1 \\
+\hline
+{\em features\+\_\+init} & Vector of features initialized in sensor1 \\
+\hline
+{\em tracks} & Output vector to store matched features \\
+\hline
+{\em tracks\+\_\+with\+\_\+ldmk} & Output vector to store matched features with landmarks \\
+\hline
+{\em search\+\_\+width} & Width of the search area for tracking (default is 21) \\
+\hline
+{\em search\+\_\+height} & Height of the search area for tracking (default is 21) \\
+\hline
+{\em nlvls\+\_\+pyramids} & Number of pyramid levels for tracking (default is 3) \\
+\hline
+{\em max\+\_\+err} & Maximum error for tracking (default is 10) \\
+\hline
+{\em backward} & Whether to track features backward to filter outliers (default is false) \\
+\hline
+\end{DoxyParams}
 
 
 Implements \mbox{\hyperlink{classisae_1_1_a_feature_tracker_a0d8602a7f6a388354886f8ddb7e3087d}{isae\+::\+A\+Feature\+Tracker}}.

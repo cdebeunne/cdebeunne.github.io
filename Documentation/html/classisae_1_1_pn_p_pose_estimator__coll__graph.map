@@ -1,4 +1,4 @@
 <map id="isae::PnPPoseEstimator" name="isae::PnPPoseEstimator">
-<area shape="rect" id="node1" title=" " alt="" coords="5,80,180,107"/>
-<area shape="rect" id="node2" href="$classisae_1_1_a_pose_estimator.html" title=" " alt="" coords="13,5,173,32"/>
+<area shape="rect" id="node1" title="PnPPoseEstimator class for estimating the transformation between two frames using PnP." alt="" coords="5,80,180,107"/>
+<area shape="rect" id="node2" href="$classisae_1_1_a_pose_estimator.html" title="Abstract class for relative pose estimation between two frames." alt="" coords="13,5,173,32"/>
 </map>

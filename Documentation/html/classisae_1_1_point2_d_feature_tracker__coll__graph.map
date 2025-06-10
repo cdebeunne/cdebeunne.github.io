@@ -1,4 +1,4 @@
 <map id="isae::Point2DFeatureTracker" name="isae::Point2DFeatureTracker">
-<area shape="rect" id="node1" title=" " alt="" coords="5,80,209,107"/>
-<area shape="rect" id="node2" href="$classisae_1_1_a_feature_tracker.html" title="Feature tracker that requires the two FeatureSets to have small differences." alt="" coords="26,5,189,32"/>
+<area shape="rect" id="node1" title="Class for tracking 2D point features." alt="" coords="5,80,209,107"/>
+<area shape="rect" id="node2" href="$classisae_1_1_a_feature_tracker.html" title="Implements feature tracking between two images." alt="" coords="26,5,189,32"/>
 </map>

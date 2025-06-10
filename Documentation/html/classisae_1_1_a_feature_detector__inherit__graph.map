@@ -1,13 +1,13 @@
 <map id="isae::AFeatureDetector" name="isae::AFeatureDetector">
-<area shape="rect" id="node1" title=" " alt="" coords="5,195,176,221"/>
-<area shape="rect" id="node2" href="$classisae_1_1_a_custom_feature_detector.html" title=" " alt="" coords="225,85,446,112"/>
-<area shape="rect" id="node6" href="$classisae_1_1_a_open_c_v_feature_detector.html" title=" " alt="" coords="224,249,447,276"/>
+<area shape="rect" id="node1" title="Abstract class for feature detectors." alt="" coords="5,195,176,221"/>
+<area shape="rect" id="node2" href="$classisae_1_1_a_custom_feature_detector.html" title="Class for custom feature detection and computation." alt="" coords="225,85,446,112"/>
+<area shape="rect" id="node6" href="$classisae_1_1_a_open_c_v_feature_detector.html" title="AOpenCVFeatureDetector class for detecting and computing features using OpenCV." alt="" coords="224,249,447,276"/>
 <area shape="rect" id="node3" href="$classisae_1_1_csv_keypoint_detector.html" title=" " alt="" coords="505,5,700,32"/>
 <area shape="rect" id="node4" href="$classisae_1_1_line2_d_feature_detector.html" title=" " alt="" coords="499,56,706,83"/>
 <area shape="rect" id="node5" href="$classisae_1_1semantic_b_box_feature_detector.html" title=" " alt="" coords="503,107,703,149"/>
-<area shape="rect" id="node7" href="$classisae_1_1cv_b_r_i_s_k_feature_detector.html" title=" " alt="" coords="495,173,711,200"/>
-<area shape="rect" id="node8" href="$classisae_1_1cv_f_a_s_t_feature_detector.html" title=" " alt="" coords="498,224,707,251"/>
-<area shape="rect" id="node9" href="$classisae_1_1cv_g_f_t_t_feature_detector.html" title=" " alt="" coords="497,275,708,301"/>
-<area shape="rect" id="node10" href="$classisae_1_1cv_k_a_z_e_feature_detector.html" title=" " alt="" coords="497,325,709,352"/>
-<area shape="rect" id="node11" href="$classisae_1_1cv_o_r_b_feature_detector.html" title=" " alt="" coords="500,376,705,403"/>
+<area shape="rect" id="node7" href="$classisae_1_1cv_b_r_i_s_k_feature_detector.html" title="Class for detecting and computing BRISK features using OpenCV." alt="" coords="495,173,711,200"/>
+<area shape="rect" id="node8" href="$classisae_1_1cv_f_a_s_t_feature_detector.html" title="Class for detecting and computing FAST features using OpenCV." alt="" coords="498,224,707,251"/>
+<area shape="rect" id="node9" href="$classisae_1_1cv_g_f_t_t_feature_detector.html" title="Class for detecting and computing GFTT (Good Features To Track) features using OpenCV." alt="" coords="497,275,708,301"/>
+<area shape="rect" id="node10" href="$classisae_1_1cv_k_a_z_e_feature_detector.html" title="Class for detecting and computing KAZE features using OpenCV." alt="" coords="497,325,709,352"/>
+<area shape="rect" id="node11" href="$classisae_1_1cv_o_r_b_feature_detector.html" title="Class for detecting and computing ORB features using OpenCV." alt="" coords="500,376,705,403"/>
 </map>

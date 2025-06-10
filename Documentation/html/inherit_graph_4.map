@@ -1,6 +1,6 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classisae_1_1_a_feature_tracker.html" title="Feature tracker that requires the two FeatureSets to have small differences." alt="" coords="5,56,168,83"/>
-<area shape="rect" id="node2" href="$classisae_1_1_line2_d_feature_tracker.html" title=" " alt="" coords="219,5,417,32"/>
-<area shape="rect" id="node3" href="$classisae_1_1_point2_d_feature_tracker.html" title=" " alt="" coords="216,56,420,83"/>
-<area shape="rect" id="node4" href="$classisae_1_1semantic_b_box_feature_tracker.html" title=" " alt="" coords="218,107,418,149"/>
+<area shape="rect" id="node1" href="$classisae_1_1_a_feature_tracker.html" title="Implements feature tracking between two images." alt="" coords="5,56,168,83"/>
+<area shape="rect" id="node2" href="$classisae_1_1_line2_d_feature_tracker.html" title="Class for tracking 2D line features." alt="" coords="219,5,417,32"/>
+<area shape="rect" id="node3" href="$classisae_1_1_point2_d_feature_tracker.html" title="Class for tracking 2D point features." alt="" coords="216,56,420,83"/>
+<area shape="rect" id="node4" href="$classisae_1_1semantic_b_box_feature_tracker.html" title="Class for tracking 2D bounding boxes features." alt="" coords="218,107,418,149"/>
 </map>

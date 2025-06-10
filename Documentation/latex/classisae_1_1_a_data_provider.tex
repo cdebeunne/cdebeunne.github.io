@@ -2,6 +2,11 @@
 \label{classisae_1_1_a_data_provider}\index{isae::ADataProvider@{isae::ADataProvider}}
 
 
+\mbox{\hyperlink{classisae_1_1_a_data_provider}{A\+Data\+Provider}} class for managing data from various sensors.  
+
+
+
+
 {\ttfamily \#include $<$adataprovider.\+h$>$}
 
 
@@ -19,21 +24,19 @@ Collaboration diagram for isae\+::A\+Data\+Provider\+:\nopagebreak
 \mbox{\hyperlink{classisae_1_1_a_data_provider_ac711bc88d48f5cd36fdf6fa53bebdbc4}{A\+Data\+Provider}} (std\+::string path, \mbox{\hyperlink{structisae_1_1_config}{Config}} slam\+\_\+config)
 \item 
 std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \mbox{\hyperlink{classisae_1_1_a_data_provider_a993cbdb17d53218a29810a2a4150b5d3}{next}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Return the next frame from the queue. \end{DoxyCompactList}\item 
 std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structisae_1_1cam__config}{cam\+\_\+config}} $>$ $>$ \mbox{\hyperlink{classisae_1_1_a_data_provider_a983b1d28a621d70255a26fcc7a636668}{get\+Cam\+Configs}} ()
 \item 
 std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structisae_1_1imu__config}{imu\+\_\+config}} $>$ \mbox{\hyperlink{classisae_1_1_a_data_provider_ac7c22168e60e01f9b731ae48137ffee8}{get\+I\+M\+U\+Config}} ()
 \item 
 int \mbox{\hyperlink{classisae_1_1_a_data_provider_a7a1e7b2cf7f0572c61e64272148e6eb0}{get\+N\+Cam}} ()
 \item 
-int \mbox{\hyperlink{classisae_1_1_a_data_provider_a6fa4686f4ba2382c14c415c889ce30c8}{get\+Timing}} ()
-\item 
 std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_image_sensor}{Image\+Sensor}} $>$ $>$ \mbox{\hyperlink{classisae_1_1_a_data_provider_a91156bf0e35cb4c264579ad0fd6b0e2b}{create\+Image\+Sensors}} (const std\+::vector$<$ cv\+::\+Mat $>$ \&imgs, const std\+::vector$<$ cv\+::\+Mat $>$ \&masks=\{\})
-\item 
+\begin{DoxyCompactList}\small\item\em From raw image to sensor objects. \end{DoxyCompactList}\item 
 std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_i_m_u}{I\+MU}} $>$ \mbox{\hyperlink{classisae_1_1_a_data_provider_abaa5b2916af0956dd29f15b829d8f8c7}{create\+Imu\+Sensor}} (const Eigen\+::\+Vector3d \&acc, const Eigen\+::\+Vector3d \&gyr)
-\item 
+\begin{DoxyCompactList}\small\item\em From raw \mbox{\hyperlink{classisae_1_1_i_m_u}{I\+MU}} measurements to an \mbox{\hyperlink{classisae_1_1_i_m_u}{I\+MU}} sensor object. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classisae_1_1_a_data_provider_ac05837789a891f3e72c5bed1db0335ae}{add\+Frame\+To\+The\+Queue}} (std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_sensor}{A\+Sensor}} $>$$>$ sensors, double time)
-\item 
+\begin{DoxyCompactList}\small\item\em Create a frame from sensors and timestamp and add it to the queue. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classisae_1_1_a_data_provider_a563e851a5a0574491fbdc35fd2e4fc57}{add\+Frame\+To\+The\+Queue}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ frame)
 \end{DoxyCompactItemize}
 \doxysubsection*{Protected Member Functions}
@@ -51,18 +54,31 @@ void \mbox{\hyperlink{classisae_1_1_a_data_provider_a8724327081236326bda7d3c9619
 std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structisae_1_1imu__config}{imu\+\_\+config}} $>$ \mbox{\hyperlink{classisae_1_1_a_data_provider_a5308242300102a9c3065891b3df2550c}{\+\_\+imu\+\_\+config}}
 \item 
 std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structisae_1_1cam__config}{cam\+\_\+config}} $>$ $>$ \mbox{\hyperlink{classisae_1_1_a_data_provider_a6a61549541316d87b018a903bf55b136}{\+\_\+cam\+\_\+configs}}
-\item 
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+\mbox{\hyperlink{classisae_1_1_i_m_u}{I\+MU}} configuration \end{quote}
+\end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classisae_1_1_a_data_provider_a2e868593602b03cb8bb4cde1c2eef3b9}{\+\_\+ncam}}
-\item 
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+Vector of camera configurations \end{quote}
+\end{DoxyCompactList}\item 
 std\+::queue$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ $>$ \mbox{\hyperlink{classisae_1_1_a_data_provider_a02dd1cfaafea2c793933990acda6486d}{\+\_\+frame\+\_\+queue}}
-\item 
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+Number of Image Sensors \end{quote}
+\end{DoxyCompactList}\item 
 \mbox{\hyperlink{structisae_1_1_config}{Config}} \mbox{\hyperlink{classisae_1_1_a_data_provider_af9f0cada9c02783e40496e9a88174fb1}{\+\_\+slam\+\_\+config}}
-\item 
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+Queue of frames to be processed \end{quote}
+\end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classisae_1_1_a_data_provider_a0d3abaa728e7033b023c068a75416ea1}{\+\_\+nframes}}
-\item 
-double \mbox{\hyperlink{classisae_1_1_a_data_provider_a4ab85f09c14f2774d88945d69733401d}{\+\_\+img\+\_\+process\+\_\+dt}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+S\+L\+AM configuration \end{quote}
+\end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classisae_1_1_a_data_provider}{A\+Data\+Provider}} class for managing data from various sensors. 
+
+This class is responsible for loading sensor configurations, processing frames, and managing the queue of frames. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classisae_1_1_a_data_provider_ac711bc88d48f5cd36fdf6fa53bebdbc4}\label{classisae_1_1_a_data_provider_ac711bc88d48f5cd36fdf6fa53bebdbc4}} 
@@ -86,17 +102,29 @@ double \mbox{\hyperlink{classisae_1_1_a_data_provider_a4ab85f09c14f2774d88945d69
 \doxysubsubsection{\texorpdfstring{addFrameToTheQueue()}{addFrameToTheQueue()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily void isae\+::\+A\+Data\+Provider\+::add\+Frame\+To\+The\+Queue (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_sensor}{A\+Sensor}} $>$$>$}]{sensors,  }\item[{double}]{time }\end{DoxyParamCaption})}
 
+
+
+Create a frame from sensors and timestamp and add it to the queue. 
+
 \mbox{\Hypertarget{classisae_1_1_a_data_provider_a91156bf0e35cb4c264579ad0fd6b0e2b}\label{classisae_1_1_a_data_provider_a91156bf0e35cb4c264579ad0fd6b0e2b}} 
 \index{isae::ADataProvider@{isae::ADataProvider}!createImageSensors@{createImageSensors}}
 \index{createImageSensors@{createImageSensors}!isae::ADataProvider@{isae::ADataProvider}}
 \doxysubsubsection{\texorpdfstring{createImageSensors()}{createImageSensors()}}
 {\footnotesize\ttfamily std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_image_sensor}{Image\+Sensor}} $>$ $>$ isae\+::\+A\+Data\+Provider\+::create\+Image\+Sensors (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ cv\+::\+Mat $>$ \&}]{imgs,  }\item[{const std\+::vector$<$ cv\+::\+Mat $>$ \&}]{masks = {\ttfamily \{\}} }\end{DoxyParamCaption})}
 
+
+
+From raw image to sensor objects. 
+
 \mbox{\Hypertarget{classisae_1_1_a_data_provider_abaa5b2916af0956dd29f15b829d8f8c7}\label{classisae_1_1_a_data_provider_abaa5b2916af0956dd29f15b829d8f8c7}} 
 \index{isae::ADataProvider@{isae::ADataProvider}!createImuSensor@{createImuSensor}}
 \index{createImuSensor@{createImuSensor}!isae::ADataProvider@{isae::ADataProvider}}
 \doxysubsubsection{\texorpdfstring{createImuSensor()}{createImuSensor()}}
 {\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_i_m_u}{I\+MU}} $>$ isae\+::\+A\+Data\+Provider\+::create\+Imu\+Sensor (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Vector3d \&}]{acc,  }\item[{const Eigen\+::\+Vector3d \&}]{gyr }\end{DoxyParamCaption})}
+
+
+
+From raw \mbox{\hyperlink{classisae_1_1_i_m_u}{I\+MU}} measurements to an \mbox{\hyperlink{classisae_1_1_i_m_u}{I\+MU}} sensor object. 
 
 \mbox{\Hypertarget{classisae_1_1_a_data_provider_a983b1d28a621d70255a26fcc7a636668}\label{classisae_1_1_a_data_provider_a983b1d28a621d70255a26fcc7a636668}} 
 \index{isae::ADataProvider@{isae::ADataProvider}!getCamConfigs@{getCamConfigs}}
@@ -115,12 +143,6 @@ double \mbox{\hyperlink{classisae_1_1_a_data_provider_a4ab85f09c14f2774d88945d69
 \index{getNCam@{getNCam}!isae::ADataProvider@{isae::ADataProvider}}
 \doxysubsubsection{\texorpdfstring{getNCam()}{getNCam()}}
 {\footnotesize\ttfamily int isae\+::\+A\+Data\+Provider\+::get\+N\+Cam (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-\mbox{\Hypertarget{classisae_1_1_a_data_provider_a6fa4686f4ba2382c14c415c889ce30c8}\label{classisae_1_1_a_data_provider_a6fa4686f4ba2382c14c415c889ce30c8}} 
-\index{isae::ADataProvider@{isae::ADataProvider}!getTiming@{getTiming}}
-\index{getTiming@{getTiming}!isae::ADataProvider@{isae::ADataProvider}}
-\doxysubsubsection{\texorpdfstring{getTiming()}{getTiming()}}
-{\footnotesize\ttfamily int isae\+::\+A\+Data\+Provider\+::get\+Timing (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 \mbox{\Hypertarget{classisae_1_1_a_data_provider_a75b283908e4c7e09245819bfd7b59dce}\label{classisae_1_1_a_data_provider_a75b283908e4c7e09245819bfd7b59dce}} 
 \index{isae::ADataProvider@{isae::ADataProvider}!loadCamConfig@{loadCamConfig}}
@@ -148,6 +170,10 @@ double \mbox{\hyperlink{classisae_1_1_a_data_provider_a4ab85f09c14f2774d88945d69
 
 
 
+Return the next frame from the queue. 
+
+
+
 \doxysubsection{Member Data Documentation}
 \mbox{\Hypertarget{classisae_1_1_a_data_provider_a6a61549541316d87b018a903bf55b136}\label{classisae_1_1_a_data_provider_a6a61549541316d87b018a903bf55b136}} 
 \index{isae::ADataProvider@{isae::ADataProvider}!\_cam\_configs@{\_cam\_configs}}
@@ -155,17 +181,23 @@ double \mbox{\hyperlink{classisae_1_1_a_data_provider_a4ab85f09c14f2774d88945d69
 \doxysubsubsection{\texorpdfstring{\_cam\_configs}{\_cam\_configs}}
 {\footnotesize\ttfamily std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structisae_1_1cam__config}{cam\+\_\+config}}$>$ $>$ isae\+::\+A\+Data\+Provider\+::\+\_\+cam\+\_\+configs\hspace{0.3cm}{\ttfamily [protected]}}
 
+
+
+\begin{quote}
+\mbox{\hyperlink{classisae_1_1_i_m_u}{I\+MU}} configuration \end{quote}
+
+
 \mbox{\Hypertarget{classisae_1_1_a_data_provider_a02dd1cfaafea2c793933990acda6486d}\label{classisae_1_1_a_data_provider_a02dd1cfaafea2c793933990acda6486d}} 
 \index{isae::ADataProvider@{isae::ADataProvider}!\_frame\_queue@{\_frame\_queue}}
 \index{\_frame\_queue@{\_frame\_queue}!isae::ADataProvider@{isae::ADataProvider}}
 \doxysubsubsection{\texorpdfstring{\_frame\_queue}{\_frame\_queue}}
 {\footnotesize\ttfamily std\+::queue$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classisae_1_1_frame}{Frame}}$>$ $>$ isae\+::\+A\+Data\+Provider\+::\+\_\+frame\+\_\+queue\hspace{0.3cm}{\ttfamily [protected]}}
 
-\mbox{\Hypertarget{classisae_1_1_a_data_provider_a4ab85f09c14f2774d88945d69733401d}\label{classisae_1_1_a_data_provider_a4ab85f09c14f2774d88945d69733401d}} 
-\index{isae::ADataProvider@{isae::ADataProvider}!\_img\_process\_dt@{\_img\_process\_dt}}
-\index{\_img\_process\_dt@{\_img\_process\_dt}!isae::ADataProvider@{isae::ADataProvider}}
-\doxysubsubsection{\texorpdfstring{\_img\_process\_dt}{\_img\_process\_dt}}
-{\footnotesize\ttfamily double isae\+::\+A\+Data\+Provider\+::\+\_\+img\+\_\+process\+\_\+dt\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+\begin{quote}
+Number of Image Sensors \end{quote}
+
 
 \mbox{\Hypertarget{classisae_1_1_a_data_provider_a5308242300102a9c3065891b3df2550c}\label{classisae_1_1_a_data_provider_a5308242300102a9c3065891b3df2550c}} 
 \index{isae::ADataProvider@{isae::ADataProvider}!\_imu\_config@{\_imu\_config}}
@@ -179,17 +211,35 @@ double \mbox{\hyperlink{classisae_1_1_a_data_provider_a4ab85f09c14f2774d88945d69
 \doxysubsubsection{\texorpdfstring{\_ncam}{\_ncam}}
 {\footnotesize\ttfamily int isae\+::\+A\+Data\+Provider\+::\+\_\+ncam\hspace{0.3cm}{\ttfamily [protected]}}
 
+
+
+\begin{quote}
+Vector of camera configurations \end{quote}
+
+
 \mbox{\Hypertarget{classisae_1_1_a_data_provider_a0d3abaa728e7033b023c068a75416ea1}\label{classisae_1_1_a_data_provider_a0d3abaa728e7033b023c068a75416ea1}} 
 \index{isae::ADataProvider@{isae::ADataProvider}!\_nframes@{\_nframes}}
 \index{\_nframes@{\_nframes}!isae::ADataProvider@{isae::ADataProvider}}
 \doxysubsubsection{\texorpdfstring{\_nframes}{\_nframes}}
 {\footnotesize\ttfamily int isae\+::\+A\+Data\+Provider\+::\+\_\+nframes\hspace{0.3cm}{\ttfamily [protected]}}
 
+
+
+\begin{quote}
+S\+L\+AM configuration \end{quote}
+
+
 \mbox{\Hypertarget{classisae_1_1_a_data_provider_af9f0cada9c02783e40496e9a88174fb1}\label{classisae_1_1_a_data_provider_af9f0cada9c02783e40496e9a88174fb1}} 
 \index{isae::ADataProvider@{isae::ADataProvider}!\_slam\_config@{\_slam\_config}}
 \index{\_slam\_config@{\_slam\_config}!isae::ADataProvider@{isae::ADataProvider}}
 \doxysubsubsection{\texorpdfstring{\_slam\_config}{\_slam\_config}}
 {\footnotesize\ttfamily \mbox{\hyperlink{structisae_1_1_config}{Config}} isae\+::\+A\+Data\+Provider\+::\+\_\+slam\+\_\+config\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\begin{quote}
+Queue of frames to be processed \end{quote}
+
 
 
 

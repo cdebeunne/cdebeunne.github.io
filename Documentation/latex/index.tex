@@ -1,0 +1,17 @@
+This library provide a modular C++ framework dedicated on research about Visual Odometry (VO) and Visual Inertial Odometry (V\+IO). It also contains implementations of research works done at I\+S\+AE such as\+: factor graph sparsification, traversability estimation with 3D mesh and non overlapping field of view VO. This version is compatible with the middleware R\+O\+S2.
+
+
+
+ \hypertarget{index_autotoc_md1}{}\doxysection{Installation}\label{index_autotoc_md1}
+Here are the dependencies\+:
+\begin{DoxyItemize}
+\item \href{https://github.com/opencv/opencv/tree/4.10.0}{\texttt{ Open\+CV}} for image processing
+\item \href{http://ceres-solver.org/installation.html}{\texttt{ C\+E\+R\+ES}} a non linear solver from google
+\item \href{https://eigen.tuxfamily.org/dox/GettingStarted.html}{\texttt{ Eigen}} a linera algebra library
+\item \href{https://github.com/jbeder/yaml-cpp}{\texttt{ yaml-\/cpp}} to parse config files
+\end{DoxyItemize}
+
+You can either run this code with \href{http://docs.ros.org/en/humble/Installation.html}{\texttt{ R\+O\+S2}}, the famous robotic middleware, or without R\+O\+S2. For now it has been tested with Galactic and Humble. A few changes are needed for Jazzy but only in the ros folder.\hypertarget{index_autotoc_md2}{}\doxysection{Tutorials}\label{index_autotoc_md2}
+\href{md__t_u_t_o.html}{\texttt{ Using Sa\+D\+V\+IO with your own Dataset }}
+
+\href{md__t_u_t_o_l_i_b.html}{\texttt{ Using Sa\+D\+V\+IO as an external library }} 

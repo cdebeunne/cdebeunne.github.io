@@ -2,6 +2,11 @@
 \label{classisae_1_1_e_s_k_f_estimator}\index{isae::ESKFEstimator@{isae::ESKFEstimator}}
 
 
+\mbox{\hyperlink{classisae_1_1_e_s_k_f_estimator}{E\+S\+K\+F\+Estimator}} class for estimating the transformation between two frames using an E\+KF.  
+
+
+
+
 {\ttfamily \#include $<$E\+S\+K\+F\+Estimator.\+h$>$}
 
 
@@ -30,8 +35,13 @@ bool \mbox{\hyperlink{classisae_1_1_e_s_k_f_estimator_a27b3806ec8aa02195ecd4a945
 bool \mbox{\hyperlink{classisae_1_1_e_s_k_f_estimator_ad8039f93a0cca9e50aaf20e462926a8f}{estimate\+Transform\+Between}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&frame1, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&frame2, \mbox{\hyperlink{namespaceisae_a70bf0a9838eb50b6a3fe2be9b79e25be}{typed\+\_\+vec\+\_\+match}} \&typed\+\_\+matches, Eigen\+::\+Affine3d \&dT, Eigen\+::\+Matrix\+Xd \&covdT) override
 \item 
 bool \mbox{\hyperlink{classisae_1_1_e_s_k_f_estimator_a36a7cf339e6802fe3311378ecba85400}{refine\+Triangulation}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&frame)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Refine the triangulation of the landmarks with an E\+S\+KF B\+E\+W\+A\+RE\+: currently being tested. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classisae_1_1_e_s_k_f_estimator}{E\+S\+K\+F\+Estimator}} class for estimating the transformation between two frames using an E\+KF. 
+
+The estimation is done by perfoming an E\+S\+KF update on each landmark (the matches must be associated with landmarks). This allows closed form computation of the covariance of the estimated transformation. 
 
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{classisae_1_1_e_s_k_f_estimator_ad8039f93a0cca9e50aaf20e462926a8f}\label{classisae_1_1_e_s_k_f_estimator_ad8039f93a0cca9e50aaf20e462926a8f}} 
@@ -59,6 +69,10 @@ Implements \mbox{\hyperlink{classisae_1_1_a_pose_estimator_a8bf763cb7583be98c0e0
 \index{refineTriangulation@{refineTriangulation}!isae::ESKFEstimator@{isae::ESKFEstimator}}
 \doxysubsubsection{\texorpdfstring{refineTriangulation()}{refineTriangulation()}}
 {\footnotesize\ttfamily bool isae\+::\+E\+S\+K\+F\+Estimator\+::refine\+Triangulation (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&}]{frame }\end{DoxyParamCaption})}
+
+
+
+Refine the triangulation of the landmarks with an E\+S\+KF B\+E\+W\+A\+RE\+: currently being tested. 
 
 
 

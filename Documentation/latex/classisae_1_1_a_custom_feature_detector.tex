@@ -2,6 +2,11 @@
 \label{classisae_1_1_a_custom_feature_detector}\index{isae::ACustomFeatureDetector@{isae::ACustomFeatureDetector}}
 
 
+Class for custom feature detection and computation.  
+
+
+
+
 {\ttfamily \#include $<$a\+Custom\+Feature\+Detector.\+h$>$}
 
 
@@ -28,13 +33,13 @@ Collaboration diagram for isae\+::A\+Custom\+Feature\+Detector\+:\nopagebreak
 \mbox{\hyperlink{classisae_1_1_a_custom_feature_detector_a1a0fe6dea38372c54b483ba07f74093a}{A\+Custom\+Feature\+Detector}} (int n, int n\+\_\+per\+\_\+cell)
 \item 
 void \mbox{\hyperlink{classisae_1_1_a_custom_feature_detector_a451457966229fbf23bc86f6d2bd13523}{detect\+And\+Compute}} (const cv\+::\+Mat \&img, const cv\+::\+Mat \&mask, std\+::vector$<$ cv\+::\+Key\+Point $>$ \&keypoints, cv\+::\+Mat \&descriptors, int n\+\_\+points=0)
-\item 
+\begin{DoxyCompactList}\small\item\em Virtual function to detect and compute features in an image. \end{DoxyCompactList}\item 
 std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$ $>$ \mbox{\hyperlink{classisae_1_1_a_custom_feature_detector_a8dbdce4928c54a14bd7c0cb18feabbf5}{detect\+And\+Compute\+Grid}} (const cv\+::\+Mat \&img, const cv\+::\+Mat \&mask, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$ existing\+\_\+features=std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$())
-\item 
+\begin{DoxyCompactList}\small\item\em Virtual function to detect and compute features in a grid (bucketting). \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{classisae_1_1_a_custom_feature_detector_a53cf8fa55bfed8a81e4c1b72c4d16518}{custom\+Detect\+And\+Compute}} (const cv\+::\+Mat \&img, const cv\+::\+Mat \&mask, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$ \&features)=0
 \item 
 virtual void \mbox{\hyperlink{classisae_1_1_a_custom_feature_detector_a3c37409af9d97037dbbc4677127879e2}{compute\+Descriptor}} (const cv\+::\+Mat \&img, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$ \&features)=0
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Virtual function to compute descriptors for a set of features. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -47,6 +52,11 @@ int \mbox{\hyperlink{classisae_1_1_a_custom_feature_detector_a4dd19aa208627a3fa5
 \end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
+
+\doxysubsection{Detailed Description}
+Class for custom feature detection and computation. 
+
+This class extends the \mbox{\hyperlink{classisae_1_1_a_feature_detector}{A\+Feature\+Detector}} class and provides a framework for handcrafted feature detection and descriptor computation. It allows for grid-\/based detection and computation of features. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classisae_1_1_a_custom_feature_detector_a1a0fe6dea38372c54b483ba07f74093a}\label{classisae_1_1_a_custom_feature_detector_a1a0fe6dea38372c54b483ba07f74093a}} 
@@ -64,6 +74,17 @@ int \mbox{\hyperlink{classisae_1_1_a_custom_feature_detector_a4dd19aa208627a3fa5
 \doxysubsubsection{\texorpdfstring{computeDescriptor()}{computeDescriptor()}}
 {\footnotesize\ttfamily virtual void isae\+::\+A\+Custom\+Feature\+Detector\+::compute\+Descriptor (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{img,  }\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$ \&}]{features }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
+
+
+Virtual function to compute descriptors for a set of features. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em img} & The input image from which to compute descriptors. \\
+\hline
+{\em features} & A vector of features for which to compute descriptors. \\
+\hline
+\end{DoxyParams}
 
 
 Implements \mbox{\hyperlink{classisae_1_1_a_feature_detector_a1c1d096dc988a4b91c67f5705dfce437}{isae\+::\+A\+Feature\+Detector}}.
@@ -90,14 +111,44 @@ Implemented in \mbox{\hyperlink{classisae_1_1_csv_keypoint_detector_a04e15d61731
 
 
 
+Virtual function to detect and compute features in an image. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em img} & The input image in which to detect features. \\
+\hline
+{\em mask} & An optional mask to specify regions of interest in the image. \\
+\hline
+{\em keypoints} & Output vector to store detected keypoints. \\
+\hline
+{\em descriptors} & Output matrix to store computed descriptors. \\
+\hline
+{\em n\+\_\+points} & The number of points to detect (optional, default is 0 which means all). \\
+\hline
+\end{DoxyParams}
+
+
 Implements \mbox{\hyperlink{classisae_1_1_a_feature_detector_ac969a8bbf6b0391dde2349a38e12bfec}{isae\+::\+A\+Feature\+Detector}}.
 
 \mbox{\Hypertarget{classisae_1_1_a_custom_feature_detector_a8dbdce4928c54a14bd7c0cb18feabbf5}\label{classisae_1_1_a_custom_feature_detector_a8dbdce4928c54a14bd7c0cb18feabbf5}} 
 \index{isae::ACustomFeatureDetector@{isae::ACustomFeatureDetector}!detectAndComputeGrid@{detectAndComputeGrid}}
 \index{detectAndComputeGrid@{detectAndComputeGrid}!isae::ACustomFeatureDetector@{isae::ACustomFeatureDetector}}
 \doxysubsubsection{\texorpdfstring{detectAndComputeGrid()}{detectAndComputeGrid()}}
-{\footnotesize\ttfamily std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$ $>$ isae\+::\+A\+Custom\+Feature\+Detector\+::detect\+And\+Compute\+Grid (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{img,  }\item[{const cv\+::\+Mat \&}]{mask,  }\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$}]{existing\+\_\+features = {\ttfamily std\+:\+:vector$<$std\+:\+:shared\+\_\+ptr$<$\mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}}$>$$>$()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$ $>$ isae\+::\+A\+Custom\+Feature\+Detector\+::detect\+And\+Compute\+Grid (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{img,  }\item[{const cv\+::\+Mat \&}]{mask,  }\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$}]{existing\+\_\+features = {\ttfamily std\+:\+:vector$<$~std\+:\+:shared\+\_\+ptr$<$~\mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}}~$>$$>$()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
+
+
+Virtual function to detect and compute features in a grid (bucketting). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em img} & The input image in which to detect features. \\
+\hline
+{\em mask} & An optional mask to specify regions of interest in the image. \\
+\hline
+{\em existing\+\_\+features} & A vector of existing features to consider (optional). \\
+\hline
+\end{DoxyParams}
 
 
 Implements \mbox{\hyperlink{classisae_1_1_a_feature_detector_a821f4dfb0b50649ae737319a1ed1fe07}{isae\+::\+A\+Feature\+Detector}}.

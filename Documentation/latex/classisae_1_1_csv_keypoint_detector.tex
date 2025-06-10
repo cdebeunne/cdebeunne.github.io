@@ -30,11 +30,11 @@ Collaboration diagram for isae\+::Csv\+Keypoint\+Detector\+:\nopagebreak
 void \mbox{\hyperlink{classisae_1_1_csv_keypoint_detector_a04e15d6173184c6427d6f0c4e0e6b889}{custom\+Detect\+And\+Compute}} (const cv\+::\+Mat \&img, const cv\+::\+Mat \&mask, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$ \&features) override
 \item 
 void \mbox{\hyperlink{classisae_1_1_csv_keypoint_detector_a9586c6a923a94b31e8f5f6c289c08d29}{compute\+Descriptor}} (const cv\+::\+Mat \&img, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$ \&features) override
-\item 
+\begin{DoxyCompactList}\small\item\em Virtual function to compute descriptors for a set of features. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classisae_1_1_csv_keypoint_detector_afab4b5cf20b77987af3f6b26796500cb}{init}} () override
-\item 
-double \mbox{\hyperlink{classisae_1_1_csv_keypoint_detector_a0d01403d378bf81ac439af588c611822}{get\+Dist}} (const cv\+::\+Mat \&desc1, const cv\+::\+Mat \&desc2) const override
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Virtual function to initialize the feature detector. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classisae_1_1_csv_keypoint_detector_ab0cda30f1ba46c3a477066f30ca9fca3}{compute\+Dist}} (const cv\+::\+Mat \&desc1, const cv\+::\+Mat \&desc2) const override
+\begin{DoxyCompactList}\small\item\em Virtual function to compute the distance between two feature descriptors. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
 
@@ -56,7 +56,39 @@ double \mbox{\hyperlink{classisae_1_1_csv_keypoint_detector_a0d01403d378bf81ac43
 
 
 
+Virtual function to compute descriptors for a set of features. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em img} & The input image from which to compute descriptors. \\
+\hline
+{\em features} & A vector of features for which to compute descriptors. \\
+\hline
+\end{DoxyParams}
+
+
 Implements \mbox{\hyperlink{classisae_1_1_a_custom_feature_detector_a3c37409af9d97037dbbc4677127879e2}{isae\+::\+A\+Custom\+Feature\+Detector}}.
+
+\mbox{\Hypertarget{classisae_1_1_csv_keypoint_detector_ab0cda30f1ba46c3a477066f30ca9fca3}\label{classisae_1_1_csv_keypoint_detector_ab0cda30f1ba46c3a477066f30ca9fca3}} 
+\index{isae::CsvKeypointDetector@{isae::CsvKeypointDetector}!computeDist@{computeDist}}
+\index{computeDist@{computeDist}!isae::CsvKeypointDetector@{isae::CsvKeypointDetector}}
+\doxysubsubsection{\texorpdfstring{computeDist()}{computeDist()}}
+{\footnotesize\ttfamily double isae\+::\+Csv\+Keypoint\+Detector\+::compute\+Dist (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{desc1,  }\item[{const cv\+::\+Mat \&}]{desc2 }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Virtual function to compute the distance between two feature descriptors. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em desc1} & The first feature descriptor. \\
+\hline
+{\em desc2} & The second feature descriptor. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classisae_1_1_a_feature_detector_ab4a121be21f0eaeb2ef8fef4b936c07a}{isae\+::\+A\+Feature\+Detector}}.
 
 \mbox{\Hypertarget{classisae_1_1_csv_keypoint_detector_a04e15d6173184c6427d6f0c4e0e6b889}\label{classisae_1_1_csv_keypoint_detector_a04e15d6173184c6427d6f0c4e0e6b889}} 
 \index{isae::CsvKeypointDetector@{isae::CsvKeypointDetector}!customDetectAndCompute@{customDetectAndCompute}}
@@ -68,16 +100,6 @@ Implements \mbox{\hyperlink{classisae_1_1_a_custom_feature_detector_a3c37409af9d
 
 Implements \mbox{\hyperlink{classisae_1_1_a_custom_feature_detector_a53cf8fa55bfed8a81e4c1b72c4d16518}{isae\+::\+A\+Custom\+Feature\+Detector}}.
 
-\mbox{\Hypertarget{classisae_1_1_csv_keypoint_detector_a0d01403d378bf81ac439af588c611822}\label{classisae_1_1_csv_keypoint_detector_a0d01403d378bf81ac439af588c611822}} 
-\index{isae::CsvKeypointDetector@{isae::CsvKeypointDetector}!getDist@{getDist}}
-\index{getDist@{getDist}!isae::CsvKeypointDetector@{isae::CsvKeypointDetector}}
-\doxysubsubsection{\texorpdfstring{getDist()}{getDist()}}
-{\footnotesize\ttfamily double isae\+::\+Csv\+Keypoint\+Detector\+::get\+Dist (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{desc1,  }\item[{const cv\+::\+Mat \&}]{desc2 }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
-
-
-
-Implements \mbox{\hyperlink{classisae_1_1_a_feature_detector_ad59496a4d75c886d38c61ef258958cd9}{isae\+::\+A\+Feature\+Detector}}.
-
 \mbox{\Hypertarget{classisae_1_1_csv_keypoint_detector_afab4b5cf20b77987af3f6b26796500cb}\label{classisae_1_1_csv_keypoint_detector_afab4b5cf20b77987af3f6b26796500cb}} 
 \index{isae::CsvKeypointDetector@{isae::CsvKeypointDetector}!init@{init}}
 \index{init@{init}!isae::CsvKeypointDetector@{isae::CsvKeypointDetector}}
@@ -85,6 +107,10 @@ Implements \mbox{\hyperlink{classisae_1_1_a_feature_detector_ad59496a4d75c886d38
 {\footnotesize\ttfamily void isae\+::\+Csv\+Keypoint\+Detector\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
+
+Virtual function to initialize the feature detector. 
+
+This method should be called before using the detector. 
 
 Implements \mbox{\hyperlink{classisae_1_1_a_feature_detector_a3c92c62951b8003db8428af449830850}{isae\+::\+A\+Feature\+Detector}}.
 

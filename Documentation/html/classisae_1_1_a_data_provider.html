@@ -75,13 +75,16 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p><a class="el" href="classisae_1_1_a_data_provider.html" title="ADataProvider class for managing data from various sensors.">ADataProvider</a> class for managing data from various sensors.  
+ <a href="classisae_1_1_a_data_provider.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="adataprovider_8h_source.html">adataprovider.h</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for isae::ADataProvider:</div>
 <div class="dyncontent">
 <div class="center"><img src="classisae_1_1_a_data_provider__coll__graph.png" border="0" usemap="#isae_1_1_a_data_provider_coll__map" alt="Collaboration graph"/></div>
 <map name="isae_1_1_a_data_provider_coll__map" id="isae_1_1_a_data_provider_coll__map">
-<area shape="rect" title=" " alt="" coords="5,95,156,121"/>
+<area shape="rect" title="ADataProvider class for managing data from various sensors." alt="" coords="5,95,156,121"/>
 <area shape="rect" href="structisae_1_1_config.html" title=" " alt="" coords="31,5,130,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
@@ -91,6 +94,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac711bc88d48f5cd36fdf6fa53bebdbc4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_a_data_provider.html#ac711bc88d48f5cd36fdf6fa53bebdbc4">ADataProvider</a> (std::string path, <a class="el" href="structisae_1_1_config.html">Config</a> slam_config)</td></tr>
 <tr class="separator:ac711bc88d48f5cd36fdf6fa53bebdbc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a993cbdb17d53218a29810a2a4150b5d3"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classisae_1_1_frame.html">Frame</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_a_data_provider.html#a993cbdb17d53218a29810a2a4150b5d3">next</a> ()</td></tr>
+<tr class="memdesc:a993cbdb17d53218a29810a2a4150b5d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the next frame from the queue.  <a href="classisae_1_1_a_data_provider.html#a993cbdb17d53218a29810a2a4150b5d3">More...</a><br /></td></tr>
 <tr class="separator:a993cbdb17d53218a29810a2a4150b5d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a983b1d28a621d70255a26fcc7a636668"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::shared_ptr&lt; <a class="el" href="structisae_1_1cam__config.html">cam_config</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_a_data_provider.html#a983b1d28a621d70255a26fcc7a636668">getCamConfigs</a> ()</td></tr>
 <tr class="separator:a983b1d28a621d70255a26fcc7a636668"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -98,13 +102,14 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ac7c22168e60e01f9b731ae48137ffee8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7a1e7b2cf7f0572c61e64272148e6eb0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_a_data_provider.html#a7a1e7b2cf7f0572c61e64272148e6eb0">getNCam</a> ()</td></tr>
 <tr class="separator:a7a1e7b2cf7f0572c61e64272148e6eb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6fa4686f4ba2382c14c415c889ce30c8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_a_data_provider.html#a6fa4686f4ba2382c14c415c889ce30c8">getTiming</a> ()</td></tr>
-<tr class="separator:a6fa4686f4ba2382c14c415c889ce30c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a91156bf0e35cb4c264579ad0fd6b0e2b"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::shared_ptr&lt; <a class="el" href="classisae_1_1_image_sensor.html">ImageSensor</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_a_data_provider.html#a91156bf0e35cb4c264579ad0fd6b0e2b">createImageSensors</a> (const std::vector&lt; cv::Mat &gt; &amp;imgs, const std::vector&lt; cv::Mat &gt; &amp;masks={})</td></tr>
+<tr class="memdesc:a91156bf0e35cb4c264579ad0fd6b0e2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">From raw image to sensor objects.  <a href="classisae_1_1_a_data_provider.html#a91156bf0e35cb4c264579ad0fd6b0e2b">More...</a><br /></td></tr>
 <tr class="separator:a91156bf0e35cb4c264579ad0fd6b0e2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abaa5b2916af0956dd29f15b829d8f8c7"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classisae_1_1_i_m_u.html">IMU</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_a_data_provider.html#abaa5b2916af0956dd29f15b829d8f8c7">createImuSensor</a> (const Eigen::Vector3d &amp;acc, const Eigen::Vector3d &amp;gyr)</td></tr>
+<tr class="memdesc:abaa5b2916af0956dd29f15b829d8f8c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">From raw <a class="el" href="classisae_1_1_i_m_u.html" title="An Inertial Measurement Unit (IMU) sensor class.">IMU</a> measurements to an <a class="el" href="classisae_1_1_i_m_u.html" title="An Inertial Measurement Unit (IMU) sensor class.">IMU</a> sensor object.  <a href="classisae_1_1_a_data_provider.html#abaa5b2916af0956dd29f15b829d8f8c7">More...</a><br /></td></tr>
 <tr class="separator:abaa5b2916af0956dd29f15b829d8f8c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac05837789a891f3e72c5bed1db0335ae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_a_data_provider.html#ac05837789a891f3e72c5bed1db0335ae">addFrameToTheQueue</a> (std::vector&lt; std::shared_ptr&lt; <a class="el" href="classisae_1_1_a_sensor.html">ASensor</a> &gt;&gt; sensors, double time)</td></tr>
+<tr class="memdesc:ac05837789a891f3e72c5bed1db0335ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a frame from sensors and timestamp and add it to the queue.  <a href="classisae_1_1_a_data_provider.html#ac05837789a891f3e72c5bed1db0335ae">More...</a><br /></td></tr>
 <tr class="separator:ac05837789a891f3e72c5bed1db0335ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a563e851a5a0574491fbdc35fd2e4fc57"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_a_data_provider.html#a563e851a5a0574491fbdc35fd2e4fc57">addFrameToTheQueue</a> (std::shared_ptr&lt; <a class="el" href="classisae_1_1_frame.html">Frame</a> &gt; frame)</td></tr>
 <tr class="separator:a563e851a5a0574491fbdc35fd2e4fc57"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -123,19 +128,40 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a5308242300102a9c3065891b3df2550c"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="structisae_1_1imu__config.html">imu_config</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_a_data_provider.html#a5308242300102a9c3065891b3df2550c">_imu_config</a></td></tr>
 <tr class="separator:a5308242300102a9c3065891b3df2550c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a61549541316d87b018a903bf55b136"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::shared_ptr&lt; <a class="el" href="structisae_1_1cam__config.html">cam_config</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_a_data_provider.html#a6a61549541316d87b018a903bf55b136">_cam_configs</a></td></tr>
+<tr class="memdesc:a6a61549541316d87b018a903bf55b136"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p><a class="el" href="classisae_1_1_i_m_u.html" title="An Inertial Measurement Unit (IMU) sensor class.">IMU</a> configuration </p>
+</blockquote>
+ <a href="classisae_1_1_a_data_provider.html#a6a61549541316d87b018a903bf55b136">More...</a><br /></td></tr>
 <tr class="separator:a6a61549541316d87b018a903bf55b136"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e868593602b03cb8bb4cde1c2eef3b9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_a_data_provider.html#a2e868593602b03cb8bb4cde1c2eef3b9">_ncam</a></td></tr>
+<tr class="memdesc:a2e868593602b03cb8bb4cde1c2eef3b9"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p>Vector of camera configurations </p>
+</blockquote>
+ <a href="classisae_1_1_a_data_provider.html#a2e868593602b03cb8bb4cde1c2eef3b9">More...</a><br /></td></tr>
 <tr class="separator:a2e868593602b03cb8bb4cde1c2eef3b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02dd1cfaafea2c793933990acda6486d"><td class="memItemLeft" align="right" valign="top">std::queue&lt; std::shared_ptr&lt; <a class="el" href="classisae_1_1_frame.html">Frame</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_a_data_provider.html#a02dd1cfaafea2c793933990acda6486d">_frame_queue</a></td></tr>
+<tr class="memdesc:a02dd1cfaafea2c793933990acda6486d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p>Number of Image Sensors </p>
+</blockquote>
+ <a href="classisae_1_1_a_data_provider.html#a02dd1cfaafea2c793933990acda6486d">More...</a><br /></td></tr>
 <tr class="separator:a02dd1cfaafea2c793933990acda6486d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af9f0cada9c02783e40496e9a88174fb1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structisae_1_1_config.html">Config</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_a_data_provider.html#af9f0cada9c02783e40496e9a88174fb1">_slam_config</a></td></tr>
+<tr class="memdesc:af9f0cada9c02783e40496e9a88174fb1"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p>Queue of frames to be processed </p>
+</blockquote>
+ <a href="classisae_1_1_a_data_provider.html#af9f0cada9c02783e40496e9a88174fb1">More...</a><br /></td></tr>
 <tr class="separator:af9f0cada9c02783e40496e9a88174fb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d3abaa728e7033b023c068a75416ea1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_a_data_provider.html#a0d3abaa728e7033b023c068a75416ea1">_nframes</a></td></tr>
+<tr class="memdesc:a0d3abaa728e7033b023c068a75416ea1"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p>SLAM configuration </p>
+</blockquote>
+ <a href="classisae_1_1_a_data_provider.html#a0d3abaa728e7033b023c068a75416ea1">More...</a><br /></td></tr>
 <tr class="separator:a0d3abaa728e7033b023c068a75416ea1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4ab85f09c14f2774d88945d69733401d"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_a_data_provider.html#a4ab85f09c14f2774d88945d69733401d">_img_process_dt</a></td></tr>
-<tr class="separator:a4ab85f09c14f2774d88945d69733401d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="classisae_1_1_a_data_provider.html" title="ADataProvider class for managing data from various sensors.">ADataProvider</a> class for managing data from various sensors. </p>
+<p>This class is responsible for loading sensor configurations, processing frames, and managing the queue of frames. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ac711bc88d48f5cd36fdf6fa53bebdbc4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac711bc88d48f5cd36fdf6fa53bebdbc4">&#9670;&nbsp;</a></span>ADataProvider()</h2>
 
@@ -209,6 +235,8 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Create a frame from sensors and timestamp and add it to the queue. </p>
+
 </div>
 </div>
 <a id="a91156bf0e35cb4c264579ad0fd6b0e2b"></a>
@@ -237,6 +265,8 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>From raw image to sensor objects. </p>
+
 </div>
 </div>
 <a id="abaa5b2916af0956dd29f15b829d8f8c7"></a>
@@ -264,6 +294,8 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>From raw <a class="el" href="classisae_1_1_i_m_u.html" title="An Inertial Measurement Unit (IMU) sensor class.">IMU</a> measurements to an <a class="el" href="classisae_1_1_i_m_u.html" title="An Inertial Measurement Unit (IMU) sensor class.">IMU</a> sensor object. </p>
 
 </div>
 </div>
@@ -328,31 +360,6 @@ Protected Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">int isae::ADataProvider::getNCam </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a6fa4686f4ba2382c14c415c889ce30c8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6fa4686f4ba2382c14c415c889ce30c8">&#9670;&nbsp;</a></span>getTiming()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int isae::ADataProvider::getTiming </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -460,6 +467,8 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Return the next frame from the queue. </p>
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -483,6 +492,11 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p><blockquote class="doxtable">
+<p><a class="el" href="classisae_1_1_i_m_u.html" title="An Inertial Measurement Unit (IMU) sensor class.">IMU</a> configuration </p>
+</blockquote>
+</p>
+
 </div>
 </div>
 <a id="a02dd1cfaafea2c793933990acda6486d"></a>
@@ -505,27 +519,10 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<a id="a4ab85f09c14f2774d88945d69733401d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4ab85f09c14f2774d88945d69733401d">&#9670;&nbsp;</a></span>_img_process_dt</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">double isae::ADataProvider::_img_process_dt</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
+<p><blockquote class="doxtable">
+<p>Number of Image Sensors </p>
+</blockquote>
+</p>
 
 </div>
 </div>
@@ -571,6 +568,11 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p><blockquote class="doxtable">
+<p>Vector of camera configurations </p>
+</blockquote>
+</p>
+
 </div>
 </div>
 <a id="a0d3abaa728e7033b023c068a75416ea1"></a>
@@ -593,6 +595,11 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p><blockquote class="doxtable">
+<p>SLAM configuration </p>
+</blockquote>
+</p>
+
 </div>
 </div>
 <a id="af9f0cada9c02783e40496e9a88174fb1"></a>
@@ -614,6 +621,11 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p><blockquote class="doxtable">
+<p>Queue of frames to be processed </p>
+</blockquote>
+</p>
 
 </div>
 </div>

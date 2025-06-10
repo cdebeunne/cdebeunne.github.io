@@ -2,6 +2,11 @@
 \label{classisae_1_1_a_pose_estimator}\index{isae::APoseEstimator@{isae::APoseEstimator}}
 
 
+Abstract class for relative pose estimation between two frames.  
+
+
+
+
 {\ttfamily \#include $<$A\+Pose\+Estimator.\+h$>$}
 
 
@@ -22,6 +27,11 @@ virtual bool \mbox{\hyperlink{classisae_1_1_a_pose_estimator_abde86e1cab23cdcabf
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Detailed Description}
+Abstract class for relative pose estimation between two frames. 
+
+This class defines the interface for estimating the transformation between two frames, either using matches or typed matches. It may also return the covariance of the estimated transformation. 
+
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{classisae_1_1_a_pose_estimator_abde86e1cab23cdcabf36dfe9810fa203}\label{classisae_1_1_a_pose_estimator_abde86e1cab23cdcabf36dfe9810fa203}} 
 \index{isae::APoseEstimator@{isae::APoseEstimator}!estimateTransformBetween@{estimateTransformBetween}}
@@ -31,7 +41,7 @@ virtual bool \mbox{\hyperlink{classisae_1_1_a_pose_estimator_abde86e1cab23cdcabf
 
 
 
-Implemented in \mbox{\hyperlink{classisae_1_1_epipolar_pose_estimator_a8effa7b7d2fd51095ff7556664a617af}{isae\+::\+Epipolar\+Pose\+Estimator}}, \mbox{\hyperlink{classisae_1_1_e_s_k_f_estimator_ad8039f93a0cca9e50aaf20e462926a8f}{isae\+::\+E\+S\+K\+F\+Estimator}}, \mbox{\hyperlink{classisae_1_1_pn_p_pose_estimator_a5788750162991c248749a352dfdeab88}{isae\+::\+Pn\+P\+Pose\+Estimator}}, and \mbox{\hyperlink{classisae_1_1_epipolar_pose_estimator_custom_ac16c124e464f11e884efe9f85494480a}{isae\+::\+Epipolar\+Pose\+Estimator\+Custom}}.
+Implemented in \mbox{\hyperlink{classisae_1_1_epipolar_pose_estimator_a8effa7b7d2fd51095ff7556664a617af}{isae\+::\+Epipolar\+Pose\+Estimator}}, \mbox{\hyperlink{classisae_1_1_e_s_k_f_estimator_ad8039f93a0cca9e50aaf20e462926a8f}{isae\+::\+E\+S\+K\+F\+Estimator}}, and \mbox{\hyperlink{classisae_1_1_pn_p_pose_estimator_a5788750162991c248749a352dfdeab88}{isae\+::\+Pn\+P\+Pose\+Estimator}}.
 
 \mbox{\Hypertarget{classisae_1_1_a_pose_estimator_a8bf763cb7583be98c0e0329cbecee206}\label{classisae_1_1_a_pose_estimator_a8bf763cb7583be98c0e0329cbecee206}} 
 \index{isae::APoseEstimator@{isae::APoseEstimator}!estimateTransformBetween@{estimateTransformBetween}}
@@ -41,7 +51,7 @@ Implemented in \mbox{\hyperlink{classisae_1_1_epipolar_pose_estimator_a8effa7b7d
 
 
 
-Implemented in \mbox{\hyperlink{classisae_1_1_epipolar_pose_estimator_aaceae25fec5ab70abb36804b23d2b8b9}{isae\+::\+Epipolar\+Pose\+Estimator}}, \mbox{\hyperlink{classisae_1_1_epipolar_pose_estimator_custom_ab343308b7f1526e3cb537f22150fa380}{isae\+::\+Epipolar\+Pose\+Estimator\+Custom}}, \mbox{\hyperlink{classisae_1_1_e_s_k_f_estimator_a27b3806ec8aa02195ecd4a945df16d9d}{isae\+::\+E\+S\+K\+F\+Estimator}}, and \mbox{\hyperlink{classisae_1_1_pn_p_pose_estimator_a6f709bb548fb67cbe58fda2d332f5f4e}{isae\+::\+Pn\+P\+Pose\+Estimator}}.
+Implemented in \mbox{\hyperlink{classisae_1_1_epipolar_pose_estimator_aaceae25fec5ab70abb36804b23d2b8b9}{isae\+::\+Epipolar\+Pose\+Estimator}}, \mbox{\hyperlink{classisae_1_1_e_s_k_f_estimator_a27b3806ec8aa02195ecd4a945df16d9d}{isae\+::\+E\+S\+K\+F\+Estimator}}, and \mbox{\hyperlink{classisae_1_1_pn_p_pose_estimator_a6f709bb548fb67cbe58fda2d332f5f4e}{isae\+::\+Pn\+P\+Pose\+Estimator}}.
 
 
 

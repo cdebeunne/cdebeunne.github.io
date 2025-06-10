@@ -73,17 +73,19 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Abstract class for relative pose estimation between two frames.  
+ <a href="classisae_1_1_a_pose_estimator.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_a_pose_estimator_8h_source.html">APoseEstimator.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for isae::APoseEstimator:</div>
 <div class="dyncontent">
 <div class="center"><img src="classisae_1_1_a_pose_estimator__inherit__graph.png" border="0" usemap="#isae_1_1_a_pose_estimator_inherit__map" alt="Inheritance graph"/></div>
 <map name="isae_1_1_a_pose_estimator_inherit__map" id="isae_1_1_a_pose_estimator_inherit__map">
-<area shape="rect" title=" " alt="" coords="5,93,165,120"/>
-<area shape="rect" href="classisae_1_1_epipolar_pose_estimator.html" title=" " alt="" coords="213,5,417,32"/>
-<area shape="rect" href="classisae_1_1_epipolar_pose_estimator_custom.html" title=" " alt="" coords="213,57,417,98"/>
-<area shape="rect" href="classisae_1_1_e_s_k_f_estimator.html" title=" " alt="" coords="239,123,392,149"/>
-<area shape="rect" href="classisae_1_1_pn_p_pose_estimator.html" title=" " alt="" coords="228,173,403,200"/>
+<area shape="rect" title="Abstract class for relative pose estimation between two frames." alt="" coords="230,5,390,32"/>
+<area shape="rect" href="classisae_1_1_epipolar_pose_estimator.html" title="EpipolarPoseEstimator class for estimating the pose between two frames using Essential Matrix." alt="" coords="5,80,209,107"/>
+<area shape="rect" href="classisae_1_1_e_s_k_f_estimator.html" title="ESKFEstimator class for estimating the transformation between two frames using an EKF." alt="" coords="233,80,387,107"/>
+<area shape="rect" href="classisae_1_1_pn_p_pose_estimator.html" title="PnPPoseEstimator class for estimating the transformation between two frames using PnP." alt="" coords="411,80,585,107"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -94,7 +96,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:abde86e1cab23cdcabf36dfe9810fa203"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_a_pose_estimator.html#abde86e1cab23cdcabf36dfe9810fa203">estimateTransformBetween</a> (const std::shared_ptr&lt; <a class="el" href="classisae_1_1_frame.html">Frame</a> &gt; &amp;frame1, const std::shared_ptr&lt; <a class="el" href="classisae_1_1_frame.html">Frame</a> &gt; &amp;frame2, <a class="el" href="namespaceisae.html#a70bf0a9838eb50b6a3fe2be9b79e25be">typed_vec_match</a> &amp;typed_matches, Eigen::Affine3d &amp;dT, Eigen::MatrixXd &amp;covdT)=0</td></tr>
 <tr class="separator:abde86e1cab23cdcabf36dfe9810fa203"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Abstract class for relative pose estimation between two frames. </p>
+<p>This class defines the interface for estimating the transformation between two frames, either using matches or typed matches. It may also return the covariance of the estimated transformation. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="abde86e1cab23cdcabf36dfe9810fa203"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abde86e1cab23cdcabf36dfe9810fa203">&#9670;&nbsp;</a></span>estimateTransformBetween() <span class="overload">[1/2]</span></h2>
 
@@ -147,7 +152,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classisae_1_1_epipolar_pose_estimator.html#a8effa7b7d2fd51095ff7556664a617af">isae::EpipolarPoseEstimator</a>, <a class="el" href="classisae_1_1_e_s_k_f_estimator.html#ad8039f93a0cca9e50aaf20e462926a8f">isae::ESKFEstimator</a>, <a class="el" href="classisae_1_1_pn_p_pose_estimator.html#a5788750162991c248749a352dfdeab88">isae::PnPPoseEstimator</a>, and <a class="el" href="classisae_1_1_epipolar_pose_estimator_custom.html#ac16c124e464f11e884efe9f85494480a">isae::EpipolarPoseEstimatorCustom</a>.</p>
+<p>Implemented in <a class="el" href="classisae_1_1_epipolar_pose_estimator.html#a8effa7b7d2fd51095ff7556664a617af">isae::EpipolarPoseEstimator</a>, <a class="el" href="classisae_1_1_e_s_k_f_estimator.html#ad8039f93a0cca9e50aaf20e462926a8f">isae::ESKFEstimator</a>, and <a class="el" href="classisae_1_1_pn_p_pose_estimator.html#a5788750162991c248749a352dfdeab88">isae::PnPPoseEstimator</a>.</p>
 
 </div>
 </div>
@@ -203,7 +208,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classisae_1_1_epipolar_pose_estimator.html#aaceae25fec5ab70abb36804b23d2b8b9">isae::EpipolarPoseEstimator</a>, <a class="el" href="classisae_1_1_epipolar_pose_estimator_custom.html#ab343308b7f1526e3cb537f22150fa380">isae::EpipolarPoseEstimatorCustom</a>, <a class="el" href="classisae_1_1_e_s_k_f_estimator.html#a27b3806ec8aa02195ecd4a945df16d9d">isae::ESKFEstimator</a>, and <a class="el" href="classisae_1_1_pn_p_pose_estimator.html#a6f709bb548fb67cbe58fda2d332f5f4e">isae::PnPPoseEstimator</a>.</p>
+<p>Implemented in <a class="el" href="classisae_1_1_epipolar_pose_estimator.html#aaceae25fec5ab70abb36804b23d2b8b9">isae::EpipolarPoseEstimator</a>, <a class="el" href="classisae_1_1_e_s_k_f_estimator.html#a27b3806ec8aa02195ecd4a945df16d9d">isae::ESKFEstimator</a>, and <a class="el" href="classisae_1_1_pn_p_pose_estimator.html#a6f709bb548fb67cbe58fda2d332f5f4e">isae::PnPPoseEstimator</a>.</p>
 
 </div>
 </div>

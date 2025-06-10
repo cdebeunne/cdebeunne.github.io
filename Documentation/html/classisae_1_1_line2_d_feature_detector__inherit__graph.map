@@ -1,5 +1,5 @@
 <map id="isae::Line2DFeatureDetector" name="isae::Line2DFeatureDetector">
 <area shape="rect" id="node1" title=" " alt="" coords="13,155,219,181"/>
-<area shape="rect" id="node2" href="$classisae_1_1_a_custom_feature_detector.html" title=" " alt="" coords="5,80,227,107"/>
-<area shape="rect" id="node3" href="$classisae_1_1_a_feature_detector.html" title=" " alt="" coords="31,5,201,32"/>
+<area shape="rect" id="node2" href="$classisae_1_1_a_custom_feature_detector.html" title="Class for custom feature detection and computation." alt="" coords="5,80,227,107"/>
+<area shape="rect" id="node3" href="$classisae_1_1_a_feature_detector.html" title="Abstract class for feature detectors." alt="" coords="31,5,201,32"/>
 </map>

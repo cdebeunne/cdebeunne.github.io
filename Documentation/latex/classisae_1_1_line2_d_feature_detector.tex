@@ -30,11 +30,11 @@ Collaboration diagram for isae\+::Line2\+D\+Feature\+Detector\+:\nopagebreak
 void \mbox{\hyperlink{classisae_1_1_line2_d_feature_detector_aa6896efab5b1e5575c62406e9ae2e47c}{custom\+Detect\+And\+Compute}} (const cv\+::\+Mat \&img, const cv\+::\+Mat \&mask, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$ \&features) override
 \item 
 void \mbox{\hyperlink{classisae_1_1_line2_d_feature_detector_a3303b00988ea0a306efd40aeaee055b4}{compute\+Descriptor}} (const cv\+::\+Mat \&img, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$ \&features) override
-\item 
+\begin{DoxyCompactList}\small\item\em Virtual function to compute descriptors for a set of features. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classisae_1_1_line2_d_feature_detector_ab0633b5156f1313aaee88170361d4831}{init}} () override
-\item 
-double \mbox{\hyperlink{classisae_1_1_line2_d_feature_detector_a81d47c02288a1e12ace67e6d55bce73c}{get\+Dist}} (const cv\+::\+Mat \&desc1, const cv\+::\+Mat \&desc2) const override
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Virtual function to initialize the feature detector. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classisae_1_1_line2_d_feature_detector_a0af97952adfc2ee97313a84774cd745f}{compute\+Dist}} (const cv\+::\+Mat \&desc1, const cv\+::\+Mat \&desc2) const override
+\begin{DoxyCompactList}\small\item\em Virtual function to compute the distance between two feature descriptors. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
 
@@ -56,7 +56,39 @@ double \mbox{\hyperlink{classisae_1_1_line2_d_feature_detector_a81d47c02288a1e12
 
 
 
+Virtual function to compute descriptors for a set of features. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em img} & The input image from which to compute descriptors. \\
+\hline
+{\em features} & A vector of features for which to compute descriptors. \\
+\hline
+\end{DoxyParams}
+
+
 Implements \mbox{\hyperlink{classisae_1_1_a_custom_feature_detector_a3c37409af9d97037dbbc4677127879e2}{isae\+::\+A\+Custom\+Feature\+Detector}}.
+
+\mbox{\Hypertarget{classisae_1_1_line2_d_feature_detector_a0af97952adfc2ee97313a84774cd745f}\label{classisae_1_1_line2_d_feature_detector_a0af97952adfc2ee97313a84774cd745f}} 
+\index{isae::Line2DFeatureDetector@{isae::Line2DFeatureDetector}!computeDist@{computeDist}}
+\index{computeDist@{computeDist}!isae::Line2DFeatureDetector@{isae::Line2DFeatureDetector}}
+\doxysubsubsection{\texorpdfstring{computeDist()}{computeDist()}}
+{\footnotesize\ttfamily double isae\+::\+Line2\+D\+Feature\+Detector\+::compute\+Dist (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{desc1,  }\item[{const cv\+::\+Mat \&}]{desc2 }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Virtual function to compute the distance between two feature descriptors. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em desc1} & The first feature descriptor. \\
+\hline
+{\em desc2} & The second feature descriptor. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classisae_1_1_a_feature_detector_ab4a121be21f0eaeb2ef8fef4b936c07a}{isae\+::\+A\+Feature\+Detector}}.
 
 \mbox{\Hypertarget{classisae_1_1_line2_d_feature_detector_aa6896efab5b1e5575c62406e9ae2e47c}\label{classisae_1_1_line2_d_feature_detector_aa6896efab5b1e5575c62406e9ae2e47c}} 
 \index{isae::Line2DFeatureDetector@{isae::Line2DFeatureDetector}!customDetectAndCompute@{customDetectAndCompute}}
@@ -68,16 +100,6 @@ T\+O\+DO ???
 
 Implements \mbox{\hyperlink{classisae_1_1_a_custom_feature_detector_a53cf8fa55bfed8a81e4c1b72c4d16518}{isae\+::\+A\+Custom\+Feature\+Detector}}.
 
-\mbox{\Hypertarget{classisae_1_1_line2_d_feature_detector_a81d47c02288a1e12ace67e6d55bce73c}\label{classisae_1_1_line2_d_feature_detector_a81d47c02288a1e12ace67e6d55bce73c}} 
-\index{isae::Line2DFeatureDetector@{isae::Line2DFeatureDetector}!getDist@{getDist}}
-\index{getDist@{getDist}!isae::Line2DFeatureDetector@{isae::Line2DFeatureDetector}}
-\doxysubsubsection{\texorpdfstring{getDist()}{getDist()}}
-{\footnotesize\ttfamily double isae\+::\+Line2\+D\+Feature\+Detector\+::get\+Dist (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{desc1,  }\item[{const cv\+::\+Mat \&}]{desc2 }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
-
-
-
-Implements \mbox{\hyperlink{classisae_1_1_a_feature_detector_ad59496a4d75c886d38c61ef258958cd9}{isae\+::\+A\+Feature\+Detector}}.
-
 \mbox{\Hypertarget{classisae_1_1_line2_d_feature_detector_ab0633b5156f1313aaee88170361d4831}\label{classisae_1_1_line2_d_feature_detector_ab0633b5156f1313aaee88170361d4831}} 
 \index{isae::Line2DFeatureDetector@{isae::Line2DFeatureDetector}!init@{init}}
 \index{init@{init}!isae::Line2DFeatureDetector@{isae::Line2DFeatureDetector}}
@@ -85,6 +107,10 @@ Implements \mbox{\hyperlink{classisae_1_1_a_feature_detector_ad59496a4d75c886d38
 {\footnotesize\ttfamily void isae\+::\+Line2\+D\+Feature\+Detector\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
+
+Virtual function to initialize the feature detector. 
+
+This method should be called before using the detector. 
 
 Implements \mbox{\hyperlink{classisae_1_1_a_feature_detector_a3c92c62951b8003db8428af449830850}{isae\+::\+A\+Feature\+Detector}}.
 

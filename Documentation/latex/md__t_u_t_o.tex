@@ -1,0 +1,109 @@
+This tutorial explains how to use the Sa\+D\+V\+IO library with your own dataset. It covers the necessary steps to prepare your data, create a proper calibration file, and run the library. Introduction
+
+To use Sa\+D\+V\+IO with your own dataset, you need to satsify the following\+:
+
+
+\begin{DoxyItemize}
+\item A dataset containing synchronized image measurements (+ I\+MU)
+\item A calibration file describing the intrinsic and extrinsic parameters of your sensor suite.
+\end{DoxyItemize}\hypertarget{md__t_u_t_o_autotoc_md4}{}\doxysection{Dataset Format}\label{md__t_u_t_o_autotoc_md4}
+The configuration of your dataset should be stored in .yaml file, itself stored in a \href{https://github.com/ISAE-PNX/SaDVIO/tree/main/ros/config}{\texttt{ folder}} containing a dataset folder and a {\ttfamily config.\+yaml} file. The config.\+yaml file contains all the S\+L\+AM related parameters, and the dataset folder should contain a bunch of .yaml file that describes each dataset. For instance, the eth.\+yaml file (e.\+g. for the E\+U\+R\+OC dataset) looks like\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\# General sensor definitions.}
+\DoxyCodeLine{dataset: EUROC}
+\DoxyCodeLine{ncam: 2}
+\DoxyCodeLine{}
+\DoxyCodeLine{camera\_0:}
+\DoxyCodeLine{  topic: /cam0/image\_raw}
+\DoxyCodeLine{  \# Sensor extrinsics wrt. the body-\/frame.}
+\DoxyCodeLine{  T\_BS:}
+\DoxyCodeLine{    cols: 4}
+\DoxyCodeLine{    rows: 4}
+\DoxyCodeLine{    data: [0.0148655429818, -\/0.999880929698, 0.00414029679422, -\/0.0216401454975,}
+\DoxyCodeLine{          0.999557249008, 0.0149672133247, 0.025715529948, -\/0.064676986768,}
+\DoxyCodeLine{        -\/0.0257744366974, 0.00375618835797, 0.999660727178, 0.00981073058949,}
+\DoxyCodeLine{          0.0, 0.0, 0.0, 1.0]}
+\DoxyCodeLine{}
+\DoxyCodeLine{  \# Camera specific definitions.}
+\DoxyCodeLine{  rate\_hz: 20}
+\DoxyCodeLine{  resolution: [752, 480]}
+\DoxyCodeLine{  projection\_model: pinhole}
+\DoxyCodeLine{  intrinsics: [458.654, 457.296, 367.215, 248.375] \#fu, fv, cu, cv}
+\DoxyCodeLine{  distortion\_model: radial-\/tangential}
+\DoxyCodeLine{  distortion\_coefficients: [-\/0.28340811, 0.07395907, 0.00019359, 1.76187114e-\/05]}
+\DoxyCodeLine{}
+\DoxyCodeLine{camera\_1:}
+\DoxyCodeLine{  topic: /cam1/image\_raw}
+\DoxyCodeLine{  \# Sensor extrinsics wrt. the body-\/frame.}
+\DoxyCodeLine{  T\_BS:}
+\DoxyCodeLine{    cols: 4}
+\DoxyCodeLine{    rows: 4}
+\DoxyCodeLine{    data: [0.0125552670891, -\/0.999755099723, 0.0182237714554, -\/0.0198435579556,}
+\DoxyCodeLine{          0.999598781151, 0.0130119051815, 0.0251588363115, 0.0453689425024,}
+\DoxyCodeLine{      -\/0.0253898008918, 0.0179005838253, 0.999517347078, 0.00786212447038,}
+\DoxyCodeLine{          0.0, 0.0, 0.0, 1.0]}
+\DoxyCodeLine{}
+\DoxyCodeLine{  \# Camera specific definitions.}
+\DoxyCodeLine{  rate\_hz: 20}
+\DoxyCodeLine{  resolution: [752, 480]}
+\DoxyCodeLine{  projection\_model: pinhole}
+\DoxyCodeLine{  intrinsics: [457.587, 456.134, 379.999, 255.238] \#fu, fv, cu, cv}
+\DoxyCodeLine{  distortion\_model: radial-\/tangential}
+\DoxyCodeLine{  distortion\_coefficients: [-\/0.28368365,  0.07451284, -\/0.00010473, -\/3.55590700e-\/05]}
+\DoxyCodeLine{}
+\DoxyCodeLine{imu:}
+\DoxyCodeLine{  topic: /imu0}
+\DoxyCodeLine{  T\_BS:}
+\DoxyCodeLine{    cols: 4}
+\DoxyCodeLine{    rows: 4}
+\DoxyCodeLine{    data: [1.0, 0.0, 0.0, 0.0,}
+\DoxyCodeLine{          0.0, 1.0, 0.0, 0.0,}
+\DoxyCodeLine{          0.0, 0.0, 1.0, 0.0,}
+\DoxyCodeLine{          0.0, 0.0, 0.0, 1.0]}
+\DoxyCodeLine{  rate\_hz: 200}
+\DoxyCodeLine{}
+\DoxyCodeLine{  \# inertial sensor noise model parameters (static)}
+\DoxyCodeLine{  gyroscope\_noise\_density: 1.6968e-\/04     \# [ rad / s / sqrt(Hz) ]   ( gyro "white noise" )}
+\DoxyCodeLine{  gyroscope\_random\_walk: 1.9393e-\/05       \# [ rad / s\string^2 / sqrt(Hz) ] ( gyro bias diffusion )}
+\DoxyCodeLine{  accelerometer\_noise\_density: 2.0000e-\/2  \# [ m / s\string^2 / sqrt(Hz) ]   ( accel "white noise" )}
+\DoxyCodeLine{  accelerometer\_random\_walk: 3.0000e-\/1    \# [ m / s\string^3 / sqrt(Hz) ]  ( accel bias diffusion )}
+\DoxyCodeLine{  dt\_imu\_cam: 0.0                         \# Temporal offset between IMU and camera in seconds}
+\end{DoxyCode}
+
+
+So here you need to know precisely the transform between every sensor, as well as their intrinsic properties. A wonderfull toolbox that you can use for such a task is \href{https://github.com/ethz-asl/kalibr}{\texttt{ kalibr}} and \href{https://github.com/ori-drs/allan_variance_ros}{\texttt{ allan variance for ros}}. Apart from that, a few parameters need some explanations\+:
+\begin{DoxyItemize}
+\item Sa\+D\+V\+IO supports several camera models such as double sphere or omni camera model, you can find some example in the dataset folder
+\item The transform of the I\+MU should be the identity so that it is identifies as the base of the robot. This allow for smaller lever arms between sensor and a better stability of the pipeline.
+\end{DoxyItemize}
+
+Once you have properly edited your dataset, you can simply set the parameter {\ttfamily dataset\+\_\+id} with the name of your yaml file (e.\+g. eth for eth.\+yaml) and run the program!\hypertarget{md__t_u_t_o_autotoc_md5}{}\doxysection{Run Without R\+O\+S2}\label{md__t_u_t_o_autotoc_md5}
+If you don\textquotesingle{}t use the middleware R\+O\+S2, you can use the E\+U\+R\+OC dataset A\+SL data format for which a data grabber is already implemented in \mbox{\hyperlink{adataprovider_8h}{A\+Dataprovider.\+h}}. Then you can compile and run the executable \href{https://github.com/ISAE-PNX/SaDVIO/blob/main/cpp/main.cpp}{\texttt{ main.\+cpp}} in the \href{https://github.com/ISAE-PNX/SaDVIO/tree/main/cpp}{\texttt{ /cpp}} folder as such 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{mkdir build}
+\DoxyCodeLine{cd build}
+\DoxyCodeLine{cmake ..}
+\DoxyCodeLine{make}
+\end{DoxyCode}
+
+
+And to run the executable 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{./isaeslam "/your/path/SaDVIO/ros/config" "/your/path/to/your/dataset/in/ASL/format"}
+\end{DoxyCode}
+\hypertarget{md__t_u_t_o_autotoc_md6}{}\doxysection{Run with R\+O\+S2}\label{md__t_u_t_o_autotoc_md6}
+With R\+O\+S2, we have implemented all the interface with ros in the \href{https://github.com/ISAE-PNX/SaDVIO/tree/main/ros}{\texttt{ /ros}} folder.
+
+You can compile the node with the following command\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{colcon build -\/-\/symlink-\/install -\/-\/packages-\/select isae\_slam\_ros}
+\end{DoxyCode}
+
+
+We have set a nice launch file that runs the program with a cool rviz visualizer\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ros2 launch isae\_slam\_ros isae\_slam.xml}
+\end{DoxyCode}
+ 

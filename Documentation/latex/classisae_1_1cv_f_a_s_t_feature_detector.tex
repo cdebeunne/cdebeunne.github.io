@@ -2,6 +2,11 @@
 \label{classisae_1_1cv_f_a_s_t_feature_detector}\index{isae::cvFASTFeatureDetector@{isae::cvFASTFeatureDetector}}
 
 
+Class for detecting and computing F\+A\+ST features using Open\+CV.  
+
+
+
+
 {\ttfamily \#include $<$cv\+F\+A\+S\+T\+Feature\+Detector.\+h$>$}
 
 
@@ -28,11 +33,14 @@ Collaboration diagram for isae\+::cv\+F\+A\+S\+T\+Feature\+Detector\+:\nopagebre
 \mbox{\hyperlink{classisae_1_1cv_f_a_s_t_feature_detector_ad1b095f4be7bb31d88c0a31e346ffd6e}{cv\+F\+A\+S\+T\+Feature\+Detector}} (int n, int n\+\_\+per\+\_\+cell, double max\+\_\+matching\+\_\+dist=64)
 \item 
 void \mbox{\hyperlink{classisae_1_1cv_f_a_s_t_feature_detector_a2e9178b0961a7110941ff27799eba46c}{init}} () override
-\item 
-double \mbox{\hyperlink{classisae_1_1cv_f_a_s_t_feature_detector_a0d364e46c8a18a3137007c0b455bdcd7}{get\+Dist}} (const cv\+::\+Mat \&desc1, const cv\+::\+Mat \&desc2) const override
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Virtual function to initialize the feature detector. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classisae_1_1cv_f_a_s_t_feature_detector_ad047c27c9cf76fc4a1e11c6cc99eae4d}{compute\+Dist}} (const cv\+::\+Mat \&desc1, const cv\+::\+Mat \&desc2) const override
+\begin{DoxyCompactList}\small\item\em Virtual function to compute the distance between two feature descriptors. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
+
+\doxysubsection{Detailed Description}
+Class for detecting and computing F\+A\+ST features using Open\+CV. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classisae_1_1cv_f_a_s_t_feature_detector_ad1b095f4be7bb31d88c0a31e346ffd6e}\label{classisae_1_1cv_f_a_s_t_feature_detector_ad1b095f4be7bb31d88c0a31e346ffd6e}} 
@@ -44,15 +52,26 @@ double \mbox{\hyperlink{classisae_1_1cv_f_a_s_t_feature_detector_a0d364e46c8a18a
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classisae_1_1cv_f_a_s_t_feature_detector_a0d364e46c8a18a3137007c0b455bdcd7}\label{classisae_1_1cv_f_a_s_t_feature_detector_a0d364e46c8a18a3137007c0b455bdcd7}} 
-\index{isae::cvFASTFeatureDetector@{isae::cvFASTFeatureDetector}!getDist@{getDist}}
-\index{getDist@{getDist}!isae::cvFASTFeatureDetector@{isae::cvFASTFeatureDetector}}
-\doxysubsubsection{\texorpdfstring{getDist()}{getDist()}}
-{\footnotesize\ttfamily double isae\+::cv\+F\+A\+S\+T\+Feature\+Detector\+::get\+Dist (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{desc1,  }\item[{const cv\+::\+Mat \&}]{desc2 }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+\mbox{\Hypertarget{classisae_1_1cv_f_a_s_t_feature_detector_ad047c27c9cf76fc4a1e11c6cc99eae4d}\label{classisae_1_1cv_f_a_s_t_feature_detector_ad047c27c9cf76fc4a1e11c6cc99eae4d}} 
+\index{isae::cvFASTFeatureDetector@{isae::cvFASTFeatureDetector}!computeDist@{computeDist}}
+\index{computeDist@{computeDist}!isae::cvFASTFeatureDetector@{isae::cvFASTFeatureDetector}}
+\doxysubsubsection{\texorpdfstring{computeDist()}{computeDist()}}
+{\footnotesize\ttfamily double isae\+::cv\+F\+A\+S\+T\+Feature\+Detector\+::compute\+Dist (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{desc1,  }\item[{const cv\+::\+Mat \&}]{desc2 }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
-Implements \mbox{\hyperlink{classisae_1_1_a_feature_detector_ad59496a4d75c886d38c61ef258958cd9}{isae\+::\+A\+Feature\+Detector}}.
+Virtual function to compute the distance between two feature descriptors. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em desc1} & The first feature descriptor. \\
+\hline
+{\em desc2} & The second feature descriptor. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classisae_1_1_a_feature_detector_ab4a121be21f0eaeb2ef8fef4b936c07a}{isae\+::\+A\+Feature\+Detector}}.
 
 \mbox{\Hypertarget{classisae_1_1cv_f_a_s_t_feature_detector_a2e9178b0961a7110941ff27799eba46c}\label{classisae_1_1cv_f_a_s_t_feature_detector_a2e9178b0961a7110941ff27799eba46c}} 
 \index{isae::cvFASTFeatureDetector@{isae::cvFASTFeatureDetector}!init@{init}}
@@ -61,6 +80,10 @@ Implements \mbox{\hyperlink{classisae_1_1_a_feature_detector_ad59496a4d75c886d38
 {\footnotesize\ttfamily void isae\+::cv\+F\+A\+S\+T\+Feature\+Detector\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
+
+Virtual function to initialize the feature detector. 
+
+This method should be called before using the detector. 
 
 Implements \mbox{\hyperlink{classisae_1_1_a_feature_detector_a3c92c62951b8003db8428af449830850}{isae\+::\+A\+Feature\+Detector}}.
 

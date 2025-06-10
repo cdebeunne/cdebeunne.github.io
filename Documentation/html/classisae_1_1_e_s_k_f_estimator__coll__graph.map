@@ -1,4 +1,4 @@
 <map id="isae::ESKFEstimator" name="isae::ESKFEstimator">
-<area shape="rect" id="node1" title=" " alt="" coords="9,80,162,107"/>
-<area shape="rect" id="node2" href="$classisae_1_1_a_pose_estimator.html" title=" " alt="" coords="5,5,165,32"/>
+<area shape="rect" id="node1" title="ESKFEstimator class for estimating the transformation between two frames using an EKF." alt="" coords="9,80,162,107"/>
+<area shape="rect" id="node2" href="$classisae_1_1_a_pose_estimator.html" title="Abstract class for relative pose estimation between two frames." alt="" coords="5,5,165,32"/>
 </map>

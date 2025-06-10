@@ -1,4 +1,4 @@
 <map id="isae::ADataProvider" name="isae::ADataProvider">
-<area shape="rect" id="node1" title=" " alt="" coords="5,95,156,121"/>
+<area shape="rect" id="node1" title="ADataProvider class for managing data from various sensors." alt="" coords="5,95,156,121"/>
 <area shape="rect" id="node2" href="$structisae_1_1_config.html" title=" " alt="" coords="31,5,130,32"/>
 </map>

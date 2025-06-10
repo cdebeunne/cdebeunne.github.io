@@ -1,4 +1,4 @@
 <map id="isae::Line2DFeatureMatcher" name="isae::Line2DFeatureMatcher">
-<area shape="rect" id="node1" title=" " alt="" coords="5,80,209,107"/>
-<area shape="rect" id="node2" href="$classisae_1_1_a_feature_matcher.html" title=" " alt="" coords="23,5,191,32"/>
+<area shape="rect" id="node1" title="Class for matching 2D line features." alt="" coords="5,80,209,107"/>
+<area shape="rect" id="node2" href="$classisae_1_1_a_feature_matcher.html" title="Class for matching features between two sets of features." alt="" coords="23,5,191,32"/>
 </map>
