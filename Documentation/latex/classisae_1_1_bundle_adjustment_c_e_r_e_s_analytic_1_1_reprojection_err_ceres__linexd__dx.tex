@@ -1,0 +1,108 @@
+\hypertarget{classisae_1_1_bundle_adjustment_c_e_r_e_s_analytic_1_1_reprojection_err_ceres__linexd__dx}{}\doxysection{isae\+::Bundle\+Adjustment\+C\+E\+R\+E\+S\+Analytic\+::Reprojection\+Err\+Ceres\+\_\+linexd\+\_\+dx Class Reference}
+\label{classisae_1_1_bundle_adjustment_c_e_r_e_s_analytic_1_1_reprojection_err_ceres__linexd__dx}\index{isae::BundleAdjustmentCERESAnalytic::ReprojectionErrCeres\_linexd\_dx@{isae::BundleAdjustmentCERESAnalytic::ReprojectionErrCeres\_linexd\_dx}}
+
+
+{\ttfamily \#include $<$Bundle\+Adjustment\+C\+E\+R\+E\+S\+Analytic.\+h$>$}
+
+
+
+Inheritance diagram for isae\+::Bundle\+Adjustment\+C\+E\+R\+E\+S\+Analytic\+::Reprojection\+Err\+Ceres\+\_\+linexd\+\_\+dx\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=285pt]{classisae_1_1_bundle_adjustment_c_e_r_e_s_analytic_1_1_reprojection_err_ceres__linexd__dx__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for isae\+::Bundle\+Adjustment\+C\+E\+R\+E\+S\+Analytic\+::Reprojection\+Err\+Ceres\+\_\+linexd\+\_\+dx\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=285pt]{classisae_1_1_bundle_adjustment_c_e_r_e_s_analytic_1_1_reprojection_err_ceres__linexd__dx__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classisae_1_1_bundle_adjustment_c_e_r_e_s_analytic_1_1_reprojection_err_ceres__linexd__dx_adf3732d8a1065fbd14801fe70aaa8d43}{Reprojection\+Err\+Ceres\+\_\+linexd\+\_\+dx}} (const std\+::vector$<$ Eigen\+::\+Vector2d $>$ \&p2ds, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_image_sensor}{Image\+Sensor}} $>$ \&cam, const Eigen\+::\+Affine3d \&T\+\_\+w\+\_\+lmk, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_model3d}{A\+Model3d}} $>$ \&model3d, const double sigma=1.\+0)
+\item 
+\mbox{\hyperlink{classisae_1_1_bundle_adjustment_c_e_r_e_s_analytic_1_1_reprojection_err_ceres__linexd__dx_a2b158a74084712a5bfc72ecf7c51b15e}{$\sim$\+Reprojection\+Err\+Ceres\+\_\+linexd\+\_\+dx}} ()
+\item 
+virtual bool \mbox{\hyperlink{classisae_1_1_bundle_adjustment_c_e_r_e_s_analytic_1_1_reprojection_err_ceres__linexd__dx_a538d519b1139e7122df0c753d40a34eb}{Evaluate}} (double const $\ast$const $\ast$parameters, double $\ast$residuals, double $\ast$$\ast$jacobians) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const std\+::vector$<$ Eigen\+::\+Vector2d $>$ \mbox{\hyperlink{classisae_1_1_bundle_adjustment_c_e_r_e_s_analytic_1_1_reprojection_err_ceres__linexd__dx_a14cd86571992c05f761d3f15b5cef94a}{p2ds\+\_\+}}
+\item 
+const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_image_sensor}{Image\+Sensor}} $>$ \mbox{\hyperlink{classisae_1_1_bundle_adjustment_c_e_r_e_s_analytic_1_1_reprojection_err_ceres__linexd__dx_a5f9d50ddc017bdd674192357f6c0ba52}{cam\+\_\+}}
+\item 
+const Eigen\+::\+Affine3d \mbox{\hyperlink{classisae_1_1_bundle_adjustment_c_e_r_e_s_analytic_1_1_reprojection_err_ceres__linexd__dx_abe52499f7427d04986586b291ae55dbc}{T\+\_\+w\+\_\+lmk\+\_\+}}
+\item 
+const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_model3d}{A\+Model3d}} $>$ \mbox{\hyperlink{classisae_1_1_bundle_adjustment_c_e_r_e_s_analytic_1_1_reprojection_err_ceres__linexd__dx_a4e61439abca8be04b598c4c67b23c32e}{model3d\+\_\+}}
+\item 
+Eigen\+::\+Matrix2d \mbox{\hyperlink{classisae_1_1_bundle_adjustment_c_e_r_e_s_analytic_1_1_reprojection_err_ceres__linexd__dx_a4dc6039b483da7fd9c06a98bdb0dd681}{info\+\_\+sqrt\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classisae_1_1_bundle_adjustment_c_e_r_e_s_analytic_1_1_reprojection_err_ceres__linexd__dx_adf3732d8a1065fbd14801fe70aaa8d43}\label{classisae_1_1_bundle_adjustment_c_e_r_e_s_analytic_1_1_reprojection_err_ceres__linexd__dx_adf3732d8a1065fbd14801fe70aaa8d43}} 
+\index{isae::BundleAdjustmentCERESAnalytic::ReprojectionErrCeres\_linexd\_dx@{isae::BundleAdjustmentCERESAnalytic::ReprojectionErrCeres\_linexd\_dx}!ReprojectionErrCeres\_linexd\_dx@{ReprojectionErrCeres\_linexd\_dx}}
+\index{ReprojectionErrCeres\_linexd\_dx@{ReprojectionErrCeres\_linexd\_dx}!isae::BundleAdjustmentCERESAnalytic::ReprojectionErrCeres\_linexd\_dx@{isae::BundleAdjustmentCERESAnalytic::ReprojectionErrCeres\_linexd\_dx}}
+\doxysubsubsection{\texorpdfstring{ReprojectionErrCeres\_linexd\_dx()}{ReprojectionErrCeres\_linexd\_dx()}}
+{\footnotesize\ttfamily isae\+::\+Bundle\+Adjustment\+C\+E\+R\+E\+S\+Analytic\+::\+Reprojection\+Err\+Ceres\+\_\+linexd\+\_\+dx\+::\+Reprojection\+Err\+Ceres\+\_\+linexd\+\_\+dx (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ Eigen\+::\+Vector2d $>$ \&}]{p2ds,  }\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_image_sensor}{Image\+Sensor}} $>$ \&}]{cam,  }\item[{const Eigen\+::\+Affine3d \&}]{T\+\_\+w\+\_\+lmk,  }\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_model3d}{A\+Model3d}} $>$ \&}]{model3d,  }\item[{const double}]{sigma = {\ttfamily 1.0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_bundle_adjustment_c_e_r_e_s_analytic_1_1_reprojection_err_ceres__linexd__dx_a2b158a74084712a5bfc72ecf7c51b15e}\label{classisae_1_1_bundle_adjustment_c_e_r_e_s_analytic_1_1_reprojection_err_ceres__linexd__dx_a2b158a74084712a5bfc72ecf7c51b15e}} 
+\index{isae::BundleAdjustmentCERESAnalytic::ReprojectionErrCeres\_linexd\_dx@{isae::BundleAdjustmentCERESAnalytic::ReprojectionErrCeres\_linexd\_dx}!````~ReprojectionErrCeres\_linexd\_dx@{$\sim$ReprojectionErrCeres\_linexd\_dx}}
+\index{````~ReprojectionErrCeres\_linexd\_dx@{$\sim$ReprojectionErrCeres\_linexd\_dx}!isae::BundleAdjustmentCERESAnalytic::ReprojectionErrCeres\_linexd\_dx@{isae::BundleAdjustmentCERESAnalytic::ReprojectionErrCeres\_linexd\_dx}}
+\doxysubsubsection{\texorpdfstring{$\sim$ReprojectionErrCeres\_linexd\_dx()}{~ReprojectionErrCeres\_linexd\_dx()}}
+{\footnotesize\ttfamily isae\+::\+Bundle\+Adjustment\+C\+E\+R\+E\+S\+Analytic\+::\+Reprojection\+Err\+Ceres\+\_\+linexd\+\_\+dx\+::$\sim$\+Reprojection\+Err\+Ceres\+\_\+linexd\+\_\+dx (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classisae_1_1_bundle_adjustment_c_e_r_e_s_analytic_1_1_reprojection_err_ceres__linexd__dx_a538d519b1139e7122df0c753d40a34eb}\label{classisae_1_1_bundle_adjustment_c_e_r_e_s_analytic_1_1_reprojection_err_ceres__linexd__dx_a538d519b1139e7122df0c753d40a34eb}} 
+\index{isae::BundleAdjustmentCERESAnalytic::ReprojectionErrCeres\_linexd\_dx@{isae::BundleAdjustmentCERESAnalytic::ReprojectionErrCeres\_linexd\_dx}!Evaluate@{Evaluate}}
+\index{Evaluate@{Evaluate}!isae::BundleAdjustmentCERESAnalytic::ReprojectionErrCeres\_linexd\_dx@{isae::BundleAdjustmentCERESAnalytic::ReprojectionErrCeres\_linexd\_dx}}
+\doxysubsubsection{\texorpdfstring{Evaluate()}{Evaluate()}}
+{\footnotesize\ttfamily virtual bool isae\+::\+Bundle\+Adjustment\+C\+E\+R\+E\+S\+Analytic\+::\+Reprojection\+Err\+Ceres\+\_\+linexd\+\_\+dx\+::\+Evaluate (\begin{DoxyParamCaption}\item[{double const $\ast$const $\ast$}]{parameters,  }\item[{double $\ast$}]{residuals,  }\item[{double $\ast$$\ast$}]{jacobians }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classisae_1_1_bundle_adjustment_c_e_r_e_s_analytic_1_1_reprojection_err_ceres__linexd__dx_a5f9d50ddc017bdd674192357f6c0ba52}\label{classisae_1_1_bundle_adjustment_c_e_r_e_s_analytic_1_1_reprojection_err_ceres__linexd__dx_a5f9d50ddc017bdd674192357f6c0ba52}} 
+\index{isae::BundleAdjustmentCERESAnalytic::ReprojectionErrCeres\_linexd\_dx@{isae::BundleAdjustmentCERESAnalytic::ReprojectionErrCeres\_linexd\_dx}!cam\_@{cam\_}}
+\index{cam\_@{cam\_}!isae::BundleAdjustmentCERESAnalytic::ReprojectionErrCeres\_linexd\_dx@{isae::BundleAdjustmentCERESAnalytic::ReprojectionErrCeres\_linexd\_dx}}
+\doxysubsubsection{\texorpdfstring{cam\_}{cam\_}}
+{\footnotesize\ttfamily const std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classisae_1_1_image_sensor}{Image\+Sensor}}$>$ isae\+::\+Bundle\+Adjustment\+C\+E\+R\+E\+S\+Analytic\+::\+Reprojection\+Err\+Ceres\+\_\+linexd\+\_\+dx\+::cam\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classisae_1_1_bundle_adjustment_c_e_r_e_s_analytic_1_1_reprojection_err_ceres__linexd__dx_a4dc6039b483da7fd9c06a98bdb0dd681}\label{classisae_1_1_bundle_adjustment_c_e_r_e_s_analytic_1_1_reprojection_err_ceres__linexd__dx_a4dc6039b483da7fd9c06a98bdb0dd681}} 
+\index{isae::BundleAdjustmentCERESAnalytic::ReprojectionErrCeres\_linexd\_dx@{isae::BundleAdjustmentCERESAnalytic::ReprojectionErrCeres\_linexd\_dx}!info\_sqrt\_@{info\_sqrt\_}}
+\index{info\_sqrt\_@{info\_sqrt\_}!isae::BundleAdjustmentCERESAnalytic::ReprojectionErrCeres\_linexd\_dx@{isae::BundleAdjustmentCERESAnalytic::ReprojectionErrCeres\_linexd\_dx}}
+\doxysubsubsection{\texorpdfstring{info\_sqrt\_}{info\_sqrt\_}}
+{\footnotesize\ttfamily Eigen\+::\+Matrix2d isae\+::\+Bundle\+Adjustment\+C\+E\+R\+E\+S\+Analytic\+::\+Reprojection\+Err\+Ceres\+\_\+linexd\+\_\+dx\+::info\+\_\+sqrt\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classisae_1_1_bundle_adjustment_c_e_r_e_s_analytic_1_1_reprojection_err_ceres__linexd__dx_a4e61439abca8be04b598c4c67b23c32e}\label{classisae_1_1_bundle_adjustment_c_e_r_e_s_analytic_1_1_reprojection_err_ceres__linexd__dx_a4e61439abca8be04b598c4c67b23c32e}} 
+\index{isae::BundleAdjustmentCERESAnalytic::ReprojectionErrCeres\_linexd\_dx@{isae::BundleAdjustmentCERESAnalytic::ReprojectionErrCeres\_linexd\_dx}!model3d\_@{model3d\_}}
+\index{model3d\_@{model3d\_}!isae::BundleAdjustmentCERESAnalytic::ReprojectionErrCeres\_linexd\_dx@{isae::BundleAdjustmentCERESAnalytic::ReprojectionErrCeres\_linexd\_dx}}
+\doxysubsubsection{\texorpdfstring{model3d\_}{model3d\_}}
+{\footnotesize\ttfamily const std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classisae_1_1_a_model3d}{A\+Model3d}}$>$ isae\+::\+Bundle\+Adjustment\+C\+E\+R\+E\+S\+Analytic\+::\+Reprojection\+Err\+Ceres\+\_\+linexd\+\_\+dx\+::model3d\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classisae_1_1_bundle_adjustment_c_e_r_e_s_analytic_1_1_reprojection_err_ceres__linexd__dx_a14cd86571992c05f761d3f15b5cef94a}\label{classisae_1_1_bundle_adjustment_c_e_r_e_s_analytic_1_1_reprojection_err_ceres__linexd__dx_a14cd86571992c05f761d3f15b5cef94a}} 
+\index{isae::BundleAdjustmentCERESAnalytic::ReprojectionErrCeres\_linexd\_dx@{isae::BundleAdjustmentCERESAnalytic::ReprojectionErrCeres\_linexd\_dx}!p2ds\_@{p2ds\_}}
+\index{p2ds\_@{p2ds\_}!isae::BundleAdjustmentCERESAnalytic::ReprojectionErrCeres\_linexd\_dx@{isae::BundleAdjustmentCERESAnalytic::ReprojectionErrCeres\_linexd\_dx}}
+\doxysubsubsection{\texorpdfstring{p2ds\_}{p2ds\_}}
+{\footnotesize\ttfamily const std\+::vector$<$Eigen\+::\+Vector2d$>$ isae\+::\+Bundle\+Adjustment\+C\+E\+R\+E\+S\+Analytic\+::\+Reprojection\+Err\+Ceres\+\_\+linexd\+\_\+dx\+::p2ds\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classisae_1_1_bundle_adjustment_c_e_r_e_s_analytic_1_1_reprojection_err_ceres__linexd__dx_abe52499f7427d04986586b291ae55dbc}\label{classisae_1_1_bundle_adjustment_c_e_r_e_s_analytic_1_1_reprojection_err_ceres__linexd__dx_abe52499f7427d04986586b291ae55dbc}} 
+\index{isae::BundleAdjustmentCERESAnalytic::ReprojectionErrCeres\_linexd\_dx@{isae::BundleAdjustmentCERESAnalytic::ReprojectionErrCeres\_linexd\_dx}!T\_w\_lmk\_@{T\_w\_lmk\_}}
+\index{T\_w\_lmk\_@{T\_w\_lmk\_}!isae::BundleAdjustmentCERESAnalytic::ReprojectionErrCeres\_linexd\_dx@{isae::BundleAdjustmentCERESAnalytic::ReprojectionErrCeres\_linexd\_dx}}
+\doxysubsubsection{\texorpdfstring{T\_w\_lmk\_}{T\_w\_lmk\_}}
+{\footnotesize\ttfamily const Eigen\+::\+Affine3d isae\+::\+Bundle\+Adjustment\+C\+E\+R\+E\+S\+Analytic\+::\+Reprojection\+Err\+Ceres\+\_\+linexd\+\_\+dx\+::\+T\+\_\+w\+\_\+lmk\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/deos/ce.\+debeunne/colcon\+\_\+ws/src/\+Sa\+D\+V\+I\+O/cpp/include/isaeslam/optimizers/\mbox{\hyperlink{_bundle_adjustment_c_e_r_e_s_analytic_8h}{Bundle\+Adjustment\+C\+E\+R\+E\+S\+Analytic.\+h}}\end{DoxyCompactItemize}

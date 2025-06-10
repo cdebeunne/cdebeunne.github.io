@@ -1,0 +1,57 @@
+\hypertarget{imu__test_8cpp}{}\doxysection{/home/deos/ce.debeunne/colcon\+\_\+ws/src/\+Sa\+D\+V\+I\+O/cpp/tests/imu\+\_\+test.cpp File Reference}
+\label{imu__test_8cpp}\index{/home/deos/ce.debeunne/colcon\_ws/src/SaDVIO/cpp/tests/imu\_test.cpp@{/home/deos/ce.debeunne/colcon\_ws/src/SaDVIO/cpp/tests/imu\_test.cpp}}
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$gtest/gtest.\+h$>$}\newline
+{\ttfamily \#include $<$random$>$}\newline
+{\ttfamily \#include \char`\"{}isaeslam/data/frame.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}isaeslam/data/maps/localmap.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}isaeslam/data/sensors/\+I\+M\+U.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}isaeslam/optimizers/\+Angular\+Adjustment\+C\+E\+R\+E\+S\+Analytic.\+h\char`\"{}}\newline
+Include dependency graph for imu\+\_\+test.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{imu__test_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classisae_1_1_imu_test}{isae\+::\+Imu\+Test}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceisae}{isae}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{namespaceisae_ad0831292a839ba9e8943838544d3bb41}{isae\+::read\+\_\+line\+\_\+euroc}} (std\+::string line, Eigen\+::\+Affine3d \&pose, Eigen\+::\+Vector3d \&v, double \&ts)
+\item 
+void \mbox{\hyperlink{namespaceisae_aa342a403a67d46a14f7298e124c14f2b}{isae\+::write\+\_\+result}} (std\+::shared\+\_\+ptr$<$ Frame $>$ f)
+\item 
+void \mbox{\hyperlink{namespaceisae_a2e7cb25c5558603da7ea0ceb3f8ec47b}{isae\+::write\+\_\+imu\+\_\+data}} (double ts, Eigen\+::\+Vector3d acc)
+\item 
+\mbox{\hyperlink{namespaceisae_af0784c987f5396bde73a0fccf0ce9dd6}{isae\+::\+T\+E\+S\+T\+\_\+F}} (Imu\+Test, Imu\+Test\+Base)
+\item 
+\mbox{\hyperlink{namespaceisae_a30f7efd98b19022f3d2f8c5f75d1ac12}{isae\+::\+T\+E\+S\+T\+\_\+F}} (Imu\+Test, Imu\+New\+Meas)
+\item 
+\mbox{\hyperlink{namespaceisae_a9ac292040e53023b852b4fb1d90e515a}{isae\+::\+T\+E\+S\+T\+\_\+F}} (Imu\+Test, check\+Cov)
+\item 
+\mbox{\hyperlink{namespaceisae_aa3d842b6fc5624a54bcd401a29b13ddf}{isae\+::\+T\+E\+S\+T\+\_\+F}} (Imu\+Test, accelerating)
+\item 
+\mbox{\hyperlink{namespaceisae_aaff44b4d9a535a3f75b10538139e356a}{isae\+::\+T\+E\+S\+T\+\_\+F}} (Imu\+Test, check\+Jacobians\+Bias\+Gyr)
+\item 
+\mbox{\hyperlink{namespaceisae_a2d7fde747bde82efccf60ed3042ea51f}{isae\+::\+T\+E\+S\+T\+\_\+F}} (Imu\+Test, prediction\+Position\+Velocity)
+\item 
+\mbox{\hyperlink{namespaceisae_a144c183a3e3823df0f78d40743b839b2}{isae\+::\+T\+E\+S\+T\+\_\+F}} (Imu\+Test, bias\+Estimation)
+\item 
+\mbox{\hyperlink{namespaceisae_a425d03697bf9f1ee81a4ea2266f03728}{isae\+::\+T\+E\+S\+T\+\_\+F}} (Imu\+Test, prediction\+With\+Rotation)
+\item 
+\mbox{\hyperlink{namespaceisae_a37a94161af2fcfc8009a0b22f9d5fb13}{isae\+::\+T\+E\+S\+T\+\_\+F}} (Imu\+Test, prediction\+With\+Rotation2)
+\item 
+\mbox{\hyperlink{namespaceisae_ac8dbe70612544a8ebf3f864410f16169}{isae\+::\+T\+E\+S\+T\+\_\+F}} (Imu\+Test, simu\+Euroc)
+\item 
+\mbox{\hyperlink{namespaceisae_adf7b9f0fbb46336c62ef8fb9f2444419}{isae\+::\+T\+E\+S\+T\+\_\+F}} (Imu\+Test, Test\+Pre\+Integ)
+\end{DoxyCompactItemize}

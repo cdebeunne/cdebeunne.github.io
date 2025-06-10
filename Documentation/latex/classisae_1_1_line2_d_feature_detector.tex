@@ -1,0 +1,96 @@
+\hypertarget{classisae_1_1_line2_d_feature_detector}{}\doxysection{isae\+::Line2\+D\+Feature\+Detector Class Reference}
+\label{classisae_1_1_line2_d_feature_detector}\index{isae::Line2DFeatureDetector@{isae::Line2DFeatureDetector}}
+
+
+{\ttfamily \#include $<$Line2\+D\+Feature\+Detector.\+h$>$}
+
+
+
+Inheritance diagram for isae\+::Line2\+D\+Feature\+Detector\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{classisae_1_1_line2_d_feature_detector__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for isae\+::Line2\+D\+Feature\+Detector\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{classisae_1_1_line2_d_feature_detector__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classisae_1_1_line2_d_feature_detector_a4ca3d0c0bea873e80a92295fbef4dd08}{Line2\+D\+Feature\+Detector}} (int n, int n\+\_\+per\+\_\+cell, double max\+\_\+matching\+\_\+dist=25)
+\item 
+void \mbox{\hyperlink{classisae_1_1_line2_d_feature_detector_aa6896efab5b1e5575c62406e9ae2e47c}{custom\+Detect\+And\+Compute}} (const cv\+::\+Mat \&img, const cv\+::\+Mat \&mask, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$ \&features) override
+\item 
+void \mbox{\hyperlink{classisae_1_1_line2_d_feature_detector_a3303b00988ea0a306efd40aeaee055b4}{compute\+Descriptor}} (const cv\+::\+Mat \&img, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$ \&features) override
+\item 
+void \mbox{\hyperlink{classisae_1_1_line2_d_feature_detector_ab0633b5156f1313aaee88170361d4831}{init}} () override
+\item 
+double \mbox{\hyperlink{classisae_1_1_line2_d_feature_detector_a81d47c02288a1e12ace67e6d55bce73c}{get\+Dist}} (const cv\+::\+Mat \&desc1, const cv\+::\+Mat \&desc2) const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classisae_1_1_line2_d_feature_detector_a4ca3d0c0bea873e80a92295fbef4dd08}\label{classisae_1_1_line2_d_feature_detector_a4ca3d0c0bea873e80a92295fbef4dd08}} 
+\index{isae::Line2DFeatureDetector@{isae::Line2DFeatureDetector}!Line2DFeatureDetector@{Line2DFeatureDetector}}
+\index{Line2DFeatureDetector@{Line2DFeatureDetector}!isae::Line2DFeatureDetector@{isae::Line2DFeatureDetector}}
+\doxysubsubsection{\texorpdfstring{Line2DFeatureDetector()}{Line2DFeatureDetector()}}
+{\footnotesize\ttfamily isae\+::\+Line2\+D\+Feature\+Detector\+::\+Line2\+D\+Feature\+Detector (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{int}]{n\+\_\+per\+\_\+cell,  }\item[{double}]{max\+\_\+matching\+\_\+dist = {\ttfamily 25} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classisae_1_1_line2_d_feature_detector_a3303b00988ea0a306efd40aeaee055b4}\label{classisae_1_1_line2_d_feature_detector_a3303b00988ea0a306efd40aeaee055b4}} 
+\index{isae::Line2DFeatureDetector@{isae::Line2DFeatureDetector}!computeDescriptor@{computeDescriptor}}
+\index{computeDescriptor@{computeDescriptor}!isae::Line2DFeatureDetector@{isae::Line2DFeatureDetector}}
+\doxysubsubsection{\texorpdfstring{computeDescriptor()}{computeDescriptor()}}
+{\footnotesize\ttfamily void isae\+::\+Line2\+D\+Feature\+Detector\+::compute\+Descriptor (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{img,  }\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$ \&}]{features }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classisae_1_1_a_custom_feature_detector_a3c37409af9d97037dbbc4677127879e2}{isae\+::\+A\+Custom\+Feature\+Detector}}.
+
+\mbox{\Hypertarget{classisae_1_1_line2_d_feature_detector_aa6896efab5b1e5575c62406e9ae2e47c}\label{classisae_1_1_line2_d_feature_detector_aa6896efab5b1e5575c62406e9ae2e47c}} 
+\index{isae::Line2DFeatureDetector@{isae::Line2DFeatureDetector}!customDetectAndCompute@{customDetectAndCompute}}
+\index{customDetectAndCompute@{customDetectAndCompute}!isae::Line2DFeatureDetector@{isae::Line2DFeatureDetector}}
+\doxysubsubsection{\texorpdfstring{customDetectAndCompute()}{customDetectAndCompute()}}
+{\footnotesize\ttfamily void isae\+::\+Line2\+D\+Feature\+Detector\+::custom\+Detect\+And\+Compute (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{img,  }\item[{const cv\+::\+Mat \&}]{mask,  }\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$ \&}]{features }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+T\+O\+DO ???
+
+Implements \mbox{\hyperlink{classisae_1_1_a_custom_feature_detector_a53cf8fa55bfed8a81e4c1b72c4d16518}{isae\+::\+A\+Custom\+Feature\+Detector}}.
+
+\mbox{\Hypertarget{classisae_1_1_line2_d_feature_detector_a81d47c02288a1e12ace67e6d55bce73c}\label{classisae_1_1_line2_d_feature_detector_a81d47c02288a1e12ace67e6d55bce73c}} 
+\index{isae::Line2DFeatureDetector@{isae::Line2DFeatureDetector}!getDist@{getDist}}
+\index{getDist@{getDist}!isae::Line2DFeatureDetector@{isae::Line2DFeatureDetector}}
+\doxysubsubsection{\texorpdfstring{getDist()}{getDist()}}
+{\footnotesize\ttfamily double isae\+::\+Line2\+D\+Feature\+Detector\+::get\+Dist (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{desc1,  }\item[{const cv\+::\+Mat \&}]{desc2 }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classisae_1_1_a_feature_detector_ad59496a4d75c886d38c61ef258958cd9}{isae\+::\+A\+Feature\+Detector}}.
+
+\mbox{\Hypertarget{classisae_1_1_line2_d_feature_detector_ab0633b5156f1313aaee88170361d4831}\label{classisae_1_1_line2_d_feature_detector_ab0633b5156f1313aaee88170361d4831}} 
+\index{isae::Line2DFeatureDetector@{isae::Line2DFeatureDetector}!init@{init}}
+\index{init@{init}!isae::Line2DFeatureDetector@{isae::Line2DFeatureDetector}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void isae\+::\+Line2\+D\+Feature\+Detector\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classisae_1_1_a_feature_detector_a3c92c62951b8003db8428af449830850}{isae\+::\+A\+Feature\+Detector}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/deos/ce.\+debeunne/colcon\+\_\+ws/src/\+Sa\+D\+V\+I\+O/cpp/include/isaeslam/featuredetectors/custom\+\_\+detectors/\mbox{\hyperlink{_line2_d_feature_detector_8h}{Line2\+D\+Feature\+Detector.\+h}}\item 
+/home/deos/ce.\+debeunne/colcon\+\_\+ws/src/\+Sa\+D\+V\+I\+O/cpp/src/featuredetectors/custom\+\_\+detectors/\mbox{\hyperlink{_line2_d_feature_detector_8cpp}{Line2\+D\+Feature\+Detector.\+cpp}}\end{DoxyCompactItemize}

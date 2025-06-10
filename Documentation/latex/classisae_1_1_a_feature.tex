@@ -1,0 +1,363 @@
+\hypertarget{classisae_1_1_a_feature}{}\doxysection{isae\+::A\+Feature Class Reference}
+\label{classisae_1_1_a_feature}\index{isae::AFeature@{isae::AFeature}}
+
+
+Abstract class for 2D features.  
+
+
+
+
+{\ttfamily \#include $<$A\+Feature2\+D.\+h$>$}
+
+
+
+Inheritance diagram for isae\+::A\+Feature\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classisae_1_1_a_feature__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for isae\+::A\+Feature\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{classisae_1_1_a_feature__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classisae_1_1_a_feature_a9a568f81c517a258be455e281a3d5cce}{A\+Feature}} ()
+\item 
+\mbox{\hyperlink{classisae_1_1_a_feature_a30170ffc31f7075b3caee60e5005bc0e}{A\+Feature}} (std\+::vector$<$ Eigen\+::\+Vector2d $>$ poses2d, cv\+::\+Mat desc=cv\+::\+Mat(), int octave=0, double sigma=1.\+0)
+\item 
+const std\+::vector$<$ Eigen\+::\+Vector2d $>$ \mbox{\hyperlink{classisae_1_1_a_feature_addf9de7825d0a63ed97e52e42652c88e}{get\+Points}} () const
+\item 
+void \mbox{\hyperlink{classisae_1_1_a_feature_a78f71d7859a64fe481023d39372d56fd}{set\+Points}} (std\+::vector$<$ Eigen\+::\+Vector2d $>$ poses2d)
+\item 
+const cv\+::\+Mat \& \mbox{\hyperlink{classisae_1_1_a_feature_a829949ec636e52de5a89429e3883492c}{get\+Descriptor}} () const
+\item 
+void \mbox{\hyperlink{classisae_1_1_a_feature_ac7669cc14bdce8b6840fcfd89f2bd9cb}{set\+Descriptor}} (cv\+::\+Mat descriptor)
+\item 
+const int \& \mbox{\hyperlink{classisae_1_1_a_feature_aa9d1e04bd63d70092c99f1e13a589720}{get\+Octave}} () const
+\item 
+void \mbox{\hyperlink{classisae_1_1_a_feature_a2a5f477f10d9d6a32be9e68806adf4dc}{set\+Octave}} (int octave)
+\item 
+const float \mbox{\hyperlink{classisae_1_1_a_feature_a6d876525cf91a330b5a8df6a4596b365}{get\+Response}} ()
+\item 
+const double \mbox{\hyperlink{classisae_1_1_a_feature_ac50d92b7b3d4fdff786533d9bbbb67df}{get\+Sigma}} ()
+\item 
+const std\+::string \mbox{\hyperlink{classisae_1_1_a_feature_a8214a0752c01afe62ec1f6b92326f864}{get\+Feature\+Label}} () const
+\item 
+std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_landmark}{A\+Landmark}} $>$ \mbox{\hyperlink{classisae_1_1_a_feature_a628a439325b776c9b3851da93e4554f8}{get\+Landmark}} ()
+\item 
+void \mbox{\hyperlink{classisae_1_1_a_feature_a5b05a3293ecef6cc73d54833719022e9}{link\+Landmark}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_landmark}{A\+Landmark}} $>$ landmark)
+\item 
+void \mbox{\hyperlink{classisae_1_1_a_feature_a9b398da570a19b2a868ecba444fa26cd}{unlink\+Landmark}} ()
+\item 
+void \mbox{\hyperlink{classisae_1_1_a_feature_a321c0d674307c1879cd51998e60368ac}{set\+Sensor}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_image_sensor}{Image\+Sensor}} $>$ sensor)
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_image_sensor}{Image\+Sensor}} $>$ \mbox{\hyperlink{classisae_1_1_a_feature_a2bf2da4481f548d6da0f274682891d75}{get\+Sensor}} ()
+\item 
+void \mbox{\hyperlink{classisae_1_1_a_feature_ac77a296eb665551707821591fee304a8}{compute\+Bearing\+Vectors}} ()
+\begin{DoxyCompactList}\small\item\em Compute the bearing vectors from the 2D points, usually inverting the camera projection model. \end{DoxyCompactList}\item 
+std\+::vector$<$ Eigen\+::\+Vector3d $>$ \mbox{\hyperlink{classisae_1_1_a_feature_aa2e1e5c38adc8de48101d569e5e2f475}{get\+Bearing\+Vectors}} ()
+\item 
+std\+::vector$<$ Eigen\+::\+Vector3d $>$ \mbox{\hyperlink{classisae_1_1_a_feature_a2e763627a5d4d31b6e563daed9e59ae0}{get\+Rays}} ()
+\item 
+void \mbox{\hyperlink{classisae_1_1_a_feature_a273915e645c01158d6cbeb8944184376}{set\+Outlier}} ()
+\begin{DoxyCompactList}\small\item\em Set the 2D feature as an outlier. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classisae_1_1_a_feature_ab81e593ea86ceba9dcd7f86fd946beaa}{is\+Outlier}} ()
+\begin{DoxyCompactList}\small\item\em True if the feature is an outlier. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classisae_1_1_a_feature_a4e398353eaab28dc5d7064846b6f1931}{\+\_\+feature\+\_\+label}}
+\begin{DoxyCompactList}\small\item\em Feature label, e.\+g. point, line, bouding box, etc. \end{DoxyCompactList}\item 
+std\+::vector$<$ Eigen\+::\+Vector2d $>$ \mbox{\hyperlink{classisae_1_1_a_feature_a01350b761ddaf1f50a233cceba863354}{\+\_\+poses2d}}
+\begin{DoxyCompactList}\small\item\em 2D coordinates of the points of the feature in the image \end{DoxyCompactList}\item 
+std\+::vector$<$ Eigen\+::\+Vector3d $>$ \mbox{\hyperlink{classisae_1_1_a_feature_a08034d504755b2ea6e69c8e8cf99aa30}{\+\_\+bearing\+\_\+vectors}}
+\begin{DoxyCompactList}\small\item\em Bearing vectors corresponding to the 2D points. \end{DoxyCompactList}\item 
+cv\+::\+Mat \mbox{\hyperlink{classisae_1_1_a_feature_afa826c555eecf7a23e6adc76d9ca5b18}{\+\_\+descriptor}}
+\begin{DoxyCompactList}\small\item\em Descriptor of the feature, e.\+g. S\+I\+FT, O\+RB, etc. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classisae_1_1_a_feature_a406265d1fb389332766ce4174e6cb4a7}{\+\_\+octave}}
+\begin{DoxyCompactList}\small\item\em Octave of the feature, used in multi-\/scale feature detection. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classisae_1_1_a_feature_a89506bdfa61f3adf2cd7b4af7f2694be}{\+\_\+response}}
+\begin{DoxyCompactList}\small\item\em Response of the feature, i.\+e. strength of the feature. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classisae_1_1_a_feature_ab4145fabbc14c78e244d823efda95c7c}{\+\_\+sigma}}
+\begin{DoxyCompactList}\small\item\em Noise level of the feature. \end{DoxyCompactList}\item 
+std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_image_sensor}{Image\+Sensor}} $>$ \mbox{\hyperlink{classisae_1_1_a_feature_a60cb2d4eb8799610fa473be96865beff}{\+\_\+sensor}}
+\begin{DoxyCompactList}\small\item\em Link to the parent sensor. \end{DoxyCompactList}\item 
+std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_landmark}{A\+Landmark}} $>$ \mbox{\hyperlink{classisae_1_1_a_feature_a8e69fbe150e49181aecb77801d5abf91}{\+\_\+landmark}}
+\begin{DoxyCompactList}\small\item\em Link to the landmark associated with the feature. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classisae_1_1_a_feature_a0b25151b936beec543c56020b39afd56}{\+\_\+outlier}} = false
+\begin{DoxyCompactList}\small\item\em Flag to indicate if the feature is an outlier. \end{DoxyCompactList}\item 
+std\+::mutex \mbox{\hyperlink{classisae_1_1_a_feature_a5c3b17533b66f5ee4f6526a6e921293d}{\+\_\+feat\+\_\+mtx}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract class for 2D features. 
+
+Its main member is a vector of 2D points representing the feature in the image. It can be used to represent points, lines, bounding boxes, etc. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classisae_1_1_a_feature_a9a568f81c517a258be455e281a3d5cce}\label{classisae_1_1_a_feature_a9a568f81c517a258be455e281a3d5cce}} 
+\index{isae::AFeature@{isae::AFeature}!AFeature@{AFeature}}
+\index{AFeature@{AFeature}!isae::AFeature@{isae::AFeature}}
+\doxysubsubsection{\texorpdfstring{AFeature()}{AFeature()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily isae\+::\+A\+Feature\+::\+A\+Feature (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_a_feature_a30170ffc31f7075b3caee60e5005bc0e}\label{classisae_1_1_a_feature_a30170ffc31f7075b3caee60e5005bc0e}} 
+\index{isae::AFeature@{isae::AFeature}!AFeature@{AFeature}}
+\index{AFeature@{AFeature}!isae::AFeature@{isae::AFeature}}
+\doxysubsubsection{\texorpdfstring{AFeature()}{AFeature()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily isae\+::\+A\+Feature\+::\+A\+Feature (\begin{DoxyParamCaption}\item[{std\+::vector$<$ Eigen\+::\+Vector2d $>$}]{poses2d,  }\item[{cv\+::\+Mat}]{desc = {\ttfamily cv\+:\+:Mat()},  }\item[{int}]{octave = {\ttfamily 0},  }\item[{double}]{sigma = {\ttfamily 1.0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classisae_1_1_a_feature_ac77a296eb665551707821591fee304a8}\label{classisae_1_1_a_feature_ac77a296eb665551707821591fee304a8}} 
+\index{isae::AFeature@{isae::AFeature}!computeBearingVectors@{computeBearingVectors}}
+\index{computeBearingVectors@{computeBearingVectors}!isae::AFeature@{isae::AFeature}}
+\doxysubsubsection{\texorpdfstring{computeBearingVectors()}{computeBearingVectors()}}
+{\footnotesize\ttfamily void isae\+::\+A\+Feature\+::compute\+Bearing\+Vectors (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Compute the bearing vectors from the 2D points, usually inverting the camera projection model. 
+
+\mbox{\Hypertarget{classisae_1_1_a_feature_aa2e1e5c38adc8de48101d569e5e2f475}\label{classisae_1_1_a_feature_aa2e1e5c38adc8de48101d569e5e2f475}} 
+\index{isae::AFeature@{isae::AFeature}!getBearingVectors@{getBearingVectors}}
+\index{getBearingVectors@{getBearingVectors}!isae::AFeature@{isae::AFeature}}
+\doxysubsubsection{\texorpdfstring{getBearingVectors()}{getBearingVectors()}}
+{\footnotesize\ttfamily std\+::vector$<$Eigen\+::\+Vector3d$>$ isae\+::\+A\+Feature\+::get\+Bearing\+Vectors (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_a_feature_a829949ec636e52de5a89429e3883492c}\label{classisae_1_1_a_feature_a829949ec636e52de5a89429e3883492c}} 
+\index{isae::AFeature@{isae::AFeature}!getDescriptor@{getDescriptor}}
+\index{getDescriptor@{getDescriptor}!isae::AFeature@{isae::AFeature}}
+\doxysubsubsection{\texorpdfstring{getDescriptor()}{getDescriptor()}}
+{\footnotesize\ttfamily const cv\+::\+Mat\& isae\+::\+A\+Feature\+::get\+Descriptor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_a_feature_a8214a0752c01afe62ec1f6b92326f864}\label{classisae_1_1_a_feature_a8214a0752c01afe62ec1f6b92326f864}} 
+\index{isae::AFeature@{isae::AFeature}!getFeatureLabel@{getFeatureLabel}}
+\index{getFeatureLabel@{getFeatureLabel}!isae::AFeature@{isae::AFeature}}
+\doxysubsubsection{\texorpdfstring{getFeatureLabel()}{getFeatureLabel()}}
+{\footnotesize\ttfamily const std\+::string isae\+::\+A\+Feature\+::get\+Feature\+Label (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_a_feature_a628a439325b776c9b3851da93e4554f8}\label{classisae_1_1_a_feature_a628a439325b776c9b3851da93e4554f8}} 
+\index{isae::AFeature@{isae::AFeature}!getLandmark@{getLandmark}}
+\index{getLandmark@{getLandmark}!isae::AFeature@{isae::AFeature}}
+\doxysubsubsection{\texorpdfstring{getLandmark()}{getLandmark()}}
+{\footnotesize\ttfamily std\+::weak\+\_\+ptr$<$\mbox{\hyperlink{classisae_1_1_a_landmark}{A\+Landmark}}$>$ isae\+::\+A\+Feature\+::get\+Landmark (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_a_feature_aa9d1e04bd63d70092c99f1e13a589720}\label{classisae_1_1_a_feature_aa9d1e04bd63d70092c99f1e13a589720}} 
+\index{isae::AFeature@{isae::AFeature}!getOctave@{getOctave}}
+\index{getOctave@{getOctave}!isae::AFeature@{isae::AFeature}}
+\doxysubsubsection{\texorpdfstring{getOctave()}{getOctave()}}
+{\footnotesize\ttfamily const int\& isae\+::\+A\+Feature\+::get\+Octave (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_a_feature_addf9de7825d0a63ed97e52e42652c88e}\label{classisae_1_1_a_feature_addf9de7825d0a63ed97e52e42652c88e}} 
+\index{isae::AFeature@{isae::AFeature}!getPoints@{getPoints}}
+\index{getPoints@{getPoints}!isae::AFeature@{isae::AFeature}}
+\doxysubsubsection{\texorpdfstring{getPoints()}{getPoints()}}
+{\footnotesize\ttfamily const std\+::vector$<$Eigen\+::\+Vector2d$>$ isae\+::\+A\+Feature\+::get\+Points (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_a_feature_a2e763627a5d4d31b6e563daed9e59ae0}\label{classisae_1_1_a_feature_a2e763627a5d4d31b6e563daed9e59ae0}} 
+\index{isae::AFeature@{isae::AFeature}!getRays@{getRays}}
+\index{getRays@{getRays}!isae::AFeature@{isae::AFeature}}
+\doxysubsubsection{\texorpdfstring{getRays()}{getRays()}}
+{\footnotesize\ttfamily std\+::vector$<$ Eigen\+::\+Vector3d $>$ isae\+::\+A\+Feature\+::get\+Rays (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classisae_1_1_a_feature_a6d876525cf91a330b5a8df6a4596b365}\label{classisae_1_1_a_feature_a6d876525cf91a330b5a8df6a4596b365}} 
+\index{isae::AFeature@{isae::AFeature}!getResponse@{getResponse}}
+\index{getResponse@{getResponse}!isae::AFeature@{isae::AFeature}}
+\doxysubsubsection{\texorpdfstring{getResponse()}{getResponse()}}
+{\footnotesize\ttfamily const float isae\+::\+A\+Feature\+::get\+Response (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_a_feature_a2bf2da4481f548d6da0f274682891d75}\label{classisae_1_1_a_feature_a2bf2da4481f548d6da0f274682891d75}} 
+\index{isae::AFeature@{isae::AFeature}!getSensor@{getSensor}}
+\index{getSensor@{getSensor}!isae::AFeature@{isae::AFeature}}
+\doxysubsubsection{\texorpdfstring{getSensor()}{getSensor()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classisae_1_1_image_sensor}{Image\+Sensor}}$>$ isae\+::\+A\+Feature\+::get\+Sensor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_a_feature_ac50d92b7b3d4fdff786533d9bbbb67df}\label{classisae_1_1_a_feature_ac50d92b7b3d4fdff786533d9bbbb67df}} 
+\index{isae::AFeature@{isae::AFeature}!getSigma@{getSigma}}
+\index{getSigma@{getSigma}!isae::AFeature@{isae::AFeature}}
+\doxysubsubsection{\texorpdfstring{getSigma()}{getSigma()}}
+{\footnotesize\ttfamily const double isae\+::\+A\+Feature\+::get\+Sigma (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_a_feature_ab81e593ea86ceba9dcd7f86fd946beaa}\label{classisae_1_1_a_feature_ab81e593ea86ceba9dcd7f86fd946beaa}} 
+\index{isae::AFeature@{isae::AFeature}!isOutlier@{isOutlier}}
+\index{isOutlier@{isOutlier}!isae::AFeature@{isae::AFeature}}
+\doxysubsubsection{\texorpdfstring{isOutlier()}{isOutlier()}}
+{\footnotesize\ttfamily bool isae\+::\+A\+Feature\+::is\+Outlier (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+True if the feature is an outlier. 
+
+\mbox{\Hypertarget{classisae_1_1_a_feature_a5b05a3293ecef6cc73d54833719022e9}\label{classisae_1_1_a_feature_a5b05a3293ecef6cc73d54833719022e9}} 
+\index{isae::AFeature@{isae::AFeature}!linkLandmark@{linkLandmark}}
+\index{linkLandmark@{linkLandmark}!isae::AFeature@{isae::AFeature}}
+\doxysubsubsection{\texorpdfstring{linkLandmark()}{linkLandmark()}}
+{\footnotesize\ttfamily void isae\+::\+A\+Feature\+::link\+Landmark (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_landmark}{A\+Landmark}} $>$}]{landmark }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_a_feature_ac7669cc14bdce8b6840fcfd89f2bd9cb}\label{classisae_1_1_a_feature_ac7669cc14bdce8b6840fcfd89f2bd9cb}} 
+\index{isae::AFeature@{isae::AFeature}!setDescriptor@{setDescriptor}}
+\index{setDescriptor@{setDescriptor}!isae::AFeature@{isae::AFeature}}
+\doxysubsubsection{\texorpdfstring{setDescriptor()}{setDescriptor()}}
+{\footnotesize\ttfamily void isae\+::\+A\+Feature\+::set\+Descriptor (\begin{DoxyParamCaption}\item[{cv\+::\+Mat}]{descriptor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_a_feature_a2a5f477f10d9d6a32be9e68806adf4dc}\label{classisae_1_1_a_feature_a2a5f477f10d9d6a32be9e68806adf4dc}} 
+\index{isae::AFeature@{isae::AFeature}!setOctave@{setOctave}}
+\index{setOctave@{setOctave}!isae::AFeature@{isae::AFeature}}
+\doxysubsubsection{\texorpdfstring{setOctave()}{setOctave()}}
+{\footnotesize\ttfamily void isae\+::\+A\+Feature\+::set\+Octave (\begin{DoxyParamCaption}\item[{int}]{octave }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_a_feature_a273915e645c01158d6cbeb8944184376}\label{classisae_1_1_a_feature_a273915e645c01158d6cbeb8944184376}} 
+\index{isae::AFeature@{isae::AFeature}!setOutlier@{setOutlier}}
+\index{setOutlier@{setOutlier}!isae::AFeature@{isae::AFeature}}
+\doxysubsubsection{\texorpdfstring{setOutlier()}{setOutlier()}}
+{\footnotesize\ttfamily void isae\+::\+A\+Feature\+::set\+Outlier (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the 2D feature as an outlier. 
+
+\mbox{\Hypertarget{classisae_1_1_a_feature_a78f71d7859a64fe481023d39372d56fd}\label{classisae_1_1_a_feature_a78f71d7859a64fe481023d39372d56fd}} 
+\index{isae::AFeature@{isae::AFeature}!setPoints@{setPoints}}
+\index{setPoints@{setPoints}!isae::AFeature@{isae::AFeature}}
+\doxysubsubsection{\texorpdfstring{setPoints()}{setPoints()}}
+{\footnotesize\ttfamily void isae\+::\+A\+Feature\+::set\+Points (\begin{DoxyParamCaption}\item[{std\+::vector$<$ Eigen\+::\+Vector2d $>$}]{poses2d }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_a_feature_a321c0d674307c1879cd51998e60368ac}\label{classisae_1_1_a_feature_a321c0d674307c1879cd51998e60368ac}} 
+\index{isae::AFeature@{isae::AFeature}!setSensor@{setSensor}}
+\index{setSensor@{setSensor}!isae::AFeature@{isae::AFeature}}
+\doxysubsubsection{\texorpdfstring{setSensor()}{setSensor()}}
+{\footnotesize\ttfamily void isae\+::\+A\+Feature\+::set\+Sensor (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_image_sensor}{Image\+Sensor}} $>$}]{sensor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_a_feature_a9b398da570a19b2a868ecba444fa26cd}\label{classisae_1_1_a_feature_a9b398da570a19b2a868ecba444fa26cd}} 
+\index{isae::AFeature@{isae::AFeature}!unlinkLandmark@{unlinkLandmark}}
+\index{unlinkLandmark@{unlinkLandmark}!isae::AFeature@{isae::AFeature}}
+\doxysubsubsection{\texorpdfstring{unlinkLandmark()}{unlinkLandmark()}}
+{\footnotesize\ttfamily void isae\+::\+A\+Feature\+::unlink\+Landmark (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classisae_1_1_a_feature_a08034d504755b2ea6e69c8e8cf99aa30}\label{classisae_1_1_a_feature_a08034d504755b2ea6e69c8e8cf99aa30}} 
+\index{isae::AFeature@{isae::AFeature}!\_bearing\_vectors@{\_bearing\_vectors}}
+\index{\_bearing\_vectors@{\_bearing\_vectors}!isae::AFeature@{isae::AFeature}}
+\doxysubsubsection{\texorpdfstring{\_bearing\_vectors}{\_bearing\_vectors}}
+{\footnotesize\ttfamily std\+::vector$<$Eigen\+::\+Vector3d$>$ isae\+::\+A\+Feature\+::\+\_\+bearing\+\_\+vectors\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Bearing vectors corresponding to the 2D points. 
+
+\mbox{\Hypertarget{classisae_1_1_a_feature_afa826c555eecf7a23e6adc76d9ca5b18}\label{classisae_1_1_a_feature_afa826c555eecf7a23e6adc76d9ca5b18}} 
+\index{isae::AFeature@{isae::AFeature}!\_descriptor@{\_descriptor}}
+\index{\_descriptor@{\_descriptor}!isae::AFeature@{isae::AFeature}}
+\doxysubsubsection{\texorpdfstring{\_descriptor}{\_descriptor}}
+{\footnotesize\ttfamily cv\+::\+Mat isae\+::\+A\+Feature\+::\+\_\+descriptor\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Descriptor of the feature, e.\+g. S\+I\+FT, O\+RB, etc. 
+
+\mbox{\Hypertarget{classisae_1_1_a_feature_a5c3b17533b66f5ee4f6526a6e921293d}\label{classisae_1_1_a_feature_a5c3b17533b66f5ee4f6526a6e921293d}} 
+\index{isae::AFeature@{isae::AFeature}!\_feat\_mtx@{\_feat\_mtx}}
+\index{\_feat\_mtx@{\_feat\_mtx}!isae::AFeature@{isae::AFeature}}
+\doxysubsubsection{\texorpdfstring{\_feat\_mtx}{\_feat\_mtx}}
+{\footnotesize\ttfamily std\+::mutex isae\+::\+A\+Feature\+::\+\_\+feat\+\_\+mtx\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classisae_1_1_a_feature_a4e398353eaab28dc5d7064846b6f1931}\label{classisae_1_1_a_feature_a4e398353eaab28dc5d7064846b6f1931}} 
+\index{isae::AFeature@{isae::AFeature}!\_feature\_label@{\_feature\_label}}
+\index{\_feature\_label@{\_feature\_label}!isae::AFeature@{isae::AFeature}}
+\doxysubsubsection{\texorpdfstring{\_feature\_label}{\_feature\_label}}
+{\footnotesize\ttfamily std\+::string isae\+::\+A\+Feature\+::\+\_\+feature\+\_\+label\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Feature label, e.\+g. point, line, bouding box, etc. 
+
+\mbox{\Hypertarget{classisae_1_1_a_feature_a8e69fbe150e49181aecb77801d5abf91}\label{classisae_1_1_a_feature_a8e69fbe150e49181aecb77801d5abf91}} 
+\index{isae::AFeature@{isae::AFeature}!\_landmark@{\_landmark}}
+\index{\_landmark@{\_landmark}!isae::AFeature@{isae::AFeature}}
+\doxysubsubsection{\texorpdfstring{\_landmark}{\_landmark}}
+{\footnotesize\ttfamily std\+::weak\+\_\+ptr$<$\mbox{\hyperlink{classisae_1_1_a_landmark}{A\+Landmark}}$>$ isae\+::\+A\+Feature\+::\+\_\+landmark\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Link to the landmark associated with the feature. 
+
+\mbox{\Hypertarget{classisae_1_1_a_feature_a406265d1fb389332766ce4174e6cb4a7}\label{classisae_1_1_a_feature_a406265d1fb389332766ce4174e6cb4a7}} 
+\index{isae::AFeature@{isae::AFeature}!\_octave@{\_octave}}
+\index{\_octave@{\_octave}!isae::AFeature@{isae::AFeature}}
+\doxysubsubsection{\texorpdfstring{\_octave}{\_octave}}
+{\footnotesize\ttfamily int isae\+::\+A\+Feature\+::\+\_\+octave\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Octave of the feature, used in multi-\/scale feature detection. 
+
+\mbox{\Hypertarget{classisae_1_1_a_feature_a0b25151b936beec543c56020b39afd56}\label{classisae_1_1_a_feature_a0b25151b936beec543c56020b39afd56}} 
+\index{isae::AFeature@{isae::AFeature}!\_outlier@{\_outlier}}
+\index{\_outlier@{\_outlier}!isae::AFeature@{isae::AFeature}}
+\doxysubsubsection{\texorpdfstring{\_outlier}{\_outlier}}
+{\footnotesize\ttfamily bool isae\+::\+A\+Feature\+::\+\_\+outlier = false\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Flag to indicate if the feature is an outlier. 
+
+\mbox{\Hypertarget{classisae_1_1_a_feature_a01350b761ddaf1f50a233cceba863354}\label{classisae_1_1_a_feature_a01350b761ddaf1f50a233cceba863354}} 
+\index{isae::AFeature@{isae::AFeature}!\_poses2d@{\_poses2d}}
+\index{\_poses2d@{\_poses2d}!isae::AFeature@{isae::AFeature}}
+\doxysubsubsection{\texorpdfstring{\_poses2d}{\_poses2d}}
+{\footnotesize\ttfamily std\+::vector$<$Eigen\+::\+Vector2d$>$ isae\+::\+A\+Feature\+::\+\_\+poses2d\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+2D coordinates of the points of the feature in the image 
+
+\mbox{\Hypertarget{classisae_1_1_a_feature_a89506bdfa61f3adf2cd7b4af7f2694be}\label{classisae_1_1_a_feature_a89506bdfa61f3adf2cd7b4af7f2694be}} 
+\index{isae::AFeature@{isae::AFeature}!\_response@{\_response}}
+\index{\_response@{\_response}!isae::AFeature@{isae::AFeature}}
+\doxysubsubsection{\texorpdfstring{\_response}{\_response}}
+{\footnotesize\ttfamily float isae\+::\+A\+Feature\+::\+\_\+response\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Response of the feature, i.\+e. strength of the feature. 
+
+\mbox{\Hypertarget{classisae_1_1_a_feature_a60cb2d4eb8799610fa473be96865beff}\label{classisae_1_1_a_feature_a60cb2d4eb8799610fa473be96865beff}} 
+\index{isae::AFeature@{isae::AFeature}!\_sensor@{\_sensor}}
+\index{\_sensor@{\_sensor}!isae::AFeature@{isae::AFeature}}
+\doxysubsubsection{\texorpdfstring{\_sensor}{\_sensor}}
+{\footnotesize\ttfamily std\+::weak\+\_\+ptr$<$\mbox{\hyperlink{classisae_1_1_image_sensor}{Image\+Sensor}}$>$ isae\+::\+A\+Feature\+::\+\_\+sensor\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Link to the parent sensor. 
+
+\mbox{\Hypertarget{classisae_1_1_a_feature_ab4145fabbc14c78e244d823efda95c7c}\label{classisae_1_1_a_feature_ab4145fabbc14c78e244d823efda95c7c}} 
+\index{isae::AFeature@{isae::AFeature}!\_sigma@{\_sigma}}
+\index{\_sigma@{\_sigma}!isae::AFeature@{isae::AFeature}}
+\doxysubsubsection{\texorpdfstring{\_sigma}{\_sigma}}
+{\footnotesize\ttfamily double isae\+::\+A\+Feature\+::\+\_\+sigma\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Noise level of the feature. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/deos/ce.\+debeunne/colcon\+\_\+ws/src/\+Sa\+D\+V\+I\+O/cpp/include/isaeslam/data/features/\mbox{\hyperlink{_a_feature2_d_8h}{A\+Feature2\+D.\+h}}\item 
+/home/deos/ce.\+debeunne/colcon\+\_\+ws/src/\+Sa\+D\+V\+I\+O/cpp/src/data/features/\mbox{\hyperlink{_a_feature2_d_8cpp}{A\+Feature2\+D.\+cpp}}\end{DoxyCompactItemize}

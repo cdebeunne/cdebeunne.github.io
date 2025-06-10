@@ -1,0 +1,145 @@
+\hypertarget{classupm_1_1_e_l_s_e_d}{}\doxysection{upm\+::E\+L\+S\+ED Class Reference}
+\label{classupm_1_1_e_l_s_e_d}\index{upm::ELSED@{upm::ELSED}}
+
+
+{\ttfamily \#include $<$E\+L\+S\+E\+D.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classupm_1_1_e_l_s_e_d_abd9bab07e3e643d4394b106fc67d1859}{E\+L\+S\+ED}} (const \mbox{\hyperlink{structupm_1_1_e_l_s_e_d_params}{E\+L\+S\+E\+D\+Params}} \&params=\mbox{\hyperlink{structupm_1_1_e_l_s_e_d_params}{E\+L\+S\+E\+D\+Params}}())
+\item 
+\mbox{\hyperlink{namespaceupm_a94e50fdc620c28b20b279d2ceb67ddc2}{Segments}} \mbox{\hyperlink{classupm_1_1_e_l_s_e_d_afe2f7b433c3e068ab5da97718093b95d}{detect}} (const cv\+::\+Mat \&image)
+\begin{DoxyCompactList}\small\item\em Detects segments in the input image. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceupm_a891523fdc5c645ac17061d49e450b2ef}{Salient\+Segments}} \mbox{\hyperlink{classupm_1_1_e_l_s_e_d_ab17b63f68d78c1cf1370fff6a70d91f1}{detect\+Salient}} (const cv\+::\+Mat \&image)
+\item 
+\mbox{\hyperlink{namespaceupm_a402822a53e697473579e765851bdcbf7}{Image\+Edges}} \mbox{\hyperlink{classupm_1_1_e_l_s_e_d_adce0350e55b13c6c264d95db1ae6203f}{detect\+Edges}} (const cv\+::\+Mat \&image)
+\item 
+const \mbox{\hyperlink{structupm_1_1_line_detection_extra_info}{Line\+Detection\+Extra\+Info}} \& \mbox{\hyperlink{classupm_1_1_e_l_s_e_d_a21cece22646d27a0ecc96943e1c9bab0}{get\+Img\+Info}} () const
+\item 
+const \mbox{\hyperlink{namespaceupm_ad6da441adeaf5a499fb9834c9e4b07b9}{Line\+Detection\+Extra\+Info\+Ptr}} \& \mbox{\hyperlink{classupm_1_1_e_l_s_e_d_ae8f87d663033f8305238ade052ef2965}{get\+Img\+Info\+Ptr}} () const
+\item 
+void \mbox{\hyperlink{classupm_1_1_e_l_s_e_d_a3f923ae7c1903fa56ed000a3bda84947}{process\+Image}} (const cv\+::\+Mat \&image)
+\item 
+void \mbox{\hyperlink{classupm_1_1_e_l_s_e_d_ac73b4ffa1fbe91d447c68a62e22f8321}{clear}} ()
+\item 
+\mbox{\hyperlink{namespaceupm_a402822a53e697473579e765851bdcbf7}{Image\+Edges}} \mbox{\hyperlink{classupm_1_1_e_l_s_e_d_a833702d5ac91495f7c645e7bdf648e5c}{get\+All\+Edges}} () const
+\item 
+\mbox{\hyperlink{namespaceupm_a402822a53e697473579e765851bdcbf7}{Image\+Edges}} \mbox{\hyperlink{classupm_1_1_e_l_s_e_d_a84e94d944bb6b62a88cd185298657f8f}{get\+Segment\+Edges}} () const
+\item 
+const \mbox{\hyperlink{namespaceupm_ad215fd0fbd963b8347b65b1b85165a4f}{Edge\+Drawer\+Ptr}} \& \mbox{\hyperlink{classupm_1_1_e_l_s_e_d_a6f4fad10f3cfa5eccec3d139958800de}{get\+Drawer}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classupm_1_1_e_l_s_e_d_a5a609c5ec5e47d120daefca2aacae794}{compute\+Anchor\+Points}} (const cv\+::\+Mat \&dir\+Image, const cv\+::\+Mat \&grad\+Image\+WO, const cv\+::\+Mat \&grad\+Image, int scan\+Interval, int anchor\+Thresh, std\+::vector$<$ \mbox{\hyperlink{structupm_1_1_pixel}{Pixel}} $>$ \&anchor\+Points)
+\item 
+static \mbox{\hyperlink{namespaceupm_ad6da441adeaf5a499fb9834c9e4b07b9}{Line\+Detection\+Extra\+Info\+Ptr}} \mbox{\hyperlink{classupm_1_1_e_l_s_e_d_ae12caf11ebaa3b8574c3011dea4bd614}{compute\+Gradients}} (const cv\+::\+Mat \&src\+Img, short gradient\+Th)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class implements the method\+: {\bfseries [Suárez]}, I., Buenaposada, J. M., \& Baumela, L. (2021). \mbox{\hyperlink{classupm_1_1_e_l_s_e_d}{E\+L\+S\+ED}}\+: Enhanced Line S\+Egment Drawing. ar\+Xiv preprint ar\+Xiv\+:2108.\+03144.
+
+It is an efficient line segment detector amenable to use in low power devices such as drones or smartphones. The method takes an image as input and outputs a list of detected segments. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classupm_1_1_e_l_s_e_d_abd9bab07e3e643d4394b106fc67d1859}\label{classupm_1_1_e_l_s_e_d_abd9bab07e3e643d4394b106fc67d1859}} 
+\index{upm::ELSED@{upm::ELSED}!ELSED@{ELSED}}
+\index{ELSED@{ELSED}!upm::ELSED@{upm::ELSED}}
+\doxysubsubsection{\texorpdfstring{ELSED()}{ELSED()}}
+{\footnotesize\ttfamily upm\+::\+E\+L\+S\+E\+D\+::\+E\+L\+S\+ED (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structupm_1_1_e_l_s_e_d_params}{E\+L\+S\+E\+D\+Params}} \&}]{params = {\ttfamily \mbox{\hyperlink{structupm_1_1_e_l_s_e_d_params}{E\+L\+S\+E\+D\+Params}}()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classupm_1_1_e_l_s_e_d_ac73b4ffa1fbe91d447c68a62e22f8321}\label{classupm_1_1_e_l_s_e_d_ac73b4ffa1fbe91d447c68a62e22f8321}} 
+\index{upm::ELSED@{upm::ELSED}!clear@{clear}}
+\index{clear@{clear}!upm::ELSED@{upm::ELSED}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void upm\+::\+E\+L\+S\+E\+D\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classupm_1_1_e_l_s_e_d_a5a609c5ec5e47d120daefca2aacae794}\label{classupm_1_1_e_l_s_e_d_a5a609c5ec5e47d120daefca2aacae794}} 
+\index{upm::ELSED@{upm::ELSED}!computeAnchorPoints@{computeAnchorPoints}}
+\index{computeAnchorPoints@{computeAnchorPoints}!upm::ELSED@{upm::ELSED}}
+\doxysubsubsection{\texorpdfstring{computeAnchorPoints()}{computeAnchorPoints()}}
+{\footnotesize\ttfamily void upm\+::\+E\+L\+S\+E\+D\+::compute\+Anchor\+Points (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{dir\+Image,  }\item[{const cv\+::\+Mat \&}]{grad\+Image\+WO,  }\item[{const cv\+::\+Mat \&}]{grad\+Image,  }\item[{int}]{scan\+Interval,  }\item[{int}]{anchor\+Thresh,  }\item[{std\+::vector$<$ \mbox{\hyperlink{structupm_1_1_pixel}{Pixel}} $>$ \&}]{anchor\+Points }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{classupm_1_1_e_l_s_e_d_ae12caf11ebaa3b8574c3011dea4bd614}\label{classupm_1_1_e_l_s_e_d_ae12caf11ebaa3b8574c3011dea4bd614}} 
+\index{upm::ELSED@{upm::ELSED}!computeGradients@{computeGradients}}
+\index{computeGradients@{computeGradients}!upm::ELSED@{upm::ELSED}}
+\doxysubsubsection{\texorpdfstring{computeGradients()}{computeGradients()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceupm_ad6da441adeaf5a499fb9834c9e4b07b9}{Line\+Detection\+Extra\+Info\+Ptr}} upm\+::\+E\+L\+S\+E\+D\+::compute\+Gradients (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{src\+Img,  }\item[{short}]{gradient\+Th }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classupm_1_1_e_l_s_e_d_afe2f7b433c3e068ab5da97718093b95d}\label{classupm_1_1_e_l_s_e_d_afe2f7b433c3e068ab5da97718093b95d}} 
+\index{upm::ELSED@{upm::ELSED}!detect@{detect}}
+\index{detect@{detect}!upm::ELSED@{upm::ELSED}}
+\doxysubsubsection{\texorpdfstring{detect()}{detect()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceupm_a94e50fdc620c28b20b279d2ceb67ddc2}{Segments}} upm\+::\+E\+L\+S\+E\+D\+::detect (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{image }\end{DoxyParamCaption})}
+
+
+
+Detects segments in the input image. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image} & An input image. The parameters are adapted to images of size 640x480. Bigger images will generate more segments. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The list of detected segments 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classupm_1_1_e_l_s_e_d_adce0350e55b13c6c264d95db1ae6203f}\label{classupm_1_1_e_l_s_e_d_adce0350e55b13c6c264d95db1ae6203f}} 
+\index{upm::ELSED@{upm::ELSED}!detectEdges@{detectEdges}}
+\index{detectEdges@{detectEdges}!upm::ELSED@{upm::ELSED}}
+\doxysubsubsection{\texorpdfstring{detectEdges()}{detectEdges()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceupm_a402822a53e697473579e765851bdcbf7}{Image\+Edges}} upm\+::\+E\+L\+S\+E\+D\+::detect\+Edges (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{image }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classupm_1_1_e_l_s_e_d_ab17b63f68d78c1cf1370fff6a70d91f1}\label{classupm_1_1_e_l_s_e_d_ab17b63f68d78c1cf1370fff6a70d91f1}} 
+\index{upm::ELSED@{upm::ELSED}!detectSalient@{detectSalient}}
+\index{detectSalient@{detectSalient}!upm::ELSED@{upm::ELSED}}
+\doxysubsubsection{\texorpdfstring{detectSalient()}{detectSalient()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceupm_a891523fdc5c645ac17061d49e450b2ef}{Salient\+Segments}} upm\+::\+E\+L\+S\+E\+D\+::detect\+Salient (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{image }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classupm_1_1_e_l_s_e_d_a833702d5ac91495f7c645e7bdf648e5c}\label{classupm_1_1_e_l_s_e_d_a833702d5ac91495f7c645e7bdf648e5c}} 
+\index{upm::ELSED@{upm::ELSED}!getAllEdges@{getAllEdges}}
+\index{getAllEdges@{getAllEdges}!upm::ELSED@{upm::ELSED}}
+\doxysubsubsection{\texorpdfstring{getAllEdges()}{getAllEdges()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceupm_a402822a53e697473579e765851bdcbf7}{Image\+Edges}} upm\+::\+E\+L\+S\+E\+D\+::get\+All\+Edges (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classupm_1_1_e_l_s_e_d_a6f4fad10f3cfa5eccec3d139958800de}\label{classupm_1_1_e_l_s_e_d_a6f4fad10f3cfa5eccec3d139958800de}} 
+\index{upm::ELSED@{upm::ELSED}!getDrawer@{getDrawer}}
+\index{getDrawer@{getDrawer}!upm::ELSED@{upm::ELSED}}
+\doxysubsubsection{\texorpdfstring{getDrawer()}{getDrawer()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{namespaceupm_ad215fd0fbd963b8347b65b1b85165a4f}{Edge\+Drawer\+Ptr}}\& upm\+::\+E\+L\+S\+E\+D\+::get\+Drawer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classupm_1_1_e_l_s_e_d_a21cece22646d27a0ecc96943e1c9bab0}\label{classupm_1_1_e_l_s_e_d_a21cece22646d27a0ecc96943e1c9bab0}} 
+\index{upm::ELSED@{upm::ELSED}!getImgInfo@{getImgInfo}}
+\index{getImgInfo@{getImgInfo}!upm::ELSED@{upm::ELSED}}
+\doxysubsubsection{\texorpdfstring{getImgInfo()}{getImgInfo()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structupm_1_1_line_detection_extra_info}{Line\+Detection\+Extra\+Info}} \& upm\+::\+E\+L\+S\+E\+D\+::get\+Img\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classupm_1_1_e_l_s_e_d_ae8f87d663033f8305238ade052ef2965}\label{classupm_1_1_e_l_s_e_d_ae8f87d663033f8305238ade052ef2965}} 
+\index{upm::ELSED@{upm::ELSED}!getImgInfoPtr@{getImgInfoPtr}}
+\index{getImgInfoPtr@{getImgInfoPtr}!upm::ELSED@{upm::ELSED}}
+\doxysubsubsection{\texorpdfstring{getImgInfoPtr()}{getImgInfoPtr()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{namespaceupm_ad6da441adeaf5a499fb9834c9e4b07b9}{Line\+Detection\+Extra\+Info\+Ptr}} \& upm\+::\+E\+L\+S\+E\+D\+::get\+Img\+Info\+Ptr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classupm_1_1_e_l_s_e_d_a84e94d944bb6b62a88cd185298657f8f}\label{classupm_1_1_e_l_s_e_d_a84e94d944bb6b62a88cd185298657f8f}} 
+\index{upm::ELSED@{upm::ELSED}!getSegmentEdges@{getSegmentEdges}}
+\index{getSegmentEdges@{getSegmentEdges}!upm::ELSED@{upm::ELSED}}
+\doxysubsubsection{\texorpdfstring{getSegmentEdges()}{getSegmentEdges()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceupm_a402822a53e697473579e765851bdcbf7}{Image\+Edges}} upm\+::\+E\+L\+S\+E\+D\+::get\+Segment\+Edges (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classupm_1_1_e_l_s_e_d_a3f923ae7c1903fa56ed000a3bda84947}\label{classupm_1_1_e_l_s_e_d_a3f923ae7c1903fa56ed000a3bda84947}} 
+\index{upm::ELSED@{upm::ELSED}!processImage@{processImage}}
+\index{processImage@{processImage}!upm::ELSED@{upm::ELSED}}
+\doxysubsubsection{\texorpdfstring{processImage()}{processImage()}}
+{\footnotesize\ttfamily void upm\+::\+E\+L\+S\+E\+D\+::process\+Image (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{image }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/deos/ce.\+debeunne/colcon\+\_\+ws/src/\+Sa\+D\+V\+I\+O/cpp/thirdparty/\+E\+L\+S\+E\+D/src/\mbox{\hyperlink{_e_l_s_e_d_8h}{E\+L\+S\+E\+D.\+h}}\item 
+/home/deos/ce.\+debeunne/colcon\+\_\+ws/src/\+Sa\+D\+V\+I\+O/cpp/thirdparty/\+E\+L\+S\+E\+D/src/\mbox{\hyperlink{_e_l_s_e_d_8cpp}{E\+L\+S\+E\+D.\+cpp}}\end{DoxyCompactItemize}

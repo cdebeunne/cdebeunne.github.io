@@ -1,0 +1,125 @@
+\hypertarget{classisae_1_1_a_custom_feature_detector}{}\doxysection{isae\+::A\+Custom\+Feature\+Detector Class Reference}
+\label{classisae_1_1_a_custom_feature_detector}\index{isae::ACustomFeatureDetector@{isae::ACustomFeatureDetector}}
+
+
+{\ttfamily \#include $<$a\+Custom\+Feature\+Detector.\+h$>$}
+
+
+
+Inheritance diagram for isae\+::A\+Custom\+Feature\+Detector\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classisae_1_1_a_custom_feature_detector__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for isae\+::A\+Custom\+Feature\+Detector\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{classisae_1_1_a_custom_feature_detector__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classisae_1_1_a_custom_feature_detector_a1a0fe6dea38372c54b483ba07f74093a}{A\+Custom\+Feature\+Detector}} (int n, int n\+\_\+per\+\_\+cell)
+\item 
+void \mbox{\hyperlink{classisae_1_1_a_custom_feature_detector_a451457966229fbf23bc86f6d2bd13523}{detect\+And\+Compute}} (const cv\+::\+Mat \&img, const cv\+::\+Mat \&mask, std\+::vector$<$ cv\+::\+Key\+Point $>$ \&keypoints, cv\+::\+Mat \&descriptors, int n\+\_\+points=0)
+\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$ $>$ \mbox{\hyperlink{classisae_1_1_a_custom_feature_detector_a8dbdce4928c54a14bd7c0cb18feabbf5}{detect\+And\+Compute\+Grid}} (const cv\+::\+Mat \&img, const cv\+::\+Mat \&mask, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$ existing\+\_\+features=std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$())
+\item 
+virtual void \mbox{\hyperlink{classisae_1_1_a_custom_feature_detector_a53cf8fa55bfed8a81e4c1b72c4d16518}{custom\+Detect\+And\+Compute}} (const cv\+::\+Mat \&img, const cv\+::\+Mat \&mask, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$ \&features)=0
+\item 
+virtual void \mbox{\hyperlink{classisae_1_1_a_custom_feature_detector_a3c37409af9d97037dbbc4677127879e2}{compute\+Descriptor}} (const cv\+::\+Mat \&img, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$ \&features)=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+const int \mbox{\hyperlink{classisae_1_1_a_custom_feature_detector_a117f640156b202bbfeb794ebb4012b45}{get\+Default\+Norm}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classisae_1_1_a_custom_feature_detector_a4dd19aa208627a3fa5103628dd111f73}{\+\_\+default\+Norm}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classisae_1_1_a_custom_feature_detector_a1a0fe6dea38372c54b483ba07f74093a}\label{classisae_1_1_a_custom_feature_detector_a1a0fe6dea38372c54b483ba07f74093a}} 
+\index{isae::ACustomFeatureDetector@{isae::ACustomFeatureDetector}!ACustomFeatureDetector@{ACustomFeatureDetector}}
+\index{ACustomFeatureDetector@{ACustomFeatureDetector}!isae::ACustomFeatureDetector@{isae::ACustomFeatureDetector}}
+\doxysubsubsection{\texorpdfstring{ACustomFeatureDetector()}{ACustomFeatureDetector()}}
+{\footnotesize\ttfamily isae\+::\+A\+Custom\+Feature\+Detector\+::\+A\+Custom\+Feature\+Detector (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{int}]{n\+\_\+per\+\_\+cell }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classisae_1_1_a_custom_feature_detector_a3c37409af9d97037dbbc4677127879e2}\label{classisae_1_1_a_custom_feature_detector_a3c37409af9d97037dbbc4677127879e2}} 
+\index{isae::ACustomFeatureDetector@{isae::ACustomFeatureDetector}!computeDescriptor@{computeDescriptor}}
+\index{computeDescriptor@{computeDescriptor}!isae::ACustomFeatureDetector@{isae::ACustomFeatureDetector}}
+\doxysubsubsection{\texorpdfstring{computeDescriptor()}{computeDescriptor()}}
+{\footnotesize\ttfamily virtual void isae\+::\+A\+Custom\+Feature\+Detector\+::compute\+Descriptor (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{img,  }\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$ \&}]{features }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classisae_1_1_a_feature_detector_a1c1d096dc988a4b91c67f5705dfce437}{isae\+::\+A\+Feature\+Detector}}.
+
+
+
+Implemented in \mbox{\hyperlink{classisae_1_1_csv_keypoint_detector_a9586c6a923a94b31e8f5f6c289c08d29}{isae\+::\+Csv\+Keypoint\+Detector}}, \mbox{\hyperlink{classisae_1_1_line2_d_feature_detector_a3303b00988ea0a306efd40aeaee055b4}{isae\+::\+Line2\+D\+Feature\+Detector}}, and \mbox{\hyperlink{classisae_1_1semantic_b_box_feature_detector_a89bf9b03b4bf6b09296da6e26f1d793d}{isae\+::semantic\+B\+Box\+Feature\+Detector}}.
+
+\mbox{\Hypertarget{classisae_1_1_a_custom_feature_detector_a53cf8fa55bfed8a81e4c1b72c4d16518}\label{classisae_1_1_a_custom_feature_detector_a53cf8fa55bfed8a81e4c1b72c4d16518}} 
+\index{isae::ACustomFeatureDetector@{isae::ACustomFeatureDetector}!customDetectAndCompute@{customDetectAndCompute}}
+\index{customDetectAndCompute@{customDetectAndCompute}!isae::ACustomFeatureDetector@{isae::ACustomFeatureDetector}}
+\doxysubsubsection{\texorpdfstring{customDetectAndCompute()}{customDetectAndCompute()}}
+{\footnotesize\ttfamily virtual void isae\+::\+A\+Custom\+Feature\+Detector\+::custom\+Detect\+And\+Compute (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{img,  }\item[{const cv\+::\+Mat \&}]{mask,  }\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$ \&}]{features }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classisae_1_1_csv_keypoint_detector_a04e15d6173184c6427d6f0c4e0e6b889}{isae\+::\+Csv\+Keypoint\+Detector}}, \mbox{\hyperlink{classisae_1_1_line2_d_feature_detector_aa6896efab5b1e5575c62406e9ae2e47c}{isae\+::\+Line2\+D\+Feature\+Detector}}, and \mbox{\hyperlink{classisae_1_1semantic_b_box_feature_detector_a3fce234bffedccd6ec5a1a3d94519393}{isae\+::semantic\+B\+Box\+Feature\+Detector}}.
+
+\mbox{\Hypertarget{classisae_1_1_a_custom_feature_detector_a451457966229fbf23bc86f6d2bd13523}\label{classisae_1_1_a_custom_feature_detector_a451457966229fbf23bc86f6d2bd13523}} 
+\index{isae::ACustomFeatureDetector@{isae::ACustomFeatureDetector}!detectAndCompute@{detectAndCompute}}
+\index{detectAndCompute@{detectAndCompute}!isae::ACustomFeatureDetector@{isae::ACustomFeatureDetector}}
+\doxysubsubsection{\texorpdfstring{detectAndCompute()}{detectAndCompute()}}
+{\footnotesize\ttfamily void isae\+::\+A\+Custom\+Feature\+Detector\+::detect\+And\+Compute (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{img,  }\item[{const cv\+::\+Mat \&}]{mask,  }\item[{std\+::vector$<$ cv\+::\+Key\+Point $>$ \&}]{keypoints,  }\item[{cv\+::\+Mat \&}]{descriptors,  }\item[{int}]{n\+\_\+points = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classisae_1_1_a_feature_detector_ac969a8bbf6b0391dde2349a38e12bfec}{isae\+::\+A\+Feature\+Detector}}.
+
+\mbox{\Hypertarget{classisae_1_1_a_custom_feature_detector_a8dbdce4928c54a14bd7c0cb18feabbf5}\label{classisae_1_1_a_custom_feature_detector_a8dbdce4928c54a14bd7c0cb18feabbf5}} 
+\index{isae::ACustomFeatureDetector@{isae::ACustomFeatureDetector}!detectAndComputeGrid@{detectAndComputeGrid}}
+\index{detectAndComputeGrid@{detectAndComputeGrid}!isae::ACustomFeatureDetector@{isae::ACustomFeatureDetector}}
+\doxysubsubsection{\texorpdfstring{detectAndComputeGrid()}{detectAndComputeGrid()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$ $>$ isae\+::\+A\+Custom\+Feature\+Detector\+::detect\+And\+Compute\+Grid (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{img,  }\item[{const cv\+::\+Mat \&}]{mask,  }\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$}]{existing\+\_\+features = {\ttfamily std\+:\+:vector$<$std\+:\+:shared\+\_\+ptr$<$\mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}}$>$$>$()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classisae_1_1_a_feature_detector_a821f4dfb0b50649ae737319a1ed1fe07}{isae\+::\+A\+Feature\+Detector}}.
+
+\mbox{\Hypertarget{classisae_1_1_a_custom_feature_detector_a117f640156b202bbfeb794ebb4012b45}\label{classisae_1_1_a_custom_feature_detector_a117f640156b202bbfeb794ebb4012b45}} 
+\index{isae::ACustomFeatureDetector@{isae::ACustomFeatureDetector}!getDefaultNorm@{getDefaultNorm}}
+\index{getDefaultNorm@{getDefaultNorm}!isae::ACustomFeatureDetector@{isae::ACustomFeatureDetector}}
+\doxysubsubsection{\texorpdfstring{getDefaultNorm()}{getDefaultNorm()}}
+{\footnotesize\ttfamily const int isae\+::\+A\+Custom\+Feature\+Detector\+::get\+Default\+Norm (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classisae_1_1_a_custom_feature_detector_a4dd19aa208627a3fa5103628dd111f73}\label{classisae_1_1_a_custom_feature_detector_a4dd19aa208627a3fa5103628dd111f73}} 
+\index{isae::ACustomFeatureDetector@{isae::ACustomFeatureDetector}!\_defaultNorm@{\_defaultNorm}}
+\index{\_defaultNorm@{\_defaultNorm}!isae::ACustomFeatureDetector@{isae::ACustomFeatureDetector}}
+\doxysubsubsection{\texorpdfstring{\_defaultNorm}{\_defaultNorm}}
+{\footnotesize\ttfamily int isae\+::\+A\+Custom\+Feature\+Detector\+::\+\_\+default\+Norm\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/deos/ce.\+debeunne/colcon\+\_\+ws/src/\+Sa\+D\+V\+I\+O/cpp/include/isaeslam/featuredetectors/\mbox{\hyperlink{a_custom_feature_detector_8h}{a\+Custom\+Feature\+Detector.\+h}}\item 
+/home/deos/ce.\+debeunne/colcon\+\_\+ws/src/\+Sa\+D\+V\+I\+O/cpp/src/featuredetectors/\mbox{\hyperlink{a_custom_feature_detector_8cpp}{a\+Custom\+Feature\+Detector.\+cpp}}\end{DoxyCompactItemize}

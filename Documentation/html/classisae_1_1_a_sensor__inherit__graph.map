@@ -1,0 +1,9 @@
+<map id="isae::ASensor" name="isae::ASensor">
+<area shape="rect" id="node1" title="Abstract class for all sensors." alt="" coords="300,5,411,32"/>
+<area shape="rect" id="node2" href="$classisae_1_1_image_sensor.html" title="Abstract class for image sensors." alt="" coords="216,80,359,107"/>
+<area shape="rect" id="node7" href="$classisae_1_1_i_m_u.html" title=" " alt="" coords="383,80,466,107"/>
+<area shape="rect" id="node3" href="$classisae_1_1_camera.html" title="A pinhole camera sensor class." alt="" coords="5,155,113,181"/>
+<area shape="rect" id="node4" href="$classisae_1_1_double_sphere.html" title="An image sensor class that uses a double sphere model." alt="" coords="137,155,285,181"/>
+<area shape="rect" id="node5" href="$classisae_1_1_fisheye.html" title="An image sensor class that uses the normalized spherical model." alt="" coords="310,155,417,181"/>
+<area shape="rect" id="node6" href="$classisae_1_1_omni.html" title="An image sensor class that uses the Omni model." alt="" coords="441,155,533,181"/>
+</map>

@@ -1,0 +1,158 @@
+\hypertarget{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic}{}\doxysection{isae\+::Angular\+Adjustment\+C\+E\+R\+E\+S\+Analytic Class Reference}
+\label{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic}\index{isae::AngularAdjustmentCERESAnalytic@{isae::AngularAdjustmentCERESAnalytic}}
+
+
+{\ttfamily \#include $<$Angular\+Adjustment\+C\+E\+R\+E\+S\+Analytic.\+h$>$}
+
+
+
+Inheritance diagram for isae\+::Angular\+Adjustment\+C\+E\+R\+E\+S\+Analytic\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=289pt]{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for isae\+::Angular\+Adjustment\+C\+E\+R\+E\+S\+Analytic\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=289pt]{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_1_1_angular_err_ceres__linexd__dx}{Angular\+Err\+Ceres\+\_\+linexd\+\_\+dx}}
+\item 
+class \mbox{\hyperlink{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_1_1_angular_err_ceres__pointxd__depth}{Angular\+Err\+Ceres\+\_\+pointxd\+\_\+depth}}
+\item 
+class \mbox{\hyperlink{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_1_1_angular_err_ceres__pointxd__dx}{Angular\+Err\+Ceres\+\_\+pointxd\+\_\+dx}}
+\item 
+class \mbox{\hyperlink{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_1_1_angular_error_scale_cam0}{Angular\+Error\+Scale\+Cam0}}
+\item 
+class \mbox{\hyperlink{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_1_1_angular_error_scale_depth}{Angular\+Error\+Scale\+Depth}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_a73859278f85449e13c82727a473a46ae}{Angular\+Adjustment\+C\+E\+R\+E\+S\+Analytic}} ()=default
+\item 
+\mbox{\hyperlink{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_a69fd33a7b5a3010a58739606921a57d2}{$\sim$\+Angular\+Adjustment\+C\+E\+R\+E\+S\+Analytic}} ()=default
+\item 
+virtual bool \mbox{\hyperlink{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_ac25d688767a95ceea6b1d224c4451cdd}{marginalize}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&frame0, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&frame1, bool enable\+\_\+sparsif) override
+\item 
+virtual Eigen\+::\+Matrix\+Xd \mbox{\hyperlink{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_a8ba91de25b2f5d5fff2612b82c8168ff}{marginalize\+Relative}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&frame0, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&frame1) override
+\item 
+virtual bool \mbox{\hyperlink{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_aadce5fdf2492782169622579cb3574d0}{landmark\+Optimization\+No\+Fov}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&f, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&fp, Eigen\+::\+Affine3d \&T\+\_\+cam0\+\_\+cam0p, double info\+\_\+scale) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint \mbox{\hyperlink{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_a5f716c2a2cf4becdb99bdb6c34d606e3}{add\+Residuals\+Local\+Map}} (ceres\+::\+Problem \&problem, ceres\+::\+Loss\+Function $\ast$loss\+\_\+function, ceres\+::\+Parameter\+Block\+Ordering $\ast$ordering, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$$>$ \&frame\+\_\+vector, size\+\_\+t fixed\+\_\+frame\+\_\+number, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_local_map}{isae\+::\+Local\+Map}} $>$ \&local\+\_\+map) override
+\item 
+uint \mbox{\hyperlink{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_af3fb18984ee9f4a0d4bbc291358ef2a3}{add\+Single\+Frame\+Residuals}} (ceres\+::\+Problem \&problem, ceres\+::\+Loss\+Function $\ast$loss\+\_\+function, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&frame, \mbox{\hyperlink{namespaceisae_a4b744e0e080a733838eb133deda894aa}{typed\+\_\+vec\+\_\+landmarks}} \&cloud\+\_\+to\+\_\+optimize) override
+\item 
+uint \mbox{\hyperlink{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_abff839c4c8fdcf5b1818e1a08759c570}{add\+Landmark\+Residuals}} (ceres\+::\+Problem \&problem, ceres\+::\+Loss\+Function $\ast$loss\+\_\+function, \mbox{\hyperlink{namespaceisae_a4b744e0e080a733838eb133deda894aa}{typed\+\_\+vec\+\_\+landmarks}} \&cloud\+\_\+to\+\_\+optimize) override
+\item 
+uint \mbox{\hyperlink{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_a312119c24d1e5999447cdd57a5ed6e99}{add\+Marginalization\+Residuals}} (ceres\+::\+Problem \&problem, ceres\+::\+Loss\+Function $\ast$loss\+\_\+function, ceres\+::\+Parameter\+Block\+Ordering $\ast$ordering) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_a73859278f85449e13c82727a473a46ae}\label{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_a73859278f85449e13c82727a473a46ae}} 
+\index{isae::AngularAdjustmentCERESAnalytic@{isae::AngularAdjustmentCERESAnalytic}!AngularAdjustmentCERESAnalytic@{AngularAdjustmentCERESAnalytic}}
+\index{AngularAdjustmentCERESAnalytic@{AngularAdjustmentCERESAnalytic}!isae::AngularAdjustmentCERESAnalytic@{isae::AngularAdjustmentCERESAnalytic}}
+\doxysubsubsection{\texorpdfstring{AngularAdjustmentCERESAnalytic()}{AngularAdjustmentCERESAnalytic()}}
+{\footnotesize\ttfamily isae\+::\+Angular\+Adjustment\+C\+E\+R\+E\+S\+Analytic\+::\+Angular\+Adjustment\+C\+E\+R\+E\+S\+Analytic (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_a69fd33a7b5a3010a58739606921a57d2}\label{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_a69fd33a7b5a3010a58739606921a57d2}} 
+\index{isae::AngularAdjustmentCERESAnalytic@{isae::AngularAdjustmentCERESAnalytic}!````~AngularAdjustmentCERESAnalytic@{$\sim$AngularAdjustmentCERESAnalytic}}
+\index{````~AngularAdjustmentCERESAnalytic@{$\sim$AngularAdjustmentCERESAnalytic}!isae::AngularAdjustmentCERESAnalytic@{isae::AngularAdjustmentCERESAnalytic}}
+\doxysubsubsection{\texorpdfstring{$\sim$AngularAdjustmentCERESAnalytic()}{~AngularAdjustmentCERESAnalytic()}}
+{\footnotesize\ttfamily isae\+::\+Angular\+Adjustment\+C\+E\+R\+E\+S\+Analytic\+::$\sim$\+Angular\+Adjustment\+C\+E\+R\+E\+S\+Analytic (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_abff839c4c8fdcf5b1818e1a08759c570}\label{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_abff839c4c8fdcf5b1818e1a08759c570}} 
+\index{isae::AngularAdjustmentCERESAnalytic@{isae::AngularAdjustmentCERESAnalytic}!addLandmarkResiduals@{addLandmarkResiduals}}
+\index{addLandmarkResiduals@{addLandmarkResiduals}!isae::AngularAdjustmentCERESAnalytic@{isae::AngularAdjustmentCERESAnalytic}}
+\doxysubsubsection{\texorpdfstring{addLandmarkResiduals()}{addLandmarkResiduals()}}
+{\footnotesize\ttfamily uint isae\+::\+Angular\+Adjustment\+C\+E\+R\+E\+S\+Analytic\+::add\+Landmark\+Residuals (\begin{DoxyParamCaption}\item[{ceres\+::\+Problem \&}]{problem,  }\item[{ceres\+::\+Loss\+Function $\ast$}]{loss\+\_\+function,  }\item[{\mbox{\hyperlink{namespaceisae_a4b744e0e080a733838eb133deda894aa}{typed\+\_\+vec\+\_\+landmarks}} \&}]{cloud\+\_\+to\+\_\+optimize }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classisae_1_1_a_optimizer_ab200573dfb0edebe7b2628e28f9cefef}{isae\+::\+A\+Optimizer}}.
+
+\mbox{\Hypertarget{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_a312119c24d1e5999447cdd57a5ed6e99}\label{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_a312119c24d1e5999447cdd57a5ed6e99}} 
+\index{isae::AngularAdjustmentCERESAnalytic@{isae::AngularAdjustmentCERESAnalytic}!addMarginalizationResiduals@{addMarginalizationResiduals}}
+\index{addMarginalizationResiduals@{addMarginalizationResiduals}!isae::AngularAdjustmentCERESAnalytic@{isae::AngularAdjustmentCERESAnalytic}}
+\doxysubsubsection{\texorpdfstring{addMarginalizationResiduals()}{addMarginalizationResiduals()}}
+{\footnotesize\ttfamily uint isae\+::\+Angular\+Adjustment\+C\+E\+R\+E\+S\+Analytic\+::add\+Marginalization\+Residuals (\begin{DoxyParamCaption}\item[{ceres\+::\+Problem \&}]{problem,  }\item[{ceres\+::\+Loss\+Function $\ast$}]{loss\+\_\+function,  }\item[{ceres\+::\+Parameter\+Block\+Ordering $\ast$}]{ordering }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+C\+A\+SE 1 V\+IO ///
+
+C\+A\+SE 2 VO ///
+
+Reimplemented from \mbox{\hyperlink{classisae_1_1_a_optimizer_a61bad18320dd6d0863f48cdbb738c5c1}{isae\+::\+A\+Optimizer}}.
+
+\mbox{\Hypertarget{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_a5f716c2a2cf4becdb99bdb6c34d606e3}\label{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_a5f716c2a2cf4becdb99bdb6c34d606e3}} 
+\index{isae::AngularAdjustmentCERESAnalytic@{isae::AngularAdjustmentCERESAnalytic}!addResidualsLocalMap@{addResidualsLocalMap}}
+\index{addResidualsLocalMap@{addResidualsLocalMap}!isae::AngularAdjustmentCERESAnalytic@{isae::AngularAdjustmentCERESAnalytic}}
+\doxysubsubsection{\texorpdfstring{addResidualsLocalMap()}{addResidualsLocalMap()}}
+{\footnotesize\ttfamily uint isae\+::\+Angular\+Adjustment\+C\+E\+R\+E\+S\+Analytic\+::add\+Residuals\+Local\+Map (\begin{DoxyParamCaption}\item[{ceres\+::\+Problem \&}]{problem,  }\item[{ceres\+::\+Loss\+Function $\ast$}]{loss\+\_\+function,  }\item[{ceres\+::\+Parameter\+Block\+Ordering $\ast$}]{ordering,  }\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$$>$ \&}]{frame\+\_\+vector,  }\item[{size\+\_\+t}]{fixed\+\_\+frame\+\_\+number,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_local_map}{isae\+::\+Local\+Map}} $>$ \&}]{local\+\_\+map }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classisae_1_1_a_optimizer_ab4a33aa6977b4d88e7fd3da45f496975}{isae\+::\+A\+Optimizer}}.
+
+\mbox{\Hypertarget{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_af3fb18984ee9f4a0d4bbc291358ef2a3}\label{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_af3fb18984ee9f4a0d4bbc291358ef2a3}} 
+\index{isae::AngularAdjustmentCERESAnalytic@{isae::AngularAdjustmentCERESAnalytic}!addSingleFrameResiduals@{addSingleFrameResiduals}}
+\index{addSingleFrameResiduals@{addSingleFrameResiduals}!isae::AngularAdjustmentCERESAnalytic@{isae::AngularAdjustmentCERESAnalytic}}
+\doxysubsubsection{\texorpdfstring{addSingleFrameResiduals()}{addSingleFrameResiduals()}}
+{\footnotesize\ttfamily uint isae\+::\+Angular\+Adjustment\+C\+E\+R\+E\+S\+Analytic\+::add\+Single\+Frame\+Residuals (\begin{DoxyParamCaption}\item[{ceres\+::\+Problem \&}]{problem,  }\item[{ceres\+::\+Loss\+Function $\ast$}]{loss\+\_\+function,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&}]{frame,  }\item[{\mbox{\hyperlink{namespaceisae_a4b744e0e080a733838eb133deda894aa}{typed\+\_\+vec\+\_\+landmarks}} \&}]{cloud\+\_\+to\+\_\+optimize }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classisae_1_1_a_optimizer_a06ac6ce2c1121790ad7b28ae0c36de78}{isae\+::\+A\+Optimizer}}.
+
+\mbox{\Hypertarget{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_aadce5fdf2492782169622579cb3574d0}\label{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_aadce5fdf2492782169622579cb3574d0}} 
+\index{isae::AngularAdjustmentCERESAnalytic@{isae::AngularAdjustmentCERESAnalytic}!landmarkOptimizationNoFov@{landmarkOptimizationNoFov}}
+\index{landmarkOptimizationNoFov@{landmarkOptimizationNoFov}!isae::AngularAdjustmentCERESAnalytic@{isae::AngularAdjustmentCERESAnalytic}}
+\doxysubsubsection{\texorpdfstring{landmarkOptimizationNoFov()}{landmarkOptimizationNoFov()}}
+{\footnotesize\ttfamily bool isae\+::\+Angular\+Adjustment\+C\+E\+R\+E\+S\+Analytic\+::landmark\+Optimization\+No\+Fov (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&}]{f,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&}]{fp,  }\item[{Eigen\+::\+Affine3d \&}]{T\+\_\+cam0\+\_\+cam0p,  }\item[{double}]{info\+\_\+scale }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classisae_1_1_a_optimizer_af5aece35985878a1af6989dc47c799e8}{isae\+::\+A\+Optimizer}}.
+
+\mbox{\Hypertarget{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_ac25d688767a95ceea6b1d224c4451cdd}\label{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_ac25d688767a95ceea6b1d224c4451cdd}} 
+\index{isae::AngularAdjustmentCERESAnalytic@{isae::AngularAdjustmentCERESAnalytic}!marginalize@{marginalize}}
+\index{marginalize@{marginalize}!isae::AngularAdjustmentCERESAnalytic@{isae::AngularAdjustmentCERESAnalytic}}
+\doxysubsubsection{\texorpdfstring{marginalize()}{marginalize()}}
+{\footnotesize\ttfamily bool isae\+::\+Angular\+Adjustment\+C\+E\+R\+E\+S\+Analytic\+::marginalize (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&}]{frame0,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&}]{frame1,  }\item[{bool}]{enable\+\_\+sparsif }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classisae_1_1_a_optimizer_a009b26589c47e46be1b722c9824361ec}{isae\+::\+A\+Optimizer}}.
+
+\mbox{\Hypertarget{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_a8ba91de25b2f5d5fff2612b82c8168ff}\label{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_a8ba91de25b2f5d5fff2612b82c8168ff}} 
+\index{isae::AngularAdjustmentCERESAnalytic@{isae::AngularAdjustmentCERESAnalytic}!marginalizeRelative@{marginalizeRelative}}
+\index{marginalizeRelative@{marginalizeRelative}!isae::AngularAdjustmentCERESAnalytic@{isae::AngularAdjustmentCERESAnalytic}}
+\doxysubsubsection{\texorpdfstring{marginalizeRelative()}{marginalizeRelative()}}
+{\footnotesize\ttfamily Eigen\+::\+Matrix\+Xd isae\+::\+Angular\+Adjustment\+C\+E\+R\+E\+S\+Analytic\+::marginalize\+Relative (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&}]{frame0,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&}]{frame1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classisae_1_1_a_optimizer_ad6985d97b625025955ed106ed2195f23}{isae\+::\+A\+Optimizer}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/deos/ce.\+debeunne/colcon\+\_\+ws/src/\+Sa\+D\+V\+I\+O/cpp/include/isaeslam/optimizers/\mbox{\hyperlink{_angular_adjustment_c_e_r_e_s_analytic_8h}{Angular\+Adjustment\+C\+E\+R\+E\+S\+Analytic.\+h}}\item 
+/home/deos/ce.\+debeunne/colcon\+\_\+ws/src/\+Sa\+D\+V\+I\+O/cpp/src/optimizers/\mbox{\hyperlink{_angular_adjustment_c_e_r_e_s_analytic_8cpp}{Angular\+Adjustment\+C\+E\+R\+E\+S\+Analytic.\+cpp}}\end{DoxyCompactItemize}

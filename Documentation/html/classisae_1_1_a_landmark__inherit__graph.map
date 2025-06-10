@@ -1,0 +1,7 @@
+<map id="isae::ALandmark" name="isae::ALandmark">
+<area shape="rect" id="node1" title="Abstract class for 3D Landmarks." alt="" coords="125,95,256,121"/>
+<area shape="rect" id="node3" href="$classisae_1_1_b_box3_d.html" title="A 3D bounding box landmark class." alt="" coords="5,169,115,196"/>
+<area shape="rect" id="node4" href="$classisae_1_1_line3_d.html" title="A 3D Line landmark class." alt="" coords="139,169,242,196"/>
+<area shape="rect" id="node5" href="$classisae_1_1_point3_d.html" title="A 3D Point landmark class." alt="" coords="266,169,374,196"/>
+<area shape="rect" id="node2" title=" " alt="" coords="93,5,288,47"/>
+</map>

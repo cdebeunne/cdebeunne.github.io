@@ -1,0 +1,207 @@
+\hypertarget{namespaceupm}{}\doxysection{upm Namespace Reference}
+\label{namespaceupm}\index{upm@{upm}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structupm_1_1_drawing_branch}{Drawing\+Branch}}
+\item 
+class \mbox{\hyperlink{classupm_1_1_edge_drawer}{Edge\+Drawer}}
+\item 
+class \mbox{\hyperlink{classupm_1_1_e_l_s_e_d}{E\+L\+S\+ED}}
+\item 
+struct \mbox{\hyperlink{structupm_1_1_e_l_s_e_d_params}{E\+L\+S\+E\+D\+Params}}
+\item 
+class \mbox{\hyperlink{classupm_1_1_full_segment_info}{Full\+Segment\+Info}}
+\item 
+struct \mbox{\hyperlink{structupm_1_1_line_detection_extra_info}{Line\+Detection\+Extra\+Info}}
+\item 
+struct \mbox{\hyperlink{structupm_1_1_pixel}{Pixel}}
+\item 
+struct \mbox{\hyperlink{structupm_1_1_salient_segment}{Salient\+Segment}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classupm_1_1_edge_drawer}{Edge\+Drawer}} $>$ \mbox{\hyperlink{namespaceupm_ad215fd0fbd963b8347b65b1b85165a4f}{Edge\+Drawer\+Ptr}}
+\item 
+typedef cv\+::\+Vec4f \mbox{\hyperlink{namespaceupm_a21887d87b3a6abbaadcb35e0971abef3}{Segment}}
+\item 
+typedef std\+::vector$<$ \mbox{\hyperlink{namespaceupm_a21887d87b3a6abbaadcb35e0971abef3}{Segment}} $>$ \mbox{\hyperlink{namespaceupm_a94e50fdc620c28b20b279d2ceb67ddc2}{Segments}}
+\item 
+typedef std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structupm_1_1_line_detection_extra_info}{Line\+Detection\+Extra\+Info}} $>$ \mbox{\hyperlink{namespaceupm_ad6da441adeaf5a499fb9834c9e4b07b9}{Line\+Detection\+Extra\+Info\+Ptr}}
+\item 
+typedef std\+::vector$<$ \mbox{\hyperlink{structupm_1_1_pixel}{Pixel}} $>$ \mbox{\hyperlink{namespaceupm_a4e5ceb7dee65186c17eb2ba0704b2033}{Image\+Edge}}
+\item 
+typedef std\+::vector$<$ \mbox{\hyperlink{namespaceupm_a4e5ceb7dee65186c17eb2ba0704b2033}{Image\+Edge}} $>$ \mbox{\hyperlink{namespaceupm_a402822a53e697473579e765851bdcbf7}{Image\+Edges}}
+\item 
+typedef std\+::vector$<$ \mbox{\hyperlink{structupm_1_1_salient_segment}{Salient\+Segment}} $>$ \mbox{\hyperlink{namespaceupm_a891523fdc5c645ac17061d49e450b2ef}{Salient\+Segments}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structupm_1_1_pixel}{Pixel}} \mbox{\hyperlink{namespaceupm_a843b9e1b79d7ee898b5bab59d33af821}{calc\+Last\+Pixel\+With\+Direction}} (const \mbox{\hyperlink{structupm_1_1_pixel}{Pixel}} \&px, uint8\+\_\+t last\+Dir)
+\item 
+int \mbox{\hyperlink{namespaceupm_ab8d9842ddb5eb02496b8ce4852462dd3}{calculate\+Num\+Pts\+To\+Trim}} (int n\+Points)
+\item 
+float \mbox{\hyperlink{namespaceupm_a9c805020ef76357c23f1b64580f1d409}{lerp}} (float s, float e, float t)
+\item 
+float \mbox{\hyperlink{namespaceupm_a68b04823e232f2763b55346feed20f19}{blerp}} (float c00, float c10, float c01, float c11, float tx, float ty)
+\item 
+double \mbox{\hyperlink{namespaceupm_aac9403dffd0ef05f0056e6a1e8d230a3}{circular\+Dist}} (double valueA, double valueB, double mod=360)
+\begin{DoxyCompactList}\small\item\em Calculate the angular distance between two angles valueA and valueB. Taking into account that 0 degrees is equivalent to 360. \end{DoxyCompactList}\item 
+cv\+::\+Point2f \mbox{\hyperlink{namespaceupm_a6682b43c9b631176d6b4a288f19e9003}{get\+Projection\+Ptn}} (const cv\+::\+Vec3f \&l, const cv\+::\+Point2f \&p)
+\begin{DoxyCompactList}\small\item\em Gets the projection of a point into a line. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{namespaceupm_ab275a52070aab001b3a468fbeeaed1d9}{seg\+Length}} (const \mbox{\hyperlink{namespaceupm_a21887d87b3a6abbaadcb35e0971abef3}{Segment}} \&s)
+\begin{DoxyCompactList}\small\item\em Calculates the length of a line segment. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{namespaceupm_a9b28fc8244ef973d784e4d645af50b61}{seg\+Angle}} (const \mbox{\hyperlink{namespaceupm_a21887d87b3a6abbaadcb35e0971abef3}{Segment}} \&s)
+\begin{DoxyCompactList}\small\item\em Calculates the angle of a line segment. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{namespaceupm_ad215fd0fbd963b8347b65b1b85165a4f}\label{namespaceupm_ad215fd0fbd963b8347b65b1b85165a4f}} 
+\index{upm@{upm}!EdgeDrawerPtr@{EdgeDrawerPtr}}
+\index{EdgeDrawerPtr@{EdgeDrawerPtr}!upm@{upm}}
+\doxysubsubsection{\texorpdfstring{EdgeDrawerPtr}{EdgeDrawerPtr}}
+{\footnotesize\ttfamily typedef std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classupm_1_1_edge_drawer}{Edge\+Drawer}}$>$ \mbox{\hyperlink{namespaceupm_ad215fd0fbd963b8347b65b1b85165a4f}{upm\+::\+Edge\+Drawer\+Ptr}}}
+
+\mbox{\Hypertarget{namespaceupm_a4e5ceb7dee65186c17eb2ba0704b2033}\label{namespaceupm_a4e5ceb7dee65186c17eb2ba0704b2033}} 
+\index{upm@{upm}!ImageEdge@{ImageEdge}}
+\index{ImageEdge@{ImageEdge}!upm@{upm}}
+\doxysubsubsection{\texorpdfstring{ImageEdge}{ImageEdge}}
+{\footnotesize\ttfamily typedef std\+::vector$<$\mbox{\hyperlink{structupm_1_1_pixel}{Pixel}}$>$ \mbox{\hyperlink{namespaceupm_a4e5ceb7dee65186c17eb2ba0704b2033}{upm\+::\+Image\+Edge}}}
+
+\mbox{\Hypertarget{namespaceupm_a402822a53e697473579e765851bdcbf7}\label{namespaceupm_a402822a53e697473579e765851bdcbf7}} 
+\index{upm@{upm}!ImageEdges@{ImageEdges}}
+\index{ImageEdges@{ImageEdges}!upm@{upm}}
+\doxysubsubsection{\texorpdfstring{ImageEdges}{ImageEdges}}
+{\footnotesize\ttfamily typedef std\+::vector$<$\mbox{\hyperlink{namespaceupm_a4e5ceb7dee65186c17eb2ba0704b2033}{Image\+Edge}}$>$ \mbox{\hyperlink{namespaceupm_a402822a53e697473579e765851bdcbf7}{upm\+::\+Image\+Edges}}}
+
+\mbox{\Hypertarget{namespaceupm_ad6da441adeaf5a499fb9834c9e4b07b9}\label{namespaceupm_ad6da441adeaf5a499fb9834c9e4b07b9}} 
+\index{upm@{upm}!LineDetectionExtraInfoPtr@{LineDetectionExtraInfoPtr}}
+\index{LineDetectionExtraInfoPtr@{LineDetectionExtraInfoPtr}!upm@{upm}}
+\doxysubsubsection{\texorpdfstring{LineDetectionExtraInfoPtr}{LineDetectionExtraInfoPtr}}
+{\footnotesize\ttfamily typedef std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structupm_1_1_line_detection_extra_info}{Line\+Detection\+Extra\+Info}}$>$ \mbox{\hyperlink{namespaceupm_ad6da441adeaf5a499fb9834c9e4b07b9}{upm\+::\+Line\+Detection\+Extra\+Info\+Ptr}}}
+
+\mbox{\Hypertarget{namespaceupm_a891523fdc5c645ac17061d49e450b2ef}\label{namespaceupm_a891523fdc5c645ac17061d49e450b2ef}} 
+\index{upm@{upm}!SalientSegments@{SalientSegments}}
+\index{SalientSegments@{SalientSegments}!upm@{upm}}
+\doxysubsubsection{\texorpdfstring{SalientSegments}{SalientSegments}}
+{\footnotesize\ttfamily typedef std\+::vector$<$\mbox{\hyperlink{structupm_1_1_salient_segment}{Salient\+Segment}}$>$ \mbox{\hyperlink{namespaceupm_a891523fdc5c645ac17061d49e450b2ef}{upm\+::\+Salient\+Segments}}}
+
+\mbox{\Hypertarget{namespaceupm_a21887d87b3a6abbaadcb35e0971abef3}\label{namespaceupm_a21887d87b3a6abbaadcb35e0971abef3}} 
+\index{upm@{upm}!Segment@{Segment}}
+\index{Segment@{Segment}!upm@{upm}}
+\doxysubsubsection{\texorpdfstring{Segment}{Segment}}
+{\footnotesize\ttfamily typedef cv\+::\+Vec4f \mbox{\hyperlink{namespaceupm_a21887d87b3a6abbaadcb35e0971abef3}{upm\+::\+Segment}}}
+
+\mbox{\Hypertarget{namespaceupm_a94e50fdc620c28b20b279d2ceb67ddc2}\label{namespaceupm_a94e50fdc620c28b20b279d2ceb67ddc2}} 
+\index{upm@{upm}!Segments@{Segments}}
+\index{Segments@{Segments}!upm@{upm}}
+\doxysubsubsection{\texorpdfstring{Segments}{Segments}}
+{\footnotesize\ttfamily typedef std\+::vector$<$\mbox{\hyperlink{namespaceupm_a21887d87b3a6abbaadcb35e0971abef3}{Segment}}$>$ \mbox{\hyperlink{namespaceupm_a94e50fdc620c28b20b279d2ceb67ddc2}{upm\+::\+Segments}}}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespaceupm_a68b04823e232f2763b55346feed20f19}\label{namespaceupm_a68b04823e232f2763b55346feed20f19}} 
+\index{upm@{upm}!blerp@{blerp}}
+\index{blerp@{blerp}!upm@{upm}}
+\doxysubsubsection{\texorpdfstring{blerp()}{blerp()}}
+{\footnotesize\ttfamily float upm\+::blerp (\begin{DoxyParamCaption}\item[{float}]{c00,  }\item[{float}]{c10,  }\item[{float}]{c01,  }\item[{float}]{c11,  }\item[{float}]{tx,  }\item[{float}]{ty }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespaceupm_a843b9e1b79d7ee898b5bab59d33af821}\label{namespaceupm_a843b9e1b79d7ee898b5bab59d33af821}} 
+\index{upm@{upm}!calcLastPixelWithDirection@{calcLastPixelWithDirection}}
+\index{calcLastPixelWithDirection@{calcLastPixelWithDirection}!upm@{upm}}
+\doxysubsubsection{\texorpdfstring{calcLastPixelWithDirection()}{calcLastPixelWithDirection()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structupm_1_1_pixel}{Pixel}} upm\+::calc\+Last\+Pixel\+With\+Direction (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structupm_1_1_pixel}{Pixel}} \&}]{px,  }\item[{uint8\+\_\+t}]{last\+Dir }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespaceupm_ab8d9842ddb5eb02496b8ce4852462dd3}\label{namespaceupm_ab8d9842ddb5eb02496b8ce4852462dd3}} 
+\index{upm@{upm}!calculateNumPtsToTrim@{calculateNumPtsToTrim}}
+\index{calculateNumPtsToTrim@{calculateNumPtsToTrim}!upm@{upm}}
+\doxysubsubsection{\texorpdfstring{calculateNumPtsToTrim()}{calculateNumPtsToTrim()}}
+{\footnotesize\ttfamily int upm\+::calculate\+Num\+Pts\+To\+Trim (\begin{DoxyParamCaption}\item[{int}]{n\+Points }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespaceupm_aac9403dffd0ef05f0056e6a1e8d230a3}\label{namespaceupm_aac9403dffd0ef05f0056e6a1e8d230a3}} 
+\index{upm@{upm}!circularDist@{circularDist}}
+\index{circularDist@{circularDist}!upm@{upm}}
+\doxysubsubsection{\texorpdfstring{circularDist()}{circularDist()}}
+{\footnotesize\ttfamily double upm\+::circular\+Dist (\begin{DoxyParamCaption}\item[{double}]{valueA,  }\item[{double}]{valueB,  }\item[{double}]{mod = {\ttfamily 360} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Calculate the angular distance between two angles valueA and valueB. Taking into account that 0 degrees is equivalent to 360. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em valueA} & \\
+\hline
+{\em valueB} & \\
+\hline
+{\em mod} & The number of elements in the circle (2 $\ast$ PI to radians or 360 for degrees) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespaceupm_a6682b43c9b631176d6b4a288f19e9003}\label{namespaceupm_a6682b43c9b631176d6b4a288f19e9003}} 
+\index{upm@{upm}!getProjectionPtn@{getProjectionPtn}}
+\index{getProjectionPtn@{getProjectionPtn}!upm@{upm}}
+\doxysubsubsection{\texorpdfstring{getProjectionPtn()}{getProjectionPtn()}}
+{\footnotesize\ttfamily cv\+::\+Point2f upm\+::get\+Projection\+Ptn (\begin{DoxyParamCaption}\item[{const cv\+::\+Vec3f \&}]{l,  }\item[{const cv\+::\+Point2f \&}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the projection of a point into a line. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em l} & The general line ecuation ax + by +c = 0 in format (a, b, c) \\
+\hline
+{\em p} & The point which we want to calculate its projection over the line \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The point p\textquotesingle{} which is the projection of p over the line. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespaceupm_a9c805020ef76357c23f1b64580f1d409}\label{namespaceupm_a9c805020ef76357c23f1b64580f1d409}} 
+\index{upm@{upm}!lerp@{lerp}}
+\index{lerp@{lerp}!upm@{upm}}
+\doxysubsubsection{\texorpdfstring{lerp()}{lerp()}}
+{\footnotesize\ttfamily float upm\+::lerp (\begin{DoxyParamCaption}\item[{float}]{s,  }\item[{float}]{e,  }\item[{float}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespaceupm_a9b28fc8244ef973d784e4d645af50b61}\label{namespaceupm_a9b28fc8244ef973d784e4d645af50b61}} 
+\index{upm@{upm}!segAngle@{segAngle}}
+\index{segAngle@{segAngle}!upm@{upm}}
+\doxysubsubsection{\texorpdfstring{segAngle()}{segAngle()}}
+{\footnotesize\ttfamily float upm\+::seg\+Angle (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespaceupm_a21887d87b3a6abbaadcb35e0971abef3}{Segment}} \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Calculates the angle of a line segment. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & The input segment \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The angle that the segment forms with the X-\/axis in radians. Range (pi/2, -\/pi/2\mbox{]}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespaceupm_ab275a52070aab001b3a468fbeeaed1d9}\label{namespaceupm_ab275a52070aab001b3a468fbeeaed1d9}} 
+\index{upm@{upm}!segLength@{segLength}}
+\index{segLength@{segLength}!upm@{upm}}
+\doxysubsubsection{\texorpdfstring{segLength()}{segLength()}}
+{\footnotesize\ttfamily float upm\+::seg\+Length (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespaceupm_a21887d87b3a6abbaadcb35e0971abef3}{Segment}} \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Calculates the length of a line segment. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & The input segment \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The length of the segment 
+\end{DoxyReturn}

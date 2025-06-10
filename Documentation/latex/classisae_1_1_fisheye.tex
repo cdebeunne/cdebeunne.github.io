@@ -1,0 +1,154 @@
+\hypertarget{classisae_1_1_fisheye}{}\doxysection{isae\+::Fisheye Class Reference}
+\label{classisae_1_1_fisheye}\index{isae::Fisheye@{isae::Fisheye}}
+
+
+An image sensor class that uses the normalized spherical model.  
+
+
+
+
+{\ttfamily \#include $<$Fisheye.\+h$>$}
+
+
+
+Inheritance diagram for isae\+::Fisheye\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{classisae_1_1_fisheye__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for isae\+::Fisheye\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{classisae_1_1_fisheye__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classisae_1_1_fisheye_af4a8915a3ea66ad7223752633a0372a6}{Fisheye}} (const cv\+::\+Mat \&image, Eigen\+::\+Matrix3d K, std\+::string model, float rmax)
+\item 
+bool \mbox{\hyperlink{classisae_1_1_fisheye_a742615d993f439629b4730324e36863b}{project}} (const Eigen\+::\+Affine3d \&T\+\_\+w\+\_\+lmk, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_model3d}{A\+Model3d}} $>$ ldmk\+\_\+model, std\+::vector$<$ Eigen\+::\+Vector2d $>$ \&p2ds) override
+\begin{DoxyCompactList}\small\item\em Virtual function to project a landmark in the image plane. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classisae_1_1_fisheye_a10699577d3d6650d38026561205dbadc}{project}} (const Eigen\+::\+Affine3d \&T\+\_\+w\+\_\+lmk, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_model3d}{A\+Model3d}} $>$ ldmk\+\_\+model, const Eigen\+::\+Affine3d \&T\+\_\+f\+\_\+w, std\+::vector$<$ Eigen\+::\+Vector2d $>$ \&p2ds) override
+\begin{DoxyCompactList}\small\item\em Virtual function to project a landmark in the image plane with the pose of the frame. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classisae_1_1_fisheye_a0d37794a0e08bb3d8414ffd99aefabb8}{project}} (const Eigen\+::\+Affine3d \&T\+\_\+w\+\_\+lmk, const Eigen\+::\+Affine3d \&T\+\_\+f\+\_\+w, const Eigen\+::\+Matrix2d sqrt\+\_\+info, Eigen\+::\+Vector2d \&p2d, double $\ast$J\+\_\+proj\+\_\+frame, double $\ast$J\+\_\+proj\+\_\+lmk) override
+\begin{DoxyCompactList}\small\item\em Virtual function to project a landmark and compute the Jacobian of the projection. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector3d \mbox{\hyperlink{classisae_1_1_fisheye_a7637a78319f35d979f004b7de4692577}{get\+Ray\+Camera}} (Eigen\+::\+Vector2d f)
+\begin{DoxyCompactList}\small\item\em Get the ray in camera coordinates. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector3d \mbox{\hyperlink{classisae_1_1_fisheye_ad45c90f2f762b3ff8a8e50658bef2433}{get\+Ray}} (Eigen\+::\+Vector2d f)
+\begin{DoxyCompactList}\small\item\em Get the ray in world coordinates. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classisae_1_1_fisheye_a11ce42a75ed8ece45a8da77cc693be03}{get\+Focal}} () override
+\begin{DoxyCompactList}\small\item\em Compute the focal length of the camera. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+An image sensor class that uses the normalized spherical model. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classisae_1_1_fisheye_af4a8915a3ea66ad7223752633a0372a6}\label{classisae_1_1_fisheye_af4a8915a3ea66ad7223752633a0372a6}} 
+\index{isae::Fisheye@{isae::Fisheye}!Fisheye@{Fisheye}}
+\index{Fisheye@{Fisheye}!isae::Fisheye@{isae::Fisheye}}
+\doxysubsubsection{\texorpdfstring{Fisheye()}{Fisheye()}}
+{\footnotesize\ttfamily isae\+::\+Fisheye\+::\+Fisheye (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{image,  }\item[{Eigen\+::\+Matrix3d}]{K,  }\item[{std\+::string}]{model,  }\item[{float}]{rmax }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classisae_1_1_fisheye_a11ce42a75ed8ece45a8da77cc693be03}\label{classisae_1_1_fisheye_a11ce42a75ed8ece45a8da77cc693be03}} 
+\index{isae::Fisheye@{isae::Fisheye}!getFocal@{getFocal}}
+\index{getFocal@{getFocal}!isae::Fisheye@{isae::Fisheye}}
+\doxysubsubsection{\texorpdfstring{getFocal()}{getFocal()}}
+{\footnotesize\ttfamily double isae\+::\+Fisheye\+::get\+Focal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Compute the focal length of the camera. 
+
+Virtual function because it depends on the camera model. 
+
+Implements \mbox{\hyperlink{classisae_1_1_image_sensor_a94b4863ade24b7b1a5b5e619d87a1174}{isae\+::\+Image\+Sensor}}.
+
+\mbox{\Hypertarget{classisae_1_1_fisheye_ad45c90f2f762b3ff8a8e50658bef2433}\label{classisae_1_1_fisheye_ad45c90f2f762b3ff8a8e50658bef2433}} 
+\index{isae::Fisheye@{isae::Fisheye}!getRay@{getRay}}
+\index{getRay@{getRay}!isae::Fisheye@{isae::Fisheye}}
+\doxysubsubsection{\texorpdfstring{getRay()}{getRay()}}
+{\footnotesize\ttfamily Eigen\+::\+Vector3d isae\+::\+Fisheye\+::get\+Ray (\begin{DoxyParamCaption}\item[{Eigen\+::\+Vector2d}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get the ray in world coordinates. 
+
+
+
+Implements \mbox{\hyperlink{classisae_1_1_image_sensor_adb7b31c8cc57c2f9b46ab774d7d58a50}{isae\+::\+Image\+Sensor}}.
+
+\mbox{\Hypertarget{classisae_1_1_fisheye_a7637a78319f35d979f004b7de4692577}\label{classisae_1_1_fisheye_a7637a78319f35d979f004b7de4692577}} 
+\index{isae::Fisheye@{isae::Fisheye}!getRayCamera@{getRayCamera}}
+\index{getRayCamera@{getRayCamera}!isae::Fisheye@{isae::Fisheye}}
+\doxysubsubsection{\texorpdfstring{getRayCamera()}{getRayCamera()}}
+{\footnotesize\ttfamily Eigen\+::\+Vector3d isae\+::\+Fisheye\+::get\+Ray\+Camera (\begin{DoxyParamCaption}\item[{Eigen\+::\+Vector2d}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get the ray in camera coordinates. 
+
+
+
+Implements \mbox{\hyperlink{classisae_1_1_image_sensor_a549c54cc43deeb09b9cf7e770a6235fc}{isae\+::\+Image\+Sensor}}.
+
+\mbox{\Hypertarget{classisae_1_1_fisheye_a0d37794a0e08bb3d8414ffd99aefabb8}\label{classisae_1_1_fisheye_a0d37794a0e08bb3d8414ffd99aefabb8}} 
+\index{isae::Fisheye@{isae::Fisheye}!project@{project}}
+\index{project@{project}!isae::Fisheye@{isae::Fisheye}}
+\doxysubsubsection{\texorpdfstring{project()}{project()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily bool isae\+::\+Fisheye\+::project (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Affine3d \&}]{T\+\_\+w\+\_\+lmk,  }\item[{const Eigen\+::\+Affine3d \&}]{T\+\_\+f\+\_\+w,  }\item[{const Eigen\+::\+Matrix2d}]{sqrt\+\_\+info,  }\item[{Eigen\+::\+Vector2d \&}]{p2d,  }\item[{double $\ast$}]{J\+\_\+proj\+\_\+frame,  }\item[{double $\ast$}]{J\+\_\+proj\+\_\+lmk }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Virtual function to project a landmark and compute the Jacobian of the projection. 
+
+
+
+Implements \mbox{\hyperlink{classisae_1_1_image_sensor_aaee29b0f9f3e91755ed067b2bc10d764}{isae\+::\+Image\+Sensor}}.
+
+\mbox{\Hypertarget{classisae_1_1_fisheye_a10699577d3d6650d38026561205dbadc}\label{classisae_1_1_fisheye_a10699577d3d6650d38026561205dbadc}} 
+\index{isae::Fisheye@{isae::Fisheye}!project@{project}}
+\index{project@{project}!isae::Fisheye@{isae::Fisheye}}
+\doxysubsubsection{\texorpdfstring{project()}{project()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily bool isae\+::\+Fisheye\+::project (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Affine3d \&}]{T\+\_\+w\+\_\+lmk,  }\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_model3d}{A\+Model3d}} $>$}]{ldmk\+\_\+model,  }\item[{const Eigen\+::\+Affine3d \&}]{T\+\_\+f\+\_\+w,  }\item[{std\+::vector$<$ Eigen\+::\+Vector2d $>$ \&}]{p2d\+\_\+vector }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Virtual function to project a landmark in the image plane with the pose of the frame. 
+
+
+
+Implements \mbox{\hyperlink{classisae_1_1_image_sensor_a09938e96fa7e4abccf265c59ace0fd3c}{isae\+::\+Image\+Sensor}}.
+
+\mbox{\Hypertarget{classisae_1_1_fisheye_a742615d993f439629b4730324e36863b}\label{classisae_1_1_fisheye_a742615d993f439629b4730324e36863b}} 
+\index{isae::Fisheye@{isae::Fisheye}!project@{project}}
+\index{project@{project}!isae::Fisheye@{isae::Fisheye}}
+\doxysubsubsection{\texorpdfstring{project()}{project()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily bool isae\+::\+Fisheye\+::project (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Affine3d \&}]{T\+\_\+w\+\_\+lmk,  }\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_model3d}{A\+Model3d}} $>$}]{ldmk\+\_\+model,  }\item[{std\+::vector$<$ Eigen\+::\+Vector2d $>$ \&}]{p2d\+\_\+vector }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Virtual function to project a landmark in the image plane. 
+
+
+
+Implements \mbox{\hyperlink{classisae_1_1_image_sensor_ae22669e1ffbfa927864068468d011628}{isae\+::\+Image\+Sensor}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/deos/ce.\+debeunne/colcon\+\_\+ws/src/\+Sa\+D\+V\+I\+O/cpp/include/isaeslam/data/sensors/\mbox{\hyperlink{_fisheye_8h}{Fisheye.\+h}}\item 
+/home/deos/ce.\+debeunne/colcon\+\_\+ws/src/\+Sa\+D\+V\+I\+O/cpp/src/data/sensors/\mbox{\hyperlink{fisheye_8cpp}{fisheye.\+cpp}}\end{DoxyCompactItemize}

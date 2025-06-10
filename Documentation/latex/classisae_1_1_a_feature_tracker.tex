@@ -1,0 +1,87 @@
+\hypertarget{classisae_1_1_a_feature_tracker}{}\doxysection{isae\+::A\+Feature\+Tracker Class Reference}
+\label{classisae_1_1_a_feature_tracker}\index{isae::AFeatureTracker@{isae::AFeatureTracker}}
+
+
+Feature tracker that requires the two Feature\+Sets to have small differences.  
+
+
+
+
+{\ttfamily \#include $<$afeaturetracker.\+h$>$}
+
+
+
+Inheritance diagram for isae\+::A\+Feature\+Tracker\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classisae_1_1_a_feature_tracker__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classisae_1_1_a_feature_tracker_a4aaf0812387c4bed0f4a3e5fbfd47932}{A\+Feature\+Tracker}} ()
+\item 
+\mbox{\hyperlink{classisae_1_1_a_feature_tracker_af9ad00224c6bc27992f1a82b30b9887d}{A\+Feature\+Tracker}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature_detector}{A\+Feature\+Detector}} $>$ detector)
+\item 
+virtual uint \mbox{\hyperlink{classisae_1_1_a_feature_tracker_a0d8602a7f6a388354886f8ddb7e3087d}{track}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_image_sensor}{isae\+::\+Image\+Sensor}} $>$ \&sensor1, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_image_sensor}{isae\+::\+Image\+Sensor}} $>$ \&sensor2, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$ \&features\+\_\+to\+\_\+track, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$ \&features\+\_\+init, \mbox{\hyperlink{namespaceisae_ac61c2f881f902dbfef491caaa5135c9c}{vec\+\_\+match}} \&tracks, \mbox{\hyperlink{namespaceisae_ac61c2f881f902dbfef491caaa5135c9c}{vec\+\_\+match}} \&tracks\+\_\+with\+\_\+ldmk, int search\+\_\+width=21, int search\+\_\+height=21, int nlvls\+\_\+pyramids=3, double max\+\_\+err=10, bool backward=false)=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature_detector}{A\+Feature\+Detector}} $>$ \mbox{\hyperlink{classisae_1_1_a_feature_tracker_a25ea10aaac3fc5728c6254442c21df7f}{\+\_\+detector}}
+\item 
+std\+::string \mbox{\hyperlink{classisae_1_1_a_feature_tracker_ab701452873601bc8e45b7abdb3368886}{\+\_\+feature\+\_\+label}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Feature tracker that requires the two Feature\+Sets to have small differences. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classisae_1_1_a_feature_tracker_a4aaf0812387c4bed0f4a3e5fbfd47932}\label{classisae_1_1_a_feature_tracker_a4aaf0812387c4bed0f4a3e5fbfd47932}} 
+\index{isae::AFeatureTracker@{isae::AFeatureTracker}!AFeatureTracker@{AFeatureTracker}}
+\index{AFeatureTracker@{AFeatureTracker}!isae::AFeatureTracker@{isae::AFeatureTracker}}
+\doxysubsubsection{\texorpdfstring{AFeatureTracker()}{AFeatureTracker()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily isae\+::\+A\+Feature\+Tracker\+::\+A\+Feature\+Tracker (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_a_feature_tracker_af9ad00224c6bc27992f1a82b30b9887d}\label{classisae_1_1_a_feature_tracker_af9ad00224c6bc27992f1a82b30b9887d}} 
+\index{isae::AFeatureTracker@{isae::AFeatureTracker}!AFeatureTracker@{AFeatureTracker}}
+\index{AFeatureTracker@{AFeatureTracker}!isae::AFeatureTracker@{isae::AFeatureTracker}}
+\doxysubsubsection{\texorpdfstring{AFeatureTracker()}{AFeatureTracker()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily isae\+::\+A\+Feature\+Tracker\+::\+A\+Feature\+Tracker (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature_detector}{A\+Feature\+Detector}} $>$}]{detector }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classisae_1_1_a_feature_tracker_a0d8602a7f6a388354886f8ddb7e3087d}\label{classisae_1_1_a_feature_tracker_a0d8602a7f6a388354886f8ddb7e3087d}} 
+\index{isae::AFeatureTracker@{isae::AFeatureTracker}!track@{track}}
+\index{track@{track}!isae::AFeatureTracker@{isae::AFeatureTracker}}
+\doxysubsubsection{\texorpdfstring{track()}{track()}}
+{\footnotesize\ttfamily virtual uint isae\+::\+A\+Feature\+Tracker\+::track (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_image_sensor}{isae\+::\+Image\+Sensor}} $>$ \&}]{sensor1,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_image_sensor}{isae\+::\+Image\+Sensor}} $>$ \&}]{sensor2,  }\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$ \&}]{features\+\_\+to\+\_\+track,  }\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$ \&}]{features\+\_\+init,  }\item[{\mbox{\hyperlink{namespaceisae_ac61c2f881f902dbfef491caaa5135c9c}{vec\+\_\+match}} \&}]{tracks,  }\item[{\mbox{\hyperlink{namespaceisae_ac61c2f881f902dbfef491caaa5135c9c}{vec\+\_\+match}} \&}]{tracks\+\_\+with\+\_\+ldmk,  }\item[{int}]{search\+\_\+width = {\ttfamily 21},  }\item[{int}]{search\+\_\+height = {\ttfamily 21},  }\item[{int}]{nlvls\+\_\+pyramids = {\ttfamily 3},  }\item[{double}]{max\+\_\+err = {\ttfamily 10},  }\item[{bool}]{backward = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classisae_1_1_line2_d_feature_tracker_ae9c9f4a610c75ca4e30868c6b6bbd79c}{isae\+::\+Line2\+D\+Feature\+Tracker}}, \mbox{\hyperlink{classisae_1_1semantic_b_box_feature_tracker_a187926d11565d3b73bcdd98701643fdc}{isae\+::semantic\+B\+Box\+Feature\+Tracker}}, and \mbox{\hyperlink{classisae_1_1_point2_d_feature_tracker_adf319ea9a428db3ee456eefded0f5d3e}{isae\+::\+Point2\+D\+Feature\+Tracker}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classisae_1_1_a_feature_tracker_a25ea10aaac3fc5728c6254442c21df7f}\label{classisae_1_1_a_feature_tracker_a25ea10aaac3fc5728c6254442c21df7f}} 
+\index{isae::AFeatureTracker@{isae::AFeatureTracker}!\_detector@{\_detector}}
+\index{\_detector@{\_detector}!isae::AFeatureTracker@{isae::AFeatureTracker}}
+\doxysubsubsection{\texorpdfstring{\_detector}{\_detector}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classisae_1_1_a_feature_detector}{A\+Feature\+Detector}}$>$ isae\+::\+A\+Feature\+Tracker\+::\+\_\+detector\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classisae_1_1_a_feature_tracker_ab701452873601bc8e45b7abdb3368886}\label{classisae_1_1_a_feature_tracker_ab701452873601bc8e45b7abdb3368886}} 
+\index{isae::AFeatureTracker@{isae::AFeatureTracker}!\_feature\_label@{\_feature\_label}}
+\index{\_feature\_label@{\_feature\_label}!isae::AFeatureTracker@{isae::AFeatureTracker}}
+\doxysubsubsection{\texorpdfstring{\_feature\_label}{\_feature\_label}}
+{\footnotesize\ttfamily std\+::string isae\+::\+A\+Feature\+Tracker\+::\+\_\+feature\+\_\+label\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/deos/ce.\+debeunne/colcon\+\_\+ws/src/\+Sa\+D\+V\+I\+O/cpp/include/isaeslam/featurematchers/\mbox{\hyperlink{afeaturetracker_8h}{afeaturetracker.\+h}}\end{DoxyCompactItemize}

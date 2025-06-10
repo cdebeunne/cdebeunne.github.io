@@ -1,0 +1,100 @@
+\hypertarget{classisae_1_1_landmark_to_landmark_factor}{}\doxysection{isae\+::Landmark\+To\+Landmark\+Factor Class Reference}
+\label{classisae_1_1_landmark_to_landmark_factor}\index{isae::LandmarkToLandmarkFactor@{isae::LandmarkToLandmarkFactor}}
+
+
+{\ttfamily \#include $<$residuals.\+hpp$>$}
+
+
+
+Inheritance diagram for isae\+::Landmark\+To\+Landmark\+Factor\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{classisae_1_1_landmark_to_landmark_factor__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for isae\+::Landmark\+To\+Landmark\+Factor\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{classisae_1_1_landmark_to_landmark_factor__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classisae_1_1_landmark_to_landmark_factor_ac1446dc567aebb26851cd214de301466}{Landmark\+To\+Landmark\+Factor}} (const Eigen\+::\+Vector3d delta, const Eigen\+::\+Vector3d lmk0, const Eigen\+::\+Vector3d lmk1, const Eigen\+::\+Matrix3d sqrt\+\_\+inf)
+\item 
+\mbox{\hyperlink{classisae_1_1_landmark_to_landmark_factor_a53b19c75e24c64afa75f726b5ee30547}{Landmark\+To\+Landmark\+Factor}} ()
+\item 
+virtual bool \mbox{\hyperlink{classisae_1_1_landmark_to_landmark_factor_a8e6643be2153a87fa36f56945275a206}{Evaluate}} (double const $\ast$const $\ast$parameters, double $\ast$residuals, double $\ast$$\ast$jacobians) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Eigen\+::\+Vector3d \mbox{\hyperlink{classisae_1_1_landmark_to_landmark_factor_a022c05ba0ce4ea36ac77c2ac9aeac0a5}{\+\_\+delta}}
+\item 
+Eigen\+::\+Vector3d \mbox{\hyperlink{classisae_1_1_landmark_to_landmark_factor_a9e234a15f7c7393acf4973caf08ed664}{\+\_\+lmk0}}
+\item 
+Eigen\+::\+Vector3d \mbox{\hyperlink{classisae_1_1_landmark_to_landmark_factor_ab449054c7e8eb87079f70de476ff9264}{\+\_\+lmk1}}
+\item 
+Eigen\+::\+Matrix3d \mbox{\hyperlink{classisae_1_1_landmark_to_landmark_factor_ad117b3f12143be0ddf962d08a5389ac8}{\+\_\+sqrt\+\_\+inf}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classisae_1_1_landmark_to_landmark_factor_ac1446dc567aebb26851cd214de301466}\label{classisae_1_1_landmark_to_landmark_factor_ac1446dc567aebb26851cd214de301466}} 
+\index{isae::LandmarkToLandmarkFactor@{isae::LandmarkToLandmarkFactor}!LandmarkToLandmarkFactor@{LandmarkToLandmarkFactor}}
+\index{LandmarkToLandmarkFactor@{LandmarkToLandmarkFactor}!isae::LandmarkToLandmarkFactor@{isae::LandmarkToLandmarkFactor}}
+\doxysubsubsection{\texorpdfstring{LandmarkToLandmarkFactor()}{LandmarkToLandmarkFactor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily isae\+::\+Landmark\+To\+Landmark\+Factor\+::\+Landmark\+To\+Landmark\+Factor (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Vector3d}]{delta,  }\item[{const Eigen\+::\+Vector3d}]{lmk0,  }\item[{const Eigen\+::\+Vector3d}]{lmk1,  }\item[{const Eigen\+::\+Matrix3d}]{sqrt\+\_\+inf }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_landmark_to_landmark_factor_a53b19c75e24c64afa75f726b5ee30547}\label{classisae_1_1_landmark_to_landmark_factor_a53b19c75e24c64afa75f726b5ee30547}} 
+\index{isae::LandmarkToLandmarkFactor@{isae::LandmarkToLandmarkFactor}!LandmarkToLandmarkFactor@{LandmarkToLandmarkFactor}}
+\index{LandmarkToLandmarkFactor@{LandmarkToLandmarkFactor}!isae::LandmarkToLandmarkFactor@{isae::LandmarkToLandmarkFactor}}
+\doxysubsubsection{\texorpdfstring{LandmarkToLandmarkFactor()}{LandmarkToLandmarkFactor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily isae\+::\+Landmark\+To\+Landmark\+Factor\+::\+Landmark\+To\+Landmark\+Factor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classisae_1_1_landmark_to_landmark_factor_a8e6643be2153a87fa36f56945275a206}\label{classisae_1_1_landmark_to_landmark_factor_a8e6643be2153a87fa36f56945275a206}} 
+\index{isae::LandmarkToLandmarkFactor@{isae::LandmarkToLandmarkFactor}!Evaluate@{Evaluate}}
+\index{Evaluate@{Evaluate}!isae::LandmarkToLandmarkFactor@{isae::LandmarkToLandmarkFactor}}
+\doxysubsubsection{\texorpdfstring{Evaluate()}{Evaluate()}}
+{\footnotesize\ttfamily virtual bool isae\+::\+Landmark\+To\+Landmark\+Factor\+::\+Evaluate (\begin{DoxyParamCaption}\item[{double const $\ast$const $\ast$}]{parameters,  }\item[{double $\ast$}]{residuals,  }\item[{double $\ast$$\ast$}]{jacobians }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classisae_1_1_landmark_to_landmark_factor_a022c05ba0ce4ea36ac77c2ac9aeac0a5}\label{classisae_1_1_landmark_to_landmark_factor_a022c05ba0ce4ea36ac77c2ac9aeac0a5}} 
+\index{isae::LandmarkToLandmarkFactor@{isae::LandmarkToLandmarkFactor}!\_delta@{\_delta}}
+\index{\_delta@{\_delta}!isae::LandmarkToLandmarkFactor@{isae::LandmarkToLandmarkFactor}}
+\doxysubsubsection{\texorpdfstring{\_delta}{\_delta}}
+{\footnotesize\ttfamily Eigen\+::\+Vector3d isae\+::\+Landmark\+To\+Landmark\+Factor\+::\+\_\+delta}
+
+\mbox{\Hypertarget{classisae_1_1_landmark_to_landmark_factor_a9e234a15f7c7393acf4973caf08ed664}\label{classisae_1_1_landmark_to_landmark_factor_a9e234a15f7c7393acf4973caf08ed664}} 
+\index{isae::LandmarkToLandmarkFactor@{isae::LandmarkToLandmarkFactor}!\_lmk0@{\_lmk0}}
+\index{\_lmk0@{\_lmk0}!isae::LandmarkToLandmarkFactor@{isae::LandmarkToLandmarkFactor}}
+\doxysubsubsection{\texorpdfstring{\_lmk0}{\_lmk0}}
+{\footnotesize\ttfamily Eigen\+::\+Vector3d isae\+::\+Landmark\+To\+Landmark\+Factor\+::\+\_\+lmk0}
+
+\mbox{\Hypertarget{classisae_1_1_landmark_to_landmark_factor_ab449054c7e8eb87079f70de476ff9264}\label{classisae_1_1_landmark_to_landmark_factor_ab449054c7e8eb87079f70de476ff9264}} 
+\index{isae::LandmarkToLandmarkFactor@{isae::LandmarkToLandmarkFactor}!\_lmk1@{\_lmk1}}
+\index{\_lmk1@{\_lmk1}!isae::LandmarkToLandmarkFactor@{isae::LandmarkToLandmarkFactor}}
+\doxysubsubsection{\texorpdfstring{\_lmk1}{\_lmk1}}
+{\footnotesize\ttfamily Eigen\+::\+Vector3d isae\+::\+Landmark\+To\+Landmark\+Factor\+::\+\_\+lmk1}
+
+\mbox{\Hypertarget{classisae_1_1_landmark_to_landmark_factor_ad117b3f12143be0ddf962d08a5389ac8}\label{classisae_1_1_landmark_to_landmark_factor_ad117b3f12143be0ddf962d08a5389ac8}} 
+\index{isae::LandmarkToLandmarkFactor@{isae::LandmarkToLandmarkFactor}!\_sqrt\_inf@{\_sqrt\_inf}}
+\index{\_sqrt\_inf@{\_sqrt\_inf}!isae::LandmarkToLandmarkFactor@{isae::LandmarkToLandmarkFactor}}
+\doxysubsubsection{\texorpdfstring{\_sqrt\_inf}{\_sqrt\_inf}}
+{\footnotesize\ttfamily Eigen\+::\+Matrix3d isae\+::\+Landmark\+To\+Landmark\+Factor\+::\+\_\+sqrt\+\_\+inf}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/deos/ce.\+debeunne/colcon\+\_\+ws/src/\+Sa\+D\+V\+I\+O/cpp/include/isaeslam/optimizers/\mbox{\hyperlink{residuals_8hpp}{residuals.\+hpp}}\end{DoxyCompactItemize}

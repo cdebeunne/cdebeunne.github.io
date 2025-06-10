@@ -1,0 +1,79 @@
+To install Open\+CV ...
+
+ \hypertarget{md_thirdparty__e_l_s_e_d__r_e_a_d_m_e_autotoc_md0}{}\doxysection{E\+L\+S\+E\+D\+: Enhanced Line S\+Egment Drawing}\label{md_thirdparty__e_l_s_e_d__r_e_a_d_m_e_autotoc_md0}
+\href{https://colab.research.google.com/github/iago-suarez/ELSED/blob/main/Python_ELSED.ipynb}{\texttt{ }} \href{https://arxiv.org/abs/2108.03144}{\texttt{ }} \href{https://iago-suarez.com/ELSED}{\texttt{ }}
+
+This repository contains the source code of \href{https://doi.org/10.1016/j.patcog.2022.108619}{\texttt{ {\bfseries{E\+L\+S\+E\+D\+: Enhanced Line S\+Egment Drawing}}}} the fastest line segment detector in the literature. It is ideal for resource-\/limited devices like drones of smartphones. Visit the \href{https://iago-suarez.com/ELSED}{\texttt{ {\bfseries{Project Webpage}}}} to try it online!
+
+\hypertarget{md_thirdparty__e_l_s_e_d__r_e_a_d_m_e_autotoc_md1}{}\doxysubsection{Dependencies}\label{md_thirdparty__e_l_s_e_d__r_e_a_d_m_e_autotoc_md1}
+The code depends on Open\+CV (tested with version 4.\+1.\+1). $<$details$>$
+
+In Ubuntu 18.\+04 compile it from sources with the following instructions\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\# Install dependencies (Ubuntu 18.04)}
+\DoxyCodeLine{sudo apt-\/get install -\/y build-\/essential cmake git libgtk2.0-\/dev pkg-\/config libavcodec-\/dev libavformat-\/dev libswscale-\/dev}
+\DoxyCodeLine{\# Download source code}
+\DoxyCodeLine{git clone https://github.com/opencv/opencv.git -\/-\/branch 4.1.1 -\/-\/depth 1}
+\DoxyCodeLine{\# Create build directory}
+\DoxyCodeLine{cd opencv \&\& mkdir build \&\& cd build}
+\DoxyCodeLine{\# Generate makefiles, compile and install}
+\DoxyCodeLine{cmake -\/D CMAKE\_BUILD\_TYPE=RELEASE -\/D CMAKE\_INSTALL\_PREFIX=/usr/local ..}
+\DoxyCodeLine{make -\/j}
+\DoxyCodeLine{sudo make install}
+\end{DoxyCode}
+
+
+$<$/details$>$\hypertarget{md_thirdparty__e_l_s_e_d__r_e_a_d_m_e_autotoc_md2}{}\doxysubsubsection{Using E\+L\+S\+E\+D from python}\label{md_thirdparty__e_l_s_e_d__r_e_a_d_m_e_autotoc_md2}
+To install the python wrappers you just have to run\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{sudo apt-\/get install libopencv-\/dev}
+\DoxyCodeLine{pip install setuptools}
+\DoxyCodeLine{pip install git+https://github.com/iago-\/suarez/ELSED.git}
+\end{DoxyCode}
+
+
+And you can start playing with it\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{import pyelsed}
+\DoxyCodeLine{import cv2}
+\DoxyCodeLine{}
+\DoxyCodeLine{img = cv2.imread('my\_favourite\_img.jpg', cv2.IMREAD\_GRAYSCALE)}
+\DoxyCodeLine{segments, scores = pyelsed.detect(img)}
+\end{DoxyCode}
+\hypertarget{md_thirdparty__e_l_s_e_d__r_e_a_d_m_e_autotoc_md3}{}\doxysubsubsection{Using E\+L\+S\+E\+D from C++}\label{md_thirdparty__e_l_s_e_d__r_e_a_d_m_e_autotoc_md3}
+The code contains a demo detecting large and short line segments in one image. The code can be compiled with Cmake\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{mkdir build \&\& cd build}
+\DoxyCodeLine{cmake .. \&\& make}
+\DoxyCodeLine{./elsed\_main}
+\end{DoxyCode}
+
+
+The result for the provided image should be\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{******************************************************}
+\DoxyCodeLine{******************* ELSED main demo ******************}
+\DoxyCodeLine{******************************************************}
+\DoxyCodeLine{ELSED detected: 305 (large) segments}
+\DoxyCodeLine{ELSED detected: 391 (short) segments}
+\end{DoxyCode}
+\hypertarget{md_thirdparty__e_l_s_e_d__r_e_a_d_m_e_autotoc_md4}{}\doxysubsubsection{Cite}\label{md_thirdparty__e_l_s_e_d__r_e_a_d_m_e_autotoc_md4}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{@article\{suarez2022elsed,}
+\DoxyCodeLine{      title=\{ELSED: Enhanced Line SEgment Drawing\}, }
+\DoxyCodeLine{      author=\{Iago Suárez and José M. Buenaposada and Luis Baumela\},}
+\DoxyCodeLine{      journal = \{Pattern Recognition\},}
+\DoxyCodeLine{      volume = \{127\},}
+\DoxyCodeLine{      pages = \{108619\},}
+\DoxyCodeLine{      year = \{2022\},}
+\DoxyCodeLine{      issn = \{0031-\/3203\},}
+\DoxyCodeLine{      doi = \{https://doi.org/10.1016/j.patcog.2022.108619\},}
+\DoxyCodeLine{      url = \{https://www.sciencedirect.com/science/article/pii/S0031320322001005\}}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+ 

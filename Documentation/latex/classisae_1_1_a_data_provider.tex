@@ -1,0 +1,199 @@
+\hypertarget{classisae_1_1_a_data_provider}{}\doxysection{isae\+::A\+Data\+Provider Class Reference}
+\label{classisae_1_1_a_data_provider}\index{isae::ADataProvider@{isae::ADataProvider}}
+
+
+{\ttfamily \#include $<$adataprovider.\+h$>$}
+
+
+
+Collaboration diagram for isae\+::A\+Data\+Provider\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=205pt]{classisae_1_1_a_data_provider__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classisae_1_1_a_data_provider_ac711bc88d48f5cd36fdf6fa53bebdbc4}{A\+Data\+Provider}} (std\+::string path, \mbox{\hyperlink{structisae_1_1_config}{Config}} slam\+\_\+config)
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \mbox{\hyperlink{classisae_1_1_a_data_provider_a993cbdb17d53218a29810a2a4150b5d3}{next}} ()
+\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structisae_1_1cam__config}{cam\+\_\+config}} $>$ $>$ \mbox{\hyperlink{classisae_1_1_a_data_provider_a983b1d28a621d70255a26fcc7a636668}{get\+Cam\+Configs}} ()
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structisae_1_1imu__config}{imu\+\_\+config}} $>$ \mbox{\hyperlink{classisae_1_1_a_data_provider_ac7c22168e60e01f9b731ae48137ffee8}{get\+I\+M\+U\+Config}} ()
+\item 
+int \mbox{\hyperlink{classisae_1_1_a_data_provider_a7a1e7b2cf7f0572c61e64272148e6eb0}{get\+N\+Cam}} ()
+\item 
+int \mbox{\hyperlink{classisae_1_1_a_data_provider_a6fa4686f4ba2382c14c415c889ce30c8}{get\+Timing}} ()
+\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_image_sensor}{Image\+Sensor}} $>$ $>$ \mbox{\hyperlink{classisae_1_1_a_data_provider_a91156bf0e35cb4c264579ad0fd6b0e2b}{create\+Image\+Sensors}} (const std\+::vector$<$ cv\+::\+Mat $>$ \&imgs, const std\+::vector$<$ cv\+::\+Mat $>$ \&masks=\{\})
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_i_m_u}{I\+MU}} $>$ \mbox{\hyperlink{classisae_1_1_a_data_provider_abaa5b2916af0956dd29f15b829d8f8c7}{create\+Imu\+Sensor}} (const Eigen\+::\+Vector3d \&acc, const Eigen\+::\+Vector3d \&gyr)
+\item 
+void \mbox{\hyperlink{classisae_1_1_a_data_provider_ac05837789a891f3e72c5bed1db0335ae}{add\+Frame\+To\+The\+Queue}} (std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_sensor}{A\+Sensor}} $>$$>$ sensors, double time)
+\item 
+void \mbox{\hyperlink{classisae_1_1_a_data_provider_a563e851a5a0574491fbdc35fd2e4fc57}{add\+Frame\+To\+The\+Queue}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ frame)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classisae_1_1_a_data_provider_a4d6f2396ea229a52578d81c0d8d342bf}{load\+Sensors\+Configuration}} (const std\+::string \&path)
+\item 
+void \mbox{\hyperlink{classisae_1_1_a_data_provider_a75b283908e4c7e09245819bfd7b59dce}{load\+Cam\+Config}} (Y\+A\+M\+L\+::\+Node cam\+\_\+node)
+\item 
+void \mbox{\hyperlink{classisae_1_1_a_data_provider_a8724327081236326bda7d3c96199c245}{load\+I\+M\+U\+Config}} (Y\+A\+M\+L\+::\+Node imu\+\_\+node)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structisae_1_1imu__config}{imu\+\_\+config}} $>$ \mbox{\hyperlink{classisae_1_1_a_data_provider_a5308242300102a9c3065891b3df2550c}{\+\_\+imu\+\_\+config}}
+\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structisae_1_1cam__config}{cam\+\_\+config}} $>$ $>$ \mbox{\hyperlink{classisae_1_1_a_data_provider_a6a61549541316d87b018a903bf55b136}{\+\_\+cam\+\_\+configs}}
+\item 
+int \mbox{\hyperlink{classisae_1_1_a_data_provider_a2e868593602b03cb8bb4cde1c2eef3b9}{\+\_\+ncam}}
+\item 
+std\+::queue$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ $>$ \mbox{\hyperlink{classisae_1_1_a_data_provider_a02dd1cfaafea2c793933990acda6486d}{\+\_\+frame\+\_\+queue}}
+\item 
+\mbox{\hyperlink{structisae_1_1_config}{Config}} \mbox{\hyperlink{classisae_1_1_a_data_provider_af9f0cada9c02783e40496e9a88174fb1}{\+\_\+slam\+\_\+config}}
+\item 
+int \mbox{\hyperlink{classisae_1_1_a_data_provider_a0d3abaa728e7033b023c068a75416ea1}{\+\_\+nframes}}
+\item 
+double \mbox{\hyperlink{classisae_1_1_a_data_provider_a4ab85f09c14f2774d88945d69733401d}{\+\_\+img\+\_\+process\+\_\+dt}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classisae_1_1_a_data_provider_ac711bc88d48f5cd36fdf6fa53bebdbc4}\label{classisae_1_1_a_data_provider_ac711bc88d48f5cd36fdf6fa53bebdbc4}} 
+\index{isae::ADataProvider@{isae::ADataProvider}!ADataProvider@{ADataProvider}}
+\index{ADataProvider@{ADataProvider}!isae::ADataProvider@{isae::ADataProvider}}
+\doxysubsubsection{\texorpdfstring{ADataProvider()}{ADataProvider()}}
+{\footnotesize\ttfamily isae\+::\+A\+Data\+Provider\+::\+A\+Data\+Provider (\begin{DoxyParamCaption}\item[{std\+::string}]{path,  }\item[{\mbox{\hyperlink{structisae_1_1_config}{Config}}}]{slam\+\_\+config }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classisae_1_1_a_data_provider_a563e851a5a0574491fbdc35fd2e4fc57}\label{classisae_1_1_a_data_provider_a563e851a5a0574491fbdc35fd2e4fc57}} 
+\index{isae::ADataProvider@{isae::ADataProvider}!addFrameToTheQueue@{addFrameToTheQueue}}
+\index{addFrameToTheQueue@{addFrameToTheQueue}!isae::ADataProvider@{isae::ADataProvider}}
+\doxysubsubsection{\texorpdfstring{addFrameToTheQueue()}{addFrameToTheQueue()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void isae\+::\+A\+Data\+Provider\+::add\+Frame\+To\+The\+Queue (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$}]{frame }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classisae_1_1_a_data_provider_ac05837789a891f3e72c5bed1db0335ae}\label{classisae_1_1_a_data_provider_ac05837789a891f3e72c5bed1db0335ae}} 
+\index{isae::ADataProvider@{isae::ADataProvider}!addFrameToTheQueue@{addFrameToTheQueue}}
+\index{addFrameToTheQueue@{addFrameToTheQueue}!isae::ADataProvider@{isae::ADataProvider}}
+\doxysubsubsection{\texorpdfstring{addFrameToTheQueue()}{addFrameToTheQueue()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void isae\+::\+A\+Data\+Provider\+::add\+Frame\+To\+The\+Queue (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_sensor}{A\+Sensor}} $>$$>$}]{sensors,  }\item[{double}]{time }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classisae_1_1_a_data_provider_a91156bf0e35cb4c264579ad0fd6b0e2b}\label{classisae_1_1_a_data_provider_a91156bf0e35cb4c264579ad0fd6b0e2b}} 
+\index{isae::ADataProvider@{isae::ADataProvider}!createImageSensors@{createImageSensors}}
+\index{createImageSensors@{createImageSensors}!isae::ADataProvider@{isae::ADataProvider}}
+\doxysubsubsection{\texorpdfstring{createImageSensors()}{createImageSensors()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_image_sensor}{Image\+Sensor}} $>$ $>$ isae\+::\+A\+Data\+Provider\+::create\+Image\+Sensors (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ cv\+::\+Mat $>$ \&}]{imgs,  }\item[{const std\+::vector$<$ cv\+::\+Mat $>$ \&}]{masks = {\ttfamily \{\}} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classisae_1_1_a_data_provider_abaa5b2916af0956dd29f15b829d8f8c7}\label{classisae_1_1_a_data_provider_abaa5b2916af0956dd29f15b829d8f8c7}} 
+\index{isae::ADataProvider@{isae::ADataProvider}!createImuSensor@{createImuSensor}}
+\index{createImuSensor@{createImuSensor}!isae::ADataProvider@{isae::ADataProvider}}
+\doxysubsubsection{\texorpdfstring{createImuSensor()}{createImuSensor()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_i_m_u}{I\+MU}} $>$ isae\+::\+A\+Data\+Provider\+::create\+Imu\+Sensor (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Vector3d \&}]{acc,  }\item[{const Eigen\+::\+Vector3d \&}]{gyr }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classisae_1_1_a_data_provider_a983b1d28a621d70255a26fcc7a636668}\label{classisae_1_1_a_data_provider_a983b1d28a621d70255a26fcc7a636668}} 
+\index{isae::ADataProvider@{isae::ADataProvider}!getCamConfigs@{getCamConfigs}}
+\index{getCamConfigs@{getCamConfigs}!isae::ADataProvider@{isae::ADataProvider}}
+\doxysubsubsection{\texorpdfstring{getCamConfigs()}{getCamConfigs()}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structisae_1_1cam__config}{cam\+\_\+config}}$>$ $>$ isae\+::\+A\+Data\+Provider\+::get\+Cam\+Configs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_a_data_provider_ac7c22168e60e01f9b731ae48137ffee8}\label{classisae_1_1_a_data_provider_ac7c22168e60e01f9b731ae48137ffee8}} 
+\index{isae::ADataProvider@{isae::ADataProvider}!getIMUConfig@{getIMUConfig}}
+\index{getIMUConfig@{getIMUConfig}!isae::ADataProvider@{isae::ADataProvider}}
+\doxysubsubsection{\texorpdfstring{getIMUConfig()}{getIMUConfig()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structisae_1_1imu__config}{imu\+\_\+config}}$>$ isae\+::\+A\+Data\+Provider\+::get\+I\+M\+U\+Config (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_a_data_provider_a7a1e7b2cf7f0572c61e64272148e6eb0}\label{classisae_1_1_a_data_provider_a7a1e7b2cf7f0572c61e64272148e6eb0}} 
+\index{isae::ADataProvider@{isae::ADataProvider}!getNCam@{getNCam}}
+\index{getNCam@{getNCam}!isae::ADataProvider@{isae::ADataProvider}}
+\doxysubsubsection{\texorpdfstring{getNCam()}{getNCam()}}
+{\footnotesize\ttfamily int isae\+::\+A\+Data\+Provider\+::get\+N\+Cam (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_a_data_provider_a6fa4686f4ba2382c14c415c889ce30c8}\label{classisae_1_1_a_data_provider_a6fa4686f4ba2382c14c415c889ce30c8}} 
+\index{isae::ADataProvider@{isae::ADataProvider}!getTiming@{getTiming}}
+\index{getTiming@{getTiming}!isae::ADataProvider@{isae::ADataProvider}}
+\doxysubsubsection{\texorpdfstring{getTiming()}{getTiming()}}
+{\footnotesize\ttfamily int isae\+::\+A\+Data\+Provider\+::get\+Timing (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_a_data_provider_a75b283908e4c7e09245819bfd7b59dce}\label{classisae_1_1_a_data_provider_a75b283908e4c7e09245819bfd7b59dce}} 
+\index{isae::ADataProvider@{isae::ADataProvider}!loadCamConfig@{loadCamConfig}}
+\index{loadCamConfig@{loadCamConfig}!isae::ADataProvider@{isae::ADataProvider}}
+\doxysubsubsection{\texorpdfstring{loadCamConfig()}{loadCamConfig()}}
+{\footnotesize\ttfamily void isae\+::\+A\+Data\+Provider\+::load\+Cam\+Config (\begin{DoxyParamCaption}\item[{Y\+A\+M\+L\+::\+Node}]{cam\+\_\+node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classisae_1_1_a_data_provider_a8724327081236326bda7d3c96199c245}\label{classisae_1_1_a_data_provider_a8724327081236326bda7d3c96199c245}} 
+\index{isae::ADataProvider@{isae::ADataProvider}!loadIMUConfig@{loadIMUConfig}}
+\index{loadIMUConfig@{loadIMUConfig}!isae::ADataProvider@{isae::ADataProvider}}
+\doxysubsubsection{\texorpdfstring{loadIMUConfig()}{loadIMUConfig()}}
+{\footnotesize\ttfamily void isae\+::\+A\+Data\+Provider\+::load\+I\+M\+U\+Config (\begin{DoxyParamCaption}\item[{Y\+A\+M\+L\+::\+Node}]{imu\+\_\+node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classisae_1_1_a_data_provider_a4d6f2396ea229a52578d81c0d8d342bf}\label{classisae_1_1_a_data_provider_a4d6f2396ea229a52578d81c0d8d342bf}} 
+\index{isae::ADataProvider@{isae::ADataProvider}!loadSensorsConfiguration@{loadSensorsConfiguration}}
+\index{loadSensorsConfiguration@{loadSensorsConfiguration}!isae::ADataProvider@{isae::ADataProvider}}
+\doxysubsubsection{\texorpdfstring{loadSensorsConfiguration()}{loadSensorsConfiguration()}}
+{\footnotesize\ttfamily void isae\+::\+A\+Data\+Provider\+::load\+Sensors\+Configuration (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classisae_1_1_a_data_provider_a993cbdb17d53218a29810a2a4150b5d3}\label{classisae_1_1_a_data_provider_a993cbdb17d53218a29810a2a4150b5d3}} 
+\index{isae::ADataProvider@{isae::ADataProvider}!next@{next}}
+\index{next@{next}!isae::ADataProvider@{isae::ADataProvider}}
+\doxysubsubsection{\texorpdfstring{next()}{next()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ isae\+::\+A\+Data\+Provider\+::next (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classisae_1_1_a_data_provider_a6a61549541316d87b018a903bf55b136}\label{classisae_1_1_a_data_provider_a6a61549541316d87b018a903bf55b136}} 
+\index{isae::ADataProvider@{isae::ADataProvider}!\_cam\_configs@{\_cam\_configs}}
+\index{\_cam\_configs@{\_cam\_configs}!isae::ADataProvider@{isae::ADataProvider}}
+\doxysubsubsection{\texorpdfstring{\_cam\_configs}{\_cam\_configs}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structisae_1_1cam__config}{cam\+\_\+config}}$>$ $>$ isae\+::\+A\+Data\+Provider\+::\+\_\+cam\+\_\+configs\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classisae_1_1_a_data_provider_a02dd1cfaafea2c793933990acda6486d}\label{classisae_1_1_a_data_provider_a02dd1cfaafea2c793933990acda6486d}} 
+\index{isae::ADataProvider@{isae::ADataProvider}!\_frame\_queue@{\_frame\_queue}}
+\index{\_frame\_queue@{\_frame\_queue}!isae::ADataProvider@{isae::ADataProvider}}
+\doxysubsubsection{\texorpdfstring{\_frame\_queue}{\_frame\_queue}}
+{\footnotesize\ttfamily std\+::queue$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classisae_1_1_frame}{Frame}}$>$ $>$ isae\+::\+A\+Data\+Provider\+::\+\_\+frame\+\_\+queue\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classisae_1_1_a_data_provider_a4ab85f09c14f2774d88945d69733401d}\label{classisae_1_1_a_data_provider_a4ab85f09c14f2774d88945d69733401d}} 
+\index{isae::ADataProvider@{isae::ADataProvider}!\_img\_process\_dt@{\_img\_process\_dt}}
+\index{\_img\_process\_dt@{\_img\_process\_dt}!isae::ADataProvider@{isae::ADataProvider}}
+\doxysubsubsection{\texorpdfstring{\_img\_process\_dt}{\_img\_process\_dt}}
+{\footnotesize\ttfamily double isae\+::\+A\+Data\+Provider\+::\+\_\+img\+\_\+process\+\_\+dt\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classisae_1_1_a_data_provider_a5308242300102a9c3065891b3df2550c}\label{classisae_1_1_a_data_provider_a5308242300102a9c3065891b3df2550c}} 
+\index{isae::ADataProvider@{isae::ADataProvider}!\_imu\_config@{\_imu\_config}}
+\index{\_imu\_config@{\_imu\_config}!isae::ADataProvider@{isae::ADataProvider}}
+\doxysubsubsection{\texorpdfstring{\_imu\_config}{\_imu\_config}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structisae_1_1imu__config}{imu\+\_\+config}}$>$ isae\+::\+A\+Data\+Provider\+::\+\_\+imu\+\_\+config\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classisae_1_1_a_data_provider_a2e868593602b03cb8bb4cde1c2eef3b9}\label{classisae_1_1_a_data_provider_a2e868593602b03cb8bb4cde1c2eef3b9}} 
+\index{isae::ADataProvider@{isae::ADataProvider}!\_ncam@{\_ncam}}
+\index{\_ncam@{\_ncam}!isae::ADataProvider@{isae::ADataProvider}}
+\doxysubsubsection{\texorpdfstring{\_ncam}{\_ncam}}
+{\footnotesize\ttfamily int isae\+::\+A\+Data\+Provider\+::\+\_\+ncam\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classisae_1_1_a_data_provider_a0d3abaa728e7033b023c068a75416ea1}\label{classisae_1_1_a_data_provider_a0d3abaa728e7033b023c068a75416ea1}} 
+\index{isae::ADataProvider@{isae::ADataProvider}!\_nframes@{\_nframes}}
+\index{\_nframes@{\_nframes}!isae::ADataProvider@{isae::ADataProvider}}
+\doxysubsubsection{\texorpdfstring{\_nframes}{\_nframes}}
+{\footnotesize\ttfamily int isae\+::\+A\+Data\+Provider\+::\+\_\+nframes\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classisae_1_1_a_data_provider_af9f0cada9c02783e40496e9a88174fb1}\label{classisae_1_1_a_data_provider_af9f0cada9c02783e40496e9a88174fb1}} 
+\index{isae::ADataProvider@{isae::ADataProvider}!\_slam\_config@{\_slam\_config}}
+\index{\_slam\_config@{\_slam\_config}!isae::ADataProvider@{isae::ADataProvider}}
+\doxysubsubsection{\texorpdfstring{\_slam\_config}{\_slam\_config}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structisae_1_1_config}{Config}} isae\+::\+A\+Data\+Provider\+::\+\_\+slam\+\_\+config\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/deos/ce.\+debeunne/colcon\+\_\+ws/src/\+Sa\+D\+V\+I\+O/cpp/include/isaeslam/dataproviders/\mbox{\hyperlink{adataprovider_8h}{adataprovider.\+h}}\item 
+/home/deos/ce.\+debeunne/colcon\+\_\+ws/src/\+Sa\+D\+V\+I\+O/cpp/src/dataproviders/\mbox{\hyperlink{adataprovider_8cpp}{adataprovider.\+cpp}}\end{DoxyCompactItemize}

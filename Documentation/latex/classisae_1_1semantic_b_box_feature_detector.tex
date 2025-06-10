@@ -1,0 +1,96 @@
+\hypertarget{classisae_1_1semantic_b_box_feature_detector}{}\doxysection{isae\+::semantic\+B\+Box\+Feature\+Detector Class Reference}
+\label{classisae_1_1semantic_b_box_feature_detector}\index{isae::semanticBBoxFeatureDetector@{isae::semanticBBoxFeatureDetector}}
+
+
+{\ttfamily \#include $<$semantic\+B\+Box\+Feature\+Detector.\+h$>$}
+
+
+
+Inheritance diagram for isae\+::semantic\+B\+Box\+Feature\+Detector\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{classisae_1_1semantic_b_box_feature_detector__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for isae\+::semantic\+B\+Box\+Feature\+Detector\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{classisae_1_1semantic_b_box_feature_detector__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classisae_1_1semantic_b_box_feature_detector_ad7e7830fdba232c7c97f16c0f0cba0ea}{semantic\+B\+Box\+Feature\+Detector}} (int n, int n\+\_\+per\+\_\+cell)
+\item 
+void \mbox{\hyperlink{classisae_1_1semantic_b_box_feature_detector_a3fce234bffedccd6ec5a1a3d94519393}{custom\+Detect\+And\+Compute}} (const cv\+::\+Mat \&img, const cv\+::\+Mat \&mask, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$ \&features) override
+\item 
+void \mbox{\hyperlink{classisae_1_1semantic_b_box_feature_detector_a89bf9b03b4bf6b09296da6e26f1d793d}{compute\+Descriptor}} (const cv\+::\+Mat \&img, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$ \&features) override
+\item 
+void \mbox{\hyperlink{classisae_1_1semantic_b_box_feature_detector_ae0ee643ed6344dbe25c12dc67b162658}{init}} () override
+\item 
+double \mbox{\hyperlink{classisae_1_1semantic_b_box_feature_detector_a4cfe897645e13b8472d34fb1bc28ac4d}{get\+Dist}} (const cv\+::\+Mat \&desc1, const cv\+::\+Mat \&desc2) const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classisae_1_1semantic_b_box_feature_detector_ad7e7830fdba232c7c97f16c0f0cba0ea}\label{classisae_1_1semantic_b_box_feature_detector_ad7e7830fdba232c7c97f16c0f0cba0ea}} 
+\index{isae::semanticBBoxFeatureDetector@{isae::semanticBBoxFeatureDetector}!semanticBBoxFeatureDetector@{semanticBBoxFeatureDetector}}
+\index{semanticBBoxFeatureDetector@{semanticBBoxFeatureDetector}!isae::semanticBBoxFeatureDetector@{isae::semanticBBoxFeatureDetector}}
+\doxysubsubsection{\texorpdfstring{semanticBBoxFeatureDetector()}{semanticBBoxFeatureDetector()}}
+{\footnotesize\ttfamily isae\+::semantic\+B\+Box\+Feature\+Detector\+::semantic\+B\+Box\+Feature\+Detector (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{int}]{n\+\_\+per\+\_\+cell }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classisae_1_1semantic_b_box_feature_detector_a89bf9b03b4bf6b09296da6e26f1d793d}\label{classisae_1_1semantic_b_box_feature_detector_a89bf9b03b4bf6b09296da6e26f1d793d}} 
+\index{isae::semanticBBoxFeatureDetector@{isae::semanticBBoxFeatureDetector}!computeDescriptor@{computeDescriptor}}
+\index{computeDescriptor@{computeDescriptor}!isae::semanticBBoxFeatureDetector@{isae::semanticBBoxFeatureDetector}}
+\doxysubsubsection{\texorpdfstring{computeDescriptor()}{computeDescriptor()}}
+{\footnotesize\ttfamily void isae\+::semantic\+B\+Box\+Feature\+Detector\+::compute\+Descriptor (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{img,  }\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$ \&}]{features }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classisae_1_1_a_custom_feature_detector_a3c37409af9d97037dbbc4677127879e2}{isae\+::\+A\+Custom\+Feature\+Detector}}.
+
+\mbox{\Hypertarget{classisae_1_1semantic_b_box_feature_detector_a3fce234bffedccd6ec5a1a3d94519393}\label{classisae_1_1semantic_b_box_feature_detector_a3fce234bffedccd6ec5a1a3d94519393}} 
+\index{isae::semanticBBoxFeatureDetector@{isae::semanticBBoxFeatureDetector}!customDetectAndCompute@{customDetectAndCompute}}
+\index{customDetectAndCompute@{customDetectAndCompute}!isae::semanticBBoxFeatureDetector@{isae::semanticBBoxFeatureDetector}}
+\doxysubsubsection{\texorpdfstring{customDetectAndCompute()}{customDetectAndCompute()}}
+{\footnotesize\ttfamily void isae\+::semantic\+B\+Box\+Feature\+Detector\+::custom\+Detect\+And\+Compute (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{img,  }\item[{const cv\+::\+Mat \&}]{mask,  }\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$ \&}]{features }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classisae_1_1_a_custom_feature_detector_a53cf8fa55bfed8a81e4c1b72c4d16518}{isae\+::\+A\+Custom\+Feature\+Detector}}.
+
+\mbox{\Hypertarget{classisae_1_1semantic_b_box_feature_detector_a4cfe897645e13b8472d34fb1bc28ac4d}\label{classisae_1_1semantic_b_box_feature_detector_a4cfe897645e13b8472d34fb1bc28ac4d}} 
+\index{isae::semanticBBoxFeatureDetector@{isae::semanticBBoxFeatureDetector}!getDist@{getDist}}
+\index{getDist@{getDist}!isae::semanticBBoxFeatureDetector@{isae::semanticBBoxFeatureDetector}}
+\doxysubsubsection{\texorpdfstring{getDist()}{getDist()}}
+{\footnotesize\ttfamily double isae\+::semantic\+B\+Box\+Feature\+Detector\+::get\+Dist (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{desc1,  }\item[{const cv\+::\+Mat \&}]{desc2 }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classisae_1_1_a_feature_detector_ad59496a4d75c886d38c61ef258958cd9}{isae\+::\+A\+Feature\+Detector}}.
+
+\mbox{\Hypertarget{classisae_1_1semantic_b_box_feature_detector_ae0ee643ed6344dbe25c12dc67b162658}\label{classisae_1_1semantic_b_box_feature_detector_ae0ee643ed6344dbe25c12dc67b162658}} 
+\index{isae::semanticBBoxFeatureDetector@{isae::semanticBBoxFeatureDetector}!init@{init}}
+\index{init@{init}!isae::semanticBBoxFeatureDetector@{isae::semanticBBoxFeatureDetector}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void isae\+::semantic\+B\+Box\+Feature\+Detector\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classisae_1_1_a_feature_detector_a3c92c62951b8003db8428af449830850}{isae\+::\+A\+Feature\+Detector}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/deos/ce.\+debeunne/colcon\+\_\+ws/src/\+Sa\+D\+V\+I\+O/cpp/include/isaeslam/featuredetectors/custom\+\_\+detectors/\mbox{\hyperlink{semantic_b_box_feature_detector_8h}{semantic\+B\+Box\+Feature\+Detector.\+h}}\item 
+/home/deos/ce.\+debeunne/colcon\+\_\+ws/src/\+Sa\+D\+V\+I\+O/cpp/src/featuredetectors/custom\+\_\+detectors/\mbox{\hyperlink{semantic_b_box_feature_detector_8cpp}{semantic\+B\+Box\+Feature\+Detector.\+cpp}}\end{DoxyCompactItemize}

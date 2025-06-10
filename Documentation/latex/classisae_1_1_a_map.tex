@@ -1,0 +1,149 @@
+\hypertarget{classisae_1_1_a_map}{}\doxysection{isae\+::A\+Map Class Reference}
+\label{classisae_1_1_a_map}\index{isae::AMap@{isae::AMap}}
+
+
+Abstract class for a Map.  
+
+
+
+
+{\ttfamily \#include $<$amap.\+h$>$}
+
+
+
+Inheritance diagram for isae\+::A\+Map\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=282pt]{classisae_1_1_a_map__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classisae_1_1_a_map_a5e83b3759327a680c0f1259596e1b0d0}{A\+Map}} ()=default
+\item 
+virtual void \mbox{\hyperlink{classisae_1_1_a_map_a345fe9ece9c91f36b66eb2ed486c44f5}{add\+Frame}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{isae\+::\+Frame}} $>$ \&frame)=0
+\begin{DoxyCompactList}\small\item\em Add a frame to the map. \end{DoxyCompactList}\item 
+std\+::deque$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ $>$ \& \mbox{\hyperlink{classisae_1_1_a_map_a012ac99839d6534f53d6cc4f0c353188}{get\+Frames}} ()
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{isae\+::\+Frame}} $>$ \mbox{\hyperlink{classisae_1_1_a_map_a0818e24492b23519815f6898c4de3a03}{get\+Last\+Frame}} ()
+\begin{DoxyCompactList}\small\item\em Get the last frame added to the map. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classisae_1_1_a_map_a2ac12a0502edc099ca449fb83cbc73ea}{get\+Last\+N\+Frames\+In}} (size\+\_\+t N, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{isae\+::\+Frame}} $>$$>$ \&dest)
+\begin{DoxyCompactList}\small\item\em Provides the last N frames added to the map. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceisae_a4b744e0e080a733838eb133deda894aa}{typed\+\_\+vec\+\_\+landmarks}} \& \mbox{\hyperlink{classisae_1_1_a_map_a6b84117bad25a8093d32e9b28f0ec279}{get\+Landmarks}} ()
+\item 
+size\+\_\+t \mbox{\hyperlink{classisae_1_1_a_map_ae4dce54013cffdc14e6f77bb602d08dc}{get\+Map\+Size}} ()
+\item 
+void \mbox{\hyperlink{classisae_1_1_a_map_a4aae3fe502a24a6c1da4bc4d1606f190}{push\+Landmarks}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{isae\+::\+Frame}} $>$ \&frame)
+\begin{DoxyCompactList}\small\item\em Add all the landmarks of a frame to the map. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::deque$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ $>$ \mbox{\hyperlink{classisae_1_1_a_map_a33243e7d984a5f0da8de5e4a62d14f35}{\+\_\+frames}}
+\begin{DoxyCompactList}\small\item\em A deque of frames in the map, ordered by time. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceisae_a4b744e0e080a733838eb133deda894aa}{typed\+\_\+vec\+\_\+landmarks}} \mbox{\hyperlink{classisae_1_1_a_map_a35e501ff24c67de8f5bc2709800b401c}{\+\_\+landmarks}}
+\begin{DoxyCompactList}\small\item\em All types of landmark in the map stored as std vectors. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract class for a Map. 
+
+It contains a set of frame and landmarks. That can be accessed and modified by the S\+L\+AM system. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classisae_1_1_a_map_a5e83b3759327a680c0f1259596e1b0d0}\label{classisae_1_1_a_map_a5e83b3759327a680c0f1259596e1b0d0}} 
+\index{isae::AMap@{isae::AMap}!AMap@{AMap}}
+\index{AMap@{AMap}!isae::AMap@{isae::AMap}}
+\doxysubsubsection{\texorpdfstring{AMap()}{AMap()}}
+{\footnotesize\ttfamily isae\+::\+A\+Map\+::\+A\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classisae_1_1_a_map_a345fe9ece9c91f36b66eb2ed486c44f5}\label{classisae_1_1_a_map_a345fe9ece9c91f36b66eb2ed486c44f5}} 
+\index{isae::AMap@{isae::AMap}!addFrame@{addFrame}}
+\index{addFrame@{addFrame}!isae::AMap@{isae::AMap}}
+\doxysubsubsection{\texorpdfstring{addFrame()}{addFrame()}}
+{\footnotesize\ttfamily virtual void isae\+::\+A\+Map\+::add\+Frame (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{isae\+::\+Frame}} $>$ \&}]{frame }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Add a frame to the map. 
+
+This method is pure virtual and must be implemented by derived classes. Indeed addition of a new frame may require other operations e.\+g. for a sliding window approach \mbox{\Hypertarget{classisae_1_1_a_map_a012ac99839d6534f53d6cc4f0c353188}\label{classisae_1_1_a_map_a012ac99839d6534f53d6cc4f0c353188}} 
+\index{isae::AMap@{isae::AMap}!getFrames@{getFrames}}
+\index{getFrames@{getFrames}!isae::AMap@{isae::AMap}}
+\doxysubsubsection{\texorpdfstring{getFrames()}{getFrames()}}
+{\footnotesize\ttfamily std\+::deque$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classisae_1_1_frame}{Frame}}$>$ $>$\& isae\+::\+A\+Map\+::get\+Frames (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_a_map_a6b84117bad25a8093d32e9b28f0ec279}\label{classisae_1_1_a_map_a6b84117bad25a8093d32e9b28f0ec279}} 
+\index{isae::AMap@{isae::AMap}!getLandmarks@{getLandmarks}}
+\index{getLandmarks@{getLandmarks}!isae::AMap@{isae::AMap}}
+\doxysubsubsection{\texorpdfstring{getLandmarks()}{getLandmarks()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceisae_a4b744e0e080a733838eb133deda894aa}{typed\+\_\+vec\+\_\+landmarks}}\& isae\+::\+A\+Map\+::get\+Landmarks (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_a_map_a0818e24492b23519815f6898c4de3a03}\label{classisae_1_1_a_map_a0818e24492b23519815f6898c4de3a03}} 
+\index{isae::AMap@{isae::AMap}!getLastFrame@{getLastFrame}}
+\index{getLastFrame@{getLastFrame}!isae::AMap@{isae::AMap}}
+\doxysubsubsection{\texorpdfstring{getLastFrame()}{getLastFrame()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classisae_1_1_frame}{isae\+::\+Frame}}$>$ isae\+::\+A\+Map\+::get\+Last\+Frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the last frame added to the map. 
+
+\mbox{\Hypertarget{classisae_1_1_a_map_a2ac12a0502edc099ca449fb83cbc73ea}\label{classisae_1_1_a_map_a2ac12a0502edc099ca449fb83cbc73ea}} 
+\index{isae::AMap@{isae::AMap}!getLastNFramesIn@{getLastNFramesIn}}
+\index{getLastNFramesIn@{getLastNFramesIn}!isae::AMap@{isae::AMap}}
+\doxysubsubsection{\texorpdfstring{getLastNFramesIn()}{getLastNFramesIn()}}
+{\footnotesize\ttfamily void isae\+::\+A\+Map\+::get\+Last\+N\+Frames\+In (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{N,  }\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{isae\+::\+Frame}} $>$$>$ \&}]{dest }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Provides the last N frames added to the map. 
+
+\mbox{\Hypertarget{classisae_1_1_a_map_ae4dce54013cffdc14e6f77bb602d08dc}\label{classisae_1_1_a_map_ae4dce54013cffdc14e6f77bb602d08dc}} 
+\index{isae::AMap@{isae::AMap}!getMapSize@{getMapSize}}
+\index{getMapSize@{getMapSize}!isae::AMap@{isae::AMap}}
+\doxysubsubsection{\texorpdfstring{getMapSize()}{getMapSize()}}
+{\footnotesize\ttfamily size\+\_\+t isae\+::\+A\+Map\+::get\+Map\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_a_map_a4aae3fe502a24a6c1da4bc4d1606f190}\label{classisae_1_1_a_map_a4aae3fe502a24a6c1da4bc4d1606f190}} 
+\index{isae::AMap@{isae::AMap}!pushLandmarks@{pushLandmarks}}
+\index{pushLandmarks@{pushLandmarks}!isae::AMap@{isae::AMap}}
+\doxysubsubsection{\texorpdfstring{pushLandmarks()}{pushLandmarks()}}
+{\footnotesize\ttfamily void isae\+::\+A\+Map\+::push\+Landmarks (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{isae\+::\+Frame}} $>$ \&}]{frame }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Add all the landmarks of a frame to the map. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classisae_1_1_a_map_a33243e7d984a5f0da8de5e4a62d14f35}\label{classisae_1_1_a_map_a33243e7d984a5f0da8de5e4a62d14f35}} 
+\index{isae::AMap@{isae::AMap}!\_frames@{\_frames}}
+\index{\_frames@{\_frames}!isae::AMap@{isae::AMap}}
+\doxysubsubsection{\texorpdfstring{\_frames}{\_frames}}
+{\footnotesize\ttfamily std\+::deque$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classisae_1_1_frame}{Frame}}$>$ $>$ isae\+::\+A\+Map\+::\+\_\+frames\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+A deque of frames in the map, ordered by time. 
+
+\mbox{\Hypertarget{classisae_1_1_a_map_a35e501ff24c67de8f5bc2709800b401c}\label{classisae_1_1_a_map_a35e501ff24c67de8f5bc2709800b401c}} 
+\index{isae::AMap@{isae::AMap}!\_landmarks@{\_landmarks}}
+\index{\_landmarks@{\_landmarks}!isae::AMap@{isae::AMap}}
+\doxysubsubsection{\texorpdfstring{\_landmarks}{\_landmarks}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceisae_a4b744e0e080a733838eb133deda894aa}{typed\+\_\+vec\+\_\+landmarks}} isae\+::\+A\+Map\+::\+\_\+landmarks\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+All types of landmark in the map stored as std vectors. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/deos/ce.\+debeunne/colcon\+\_\+ws/src/\+Sa\+D\+V\+I\+O/cpp/include/isaeslam/data/maps/\mbox{\hyperlink{amap_8h}{amap.\+h}}\end{DoxyCompactItemize}

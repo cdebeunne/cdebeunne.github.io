@@ -1,0 +1,95 @@
+\hypertarget{geometry_8h}{}\doxysection{/home/deos/ce.debeunne/colcon\+\_\+ws/src/\+Sa\+D\+V\+I\+O/cpp/include/utilities/geometry.h File Reference}
+\label{geometry_8h}\index{/home/deos/ce.debeunne/colcon\_ws/src/SaDVIO/cpp/include/utilities/geometry.h@{/home/deos/ce.debeunne/colcon\_ws/src/SaDVIO/cpp/include/utilities/geometry.h}}
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$limits$>$}\newline
+{\ttfamily \#include $<$Eigen/\+Eigenvalues$>$}\newline
+{\ttfamily \#include $<$opencv2/core.\+hpp$>$}\newline
+{\ttfamily \#include \char`\"{}isaeslam/typedefs.\+h\char`\"{}}\newline
+Include dependency graph for geometry.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{geometry_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{geometry_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceisae}{isae}}
+\item 
+ \mbox{\hyperlink{namespaceisae_1_1geometry}{isae\+::geometry}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Derived $>$ }\\Eigen\+::\+Matrix3d \mbox{\hyperlink{namespaceisae_1_1geometry_a14262cb5972fda2f4c259111b90e142a}{isae\+::geometry\+::skew\+Matrix}} (const Eigen\+::\+Matrix\+Base$<$ Derived $>$ \&w)
+\item 
+Eigen\+::\+Vector3d \mbox{\hyperlink{namespaceisae_1_1geometry_a511e4862e1a21caaec93e9d521461193}{isae\+::geometry\+::\+Fromskew\+Matrix}} (const Eigen\+::\+Matrix3d \&skew)
+\item 
+Eigen\+::\+Matrix3d \mbox{\hyperlink{namespaceisae_1_1geometry_a594f3f6deb9485b18e1492f8f6956a82}{isae\+::geometry\+::so3\+\_\+right\+Jacobian}} (const Eigen\+::\+Vector3d \&w)
+\item 
+Eigen\+::\+Matrix3d \mbox{\hyperlink{namespaceisae_1_1geometry_afeaa6dde1cc4defc572e8fda4717b0e2}{isae\+::geometry\+::so3\+\_\+left\+Jacobian}} (const Eigen\+::\+Vector3d \&w)
+\item 
+Eigen\+::\+Vector3d \mbox{\hyperlink{namespaceisae_1_1geometry_a0d05b398f5f8372e31a65de2c9794e8a}{isae\+::geometry\+::rotation\+Matrix\+To\+Euler\+Angles\+Eigen}} (Eigen\+::\+Matrix3d R)
+\item 
+Eigen\+::\+Matrix3d \mbox{\hyperlink{namespaceisae_1_1geometry_a5054e0fe8b2e45a0274bcbbf2920d9f1}{isae\+::geometry\+::x\+Front2z\+Front}} ()
+\item 
+Eigen\+::\+Matrix3d \mbox{\hyperlink{namespaceisae_1_1geometry_ac9ff4656e237dd423c72a5c8c1daca1b}{isae\+::geometry\+::z\+Front2x\+Front}} ()
+\item 
+Eigen\+::\+Matrix3d \mbox{\hyperlink{namespaceisae_1_1geometry_a4251b2b72178cb9a01b44d89d6e52e92}{isae\+::geometry\+::x\+Right2x\+Front}} ()
+\item 
+double \mbox{\hyperlink{namespaceisae_1_1geometry_addca26f56143edab70d0a692a4aa0b83}{isae\+::geometry\+::dist2\+Epipolar\+Line}} (const Eigen\+::\+Vector3d \&epipolarline, const Eigen\+::\+Vector2d \&pt\+\_\+to\+\_\+test)
+\item 
+double \mbox{\hyperlink{namespaceisae_1_1geometry_a5ec6e4e951d3c9c848550479478079c0}{isae\+::geometry\+::get\+Max\+Angle\+Between\+Vectors}} (vec3d vecs)
+\item 
+Eigen\+::\+Matrix3d \mbox{\hyperlink{namespaceisae_1_1geometry_a11f990bf5c71e5002bce21fee098cb50}{isae\+::geometry\+::direction\+Vector2\+Rotation}} (Eigen\+::\+Vector3d v, const Eigen\+::\+Vector3d \&reference\+\_\+vector=Eigen\+::\+Vector3d(1, 0, 0))
+\item 
+Eigen\+::\+Vector3d \mbox{\hyperlink{namespaceisae_1_1geometry_afe431ce76eb4f08c842a1a817f04e316}{isae\+::geometry\+::\+Rotation2direction\+Vector}} (const Eigen\+::\+Matrix3d \&R, const Eigen\+::\+Vector3d \&reference\+\_\+vector=Eigen\+::\+Vector3d(1, 0, 0))
+\item 
+Eigen\+::\+Matrix3d \mbox{\hyperlink{namespaceisae_1_1geometry_af9fcbbc4604ed271a0228636e8ccb52a}{isae\+::geometry\+::exp\+\_\+so3}} (const Eigen\+::\+Vector3d \&v)
+\item 
+Eigen\+::\+Vector3d \mbox{\hyperlink{namespaceisae_1_1geometry_a43552ae8e206178d6f878fd3cb3d97cb}{isae\+::geometry\+::log\+\_\+so3}} (const Eigen\+::\+Matrix3d \&M)
+\item 
+Vector6d \mbox{\hyperlink{namespaceisae_1_1geometry_a41014100d92964bffa5b76559a3c6eb2}{isae\+::geometry\+::se3\+\_\+\+R\+Tto\+Vec6d}} (Eigen\+::\+Affine3d RT)
+\item 
+Eigen\+::\+Affine3d \mbox{\hyperlink{namespaceisae_1_1geometry_a72391231bd5489bb17df4a6fb9df8d33}{isae\+::geometry\+::se3\+\_\+\+Vec6dto\+RT}} (Vector6d pose)
+\item 
+Eigen\+::\+Affine3d \mbox{\hyperlink{namespaceisae_1_1geometry_aab8b62072f73577da9728437700cca1e}{isae\+::geometry\+::se3\+\_\+\+Vec3dto\+RT}} (Eigen\+::\+Vector3d p3d)
+\item 
+Eigen\+::\+Affine3d \mbox{\hyperlink{namespaceisae_1_1geometry_aafe315ba2260b84d0a27051006bb3cbe}{isae\+::geometry\+::se3\+\_\+double\+Vec6dto\+RT}} (const double $\ast$pose)
+\item 
+Eigen\+::\+Affine3d \mbox{\hyperlink{namespaceisae_1_1geometry_aeb87cdd88b14cbea118ce7398d6ffab6}{isae\+::geometry\+::se3\+\_\+double\+Vec3dto\+RT}} (const double $\ast$p3d)
+\item 
+{\footnotesize template$<$typename T $>$ }\\Eigen\+::\+Transform$<$ T, 3, 4 $>$ \mbox{\hyperlink{namespaceisae_1_1geometry_aed34d4f4b252fc27c686c0b03cca7f72}{isae\+::geometry\+::se3\+\_\+double\+Vec6dto\+RT}} (const T $\ast$pose)
+\item 
+double \mbox{\hyperlink{namespaceisae_1_1geometry_aaab8d2287a58f20ed5fdca59ad492e9d}{isae\+::geometry\+::get\+Vector\+Angle}} (Eigen\+::\+Vector2d pt\+\_\+end, Eigen\+::\+Vector2d pt\+\_\+start)
+\item 
+double \mbox{\hyperlink{namespaceisae_1_1geometry_adf9bb1ac4727fa9d105fb73705e89fc4}{isae\+::geometry\+::get\+Delta\+Angle}} (double orientation, double orientation\+\_\+reproj)
+\item 
+Eigen\+::\+Vector3d \mbox{\hyperlink{namespaceisae_1_1geometry_a0596fe890820f09d8c815fac23299c0e}{isae\+::geometry\+::get\+Color\+Subpix}} (const cv\+::\+Mat \&img, Eigen\+::\+Vector2d pt)
+\item 
+double \mbox{\hyperlink{namespaceisae_1_1geometry_a349513d163cb84c3924eee41188713e1}{isae\+::geometry\+::get\+Angle}} (Eigen\+::\+Vector3d p, Eigen\+::\+Vector3d p1, Eigen\+::\+Vector3d p2)
+\item 
+{\footnotesize template$<$typename Derived  = Eigen\+::\+Vector\+Xd$>$ }\\bool \mbox{\hyperlink{namespaceisae_1_1geometry_aaa98ae3e78d94f5608948dbaabb7f744}{isae\+::geometry\+::point\+In\+Triangle}} (Derived pt, std\+::vector$<$ Derived $>$ triangle)
+\item 
+Eigen\+::\+Matrix2d \mbox{\hyperlink{namespaceisae_1_1geometry_a083bdc94820595ac6ced7898316af4dc}{isae\+::geometry\+::cov2d\+Triangle}} (std\+::vector$<$ Eigen\+::\+Vector2d $>$ triangle)
+\item 
+double \mbox{\hyperlink{namespaceisae_1_1geometry_a077bf5a682e998c328cb239ae9f9b705}{isae\+::geometry\+::area\+Triangle}} (std\+::vector$<$ Eigen\+::\+Vector2d $>$ triangle)
+\item 
+Eigen\+::\+Matrix\+Xd \mbox{\hyperlink{namespaceisae_1_1geometry_ae8ebc0885d91b1df96f72aeb3cc1d059}{isae\+::geometry\+::\+J\+\_\+norm}} (Eigen\+::\+Vector3d X)
+\item 
+Eigen\+::\+Matrix3d \mbox{\hyperlink{namespaceisae_1_1geometry_a48206b96e75b32c8340840f2c5f0d6b6}{isae\+::geometry\+::\+J\+\_\+normalization}} (Eigen\+::\+Vector3d X)
+\item 
+Eigen\+::\+Matrix3d \mbox{\hyperlink{namespaceisae_1_1geometry_a8c6c889d52b90c214a3cfbe527b345ce}{isae\+::geometry\+::\+J\+\_\+\+XcrossA}} (Eigen\+::\+Vector3d A)
+\item 
+Eigen\+::\+Matrix3d \mbox{\hyperlink{namespaceisae_1_1geometry_a59f2fd08dfd129bdaac4cae42e4f4eae}{isae\+::geometry\+::\+J\+\_\+\+AcrossX}} (Eigen\+::\+Vector3d A)
+\item 
+Eigen\+::\+Matrix3d \mbox{\hyperlink{namespaceisae_1_1geometry_a2f0c8c6383cbd2895b6a02379a322b09}{isae\+::geometry\+::\+J\+\_\+\+Rexpwt}} (Eigen\+::\+Matrix3d R, Eigen\+::\+Matrix3d expw, Eigen\+::\+Vector3d t)
+\end{DoxyCompactItemize}

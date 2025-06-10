@@ -1,0 +1,213 @@
+\hypertarget{classupm_1_1_full_segment_info}{}\doxysection{upm\+::Full\+Segment\+Info Class Reference}
+\label{classupm_1_1_full_segment_info}\index{upm::FullSegmentInfo@{upm::FullSegmentInfo}}
+
+
+{\ttfamily \#include $<$Full\+Segment\+Info.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classupm_1_1_full_segment_info_a2e8908453b138346fbf20b74221c2bd0}{Full\+Segment\+Info}} (const std\+::vector$<$ \mbox{\hyperlink{structupm_1_1_pixel}{Pixel}} $>$ \&pts)
+\item 
+\mbox{\hyperlink{classupm_1_1_full_segment_info_a2551552eb0f3be63fa4c9c7092c91733}{Full\+Segment\+Info}} (const std\+::vector$<$ \mbox{\hyperlink{structupm_1_1_pixel}{Pixel}} $>$ \&pts, int start\+Idx)
+\item 
+void \mbox{\hyperlink{classupm_1_1_full_segment_info_a50496fd3395d1926e669d52e05de5635}{init}} (const std\+::vector$<$ \mbox{\hyperlink{structupm_1_1_pixel}{Pixel}} $>$ \&pts, int start\+Idx)
+\item 
+bool \mbox{\hyperlink{classupm_1_1_full_segment_info_aeba4e1115a9d4018562cfba9330a7722}{is\+Inlier}} (int x, int y, double line\+Fit\+Err\+Threshold)
+\item 
+void \mbox{\hyperlink{classupm_1_1_full_segment_info_a2f5e9be84336bf2561731d07b7af937a}{add\+Pixel}} (int x, int y, int pixel\+Index\+In\+Edge, bool is\+Pixel\+At\+The\+End=true)
+\item 
+void \mbox{\hyperlink{classupm_1_1_full_segment_info_aca8ccd8b9aca6fd34cfa3e154724a7da}{finish}} ()
+\item 
+void \mbox{\hyperlink{classupm_1_1_full_segment_info_aca15cef50ede452d4d900e1d6f35be10}{skip\+Positions}} ()
+\item 
+double \mbox{\hyperlink{classupm_1_1_full_segment_info_a5d67a7e02737a9025f8c8aac63845c85}{get\+Fit\+Error}} () const
+\item 
+void \mbox{\hyperlink{classupm_1_1_full_segment_info_ac8c08442bde905aa72b5765c9779e09a}{remove\+Last\+Px}} (bool remove\+From\+The\+End=true)
+\item 
+void \mbox{\hyperlink{classupm_1_1_full_segment_info_a771bd0ffe23c907295f6fe7e46a9f0c2}{reset}} ()
+\item 
+bool \mbox{\hyperlink{classupm_1_1_full_segment_info_a448b6fcaa62d369a915ebf30c00829a5}{horizontal}} () const
+\item 
+int \mbox{\hyperlink{classupm_1_1_full_segment_info_a342731caa5d7b8ed1758592c34fe8554}{get\+Num\+Of\+Pixels}} () const
+\item 
+const \mbox{\hyperlink{namespaceupm_a21887d87b3a6abbaadcb35e0971abef3}{Segment}} \& \mbox{\hyperlink{classupm_1_1_full_segment_info_a1e60f85f6b36ff95fdd33f69f57ad108}{get\+Endpoints}} () const
+\item 
+\mbox{\hyperlink{namespaceupm_a4e5ceb7dee65186c17eb2ba0704b2033}{Image\+Edge}} \mbox{\hyperlink{classupm_1_1_full_segment_info_abe4876c3b32b18684fb888975e011633}{get\+Pixels}} () const
+\item 
+const \mbox{\hyperlink{structupm_1_1_pixel}{Pixel}} \& \mbox{\hyperlink{classupm_1_1_full_segment_info_ae5dcf22b72387d80be0c95c85d7c3f49}{get\+First\+Pixel}} () const
+\item 
+const \mbox{\hyperlink{structupm_1_1_pixel}{Pixel}} \& \mbox{\hyperlink{classupm_1_1_full_segment_info_ac3525ca9696b396e3a3d14e339844e19}{get\+Last\+Pixel}} () const
+\item 
+const \mbox{\hyperlink{structupm_1_1_pixel}{Pixel}} $\ast$ \mbox{\hyperlink{classupm_1_1_full_segment_info_adc1a5afd66e39d76068e62d1be8cbf47}{begin}} () const
+\item 
+const \mbox{\hyperlink{structupm_1_1_pixel}{Pixel}} $\ast$ \mbox{\hyperlink{classupm_1_1_full_segment_info_ad30e80daee3c603bc1dabed02046a582}{end}} () const
+\item 
+const cv\+::\+Vec3d \& \mbox{\hyperlink{classupm_1_1_full_segment_info_ae3bb363552a7209f16879b54587c120d}{get\+Line\+Equation}} () const
+\item 
+bool \mbox{\hyperlink{classupm_1_1_full_segment_info_a65d3b11bb9caff0e6e783ac70c3efa09}{has\+Second\+Side\+Elements}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classupm_1_1_full_segment_info_a06f6a8fe4b20ce7cd9f01b22cd52fb47}{first\+Endpoint\+Extended}} = false
+\item 
+bool \mbox{\hyperlink{classupm_1_1_full_segment_info_ae506390ebd4d43f74600074d6cb93118}{second\+Endpoint\+Extended}} = false
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class represents a line segment and its associated information such as\+:
+\begin{DoxyItemize}
+\item List of supporting pixels
+\item Line equation
+\item Endpoints
+\end{DoxyItemize}
+
+The implementation is highly optimized to add or subtract new pixels and recompute all parameters. Internally, 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classupm_1_1_full_segment_info_a2e8908453b138346fbf20b74221c2bd0}\label{classupm_1_1_full_segment_info_a2e8908453b138346fbf20b74221c2bd0}} 
+\index{upm::FullSegmentInfo@{upm::FullSegmentInfo}!FullSegmentInfo@{FullSegmentInfo}}
+\index{FullSegmentInfo@{FullSegmentInfo}!upm::FullSegmentInfo@{upm::FullSegmentInfo}}
+\doxysubsubsection{\texorpdfstring{FullSegmentInfo()}{FullSegmentInfo()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily upm\+::\+Full\+Segment\+Info\+::\+Full\+Segment\+Info (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{structupm_1_1_pixel}{Pixel}} $>$ \&}]{pts }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classupm_1_1_full_segment_info_a2551552eb0f3be63fa4c9c7092c91733}\label{classupm_1_1_full_segment_info_a2551552eb0f3be63fa4c9c7092c91733}} 
+\index{upm::FullSegmentInfo@{upm::FullSegmentInfo}!FullSegmentInfo@{FullSegmentInfo}}
+\index{FullSegmentInfo@{FullSegmentInfo}!upm::FullSegmentInfo@{upm::FullSegmentInfo}}
+\doxysubsubsection{\texorpdfstring{FullSegmentInfo()}{FullSegmentInfo()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily upm\+::\+Full\+Segment\+Info\+::\+Full\+Segment\+Info (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{structupm_1_1_pixel}{Pixel}} $>$ \&}]{pts,  }\item[{int}]{start\+Idx }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classupm_1_1_full_segment_info_a2f5e9be84336bf2561731d07b7af937a}\label{classupm_1_1_full_segment_info_a2f5e9be84336bf2561731d07b7af937a}} 
+\index{upm::FullSegmentInfo@{upm::FullSegmentInfo}!addPixel@{addPixel}}
+\index{addPixel@{addPixel}!upm::FullSegmentInfo@{upm::FullSegmentInfo}}
+\doxysubsubsection{\texorpdfstring{addPixel()}{addPixel()}}
+{\footnotesize\ttfamily void upm\+::\+Full\+Segment\+Info\+::add\+Pixel (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{pixel\+Index\+In\+Edge,  }\item[{bool}]{is\+Pixel\+At\+The\+End = {\ttfamily true} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classupm_1_1_full_segment_info_adc1a5afd66e39d76068e62d1be8cbf47}\label{classupm_1_1_full_segment_info_adc1a5afd66e39d76068e62d1be8cbf47}} 
+\index{upm::FullSegmentInfo@{upm::FullSegmentInfo}!begin@{begin}}
+\index{begin@{begin}!upm::FullSegmentInfo@{upm::FullSegmentInfo}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structupm_1_1_pixel}{Pixel}}$\ast$ upm\+::\+Full\+Segment\+Info\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classupm_1_1_full_segment_info_ad30e80daee3c603bc1dabed02046a582}\label{classupm_1_1_full_segment_info_ad30e80daee3c603bc1dabed02046a582}} 
+\index{upm::FullSegmentInfo@{upm::FullSegmentInfo}!end@{end}}
+\index{end@{end}!upm::FullSegmentInfo@{upm::FullSegmentInfo}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structupm_1_1_pixel}{Pixel}}$\ast$ upm\+::\+Full\+Segment\+Info\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classupm_1_1_full_segment_info_aca8ccd8b9aca6fd34cfa3e154724a7da}\label{classupm_1_1_full_segment_info_aca8ccd8b9aca6fd34cfa3e154724a7da}} 
+\index{upm::FullSegmentInfo@{upm::FullSegmentInfo}!finish@{finish}}
+\index{finish@{finish}!upm::FullSegmentInfo@{upm::FullSegmentInfo}}
+\doxysubsubsection{\texorpdfstring{finish()}{finish()}}
+{\footnotesize\ttfamily void upm\+::\+Full\+Segment\+Info\+::finish (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classupm_1_1_full_segment_info_a1e60f85f6b36ff95fdd33f69f57ad108}\label{classupm_1_1_full_segment_info_a1e60f85f6b36ff95fdd33f69f57ad108}} 
+\index{upm::FullSegmentInfo@{upm::FullSegmentInfo}!getEndpoints@{getEndpoints}}
+\index{getEndpoints@{getEndpoints}!upm::FullSegmentInfo@{upm::FullSegmentInfo}}
+\doxysubsubsection{\texorpdfstring{getEndpoints()}{getEndpoints()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{namespaceupm_a21887d87b3a6abbaadcb35e0971abef3}{Segment}}\& upm\+::\+Full\+Segment\+Info\+::get\+Endpoints (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classupm_1_1_full_segment_info_ae5dcf22b72387d80be0c95c85d7c3f49}\label{classupm_1_1_full_segment_info_ae5dcf22b72387d80be0c95c85d7c3f49}} 
+\index{upm::FullSegmentInfo@{upm::FullSegmentInfo}!getFirstPixel@{getFirstPixel}}
+\index{getFirstPixel@{getFirstPixel}!upm::FullSegmentInfo@{upm::FullSegmentInfo}}
+\doxysubsubsection{\texorpdfstring{getFirstPixel()}{getFirstPixel()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structupm_1_1_pixel}{Pixel}}\& upm\+::\+Full\+Segment\+Info\+::get\+First\+Pixel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classupm_1_1_full_segment_info_a5d67a7e02737a9025f8c8aac63845c85}\label{classupm_1_1_full_segment_info_a5d67a7e02737a9025f8c8aac63845c85}} 
+\index{upm::FullSegmentInfo@{upm::FullSegmentInfo}!getFitError@{getFitError}}
+\index{getFitError@{getFitError}!upm::FullSegmentInfo@{upm::FullSegmentInfo}}
+\doxysubsubsection{\texorpdfstring{getFitError()}{getFitError()}}
+{\footnotesize\ttfamily double upm\+::\+Full\+Segment\+Info\+::get\+Fit\+Error (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classupm_1_1_full_segment_info_ac3525ca9696b396e3a3d14e339844e19}\label{classupm_1_1_full_segment_info_ac3525ca9696b396e3a3d14e339844e19}} 
+\index{upm::FullSegmentInfo@{upm::FullSegmentInfo}!getLastPixel@{getLastPixel}}
+\index{getLastPixel@{getLastPixel}!upm::FullSegmentInfo@{upm::FullSegmentInfo}}
+\doxysubsubsection{\texorpdfstring{getLastPixel()}{getLastPixel()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structupm_1_1_pixel}{Pixel}}\& upm\+::\+Full\+Segment\+Info\+::get\+Last\+Pixel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classupm_1_1_full_segment_info_ae3bb363552a7209f16879b54587c120d}\label{classupm_1_1_full_segment_info_ae3bb363552a7209f16879b54587c120d}} 
+\index{upm::FullSegmentInfo@{upm::FullSegmentInfo}!getLineEquation@{getLineEquation}}
+\index{getLineEquation@{getLineEquation}!upm::FullSegmentInfo@{upm::FullSegmentInfo}}
+\doxysubsubsection{\texorpdfstring{getLineEquation()}{getLineEquation()}}
+{\footnotesize\ttfamily const cv\+::\+Vec3d\& upm\+::\+Full\+Segment\+Info\+::get\+Line\+Equation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classupm_1_1_full_segment_info_a342731caa5d7b8ed1758592c34fe8554}\label{classupm_1_1_full_segment_info_a342731caa5d7b8ed1758592c34fe8554}} 
+\index{upm::FullSegmentInfo@{upm::FullSegmentInfo}!getNumOfPixels@{getNumOfPixels}}
+\index{getNumOfPixels@{getNumOfPixels}!upm::FullSegmentInfo@{upm::FullSegmentInfo}}
+\doxysubsubsection{\texorpdfstring{getNumOfPixels()}{getNumOfPixels()}}
+{\footnotesize\ttfamily int upm\+::\+Full\+Segment\+Info\+::get\+Num\+Of\+Pixels (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classupm_1_1_full_segment_info_abe4876c3b32b18684fb888975e011633}\label{classupm_1_1_full_segment_info_abe4876c3b32b18684fb888975e011633}} 
+\index{upm::FullSegmentInfo@{upm::FullSegmentInfo}!getPixels@{getPixels}}
+\index{getPixels@{getPixels}!upm::FullSegmentInfo@{upm::FullSegmentInfo}}
+\doxysubsubsection{\texorpdfstring{getPixels()}{getPixels()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceupm_a4e5ceb7dee65186c17eb2ba0704b2033}{Image\+Edge}} upm\+::\+Full\+Segment\+Info\+::get\+Pixels (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classupm_1_1_full_segment_info_a65d3b11bb9caff0e6e783ac70c3efa09}\label{classupm_1_1_full_segment_info_a65d3b11bb9caff0e6e783ac70c3efa09}} 
+\index{upm::FullSegmentInfo@{upm::FullSegmentInfo}!hasSecondSideElements@{hasSecondSideElements}}
+\index{hasSecondSideElements@{hasSecondSideElements}!upm::FullSegmentInfo@{upm::FullSegmentInfo}}
+\doxysubsubsection{\texorpdfstring{hasSecondSideElements()}{hasSecondSideElements()}}
+{\footnotesize\ttfamily bool upm\+::\+Full\+Segment\+Info\+::has\+Second\+Side\+Elements (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classupm_1_1_full_segment_info_a448b6fcaa62d369a915ebf30c00829a5}\label{classupm_1_1_full_segment_info_a448b6fcaa62d369a915ebf30c00829a5}} 
+\index{upm::FullSegmentInfo@{upm::FullSegmentInfo}!horizontal@{horizontal}}
+\index{horizontal@{horizontal}!upm::FullSegmentInfo@{upm::FullSegmentInfo}}
+\doxysubsubsection{\texorpdfstring{horizontal()}{horizontal()}}
+{\footnotesize\ttfamily bool upm\+::\+Full\+Segment\+Info\+::horizontal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classupm_1_1_full_segment_info_a50496fd3395d1926e669d52e05de5635}\label{classupm_1_1_full_segment_info_a50496fd3395d1926e669d52e05de5635}} 
+\index{upm::FullSegmentInfo@{upm::FullSegmentInfo}!init@{init}}
+\index{init@{init}!upm::FullSegmentInfo@{upm::FullSegmentInfo}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void upm\+::\+Full\+Segment\+Info\+::init (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{structupm_1_1_pixel}{Pixel}} $>$ \&}]{pts,  }\item[{int}]{start\+Idx }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classupm_1_1_full_segment_info_aeba4e1115a9d4018562cfba9330a7722}\label{classupm_1_1_full_segment_info_aeba4e1115a9d4018562cfba9330a7722}} 
+\index{upm::FullSegmentInfo@{upm::FullSegmentInfo}!isInlier@{isInlier}}
+\index{isInlier@{isInlier}!upm::FullSegmentInfo@{upm::FullSegmentInfo}}
+\doxysubsubsection{\texorpdfstring{isInlier()}{isInlier()}}
+{\footnotesize\ttfamily bool upm\+::\+Full\+Segment\+Info\+::is\+Inlier (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{double}]{line\+Fit\+Err\+Threshold }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classupm_1_1_full_segment_info_ac8c08442bde905aa72b5765c9779e09a}\label{classupm_1_1_full_segment_info_ac8c08442bde905aa72b5765c9779e09a}} 
+\index{upm::FullSegmentInfo@{upm::FullSegmentInfo}!removeLastPx@{removeLastPx}}
+\index{removeLastPx@{removeLastPx}!upm::FullSegmentInfo@{upm::FullSegmentInfo}}
+\doxysubsubsection{\texorpdfstring{removeLastPx()}{removeLastPx()}}
+{\footnotesize\ttfamily void upm\+::\+Full\+Segment\+Info\+::remove\+Last\+Px (\begin{DoxyParamCaption}\item[{bool}]{remove\+From\+The\+End = {\ttfamily true} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classupm_1_1_full_segment_info_a771bd0ffe23c907295f6fe7e46a9f0c2}\label{classupm_1_1_full_segment_info_a771bd0ffe23c907295f6fe7e46a9f0c2}} 
+\index{upm::FullSegmentInfo@{upm::FullSegmentInfo}!reset@{reset}}
+\index{reset@{reset}!upm::FullSegmentInfo@{upm::FullSegmentInfo}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void upm\+::\+Full\+Segment\+Info\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classupm_1_1_full_segment_info_aca15cef50ede452d4d900e1d6f35be10}\label{classupm_1_1_full_segment_info_aca15cef50ede452d4d900e1d6f35be10}} 
+\index{upm::FullSegmentInfo@{upm::FullSegmentInfo}!skipPositions@{skipPositions}}
+\index{skipPositions@{skipPositions}!upm::FullSegmentInfo@{upm::FullSegmentInfo}}
+\doxysubsubsection{\texorpdfstring{skipPositions()}{skipPositions()}}
+{\footnotesize\ttfamily void upm\+::\+Full\+Segment\+Info\+::skip\+Positions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classupm_1_1_full_segment_info_a06f6a8fe4b20ce7cd9f01b22cd52fb47}\label{classupm_1_1_full_segment_info_a06f6a8fe4b20ce7cd9f01b22cd52fb47}} 
+\index{upm::FullSegmentInfo@{upm::FullSegmentInfo}!firstEndpointExtended@{firstEndpointExtended}}
+\index{firstEndpointExtended@{firstEndpointExtended}!upm::FullSegmentInfo@{upm::FullSegmentInfo}}
+\doxysubsubsection{\texorpdfstring{firstEndpointExtended}{firstEndpointExtended}}
+{\footnotesize\ttfamily bool upm\+::\+Full\+Segment\+Info\+::first\+Endpoint\+Extended = false}
+
+\mbox{\Hypertarget{classupm_1_1_full_segment_info_ae506390ebd4d43f74600074d6cb93118}\label{classupm_1_1_full_segment_info_ae506390ebd4d43f74600074d6cb93118}} 
+\index{upm::FullSegmentInfo@{upm::FullSegmentInfo}!secondEndpointExtended@{secondEndpointExtended}}
+\index{secondEndpointExtended@{secondEndpointExtended}!upm::FullSegmentInfo@{upm::FullSegmentInfo}}
+\doxysubsubsection{\texorpdfstring{secondEndpointExtended}{secondEndpointExtended}}
+{\footnotesize\ttfamily bool upm\+::\+Full\+Segment\+Info\+::second\+Endpoint\+Extended = false}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/deos/ce.\+debeunne/colcon\+\_\+ws/src/\+Sa\+D\+V\+I\+O/cpp/thirdparty/\+E\+L\+S\+E\+D/src/\mbox{\hyperlink{_full_segment_info_8h}{Full\+Segment\+Info.\+h}}\item 
+/home/deos/ce.\+debeunne/colcon\+\_\+ws/src/\+Sa\+D\+V\+I\+O/cpp/thirdparty/\+E\+L\+S\+E\+D/src/\mbox{\hyperlink{_full_segment_info_8cpp}{Full\+Segment\+Info.\+cpp}}\end{DoxyCompactItemize}

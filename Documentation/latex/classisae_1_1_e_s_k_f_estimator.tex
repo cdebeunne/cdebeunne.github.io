@@ -1,0 +1,68 @@
+\hypertarget{classisae_1_1_e_s_k_f_estimator}{}\doxysection{isae\+::E\+S\+K\+F\+Estimator Class Reference}
+\label{classisae_1_1_e_s_k_f_estimator}\index{isae::ESKFEstimator@{isae::ESKFEstimator}}
+
+
+{\ttfamily \#include $<$E\+S\+K\+F\+Estimator.\+h$>$}
+
+
+
+Inheritance diagram for isae\+::E\+S\+K\+F\+Estimator\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=200pt]{classisae_1_1_e_s_k_f_estimator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for isae\+::E\+S\+K\+F\+Estimator\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=200pt]{classisae_1_1_e_s_k_f_estimator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classisae_1_1_e_s_k_f_estimator_a27b3806ec8aa02195ecd4a945df16d9d}{estimate\+Transform\+Between}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&frame1, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&frame2, \mbox{\hyperlink{namespaceisae_ac61c2f881f902dbfef491caaa5135c9c}{vec\+\_\+match}} \&matches, Eigen\+::\+Affine3d \&dT, Eigen\+::\+Matrix\+Xd \&covdT) override
+\item 
+bool \mbox{\hyperlink{classisae_1_1_e_s_k_f_estimator_ad8039f93a0cca9e50aaf20e462926a8f}{estimate\+Transform\+Between}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&frame1, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&frame2, \mbox{\hyperlink{namespaceisae_a70bf0a9838eb50b6a3fe2be9b79e25be}{typed\+\_\+vec\+\_\+match}} \&typed\+\_\+matches, Eigen\+::\+Affine3d \&dT, Eigen\+::\+Matrix\+Xd \&covdT) override
+\item 
+bool \mbox{\hyperlink{classisae_1_1_e_s_k_f_estimator_a36a7cf339e6802fe3311378ecba85400}{refine\+Triangulation}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&frame)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classisae_1_1_e_s_k_f_estimator_ad8039f93a0cca9e50aaf20e462926a8f}\label{classisae_1_1_e_s_k_f_estimator_ad8039f93a0cca9e50aaf20e462926a8f}} 
+\index{isae::ESKFEstimator@{isae::ESKFEstimator}!estimateTransformBetween@{estimateTransformBetween}}
+\index{estimateTransformBetween@{estimateTransformBetween}!isae::ESKFEstimator@{isae::ESKFEstimator}}
+\doxysubsubsection{\texorpdfstring{estimateTransformBetween()}{estimateTransformBetween()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool isae\+::\+E\+S\+K\+F\+Estimator\+::estimate\+Transform\+Between (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&}]{frame1,  }\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&}]{frame2,  }\item[{\mbox{\hyperlink{namespaceisae_a70bf0a9838eb50b6a3fe2be9b79e25be}{typed\+\_\+vec\+\_\+match}} \&}]{typed\+\_\+matches,  }\item[{Eigen\+::\+Affine3d \&}]{dT,  }\item[{Eigen\+::\+Matrix\+Xd \&}]{covdT }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classisae_1_1_a_pose_estimator_abde86e1cab23cdcabf36dfe9810fa203}{isae\+::\+A\+Pose\+Estimator}}.
+
+\mbox{\Hypertarget{classisae_1_1_e_s_k_f_estimator_a27b3806ec8aa02195ecd4a945df16d9d}\label{classisae_1_1_e_s_k_f_estimator_a27b3806ec8aa02195ecd4a945df16d9d}} 
+\index{isae::ESKFEstimator@{isae::ESKFEstimator}!estimateTransformBetween@{estimateTransformBetween}}
+\index{estimateTransformBetween@{estimateTransformBetween}!isae::ESKFEstimator@{isae::ESKFEstimator}}
+\doxysubsubsection{\texorpdfstring{estimateTransformBetween()}{estimateTransformBetween()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool isae\+::\+E\+S\+K\+F\+Estimator\+::estimate\+Transform\+Between (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&}]{frame1,  }\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&}]{frame2,  }\item[{\mbox{\hyperlink{namespaceisae_ac61c2f881f902dbfef491caaa5135c9c}{vec\+\_\+match}} \&}]{matches,  }\item[{Eigen\+::\+Affine3d \&}]{dT,  }\item[{Eigen\+::\+Matrix\+Xd \&}]{covdT }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classisae_1_1_a_pose_estimator_a8bf763cb7583be98c0e0329cbecee206}{isae\+::\+A\+Pose\+Estimator}}.
+
+\mbox{\Hypertarget{classisae_1_1_e_s_k_f_estimator_a36a7cf339e6802fe3311378ecba85400}\label{classisae_1_1_e_s_k_f_estimator_a36a7cf339e6802fe3311378ecba85400}} 
+\index{isae::ESKFEstimator@{isae::ESKFEstimator}!refineTriangulation@{refineTriangulation}}
+\index{refineTriangulation@{refineTriangulation}!isae::ESKFEstimator@{isae::ESKFEstimator}}
+\doxysubsubsection{\texorpdfstring{refineTriangulation()}{refineTriangulation()}}
+{\footnotesize\ttfamily bool isae\+::\+E\+S\+K\+F\+Estimator\+::refine\+Triangulation (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&}]{frame }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/deos/ce.\+debeunne/colcon\+\_\+ws/src/\+Sa\+D\+V\+I\+O/cpp/include/isaeslam/estimator/\mbox{\hyperlink{_e_s_k_f_estimator_8h}{E\+S\+K\+F\+Estimator.\+h}}\item 
+/home/deos/ce.\+debeunne/colcon\+\_\+ws/src/\+Sa\+D\+V\+I\+O/cpp/src/estimator/\mbox{\hyperlink{_e_s_k_f_estimator_8cpp}{E\+S\+K\+F\+Estimator.\+cpp}}\end{DoxyCompactItemize}

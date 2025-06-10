@@ -1,0 +1,131 @@
+\hypertarget{classisae_1_1_mesher}{}\doxysection{isae\+::Mesher Class Reference}
+\label{classisae_1_1_mesher}\index{isae::Mesher@{isae::Mesher}}
+
+
+{\ttfamily \#include $<$mesher.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classisae_1_1_mesher_a30f510a5a8d5ad57a5bcfcf7019382c6}{Mesher}} (std\+::string slam\+\_\+mode, double Z\+N\+C\+C\+\_\+tsh, double max\+\_\+length\+\_\+tsh)
+\item 
+std\+::vector$<$ \mbox{\hyperlink{namespaceisae_a96382cb94d4e3b90ed93ffc9715ef72d}{Feat\+Polygon}} $>$ \mbox{\hyperlink{classisae_1_1_mesher_a5e13544b60c8d067425d028293001910}{create\+Mesh2D}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_image_sensor}{Image\+Sensor}} $>$ sensor)
+\item 
+std\+::vector$<$ cv\+::\+Vec6f $>$ \mbox{\hyperlink{classisae_1_1_mesher_aae6b84813ff2cb05b6f3052d1b9e36d2}{compute\+Mesh2D}} (const cv\+::\+Size img\+\_\+size, const std\+::vector$<$ cv\+::\+Point2f $>$ p2f\+\_\+to\+\_\+triangulate)
+\item 
+void \mbox{\hyperlink{classisae_1_1_mesher_acc6eb7034e924285f6172b6281cc6c1d}{add\+New\+KF}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ frame)
+\item 
+bool \mbox{\hyperlink{classisae_1_1_mesher_aad11d2776d59ac1eb82cb8946678d563}{get\+New\+Kf}} ()
+\item 
+void \mbox{\hyperlink{classisae_1_1_mesher_ab45fe75e8a5a3dfdb428a2a67f01da46}{run}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::queue$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ $>$ \mbox{\hyperlink{classisae_1_1_mesher_a815ac3fb8fe0f8cd3d1908a1c45e3bf5}{\+\_\+kf\+\_\+queue}}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \mbox{\hyperlink{classisae_1_1_mesher_aea385d63c066464523061c1796d603d3}{\+\_\+curr\+\_\+kf}}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_mesh3_d}{Mesh3D}} $>$ \mbox{\hyperlink{classisae_1_1_mesher_ae7235a731907dc46268943fe959a696e}{\+\_\+mesh\+\_\+3d}}
+\item 
+std\+::string \mbox{\hyperlink{classisae_1_1_mesher_ae55d41730f2ac10c5e6f91e2be5f98e2}{\+\_\+slam\+\_\+mode}}
+\item 
+double \mbox{\hyperlink{classisae_1_1_mesher_ad71af6cae5efe2feba19e2f6c941a2b6}{\+\_\+avg\+\_\+mesh\+\_\+t}}
+\item 
+int \mbox{\hyperlink{classisae_1_1_mesher_af97ccde1434029674e8f47af40ae2e70}{\+\_\+n\+\_\+kf}}
+\item 
+std\+::mutex \mbox{\hyperlink{classisae_1_1_mesher_a756291448310f782c11aede751657518}{\+\_\+mesher\+\_\+mtx}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classisae_1_1_mesher_a30f510a5a8d5ad57a5bcfcf7019382c6}\label{classisae_1_1_mesher_a30f510a5a8d5ad57a5bcfcf7019382c6}} 
+\index{isae::Mesher@{isae::Mesher}!Mesher@{Mesher}}
+\index{Mesher@{Mesher}!isae::Mesher@{isae::Mesher}}
+\doxysubsubsection{\texorpdfstring{Mesher()}{Mesher()}}
+{\footnotesize\ttfamily isae\+::\+Mesher\+::\+Mesher (\begin{DoxyParamCaption}\item[{std\+::string}]{slam\+\_\+mode,  }\item[{double}]{Z\+N\+C\+C\+\_\+tsh,  }\item[{double}]{max\+\_\+length\+\_\+tsh }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classisae_1_1_mesher_acc6eb7034e924285f6172b6281cc6c1d}\label{classisae_1_1_mesher_acc6eb7034e924285f6172b6281cc6c1d}} 
+\index{isae::Mesher@{isae::Mesher}!addNewKF@{addNewKF}}
+\index{addNewKF@{addNewKF}!isae::Mesher@{isae::Mesher}}
+\doxysubsubsection{\texorpdfstring{addNewKF()}{addNewKF()}}
+{\footnotesize\ttfamily void isae\+::\+Mesher\+::add\+New\+KF (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$}]{frame }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classisae_1_1_mesher_aae6b84813ff2cb05b6f3052d1b9e36d2}\label{classisae_1_1_mesher_aae6b84813ff2cb05b6f3052d1b9e36d2}} 
+\index{isae::Mesher@{isae::Mesher}!computeMesh2D@{computeMesh2D}}
+\index{computeMesh2D@{computeMesh2D}!isae::Mesher@{isae::Mesher}}
+\doxysubsubsection{\texorpdfstring{computeMesh2D()}{computeMesh2D()}}
+{\footnotesize\ttfamily std\+::vector$<$ cv\+::\+Vec6f $>$ isae\+::\+Mesher\+::compute\+Mesh2D (\begin{DoxyParamCaption}\item[{const cv\+::\+Size}]{img\+\_\+size,  }\item[{const std\+::vector$<$ cv\+::\+Point2f $>$}]{p2f\+\_\+to\+\_\+triangulate }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classisae_1_1_mesher_a5e13544b60c8d067425d028293001910}\label{classisae_1_1_mesher_a5e13544b60c8d067425d028293001910}} 
+\index{isae::Mesher@{isae::Mesher}!createMesh2D@{createMesh2D}}
+\index{createMesh2D@{createMesh2D}!isae::Mesher@{isae::Mesher}}
+\doxysubsubsection{\texorpdfstring{createMesh2D()}{createMesh2D()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{namespaceisae_a96382cb94d4e3b90ed93ffc9715ef72d}{Feat\+Polygon}} $>$ isae\+::\+Mesher\+::create\+Mesh2D (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_image_sensor}{Image\+Sensor}} $>$}]{sensor }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classisae_1_1_mesher_aad11d2776d59ac1eb82cb8946678d563}\label{classisae_1_1_mesher_aad11d2776d59ac1eb82cb8946678d563}} 
+\index{isae::Mesher@{isae::Mesher}!getNewKf@{getNewKf}}
+\index{getNewKf@{getNewKf}!isae::Mesher@{isae::Mesher}}
+\doxysubsubsection{\texorpdfstring{getNewKf()}{getNewKf()}}
+{\footnotesize\ttfamily bool isae\+::\+Mesher\+::get\+New\+Kf (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classisae_1_1_mesher_ab45fe75e8a5a3dfdb428a2a67f01da46}\label{classisae_1_1_mesher_ab45fe75e8a5a3dfdb428a2a67f01da46}} 
+\index{isae::Mesher@{isae::Mesher}!run@{run}}
+\index{run@{run}!isae::Mesher@{isae::Mesher}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void isae\+::\+Mesher\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classisae_1_1_mesher_ad71af6cae5efe2feba19e2f6c941a2b6}\label{classisae_1_1_mesher_ad71af6cae5efe2feba19e2f6c941a2b6}} 
+\index{isae::Mesher@{isae::Mesher}!\_avg\_mesh\_t@{\_avg\_mesh\_t}}
+\index{\_avg\_mesh\_t@{\_avg\_mesh\_t}!isae::Mesher@{isae::Mesher}}
+\doxysubsubsection{\texorpdfstring{\_avg\_mesh\_t}{\_avg\_mesh\_t}}
+{\footnotesize\ttfamily double isae\+::\+Mesher\+::\+\_\+avg\+\_\+mesh\+\_\+t}
+
+\mbox{\Hypertarget{classisae_1_1_mesher_aea385d63c066464523061c1796d603d3}\label{classisae_1_1_mesher_aea385d63c066464523061c1796d603d3}} 
+\index{isae::Mesher@{isae::Mesher}!\_curr\_kf@{\_curr\_kf}}
+\index{\_curr\_kf@{\_curr\_kf}!isae::Mesher@{isae::Mesher}}
+\doxysubsubsection{\texorpdfstring{\_curr\_kf}{\_curr\_kf}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classisae_1_1_frame}{Frame}}$>$ isae\+::\+Mesher\+::\+\_\+curr\+\_\+kf}
+
+\mbox{\Hypertarget{classisae_1_1_mesher_a815ac3fb8fe0f8cd3d1908a1c45e3bf5}\label{classisae_1_1_mesher_a815ac3fb8fe0f8cd3d1908a1c45e3bf5}} 
+\index{isae::Mesher@{isae::Mesher}!\_kf\_queue@{\_kf\_queue}}
+\index{\_kf\_queue@{\_kf\_queue}!isae::Mesher@{isae::Mesher}}
+\doxysubsubsection{\texorpdfstring{\_kf\_queue}{\_kf\_queue}}
+{\footnotesize\ttfamily std\+::queue$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classisae_1_1_frame}{Frame}}$>$ $>$ isae\+::\+Mesher\+::\+\_\+kf\+\_\+queue}
+
+\mbox{\Hypertarget{classisae_1_1_mesher_ae7235a731907dc46268943fe959a696e}\label{classisae_1_1_mesher_ae7235a731907dc46268943fe959a696e}} 
+\index{isae::Mesher@{isae::Mesher}!\_mesh\_3d@{\_mesh\_3d}}
+\index{\_mesh\_3d@{\_mesh\_3d}!isae::Mesher@{isae::Mesher}}
+\doxysubsubsection{\texorpdfstring{\_mesh\_3d}{\_mesh\_3d}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classisae_1_1_mesh3_d}{Mesh3D}}$>$ isae\+::\+Mesher\+::\+\_\+mesh\+\_\+3d}
+
+\mbox{\Hypertarget{classisae_1_1_mesher_a756291448310f782c11aede751657518}\label{classisae_1_1_mesher_a756291448310f782c11aede751657518}} 
+\index{isae::Mesher@{isae::Mesher}!\_mesher\_mtx@{\_mesher\_mtx}}
+\index{\_mesher\_mtx@{\_mesher\_mtx}!isae::Mesher@{isae::Mesher}}
+\doxysubsubsection{\texorpdfstring{\_mesher\_mtx}{\_mesher\_mtx}}
+{\footnotesize\ttfamily std\+::mutex isae\+::\+Mesher\+::\+\_\+mesher\+\_\+mtx\hspace{0.3cm}{\ttfamily [mutable]}}
+
+\mbox{\Hypertarget{classisae_1_1_mesher_af97ccde1434029674e8f47af40ae2e70}\label{classisae_1_1_mesher_af97ccde1434029674e8f47af40ae2e70}} 
+\index{isae::Mesher@{isae::Mesher}!\_n\_kf@{\_n\_kf}}
+\index{\_n\_kf@{\_n\_kf}!isae::Mesher@{isae::Mesher}}
+\doxysubsubsection{\texorpdfstring{\_n\_kf}{\_n\_kf}}
+{\footnotesize\ttfamily int isae\+::\+Mesher\+::\+\_\+n\+\_\+kf}
+
+\mbox{\Hypertarget{classisae_1_1_mesher_ae55d41730f2ac10c5e6f91e2be5f98e2}\label{classisae_1_1_mesher_ae55d41730f2ac10c5e6f91e2be5f98e2}} 
+\index{isae::Mesher@{isae::Mesher}!\_slam\_mode@{\_slam\_mode}}
+\index{\_slam\_mode@{\_slam\_mode}!isae::Mesher@{isae::Mesher}}
+\doxysubsubsection{\texorpdfstring{\_slam\_mode}{\_slam\_mode}}
+{\footnotesize\ttfamily std\+::string isae\+::\+Mesher\+::\+\_\+slam\+\_\+mode}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/deos/ce.\+debeunne/colcon\+\_\+ws/src/\+Sa\+D\+V\+I\+O/cpp/include/isaeslam/data/mesh/\mbox{\hyperlink{mesher_8h}{mesher.\+h}}\item 
+/home/deos/ce.\+debeunne/colcon\+\_\+ws/src/\+Sa\+D\+V\+I\+O/cpp/src/data/mesh/\mbox{\hyperlink{mesher_8cpp}{mesher.\+cpp}}\end{DoxyCompactItemize}

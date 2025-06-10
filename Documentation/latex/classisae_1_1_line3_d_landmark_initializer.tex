@@ -1,0 +1,114 @@
+\hypertarget{classisae_1_1_line3_d_landmark_initializer}{}\doxysection{isae\+::Line3\+D\+Landmark\+Initializer Class Reference}
+\label{classisae_1_1_line3_d_landmark_initializer}\index{isae::Line3DLandmarkInitializer@{isae::Line3DLandmarkInitializer}}
+
+
+{\ttfamily \#include $<$Line3\+Dlandmark\+Initializer.\+h$>$}
+
+
+
+Inheritance diagram for isae\+::Line3\+D\+Landmark\+Initializer\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=272pt]{classisae_1_1_line3_d_landmark_initializer__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for isae\+::Line3\+D\+Landmark\+Initializer\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=272pt]{classisae_1_1_line3_d_landmark_initializer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classisae_1_1_line3_d_landmark_initializer_a50f31b006c3e5c2d4f7bc0266e7b81a1}{Line3\+D\+Landmark\+Initializer}} (uint nb\+\_\+requiered\+\_\+ldmk)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classisae_1_1_line3_d_landmark_initializer_aac7da7796b2034f4f6d36fb1bc95a3e8}{init\+Landmark}} (std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$ features, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_landmark}{A\+Landmark}} $>$ \&landmark) override
+\item 
+bool \mbox{\hyperlink{classisae_1_1_line3_d_landmark_initializer_a0539eea96575803681a4f1c399dcba46}{init\+Landmark\+With\+Depth}} (std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$ features, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_landmark}{A\+Landmark}} $>$ \&landmark) override
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_landmark}{A\+Landmark}} $>$ \mbox{\hyperlink{classisae_1_1_line3_d_landmark_initializer_aa9a109ea766a7d6067491f48b59d14c9}{create\+New\+Landmark}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$ f) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Eigen\+::\+Vector3d \mbox{\hyperlink{classisae_1_1_line3_d_landmark_initializer_af67679da2e3123d74b7208b9413536a5}{process\+Orientation}} (std\+::vector$<$ Eigen\+::\+Vector3d $>$ Ns)
+\item 
+static Eigen\+::\+Vector3d \mbox{\hyperlink{classisae_1_1_line3_d_landmark_initializer_a0bf06ff5cd8aba31106025e2bba0e39c}{process\+Position}} (std\+::vector$<$ Eigen\+::\+Vector3d $>$ Ns, std\+::vector$<$ Eigen\+::\+Vector3d $>$ Os)
+\item 
+static void \mbox{\hyperlink{classisae_1_1_line3_d_landmark_initializer_a225ddf3a1b12c7ccc455e28054cbfbc1}{process\+Segment\+Points}} (Eigen\+::\+Vector3d position, Eigen\+::\+Vector3d direction, std\+::vector$<$ Eigen\+::\+Vector3d $>$ Os, std\+::vector$<$ Eigen\+::\+Vector3d $>$ rays\+\_\+s, std\+::vector$<$ Eigen\+::\+Vector3d $>$ rays\+\_\+e, Eigen\+::\+Vector3d \&start, Eigen\+::\+Vector3d \&end)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classisae_1_1_line3_d_landmark_initializer_a50f31b006c3e5c2d4f7bc0266e7b81a1}\label{classisae_1_1_line3_d_landmark_initializer_a50f31b006c3e5c2d4f7bc0266e7b81a1}} 
+\index{isae::Line3DLandmarkInitializer@{isae::Line3DLandmarkInitializer}!Line3DLandmarkInitializer@{Line3DLandmarkInitializer}}
+\index{Line3DLandmarkInitializer@{Line3DLandmarkInitializer}!isae::Line3DLandmarkInitializer@{isae::Line3DLandmarkInitializer}}
+\doxysubsubsection{\texorpdfstring{Line3DLandmarkInitializer()}{Line3DLandmarkInitializer()}}
+{\footnotesize\ttfamily isae\+::\+Line3\+D\+Landmark\+Initializer\+::\+Line3\+D\+Landmark\+Initializer (\begin{DoxyParamCaption}\item[{uint}]{nb\+\_\+requiered\+\_\+ldmk }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classisae_1_1_line3_d_landmark_initializer_aa9a109ea766a7d6067491f48b59d14c9}\label{classisae_1_1_line3_d_landmark_initializer_aa9a109ea766a7d6067491f48b59d14c9}} 
+\index{isae::Line3DLandmarkInitializer@{isae::Line3DLandmarkInitializer}!createNewLandmark@{createNewLandmark}}
+\index{createNewLandmark@{createNewLandmark}!isae::Line3DLandmarkInitializer@{isae::Line3DLandmarkInitializer}}
+\doxysubsubsection{\texorpdfstring{createNewLandmark()}{createNewLandmark()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_landmark}{A\+Landmark}} $>$ isae\+::\+Line3\+D\+Landmark\+Initializer\+::create\+New\+Landmark (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classisae_1_1_a_landmark_initializer}{isae\+::\+A\+Landmark\+Initializer}}.
+
+\mbox{\Hypertarget{classisae_1_1_line3_d_landmark_initializer_aac7da7796b2034f4f6d36fb1bc95a3e8}\label{classisae_1_1_line3_d_landmark_initializer_aac7da7796b2034f4f6d36fb1bc95a3e8}} 
+\index{isae::Line3DLandmarkInitializer@{isae::Line3DLandmarkInitializer}!initLandmark@{initLandmark}}
+\index{initLandmark@{initLandmark}!isae::Line3DLandmarkInitializer@{isae::Line3DLandmarkInitializer}}
+\doxysubsubsection{\texorpdfstring{initLandmark()}{initLandmark()}}
+{\footnotesize\ttfamily bool isae\+::\+Line3\+D\+Landmark\+Initializer\+::init\+Landmark (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$}]{features,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_landmark}{A\+Landmark}} $>$ \&}]{landmark }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classisae_1_1_a_landmark_initializer}{isae\+::\+A\+Landmark\+Initializer}}.
+
+\mbox{\Hypertarget{classisae_1_1_line3_d_landmark_initializer_a0539eea96575803681a4f1c399dcba46}\label{classisae_1_1_line3_d_landmark_initializer_a0539eea96575803681a4f1c399dcba46}} 
+\index{isae::Line3DLandmarkInitializer@{isae::Line3DLandmarkInitializer}!initLandmarkWithDepth@{initLandmarkWithDepth}}
+\index{initLandmarkWithDepth@{initLandmarkWithDepth}!isae::Line3DLandmarkInitializer@{isae::Line3DLandmarkInitializer}}
+\doxysubsubsection{\texorpdfstring{initLandmarkWithDepth()}{initLandmarkWithDepth()}}
+{\footnotesize\ttfamily bool isae\+::\+Line3\+D\+Landmark\+Initializer\+::init\+Landmark\+With\+Depth (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$}]{features,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_landmark}{A\+Landmark}} $>$ \&}]{landmark }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classisae_1_1_a_landmark_initializer}{isae\+::\+A\+Landmark\+Initializer}}.
+
+\mbox{\Hypertarget{classisae_1_1_line3_d_landmark_initializer_af67679da2e3123d74b7208b9413536a5}\label{classisae_1_1_line3_d_landmark_initializer_af67679da2e3123d74b7208b9413536a5}} 
+\index{isae::Line3DLandmarkInitializer@{isae::Line3DLandmarkInitializer}!processOrientation@{processOrientation}}
+\index{processOrientation@{processOrientation}!isae::Line3DLandmarkInitializer@{isae::Line3DLandmarkInitializer}}
+\doxysubsubsection{\texorpdfstring{processOrientation()}{processOrientation()}}
+{\footnotesize\ttfamily Eigen\+::\+Vector3d isae\+::\+Line3\+D\+Landmark\+Initializer\+::process\+Orientation (\begin{DoxyParamCaption}\item[{std\+::vector$<$ Eigen\+::\+Vector3d $>$}]{Ns }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classisae_1_1_line3_d_landmark_initializer_a0bf06ff5cd8aba31106025e2bba0e39c}\label{classisae_1_1_line3_d_landmark_initializer_a0bf06ff5cd8aba31106025e2bba0e39c}} 
+\index{isae::Line3DLandmarkInitializer@{isae::Line3DLandmarkInitializer}!processPosition@{processPosition}}
+\index{processPosition@{processPosition}!isae::Line3DLandmarkInitializer@{isae::Line3DLandmarkInitializer}}
+\doxysubsubsection{\texorpdfstring{processPosition()}{processPosition()}}
+{\footnotesize\ttfamily Eigen\+::\+Vector3d isae\+::\+Line3\+D\+Landmark\+Initializer\+::process\+Position (\begin{DoxyParamCaption}\item[{std\+::vector$<$ Eigen\+::\+Vector3d $>$}]{Ns,  }\item[{std\+::vector$<$ Eigen\+::\+Vector3d $>$}]{Os }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classisae_1_1_line3_d_landmark_initializer_a225ddf3a1b12c7ccc455e28054cbfbc1}\label{classisae_1_1_line3_d_landmark_initializer_a225ddf3a1b12c7ccc455e28054cbfbc1}} 
+\index{isae::Line3DLandmarkInitializer@{isae::Line3DLandmarkInitializer}!processSegmentPoints@{processSegmentPoints}}
+\index{processSegmentPoints@{processSegmentPoints}!isae::Line3DLandmarkInitializer@{isae::Line3DLandmarkInitializer}}
+\doxysubsubsection{\texorpdfstring{processSegmentPoints()}{processSegmentPoints()}}
+{\footnotesize\ttfamily void isae\+::\+Line3\+D\+Landmark\+Initializer\+::process\+Segment\+Points (\begin{DoxyParamCaption}\item[{Eigen\+::\+Vector3d}]{position,  }\item[{Eigen\+::\+Vector3d}]{direction,  }\item[{std\+::vector$<$ Eigen\+::\+Vector3d $>$}]{Os,  }\item[{std\+::vector$<$ Eigen\+::\+Vector3d $>$}]{rays\+\_\+s,  }\item[{std\+::vector$<$ Eigen\+::\+Vector3d $>$}]{rays\+\_\+e,  }\item[{Eigen\+::\+Vector3d \&}]{start,  }\item[{Eigen\+::\+Vector3d \&}]{end }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/deos/ce.\+debeunne/colcon\+\_\+ws/src/\+Sa\+D\+V\+I\+O/cpp/include/isaeslam/landmarkinitializer/\mbox{\hyperlink{_line3_dlandmark_initializer_8h}{Line3\+Dlandmark\+Initializer.\+h}}\item 
+/home/deos/ce.\+debeunne/colcon\+\_\+ws/src/\+Sa\+D\+V\+I\+O/cpp/src/landmarkinitializer/\mbox{\hyperlink{_line3_dlandmark_initializer_8cpp}{Line3\+Dlandmark\+Initializer.\+cpp}}\end{DoxyCompactItemize}

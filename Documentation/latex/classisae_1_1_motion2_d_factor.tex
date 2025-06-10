@@ -1,0 +1,108 @@
+\hypertarget{classisae_1_1_motion2_d_factor}{}\doxysection{isae\+::Motion2\+D\+Factor Class Reference}
+\label{classisae_1_1_motion2_d_factor}\index{isae::Motion2DFactor@{isae::Motion2DFactor}}
+
+
+{\ttfamily \#include $<$residuals.\+hpp$>$}
+
+
+
+Inheritance diagram for isae\+::Motion2\+D\+Factor\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{classisae_1_1_motion2_d_factor__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for isae\+::Motion2\+D\+Factor\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{classisae_1_1_motion2_d_factor__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classisae_1_1_motion2_d_factor_ab485c1ac3c2b78049f6c03e59fb8ddf2}{Motion2\+D\+Factor}} (const Eigen\+::\+Vector2d motion\+\_\+2d, const Eigen\+::\+Matrix\+Xd sqrt\+\_\+inf, const double dt)
+\item 
+\mbox{\hyperlink{classisae_1_1_motion2_d_factor_aa5cda0ffa723f8876f66bc645aff32a1}{Motion2\+D\+Factor}} ()
+\item 
+virtual bool \mbox{\hyperlink{classisae_1_1_motion2_d_factor_aa46e226bec04c196362c114cbeee5509}{Evaluate}} (double const $\ast$const $\ast$parameters, double $\ast$residuals, double $\ast$$\ast$jacobians) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Eigen\+::\+Vector2d \mbox{\hyperlink{classisae_1_1_motion2_d_factor_a82ff083d821e447f7e082cac62f39909}{\+\_\+motion\+\_\+2d}}
+\item 
+Eigen\+::\+Matrix\+Xd \mbox{\hyperlink{classisae_1_1_motion2_d_factor_a3165679ff9311e8f9f56b2ab9c9dac61}{\+\_\+sqrt\+\_\+inf}}
+\item 
+double \mbox{\hyperlink{classisae_1_1_motion2_d_factor_aff78787cf9d6cf68c39d0d11901e051d}{\+\_\+dt}}
+\item 
+double \mbox{\hyperlink{classisae_1_1_motion2_d_factor_a6b835a92ce0e467062ba6428750ecc9c}{\+\_\+dx}}
+\item 
+double \mbox{\hyperlink{classisae_1_1_motion2_d_factor_ade8db41dd60981199df6f20aadcbbef9}{\+\_\+dtheta}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classisae_1_1_motion2_d_factor_ab485c1ac3c2b78049f6c03e59fb8ddf2}\label{classisae_1_1_motion2_d_factor_ab485c1ac3c2b78049f6c03e59fb8ddf2}} 
+\index{isae::Motion2DFactor@{isae::Motion2DFactor}!Motion2DFactor@{Motion2DFactor}}
+\index{Motion2DFactor@{Motion2DFactor}!isae::Motion2DFactor@{isae::Motion2DFactor}}
+\doxysubsubsection{\texorpdfstring{Motion2DFactor()}{Motion2DFactor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily isae\+::\+Motion2\+D\+Factor\+::\+Motion2\+D\+Factor (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Vector2d}]{motion\+\_\+2d,  }\item[{const Eigen\+::\+Matrix\+Xd}]{sqrt\+\_\+inf,  }\item[{const double}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_motion2_d_factor_aa5cda0ffa723f8876f66bc645aff32a1}\label{classisae_1_1_motion2_d_factor_aa5cda0ffa723f8876f66bc645aff32a1}} 
+\index{isae::Motion2DFactor@{isae::Motion2DFactor}!Motion2DFactor@{Motion2DFactor}}
+\index{Motion2DFactor@{Motion2DFactor}!isae::Motion2DFactor@{isae::Motion2DFactor}}
+\doxysubsubsection{\texorpdfstring{Motion2DFactor()}{Motion2DFactor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily isae\+::\+Motion2\+D\+Factor\+::\+Motion2\+D\+Factor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classisae_1_1_motion2_d_factor_aa46e226bec04c196362c114cbeee5509}\label{classisae_1_1_motion2_d_factor_aa46e226bec04c196362c114cbeee5509}} 
+\index{isae::Motion2DFactor@{isae::Motion2DFactor}!Evaluate@{Evaluate}}
+\index{Evaluate@{Evaluate}!isae::Motion2DFactor@{isae::Motion2DFactor}}
+\doxysubsubsection{\texorpdfstring{Evaluate()}{Evaluate()}}
+{\footnotesize\ttfamily virtual bool isae\+::\+Motion2\+D\+Factor\+::\+Evaluate (\begin{DoxyParamCaption}\item[{double const $\ast$const $\ast$}]{parameters,  }\item[{double $\ast$}]{residuals,  }\item[{double $\ast$$\ast$}]{jacobians }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classisae_1_1_motion2_d_factor_aff78787cf9d6cf68c39d0d11901e051d}\label{classisae_1_1_motion2_d_factor_aff78787cf9d6cf68c39d0d11901e051d}} 
+\index{isae::Motion2DFactor@{isae::Motion2DFactor}!\_dt@{\_dt}}
+\index{\_dt@{\_dt}!isae::Motion2DFactor@{isae::Motion2DFactor}}
+\doxysubsubsection{\texorpdfstring{\_dt}{\_dt}}
+{\footnotesize\ttfamily double isae\+::\+Motion2\+D\+Factor\+::\+\_\+dt}
+
+\mbox{\Hypertarget{classisae_1_1_motion2_d_factor_ade8db41dd60981199df6f20aadcbbef9}\label{classisae_1_1_motion2_d_factor_ade8db41dd60981199df6f20aadcbbef9}} 
+\index{isae::Motion2DFactor@{isae::Motion2DFactor}!\_dtheta@{\_dtheta}}
+\index{\_dtheta@{\_dtheta}!isae::Motion2DFactor@{isae::Motion2DFactor}}
+\doxysubsubsection{\texorpdfstring{\_dtheta}{\_dtheta}}
+{\footnotesize\ttfamily double isae\+::\+Motion2\+D\+Factor\+::\+\_\+dtheta}
+
+\mbox{\Hypertarget{classisae_1_1_motion2_d_factor_a6b835a92ce0e467062ba6428750ecc9c}\label{classisae_1_1_motion2_d_factor_a6b835a92ce0e467062ba6428750ecc9c}} 
+\index{isae::Motion2DFactor@{isae::Motion2DFactor}!\_dx@{\_dx}}
+\index{\_dx@{\_dx}!isae::Motion2DFactor@{isae::Motion2DFactor}}
+\doxysubsubsection{\texorpdfstring{\_dx}{\_dx}}
+{\footnotesize\ttfamily double isae\+::\+Motion2\+D\+Factor\+::\+\_\+dx}
+
+\mbox{\Hypertarget{classisae_1_1_motion2_d_factor_a82ff083d821e447f7e082cac62f39909}\label{classisae_1_1_motion2_d_factor_a82ff083d821e447f7e082cac62f39909}} 
+\index{isae::Motion2DFactor@{isae::Motion2DFactor}!\_motion\_2d@{\_motion\_2d}}
+\index{\_motion\_2d@{\_motion\_2d}!isae::Motion2DFactor@{isae::Motion2DFactor}}
+\doxysubsubsection{\texorpdfstring{\_motion\_2d}{\_motion\_2d}}
+{\footnotesize\ttfamily Eigen\+::\+Vector2d isae\+::\+Motion2\+D\+Factor\+::\+\_\+motion\+\_\+2d}
+
+\mbox{\Hypertarget{classisae_1_1_motion2_d_factor_a3165679ff9311e8f9f56b2ab9c9dac61}\label{classisae_1_1_motion2_d_factor_a3165679ff9311e8f9f56b2ab9c9dac61}} 
+\index{isae::Motion2DFactor@{isae::Motion2DFactor}!\_sqrt\_inf@{\_sqrt\_inf}}
+\index{\_sqrt\_inf@{\_sqrt\_inf}!isae::Motion2DFactor@{isae::Motion2DFactor}}
+\doxysubsubsection{\texorpdfstring{\_sqrt\_inf}{\_sqrt\_inf}}
+{\footnotesize\ttfamily Eigen\+::\+Matrix\+Xd isae\+::\+Motion2\+D\+Factor\+::\+\_\+sqrt\+\_\+inf}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/deos/ce.\+debeunne/colcon\+\_\+ws/src/\+Sa\+D\+V\+I\+O/cpp/include/isaeslam/optimizers/\mbox{\hyperlink{residuals_8hpp}{residuals.\+hpp}}\end{DoxyCompactItemize}

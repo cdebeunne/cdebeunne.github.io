@@ -1,0 +1,96 @@
+\hypertarget{classisae_1_1_csv_keypoint_detector}{}\doxysection{isae\+::Csv\+Keypoint\+Detector Class Reference}
+\label{classisae_1_1_csv_keypoint_detector}\index{isae::CsvKeypointDetector@{isae::CsvKeypointDetector}}
+
+
+{\ttfamily \#include $<$csv\+Keypoint\+Detector.\+h$>$}
+
+
+
+Inheritance diagram for isae\+::Csv\+Keypoint\+Detector\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{classisae_1_1_csv_keypoint_detector__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for isae\+::Csv\+Keypoint\+Detector\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{classisae_1_1_csv_keypoint_detector__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classisae_1_1_csv_keypoint_detector_a9832b70f8acbe514f761b40b10713fa9}{Csv\+Keypoint\+Detector}} (int n, int n\+\_\+per\+\_\+cell, double max\+\_\+matching\+\_\+dist=64)
+\item 
+void \mbox{\hyperlink{classisae_1_1_csv_keypoint_detector_a04e15d6173184c6427d6f0c4e0e6b889}{custom\+Detect\+And\+Compute}} (const cv\+::\+Mat \&img, const cv\+::\+Mat \&mask, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$ \&features) override
+\item 
+void \mbox{\hyperlink{classisae_1_1_csv_keypoint_detector_a9586c6a923a94b31e8f5f6c289c08d29}{compute\+Descriptor}} (const cv\+::\+Mat \&img, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$ \&features) override
+\item 
+void \mbox{\hyperlink{classisae_1_1_csv_keypoint_detector_afab4b5cf20b77987af3f6b26796500cb}{init}} () override
+\item 
+double \mbox{\hyperlink{classisae_1_1_csv_keypoint_detector_a0d01403d378bf81ac439af588c611822}{get\+Dist}} (const cv\+::\+Mat \&desc1, const cv\+::\+Mat \&desc2) const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classisae_1_1_csv_keypoint_detector_a9832b70f8acbe514f761b40b10713fa9}\label{classisae_1_1_csv_keypoint_detector_a9832b70f8acbe514f761b40b10713fa9}} 
+\index{isae::CsvKeypointDetector@{isae::CsvKeypointDetector}!CsvKeypointDetector@{CsvKeypointDetector}}
+\index{CsvKeypointDetector@{CsvKeypointDetector}!isae::CsvKeypointDetector@{isae::CsvKeypointDetector}}
+\doxysubsubsection{\texorpdfstring{CsvKeypointDetector()}{CsvKeypointDetector()}}
+{\footnotesize\ttfamily isae\+::\+Csv\+Keypoint\+Detector\+::\+Csv\+Keypoint\+Detector (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{int}]{n\+\_\+per\+\_\+cell,  }\item[{double}]{max\+\_\+matching\+\_\+dist = {\ttfamily 64} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classisae_1_1_csv_keypoint_detector_a9586c6a923a94b31e8f5f6c289c08d29}\label{classisae_1_1_csv_keypoint_detector_a9586c6a923a94b31e8f5f6c289c08d29}} 
+\index{isae::CsvKeypointDetector@{isae::CsvKeypointDetector}!computeDescriptor@{computeDescriptor}}
+\index{computeDescriptor@{computeDescriptor}!isae::CsvKeypointDetector@{isae::CsvKeypointDetector}}
+\doxysubsubsection{\texorpdfstring{computeDescriptor()}{computeDescriptor()}}
+{\footnotesize\ttfamily void isae\+::\+Csv\+Keypoint\+Detector\+::compute\+Descriptor (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{img,  }\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$ \&}]{features }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classisae_1_1_a_custom_feature_detector_a3c37409af9d97037dbbc4677127879e2}{isae\+::\+A\+Custom\+Feature\+Detector}}.
+
+\mbox{\Hypertarget{classisae_1_1_csv_keypoint_detector_a04e15d6173184c6427d6f0c4e0e6b889}\label{classisae_1_1_csv_keypoint_detector_a04e15d6173184c6427d6f0c4e0e6b889}} 
+\index{isae::CsvKeypointDetector@{isae::CsvKeypointDetector}!customDetectAndCompute@{customDetectAndCompute}}
+\index{customDetectAndCompute@{customDetectAndCompute}!isae::CsvKeypointDetector@{isae::CsvKeypointDetector}}
+\doxysubsubsection{\texorpdfstring{customDetectAndCompute()}{customDetectAndCompute()}}
+{\footnotesize\ttfamily void isae\+::\+Csv\+Keypoint\+Detector\+::custom\+Detect\+And\+Compute (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{img,  }\item[{const cv\+::\+Mat \&}]{mask,  }\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$ \&}]{features }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classisae_1_1_a_custom_feature_detector_a53cf8fa55bfed8a81e4c1b72c4d16518}{isae\+::\+A\+Custom\+Feature\+Detector}}.
+
+\mbox{\Hypertarget{classisae_1_1_csv_keypoint_detector_a0d01403d378bf81ac439af588c611822}\label{classisae_1_1_csv_keypoint_detector_a0d01403d378bf81ac439af588c611822}} 
+\index{isae::CsvKeypointDetector@{isae::CsvKeypointDetector}!getDist@{getDist}}
+\index{getDist@{getDist}!isae::CsvKeypointDetector@{isae::CsvKeypointDetector}}
+\doxysubsubsection{\texorpdfstring{getDist()}{getDist()}}
+{\footnotesize\ttfamily double isae\+::\+Csv\+Keypoint\+Detector\+::get\+Dist (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{desc1,  }\item[{const cv\+::\+Mat \&}]{desc2 }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classisae_1_1_a_feature_detector_ad59496a4d75c886d38c61ef258958cd9}{isae\+::\+A\+Feature\+Detector}}.
+
+\mbox{\Hypertarget{classisae_1_1_csv_keypoint_detector_afab4b5cf20b77987af3f6b26796500cb}\label{classisae_1_1_csv_keypoint_detector_afab4b5cf20b77987af3f6b26796500cb}} 
+\index{isae::CsvKeypointDetector@{isae::CsvKeypointDetector}!init@{init}}
+\index{init@{init}!isae::CsvKeypointDetector@{isae::CsvKeypointDetector}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void isae\+::\+Csv\+Keypoint\+Detector\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classisae_1_1_a_feature_detector_a3c92c62951b8003db8428af449830850}{isae\+::\+A\+Feature\+Detector}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/deos/ce.\+debeunne/colcon\+\_\+ws/src/\+Sa\+D\+V\+I\+O/cpp/include/isaeslam/featuredetectors/custom\+\_\+detectors/\mbox{\hyperlink{csv_keypoint_detector_8h}{csv\+Keypoint\+Detector.\+h}}\item 
+/home/deos/ce.\+debeunne/colcon\+\_\+ws/src/\+Sa\+D\+V\+I\+O/cpp/src/featuredetectors/custom\+\_\+detectors/\mbox{\hyperlink{csv_keypoint_detector_8cpp}{csv\+Keypoint\+Detector.\+cpp}}\end{DoxyCompactItemize}

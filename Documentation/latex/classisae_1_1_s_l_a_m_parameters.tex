@@ -1,0 +1,116 @@
+\hypertarget{classisae_1_1_s_l_a_m_parameters}{}\doxysection{isae\+::S\+L\+A\+M\+Parameters Class Reference}
+\label{classisae_1_1_s_l_a_m_parameters}\index{isae::SLAMParameters@{isae::SLAMParameters}}
+
+
+{\ttfamily \#include $<$slam\+Parameters.\+h$>$}
+
+
+
+Collaboration diagram for isae\+::S\+L\+A\+M\+Parameters\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=207pt]{classisae_1_1_s_l_a_m_parameters__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classisae_1_1_s_l_a_m_parameters_a69f6583a607f2feeff71ea4f38658bb9}{S\+L\+A\+M\+Parameters}} (const std\+::string config\+\_\+file)
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_data_provider}{A\+Data\+Provider}} $>$ \mbox{\hyperlink{classisae_1_1_s_l_a_m_parameters_a8000025a64fd647a9f3c02047fb0e2a1}{get\+Data\+Provider}} ()
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature_detector}{A\+Feature\+Detector}} $>$ $>$ \mbox{\hyperlink{classisae_1_1_s_l_a_m_parameters_a5027a5515424cc32e57cf602bf9964eb}{get\+Feature\+Detectors}} ()
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{structisae_1_1_feature_tracker_struct}{Feature\+Tracker\+Struct}} $>$ \mbox{\hyperlink{classisae_1_1_s_l_a_m_parameters_a3d2366fb474c2c4cfba823cb5356d6c1}{get\+Feature\+Trackers}} ()
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{structisae_1_1_feature_matcher_struct}{Feature\+Matcher\+Struct}} $>$ \mbox{\hyperlink{classisae_1_1_s_l_a_m_parameters_a5d89d7b0ba250c000986a39dbc071d7a}{get\+Feature\+Matchers}} ()
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_landmark_initializer}{A\+Landmark\+Initializer}} $>$ $>$ \mbox{\hyperlink{classisae_1_1_s_l_a_m_parameters_a6b95f4a714026f800e1682366688a486}{get\+Landmarks\+Initializer}} ()
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_pose_estimator}{A\+Pose\+Estimator}} $>$ \mbox{\hyperlink{classisae_1_1_s_l_a_m_parameters_a7a440eb498127822c1217b0108f56dd5}{get\+Pose\+Estimator}} ()
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_optimizer}{A\+Optimizer}} $>$ \mbox{\hyperlink{classisae_1_1_s_l_a_m_parameters_a004d5533484911160578ead162778de0}{get\+Optimizer\+Front}} ()
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_optimizer}{A\+Optimizer}} $>$ \mbox{\hyperlink{classisae_1_1_s_l_a_m_parameters_a31427cb7d9ced07af2824c3bff823f80}{get\+Optimizer\+Back}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structisae_1_1_config}{isae\+::\+Config}} \mbox{\hyperlink{classisae_1_1_s_l_a_m_parameters_a8c95d65757a932415d20e0e805256098}{\+\_\+config}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classisae_1_1_s_l_a_m_parameters_a69f6583a607f2feeff71ea4f38658bb9}\label{classisae_1_1_s_l_a_m_parameters_a69f6583a607f2feeff71ea4f38658bb9}} 
+\index{isae::SLAMParameters@{isae::SLAMParameters}!SLAMParameters@{SLAMParameters}}
+\index{SLAMParameters@{SLAMParameters}!isae::SLAMParameters@{isae::SLAMParameters}}
+\doxysubsubsection{\texorpdfstring{SLAMParameters()}{SLAMParameters()}}
+{\footnotesize\ttfamily isae\+::\+S\+L\+A\+M\+Parameters\+::\+S\+L\+A\+M\+Parameters (\begin{DoxyParamCaption}\item[{const std\+::string}]{config\+\_\+file }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classisae_1_1_s_l_a_m_parameters_a8000025a64fd647a9f3c02047fb0e2a1}\label{classisae_1_1_s_l_a_m_parameters_a8000025a64fd647a9f3c02047fb0e2a1}} 
+\index{isae::SLAMParameters@{isae::SLAMParameters}!getDataProvider@{getDataProvider}}
+\index{getDataProvider@{getDataProvider}!isae::SLAMParameters@{isae::SLAMParameters}}
+\doxysubsubsection{\texorpdfstring{getDataProvider()}{getDataProvider()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classisae_1_1_a_data_provider}{A\+Data\+Provider}}$>$ isae\+::\+S\+L\+A\+M\+Parameters\+::get\+Data\+Provider (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_s_l_a_m_parameters_a5027a5515424cc32e57cf602bf9964eb}\label{classisae_1_1_s_l_a_m_parameters_a5027a5515424cc32e57cf602bf9964eb}} 
+\index{isae::SLAMParameters@{isae::SLAMParameters}!getFeatureDetectors@{getFeatureDetectors}}
+\index{getFeatureDetectors@{getFeatureDetectors}!isae::SLAMParameters@{isae::SLAMParameters}}
+\doxysubsubsection{\texorpdfstring{getFeatureDetectors()}{getFeatureDetectors()}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classisae_1_1_a_feature_detector}{A\+Feature\+Detector}}$>$ $>$ isae\+::\+S\+L\+A\+M\+Parameters\+::get\+Feature\+Detectors (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_s_l_a_m_parameters_a5d89d7b0ba250c000986a39dbc071d7a}\label{classisae_1_1_s_l_a_m_parameters_a5d89d7b0ba250c000986a39dbc071d7a}} 
+\index{isae::SLAMParameters@{isae::SLAMParameters}!getFeatureMatchers@{getFeatureMatchers}}
+\index{getFeatureMatchers@{getFeatureMatchers}!isae::SLAMParameters@{isae::SLAMParameters}}
+\doxysubsubsection{\texorpdfstring{getFeatureMatchers()}{getFeatureMatchers()}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, \mbox{\hyperlink{structisae_1_1_feature_matcher_struct}{Feature\+Matcher\+Struct}}$>$ isae\+::\+S\+L\+A\+M\+Parameters\+::get\+Feature\+Matchers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_s_l_a_m_parameters_a3d2366fb474c2c4cfba823cb5356d6c1}\label{classisae_1_1_s_l_a_m_parameters_a3d2366fb474c2c4cfba823cb5356d6c1}} 
+\index{isae::SLAMParameters@{isae::SLAMParameters}!getFeatureTrackers@{getFeatureTrackers}}
+\index{getFeatureTrackers@{getFeatureTrackers}!isae::SLAMParameters@{isae::SLAMParameters}}
+\doxysubsubsection{\texorpdfstring{getFeatureTrackers()}{getFeatureTrackers()}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, \mbox{\hyperlink{structisae_1_1_feature_tracker_struct}{Feature\+Tracker\+Struct}}$>$ isae\+::\+S\+L\+A\+M\+Parameters\+::get\+Feature\+Trackers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_s_l_a_m_parameters_a6b95f4a714026f800e1682366688a486}\label{classisae_1_1_s_l_a_m_parameters_a6b95f4a714026f800e1682366688a486}} 
+\index{isae::SLAMParameters@{isae::SLAMParameters}!getLandmarksInitializer@{getLandmarksInitializer}}
+\index{getLandmarksInitializer@{getLandmarksInitializer}!isae::SLAMParameters@{isae::SLAMParameters}}
+\doxysubsubsection{\texorpdfstring{getLandmarksInitializer()}{getLandmarksInitializer()}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classisae_1_1_a_landmark_initializer}{A\+Landmark\+Initializer}}$>$ $>$ isae\+::\+S\+L\+A\+M\+Parameters\+::get\+Landmarks\+Initializer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_s_l_a_m_parameters_a31427cb7d9ced07af2824c3bff823f80}\label{classisae_1_1_s_l_a_m_parameters_a31427cb7d9ced07af2824c3bff823f80}} 
+\index{isae::SLAMParameters@{isae::SLAMParameters}!getOptimizerBack@{getOptimizerBack}}
+\index{getOptimizerBack@{getOptimizerBack}!isae::SLAMParameters@{isae::SLAMParameters}}
+\doxysubsubsection{\texorpdfstring{getOptimizerBack()}{getOptimizerBack()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classisae_1_1_a_optimizer}{A\+Optimizer}}$>$ isae\+::\+S\+L\+A\+M\+Parameters\+::get\+Optimizer\+Back (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_s_l_a_m_parameters_a004d5533484911160578ead162778de0}\label{classisae_1_1_s_l_a_m_parameters_a004d5533484911160578ead162778de0}} 
+\index{isae::SLAMParameters@{isae::SLAMParameters}!getOptimizerFront@{getOptimizerFront}}
+\index{getOptimizerFront@{getOptimizerFront}!isae::SLAMParameters@{isae::SLAMParameters}}
+\doxysubsubsection{\texorpdfstring{getOptimizerFront()}{getOptimizerFront()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classisae_1_1_a_optimizer}{A\+Optimizer}}$>$ isae\+::\+S\+L\+A\+M\+Parameters\+::get\+Optimizer\+Front (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_s_l_a_m_parameters_a7a440eb498127822c1217b0108f56dd5}\label{classisae_1_1_s_l_a_m_parameters_a7a440eb498127822c1217b0108f56dd5}} 
+\index{isae::SLAMParameters@{isae::SLAMParameters}!getPoseEstimator@{getPoseEstimator}}
+\index{getPoseEstimator@{getPoseEstimator}!isae::SLAMParameters@{isae::SLAMParameters}}
+\doxysubsubsection{\texorpdfstring{getPoseEstimator()}{getPoseEstimator()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classisae_1_1_a_pose_estimator}{A\+Pose\+Estimator}}$>$ isae\+::\+S\+L\+A\+M\+Parameters\+::get\+Pose\+Estimator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classisae_1_1_s_l_a_m_parameters_a8c95d65757a932415d20e0e805256098}\label{classisae_1_1_s_l_a_m_parameters_a8c95d65757a932415d20e0e805256098}} 
+\index{isae::SLAMParameters@{isae::SLAMParameters}!\_config@{\_config}}
+\index{\_config@{\_config}!isae::SLAMParameters@{isae::SLAMParameters}}
+\doxysubsubsection{\texorpdfstring{\_config}{\_config}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structisae_1_1_config}{isae\+::\+Config}} isae\+::\+S\+L\+A\+M\+Parameters\+::\+\_\+config}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/deos/ce.\+debeunne/colcon\+\_\+ws/src/\+Sa\+D\+V\+I\+O/cpp/include/isaeslam/\mbox{\hyperlink{slam_parameters_8h}{slam\+Parameters.\+h}}\item 
+/home/deos/ce.\+debeunne/colcon\+\_\+ws/src/\+Sa\+D\+V\+I\+O/cpp/src/\mbox{\hyperlink{slam_parameters_8cpp}{slam\+Parameters.\+cpp}}\end{DoxyCompactItemize}

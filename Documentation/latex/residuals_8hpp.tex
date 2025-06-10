@@ -1,0 +1,56 @@
+\hypertarget{residuals_8hpp}{}\doxysection{/home/deos/ce.debeunne/colcon\+\_\+ws/src/\+Sa\+D\+V\+I\+O/cpp/include/isaeslam/optimizers/residuals.hpp File Reference}
+\label{residuals_8hpp}\index{/home/deos/ce.debeunne/colcon\_ws/src/SaDVIO/cpp/include/isaeslam/optimizers/residuals.hpp@{/home/deos/ce.debeunne/colcon\_ws/src/SaDVIO/cpp/include/isaeslam/optimizers/residuals.hpp}}
+{\ttfamily \#include \char`\"{}isaeslam/data/sensors/\+Camera.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}isaeslam/data/sensors/\+I\+M\+U.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$ceres/ceres.\+h$>$}\newline
+Include dependency graph for residuals.\+hpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{residuals_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{residuals_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classisae_1_1_motion2_d_factor}{isae\+::\+Motion2\+D\+Factor}}
+\item 
+class \mbox{\hyperlink{classisae_1_1_relative6_d_pose}{isae\+::\+Relative6\+D\+Pose}}
+\item 
+class \mbox{\hyperlink{classisae_1_1_i_m_u_factor}{isae\+::\+I\+M\+U\+Factor}}
+\item 
+class \mbox{\hyperlink{classisae_1_1_i_m_u_bias_factor}{isae\+::\+I\+M\+U\+Bias\+Factor}}
+\item 
+class \mbox{\hyperlink{classisae_1_1_i_m_u_factor_init}{isae\+::\+I\+M\+U\+Factor\+Init}}
+\item 
+class \mbox{\hyperlink{classisae_1_1_i_m_u_factor_init_bis}{isae\+::\+I\+M\+U\+Factor\+Init\+Bis}}
+\item 
+class \mbox{\hyperlink{classisae_1_1_landmark3_d_prior}{isae\+::\+Landmark3\+D\+Prior}}
+\item 
+class \mbox{\hyperlink{classisae_1_1_landmark_to_landmark_factor}{isae\+::\+Landmark\+To\+Landmark\+Factor}}
+\item 
+class \mbox{\hyperlink{classisae_1_1_pose_to_landmark_factor}{isae\+::\+Pose\+To\+Landmark\+Factor}}
+\item 
+class \mbox{\hyperlink{classisae_1_1_pose_priordx}{isae\+::\+Pose\+Priordx}}
+\item 
+class \mbox{\hyperlink{classisae_1_1_i_m_u_priordx}{isae\+::\+I\+M\+U\+Priordx}}
+\item 
+class \mbox{\hyperlink{classisae_1_1scale_prior}{isae\+::scale\+Prior}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceisae}{isae}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{namespaceisae_add54039bc53fc227f5b68a6edd2f46ee}{isae\+::linexd\+Reprojection\+Error}} (const Eigen\+::\+Affine3d T\+\_\+w\+\_\+lmk, const std\+::shared\+\_\+ptr$<$ A\+Model3d $>$ model3d, const Eigen\+::\+Vector3d \&scale, const Eigen\+::\+Affine3d \&T\+\_\+s\+\_\+w, const std\+::shared\+\_\+ptr$<$ Image\+Sensor $>$ cam, const std\+::vector$<$ Eigen\+::\+Vector2d $>$ \&p2d, double $\ast$residual)
+\end{DoxyCompactItemize}

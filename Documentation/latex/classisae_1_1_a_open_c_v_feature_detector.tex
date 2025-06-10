@@ -1,0 +1,118 @@
+\hypertarget{classisae_1_1_a_open_c_v_feature_detector}{}\doxysection{isae\+::A\+Open\+C\+V\+Feature\+Detector Class Reference}
+\label{classisae_1_1_a_open_c_v_feature_detector}\index{isae::AOpenCVFeatureDetector@{isae::AOpenCVFeatureDetector}}
+
+
+{\ttfamily \#include $<$a\+Open\+C\+V\+Feature\+Detector.\+h$>$}
+
+
+
+Inheritance diagram for isae\+::A\+Open\+C\+V\+Feature\+Detector\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classisae_1_1_a_open_c_v_feature_detector__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for isae\+::A\+Open\+C\+V\+Feature\+Detector\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=247pt]{classisae_1_1_a_open_c_v_feature_detector__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classisae_1_1_a_open_c_v_feature_detector_a3fafc8e14954b4d69f2a2fdc9e82ecab}{A\+Open\+C\+V\+Feature\+Detector}} (int n, int n\+\_\+per\+\_\+cell)
+\item 
+void \mbox{\hyperlink{classisae_1_1_a_open_c_v_feature_detector_a3affc6ff6dbb3b2c2e862a9c64ed24e4}{detect\+And\+Compute}} (const cv\+::\+Mat \&img, const cv\+::\+Mat \&mask, std\+::vector$<$ cv\+::\+Key\+Point $>$ \&keypoints, cv\+::\+Mat \&descriptors, int n\+\_\+points=0)
+\item 
+void \mbox{\hyperlink{classisae_1_1_a_open_c_v_feature_detector_a6745a7c3da57cb038f32f1220b44b86c}{compute\+Descriptor}} (const cv\+::\+Mat \&img, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$ \&features)
+\item 
+void \mbox{\hyperlink{classisae_1_1_a_open_c_v_feature_detector_aa13a3c33f2e9c0c0ba9262f6999e9afd}{retain\+Best}} (std\+::vector$<$ cv\+::\+Key\+Point $>$ \&\+\_\+keypoints, int n)
+\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$ $>$ \mbox{\hyperlink{classisae_1_1_a_open_c_v_feature_detector_a9392ff264585ce082aec6162073fdf18}{detect\+And\+Compute\+Grid}} (const cv\+::\+Mat \&img, const cv\+::\+Mat \&mask, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$ existing\+\_\+features=std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$())
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+cv\+::\+Ptr$<$ cv\+::\+Feature\+Detector $>$ \mbox{\hyperlink{classisae_1_1_a_open_c_v_feature_detector_a5485e07489af94321cf2996230dd657d}{\+\_\+detector}}
+\item 
+cv\+::\+Ptr$<$ cv\+::\+Descriptor\+Extractor $>$ \mbox{\hyperlink{classisae_1_1_a_open_c_v_feature_detector_a5abdc357e397b4c39829e209ebfe927b}{\+\_\+descriptor}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classisae_1_1_a_open_c_v_feature_detector_a3fafc8e14954b4d69f2a2fdc9e82ecab}\label{classisae_1_1_a_open_c_v_feature_detector_a3fafc8e14954b4d69f2a2fdc9e82ecab}} 
+\index{isae::AOpenCVFeatureDetector@{isae::AOpenCVFeatureDetector}!AOpenCVFeatureDetector@{AOpenCVFeatureDetector}}
+\index{AOpenCVFeatureDetector@{AOpenCVFeatureDetector}!isae::AOpenCVFeatureDetector@{isae::AOpenCVFeatureDetector}}
+\doxysubsubsection{\texorpdfstring{AOpenCVFeatureDetector()}{AOpenCVFeatureDetector()}}
+{\footnotesize\ttfamily isae\+::\+A\+Open\+C\+V\+Feature\+Detector\+::\+A\+Open\+C\+V\+Feature\+Detector (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{int}]{n\+\_\+per\+\_\+cell }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classisae_1_1_a_open_c_v_feature_detector_a6745a7c3da57cb038f32f1220b44b86c}\label{classisae_1_1_a_open_c_v_feature_detector_a6745a7c3da57cb038f32f1220b44b86c}} 
+\index{isae::AOpenCVFeatureDetector@{isae::AOpenCVFeatureDetector}!computeDescriptor@{computeDescriptor}}
+\index{computeDescriptor@{computeDescriptor}!isae::AOpenCVFeatureDetector@{isae::AOpenCVFeatureDetector}}
+\doxysubsubsection{\texorpdfstring{computeDescriptor()}{computeDescriptor()}}
+{\footnotesize\ttfamily void isae\+::\+A\+Open\+C\+V\+Feature\+Detector\+::compute\+Descriptor (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{img,  }\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$ \&}]{features }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classisae_1_1_a_feature_detector_a1c1d096dc988a4b91c67f5705dfce437}{isae\+::\+A\+Feature\+Detector}}.
+
+\mbox{\Hypertarget{classisae_1_1_a_open_c_v_feature_detector_a3affc6ff6dbb3b2c2e862a9c64ed24e4}\label{classisae_1_1_a_open_c_v_feature_detector_a3affc6ff6dbb3b2c2e862a9c64ed24e4}} 
+\index{isae::AOpenCVFeatureDetector@{isae::AOpenCVFeatureDetector}!detectAndCompute@{detectAndCompute}}
+\index{detectAndCompute@{detectAndCompute}!isae::AOpenCVFeatureDetector@{isae::AOpenCVFeatureDetector}}
+\doxysubsubsection{\texorpdfstring{detectAndCompute()}{detectAndCompute()}}
+{\footnotesize\ttfamily void isae\+::\+A\+Open\+C\+V\+Feature\+Detector\+::detect\+And\+Compute (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{img,  }\item[{const cv\+::\+Mat \&}]{mask,  }\item[{std\+::vector$<$ cv\+::\+Key\+Point $>$ \&}]{keypoints,  }\item[{cv\+::\+Mat \&}]{descriptors,  }\item[{int}]{n\+\_\+points = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classisae_1_1_a_feature_detector_ac969a8bbf6b0391dde2349a38e12bfec}{isae\+::\+A\+Feature\+Detector}}.
+
+\mbox{\Hypertarget{classisae_1_1_a_open_c_v_feature_detector_a9392ff264585ce082aec6162073fdf18}\label{classisae_1_1_a_open_c_v_feature_detector_a9392ff264585ce082aec6162073fdf18}} 
+\index{isae::AOpenCVFeatureDetector@{isae::AOpenCVFeatureDetector}!detectAndComputeGrid@{detectAndComputeGrid}}
+\index{detectAndComputeGrid@{detectAndComputeGrid}!isae::AOpenCVFeatureDetector@{isae::AOpenCVFeatureDetector}}
+\doxysubsubsection{\texorpdfstring{detectAndComputeGrid()}{detectAndComputeGrid()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$ $>$ isae\+::\+A\+Open\+C\+V\+Feature\+Detector\+::detect\+And\+Compute\+Grid (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{img,  }\item[{const cv\+::\+Mat \&}]{mask,  }\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$}]{existing\+\_\+features = {\ttfamily std\+:\+:vector$<$std\+:\+:shared\+\_\+ptr$<$\mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}}$>$$>$()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classisae_1_1_a_feature_detector_a821f4dfb0b50649ae737319a1ed1fe07}{isae\+::\+A\+Feature\+Detector}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classisae_1_1cv_g_f_t_t_feature_detector_ad8fac5dc9b52e2a938d6277784a91ae7}{isae\+::cv\+G\+F\+T\+T\+Feature\+Detector}}.
+
+\mbox{\Hypertarget{classisae_1_1_a_open_c_v_feature_detector_aa13a3c33f2e9c0c0ba9262f6999e9afd}\label{classisae_1_1_a_open_c_v_feature_detector_aa13a3c33f2e9c0c0ba9262f6999e9afd}} 
+\index{isae::AOpenCVFeatureDetector@{isae::AOpenCVFeatureDetector}!retainBest@{retainBest}}
+\index{retainBest@{retainBest}!isae::AOpenCVFeatureDetector@{isae::AOpenCVFeatureDetector}}
+\doxysubsubsection{\texorpdfstring{retainBest()}{retainBest()}}
+{\footnotesize\ttfamily void isae\+::\+A\+Open\+C\+V\+Feature\+Detector\+::retain\+Best (\begin{DoxyParamCaption}\item[{std\+::vector$<$ cv\+::\+Key\+Point $>$ \&}]{\+\_\+keypoints,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classisae_1_1_a_open_c_v_feature_detector_a5abdc357e397b4c39829e209ebfe927b}\label{classisae_1_1_a_open_c_v_feature_detector_a5abdc357e397b4c39829e209ebfe927b}} 
+\index{isae::AOpenCVFeatureDetector@{isae::AOpenCVFeatureDetector}!\_descriptor@{\_descriptor}}
+\index{\_descriptor@{\_descriptor}!isae::AOpenCVFeatureDetector@{isae::AOpenCVFeatureDetector}}
+\doxysubsubsection{\texorpdfstring{\_descriptor}{\_descriptor}}
+{\footnotesize\ttfamily cv\+::\+Ptr$<$cv\+::\+Descriptor\+Extractor$>$ isae\+::\+A\+Open\+C\+V\+Feature\+Detector\+::\+\_\+descriptor\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classisae_1_1_a_open_c_v_feature_detector_a5485e07489af94321cf2996230dd657d}\label{classisae_1_1_a_open_c_v_feature_detector_a5485e07489af94321cf2996230dd657d}} 
+\index{isae::AOpenCVFeatureDetector@{isae::AOpenCVFeatureDetector}!\_detector@{\_detector}}
+\index{\_detector@{\_detector}!isae::AOpenCVFeatureDetector@{isae::AOpenCVFeatureDetector}}
+\doxysubsubsection{\texorpdfstring{\_detector}{\_detector}}
+{\footnotesize\ttfamily cv\+::\+Ptr$<$cv\+::\+Feature\+Detector$>$ isae\+::\+A\+Open\+C\+V\+Feature\+Detector\+::\+\_\+detector\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/deos/ce.\+debeunne/colcon\+\_\+ws/src/\+Sa\+D\+V\+I\+O/cpp/include/isaeslam/featuredetectors/\mbox{\hyperlink{a_open_c_v_feature_detector_8h}{a\+Open\+C\+V\+Feature\+Detector.\+h}}\item 
+/home/deos/ce.\+debeunne/colcon\+\_\+ws/src/\+Sa\+D\+V\+I\+O/cpp/src/featuredetectors/\mbox{\hyperlink{a_open_c_v_feature_detector_8cpp}{a\+Open\+C\+V\+Feature\+Detector.\+cpp}}\end{DoxyCompactItemize}

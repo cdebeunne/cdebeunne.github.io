@@ -1,0 +1,28 @@
+\hypertarget{_e_s_k_f_estimator_8cpp}{}\doxysection{/home/deos/ce.debeunne/colcon\+\_\+ws/src/\+Sa\+D\+V\+I\+O/cpp/src/estimator/\+E\+S\+K\+F\+Estimator.cpp File Reference}
+\label{_e_s_k_f_estimator_8cpp}\index{/home/deos/ce.debeunne/colcon\_ws/src/SaDVIO/cpp/src/estimator/ESKFEstimator.cpp@{/home/deos/ce.debeunne/colcon\_ws/src/SaDVIO/cpp/src/estimator/ESKFEstimator.cpp}}
+{\ttfamily \#include \char`\"{}isaeslam/estimator/\+E\+S\+K\+F\+Estimator.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}isaeslam/data/sensors/\+Camera.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}isaeslam/data/sensors/\+I\+M\+U.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}utilities/geometry.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+Include dependency graph for E\+S\+K\+F\+Estimator.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_e_s_k_f_estimator_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceisae}{isae}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Eigen\+::\+Matrix\+Xd \mbox{\hyperlink{namespaceisae_a607a6ab457f5219b7cdc9029620cc59f}{isae\+::jac\+\_\+homogeneous}} (const Eigen\+::\+Vector3d \&point)
+\item 
+Eigen\+::\+Matrix\+Xd \mbox{\hyperlink{namespaceisae_ae17c08126acac751040c82a723df7d5d}{isae\+::jac\+\_\+delta\+\_\+update}} (const Eigen\+::\+Vector3d \&dtheta, const Eigen\+::\+Matrix3d \&rotation)
+\item 
+std\+::tuple$<$ Eigen\+::\+Vector2d, Eigen\+::\+Matrix\+Xd, Eigen\+::\+Matrix\+Xd $>$ \mbox{\hyperlink{namespaceisae_a5356e7ad01ed6ff31743a63e307bb88d}{isae\+::jac\+\_\+projection}} (const Eigen\+::\+Matrix3d \&camera\+\_\+matrix, const Eigen\+::\+Vector3d \&point\+\_\+3d, const Eigen\+::\+Matrix3d \&rotation, const Eigen\+::\+Vector3d \&translation, const Eigen\+::\+Vector3d \&dtheta)
+\end{DoxyCompactItemize}

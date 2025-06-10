@@ -1,0 +1,129 @@
+\hypertarget{structupm_1_1_e_l_s_e_d_params}{}\doxysection{upm\+::E\+L\+S\+E\+D\+Params Struct Reference}
+\label{structupm_1_1_e_l_s_e_d_params}\index{upm::ELSEDParams@{upm::ELSEDParams}}
+
+
+{\ttfamily \#include $<$E\+L\+S\+E\+D.\+h$>$}
+
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{structupm_1_1_e_l_s_e_d_params_ae43139e5c9d0e46cab92969127e5cf1f}{ksize}} = 5
+\item 
+float \mbox{\hyperlink{structupm_1_1_e_l_s_e_d_params_ac02192926cfe0e333ee3808fca4c2b65}{sigma}} = 1
+\item 
+float \mbox{\hyperlink{structupm_1_1_e_l_s_e_d_params_a4e4d0d8be2cd87ded2a201fc1b5ece4f}{gradient\+Threshold}} = 30
+\item 
+uint8\+\_\+t \mbox{\hyperlink{structupm_1_1_e_l_s_e_d_params_a0470cd83f028581eaa8880bffaa60546}{anchor\+Threshold}} = 8
+\item 
+unsigned int \mbox{\hyperlink{structupm_1_1_e_l_s_e_d_params_afc7d0ac16ce06e9ef55d6e679a6ad97f}{scan\+Intervals}} = 2
+\item 
+int \mbox{\hyperlink{structupm_1_1_e_l_s_e_d_params_a10b8b3d42e592824c28aad513e298445}{min\+Line\+Len}} = 15
+\item 
+double \mbox{\hyperlink{structupm_1_1_e_l_s_e_d_params_abf8884af4b4603a4fad74875bcc90cbf}{line\+Fit\+Err\+Threshold}} = 0.\+2
+\item 
+double \mbox{\hyperlink{structupm_1_1_e_l_s_e_d_params_a0ba3abdad5ea643893d5088f62150bf0}{px\+To\+Segment\+Dist\+Th}} = 1.\+5
+\item 
+double \mbox{\hyperlink{structupm_1_1_e_l_s_e_d_params_a2e2f1aec7134ba2d10868abe306899b4}{junction\+Eigenvals\+Th}} = 10
+\item 
+double \mbox{\hyperlink{structupm_1_1_e_l_s_e_d_params_aaafc1e721caf992312c1f7081dd87525}{junction\+Angle\+Th}} = 10 $\ast$ (M\+\_\+\+PI / 180.\+0)
+\item 
+double \mbox{\hyperlink{structupm_1_1_e_l_s_e_d_params_a5aa513720992ec858e4611635538d096}{validation\+Th}} = 0.\+15
+\item 
+bool \mbox{\hyperlink{structupm_1_1_e_l_s_e_d_params_a7746bf08bd2bbbd79f4f4b3c176e1a13}{validate}} = true
+\item 
+bool \mbox{\hyperlink{structupm_1_1_e_l_s_e_d_params_a367722d06ddb0f580d6db9260446648b}{treat\+Junctions}} = true
+\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{structupm_1_1_e_l_s_e_d_params_a81d2ecd548a1b4acbf22de90020a04c4}{list\+Junction\+Sizes}} = \{5, 7, 9\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structupm_1_1_e_l_s_e_d_params_a0470cd83f028581eaa8880bffaa60546}\label{structupm_1_1_e_l_s_e_d_params_a0470cd83f028581eaa8880bffaa60546}} 
+\index{upm::ELSEDParams@{upm::ELSEDParams}!anchorThreshold@{anchorThreshold}}
+\index{anchorThreshold@{anchorThreshold}!upm::ELSEDParams@{upm::ELSEDParams}}
+\doxysubsubsection{\texorpdfstring{anchorThreshold}{anchorThreshold}}
+{\footnotesize\ttfamily uint8\+\_\+t upm\+::\+E\+L\+S\+E\+D\+Params\+::anchor\+Threshold = 8}
+
+\mbox{\Hypertarget{structupm_1_1_e_l_s_e_d_params_a4e4d0d8be2cd87ded2a201fc1b5ece4f}\label{structupm_1_1_e_l_s_e_d_params_a4e4d0d8be2cd87ded2a201fc1b5ece4f}} 
+\index{upm::ELSEDParams@{upm::ELSEDParams}!gradientThreshold@{gradientThreshold}}
+\index{gradientThreshold@{gradientThreshold}!upm::ELSEDParams@{upm::ELSEDParams}}
+\doxysubsubsection{\texorpdfstring{gradientThreshold}{gradientThreshold}}
+{\footnotesize\ttfamily float upm\+::\+E\+L\+S\+E\+D\+Params\+::gradient\+Threshold = 30}
+
+\mbox{\Hypertarget{structupm_1_1_e_l_s_e_d_params_aaafc1e721caf992312c1f7081dd87525}\label{structupm_1_1_e_l_s_e_d_params_aaafc1e721caf992312c1f7081dd87525}} 
+\index{upm::ELSEDParams@{upm::ELSEDParams}!junctionAngleTh@{junctionAngleTh}}
+\index{junctionAngleTh@{junctionAngleTh}!upm::ELSEDParams@{upm::ELSEDParams}}
+\doxysubsubsection{\texorpdfstring{junctionAngleTh}{junctionAngleTh}}
+{\footnotesize\ttfamily double upm\+::\+E\+L\+S\+E\+D\+Params\+::junction\+Angle\+Th = 10 $\ast$ (M\+\_\+\+PI / 180.\+0)}
+
+\mbox{\Hypertarget{structupm_1_1_e_l_s_e_d_params_a2e2f1aec7134ba2d10868abe306899b4}\label{structupm_1_1_e_l_s_e_d_params_a2e2f1aec7134ba2d10868abe306899b4}} 
+\index{upm::ELSEDParams@{upm::ELSEDParams}!junctionEigenvalsTh@{junctionEigenvalsTh}}
+\index{junctionEigenvalsTh@{junctionEigenvalsTh}!upm::ELSEDParams@{upm::ELSEDParams}}
+\doxysubsubsection{\texorpdfstring{junctionEigenvalsTh}{junctionEigenvalsTh}}
+{\footnotesize\ttfamily double upm\+::\+E\+L\+S\+E\+D\+Params\+::junction\+Eigenvals\+Th = 10}
+
+\mbox{\Hypertarget{structupm_1_1_e_l_s_e_d_params_ae43139e5c9d0e46cab92969127e5cf1f}\label{structupm_1_1_e_l_s_e_d_params_ae43139e5c9d0e46cab92969127e5cf1f}} 
+\index{upm::ELSEDParams@{upm::ELSEDParams}!ksize@{ksize}}
+\index{ksize@{ksize}!upm::ELSEDParams@{upm::ELSEDParams}}
+\doxysubsubsection{\texorpdfstring{ksize}{ksize}}
+{\footnotesize\ttfamily int upm\+::\+E\+L\+S\+E\+D\+Params\+::ksize = 5}
+
+\mbox{\Hypertarget{structupm_1_1_e_l_s_e_d_params_abf8884af4b4603a4fad74875bcc90cbf}\label{structupm_1_1_e_l_s_e_d_params_abf8884af4b4603a4fad74875bcc90cbf}} 
+\index{upm::ELSEDParams@{upm::ELSEDParams}!lineFitErrThreshold@{lineFitErrThreshold}}
+\index{lineFitErrThreshold@{lineFitErrThreshold}!upm::ELSEDParams@{upm::ELSEDParams}}
+\doxysubsubsection{\texorpdfstring{lineFitErrThreshold}{lineFitErrThreshold}}
+{\footnotesize\ttfamily double upm\+::\+E\+L\+S\+E\+D\+Params\+::line\+Fit\+Err\+Threshold = 0.\+2}
+
+\mbox{\Hypertarget{structupm_1_1_e_l_s_e_d_params_a81d2ecd548a1b4acbf22de90020a04c4}\label{structupm_1_1_e_l_s_e_d_params_a81d2ecd548a1b4acbf22de90020a04c4}} 
+\index{upm::ELSEDParams@{upm::ELSEDParams}!listJunctionSizes@{listJunctionSizes}}
+\index{listJunctionSizes@{listJunctionSizes}!upm::ELSEDParams@{upm::ELSEDParams}}
+\doxysubsubsection{\texorpdfstring{listJunctionSizes}{listJunctionSizes}}
+{\footnotesize\ttfamily std\+::vector$<$int$>$ upm\+::\+E\+L\+S\+E\+D\+Params\+::list\+Junction\+Sizes = \{5, 7, 9\}}
+
+\mbox{\Hypertarget{structupm_1_1_e_l_s_e_d_params_a10b8b3d42e592824c28aad513e298445}\label{structupm_1_1_e_l_s_e_d_params_a10b8b3d42e592824c28aad513e298445}} 
+\index{upm::ELSEDParams@{upm::ELSEDParams}!minLineLen@{minLineLen}}
+\index{minLineLen@{minLineLen}!upm::ELSEDParams@{upm::ELSEDParams}}
+\doxysubsubsection{\texorpdfstring{minLineLen}{minLineLen}}
+{\footnotesize\ttfamily int upm\+::\+E\+L\+S\+E\+D\+Params\+::min\+Line\+Len = 15}
+
+\mbox{\Hypertarget{structupm_1_1_e_l_s_e_d_params_a0ba3abdad5ea643893d5088f62150bf0}\label{structupm_1_1_e_l_s_e_d_params_a0ba3abdad5ea643893d5088f62150bf0}} 
+\index{upm::ELSEDParams@{upm::ELSEDParams}!pxToSegmentDistTh@{pxToSegmentDistTh}}
+\index{pxToSegmentDistTh@{pxToSegmentDistTh}!upm::ELSEDParams@{upm::ELSEDParams}}
+\doxysubsubsection{\texorpdfstring{pxToSegmentDistTh}{pxToSegmentDistTh}}
+{\footnotesize\ttfamily double upm\+::\+E\+L\+S\+E\+D\+Params\+::px\+To\+Segment\+Dist\+Th = 1.\+5}
+
+\mbox{\Hypertarget{structupm_1_1_e_l_s_e_d_params_afc7d0ac16ce06e9ef55d6e679a6ad97f}\label{structupm_1_1_e_l_s_e_d_params_afc7d0ac16ce06e9ef55d6e679a6ad97f}} 
+\index{upm::ELSEDParams@{upm::ELSEDParams}!scanIntervals@{scanIntervals}}
+\index{scanIntervals@{scanIntervals}!upm::ELSEDParams@{upm::ELSEDParams}}
+\doxysubsubsection{\texorpdfstring{scanIntervals}{scanIntervals}}
+{\footnotesize\ttfamily unsigned int upm\+::\+E\+L\+S\+E\+D\+Params\+::scan\+Intervals = 2}
+
+\mbox{\Hypertarget{structupm_1_1_e_l_s_e_d_params_ac02192926cfe0e333ee3808fca4c2b65}\label{structupm_1_1_e_l_s_e_d_params_ac02192926cfe0e333ee3808fca4c2b65}} 
+\index{upm::ELSEDParams@{upm::ELSEDParams}!sigma@{sigma}}
+\index{sigma@{sigma}!upm::ELSEDParams@{upm::ELSEDParams}}
+\doxysubsubsection{\texorpdfstring{sigma}{sigma}}
+{\footnotesize\ttfamily float upm\+::\+E\+L\+S\+E\+D\+Params\+::sigma = 1}
+
+\mbox{\Hypertarget{structupm_1_1_e_l_s_e_d_params_a367722d06ddb0f580d6db9260446648b}\label{structupm_1_1_e_l_s_e_d_params_a367722d06ddb0f580d6db9260446648b}} 
+\index{upm::ELSEDParams@{upm::ELSEDParams}!treatJunctions@{treatJunctions}}
+\index{treatJunctions@{treatJunctions}!upm::ELSEDParams@{upm::ELSEDParams}}
+\doxysubsubsection{\texorpdfstring{treatJunctions}{treatJunctions}}
+{\footnotesize\ttfamily bool upm\+::\+E\+L\+S\+E\+D\+Params\+::treat\+Junctions = true}
+
+\mbox{\Hypertarget{structupm_1_1_e_l_s_e_d_params_a7746bf08bd2bbbd79f4f4b3c176e1a13}\label{structupm_1_1_e_l_s_e_d_params_a7746bf08bd2bbbd79f4f4b3c176e1a13}} 
+\index{upm::ELSEDParams@{upm::ELSEDParams}!validate@{validate}}
+\index{validate@{validate}!upm::ELSEDParams@{upm::ELSEDParams}}
+\doxysubsubsection{\texorpdfstring{validate}{validate}}
+{\footnotesize\ttfamily bool upm\+::\+E\+L\+S\+E\+D\+Params\+::validate = true}
+
+\mbox{\Hypertarget{structupm_1_1_e_l_s_e_d_params_a5aa513720992ec858e4611635538d096}\label{structupm_1_1_e_l_s_e_d_params_a5aa513720992ec858e4611635538d096}} 
+\index{upm::ELSEDParams@{upm::ELSEDParams}!validationTh@{validationTh}}
+\index{validationTh@{validationTh}!upm::ELSEDParams@{upm::ELSEDParams}}
+\doxysubsubsection{\texorpdfstring{validationTh}{validationTh}}
+{\footnotesize\ttfamily double upm\+::\+E\+L\+S\+E\+D\+Params\+::validation\+Th = 0.\+15}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/deos/ce.\+debeunne/colcon\+\_\+ws/src/\+Sa\+D\+V\+I\+O/cpp/thirdparty/\+E\+L\+S\+E\+D/src/\mbox{\hyperlink{_e_l_s_e_d_8h}{E\+L\+S\+E\+D.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,35 @@
+\hypertarget{_epipolar_pose_estimator_custom_8cpp}{}\doxysection{/home/deos/ce.debeunne/colcon\+\_\+ws/src/\+Sa\+D\+V\+I\+O/cpp/src/estimator/\+Epipolar\+Pose\+Estimator\+Custom.cpp File Reference}
+\label{_epipolar_pose_estimator_custom_8cpp}\index{/home/deos/ce.debeunne/colcon\_ws/src/SaDVIO/cpp/src/estimator/EpipolarPoseEstimatorCustom.cpp@{/home/deos/ce.debeunne/colcon\_ws/src/SaDVIO/cpp/src/estimator/EpipolarPoseEstimatorCustom.cpp}}
+{\ttfamily \#include \char`\"{}isaeslam/estimator/\+Epipolar\+Pose\+Estimator\+Custom.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}utilities/geometry.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$numeric$>$}\newline
+{\ttfamily \#include $<$random$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+Include dependency graph for Epipolar\+Pose\+Estimator\+Custom.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_epipolar_pose_estimator_custom_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceisae}{isae}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{namespaceisae_a1f33b1dfeed10fb723363c5f915a587d}{isae\+::random\+\_\+index}} (int size)
+\item 
+Eigen\+::\+Vector3d \mbox{\hyperlink{namespaceisae_a406deb99456e7db9e0f1bd792559ed54}{isae\+::triangulate}} (Eigen\+::\+Vector3d ray0, Eigen\+::\+Vector3d ray1, Eigen\+::\+Vector3d t)
+\item 
+int \mbox{\hyperlink{namespaceisae_a0c88c1d5c1776d5cae63fa72d9ac8a96}{isae\+::check\+RT}} (const Eigen\+::\+Matrix3d \&R, const Eigen\+::\+Vector3d \&t, std\+::vector$<$ Eigen\+::\+Vector2d $>$ rays1, std\+::vector$<$ Eigen\+::\+Vector2d $>$ rays2, std\+::vector$<$ int $>$ \&inliers)
+\item 
+bool \mbox{\hyperlink{namespaceisae_a7288200cb0b391b24a5059b15cfa6a4d}{isae\+::recover\+Pose\+Essential}} (Eigen\+::\+Matrix3d E, std\+::vector$<$ Eigen\+::\+Vector2d $>$ rays1, std\+::vector$<$ Eigen\+::\+Vector2d $>$ rays2, Eigen\+::\+Vector3d \&t, Eigen\+::\+Matrix3d \&R, std\+::vector$<$ int $>$ \&inliers)
+\item 
+Eigen\+::\+Matrix3d \mbox{\hyperlink{namespaceisae_aa106b39727ccffeea8b00f91a3def5ce}{isae\+::compute\+Essential}} (std\+::vector$<$ Eigen\+::\+Vector2d $>$ rays1, std\+::vector$<$ Eigen\+::\+Vector2d $>$ rays2, int N\+Points=8)
+\item 
+void \mbox{\hyperlink{namespaceisae_a6a886cc15fb290f2d324dc83a2ad7e77}{isae\+::\+Essential\+R\+A\+N\+S\+AC}} (std\+::vector$<$ Eigen\+::\+Vector2d $>$ rays1, std\+::vector$<$ Eigen\+::\+Vector2d $>$ rays2, Eigen\+::\+Matrix3d \&best\+\_\+E, std\+::vector$<$ int $>$ \&inliers, int Niter=500, int Npoints=8)
+\end{DoxyCompactItemize}

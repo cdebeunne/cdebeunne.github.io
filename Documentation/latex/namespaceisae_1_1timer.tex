@@ -1,0 +1,60 @@
+\hypertarget{namespaceisae_1_1timer}{}\doxysection{isae\+::timer Namespace Reference}
+\label{namespaceisae_1_1timer}\index{isae::timer@{isae::timer}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classisae_1_1timer_1_1timer__handle}{timer\+\_\+handle}}
+\begin{DoxyCompactList}\small\item\em Handy way for timing an action. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{namespaceisae_1_1timer_a29873e6cce132650a7e3a8f4e6756026}{tic}} ()
+\begin{DoxyCompactList}\small\item\em pushes the current time on the stack \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{namespaceisae_1_1timer_aa47086618470f919c51ee9334d9d0e88}{silent\+Toc}} ()
+\begin{DoxyCompactList}\small\item\em pops a time from the stack and returns the difference with the current time \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{namespaceisae_1_1timer_a2fef4c215f57013c42271d56d55f87df}{toc}} (std\+::string s=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em pops a time from the stack and prints the difference with the current time \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespaceisae_1_1timer_aa47086618470f919c51ee9334d9d0e88}\label{namespaceisae_1_1timer_aa47086618470f919c51ee9334d9d0e88}} 
+\index{isae::timer@{isae::timer}!silentToc@{silentToc}}
+\index{silentToc@{silentToc}!isae::timer@{isae::timer}}
+\doxysubsubsection{\texorpdfstring{silentToc()}{silentToc()}}
+{\footnotesize\ttfamily double isae\+::timer\+::silent\+Toc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+pops a time from the stack and returns the difference with the current time 
+
+\begin{DoxyReturn}{Returns}
+delta time (ms) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespaceisae_1_1timer_a29873e6cce132650a7e3a8f4e6756026}\label{namespaceisae_1_1timer_a29873e6cce132650a7e3a8f4e6756026}} 
+\index{isae::timer@{isae::timer}!tic@{tic}}
+\index{tic@{tic}!isae::timer@{isae::timer}}
+\doxysubsubsection{\texorpdfstring{tic()}{tic()}}
+{\footnotesize\ttfamily void isae\+::timer\+::tic (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+pushes the current time on the stack 
+
+\mbox{\Hypertarget{namespaceisae_1_1timer_a2fef4c215f57013c42271d56d55f87df}\label{namespaceisae_1_1timer_a2fef4c215f57013c42271d56d55f87df}} 
+\index{isae::timer@{isae::timer}!toc@{toc}}
+\index{toc@{toc}!isae::timer@{isae::timer}}
+\doxysubsubsection{\texorpdfstring{toc()}{toc()}}
+{\footnotesize\ttfamily double isae\+::timer\+::toc (\begin{DoxyParamCaption}\item[{std\+::string}]{s = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+pops a time from the stack and prints the difference with the current time 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & timer message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+delta time (ms) 
+\end{DoxyReturn}

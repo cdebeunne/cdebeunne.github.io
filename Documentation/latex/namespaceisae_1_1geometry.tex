@@ -1,0 +1,267 @@
+\hypertarget{namespaceisae_1_1geometry}{}\doxysection{isae\+::geometry Namespace Reference}
+\label{namespaceisae_1_1geometry}\index{isae::geometry@{isae::geometry}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Derived $>$ }\\Eigen\+::\+Matrix3d \mbox{\hyperlink{namespaceisae_1_1geometry_a14262cb5972fda2f4c259111b90e142a}{skew\+Matrix}} (const Eigen\+::\+Matrix\+Base$<$ Derived $>$ \&w)
+\item 
+Eigen\+::\+Vector3d \mbox{\hyperlink{namespaceisae_1_1geometry_a511e4862e1a21caaec93e9d521461193}{Fromskew\+Matrix}} (const Eigen\+::\+Matrix3d \&skew)
+\item 
+Eigen\+::\+Matrix3d \mbox{\hyperlink{namespaceisae_1_1geometry_a594f3f6deb9485b18e1492f8f6956a82}{so3\+\_\+right\+Jacobian}} (const Eigen\+::\+Vector3d \&w)
+\item 
+Eigen\+::\+Matrix3d \mbox{\hyperlink{namespaceisae_1_1geometry_afeaa6dde1cc4defc572e8fda4717b0e2}{so3\+\_\+left\+Jacobian}} (const Eigen\+::\+Vector3d \&w)
+\item 
+Eigen\+::\+Vector3d \mbox{\hyperlink{namespaceisae_1_1geometry_a0d05b398f5f8372e31a65de2c9794e8a}{rotation\+Matrix\+To\+Euler\+Angles\+Eigen}} (Eigen\+::\+Matrix3d R)
+\item 
+Eigen\+::\+Matrix3d \mbox{\hyperlink{namespaceisae_1_1geometry_a5054e0fe8b2e45a0274bcbbf2920d9f1}{x\+Front2z\+Front}} ()
+\item 
+Eigen\+::\+Matrix3d \mbox{\hyperlink{namespaceisae_1_1geometry_ac9ff4656e237dd423c72a5c8c1daca1b}{z\+Front2x\+Front}} ()
+\item 
+Eigen\+::\+Matrix3d \mbox{\hyperlink{namespaceisae_1_1geometry_a4251b2b72178cb9a01b44d89d6e52e92}{x\+Right2x\+Front}} ()
+\item 
+double \mbox{\hyperlink{namespaceisae_1_1geometry_addca26f56143edab70d0a692a4aa0b83}{dist2\+Epipolar\+Line}} (const Eigen\+::\+Vector3d \&epipolarline, const Eigen\+::\+Vector2d \&pt\+\_\+to\+\_\+test)
+\item 
+double \mbox{\hyperlink{namespaceisae_1_1geometry_a5ec6e4e951d3c9c848550479478079c0}{get\+Max\+Angle\+Between\+Vectors}} (\mbox{\hyperlink{namespaceisae_a3252625a5e59fd7c0a194cc13f3fe79a}{vec3d}} vecs)
+\item 
+Eigen\+::\+Matrix3d \mbox{\hyperlink{namespaceisae_1_1geometry_a11f990bf5c71e5002bce21fee098cb50}{direction\+Vector2\+Rotation}} (Eigen\+::\+Vector3d v, const Eigen\+::\+Vector3d \&reference\+\_\+vector=Eigen\+::\+Vector3d(1, 0, 0))
+\item 
+Eigen\+::\+Vector3d \mbox{\hyperlink{namespaceisae_1_1geometry_afe431ce76eb4f08c842a1a817f04e316}{Rotation2direction\+Vector}} (const Eigen\+::\+Matrix3d \&R, const Eigen\+::\+Vector3d \&reference\+\_\+vector=Eigen\+::\+Vector3d(1, 0, 0))
+\item 
+Eigen\+::\+Matrix3d \mbox{\hyperlink{namespaceisae_1_1geometry_af9fcbbc4604ed271a0228636e8ccb52a}{exp\+\_\+so3}} (const Eigen\+::\+Vector3d \&v)
+\item 
+Eigen\+::\+Vector3d \mbox{\hyperlink{namespaceisae_1_1geometry_a43552ae8e206178d6f878fd3cb3d97cb}{log\+\_\+so3}} (const Eigen\+::\+Matrix3d \&M)
+\item 
+\mbox{\hyperlink{namespaceisae_a381cf9a79c09e3831978a493e7a50552}{Vector6d}} \mbox{\hyperlink{namespaceisae_1_1geometry_a41014100d92964bffa5b76559a3c6eb2}{se3\+\_\+\+R\+Tto\+Vec6d}} (Eigen\+::\+Affine3d RT)
+\item 
+Eigen\+::\+Affine3d \mbox{\hyperlink{namespaceisae_1_1geometry_a72391231bd5489bb17df4a6fb9df8d33}{se3\+\_\+\+Vec6dto\+RT}} (\mbox{\hyperlink{namespaceisae_a381cf9a79c09e3831978a493e7a50552}{Vector6d}} pose)
+\item 
+Eigen\+::\+Affine3d \mbox{\hyperlink{namespaceisae_1_1geometry_aab8b62072f73577da9728437700cca1e}{se3\+\_\+\+Vec3dto\+RT}} (Eigen\+::\+Vector3d p3d)
+\item 
+Eigen\+::\+Affine3d \mbox{\hyperlink{namespaceisae_1_1geometry_aafe315ba2260b84d0a27051006bb3cbe}{se3\+\_\+double\+Vec6dto\+RT}} (const double $\ast$pose)
+\item 
+Eigen\+::\+Affine3d \mbox{\hyperlink{namespaceisae_1_1geometry_aeb87cdd88b14cbea118ce7398d6ffab6}{se3\+\_\+double\+Vec3dto\+RT}} (const double $\ast$p3d)
+\item 
+{\footnotesize template$<$typename T $>$ }\\Eigen\+::\+Transform$<$ T, 3, 4 $>$ \mbox{\hyperlink{namespaceisae_1_1geometry_aed34d4f4b252fc27c686c0b03cca7f72}{se3\+\_\+double\+Vec6dto\+RT}} (const T $\ast$pose)
+\item 
+double \mbox{\hyperlink{namespaceisae_1_1geometry_aaab8d2287a58f20ed5fdca59ad492e9d}{get\+Vector\+Angle}} (Eigen\+::\+Vector2d pt\+\_\+end, Eigen\+::\+Vector2d pt\+\_\+start)
+\item 
+double \mbox{\hyperlink{namespaceisae_1_1geometry_adf9bb1ac4727fa9d105fb73705e89fc4}{get\+Delta\+Angle}} (double orientation, double orientation\+\_\+reproj)
+\item 
+Eigen\+::\+Vector3d \mbox{\hyperlink{namespaceisae_1_1geometry_a0596fe890820f09d8c815fac23299c0e}{get\+Color\+Subpix}} (const cv\+::\+Mat \&img, Eigen\+::\+Vector2d pt)
+\item 
+double \mbox{\hyperlink{namespaceisae_1_1geometry_a349513d163cb84c3924eee41188713e1}{get\+Angle}} (Eigen\+::\+Vector3d p, Eigen\+::\+Vector3d p1, Eigen\+::\+Vector3d p2)
+\item 
+{\footnotesize template$<$typename Derived  = Eigen\+::\+Vector\+Xd$>$ }\\bool \mbox{\hyperlink{namespaceisae_1_1geometry_aaa98ae3e78d94f5608948dbaabb7f744}{point\+In\+Triangle}} (Derived pt, std\+::vector$<$ Derived $>$ triangle)
+\item 
+Eigen\+::\+Matrix2d \mbox{\hyperlink{namespaceisae_1_1geometry_a083bdc94820595ac6ced7898316af4dc}{cov2d\+Triangle}} (std\+::vector$<$ Eigen\+::\+Vector2d $>$ triangle)
+\item 
+double \mbox{\hyperlink{namespaceisae_1_1geometry_a077bf5a682e998c328cb239ae9f9b705}{area\+Triangle}} (std\+::vector$<$ Eigen\+::\+Vector2d $>$ triangle)
+\item 
+Eigen\+::\+Matrix\+Xd \mbox{\hyperlink{namespaceisae_1_1geometry_ae8ebc0885d91b1df96f72aeb3cc1d059}{J\+\_\+norm}} (Eigen\+::\+Vector3d X)
+\item 
+Eigen\+::\+Matrix3d \mbox{\hyperlink{namespaceisae_1_1geometry_a48206b96e75b32c8340840f2c5f0d6b6}{J\+\_\+normalization}} (Eigen\+::\+Vector3d X)
+\item 
+Eigen\+::\+Matrix3d \mbox{\hyperlink{namespaceisae_1_1geometry_a8c6c889d52b90c214a3cfbe527b345ce}{J\+\_\+\+XcrossA}} (Eigen\+::\+Vector3d A)
+\item 
+Eigen\+::\+Matrix3d \mbox{\hyperlink{namespaceisae_1_1geometry_a59f2fd08dfd129bdaac4cae42e4f4eae}{J\+\_\+\+AcrossX}} (Eigen\+::\+Vector3d A)
+\item 
+Eigen\+::\+Matrix3d \mbox{\hyperlink{namespaceisae_1_1geometry_a2f0c8c6383cbd2895b6a02379a322b09}{J\+\_\+\+Rexpwt}} (Eigen\+::\+Matrix3d R, Eigen\+::\+Matrix3d expw, Eigen\+::\+Vector3d t)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespaceisae_1_1geometry_a077bf5a682e998c328cb239ae9f9b705}\label{namespaceisae_1_1geometry_a077bf5a682e998c328cb239ae9f9b705}} 
+\index{isae::geometry@{isae::geometry}!areaTriangle@{areaTriangle}}
+\index{areaTriangle@{areaTriangle}!isae::geometry@{isae::geometry}}
+\doxysubsubsection{\texorpdfstring{areaTriangle()}{areaTriangle()}}
+{\footnotesize\ttfamily double isae\+::geometry\+::area\+Triangle (\begin{DoxyParamCaption}\item[{std\+::vector$<$ Eigen\+::\+Vector2d $>$}]{triangle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespaceisae_1_1geometry_a083bdc94820595ac6ced7898316af4dc}\label{namespaceisae_1_1geometry_a083bdc94820595ac6ced7898316af4dc}} 
+\index{isae::geometry@{isae::geometry}!cov2dTriangle@{cov2dTriangle}}
+\index{cov2dTriangle@{cov2dTriangle}!isae::geometry@{isae::geometry}}
+\doxysubsubsection{\texorpdfstring{cov2dTriangle()}{cov2dTriangle()}}
+{\footnotesize\ttfamily Eigen\+::\+Matrix2d isae\+::geometry\+::cov2d\+Triangle (\begin{DoxyParamCaption}\item[{std\+::vector$<$ Eigen\+::\+Vector2d $>$}]{triangle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespaceisae_1_1geometry_a11f990bf5c71e5002bce21fee098cb50}\label{namespaceisae_1_1geometry_a11f990bf5c71e5002bce21fee098cb50}} 
+\index{isae::geometry@{isae::geometry}!directionVector2Rotation@{directionVector2Rotation}}
+\index{directionVector2Rotation@{directionVector2Rotation}!isae::geometry@{isae::geometry}}
+\doxysubsubsection{\texorpdfstring{directionVector2Rotation()}{directionVector2Rotation()}}
+{\footnotesize\ttfamily Eigen\+::\+Matrix3d isae\+::geometry\+::direction\+Vector2\+Rotation (\begin{DoxyParamCaption}\item[{Eigen\+::\+Vector3d}]{v,  }\item[{const Eigen\+::\+Vector3d \&}]{reference\+\_\+vector = {\ttfamily Eigen\+:\+:Vector3d(1,~0,~0)} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespaceisae_1_1geometry_addca26f56143edab70d0a692a4aa0b83}\label{namespaceisae_1_1geometry_addca26f56143edab70d0a692a4aa0b83}} 
+\index{isae::geometry@{isae::geometry}!dist2EpipolarLine@{dist2EpipolarLine}}
+\index{dist2EpipolarLine@{dist2EpipolarLine}!isae::geometry@{isae::geometry}}
+\doxysubsubsection{\texorpdfstring{dist2EpipolarLine()}{dist2EpipolarLine()}}
+{\footnotesize\ttfamily double isae\+::geometry\+::dist2\+Epipolar\+Line (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Vector3d \&}]{epipolarline,  }\item[{const Eigen\+::\+Vector2d \&}]{pt\+\_\+to\+\_\+test }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespaceisae_1_1geometry_af9fcbbc4604ed271a0228636e8ccb52a}\label{namespaceisae_1_1geometry_af9fcbbc4604ed271a0228636e8ccb52a}} 
+\index{isae::geometry@{isae::geometry}!exp\_so3@{exp\_so3}}
+\index{exp\_so3@{exp\_so3}!isae::geometry@{isae::geometry}}
+\doxysubsubsection{\texorpdfstring{exp\_so3()}{exp\_so3()}}
+{\footnotesize\ttfamily Eigen\+::\+Matrix3d isae\+::geometry\+::exp\+\_\+so3 (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Vector3d \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespaceisae_1_1geometry_a511e4862e1a21caaec93e9d521461193}\label{namespaceisae_1_1geometry_a511e4862e1a21caaec93e9d521461193}} 
+\index{isae::geometry@{isae::geometry}!FromskewMatrix@{FromskewMatrix}}
+\index{FromskewMatrix@{FromskewMatrix}!isae::geometry@{isae::geometry}}
+\doxysubsubsection{\texorpdfstring{FromskewMatrix()}{FromskewMatrix()}}
+{\footnotesize\ttfamily Eigen\+::\+Vector3d isae\+::geometry\+::\+Fromskew\+Matrix (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Matrix3d \&}]{skew }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespaceisae_1_1geometry_a349513d163cb84c3924eee41188713e1}\label{namespaceisae_1_1geometry_a349513d163cb84c3924eee41188713e1}} 
+\index{isae::geometry@{isae::geometry}!getAngle@{getAngle}}
+\index{getAngle@{getAngle}!isae::geometry@{isae::geometry}}
+\doxysubsubsection{\texorpdfstring{getAngle()}{getAngle()}}
+{\footnotesize\ttfamily double isae\+::geometry\+::get\+Angle (\begin{DoxyParamCaption}\item[{Eigen\+::\+Vector3d}]{p,  }\item[{Eigen\+::\+Vector3d}]{p1,  }\item[{Eigen\+::\+Vector3d}]{p2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespaceisae_1_1geometry_a0596fe890820f09d8c815fac23299c0e}\label{namespaceisae_1_1geometry_a0596fe890820f09d8c815fac23299c0e}} 
+\index{isae::geometry@{isae::geometry}!getColorSubpix@{getColorSubpix}}
+\index{getColorSubpix@{getColorSubpix}!isae::geometry@{isae::geometry}}
+\doxysubsubsection{\texorpdfstring{getColorSubpix()}{getColorSubpix()}}
+{\footnotesize\ttfamily Eigen\+::\+Vector3d isae\+::geometry\+::get\+Color\+Subpix (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{img,  }\item[{Eigen\+::\+Vector2d}]{pt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespaceisae_1_1geometry_adf9bb1ac4727fa9d105fb73705e89fc4}\label{namespaceisae_1_1geometry_adf9bb1ac4727fa9d105fb73705e89fc4}} 
+\index{isae::geometry@{isae::geometry}!getDeltaAngle@{getDeltaAngle}}
+\index{getDeltaAngle@{getDeltaAngle}!isae::geometry@{isae::geometry}}
+\doxysubsubsection{\texorpdfstring{getDeltaAngle()}{getDeltaAngle()}}
+{\footnotesize\ttfamily double isae\+::geometry\+::get\+Delta\+Angle (\begin{DoxyParamCaption}\item[{double}]{orientation,  }\item[{double}]{orientation\+\_\+reproj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespaceisae_1_1geometry_a5ec6e4e951d3c9c848550479478079c0}\label{namespaceisae_1_1geometry_a5ec6e4e951d3c9c848550479478079c0}} 
+\index{isae::geometry@{isae::geometry}!getMaxAngleBetweenVectors@{getMaxAngleBetweenVectors}}
+\index{getMaxAngleBetweenVectors@{getMaxAngleBetweenVectors}!isae::geometry@{isae::geometry}}
+\doxysubsubsection{\texorpdfstring{getMaxAngleBetweenVectors()}{getMaxAngleBetweenVectors()}}
+{\footnotesize\ttfamily double isae\+::geometry\+::get\+Max\+Angle\+Between\+Vectors (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceisae_a3252625a5e59fd7c0a194cc13f3fe79a}{vec3d}}}]{vecs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespaceisae_1_1geometry_aaab8d2287a58f20ed5fdca59ad492e9d}\label{namespaceisae_1_1geometry_aaab8d2287a58f20ed5fdca59ad492e9d}} 
+\index{isae::geometry@{isae::geometry}!getVectorAngle@{getVectorAngle}}
+\index{getVectorAngle@{getVectorAngle}!isae::geometry@{isae::geometry}}
+\doxysubsubsection{\texorpdfstring{getVectorAngle()}{getVectorAngle()}}
+{\footnotesize\ttfamily double isae\+::geometry\+::get\+Vector\+Angle (\begin{DoxyParamCaption}\item[{Eigen\+::\+Vector2d}]{pt\+\_\+end,  }\item[{Eigen\+::\+Vector2d}]{pt\+\_\+start }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespaceisae_1_1geometry_a59f2fd08dfd129bdaac4cae42e4f4eae}\label{namespaceisae_1_1geometry_a59f2fd08dfd129bdaac4cae42e4f4eae}} 
+\index{isae::geometry@{isae::geometry}!J\_AcrossX@{J\_AcrossX}}
+\index{J\_AcrossX@{J\_AcrossX}!isae::geometry@{isae::geometry}}
+\doxysubsubsection{\texorpdfstring{J\_AcrossX()}{J\_AcrossX()}}
+{\footnotesize\ttfamily Eigen\+::\+Matrix3d isae\+::geometry\+::\+J\+\_\+\+AcrossX (\begin{DoxyParamCaption}\item[{Eigen\+::\+Vector3d}]{A }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespaceisae_1_1geometry_ae8ebc0885d91b1df96f72aeb3cc1d059}\label{namespaceisae_1_1geometry_ae8ebc0885d91b1df96f72aeb3cc1d059}} 
+\index{isae::geometry@{isae::geometry}!J\_norm@{J\_norm}}
+\index{J\_norm@{J\_norm}!isae::geometry@{isae::geometry}}
+\doxysubsubsection{\texorpdfstring{J\_norm()}{J\_norm()}}
+{\footnotesize\ttfamily Eigen\+::\+Matrix\+Xd isae\+::geometry\+::\+J\+\_\+norm (\begin{DoxyParamCaption}\item[{Eigen\+::\+Vector3d}]{X }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespaceisae_1_1geometry_a48206b96e75b32c8340840f2c5f0d6b6}\label{namespaceisae_1_1geometry_a48206b96e75b32c8340840f2c5f0d6b6}} 
+\index{isae::geometry@{isae::geometry}!J\_normalization@{J\_normalization}}
+\index{J\_normalization@{J\_normalization}!isae::geometry@{isae::geometry}}
+\doxysubsubsection{\texorpdfstring{J\_normalization()}{J\_normalization()}}
+{\footnotesize\ttfamily Eigen\+::\+Matrix3d isae\+::geometry\+::\+J\+\_\+normalization (\begin{DoxyParamCaption}\item[{Eigen\+::\+Vector3d}]{X }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespaceisae_1_1geometry_a2f0c8c6383cbd2895b6a02379a322b09}\label{namespaceisae_1_1geometry_a2f0c8c6383cbd2895b6a02379a322b09}} 
+\index{isae::geometry@{isae::geometry}!J\_Rexpwt@{J\_Rexpwt}}
+\index{J\_Rexpwt@{J\_Rexpwt}!isae::geometry@{isae::geometry}}
+\doxysubsubsection{\texorpdfstring{J\_Rexpwt()}{J\_Rexpwt()}}
+{\footnotesize\ttfamily Eigen\+::\+Matrix3d isae\+::geometry\+::\+J\+\_\+\+Rexpwt (\begin{DoxyParamCaption}\item[{Eigen\+::\+Matrix3d}]{R,  }\item[{Eigen\+::\+Matrix3d}]{expw,  }\item[{Eigen\+::\+Vector3d}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespaceisae_1_1geometry_a8c6c889d52b90c214a3cfbe527b345ce}\label{namespaceisae_1_1geometry_a8c6c889d52b90c214a3cfbe527b345ce}} 
+\index{isae::geometry@{isae::geometry}!J\_XcrossA@{J\_XcrossA}}
+\index{J\_XcrossA@{J\_XcrossA}!isae::geometry@{isae::geometry}}
+\doxysubsubsection{\texorpdfstring{J\_XcrossA()}{J\_XcrossA()}}
+{\footnotesize\ttfamily Eigen\+::\+Matrix3d isae\+::geometry\+::\+J\+\_\+\+XcrossA (\begin{DoxyParamCaption}\item[{Eigen\+::\+Vector3d}]{A }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespaceisae_1_1geometry_a43552ae8e206178d6f878fd3cb3d97cb}\label{namespaceisae_1_1geometry_a43552ae8e206178d6f878fd3cb3d97cb}} 
+\index{isae::geometry@{isae::geometry}!log\_so3@{log\_so3}}
+\index{log\_so3@{log\_so3}!isae::geometry@{isae::geometry}}
+\doxysubsubsection{\texorpdfstring{log\_so3()}{log\_so3()}}
+{\footnotesize\ttfamily Eigen\+::\+Vector3d isae\+::geometry\+::log\+\_\+so3 (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Matrix3d \&}]{M }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespaceisae_1_1geometry_aaa98ae3e78d94f5608948dbaabb7f744}\label{namespaceisae_1_1geometry_aaa98ae3e78d94f5608948dbaabb7f744}} 
+\index{isae::geometry@{isae::geometry}!pointInTriangle@{pointInTriangle}}
+\index{pointInTriangle@{pointInTriangle}!isae::geometry@{isae::geometry}}
+\doxysubsubsection{\texorpdfstring{pointInTriangle()}{pointInTriangle()}}
+{\footnotesize\ttfamily template$<$typename Derived  = Eigen\+::\+Vector\+Xd$>$ \\
+bool isae\+::geometry\+::point\+In\+Triangle (\begin{DoxyParamCaption}\item[{Derived}]{pt,  }\item[{std\+::vector$<$ Derived $>$}]{triangle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespaceisae_1_1geometry_afe431ce76eb4f08c842a1a817f04e316}\label{namespaceisae_1_1geometry_afe431ce76eb4f08c842a1a817f04e316}} 
+\index{isae::geometry@{isae::geometry}!Rotation2directionVector@{Rotation2directionVector}}
+\index{Rotation2directionVector@{Rotation2directionVector}!isae::geometry@{isae::geometry}}
+\doxysubsubsection{\texorpdfstring{Rotation2directionVector()}{Rotation2directionVector()}}
+{\footnotesize\ttfamily Eigen\+::\+Vector3d isae\+::geometry\+::\+Rotation2direction\+Vector (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Matrix3d \&}]{R,  }\item[{const Eigen\+::\+Vector3d \&}]{reference\+\_\+vector = {\ttfamily Eigen\+:\+:Vector3d(1,~0,~0)} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespaceisae_1_1geometry_a0d05b398f5f8372e31a65de2c9794e8a}\label{namespaceisae_1_1geometry_a0d05b398f5f8372e31a65de2c9794e8a}} 
+\index{isae::geometry@{isae::geometry}!rotationMatrixToEulerAnglesEigen@{rotationMatrixToEulerAnglesEigen}}
+\index{rotationMatrixToEulerAnglesEigen@{rotationMatrixToEulerAnglesEigen}!isae::geometry@{isae::geometry}}
+\doxysubsubsection{\texorpdfstring{rotationMatrixToEulerAnglesEigen()}{rotationMatrixToEulerAnglesEigen()}}
+{\footnotesize\ttfamily Eigen\+::\+Vector3d isae\+::geometry\+::rotation\+Matrix\+To\+Euler\+Angles\+Eigen (\begin{DoxyParamCaption}\item[{Eigen\+::\+Matrix3d}]{R }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespaceisae_1_1geometry_aeb87cdd88b14cbea118ce7398d6ffab6}\label{namespaceisae_1_1geometry_aeb87cdd88b14cbea118ce7398d6ffab6}} 
+\index{isae::geometry@{isae::geometry}!se3\_doubleVec3dtoRT@{se3\_doubleVec3dtoRT}}
+\index{se3\_doubleVec3dtoRT@{se3\_doubleVec3dtoRT}!isae::geometry@{isae::geometry}}
+\doxysubsubsection{\texorpdfstring{se3\_doubleVec3dtoRT()}{se3\_doubleVec3dtoRT()}}
+{\footnotesize\ttfamily Eigen\+::\+Affine3d isae\+::geometry\+::se3\+\_\+double\+Vec3dto\+RT (\begin{DoxyParamCaption}\item[{const double $\ast$}]{p3d }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespaceisae_1_1geometry_aafe315ba2260b84d0a27051006bb3cbe}\label{namespaceisae_1_1geometry_aafe315ba2260b84d0a27051006bb3cbe}} 
+\index{isae::geometry@{isae::geometry}!se3\_doubleVec6dtoRT@{se3\_doubleVec6dtoRT}}
+\index{se3\_doubleVec6dtoRT@{se3\_doubleVec6dtoRT}!isae::geometry@{isae::geometry}}
+\doxysubsubsection{\texorpdfstring{se3\_doubleVec6dtoRT()}{se3\_doubleVec6dtoRT()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Eigen\+::\+Affine3d isae\+::geometry\+::se3\+\_\+double\+Vec6dto\+RT (\begin{DoxyParamCaption}\item[{const double $\ast$}]{pose }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespaceisae_1_1geometry_aed34d4f4b252fc27c686c0b03cca7f72}\label{namespaceisae_1_1geometry_aed34d4f4b252fc27c686c0b03cca7f72}} 
+\index{isae::geometry@{isae::geometry}!se3\_doubleVec6dtoRT@{se3\_doubleVec6dtoRT}}
+\index{se3\_doubleVec6dtoRT@{se3\_doubleVec6dtoRT}!isae::geometry@{isae::geometry}}
+\doxysubsubsection{\texorpdfstring{se3\_doubleVec6dtoRT()}{se3\_doubleVec6dtoRT()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+Eigen\+::\+Transform$<$T, 3, 4$>$ isae\+::geometry\+::se3\+\_\+double\+Vec6dto\+RT (\begin{DoxyParamCaption}\item[{const T $\ast$}]{pose }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespaceisae_1_1geometry_a41014100d92964bffa5b76559a3c6eb2}\label{namespaceisae_1_1geometry_a41014100d92964bffa5b76559a3c6eb2}} 
+\index{isae::geometry@{isae::geometry}!se3\_RTtoVec6d@{se3\_RTtoVec6d}}
+\index{se3\_RTtoVec6d@{se3\_RTtoVec6d}!isae::geometry@{isae::geometry}}
+\doxysubsubsection{\texorpdfstring{se3\_RTtoVec6d()}{se3\_RTtoVec6d()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceisae_a381cf9a79c09e3831978a493e7a50552}{Vector6d}} isae\+::geometry\+::se3\+\_\+\+R\+Tto\+Vec6d (\begin{DoxyParamCaption}\item[{Eigen\+::\+Affine3d}]{RT }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespaceisae_1_1geometry_aab8b62072f73577da9728437700cca1e}\label{namespaceisae_1_1geometry_aab8b62072f73577da9728437700cca1e}} 
+\index{isae::geometry@{isae::geometry}!se3\_Vec3dtoRT@{se3\_Vec3dtoRT}}
+\index{se3\_Vec3dtoRT@{se3\_Vec3dtoRT}!isae::geometry@{isae::geometry}}
+\doxysubsubsection{\texorpdfstring{se3\_Vec3dtoRT()}{se3\_Vec3dtoRT()}}
+{\footnotesize\ttfamily Eigen\+::\+Affine3d isae\+::geometry\+::se3\+\_\+\+Vec3dto\+RT (\begin{DoxyParamCaption}\item[{Eigen\+::\+Vector3d}]{p3d }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespaceisae_1_1geometry_a72391231bd5489bb17df4a6fb9df8d33}\label{namespaceisae_1_1geometry_a72391231bd5489bb17df4a6fb9df8d33}} 
+\index{isae::geometry@{isae::geometry}!se3\_Vec6dtoRT@{se3\_Vec6dtoRT}}
+\index{se3\_Vec6dtoRT@{se3\_Vec6dtoRT}!isae::geometry@{isae::geometry}}
+\doxysubsubsection{\texorpdfstring{se3\_Vec6dtoRT()}{se3\_Vec6dtoRT()}}
+{\footnotesize\ttfamily Eigen\+::\+Affine3d isae\+::geometry\+::se3\+\_\+\+Vec6dto\+RT (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceisae_a381cf9a79c09e3831978a493e7a50552}{Vector6d}}}]{pose }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespaceisae_1_1geometry_a14262cb5972fda2f4c259111b90e142a}\label{namespaceisae_1_1geometry_a14262cb5972fda2f4c259111b90e142a}} 
+\index{isae::geometry@{isae::geometry}!skewMatrix@{skewMatrix}}
+\index{skewMatrix@{skewMatrix}!isae::geometry@{isae::geometry}}
+\doxysubsubsection{\texorpdfstring{skewMatrix()}{skewMatrix()}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+Eigen\+::\+Matrix3d isae\+::geometry\+::skew\+Matrix (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Matrix\+Base$<$ Derived $>$ \&}]{w }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespaceisae_1_1geometry_afeaa6dde1cc4defc572e8fda4717b0e2}\label{namespaceisae_1_1geometry_afeaa6dde1cc4defc572e8fda4717b0e2}} 
+\index{isae::geometry@{isae::geometry}!so3\_leftJacobian@{so3\_leftJacobian}}
+\index{so3\_leftJacobian@{so3\_leftJacobian}!isae::geometry@{isae::geometry}}
+\doxysubsubsection{\texorpdfstring{so3\_leftJacobian()}{so3\_leftJacobian()}}
+{\footnotesize\ttfamily Eigen\+::\+Matrix3d isae\+::geometry\+::so3\+\_\+left\+Jacobian (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Vector3d \&}]{w }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespaceisae_1_1geometry_a594f3f6deb9485b18e1492f8f6956a82}\label{namespaceisae_1_1geometry_a594f3f6deb9485b18e1492f8f6956a82}} 
+\index{isae::geometry@{isae::geometry}!so3\_rightJacobian@{so3\_rightJacobian}}
+\index{so3\_rightJacobian@{so3\_rightJacobian}!isae::geometry@{isae::geometry}}
+\doxysubsubsection{\texorpdfstring{so3\_rightJacobian()}{so3\_rightJacobian()}}
+{\footnotesize\ttfamily Eigen\+::\+Matrix3d isae\+::geometry\+::so3\+\_\+right\+Jacobian (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Vector3d \&}]{w }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespaceisae_1_1geometry_a5054e0fe8b2e45a0274bcbbf2920d9f1}\label{namespaceisae_1_1geometry_a5054e0fe8b2e45a0274bcbbf2920d9f1}} 
+\index{isae::geometry@{isae::geometry}!xFront2zFront@{xFront2zFront}}
+\index{xFront2zFront@{xFront2zFront}!isae::geometry@{isae::geometry}}
+\doxysubsubsection{\texorpdfstring{xFront2zFront()}{xFront2zFront()}}
+{\footnotesize\ttfamily Eigen\+::\+Matrix3d isae\+::geometry\+::x\+Front2z\+Front (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespaceisae_1_1geometry_a4251b2b72178cb9a01b44d89d6e52e92}\label{namespaceisae_1_1geometry_a4251b2b72178cb9a01b44d89d6e52e92}} 
+\index{isae::geometry@{isae::geometry}!xRight2xFront@{xRight2xFront}}
+\index{xRight2xFront@{xRight2xFront}!isae::geometry@{isae::geometry}}
+\doxysubsubsection{\texorpdfstring{xRight2xFront()}{xRight2xFront()}}
+{\footnotesize\ttfamily Eigen\+::\+Matrix3d isae\+::geometry\+::x\+Right2x\+Front (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespaceisae_1_1geometry_ac9ff4656e237dd423c72a5c8c1daca1b}\label{namespaceisae_1_1geometry_ac9ff4656e237dd423c72a5c8c1daca1b}} 
+\index{isae::geometry@{isae::geometry}!zFront2xFront@{zFront2xFront}}
+\index{zFront2xFront@{zFront2xFront}!isae::geometry@{isae::geometry}}
+\doxysubsubsection{\texorpdfstring{zFront2xFront()}{zFront2xFront()}}
+{\footnotesize\ttfamily Eigen\+::\+Matrix3d isae\+::geometry\+::z\+Front2x\+Front (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+

@@ -1,0 +1,151 @@
+\hypertarget{classisae_1_1_a_sensor}{}\doxysection{isae\+::A\+Sensor Class Reference}
+\label{classisae_1_1_a_sensor}\index{isae::ASensor@{isae::ASensor}}
+
+
+Abstract class for all sensors.  
+
+
+
+
+{\ttfamily \#include $<$A\+Sensor.\+h$>$}
+
+
+
+Inheritance diagram for isae\+::A\+Sensor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classisae_1_1_a_sensor__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classisae_1_1_a_sensor_afab7372a7aba066fba3367aaeac70b00}{A\+Sensor}} (std\+::string type)
+\item 
+\mbox{\hyperlink{classisae_1_1_a_sensor_a72674d9e06a2a5432e231cfd78fa36df}{$\sim$\+A\+Sensor}} ()
+\item 
+std\+::string \mbox{\hyperlink{classisae_1_1_a_sensor_a8d76d3a7a3089a41d7816e50f1293947}{get\+Type}} ()
+\item 
+void \mbox{\hyperlink{classisae_1_1_a_sensor_ab7e5290a007cedd446597cad229abc9f}{set\+Frame}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ frame)
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \mbox{\hyperlink{classisae_1_1_a_sensor_abee8c45d62c63f8089034d811b301b35}{get\+Frame}} ()
+\item 
+void \mbox{\hyperlink{classisae_1_1_a_sensor_a16b968b76621c720886503c977016e7b}{set\+Frame2\+Sensor\+Transform}} (Eigen\+::\+Affine3d T\+\_\+s\+\_\+f)
+\item 
+Eigen\+::\+Affine3d \mbox{\hyperlink{classisae_1_1_a_sensor_a8725e304145f5c4628ca49b3560cacb7}{get\+Frame2\+Sensor\+Transform}} ()
+\item 
+Eigen\+::\+Affine3d \mbox{\hyperlink{classisae_1_1_a_sensor_ac55ee14fdfbc5d02c823be5550b02337}{get\+World2\+Sensor\+Transform}} ()
+\item 
+Eigen\+::\+Affine3d \mbox{\hyperlink{classisae_1_1_a_sensor_a340c63e722fd8f28ad0285f5b868e059}{get\+Sensor2\+World\+Transform}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \mbox{\hyperlink{classisae_1_1_a_sensor_a80bd1059d3a5c4c81348619c017984c7}{\+\_\+frame}}
+\item 
+Eigen\+::\+Affine3d \mbox{\hyperlink{classisae_1_1_a_sensor_a185182320220c061dbda8674e13e2b70}{\+\_\+\+T\+\_\+s\+\_\+f}}
+\item 
+std\+::string \mbox{\hyperlink{classisae_1_1_a_sensor_acf3f78310df392797254f2890ef87598}{\+\_\+type}}
+\item 
+std\+::mutex \mbox{\hyperlink{classisae_1_1_a_sensor_ac3be0ba64f612a91f90308c0a2e6f31b}{\+\_\+sensor\+\_\+mtx}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract class for all sensors. 
+
+This class provides a common interface for all sensors in the S\+L\+AM system. It contains a reference to a frame, its extrinsic and its type. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classisae_1_1_a_sensor_afab7372a7aba066fba3367aaeac70b00}\label{classisae_1_1_a_sensor_afab7372a7aba066fba3367aaeac70b00}} 
+\index{isae::ASensor@{isae::ASensor}!ASensor@{ASensor}}
+\index{ASensor@{ASensor}!isae::ASensor@{isae::ASensor}}
+\doxysubsubsection{\texorpdfstring{ASensor()}{ASensor()}}
+{\footnotesize\ttfamily isae\+::\+A\+Sensor\+::\+A\+Sensor (\begin{DoxyParamCaption}\item[{std\+::string}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_a_sensor_a72674d9e06a2a5432e231cfd78fa36df}\label{classisae_1_1_a_sensor_a72674d9e06a2a5432e231cfd78fa36df}} 
+\index{isae::ASensor@{isae::ASensor}!````~ASensor@{$\sim$ASensor}}
+\index{````~ASensor@{$\sim$ASensor}!isae::ASensor@{isae::ASensor}}
+\doxysubsubsection{\texorpdfstring{$\sim$ASensor()}{~ASensor()}}
+{\footnotesize\ttfamily isae\+::\+A\+Sensor\+::$\sim$\+A\+Sensor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classisae_1_1_a_sensor_abee8c45d62c63f8089034d811b301b35}\label{classisae_1_1_a_sensor_abee8c45d62c63f8089034d811b301b35}} 
+\index{isae::ASensor@{isae::ASensor}!getFrame@{getFrame}}
+\index{getFrame@{getFrame}!isae::ASensor@{isae::ASensor}}
+\doxysubsubsection{\texorpdfstring{getFrame()}{getFrame()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classisae_1_1_frame}{Frame}}$>$ isae\+::\+A\+Sensor\+::get\+Frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_a_sensor_a8725e304145f5c4628ca49b3560cacb7}\label{classisae_1_1_a_sensor_a8725e304145f5c4628ca49b3560cacb7}} 
+\index{isae::ASensor@{isae::ASensor}!getFrame2SensorTransform@{getFrame2SensorTransform}}
+\index{getFrame2SensorTransform@{getFrame2SensorTransform}!isae::ASensor@{isae::ASensor}}
+\doxysubsubsection{\texorpdfstring{getFrame2SensorTransform()}{getFrame2SensorTransform()}}
+{\footnotesize\ttfamily Eigen\+::\+Affine3d isae\+::\+A\+Sensor\+::get\+Frame2\+Sensor\+Transform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_a_sensor_a340c63e722fd8f28ad0285f5b868e059}\label{classisae_1_1_a_sensor_a340c63e722fd8f28ad0285f5b868e059}} 
+\index{isae::ASensor@{isae::ASensor}!getSensor2WorldTransform@{getSensor2WorldTransform}}
+\index{getSensor2WorldTransform@{getSensor2WorldTransform}!isae::ASensor@{isae::ASensor}}
+\doxysubsubsection{\texorpdfstring{getSensor2WorldTransform()}{getSensor2WorldTransform()}}
+{\footnotesize\ttfamily Eigen\+::\+Affine3d isae\+::\+A\+Sensor\+::get\+Sensor2\+World\+Transform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classisae_1_1_a_sensor_a8d76d3a7a3089a41d7816e50f1293947}\label{classisae_1_1_a_sensor_a8d76d3a7a3089a41d7816e50f1293947}} 
+\index{isae::ASensor@{isae::ASensor}!getType@{getType}}
+\index{getType@{getType}!isae::ASensor@{isae::ASensor}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily std\+::string isae\+::\+A\+Sensor\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_a_sensor_ac55ee14fdfbc5d02c823be5550b02337}\label{classisae_1_1_a_sensor_ac55ee14fdfbc5d02c823be5550b02337}} 
+\index{isae::ASensor@{isae::ASensor}!getWorld2SensorTransform@{getWorld2SensorTransform}}
+\index{getWorld2SensorTransform@{getWorld2SensorTransform}!isae::ASensor@{isae::ASensor}}
+\doxysubsubsection{\texorpdfstring{getWorld2SensorTransform()}{getWorld2SensorTransform()}}
+{\footnotesize\ttfamily Eigen\+::\+Affine3d isae\+::\+A\+Sensor\+::get\+World2\+Sensor\+Transform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classisae_1_1_a_sensor_ab7e5290a007cedd446597cad229abc9f}\label{classisae_1_1_a_sensor_ab7e5290a007cedd446597cad229abc9f}} 
+\index{isae::ASensor@{isae::ASensor}!setFrame@{setFrame}}
+\index{setFrame@{setFrame}!isae::ASensor@{isae::ASensor}}
+\doxysubsubsection{\texorpdfstring{setFrame()}{setFrame()}}
+{\footnotesize\ttfamily void isae\+::\+A\+Sensor\+::set\+Frame (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$}]{frame }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_a_sensor_a16b968b76621c720886503c977016e7b}\label{classisae_1_1_a_sensor_a16b968b76621c720886503c977016e7b}} 
+\index{isae::ASensor@{isae::ASensor}!setFrame2SensorTransform@{setFrame2SensorTransform}}
+\index{setFrame2SensorTransform@{setFrame2SensorTransform}!isae::ASensor@{isae::ASensor}}
+\doxysubsubsection{\texorpdfstring{setFrame2SensorTransform()}{setFrame2SensorTransform()}}
+{\footnotesize\ttfamily void isae\+::\+A\+Sensor\+::set\+Frame2\+Sensor\+Transform (\begin{DoxyParamCaption}\item[{Eigen\+::\+Affine3d}]{T\+\_\+s\+\_\+f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classisae_1_1_a_sensor_a80bd1059d3a5c4c81348619c017984c7}\label{classisae_1_1_a_sensor_a80bd1059d3a5c4c81348619c017984c7}} 
+\index{isae::ASensor@{isae::ASensor}!\_frame@{\_frame}}
+\index{\_frame@{\_frame}!isae::ASensor@{isae::ASensor}}
+\doxysubsubsection{\texorpdfstring{\_frame}{\_frame}}
+{\footnotesize\ttfamily std\+::weak\+\_\+ptr$<$\mbox{\hyperlink{classisae_1_1_frame}{Frame}}$>$ isae\+::\+A\+Sensor\+::\+\_\+frame\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classisae_1_1_a_sensor_ac3be0ba64f612a91f90308c0a2e6f31b}\label{classisae_1_1_a_sensor_ac3be0ba64f612a91f90308c0a2e6f31b}} 
+\index{isae::ASensor@{isae::ASensor}!\_sensor\_mtx@{\_sensor\_mtx}}
+\index{\_sensor\_mtx@{\_sensor\_mtx}!isae::ASensor@{isae::ASensor}}
+\doxysubsubsection{\texorpdfstring{\_sensor\_mtx}{\_sensor\_mtx}}
+{\footnotesize\ttfamily std\+::mutex isae\+::\+A\+Sensor\+::\+\_\+sensor\+\_\+mtx\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classisae_1_1_a_sensor_a185182320220c061dbda8674e13e2b70}\label{classisae_1_1_a_sensor_a185182320220c061dbda8674e13e2b70}} 
+\index{isae::ASensor@{isae::ASensor}!\_T\_s\_f@{\_T\_s\_f}}
+\index{\_T\_s\_f@{\_T\_s\_f}!isae::ASensor@{isae::ASensor}}
+\doxysubsubsection{\texorpdfstring{\_T\_s\_f}{\_T\_s\_f}}
+{\footnotesize\ttfamily Eigen\+::\+Affine3d isae\+::\+A\+Sensor\+::\+\_\+\+T\+\_\+s\+\_\+f\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classisae_1_1_a_sensor_acf3f78310df392797254f2890ef87598}\label{classisae_1_1_a_sensor_acf3f78310df392797254f2890ef87598}} 
+\index{isae::ASensor@{isae::ASensor}!\_type@{\_type}}
+\index{\_type@{\_type}!isae::ASensor@{isae::ASensor}}
+\doxysubsubsection{\texorpdfstring{\_type}{\_type}}
+{\footnotesize\ttfamily std\+::string isae\+::\+A\+Sensor\+::\+\_\+type\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/deos/ce.\+debeunne/colcon\+\_\+ws/src/\+Sa\+D\+V\+I\+O/cpp/include/isaeslam/data/sensors/\mbox{\hyperlink{_a_sensor_8h}{A\+Sensor.\+h}}\item 
+/home/deos/ce.\+debeunne/colcon\+\_\+ws/src/\+Sa\+D\+V\+I\+O/cpp/src/data/sensors/\mbox{\hyperlink{_a_sensor_8cpp}{A\+Sensor.\+cpp}}\end{DoxyCompactItemize}

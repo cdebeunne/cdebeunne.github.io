@@ -1,0 +1,96 @@
+\hypertarget{classisae_1_1_ellipse_pattern_feature_detector}{}\doxysection{isae\+::Ellipse\+Pattern\+Feature\+Detector Class Reference}
+\label{classisae_1_1_ellipse_pattern_feature_detector}\index{isae::EllipsePatternFeatureDetector@{isae::EllipsePatternFeatureDetector}}
+
+
+{\ttfamily \#include $<$Ellipse\+Pattern\+Feature\+Detector.\+h$>$}
+
+
+
+Inheritance diagram for isae\+::Ellipse\+Pattern\+Feature\+Detector\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{classisae_1_1_ellipse_pattern_feature_detector__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for isae\+::Ellipse\+Pattern\+Feature\+Detector\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{classisae_1_1_ellipse_pattern_feature_detector__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classisae_1_1_ellipse_pattern_feature_detector_a72d01ab78227eda3761e5764eaa55738}{Ellipse\+Pattern\+Feature\+Detector}} (int n, int n\+\_\+per\+\_\+cell)
+\item 
+void \mbox{\hyperlink{classisae_1_1_ellipse_pattern_feature_detector_a249ee32f163a40a5d03dd422f7f2f486}{custom\+Detect\+And\+Compute}} (const cv\+::\+Mat \&img, const cv\+::\+Mat \&mask, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$ \&features) override
+\item 
+void \mbox{\hyperlink{classisae_1_1_ellipse_pattern_feature_detector_acda1b0a73e87bb778215911350559245}{compute\+Descriptor}} (const cv\+::\+Mat \&img, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$ \&features)
+\item 
+void \mbox{\hyperlink{classisae_1_1_ellipse_pattern_feature_detector_aa3e11e2ebd0bda1a9e9d7d39b2a7234d}{init}} () override
+\item 
+double \mbox{\hyperlink{classisae_1_1_ellipse_pattern_feature_detector_a20d7395d23571afea65e001f3523fe33}{get\+Dist}} (const cv\+::\+Mat \&desc1, const cv\+::\+Mat \&desc2) const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classisae_1_1_ellipse_pattern_feature_detector_a72d01ab78227eda3761e5764eaa55738}\label{classisae_1_1_ellipse_pattern_feature_detector_a72d01ab78227eda3761e5764eaa55738}} 
+\index{isae::EllipsePatternFeatureDetector@{isae::EllipsePatternFeatureDetector}!EllipsePatternFeatureDetector@{EllipsePatternFeatureDetector}}
+\index{EllipsePatternFeatureDetector@{EllipsePatternFeatureDetector}!isae::EllipsePatternFeatureDetector@{isae::EllipsePatternFeatureDetector}}
+\doxysubsubsection{\texorpdfstring{EllipsePatternFeatureDetector()}{EllipsePatternFeatureDetector()}}
+{\footnotesize\ttfamily isae\+::\+Ellipse\+Pattern\+Feature\+Detector\+::\+Ellipse\+Pattern\+Feature\+Detector (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{int}]{n\+\_\+per\+\_\+cell }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classisae_1_1_ellipse_pattern_feature_detector_acda1b0a73e87bb778215911350559245}\label{classisae_1_1_ellipse_pattern_feature_detector_acda1b0a73e87bb778215911350559245}} 
+\index{isae::EllipsePatternFeatureDetector@{isae::EllipsePatternFeatureDetector}!computeDescriptor@{computeDescriptor}}
+\index{computeDescriptor@{computeDescriptor}!isae::EllipsePatternFeatureDetector@{isae::EllipsePatternFeatureDetector}}
+\doxysubsubsection{\texorpdfstring{computeDescriptor()}{computeDescriptor()}}
+{\footnotesize\ttfamily void isae\+::\+Ellipse\+Pattern\+Feature\+Detector\+::compute\+Descriptor (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{img,  }\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$ \&}]{features }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classisae_1_1_a_custom_feature_detector_a3c37409af9d97037dbbc4677127879e2}{isae\+::\+A\+Custom\+Feature\+Detector}}.
+
+\mbox{\Hypertarget{classisae_1_1_ellipse_pattern_feature_detector_a249ee32f163a40a5d03dd422f7f2f486}\label{classisae_1_1_ellipse_pattern_feature_detector_a249ee32f163a40a5d03dd422f7f2f486}} 
+\index{isae::EllipsePatternFeatureDetector@{isae::EllipsePatternFeatureDetector}!customDetectAndCompute@{customDetectAndCompute}}
+\index{customDetectAndCompute@{customDetectAndCompute}!isae::EllipsePatternFeatureDetector@{isae::EllipsePatternFeatureDetector}}
+\doxysubsubsection{\texorpdfstring{customDetectAndCompute()}{customDetectAndCompute()}}
+{\footnotesize\ttfamily void isae\+::\+Ellipse\+Pattern\+Feature\+Detector\+::custom\+Detect\+And\+Compute (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{img,  }\item[{const cv\+::\+Mat \&}]{mask,  }\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$ \&}]{features }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classisae_1_1_a_custom_feature_detector_a53cf8fa55bfed8a81e4c1b72c4d16518}{isae\+::\+A\+Custom\+Feature\+Detector}}.
+
+\mbox{\Hypertarget{classisae_1_1_ellipse_pattern_feature_detector_a20d7395d23571afea65e001f3523fe33}\label{classisae_1_1_ellipse_pattern_feature_detector_a20d7395d23571afea65e001f3523fe33}} 
+\index{isae::EllipsePatternFeatureDetector@{isae::EllipsePatternFeatureDetector}!getDist@{getDist}}
+\index{getDist@{getDist}!isae::EllipsePatternFeatureDetector@{isae::EllipsePatternFeatureDetector}}
+\doxysubsubsection{\texorpdfstring{getDist()}{getDist()}}
+{\footnotesize\ttfamily double isae\+::\+Ellipse\+Pattern\+Feature\+Detector\+::get\+Dist (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{desc1,  }\item[{const cv\+::\+Mat \&}]{desc2 }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classisae_1_1_a_feature_detector_ad59496a4d75c886d38c61ef258958cd9}{isae\+::\+A\+Feature\+Detector}}.
+
+\mbox{\Hypertarget{classisae_1_1_ellipse_pattern_feature_detector_aa3e11e2ebd0bda1a9e9d7d39b2a7234d}\label{classisae_1_1_ellipse_pattern_feature_detector_aa3e11e2ebd0bda1a9e9d7d39b2a7234d}} 
+\index{isae::EllipsePatternFeatureDetector@{isae::EllipsePatternFeatureDetector}!init@{init}}
+\index{init@{init}!isae::EllipsePatternFeatureDetector@{isae::EllipsePatternFeatureDetector}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void isae\+::\+Ellipse\+Pattern\+Feature\+Detector\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classisae_1_1_a_feature_detector_a3c92c62951b8003db8428af449830850}{isae\+::\+A\+Feature\+Detector}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/deos/ce.\+debeunne/colcon\+\_\+ws/src/\+Sa\+D\+V\+I\+O/cpp/include/isaeslam/featuredetectors/custom\+\_\+detectors/\mbox{\hyperlink{_ellipse_pattern_feature_detector_8h}{Ellipse\+Pattern\+Feature\+Detector.\+h}}\item 
+/home/deos/ce.\+debeunne/colcon\+\_\+ws/src/\+Sa\+D\+V\+I\+O/cpp/src/featuredetectors/custom\+\_\+detectors/\mbox{\hyperlink{_ellipse_pattern_feature_detector_8cpp}{Ellipse\+Pattern\+Feature\+Detector.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,132 @@
+\hypertarget{classisae_1_1_s_l_a_m_non_overlapping_fov}{}\doxysection{isae\+::S\+L\+A\+M\+Non\+Overlapping\+Fov Class Reference}
+\label{classisae_1_1_s_l_a_m_non_overlapping_fov}\index{isae::SLAMNonOverlappingFov@{isae::SLAMNonOverlappingFov}}
+
+
+{\ttfamily \#include $<$slam\+Core.\+h$>$}
+
+
+
+Inheritance diagram for isae\+::S\+L\+A\+M\+Non\+Overlapping\+Fov\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=247pt]{classisae_1_1_s_l_a_m_non_overlapping_fov__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for isae\+::S\+L\+A\+M\+Non\+Overlapping\+Fov\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=247pt]{classisae_1_1_s_l_a_m_non_overlapping_fov__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classisae_1_1_s_l_a_m_non_overlapping_fov_aadf1290cb0922b619043eaa271c922c1}{S\+L\+A\+M\+Non\+Overlapping\+Fov}} ()
+\item 
+\mbox{\hyperlink{classisae_1_1_s_l_a_m_non_overlapping_fov_a57276702adade3179b8a867fe64ae32e}{S\+L\+A\+M\+Non\+Overlapping\+Fov}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_s_l_a_m_parameters}{S\+L\+A\+M\+Parameters}} $>$ slam\+\_\+param)
+\item 
+bool \mbox{\hyperlink{classisae_1_1_s_l_a_m_non_overlapping_fov_ac1c9b85d5d1715ae562861b74454ec10}{init}} () override
+\item 
+bool \mbox{\hyperlink{classisae_1_1_s_l_a_m_non_overlapping_fov_a47d9eb6a203183c1ad1cdb8654ec571b}{front\+End\+Step}} () override
+\item 
+bool \mbox{\hyperlink{classisae_1_1_s_l_a_m_non_overlapping_fov_a6d2ac5be38cd5d523340da2defbb13a0}{back\+End\+Step}} () override
+\item 
+void \mbox{\hyperlink{classisae_1_1_s_l_a_m_non_overlapping_fov_a18f96c882b86563e9b97cf216564e8d1}{outlier\+Removal}} ()
+\item 
+void \mbox{\hyperlink{classisae_1_1_s_l_a_m_non_overlapping_fov_ae22143a97a4c8db04f8a477295b36286}{init\+Landmarks}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&f)
+\item 
+int \mbox{\hyperlink{classisae_1_1_s_l_a_m_non_overlapping_fov_a181ac3e711d90675eb1e1c67c973eb21}{scale\+Estimation\+R\+A\+N\+S\+AC}} (const Eigen\+::\+Affine3d T\+\_\+cam0\+\_\+cam1, const Eigen\+::\+Affine3d T\+\_\+cam0\+\_\+cam0p, \mbox{\hyperlink{namespaceisae_a70bf0a9838eb50b6a3fe2be9b79e25be}{typed\+\_\+vec\+\_\+match}} matches\+\_\+cam1, double \&lambda)
+\item 
+bool \mbox{\hyperlink{classisae_1_1_s_l_a_m_non_overlapping_fov_a72f18ff419482abcd250cb2db43140aa}{is\+Degenerative\+Motion}} (Eigen\+::\+Affine3d T\+\_\+cam0\+\_\+cam0p, Eigen\+::\+Affine3d T\+\_\+cam0\+\_\+cam1, \mbox{\hyperlink{namespaceisae_a70bf0a9838eb50b6a3fe2be9b79e25be}{typed\+\_\+vec\+\_\+match}} matches)
+\item 
+bool \mbox{\hyperlink{classisae_1_1_s_l_a_m_non_overlapping_fov_a96d0b7b589b5926237da335e6afbabd6}{predict}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&f)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classisae_1_1_s_l_a_m_non_overlapping_fov_aadf1290cb0922b619043eaa271c922c1}\label{classisae_1_1_s_l_a_m_non_overlapping_fov_aadf1290cb0922b619043eaa271c922c1}} 
+\index{isae::SLAMNonOverlappingFov@{isae::SLAMNonOverlappingFov}!SLAMNonOverlappingFov@{SLAMNonOverlappingFov}}
+\index{SLAMNonOverlappingFov@{SLAMNonOverlappingFov}!isae::SLAMNonOverlappingFov@{isae::SLAMNonOverlappingFov}}
+\doxysubsubsection{\texorpdfstring{SLAMNonOverlappingFov()}{SLAMNonOverlappingFov()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily isae\+::\+S\+L\+A\+M\+Non\+Overlapping\+Fov\+::\+S\+L\+A\+M\+Non\+Overlapping\+Fov (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_s_l_a_m_non_overlapping_fov_a57276702adade3179b8a867fe64ae32e}\label{classisae_1_1_s_l_a_m_non_overlapping_fov_a57276702adade3179b8a867fe64ae32e}} 
+\index{isae::SLAMNonOverlappingFov@{isae::SLAMNonOverlappingFov}!SLAMNonOverlappingFov@{SLAMNonOverlappingFov}}
+\index{SLAMNonOverlappingFov@{SLAMNonOverlappingFov}!isae::SLAMNonOverlappingFov@{isae::SLAMNonOverlappingFov}}
+\doxysubsubsection{\texorpdfstring{SLAMNonOverlappingFov()}{SLAMNonOverlappingFov()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily isae\+::\+S\+L\+A\+M\+Non\+Overlapping\+Fov\+::\+S\+L\+A\+M\+Non\+Overlapping\+Fov (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_s_l_a_m_parameters}{S\+L\+A\+M\+Parameters}} $>$}]{slam\+\_\+param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classisae_1_1_s_l_a_m_non_overlapping_fov_a6d2ac5be38cd5d523340da2defbb13a0}\label{classisae_1_1_s_l_a_m_non_overlapping_fov_a6d2ac5be38cd5d523340da2defbb13a0}} 
+\index{isae::SLAMNonOverlappingFov@{isae::SLAMNonOverlappingFov}!backEndStep@{backEndStep}}
+\index{backEndStep@{backEndStep}!isae::SLAMNonOverlappingFov@{isae::SLAMNonOverlappingFov}}
+\doxysubsubsection{\texorpdfstring{backEndStep()}{backEndStep()}}
+{\footnotesize\ttfamily bool isae\+::\+S\+L\+A\+M\+Non\+Overlapping\+Fov\+::back\+End\+Step (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_aa378dd826e38a3bb5358a261466a97e3}{isae\+::\+S\+L\+A\+M\+Core}}.
+
+\mbox{\Hypertarget{classisae_1_1_s_l_a_m_non_overlapping_fov_a47d9eb6a203183c1ad1cdb8654ec571b}\label{classisae_1_1_s_l_a_m_non_overlapping_fov_a47d9eb6a203183c1ad1cdb8654ec571b}} 
+\index{isae::SLAMNonOverlappingFov@{isae::SLAMNonOverlappingFov}!frontEndStep@{frontEndStep}}
+\index{frontEndStep@{frontEndStep}!isae::SLAMNonOverlappingFov@{isae::SLAMNonOverlappingFov}}
+\doxysubsubsection{\texorpdfstring{frontEndStep()}{frontEndStep()}}
+{\footnotesize\ttfamily bool isae\+::\+S\+L\+A\+M\+Non\+Overlapping\+Fov\+::front\+End\+Step (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_ab97c16d22ca0c3d50c4ef63bcd6c88f7}{isae\+::\+S\+L\+A\+M\+Core}}.
+
+\mbox{\Hypertarget{classisae_1_1_s_l_a_m_non_overlapping_fov_ac1c9b85d5d1715ae562861b74454ec10}\label{classisae_1_1_s_l_a_m_non_overlapping_fov_ac1c9b85d5d1715ae562861b74454ec10}} 
+\index{isae::SLAMNonOverlappingFov@{isae::SLAMNonOverlappingFov}!init@{init}}
+\index{init@{init}!isae::SLAMNonOverlappingFov@{isae::SLAMNonOverlappingFov}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily bool isae\+::\+S\+L\+A\+M\+Non\+Overlapping\+Fov\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_a87fdc0be9d6042436ff097b375f86b72}{isae\+::\+S\+L\+A\+M\+Core}}.
+
+\mbox{\Hypertarget{classisae_1_1_s_l_a_m_non_overlapping_fov_ae22143a97a4c8db04f8a477295b36286}\label{classisae_1_1_s_l_a_m_non_overlapping_fov_ae22143a97a4c8db04f8a477295b36286}} 
+\index{isae::SLAMNonOverlappingFov@{isae::SLAMNonOverlappingFov}!initLandmarks@{initLandmarks}}
+\index{initLandmarks@{initLandmarks}!isae::SLAMNonOverlappingFov@{isae::SLAMNonOverlappingFov}}
+\doxysubsubsection{\texorpdfstring{initLandmarks()}{initLandmarks()}}
+{\footnotesize\ttfamily void isae\+::\+S\+L\+A\+M\+Non\+Overlapping\+Fov\+::init\+Landmarks (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&}]{f }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classisae_1_1_s_l_a_m_non_overlapping_fov_a72f18ff419482abcd250cb2db43140aa}\label{classisae_1_1_s_l_a_m_non_overlapping_fov_a72f18ff419482abcd250cb2db43140aa}} 
+\index{isae::SLAMNonOverlappingFov@{isae::SLAMNonOverlappingFov}!isDegenerativeMotion@{isDegenerativeMotion}}
+\index{isDegenerativeMotion@{isDegenerativeMotion}!isae::SLAMNonOverlappingFov@{isae::SLAMNonOverlappingFov}}
+\doxysubsubsection{\texorpdfstring{isDegenerativeMotion()}{isDegenerativeMotion()}}
+{\footnotesize\ttfamily bool isae\+::\+S\+L\+A\+M\+Non\+Overlapping\+Fov\+::is\+Degenerative\+Motion (\begin{DoxyParamCaption}\item[{Eigen\+::\+Affine3d}]{T\+\_\+cam0\+\_\+cam0p,  }\item[{Eigen\+::\+Affine3d}]{T\+\_\+cam0\+\_\+cam1,  }\item[{\mbox{\hyperlink{namespaceisae_a70bf0a9838eb50b6a3fe2be9b79e25be}{typed\+\_\+vec\+\_\+match}}}]{matches }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classisae_1_1_s_l_a_m_non_overlapping_fov_a18f96c882b86563e9b97cf216564e8d1}\label{classisae_1_1_s_l_a_m_non_overlapping_fov_a18f96c882b86563e9b97cf216564e8d1}} 
+\index{isae::SLAMNonOverlappingFov@{isae::SLAMNonOverlappingFov}!outlierRemoval@{outlierRemoval}}
+\index{outlierRemoval@{outlierRemoval}!isae::SLAMNonOverlappingFov@{isae::SLAMNonOverlappingFov}}
+\doxysubsubsection{\texorpdfstring{outlierRemoval()}{outlierRemoval()}}
+{\footnotesize\ttfamily void isae\+::\+S\+L\+A\+M\+Non\+Overlapping\+Fov\+::outlier\+Removal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classisae_1_1_s_l_a_m_non_overlapping_fov_a96d0b7b589b5926237da335e6afbabd6}\label{classisae_1_1_s_l_a_m_non_overlapping_fov_a96d0b7b589b5926237da335e6afbabd6}} 
+\index{isae::SLAMNonOverlappingFov@{isae::SLAMNonOverlappingFov}!predict@{predict}}
+\index{predict@{predict}!isae::SLAMNonOverlappingFov@{isae::SLAMNonOverlappingFov}}
+\doxysubsubsection{\texorpdfstring{predict()}{predict()}}
+{\footnotesize\ttfamily bool isae\+::\+S\+L\+A\+M\+Non\+Overlapping\+Fov\+::predict (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&}]{f }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classisae_1_1_s_l_a_m_non_overlapping_fov_a181ac3e711d90675eb1e1c67c973eb21}\label{classisae_1_1_s_l_a_m_non_overlapping_fov_a181ac3e711d90675eb1e1c67c973eb21}} 
+\index{isae::SLAMNonOverlappingFov@{isae::SLAMNonOverlappingFov}!scaleEstimationRANSAC@{scaleEstimationRANSAC}}
+\index{scaleEstimationRANSAC@{scaleEstimationRANSAC}!isae::SLAMNonOverlappingFov@{isae::SLAMNonOverlappingFov}}
+\doxysubsubsection{\texorpdfstring{scaleEstimationRANSAC()}{scaleEstimationRANSAC()}}
+{\footnotesize\ttfamily int isae\+::\+S\+L\+A\+M\+Non\+Overlapping\+Fov\+::scale\+Estimation\+R\+A\+N\+S\+AC (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Affine3d}]{T\+\_\+cam0\+\_\+cam1,  }\item[{const Eigen\+::\+Affine3d}]{T\+\_\+cam0\+\_\+cam0p,  }\item[{\mbox{\hyperlink{namespaceisae_a70bf0a9838eb50b6a3fe2be9b79e25be}{typed\+\_\+vec\+\_\+match}}}]{matches\+\_\+cam1,  }\item[{double \&}]{lambda }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/deos/ce.\+debeunne/colcon\+\_\+ws/src/\+Sa\+D\+V\+I\+O/cpp/include/isaeslam/\mbox{\hyperlink{slam_core_8h}{slam\+Core.\+h}}\item 
+/home/deos/ce.\+debeunne/colcon\+\_\+ws/src/\+Sa\+D\+V\+I\+O/cpp/src/\mbox{\hyperlink{slam_non_overlapping_fov_8cpp}{slam\+Non\+Overlapping\+Fov.\+cpp}}\end{DoxyCompactItemize}

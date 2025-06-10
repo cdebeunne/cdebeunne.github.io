@@ -1,0 +1,77 @@
+\hypertarget{classupm_1_1_edge_drawer}{}\doxysection{upm\+::Edge\+Drawer Class Reference}
+\label{classupm_1_1_edge_drawer}\index{upm::EdgeDrawer@{upm::EdgeDrawer}}
+
+
+{\ttfamily \#include $<$Edge\+Drawer.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classupm_1_1_edge_drawer_a58f1ade5a67aceae4188b2dfc7644e51}{Edge\+Drawer}} ()=default
+\item 
+\mbox{\hyperlink{classupm_1_1_edge_drawer_af75a431ebca1095ec98d4c898f35fdf9}{Edge\+Drawer}} (const \mbox{\hyperlink{namespaceupm_ad6da441adeaf5a499fb9834c9e4b07b9}{Line\+Detection\+Extra\+Info\+Ptr}} \&gradient\+Info, cv\+::\+Mat \&edge\+Image, float line\+Fit\+Threshold=0.\+2, float px\+To\+Segment\+Dist\+Th=1.\+5, int min\+Line\+Length=15, bool treat\+Junctions=true, std\+::vector$<$ int $>$ m\+List\+Of\+Junction\+Sizes=\{5, 7, 9\}, double junction\+Eigenvals\+Th=10, double junction\+Angle\+Th=10 $\ast$(M\+\_\+\+PI/180.\+0))
+\item 
+void \mbox{\hyperlink{classupm_1_1_edge_drawer_afe86bebd9828edc2901f6d5171f24747}{init}} (const \mbox{\hyperlink{namespaceupm_ad6da441adeaf5a499fb9834c9e4b07b9}{Line\+Detection\+Extra\+Info\+Ptr}} \&gradient\+Info, cv\+::\+Mat \&edge\+Image)
+\item 
+void \mbox{\hyperlink{classupm_1_1_edge_drawer_ac7a325afa88aeb3221904d07e3834b63}{draw\+Edge\+In\+Both\+Directions}} (uint8\+\_\+t direction, \mbox{\hyperlink{structupm_1_1_pixel}{Pixel}} anchor)
+\item 
+const std\+::vector$<$ \mbox{\hyperlink{classupm_1_1_full_segment_info}{Full\+Segment\+Info}} $>$ \& \mbox{\hyperlink{classupm_1_1_edge_drawer_a07ff060f144867a35c43a0512c90b832}{get\+Detected\+Full\+Segments}} () const
+\item 
+\mbox{\hyperlink{namespaceupm_a94e50fdc620c28b20b279d2ceb67ddc2}{Segments}} \mbox{\hyperlink{classupm_1_1_edge_drawer_adb5f61855db81b86f2f19911d38834f8}{get\+Detected\+Segments}} () const
+\item 
+const \mbox{\hyperlink{namespaceupm_a4e5ceb7dee65186c17eb2ba0704b2033}{Image\+Edge}} \& \mbox{\hyperlink{classupm_1_1_edge_drawer_a95d24de9e6490abf9c70c9a015c1fb5e}{get\+Pixels}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classupm_1_1_edge_drawer_a58f1ade5a67aceae4188b2dfc7644e51}\label{classupm_1_1_edge_drawer_a58f1ade5a67aceae4188b2dfc7644e51}} 
+\index{upm::EdgeDrawer@{upm::EdgeDrawer}!EdgeDrawer@{EdgeDrawer}}
+\index{EdgeDrawer@{EdgeDrawer}!upm::EdgeDrawer@{upm::EdgeDrawer}}
+\doxysubsubsection{\texorpdfstring{EdgeDrawer()}{EdgeDrawer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily upm\+::\+Edge\+Drawer\+::\+Edge\+Drawer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classupm_1_1_edge_drawer_af75a431ebca1095ec98d4c898f35fdf9}\label{classupm_1_1_edge_drawer_af75a431ebca1095ec98d4c898f35fdf9}} 
+\index{upm::EdgeDrawer@{upm::EdgeDrawer}!EdgeDrawer@{EdgeDrawer}}
+\index{EdgeDrawer@{EdgeDrawer}!upm::EdgeDrawer@{upm::EdgeDrawer}}
+\doxysubsubsection{\texorpdfstring{EdgeDrawer()}{EdgeDrawer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily upm\+::\+Edge\+Drawer\+::\+Edge\+Drawer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespaceupm_ad6da441adeaf5a499fb9834c9e4b07b9}{Line\+Detection\+Extra\+Info\+Ptr}} \&}]{gradient\+Info,  }\item[{cv\+::\+Mat \&}]{edge\+Image,  }\item[{float}]{line\+Fit\+Threshold = {\ttfamily 0.2},  }\item[{float}]{px\+To\+Segment\+Dist\+Th = {\ttfamily 1.5},  }\item[{int}]{min\+Line\+Length = {\ttfamily 15},  }\item[{bool}]{treat\+Junctions = {\ttfamily true},  }\item[{std\+::vector$<$ int $>$}]{m\+List\+Of\+Junction\+Sizes = {\ttfamily \{5,~7,~9\}},  }\item[{double}]{junction\+Eigenvals\+Th = {\ttfamily 10},  }\item[{double}]{junction\+Angle\+Th = {\ttfamily 10~$\ast$~(M\+\_\+PI~/~180.0)} }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classupm_1_1_edge_drawer_ac7a325afa88aeb3221904d07e3834b63}\label{classupm_1_1_edge_drawer_ac7a325afa88aeb3221904d07e3834b63}} 
+\index{upm::EdgeDrawer@{upm::EdgeDrawer}!drawEdgeInBothDirections@{drawEdgeInBothDirections}}
+\index{drawEdgeInBothDirections@{drawEdgeInBothDirections}!upm::EdgeDrawer@{upm::EdgeDrawer}}
+\doxysubsubsection{\texorpdfstring{drawEdgeInBothDirections()}{drawEdgeInBothDirections()}}
+{\footnotesize\ttfamily void upm\+::\+Edge\+Drawer\+::draw\+Edge\+In\+Both\+Directions (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{direction,  }\item[{\mbox{\hyperlink{structupm_1_1_pixel}{Pixel}}}]{anchor }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classupm_1_1_edge_drawer_a07ff060f144867a35c43a0512c90b832}\label{classupm_1_1_edge_drawer_a07ff060f144867a35c43a0512c90b832}} 
+\index{upm::EdgeDrawer@{upm::EdgeDrawer}!getDetectedFullSegments@{getDetectedFullSegments}}
+\index{getDetectedFullSegments@{getDetectedFullSegments}!upm::EdgeDrawer@{upm::EdgeDrawer}}
+\doxysubsubsection{\texorpdfstring{getDetectedFullSegments()}{getDetectedFullSegments()}}
+{\footnotesize\ttfamily const std\+::vector$<$\mbox{\hyperlink{classupm_1_1_full_segment_info}{Full\+Segment\+Info}}$>$\& upm\+::\+Edge\+Drawer\+::get\+Detected\+Full\+Segments (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classupm_1_1_edge_drawer_adb5f61855db81b86f2f19911d38834f8}\label{classupm_1_1_edge_drawer_adb5f61855db81b86f2f19911d38834f8}} 
+\index{upm::EdgeDrawer@{upm::EdgeDrawer}!getDetectedSegments@{getDetectedSegments}}
+\index{getDetectedSegments@{getDetectedSegments}!upm::EdgeDrawer@{upm::EdgeDrawer}}
+\doxysubsubsection{\texorpdfstring{getDetectedSegments()}{getDetectedSegments()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceupm_a94e50fdc620c28b20b279d2ceb67ddc2}{Segments}} upm\+::\+Edge\+Drawer\+::get\+Detected\+Segments (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classupm_1_1_edge_drawer_a95d24de9e6490abf9c70c9a015c1fb5e}\label{classupm_1_1_edge_drawer_a95d24de9e6490abf9c70c9a015c1fb5e}} 
+\index{upm::EdgeDrawer@{upm::EdgeDrawer}!getPixels@{getPixels}}
+\index{getPixels@{getPixels}!upm::EdgeDrawer@{upm::EdgeDrawer}}
+\doxysubsubsection{\texorpdfstring{getPixels()}{getPixels()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{namespaceupm_a4e5ceb7dee65186c17eb2ba0704b2033}{Image\+Edge}}\& upm\+::\+Edge\+Drawer\+::get\+Pixels (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classupm_1_1_edge_drawer_afe86bebd9828edc2901f6d5171f24747}\label{classupm_1_1_edge_drawer_afe86bebd9828edc2901f6d5171f24747}} 
+\index{upm::EdgeDrawer@{upm::EdgeDrawer}!init@{init}}
+\index{init@{init}!upm::EdgeDrawer@{upm::EdgeDrawer}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void upm\+::\+Edge\+Drawer\+::init (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespaceupm_ad6da441adeaf5a499fb9834c9e4b07b9}{Line\+Detection\+Extra\+Info\+Ptr}} \&}]{gradient\+Info,  }\item[{cv\+::\+Mat \&}]{edge\+Image }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/deos/ce.\+debeunne/colcon\+\_\+ws/src/\+Sa\+D\+V\+I\+O/cpp/thirdparty/\+E\+L\+S\+E\+D/src/\mbox{\hyperlink{_edge_drawer_8h}{Edge\+Drawer.\+h}}\item 
+/home/deos/ce.\+debeunne/colcon\+\_\+ws/src/\+Sa\+D\+V\+I\+O/cpp/thirdparty/\+E\+L\+S\+E\+D/src/\mbox{\hyperlink{_edge_drawer_8cpp}{Edge\+Drawer.\+cpp}}\end{DoxyCompactItemize}

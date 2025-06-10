@@ -1,0 +1,90 @@
+\hypertarget{classisae_1_1_line3_d}{}\doxysection{isae\+::Line3D Class Reference}
+\label{classisae_1_1_line3_d}\index{isae::Line3D@{isae::Line3D}}
+
+
+A 3D Line landmark class.  
+
+
+
+
+{\ttfamily \#include $<$Line3\+D.\+h$>$}
+
+
+
+Inheritance diagram for isae\+::Line3D\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{classisae_1_1_line3_d__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for isae\+::Line3D\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{classisae_1_1_line3_d__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+E\+I\+G\+E\+N\+\_\+\+M\+A\+K\+E\+\_\+\+A\+L\+I\+G\+N\+E\+D\+\_\+\+O\+P\+E\+R\+A\+T\+O\+R\+\_\+\+N\+EW \mbox{\hyperlink{classisae_1_1_line3_d_a61c82dd6e943b841ad35a0fdb1ae9ef1}{Line3D}} ()
+\item 
+\mbox{\hyperlink{classisae_1_1_line3_d_afd7de0ec5df7e9e4efea277b46a58873}{Line3D}} (std\+::vector$<$ Eigen\+::\+Vector3d $>$ T\+\_\+w\+\_\+l\+\_\+vector, cv\+::\+Mat desc=cv\+::\+Mat())
+\item 
+\mbox{\hyperlink{classisae_1_1_line3_d_a65efa25fe5f4a03b7d88c0a23ea31aa7}{Line3D}} (Eigen\+::\+Affine3d T\+\_\+w\+\_\+l, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{isae\+::\+A\+Feature}} $>$$>$ features)
+\item 
+double \mbox{\hyperlink{classisae_1_1_line3_d_abf827ec15335a99e08e919eba063556a}{chi2err}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$ f) override
+\begin{DoxyCompactList}\small\item\em Compute the chi2 error for a given feature. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A 3D Line landmark class. 
+
+\mbox{\hyperlink{classisae_1_1_line3_d}{Line3D}} class represents a 3D line in space, labeled as \char`\"{}linexd\char`\"{}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classisae_1_1_line3_d_a61c82dd6e943b841ad35a0fdb1ae9ef1}\label{classisae_1_1_line3_d_a61c82dd6e943b841ad35a0fdb1ae9ef1}} 
+\index{isae::Line3D@{isae::Line3D}!Line3D@{Line3D}}
+\index{Line3D@{Line3D}!isae::Line3D@{isae::Line3D}}
+\doxysubsubsection{\texorpdfstring{Line3D()}{Line3D()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily E\+I\+G\+E\+N\+\_\+\+M\+A\+K\+E\+\_\+\+A\+L\+I\+G\+N\+E\+D\+\_\+\+O\+P\+E\+R\+A\+T\+O\+R\+\_\+\+N\+EW isae\+::\+Line3\+D\+::\+Line3D (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_line3_d_afd7de0ec5df7e9e4efea277b46a58873}\label{classisae_1_1_line3_d_afd7de0ec5df7e9e4efea277b46a58873}} 
+\index{isae::Line3D@{isae::Line3D}!Line3D@{Line3D}}
+\index{Line3D@{Line3D}!isae::Line3D@{isae::Line3D}}
+\doxysubsubsection{\texorpdfstring{Line3D()}{Line3D()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily isae\+::\+Line3\+D\+::\+Line3D (\begin{DoxyParamCaption}\item[{std\+::vector$<$ Eigen\+::\+Vector3d $>$}]{T\+\_\+w\+\_\+l\+\_\+vector,  }\item[{cv\+::\+Mat}]{desc = {\ttfamily cv\+:\+:Mat()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_line3_d_a65efa25fe5f4a03b7d88c0a23ea31aa7}\label{classisae_1_1_line3_d_a65efa25fe5f4a03b7d88c0a23ea31aa7}} 
+\index{isae::Line3D@{isae::Line3D}!Line3D@{Line3D}}
+\index{Line3D@{Line3D}!isae::Line3D@{isae::Line3D}}
+\doxysubsubsection{\texorpdfstring{Line3D()}{Line3D()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily isae\+::\+Line3\+D\+::\+Line3D (\begin{DoxyParamCaption}\item[{Eigen\+::\+Affine3d}]{T\+\_\+w\+\_\+l,  }\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{isae\+::\+A\+Feature}} $>$$>$}]{features }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classisae_1_1_line3_d_abf827ec15335a99e08e919eba063556a}\label{classisae_1_1_line3_d_abf827ec15335a99e08e919eba063556a}} 
+\index{isae::Line3D@{isae::Line3D}!chi2err@{chi2err}}
+\index{chi2err@{chi2err}!isae::Line3D@{isae::Line3D}}
+\doxysubsubsection{\texorpdfstring{chi2err()}{chi2err()}}
+{\footnotesize\ttfamily double isae\+::\+Line3\+D\+::chi2err (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Compute the chi2 error for a given feature. 
+
+
+
+Reimplemented from \mbox{\hyperlink{classisae_1_1_a_landmark_a1e8fdd01e6194fd7e40f8687f0f3a550}{isae\+::\+A\+Landmark}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/deos/ce.\+debeunne/colcon\+\_\+ws/src/\+Sa\+D\+V\+I\+O/cpp/include/isaeslam/data/landmarks/\mbox{\hyperlink{_line3_d_8h}{Line3\+D.\+h}}\item 
+/home/deos/ce.\+debeunne/colcon\+\_\+ws/src/\+Sa\+D\+V\+I\+O/cpp/src/data/landmarks/\mbox{\hyperlink{_line3_d_8cpp}{Line3\+D.\+cpp}}\end{DoxyCompactItemize}

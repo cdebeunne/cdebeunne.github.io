@@ -1,0 +1,95 @@
+\hypertarget{classisae_1_1_bundle_adjustment_c_e_r_e_s_numeric}{}\doxysection{isae\+::Bundle\+Adjustment\+C\+E\+R\+E\+S\+Numeric Class Reference}
+\label{classisae_1_1_bundle_adjustment_c_e_r_e_s_numeric}\index{isae::BundleAdjustmentCERESNumeric@{isae::BundleAdjustmentCERESNumeric}}
+
+
+{\ttfamily \#include $<$Bundle\+Adjustment\+C\+E\+R\+E\+S\+Numeric.\+h$>$}
+
+
+
+Inheritance diagram for isae\+::Bundle\+Adjustment\+C\+E\+R\+E\+S\+Numeric\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=286pt]{classisae_1_1_bundle_adjustment_c_e_r_e_s_numeric__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for isae\+::Bundle\+Adjustment\+C\+E\+R\+E\+S\+Numeric\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=286pt]{classisae_1_1_bundle_adjustment_c_e_r_e_s_numeric__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classisae_1_1_bundle_adjustment_c_e_r_e_s_numeric_a83642bad9d8fd533eb435ce1e9efa01f}{Bundle\+Adjustment\+C\+E\+R\+E\+S\+Numeric}} ()=default
+\item 
+\mbox{\hyperlink{classisae_1_1_bundle_adjustment_c_e_r_e_s_numeric_a493d89f2047b617c5224f01998d1fe5d}{$\sim$\+Bundle\+Adjustment\+C\+E\+R\+E\+S\+Numeric}} ()=default
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint \mbox{\hyperlink{classisae_1_1_bundle_adjustment_c_e_r_e_s_numeric_a7800b926b6c85d26770586b06b4622a4}{add\+Residuals\+Local\+Map}} (ceres\+::\+Problem \&problem, ceres\+::\+Loss\+Function $\ast$loss\+\_\+function, ceres\+::\+Parameter\+Block\+Ordering $\ast$ordering, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$$>$ \&frame\+\_\+vector, size\+\_\+t fixed\+\_\+frame\+\_\+number, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_local_map}{isae\+::\+Local\+Map}} $>$ \&local\+\_\+map) override
+\item 
+uint \mbox{\hyperlink{classisae_1_1_bundle_adjustment_c_e_r_e_s_numeric_a114d33fe6832de709f1ebe67baf25991}{add\+Single\+Frame\+Residuals}} (ceres\+::\+Problem \&problem, ceres\+::\+Loss\+Function $\ast$loss\+\_\+function, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&frame, \mbox{\hyperlink{namespaceisae_a4b744e0e080a733838eb133deda894aa}{typed\+\_\+vec\+\_\+landmarks}} \&cloud\+\_\+to\+\_\+optimize) override
+\item 
+uint \mbox{\hyperlink{classisae_1_1_bundle_adjustment_c_e_r_e_s_numeric_a1f25241602882e67ec2954f10e25ad4f}{add\+Landmark\+Residuals}} (ceres\+::\+Problem \&problem, ceres\+::\+Loss\+Function $\ast$loss\+\_\+function, \mbox{\hyperlink{namespaceisae_a4b744e0e080a733838eb133deda894aa}{typed\+\_\+vec\+\_\+landmarks}} \&cloud\+\_\+to\+\_\+optimize) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classisae_1_1_bundle_adjustment_c_e_r_e_s_numeric_a83642bad9d8fd533eb435ce1e9efa01f}\label{classisae_1_1_bundle_adjustment_c_e_r_e_s_numeric_a83642bad9d8fd533eb435ce1e9efa01f}} 
+\index{isae::BundleAdjustmentCERESNumeric@{isae::BundleAdjustmentCERESNumeric}!BundleAdjustmentCERESNumeric@{BundleAdjustmentCERESNumeric}}
+\index{BundleAdjustmentCERESNumeric@{BundleAdjustmentCERESNumeric}!isae::BundleAdjustmentCERESNumeric@{isae::BundleAdjustmentCERESNumeric}}
+\doxysubsubsection{\texorpdfstring{BundleAdjustmentCERESNumeric()}{BundleAdjustmentCERESNumeric()}}
+{\footnotesize\ttfamily isae\+::\+Bundle\+Adjustment\+C\+E\+R\+E\+S\+Numeric\+::\+Bundle\+Adjustment\+C\+E\+R\+E\+S\+Numeric (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classisae_1_1_bundle_adjustment_c_e_r_e_s_numeric_a493d89f2047b617c5224f01998d1fe5d}\label{classisae_1_1_bundle_adjustment_c_e_r_e_s_numeric_a493d89f2047b617c5224f01998d1fe5d}} 
+\index{isae::BundleAdjustmentCERESNumeric@{isae::BundleAdjustmentCERESNumeric}!````~BundleAdjustmentCERESNumeric@{$\sim$BundleAdjustmentCERESNumeric}}
+\index{````~BundleAdjustmentCERESNumeric@{$\sim$BundleAdjustmentCERESNumeric}!isae::BundleAdjustmentCERESNumeric@{isae::BundleAdjustmentCERESNumeric}}
+\doxysubsubsection{\texorpdfstring{$\sim$BundleAdjustmentCERESNumeric()}{~BundleAdjustmentCERESNumeric()}}
+{\footnotesize\ttfamily isae\+::\+Bundle\+Adjustment\+C\+E\+R\+E\+S\+Numeric\+::$\sim$\+Bundle\+Adjustment\+C\+E\+R\+E\+S\+Numeric (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classisae_1_1_bundle_adjustment_c_e_r_e_s_numeric_a1f25241602882e67ec2954f10e25ad4f}\label{classisae_1_1_bundle_adjustment_c_e_r_e_s_numeric_a1f25241602882e67ec2954f10e25ad4f}} 
+\index{isae::BundleAdjustmentCERESNumeric@{isae::BundleAdjustmentCERESNumeric}!addLandmarkResiduals@{addLandmarkResiduals}}
+\index{addLandmarkResiduals@{addLandmarkResiduals}!isae::BundleAdjustmentCERESNumeric@{isae::BundleAdjustmentCERESNumeric}}
+\doxysubsubsection{\texorpdfstring{addLandmarkResiduals()}{addLandmarkResiduals()}}
+{\footnotesize\ttfamily uint isae\+::\+Bundle\+Adjustment\+C\+E\+R\+E\+S\+Numeric\+::add\+Landmark\+Residuals (\begin{DoxyParamCaption}\item[{ceres\+::\+Problem \&}]{problem,  }\item[{ceres\+::\+Loss\+Function $\ast$}]{loss\+\_\+function,  }\item[{\mbox{\hyperlink{namespaceisae_a4b744e0e080a733838eb133deda894aa}{typed\+\_\+vec\+\_\+landmarks}} \&}]{cloud\+\_\+to\+\_\+optimize }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classisae_1_1_a_optimizer_ab200573dfb0edebe7b2628e28f9cefef}{isae\+::\+A\+Optimizer}}.
+
+\mbox{\Hypertarget{classisae_1_1_bundle_adjustment_c_e_r_e_s_numeric_a7800b926b6c85d26770586b06b4622a4}\label{classisae_1_1_bundle_adjustment_c_e_r_e_s_numeric_a7800b926b6c85d26770586b06b4622a4}} 
+\index{isae::BundleAdjustmentCERESNumeric@{isae::BundleAdjustmentCERESNumeric}!addResidualsLocalMap@{addResidualsLocalMap}}
+\index{addResidualsLocalMap@{addResidualsLocalMap}!isae::BundleAdjustmentCERESNumeric@{isae::BundleAdjustmentCERESNumeric}}
+\doxysubsubsection{\texorpdfstring{addResidualsLocalMap()}{addResidualsLocalMap()}}
+{\footnotesize\ttfamily uint isae\+::\+Bundle\+Adjustment\+C\+E\+R\+E\+S\+Numeric\+::add\+Residuals\+Local\+Map (\begin{DoxyParamCaption}\item[{ceres\+::\+Problem \&}]{problem,  }\item[{ceres\+::\+Loss\+Function $\ast$}]{loss\+\_\+function,  }\item[{ceres\+::\+Parameter\+Block\+Ordering $\ast$}]{ordering,  }\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$$>$ \&}]{frame\+\_\+vector,  }\item[{size\+\_\+t}]{fixed\+\_\+frame\+\_\+number,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_local_map}{isae\+::\+Local\+Map}} $>$ \&}]{local\+\_\+map }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classisae_1_1_a_optimizer_ab4a33aa6977b4d88e7fd3da45f496975}{isae\+::\+A\+Optimizer}}.
+
+\mbox{\Hypertarget{classisae_1_1_bundle_adjustment_c_e_r_e_s_numeric_a114d33fe6832de709f1ebe67baf25991}\label{classisae_1_1_bundle_adjustment_c_e_r_e_s_numeric_a114d33fe6832de709f1ebe67baf25991}} 
+\index{isae::BundleAdjustmentCERESNumeric@{isae::BundleAdjustmentCERESNumeric}!addSingleFrameResiduals@{addSingleFrameResiduals}}
+\index{addSingleFrameResiduals@{addSingleFrameResiduals}!isae::BundleAdjustmentCERESNumeric@{isae::BundleAdjustmentCERESNumeric}}
+\doxysubsubsection{\texorpdfstring{addSingleFrameResiduals()}{addSingleFrameResiduals()}}
+{\footnotesize\ttfamily uint isae\+::\+Bundle\+Adjustment\+C\+E\+R\+E\+S\+Numeric\+::add\+Single\+Frame\+Residuals (\begin{DoxyParamCaption}\item[{ceres\+::\+Problem \&}]{problem,  }\item[{ceres\+::\+Loss\+Function $\ast$}]{loss\+\_\+function,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&}]{frame,  }\item[{\mbox{\hyperlink{namespaceisae_a4b744e0e080a733838eb133deda894aa}{typed\+\_\+vec\+\_\+landmarks}} \&}]{cloud\+\_\+to\+\_\+optimize }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classisae_1_1_a_optimizer_a06ac6ce2c1121790ad7b28ae0c36de78}{isae\+::\+A\+Optimizer}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/deos/ce.\+debeunne/colcon\+\_\+ws/src/\+Sa\+D\+V\+I\+O/cpp/include/isaeslam/optimizers/\mbox{\hyperlink{_bundle_adjustment_c_e_r_e_s_numeric_8h}{Bundle\+Adjustment\+C\+E\+R\+E\+S\+Numeric.\+h}}\item 
+/home/deos/ce.\+debeunne/colcon\+\_\+ws/src/\+Sa\+D\+V\+I\+O/cpp/src/optimizers/\mbox{\hyperlink{_bundle_adjustment_c_e_r_e_s_numeric_8cpp}{Bundle\+Adjustment\+C\+E\+R\+E\+S\+Numeric.\+cpp}}\end{DoxyCompactItemize}

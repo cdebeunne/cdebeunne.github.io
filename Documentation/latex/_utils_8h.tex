@@ -1,0 +1,184 @@
+\hypertarget{_utils_8h}{}\doxysection{/home/deos/ce.debeunne/colcon\+\_\+ws/src/\+Sa\+D\+V\+I\+O/cpp/thirdparty/\+E\+L\+S\+E\+D/src/\+Utils.h File Reference}
+\label{_utils_8h}\index{/home/deos/ce.debeunne/colcon\_ws/src/SaDVIO/cpp/thirdparty/ELSED/src/Utils.h@{/home/deos/ce.debeunne/colcon\_ws/src/SaDVIO/cpp/thirdparty/ELSED/src/Utils.h}}
+{\ttfamily \#include $<$ostream$>$}\newline
+{\ttfamily \#include $<$opencv2/opencv.\+hpp$>$}\newline
+Include dependency graph for Utils.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=272pt]{_utils_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_utils_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structupm_1_1_line_detection_extra_info}{upm\+::\+Line\+Detection\+Extra\+Info}}
+\item 
+struct \mbox{\hyperlink{structupm_1_1_pixel}{upm\+::\+Pixel}}
+\item 
+struct \mbox{\hyperlink{structupm_1_1_salient_segment}{upm\+::\+Salient\+Segment}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceupm}{upm}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_utils_8h_abd851fca9956ecce4cf22ecb5b36a648}{U\+P\+M\+\_\+\+A\+BS}}(x)~((x) $>$= 0 ? (x) \+: -\/(x))
+\item 
+\#define \mbox{\hyperlink{_utils_8h_ac87096212f4583447a910ab162f5e850}{U\+P\+M\+\_\+\+E\+D\+G\+E\+\_\+\+V\+E\+R\+T\+I\+C\+AL}}~0
+\item 
+\#define \mbox{\hyperlink{_utils_8h_a1e7ddfdb0caf093cb2d08ae77e81aefa}{U\+P\+M\+\_\+\+E\+D\+G\+E\+\_\+\+H\+O\+R\+I\+Z\+O\+N\+T\+AL}}~255
+\item 
+\#define \mbox{\hyperlink{_utils_8h_a649d828cbf4fdc4f3e4ca8cbb95ecdbb}{U\+P\+M\+\_\+\+E\+D\+\_\+\+N\+O\+\_\+\+E\+D\+G\+E\+\_\+\+P\+I\+X\+EL}}~0
+\item 
+\#define \mbox{\hyperlink{_utils_8h_a36b99d2c6c25ca9670cb4abad66dce84}{U\+P\+M\+\_\+\+E\+D\+\_\+\+E\+D\+G\+E\+\_\+\+P\+I\+X\+EL}}~255
+\item 
+\#define \mbox{\hyperlink{_utils_8h_a4ba283518b62307ec0fa2b9ec81f6041}{U\+P\+M\+\_\+\+E\+D\+\_\+\+A\+N\+C\+H\+O\+R\+\_\+\+P\+I\+X\+EL}}~204
+\item 
+\#define \mbox{\hyperlink{_utils_8h_a56b4b9e6eda73138c26ff9856f086e14}{U\+P\+M\+\_\+\+E\+D\+\_\+\+S\+E\+G\+M\+E\+N\+T\+\_\+\+I\+N\+L\+I\+E\+R\+\_\+\+PX}}~153
+\item 
+\#define \mbox{\hyperlink{_utils_8h_a12349526f8bd3a3e76c59b55c23e3023}{U\+P\+M\+\_\+\+E\+D\+\_\+\+S\+E\+G\+M\+E\+N\+T\+\_\+\+O\+U\+T\+L\+I\+E\+R\+\_\+\+PX}}~102
+\item 
+\#define \mbox{\hyperlink{_utils_8h_a1771986a625eee1c476db9c29a00517a}{U\+P\+M\+\_\+\+E\+D\+\_\+\+J\+U\+N\+T\+I\+O\+N\+\_\+\+PX}}~152
+\item 
+\#define \mbox{\hyperlink{_utils_8h_a5000ebd305e9c8771169663c43608343}{U\+P\+M\+\_\+\+L\+E\+FT}}~1
+\item 
+\#define \mbox{\hyperlink{_utils_8h_a699ac1d53f6769dd866fe7926f89e2c7}{U\+P\+M\+\_\+\+R\+I\+G\+HT}}~2
+\item 
+\#define \mbox{\hyperlink{_utils_8h_a0305630527df283921928582e910e170}{U\+P\+M\+\_\+\+UP}}~3
+\item 
+\#define \mbox{\hyperlink{_utils_8h_a104fc87c694099c181f4f61b4229b101}{U\+P\+M\+\_\+\+D\+O\+WN}}~4
+\item 
+\#define \mbox{\hyperlink{_utils_8h_a1082672ae1783d9e1f9b81e2a2ef78ac}{U\+P\+M\+\_\+\+S\+K\+I\+P\+\_\+\+E\+D\+G\+E\+\_\+\+PT}}~2
+\item 
+\#define \mbox{\hyperlink{_utils_8h_a55bfcafffea25cc075c644aa6cc96a00}{U\+P\+M\+\_\+\+M\+A\+X\+\_\+\+O\+U\+T\+L\+I\+E\+R\+S\+\_\+\+TH}}~3
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef cv\+::\+Vec4f \mbox{\hyperlink{namespaceupm_a21887d87b3a6abbaadcb35e0971abef3}{upm\+::\+Segment}}
+\item 
+typedef std\+::vector$<$ Segment $>$ \mbox{\hyperlink{namespaceupm_a94e50fdc620c28b20b279d2ceb67ddc2}{upm\+::\+Segments}}
+\item 
+typedef std\+::shared\+\_\+ptr$<$ Line\+Detection\+Extra\+Info $>$ \mbox{\hyperlink{namespaceupm_ad6da441adeaf5a499fb9834c9e4b07b9}{upm\+::\+Line\+Detection\+Extra\+Info\+Ptr}}
+\item 
+typedef std\+::vector$<$ Pixel $>$ \mbox{\hyperlink{namespaceupm_a4e5ceb7dee65186c17eb2ba0704b2033}{upm\+::\+Image\+Edge}}
+\item 
+typedef std\+::vector$<$ Image\+Edge $>$ \mbox{\hyperlink{namespaceupm_a402822a53e697473579e765851bdcbf7}{upm\+::\+Image\+Edges}}
+\item 
+typedef std\+::vector$<$ Salient\+Segment $>$ \mbox{\hyperlink{namespaceupm_a891523fdc5c645ac17061d49e450b2ef}{upm\+::\+Salient\+Segments}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{namespaceupm_aac9403dffd0ef05f0056e6a1e8d230a3}{upm\+::circular\+Dist}} (double valueA, double valueB, double mod=360)
+\begin{DoxyCompactList}\small\item\em Calculate the angular distance between two angles valueA and valueB. Taking into account that 0 degrees is equivalent to 360. \end{DoxyCompactList}\item 
+cv\+::\+Point2f \mbox{\hyperlink{namespaceupm_a6682b43c9b631176d6b4a288f19e9003}{upm\+::get\+Projection\+Ptn}} (const cv\+::\+Vec3f \&l, const cv\+::\+Point2f \&p)
+\begin{DoxyCompactList}\small\item\em Gets the projection of a point into a line. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{namespaceupm_ab275a52070aab001b3a468fbeeaed1d9}{upm\+::seg\+Length}} (const Segment \&s)
+\begin{DoxyCompactList}\small\item\em Calculates the length of a line segment. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{namespaceupm_a9b28fc8244ef973d784e4d645af50b61}{upm\+::seg\+Angle}} (const Segment \&s)
+\begin{DoxyCompactList}\small\item\em Calculates the angle of a line segment. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_utils_8h_abd851fca9956ecce4cf22ecb5b36a648}\label{_utils_8h_abd851fca9956ecce4cf22ecb5b36a648}} 
+\index{Utils.h@{Utils.h}!UPM\_ABS@{UPM\_ABS}}
+\index{UPM\_ABS@{UPM\_ABS}!Utils.h@{Utils.h}}
+\doxysubsubsection{\texorpdfstring{UPM\_ABS}{UPM\_ABS}}
+{\footnotesize\ttfamily \#define U\+P\+M\+\_\+\+A\+BS(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~((x) $>$= 0 ? (x) \+: -\/(x))}
+
+\mbox{\Hypertarget{_utils_8h_a104fc87c694099c181f4f61b4229b101}\label{_utils_8h_a104fc87c694099c181f4f61b4229b101}} 
+\index{Utils.h@{Utils.h}!UPM\_DOWN@{UPM\_DOWN}}
+\index{UPM\_DOWN@{UPM\_DOWN}!Utils.h@{Utils.h}}
+\doxysubsubsection{\texorpdfstring{UPM\_DOWN}{UPM\_DOWN}}
+{\footnotesize\ttfamily \#define U\+P\+M\+\_\+\+D\+O\+WN~4}
+
+\mbox{\Hypertarget{_utils_8h_a4ba283518b62307ec0fa2b9ec81f6041}\label{_utils_8h_a4ba283518b62307ec0fa2b9ec81f6041}} 
+\index{Utils.h@{Utils.h}!UPM\_ED\_ANCHOR\_PIXEL@{UPM\_ED\_ANCHOR\_PIXEL}}
+\index{UPM\_ED\_ANCHOR\_PIXEL@{UPM\_ED\_ANCHOR\_PIXEL}!Utils.h@{Utils.h}}
+\doxysubsubsection{\texorpdfstring{UPM\_ED\_ANCHOR\_PIXEL}{UPM\_ED\_ANCHOR\_PIXEL}}
+{\footnotesize\ttfamily \#define U\+P\+M\+\_\+\+E\+D\+\_\+\+A\+N\+C\+H\+O\+R\+\_\+\+P\+I\+X\+EL~204}
+
+\mbox{\Hypertarget{_utils_8h_a36b99d2c6c25ca9670cb4abad66dce84}\label{_utils_8h_a36b99d2c6c25ca9670cb4abad66dce84}} 
+\index{Utils.h@{Utils.h}!UPM\_ED\_EDGE\_PIXEL@{UPM\_ED\_EDGE\_PIXEL}}
+\index{UPM\_ED\_EDGE\_PIXEL@{UPM\_ED\_EDGE\_PIXEL}!Utils.h@{Utils.h}}
+\doxysubsubsection{\texorpdfstring{UPM\_ED\_EDGE\_PIXEL}{UPM\_ED\_EDGE\_PIXEL}}
+{\footnotesize\ttfamily \#define U\+P\+M\+\_\+\+E\+D\+\_\+\+E\+D\+G\+E\+\_\+\+P\+I\+X\+EL~255}
+
+\mbox{\Hypertarget{_utils_8h_a1771986a625eee1c476db9c29a00517a}\label{_utils_8h_a1771986a625eee1c476db9c29a00517a}} 
+\index{Utils.h@{Utils.h}!UPM\_ED\_JUNTION\_PX@{UPM\_ED\_JUNTION\_PX}}
+\index{UPM\_ED\_JUNTION\_PX@{UPM\_ED\_JUNTION\_PX}!Utils.h@{Utils.h}}
+\doxysubsubsection{\texorpdfstring{UPM\_ED\_JUNTION\_PX}{UPM\_ED\_JUNTION\_PX}}
+{\footnotesize\ttfamily \#define U\+P\+M\+\_\+\+E\+D\+\_\+\+J\+U\+N\+T\+I\+O\+N\+\_\+\+PX~152}
+
+\mbox{\Hypertarget{_utils_8h_a649d828cbf4fdc4f3e4ca8cbb95ecdbb}\label{_utils_8h_a649d828cbf4fdc4f3e4ca8cbb95ecdbb}} 
+\index{Utils.h@{Utils.h}!UPM\_ED\_NO\_EDGE\_PIXEL@{UPM\_ED\_NO\_EDGE\_PIXEL}}
+\index{UPM\_ED\_NO\_EDGE\_PIXEL@{UPM\_ED\_NO\_EDGE\_PIXEL}!Utils.h@{Utils.h}}
+\doxysubsubsection{\texorpdfstring{UPM\_ED\_NO\_EDGE\_PIXEL}{UPM\_ED\_NO\_EDGE\_PIXEL}}
+{\footnotesize\ttfamily \#define U\+P\+M\+\_\+\+E\+D\+\_\+\+N\+O\+\_\+\+E\+D\+G\+E\+\_\+\+P\+I\+X\+EL~0}
+
+\mbox{\Hypertarget{_utils_8h_a56b4b9e6eda73138c26ff9856f086e14}\label{_utils_8h_a56b4b9e6eda73138c26ff9856f086e14}} 
+\index{Utils.h@{Utils.h}!UPM\_ED\_SEGMENT\_INLIER\_PX@{UPM\_ED\_SEGMENT\_INLIER\_PX}}
+\index{UPM\_ED\_SEGMENT\_INLIER\_PX@{UPM\_ED\_SEGMENT\_INLIER\_PX}!Utils.h@{Utils.h}}
+\doxysubsubsection{\texorpdfstring{UPM\_ED\_SEGMENT\_INLIER\_PX}{UPM\_ED\_SEGMENT\_INLIER\_PX}}
+{\footnotesize\ttfamily \#define U\+P\+M\+\_\+\+E\+D\+\_\+\+S\+E\+G\+M\+E\+N\+T\+\_\+\+I\+N\+L\+I\+E\+R\+\_\+\+PX~153}
+
+\mbox{\Hypertarget{_utils_8h_a12349526f8bd3a3e76c59b55c23e3023}\label{_utils_8h_a12349526f8bd3a3e76c59b55c23e3023}} 
+\index{Utils.h@{Utils.h}!UPM\_ED\_SEGMENT\_OUTLIER\_PX@{UPM\_ED\_SEGMENT\_OUTLIER\_PX}}
+\index{UPM\_ED\_SEGMENT\_OUTLIER\_PX@{UPM\_ED\_SEGMENT\_OUTLIER\_PX}!Utils.h@{Utils.h}}
+\doxysubsubsection{\texorpdfstring{UPM\_ED\_SEGMENT\_OUTLIER\_PX}{UPM\_ED\_SEGMENT\_OUTLIER\_PX}}
+{\footnotesize\ttfamily \#define U\+P\+M\+\_\+\+E\+D\+\_\+\+S\+E\+G\+M\+E\+N\+T\+\_\+\+O\+U\+T\+L\+I\+E\+R\+\_\+\+PX~102}
+
+\mbox{\Hypertarget{_utils_8h_a1e7ddfdb0caf093cb2d08ae77e81aefa}\label{_utils_8h_a1e7ddfdb0caf093cb2d08ae77e81aefa}} 
+\index{Utils.h@{Utils.h}!UPM\_EDGE\_HORIZONTAL@{UPM\_EDGE\_HORIZONTAL}}
+\index{UPM\_EDGE\_HORIZONTAL@{UPM\_EDGE\_HORIZONTAL}!Utils.h@{Utils.h}}
+\doxysubsubsection{\texorpdfstring{UPM\_EDGE\_HORIZONTAL}{UPM\_EDGE\_HORIZONTAL}}
+{\footnotesize\ttfamily \#define U\+P\+M\+\_\+\+E\+D\+G\+E\+\_\+\+H\+O\+R\+I\+Z\+O\+N\+T\+AL~255}
+
+\mbox{\Hypertarget{_utils_8h_ac87096212f4583447a910ab162f5e850}\label{_utils_8h_ac87096212f4583447a910ab162f5e850}} 
+\index{Utils.h@{Utils.h}!UPM\_EDGE\_VERTICAL@{UPM\_EDGE\_VERTICAL}}
+\index{UPM\_EDGE\_VERTICAL@{UPM\_EDGE\_VERTICAL}!Utils.h@{Utils.h}}
+\doxysubsubsection{\texorpdfstring{UPM\_EDGE\_VERTICAL}{UPM\_EDGE\_VERTICAL}}
+{\footnotesize\ttfamily \#define U\+P\+M\+\_\+\+E\+D\+G\+E\+\_\+\+V\+E\+R\+T\+I\+C\+AL~0}
+
+\mbox{\Hypertarget{_utils_8h_a5000ebd305e9c8771169663c43608343}\label{_utils_8h_a5000ebd305e9c8771169663c43608343}} 
+\index{Utils.h@{Utils.h}!UPM\_LEFT@{UPM\_LEFT}}
+\index{UPM\_LEFT@{UPM\_LEFT}!Utils.h@{Utils.h}}
+\doxysubsubsection{\texorpdfstring{UPM\_LEFT}{UPM\_LEFT}}
+{\footnotesize\ttfamily \#define U\+P\+M\+\_\+\+L\+E\+FT~1}
+
+\mbox{\Hypertarget{_utils_8h_a55bfcafffea25cc075c644aa6cc96a00}\label{_utils_8h_a55bfcafffea25cc075c644aa6cc96a00}} 
+\index{Utils.h@{Utils.h}!UPM\_MAX\_OUTLIERS\_TH@{UPM\_MAX\_OUTLIERS\_TH}}
+\index{UPM\_MAX\_OUTLIERS\_TH@{UPM\_MAX\_OUTLIERS\_TH}!Utils.h@{Utils.h}}
+\doxysubsubsection{\texorpdfstring{UPM\_MAX\_OUTLIERS\_TH}{UPM\_MAX\_OUTLIERS\_TH}}
+{\footnotesize\ttfamily \#define U\+P\+M\+\_\+\+M\+A\+X\+\_\+\+O\+U\+T\+L\+I\+E\+R\+S\+\_\+\+TH~3}
+
+\mbox{\Hypertarget{_utils_8h_a699ac1d53f6769dd866fe7926f89e2c7}\label{_utils_8h_a699ac1d53f6769dd866fe7926f89e2c7}} 
+\index{Utils.h@{Utils.h}!UPM\_RIGHT@{UPM\_RIGHT}}
+\index{UPM\_RIGHT@{UPM\_RIGHT}!Utils.h@{Utils.h}}
+\doxysubsubsection{\texorpdfstring{UPM\_RIGHT}{UPM\_RIGHT}}
+{\footnotesize\ttfamily \#define U\+P\+M\+\_\+\+R\+I\+G\+HT~2}
+
+\mbox{\Hypertarget{_utils_8h_a1082672ae1783d9e1f9b81e2a2ef78ac}\label{_utils_8h_a1082672ae1783d9e1f9b81e2a2ef78ac}} 
+\index{Utils.h@{Utils.h}!UPM\_SKIP\_EDGE\_PT@{UPM\_SKIP\_EDGE\_PT}}
+\index{UPM\_SKIP\_EDGE\_PT@{UPM\_SKIP\_EDGE\_PT}!Utils.h@{Utils.h}}
+\doxysubsubsection{\texorpdfstring{UPM\_SKIP\_EDGE\_PT}{UPM\_SKIP\_EDGE\_PT}}
+{\footnotesize\ttfamily \#define U\+P\+M\+\_\+\+S\+K\+I\+P\+\_\+\+E\+D\+G\+E\+\_\+\+PT~2}
+
+\mbox{\Hypertarget{_utils_8h_a0305630527df283921928582e910e170}\label{_utils_8h_a0305630527df283921928582e910e170}} 
+\index{Utils.h@{Utils.h}!UPM\_UP@{UPM\_UP}}
+\index{UPM\_UP@{UPM\_UP}!Utils.h@{Utils.h}}
+\doxysubsubsection{\texorpdfstring{UPM\_UP}{UPM\_UP}}
+{\footnotesize\ttfamily \#define U\+P\+M\+\_\+\+UP~3}
+

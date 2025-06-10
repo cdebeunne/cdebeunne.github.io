@@ -1,0 +1,92 @@
+\hypertarget{structisae_1_1_vertex}{}\doxysection{isae\+::Vertex Struct Reference}
+\label{structisae_1_1_vertex}\index{isae::Vertex@{isae::Vertex}}
+
+
+{\ttfamily \#include $<$mesh.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structisae_1_1_vertex_a3d281cf71b22307920017733d5dd9bd3}{Vertex}} ()
+\item 
+\mbox{\hyperlink{structisae_1_1_vertex_a1cead608fc3d47f5adf7efd95d05d53e}{Vertex}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_landmark}{A\+Landmark}} $>$ lmk)
+\item 
+\mbox{\hyperlink{structisae_1_1_vertex_a7e4f1f684dd41a09a4c7dcc7446330ee}{$\sim$\+Vertex}} ()=default
+\item 
+Eigen\+::\+Vector3d \mbox{\hyperlink{structisae_1_1_vertex_ac2cb2fbfdf16388de8f6b51976a8d046}{get\+Vertex\+Position}} () const
+\item 
+Eigen\+::\+Vector3d \mbox{\hyperlink{structisae_1_1_vertex_ade169eaf3b18c6dac568dcfef43b39ff}{get\+Vertex\+Normal}} () const
+\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structisae_1_1_polygon}{Polygon}} $>$ $>$ \mbox{\hyperlink{structisae_1_1_vertex_a4915df252f0862cf246be6ee4e2b755b}{get\+Polygons}} () const
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_landmark}{A\+Landmark}} $>$ \mbox{\hyperlink{structisae_1_1_vertex_ad9fb7727406ba94fe1d2c04253808d85}{get\+Lmk}} () const
+\item 
+void \mbox{\hyperlink{structisae_1_1_vertex_a2db174b94ca4590cfe7771931f165635}{add\+Polygon}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structisae_1_1_polygon}{Polygon}} $>$ polygon)
+\item 
+void \mbox{\hyperlink{structisae_1_1_vertex_a7fa793080b55d7880680617f60bec460}{remove\+Polygon}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structisae_1_1_polygon}{Polygon}} $>$ polygon)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structisae_1_1_vertex_a3d281cf71b22307920017733d5dd9bd3}\label{structisae_1_1_vertex_a3d281cf71b22307920017733d5dd9bd3}} 
+\index{isae::Vertex@{isae::Vertex}!Vertex@{Vertex}}
+\index{Vertex@{Vertex}!isae::Vertex@{isae::Vertex}}
+\doxysubsubsection{\texorpdfstring{Vertex()}{Vertex()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily isae\+::\+Vertex\+::\+Vertex (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structisae_1_1_vertex_a1cead608fc3d47f5adf7efd95d05d53e}\label{structisae_1_1_vertex_a1cead608fc3d47f5adf7efd95d05d53e}} 
+\index{isae::Vertex@{isae::Vertex}!Vertex@{Vertex}}
+\index{Vertex@{Vertex}!isae::Vertex@{isae::Vertex}}
+\doxysubsubsection{\texorpdfstring{Vertex()}{Vertex()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily isae\+::\+Vertex\+::\+Vertex (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_landmark}{A\+Landmark}} $>$}]{lmk }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structisae_1_1_vertex_a7e4f1f684dd41a09a4c7dcc7446330ee}\label{structisae_1_1_vertex_a7e4f1f684dd41a09a4c7dcc7446330ee}} 
+\index{isae::Vertex@{isae::Vertex}!````~Vertex@{$\sim$Vertex}}
+\index{````~Vertex@{$\sim$Vertex}!isae::Vertex@{isae::Vertex}}
+\doxysubsubsection{\texorpdfstring{$\sim$Vertex()}{~Vertex()}}
+{\footnotesize\ttfamily isae\+::\+Vertex\+::$\sim$\+Vertex (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structisae_1_1_vertex_a2db174b94ca4590cfe7771931f165635}\label{structisae_1_1_vertex_a2db174b94ca4590cfe7771931f165635}} 
+\index{isae::Vertex@{isae::Vertex}!addPolygon@{addPolygon}}
+\index{addPolygon@{addPolygon}!isae::Vertex@{isae::Vertex}}
+\doxysubsubsection{\texorpdfstring{addPolygon()}{addPolygon()}}
+{\footnotesize\ttfamily void isae\+::\+Vertex\+::add\+Polygon (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structisae_1_1_polygon}{Polygon}} $>$}]{polygon }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structisae_1_1_vertex_ad9fb7727406ba94fe1d2c04253808d85}\label{structisae_1_1_vertex_ad9fb7727406ba94fe1d2c04253808d85}} 
+\index{isae::Vertex@{isae::Vertex}!getLmk@{getLmk}}
+\index{getLmk@{getLmk}!isae::Vertex@{isae::Vertex}}
+\doxysubsubsection{\texorpdfstring{getLmk()}{getLmk()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classisae_1_1_a_landmark}{A\+Landmark}}$>$ isae\+::\+Vertex\+::get\+Lmk (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structisae_1_1_vertex_a4915df252f0862cf246be6ee4e2b755b}\label{structisae_1_1_vertex_a4915df252f0862cf246be6ee4e2b755b}} 
+\index{isae::Vertex@{isae::Vertex}!getPolygons@{getPolygons}}
+\index{getPolygons@{getPolygons}!isae::Vertex@{isae::Vertex}}
+\doxysubsubsection{\texorpdfstring{getPolygons()}{getPolygons()}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structisae_1_1_polygon}{Polygon}}$>$ $>$ isae\+::\+Vertex\+::get\+Polygons (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structisae_1_1_vertex_ade169eaf3b18c6dac568dcfef43b39ff}\label{structisae_1_1_vertex_ade169eaf3b18c6dac568dcfef43b39ff}} 
+\index{isae::Vertex@{isae::Vertex}!getVertexNormal@{getVertexNormal}}
+\index{getVertexNormal@{getVertexNormal}!isae::Vertex@{isae::Vertex}}
+\doxysubsubsection{\texorpdfstring{getVertexNormal()}{getVertexNormal()}}
+{\footnotesize\ttfamily Eigen\+::\+Vector3d isae\+::\+Vertex\+::get\+Vertex\+Normal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structisae_1_1_vertex_ac2cb2fbfdf16388de8f6b51976a8d046}\label{structisae_1_1_vertex_ac2cb2fbfdf16388de8f6b51976a8d046}} 
+\index{isae::Vertex@{isae::Vertex}!getVertexPosition@{getVertexPosition}}
+\index{getVertexPosition@{getVertexPosition}!isae::Vertex@{isae::Vertex}}
+\doxysubsubsection{\texorpdfstring{getVertexPosition()}{getVertexPosition()}}
+{\footnotesize\ttfamily Eigen\+::\+Vector3d isae\+::\+Vertex\+::get\+Vertex\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structisae_1_1_vertex_a7fa793080b55d7880680617f60bec460}\label{structisae_1_1_vertex_a7fa793080b55d7880680617f60bec460}} 
+\index{isae::Vertex@{isae::Vertex}!removePolygon@{removePolygon}}
+\index{removePolygon@{removePolygon}!isae::Vertex@{isae::Vertex}}
+\doxysubsubsection{\texorpdfstring{removePolygon()}{removePolygon()}}
+{\footnotesize\ttfamily void isae\+::\+Vertex\+::remove\+Polygon (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structisae_1_1_polygon}{Polygon}} $>$}]{polygon }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/deos/ce.\+debeunne/colcon\+\_\+ws/src/\+Sa\+D\+V\+I\+O/cpp/include/isaeslam/data/mesh/\mbox{\hyperlink{mesh_8h}{mesh.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,108 @@
+\hypertarget{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_1_1_angular_err_ceres__linexd__dx}{}\doxysection{isae\+::Angular\+Adjustment\+C\+E\+R\+E\+S\+Analytic\+::Angular\+Err\+Ceres\+\_\+linexd\+\_\+dx Class Reference}
+\label{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_1_1_angular_err_ceres__linexd__dx}\index{isae::AngularAdjustmentCERESAnalytic::AngularErrCeres\_linexd\_dx@{isae::AngularAdjustmentCERESAnalytic::AngularErrCeres\_linexd\_dx}}
+
+
+{\ttfamily \#include $<$Angular\+Adjustment\+C\+E\+R\+E\+S\+Analytic.\+h$>$}
+
+
+
+Inheritance diagram for isae\+::Angular\+Adjustment\+C\+E\+R\+E\+S\+Analytic\+::Angular\+Err\+Ceres\+\_\+linexd\+\_\+dx\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=289pt]{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_1_1_angular_err_ceres__linexd__dx__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for isae\+::Angular\+Adjustment\+C\+E\+R\+E\+S\+Analytic\+::Angular\+Err\+Ceres\+\_\+linexd\+\_\+dx\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=289pt]{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_1_1_angular_err_ceres__linexd__dx__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_1_1_angular_err_ceres__linexd__dx_a8187adb6450de7a8ac3e8f86403951a2}{Angular\+Err\+Ceres\+\_\+linexd\+\_\+dx}} (const std\+::vector$<$ Eigen\+::\+Vector3d $>$ \&bearing\+\_\+vectors, const Eigen\+::\+Affine3d \&T\+\_\+s\+\_\+f, const Eigen\+::\+Affine3d \&T\+\_\+f\+\_\+w, const Eigen\+::\+Affine3d \&T\+\_\+w\+\_\+lmk, const double sigma=1)
+\item 
+\mbox{\hyperlink{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_1_1_angular_err_ceres__linexd__dx_ab1686ea2436003afc4996094acd604b8}{$\sim$\+Angular\+Err\+Ceres\+\_\+linexd\+\_\+dx}} ()
+\item 
+virtual bool \mbox{\hyperlink{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_1_1_angular_err_ceres__linexd__dx_ad4a9be7bedb314581c749e5e1e5ffb50}{Evaluate}} (double const $\ast$const $\ast$parameters, double $\ast$residuals, double $\ast$$\ast$jacobians) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const std\+::vector$<$ Eigen\+::\+Vector3d $>$ \mbox{\hyperlink{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_1_1_angular_err_ceres__linexd__dx_a4cbbd8f5bda03aa0b5c87f14daf3074f}{\+\_\+bearing\+\_\+vectors}}
+\item 
+const Eigen\+::\+Affine3d \mbox{\hyperlink{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_1_1_angular_err_ceres__linexd__dx_a479e8f47dde23eaf8fffef017c0b3110}{\+\_\+\+T\+\_\+s\+\_\+f}}
+\item 
+const Eigen\+::\+Affine3d \mbox{\hyperlink{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_1_1_angular_err_ceres__linexd__dx_a7518030189d111065b9ea0a9e39805df}{\+\_\+\+T\+\_\+f\+\_\+w}}
+\item 
+const Eigen\+::\+Affine3d \mbox{\hyperlink{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_1_1_angular_err_ceres__linexd__dx_a0cdf523a4ff8cc086b7aa92bb967532d}{\+\_\+\+T\+\_\+w\+\_\+lmk}}
+\item 
+const double \mbox{\hyperlink{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_1_1_angular_err_ceres__linexd__dx_ad3b307cce43fbbf2c6afcdabf1121b33}{\+\_\+sigma}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_1_1_angular_err_ceres__linexd__dx_a8187adb6450de7a8ac3e8f86403951a2}\label{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_1_1_angular_err_ceres__linexd__dx_a8187adb6450de7a8ac3e8f86403951a2}} 
+\index{isae::AngularAdjustmentCERESAnalytic::AngularErrCeres\_linexd\_dx@{isae::AngularAdjustmentCERESAnalytic::AngularErrCeres\_linexd\_dx}!AngularErrCeres\_linexd\_dx@{AngularErrCeres\_linexd\_dx}}
+\index{AngularErrCeres\_linexd\_dx@{AngularErrCeres\_linexd\_dx}!isae::AngularAdjustmentCERESAnalytic::AngularErrCeres\_linexd\_dx@{isae::AngularAdjustmentCERESAnalytic::AngularErrCeres\_linexd\_dx}}
+\doxysubsubsection{\texorpdfstring{AngularErrCeres\_linexd\_dx()}{AngularErrCeres\_linexd\_dx()}}
+{\footnotesize\ttfamily isae\+::\+Angular\+Adjustment\+C\+E\+R\+E\+S\+Analytic\+::\+Angular\+Err\+Ceres\+\_\+linexd\+\_\+dx\+::\+Angular\+Err\+Ceres\+\_\+linexd\+\_\+dx (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ Eigen\+::\+Vector3d $>$ \&}]{bearing\+\_\+vectors,  }\item[{const Eigen\+::\+Affine3d \&}]{T\+\_\+s\+\_\+f,  }\item[{const Eigen\+::\+Affine3d \&}]{T\+\_\+f\+\_\+w,  }\item[{const Eigen\+::\+Affine3d \&}]{T\+\_\+w\+\_\+lmk,  }\item[{const double}]{sigma = {\ttfamily 1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_1_1_angular_err_ceres__linexd__dx_ab1686ea2436003afc4996094acd604b8}\label{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_1_1_angular_err_ceres__linexd__dx_ab1686ea2436003afc4996094acd604b8}} 
+\index{isae::AngularAdjustmentCERESAnalytic::AngularErrCeres\_linexd\_dx@{isae::AngularAdjustmentCERESAnalytic::AngularErrCeres\_linexd\_dx}!````~AngularErrCeres\_linexd\_dx@{$\sim$AngularErrCeres\_linexd\_dx}}
+\index{````~AngularErrCeres\_linexd\_dx@{$\sim$AngularErrCeres\_linexd\_dx}!isae::AngularAdjustmentCERESAnalytic::AngularErrCeres\_linexd\_dx@{isae::AngularAdjustmentCERESAnalytic::AngularErrCeres\_linexd\_dx}}
+\doxysubsubsection{\texorpdfstring{$\sim$AngularErrCeres\_linexd\_dx()}{~AngularErrCeres\_linexd\_dx()}}
+{\footnotesize\ttfamily isae\+::\+Angular\+Adjustment\+C\+E\+R\+E\+S\+Analytic\+::\+Angular\+Err\+Ceres\+\_\+linexd\+\_\+dx\+::$\sim$\+Angular\+Err\+Ceres\+\_\+linexd\+\_\+dx (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_1_1_angular_err_ceres__linexd__dx_ad4a9be7bedb314581c749e5e1e5ffb50}\label{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_1_1_angular_err_ceres__linexd__dx_ad4a9be7bedb314581c749e5e1e5ffb50}} 
+\index{isae::AngularAdjustmentCERESAnalytic::AngularErrCeres\_linexd\_dx@{isae::AngularAdjustmentCERESAnalytic::AngularErrCeres\_linexd\_dx}!Evaluate@{Evaluate}}
+\index{Evaluate@{Evaluate}!isae::AngularAdjustmentCERESAnalytic::AngularErrCeres\_linexd\_dx@{isae::AngularAdjustmentCERESAnalytic::AngularErrCeres\_linexd\_dx}}
+\doxysubsubsection{\texorpdfstring{Evaluate()}{Evaluate()}}
+{\footnotesize\ttfamily virtual bool isae\+::\+Angular\+Adjustment\+C\+E\+R\+E\+S\+Analytic\+::\+Angular\+Err\+Ceres\+\_\+linexd\+\_\+dx\+::\+Evaluate (\begin{DoxyParamCaption}\item[{double const $\ast$const $\ast$}]{parameters,  }\item[{double $\ast$}]{residuals,  }\item[{double $\ast$$\ast$}]{jacobians }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_1_1_angular_err_ceres__linexd__dx_a4cbbd8f5bda03aa0b5c87f14daf3074f}\label{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_1_1_angular_err_ceres__linexd__dx_a4cbbd8f5bda03aa0b5c87f14daf3074f}} 
+\index{isae::AngularAdjustmentCERESAnalytic::AngularErrCeres\_linexd\_dx@{isae::AngularAdjustmentCERESAnalytic::AngularErrCeres\_linexd\_dx}!\_bearing\_vectors@{\_bearing\_vectors}}
+\index{\_bearing\_vectors@{\_bearing\_vectors}!isae::AngularAdjustmentCERESAnalytic::AngularErrCeres\_linexd\_dx@{isae::AngularAdjustmentCERESAnalytic::AngularErrCeres\_linexd\_dx}}
+\doxysubsubsection{\texorpdfstring{\_bearing\_vectors}{\_bearing\_vectors}}
+{\footnotesize\ttfamily const std\+::vector$<$Eigen\+::\+Vector3d$>$ isae\+::\+Angular\+Adjustment\+C\+E\+R\+E\+S\+Analytic\+::\+Angular\+Err\+Ceres\+\_\+linexd\+\_\+dx\+::\+\_\+bearing\+\_\+vectors\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_1_1_angular_err_ceres__linexd__dx_ad3b307cce43fbbf2c6afcdabf1121b33}\label{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_1_1_angular_err_ceres__linexd__dx_ad3b307cce43fbbf2c6afcdabf1121b33}} 
+\index{isae::AngularAdjustmentCERESAnalytic::AngularErrCeres\_linexd\_dx@{isae::AngularAdjustmentCERESAnalytic::AngularErrCeres\_linexd\_dx}!\_sigma@{\_sigma}}
+\index{\_sigma@{\_sigma}!isae::AngularAdjustmentCERESAnalytic::AngularErrCeres\_linexd\_dx@{isae::AngularAdjustmentCERESAnalytic::AngularErrCeres\_linexd\_dx}}
+\doxysubsubsection{\texorpdfstring{\_sigma}{\_sigma}}
+{\footnotesize\ttfamily const double isae\+::\+Angular\+Adjustment\+C\+E\+R\+E\+S\+Analytic\+::\+Angular\+Err\+Ceres\+\_\+linexd\+\_\+dx\+::\+\_\+sigma\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_1_1_angular_err_ceres__linexd__dx_a7518030189d111065b9ea0a9e39805df}\label{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_1_1_angular_err_ceres__linexd__dx_a7518030189d111065b9ea0a9e39805df}} 
+\index{isae::AngularAdjustmentCERESAnalytic::AngularErrCeres\_linexd\_dx@{isae::AngularAdjustmentCERESAnalytic::AngularErrCeres\_linexd\_dx}!\_T\_f\_w@{\_T\_f\_w}}
+\index{\_T\_f\_w@{\_T\_f\_w}!isae::AngularAdjustmentCERESAnalytic::AngularErrCeres\_linexd\_dx@{isae::AngularAdjustmentCERESAnalytic::AngularErrCeres\_linexd\_dx}}
+\doxysubsubsection{\texorpdfstring{\_T\_f\_w}{\_T\_f\_w}}
+{\footnotesize\ttfamily const Eigen\+::\+Affine3d isae\+::\+Angular\+Adjustment\+C\+E\+R\+E\+S\+Analytic\+::\+Angular\+Err\+Ceres\+\_\+linexd\+\_\+dx\+::\+\_\+\+T\+\_\+f\+\_\+w\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_1_1_angular_err_ceres__linexd__dx_a479e8f47dde23eaf8fffef017c0b3110}\label{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_1_1_angular_err_ceres__linexd__dx_a479e8f47dde23eaf8fffef017c0b3110}} 
+\index{isae::AngularAdjustmentCERESAnalytic::AngularErrCeres\_linexd\_dx@{isae::AngularAdjustmentCERESAnalytic::AngularErrCeres\_linexd\_dx}!\_T\_s\_f@{\_T\_s\_f}}
+\index{\_T\_s\_f@{\_T\_s\_f}!isae::AngularAdjustmentCERESAnalytic::AngularErrCeres\_linexd\_dx@{isae::AngularAdjustmentCERESAnalytic::AngularErrCeres\_linexd\_dx}}
+\doxysubsubsection{\texorpdfstring{\_T\_s\_f}{\_T\_s\_f}}
+{\footnotesize\ttfamily const Eigen\+::\+Affine3d isae\+::\+Angular\+Adjustment\+C\+E\+R\+E\+S\+Analytic\+::\+Angular\+Err\+Ceres\+\_\+linexd\+\_\+dx\+::\+\_\+\+T\+\_\+s\+\_\+f\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_1_1_angular_err_ceres__linexd__dx_a0cdf523a4ff8cc086b7aa92bb967532d}\label{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_1_1_angular_err_ceres__linexd__dx_a0cdf523a4ff8cc086b7aa92bb967532d}} 
+\index{isae::AngularAdjustmentCERESAnalytic::AngularErrCeres\_linexd\_dx@{isae::AngularAdjustmentCERESAnalytic::AngularErrCeres\_linexd\_dx}!\_T\_w\_lmk@{\_T\_w\_lmk}}
+\index{\_T\_w\_lmk@{\_T\_w\_lmk}!isae::AngularAdjustmentCERESAnalytic::AngularErrCeres\_linexd\_dx@{isae::AngularAdjustmentCERESAnalytic::AngularErrCeres\_linexd\_dx}}
+\doxysubsubsection{\texorpdfstring{\_T\_w\_lmk}{\_T\_w\_lmk}}
+{\footnotesize\ttfamily const Eigen\+::\+Affine3d isae\+::\+Angular\+Adjustment\+C\+E\+R\+E\+S\+Analytic\+::\+Angular\+Err\+Ceres\+\_\+linexd\+\_\+dx\+::\+\_\+\+T\+\_\+w\+\_\+lmk\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/deos/ce.\+debeunne/colcon\+\_\+ws/src/\+Sa\+D\+V\+I\+O/cpp/include/isaeslam/optimizers/\mbox{\hyperlink{_angular_adjustment_c_e_r_e_s_analytic_8h}{Angular\+Adjustment\+C\+E\+R\+E\+S\+Analytic.\+h}}\end{DoxyCompactItemize}

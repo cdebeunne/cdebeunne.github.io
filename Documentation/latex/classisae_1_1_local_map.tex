@@ -1,0 +1,246 @@
+\hypertarget{classisae_1_1_local_map}{}\doxysection{isae\+::Local\+Map Class Reference}
+\label{classisae_1_1_local_map}\index{isae::LocalMap@{isae::LocalMap}}
+
+
+Class for a Local Map.  
+
+
+
+
+{\ttfamily \#include $<$localmap.\+h$>$}
+
+
+
+Inheritance diagram for isae\+::Local\+Map\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{classisae_1_1_local_map__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for isae\+::Local\+Map\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{classisae_1_1_local_map__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classisae_1_1_local_map_a2b4238aaa11b43d9b5c536cf0e91c80f}{Local\+Map}} ()=default
+\item 
+\mbox{\hyperlink{classisae_1_1_local_map_a4a5d9ca85317cb3c3b6b43e68e87a731}{Local\+Map}} (size\+\_\+t min\+\_\+kf\+\_\+number, size\+\_\+t max\+\_\+kf\+\_\+number, size\+\_\+t fixed\+Frame\+Number)
+\item 
+void \mbox{\hyperlink{classisae_1_1_local_map_a513a7c85a65fd1c12bc09ebd7d7d5991}{add\+Frame}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&frame) override
+\begin{DoxyCompactList}\small\item\em Add a frame to the local map. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classisae_1_1_local_map_aefba8f852a6276a4efec550f60afc324}{remove\+Frame}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&frame)
+\begin{DoxyCompactList}\small\item\em Remove a frame from the local map. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classisae_1_1_local_map_a9e8a0ec75ad4584c7d39c1cb58745dfd}{get\+Window\+Size}} ()
+\item 
+size\+\_\+t \mbox{\hyperlink{classisae_1_1_local_map_a7b3566280a7b51caa928aa0eb712d2f7}{get\+Fixed\+Frame\+Number}} ()
+\item 
+std\+::vector$<$ Eigen\+::\+Affine3d $>$ \& \mbox{\hyperlink{classisae_1_1_local_map_a81af5b55e6f1316ba1f2ac663c4c2be9}{get\+Old\+Frames\+Poses}} ()
+\item 
+bool \mbox{\hyperlink{classisae_1_1_local_map_a71f155eb74c8a9126dd1c28186d82368}{compute\+Relative\+Pose}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&frame1, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&frame2, Eigen\+::\+Affine3d \&T\+\_\+f1\+\_\+f2, Eigen\+::\+Matrix\+Xd \&cov)
+\begin{DoxyCompactList}\small\item\em Compute the relative pose between two frames. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classisae_1_1_local_map_ac559778e7dd30c0d0d8005bdb6fdc100}{get\+Marginalization\+Flag}} ()
+\item 
+void \mbox{\hyperlink{classisae_1_1_local_map_aff0d07ed0c0c49d30c1b0db63b778d89}{discard\+Last\+Frame}} ()
+\begin{DoxyCompactList}\small\item\em Discard the last frame from the local map. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classisae_1_1_local_map_a81454ee9bac7e1ec53a1f57e0b930857}{reset}} ()
+\begin{DoxyCompactList}\small\item\em Reset the local map. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classisae_1_1_local_map_ab906b82eec1991a9c96846585a074b14}{remove\+Empty\+Landmarks}} ()
+\begin{DoxyCompactList}\small\item\em Remove landmarks from the local map that do not have any features. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+size\+\_\+t \mbox{\hyperlink{classisae_1_1_local_map_a3fad97fd24b0cfee6c21aa3208441977}{\+\_\+min\+\_\+kf\+\_\+number}} = 1
+\begin{DoxyCompactList}\small\item\em number of keyframes that are added by default when the map starts \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classisae_1_1_local_map_aaa417c52d53e43a640877909c7c76d56}{\+\_\+max\+\_\+kf\+\_\+number}} = 7
+\begin{DoxyCompactList}\small\item\em size of the sliding window \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classisae_1_1_local_map_a444a39e049f88d41b651e5251c648d41}{\+\_\+fixed\+\_\+frames\+\_\+number}} = 1
+\begin{DoxyCompactList}\small\item\em number of frame that remain static during windowed BA \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classisae_1_1_local_map_a0bf48a4cbc1c294ff630b9b6e7a113ae}{\+\_\+margin\+\_\+flag}}
+\begin{DoxyCompactList}\small\item\em flag raised if the the last frame needs to be marginalized \end{DoxyCompactList}\item 
+std\+::vector$<$ Eigen\+::\+Affine3d $>$ \mbox{\hyperlink{classisae_1_1_local_map_a8e99c25fb6829649439c1e691c7f456a}{\+\_\+removed\+\_\+frame\+\_\+poses}}
+\begin{DoxyCompactList}\small\item\em old frames poses, for debugging purposes \end{DoxyCompactList}\item 
+std\+::mutex \mbox{\hyperlink{classisae_1_1_local_map_a52644d0775d467036910ba6fe0450642}{\+\_\+localmap\+\_\+mtx}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class for a Local Map. 
+
+This is a local map that implements a sliding window approach. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classisae_1_1_local_map_a2b4238aaa11b43d9b5c536cf0e91c80f}\label{classisae_1_1_local_map_a2b4238aaa11b43d9b5c536cf0e91c80f}} 
+\index{isae::LocalMap@{isae::LocalMap}!LocalMap@{LocalMap}}
+\index{LocalMap@{LocalMap}!isae::LocalMap@{isae::LocalMap}}
+\doxysubsubsection{\texorpdfstring{LocalMap()}{LocalMap()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily isae\+::\+Local\+Map\+::\+Local\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classisae_1_1_local_map_a4a5d9ca85317cb3c3b6b43e68e87a731}\label{classisae_1_1_local_map_a4a5d9ca85317cb3c3b6b43e68e87a731}} 
+\index{isae::LocalMap@{isae::LocalMap}!LocalMap@{LocalMap}}
+\index{LocalMap@{LocalMap}!isae::LocalMap@{isae::LocalMap}}
+\doxysubsubsection{\texorpdfstring{LocalMap()}{LocalMap()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily isae\+::\+Local\+Map\+::\+Local\+Map (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{min\+\_\+kf\+\_\+number,  }\item[{size\+\_\+t}]{max\+\_\+kf\+\_\+number,  }\item[{size\+\_\+t}]{fixed\+Frame\+Number }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classisae_1_1_local_map_a513a7c85a65fd1c12bc09ebd7d7d5991}\label{classisae_1_1_local_map_a513a7c85a65fd1c12bc09ebd7d7d5991}} 
+\index{isae::LocalMap@{isae::LocalMap}!addFrame@{addFrame}}
+\index{addFrame@{addFrame}!isae::LocalMap@{isae::LocalMap}}
+\doxysubsubsection{\texorpdfstring{addFrame()}{addFrame()}}
+{\footnotesize\ttfamily void isae\+::\+Local\+Map\+::add\+Frame (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&}]{frame }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Add a frame to the local map. 
+
+This method adds a frame to the local map and also pushes its landmarks into the map. It implements a sliding window approach, removing the oldest frame if the maximum number of keyframes is reached. \mbox{\Hypertarget{classisae_1_1_local_map_a71f155eb74c8a9126dd1c28186d82368}\label{classisae_1_1_local_map_a71f155eb74c8a9126dd1c28186d82368}} 
+\index{isae::LocalMap@{isae::LocalMap}!computeRelativePose@{computeRelativePose}}
+\index{computeRelativePose@{computeRelativePose}!isae::LocalMap@{isae::LocalMap}}
+\doxysubsubsection{\texorpdfstring{computeRelativePose()}{computeRelativePose()}}
+{\footnotesize\ttfamily bool isae\+::\+Local\+Map\+::compute\+Relative\+Pose (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&}]{frame1,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&}]{frame2,  }\item[{Eigen\+::\+Affine3d \&}]{T\+\_\+f1\+\_\+f2,  }\item[{Eigen\+::\+Matrix\+Xd \&}]{cov }\end{DoxyParamCaption})}
+
+
+
+Compute the relative pose between two frames. 
+
+This method computes the relative pose between two frames of the local map and derives the covariance of the pose estimation. \mbox{\Hypertarget{classisae_1_1_local_map_aff0d07ed0c0c49d30c1b0db63b778d89}\label{classisae_1_1_local_map_aff0d07ed0c0c49d30c1b0db63b778d89}} 
+\index{isae::LocalMap@{isae::LocalMap}!discardLastFrame@{discardLastFrame}}
+\index{discardLastFrame@{discardLastFrame}!isae::LocalMap@{isae::LocalMap}}
+\doxysubsubsection{\texorpdfstring{discardLastFrame()}{discardLastFrame()}}
+{\footnotesize\ttfamily void isae\+::\+Local\+Map\+::discard\+Last\+Frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Discard the last frame from the local map. 
+
+This method discards the last frame from the local map and updates the sliding window accordingly. It also sets the marginalization flag to false. \mbox{\Hypertarget{classisae_1_1_local_map_a7b3566280a7b51caa928aa0eb712d2f7}\label{classisae_1_1_local_map_a7b3566280a7b51caa928aa0eb712d2f7}} 
+\index{isae::LocalMap@{isae::LocalMap}!getFixedFrameNumber@{getFixedFrameNumber}}
+\index{getFixedFrameNumber@{getFixedFrameNumber}!isae::LocalMap@{isae::LocalMap}}
+\doxysubsubsection{\texorpdfstring{getFixedFrameNumber()}{getFixedFrameNumber()}}
+{\footnotesize\ttfamily size\+\_\+t isae\+::\+Local\+Map\+::get\+Fixed\+Frame\+Number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_local_map_ac559778e7dd30c0d0d8005bdb6fdc100}\label{classisae_1_1_local_map_ac559778e7dd30c0d0d8005bdb6fdc100}} 
+\index{isae::LocalMap@{isae::LocalMap}!getMarginalizationFlag@{getMarginalizationFlag}}
+\index{getMarginalizationFlag@{getMarginalizationFlag}!isae::LocalMap@{isae::LocalMap}}
+\doxysubsubsection{\texorpdfstring{getMarginalizationFlag()}{getMarginalizationFlag()}}
+{\footnotesize\ttfamily bool isae\+::\+Local\+Map\+::get\+Marginalization\+Flag (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_local_map_a81af5b55e6f1316ba1f2ac663c4c2be9}\label{classisae_1_1_local_map_a81af5b55e6f1316ba1f2ac663c4c2be9}} 
+\index{isae::LocalMap@{isae::LocalMap}!getOldFramesPoses@{getOldFramesPoses}}
+\index{getOldFramesPoses@{getOldFramesPoses}!isae::LocalMap@{isae::LocalMap}}
+\doxysubsubsection{\texorpdfstring{getOldFramesPoses()}{getOldFramesPoses()}}
+{\footnotesize\ttfamily std\+::vector$<$Eigen\+::\+Affine3d$>$\& isae\+::\+Local\+Map\+::get\+Old\+Frames\+Poses (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_local_map_a9e8a0ec75ad4584c7d39c1cb58745dfd}\label{classisae_1_1_local_map_a9e8a0ec75ad4584c7d39c1cb58745dfd}} 
+\index{isae::LocalMap@{isae::LocalMap}!getWindowSize@{getWindowSize}}
+\index{getWindowSize@{getWindowSize}!isae::LocalMap@{isae::LocalMap}}
+\doxysubsubsection{\texorpdfstring{getWindowSize()}{getWindowSize()}}
+{\footnotesize\ttfamily size\+\_\+t isae\+::\+Local\+Map\+::get\+Window\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_local_map_ab906b82eec1991a9c96846585a074b14}\label{classisae_1_1_local_map_ab906b82eec1991a9c96846585a074b14}} 
+\index{isae::LocalMap@{isae::LocalMap}!removeEmptyLandmarks@{removeEmptyLandmarks}}
+\index{removeEmptyLandmarks@{removeEmptyLandmarks}!isae::LocalMap@{isae::LocalMap}}
+\doxysubsubsection{\texorpdfstring{removeEmptyLandmarks()}{removeEmptyLandmarks()}}
+{\footnotesize\ttfamily void isae\+::\+Local\+Map\+::remove\+Empty\+Landmarks (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Remove landmarks from the local map that do not have any features. 
+
+This method iterates through all landmarks in the local map and removes those that have no associated features. It is called after discarding a frame to ensure the map remains clean. \mbox{\Hypertarget{classisae_1_1_local_map_aefba8f852a6276a4efec550f60afc324}\label{classisae_1_1_local_map_aefba8f852a6276a4efec550f60afc324}} 
+\index{isae::LocalMap@{isae::LocalMap}!removeFrame@{removeFrame}}
+\index{removeFrame@{removeFrame}!isae::LocalMap@{isae::LocalMap}}
+\doxysubsubsection{\texorpdfstring{removeFrame()}{removeFrame()}}
+{\footnotesize\ttfamily void isae\+::\+Local\+Map\+::remove\+Frame (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&}]{frame }\end{DoxyParamCaption})}
+
+
+
+Remove a frame from the local map. 
+
+This method removes a frame from the local map and also removes its landmarks from the map. It updates the sliding window accordingly. \mbox{\Hypertarget{classisae_1_1_local_map_a81454ee9bac7e1ec53a1f57e0b930857}\label{classisae_1_1_local_map_a81454ee9bac7e1ec53a1f57e0b930857}} 
+\index{isae::LocalMap@{isae::LocalMap}!reset@{reset}}
+\index{reset@{reset}!isae::LocalMap@{isae::LocalMap}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void isae\+::\+Local\+Map\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reset the local map. 
+
+This method resets the local map, clearing all frames and landmarks. It is useful for reinitializing the local map in case of a failure or a new session. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classisae_1_1_local_map_a444a39e049f88d41b651e5251c648d41}\label{classisae_1_1_local_map_a444a39e049f88d41b651e5251c648d41}} 
+\index{isae::LocalMap@{isae::LocalMap}!\_fixed\_frames\_number@{\_fixed\_frames\_number}}
+\index{\_fixed\_frames\_number@{\_fixed\_frames\_number}!isae::LocalMap@{isae::LocalMap}}
+\doxysubsubsection{\texorpdfstring{\_fixed\_frames\_number}{\_fixed\_frames\_number}}
+{\footnotesize\ttfamily size\+\_\+t isae\+::\+Local\+Map\+::\+\_\+fixed\+\_\+frames\+\_\+number = 1\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+number of frame that remain static during windowed BA 
+
+\mbox{\Hypertarget{classisae_1_1_local_map_a52644d0775d467036910ba6fe0450642}\label{classisae_1_1_local_map_a52644d0775d467036910ba6fe0450642}} 
+\index{isae::LocalMap@{isae::LocalMap}!\_localmap\_mtx@{\_localmap\_mtx}}
+\index{\_localmap\_mtx@{\_localmap\_mtx}!isae::LocalMap@{isae::LocalMap}}
+\doxysubsubsection{\texorpdfstring{\_localmap\_mtx}{\_localmap\_mtx}}
+{\footnotesize\ttfamily std\+::mutex isae\+::\+Local\+Map\+::\+\_\+localmap\+\_\+mtx\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classisae_1_1_local_map_a0bf48a4cbc1c294ff630b9b6e7a113ae}\label{classisae_1_1_local_map_a0bf48a4cbc1c294ff630b9b6e7a113ae}} 
+\index{isae::LocalMap@{isae::LocalMap}!\_margin\_flag@{\_margin\_flag}}
+\index{\_margin\_flag@{\_margin\_flag}!isae::LocalMap@{isae::LocalMap}}
+\doxysubsubsection{\texorpdfstring{\_margin\_flag}{\_margin\_flag}}
+{\footnotesize\ttfamily bool isae\+::\+Local\+Map\+::\+\_\+margin\+\_\+flag\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+flag raised if the the last frame needs to be marginalized 
+
+\mbox{\Hypertarget{classisae_1_1_local_map_aaa417c52d53e43a640877909c7c76d56}\label{classisae_1_1_local_map_aaa417c52d53e43a640877909c7c76d56}} 
+\index{isae::LocalMap@{isae::LocalMap}!\_max\_kf\_number@{\_max\_kf\_number}}
+\index{\_max\_kf\_number@{\_max\_kf\_number}!isae::LocalMap@{isae::LocalMap}}
+\doxysubsubsection{\texorpdfstring{\_max\_kf\_number}{\_max\_kf\_number}}
+{\footnotesize\ttfamily size\+\_\+t isae\+::\+Local\+Map\+::\+\_\+max\+\_\+kf\+\_\+number = 7\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+size of the sliding window 
+
+\mbox{\Hypertarget{classisae_1_1_local_map_a3fad97fd24b0cfee6c21aa3208441977}\label{classisae_1_1_local_map_a3fad97fd24b0cfee6c21aa3208441977}} 
+\index{isae::LocalMap@{isae::LocalMap}!\_min\_kf\_number@{\_min\_kf\_number}}
+\index{\_min\_kf\_number@{\_min\_kf\_number}!isae::LocalMap@{isae::LocalMap}}
+\doxysubsubsection{\texorpdfstring{\_min\_kf\_number}{\_min\_kf\_number}}
+{\footnotesize\ttfamily size\+\_\+t isae\+::\+Local\+Map\+::\+\_\+min\+\_\+kf\+\_\+number = 1\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+number of keyframes that are added by default when the map starts 
+
+\mbox{\Hypertarget{classisae_1_1_local_map_a8e99c25fb6829649439c1e691c7f456a}\label{classisae_1_1_local_map_a8e99c25fb6829649439c1e691c7f456a}} 
+\index{isae::LocalMap@{isae::LocalMap}!\_removed\_frame\_poses@{\_removed\_frame\_poses}}
+\index{\_removed\_frame\_poses@{\_removed\_frame\_poses}!isae::LocalMap@{isae::LocalMap}}
+\doxysubsubsection{\texorpdfstring{\_removed\_frame\_poses}{\_removed\_frame\_poses}}
+{\footnotesize\ttfamily std\+::vector$<$Eigen\+::\+Affine3d$>$ isae\+::\+Local\+Map\+::\+\_\+removed\+\_\+frame\+\_\+poses\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+old frames poses, for debugging purposes 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/deos/ce.\+debeunne/colcon\+\_\+ws/src/\+Sa\+D\+V\+I\+O/cpp/include/isaeslam/data/maps/\mbox{\hyperlink{localmap_8h}{localmap.\+h}}\item 
+/home/deos/ce.\+debeunne/colcon\+\_\+ws/src/\+Sa\+D\+V\+I\+O/cpp/src/data/maps/\mbox{\hyperlink{localmap_8cpp}{localmap.\+cpp}}\end{DoxyCompactItemize}

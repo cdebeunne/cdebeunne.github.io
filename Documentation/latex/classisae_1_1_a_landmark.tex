@@ -1,0 +1,565 @@
+\hypertarget{classisae_1_1_a_landmark}{}\doxysection{isae\+::A\+Landmark Class Reference}
+\label{classisae_1_1_a_landmark}\index{isae::ALandmark@{isae::ALandmark}}
+
+
+Abstract class for 3D Landmarks.  
+
+
+
+
+{\ttfamily \#include $<$A\+Landmark.\+h$>$}
+
+
+
+Inheritance diagram for isae\+::A\+Landmark\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classisae_1_1_a_landmark__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for isae\+::A\+Landmark\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{classisae_1_1_a_landmark__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classisae_1_1_a_landmark_a2766f0b1732fa9290eda3946d9eb6c77}{A\+Landmark}} ()
+\item 
+\mbox{\hyperlink{classisae_1_1_a_landmark_ae6e2a2f7258f1f7763e382862b4ae2a2}{A\+Landmark}} (Eigen\+::\+Affine3d T\+\_\+w\+\_\+l, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{isae\+::\+A\+Feature}} $>$$>$ features)
+\item 
+\mbox{\hyperlink{classisae_1_1_a_landmark_a1b21660268f3c1de285eb975ec620541}{$\sim$\+A\+Landmark}} ()
+\item 
+virtual void \mbox{\hyperlink{classisae_1_1_a_landmark_adc4394a72a1079cf8d6c26bd7e28aa5b}{init}} (Eigen\+::\+Affine3d T\+\_\+w\+\_\+l, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{isae\+::\+A\+Feature}} $>$$>$ features)
+\begin{DoxyCompactList}\small\item\em Virtual Function to properly initialize a landmark. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classisae_1_1_a_landmark_a51486bb5d3a1b3cdcc8735e9eb86a314}{add\+Feature}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$ feature)
+\item 
+std\+::vector$<$ std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$ $>$ \mbox{\hyperlink{classisae_1_1_a_landmark_a73d4f95ecd8e03f3d5376984114d53d2}{get\+Features}} ()
+\item 
+void \mbox{\hyperlink{classisae_1_1_a_landmark_ad886d66d2f97e7ddd92c7b5b0641ef10}{remove\+Expired\+Features}} ()
+\begin{DoxyCompactList}\small\item\em Remove features that are not linked to anything. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classisae_1_1_a_landmark_a81740c845cfa8a332fb9ce40286eef2f}{remove\+Feature}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$ f)
+\item 
+bool \mbox{\hyperlink{classisae_1_1_a_landmark_ad1e0d7fe372877e3cde6e1a0fd525f1b}{fuse\+With\+Landmark}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_landmark}{A\+Landmark}} $>$ landmark)
+\begin{DoxyCompactList}\small\item\em Fuse this landmark with another one, the feature sets are merged. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classisae_1_1_a_landmark_a20c6b5925bd81a290307148e68f053f3}{set\+Pose}} (Eigen\+::\+Affine3d T\+\_\+w\+\_\+l)
+\item 
+void \mbox{\hyperlink{classisae_1_1_a_landmark_a41f17cad949963795191a545109aff1e}{set\+Position}} (Eigen\+::\+Vector3d t\+\_\+w\+\_\+l)
+\begin{DoxyCompactList}\small\item\em Set only the translation of the landmark pose. \end{DoxyCompactList}\item 
+Eigen\+::\+Affine3d \mbox{\hyperlink{classisae_1_1_a_landmark_a722c605a3586c87e3076977a85eba991}{get\+Pose}} () const
+\item 
+std\+::vector$<$ Eigen\+::\+Vector3d $>$ \mbox{\hyperlink{classisae_1_1_a_landmark_a846ef94c3c455fd553aad1fe1a79039e}{get\+Model\+Points}} ()
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_model3d}{A\+Model3d}} $>$ \mbox{\hyperlink{classisae_1_1_a_landmark_a3a4450ca551e32e149d173a905b27cb4}{get\+Model}} () const
+\item 
+cv\+::\+Mat \mbox{\hyperlink{classisae_1_1_a_landmark_a92c6f1d092c040417e192721630209e3}{get\+Descriptor}} () const
+\item 
+void \mbox{\hyperlink{classisae_1_1_a_landmark_a65aa73f17273596c29f5496312fe883e}{set\+Descriptor}} (cv\+::\+Mat descriptor)
+\item 
+bool \mbox{\hyperlink{classisae_1_1_a_landmark_ac55e0d26fdac4fd084617dff12f04cbd}{is\+Initialized}} () const
+\item 
+void \mbox{\hyperlink{classisae_1_1_a_landmark_abeb8d9a8b2672fd27c139cb31067939f}{set\+Uninitialized}} ()
+\item 
+void \mbox{\hyperlink{classisae_1_1_a_landmark_a9a72aab209dc950e80ace332bb6a9bbb}{set\+In\+Map}} ()
+\item 
+bool \mbox{\hyperlink{classisae_1_1_a_landmark_a5d5114231615a7bf3cdd32752ee8d4f7}{is\+In\+Map}} ()
+\item 
+bool \mbox{\hyperlink{classisae_1_1_a_landmark_aa7e1af2bb1ba9197bf0370383f34b6c6}{sanity\+Check}} ()
+\begin{DoxyCompactList}\small\item\em Check if the landmark is valid in terms of reprojection error and number of features. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classisae_1_1_a_landmark_a1e8fdd01e6194fd7e40f8687f0f3a550}{chi2err}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$ f)
+\begin{DoxyCompactList}\small\item\em Compute the chi2 error for a given feature. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classisae_1_1_a_landmark_a46f59893cd8c79bdf026e723c80bf15d}{avg\+Chi2err}} ()
+\begin{DoxyCompactList}\small\item\em Compute the average chi2 error for all features associated to the landmark. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classisae_1_1_a_landmark_ad20146a713e3541f28ca3b033447b0d3}{is\+Outlier}} () const
+\item 
+void \mbox{\hyperlink{classisae_1_1_a_landmark_afac12a1bfd4bd4aa5b5f313765fab267}{set\+Outlier}} ()
+\item 
+void \mbox{\hyperlink{classisae_1_1_a_landmark_a8b5392eb3afc1bb5ee1e8cbbb5fc85c7}{set\+Inlier}} ()
+\item 
+bool \mbox{\hyperlink{classisae_1_1_a_landmark_a084e6883cbcc5753fd4eb0bce45f8316}{is\+Resurected}} () const
+\item 
+void \mbox{\hyperlink{classisae_1_1_a_landmark_aaf0b02c544f045c86e2078f99c186e00}{set\+Resurected}} ()
+\item 
+bool \mbox{\hyperlink{classisae_1_1_a_landmark_aed185d8f74787c611cc240b38c2cc345}{has\+Prior}} () const
+\item 
+void \mbox{\hyperlink{classisae_1_1_a_landmark_a89d65c2df01f852b2f2747e2dbc2baf2}{set\+Prior}} ()
+\item 
+bool \mbox{\hyperlink{classisae_1_1_a_landmark_a65d82f88a26cbf3482a5f43b3b5868c5}{is\+Marg}} () const
+\item 
+void \mbox{\hyperlink{classisae_1_1_a_landmark_a3d206d3ca6753443a3a74993dae993f2}{set\+Marg}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classisae_1_1_a_landmark_aae1ecd74591cf18787a7746fca7dd279}{\+\_\+id}}
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+Static counter for landmarks, used for unique id generation \end{quote}
+\end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classisae_1_1_a_landmark_a00ebbfdaef535c8078e12d1361329771}{\+\_\+label}}
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+Unique id for the landmark, used for bookeeping \end{quote}
+\end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{classisae_1_1_a_landmark_a6753849038ee686ddffd7079524814a1}{\+\_\+landmark\+\_\+count}} = 0
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classisae_1_1_a_landmark_ab4a8edb6a3bdbecf76bfd0b933741e3a}{\+\_\+initialized}} = false
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+Label for the landmark \end{quote}
+\end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classisae_1_1_a_landmark_a3ff8a422e7ad62964b6736ec88c8d446}{\+\_\+in\+\_\+map}} = false
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+Flag to check if the landmark is initialized \end{quote}
+\end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classisae_1_1_a_landmark_a397d0a9a693bc3faf77524bcb19f3ed2}{\+\_\+outlier}} = false
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+Flag to check if the landmark is in the map \end{quote}
+\end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classisae_1_1_a_landmark_a0d4f25ab5ded6a0d868f2f702b4a376e}{\+\_\+is\+\_\+resurected}} = false
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+Flag to check if the landmark is an outlier \end{quote}
+\end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classisae_1_1_a_landmark_a07de8566703c03922b923b9d7db14e83}{\+\_\+has\+\_\+prior}} = false
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+Flag to check if the landmark has been resurected \end{quote}
+\end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classisae_1_1_a_landmark_a61c8561d39b20fabc88a46cf07f1a708}{\+\_\+is\+\_\+marg}} = false
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+Flag to check if the landmark has a prior \end{quote}
+\end{DoxyCompactList}\item 
+Eigen\+::\+Affine3d \mbox{\hyperlink{classisae_1_1_a_landmark_aac46b3616425695ecd7a659ad622ddfe}{\+\_\+\+T\+\_\+w\+\_\+l}}
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+Flag to check if the landmark is marginalised \end{quote}
+\end{DoxyCompactList}\item 
+cv\+::\+Mat \mbox{\hyperlink{classisae_1_1_a_landmark_a680785fa4ffb87d3242007177543844b}{\+\_\+descriptor}}
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+Landmark pose in world frame \end{quote}
+\end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_model3d}{A\+Model3d}} $>$ \mbox{\hyperlink{classisae_1_1_a_landmark_a08610b87889eda176b56a72b7e9f8243}{\+\_\+model}}
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+Descriptor of the landmark, used for matching \end{quote}
+\end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$ $>$ \mbox{\hyperlink{classisae_1_1_a_landmark_a8e825165b72999bf8ae050cfd52af030}{\+\_\+features}}
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+3D model of the landmark \end{quote}
+\end{DoxyCompactList}\item 
+std\+::mutex \mbox{\hyperlink{classisae_1_1_a_landmark_a2095fa6737bf3806f18421d0ed3d8070}{\+\_\+lmk\+\_\+mtx}}
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+Features associated to the landmark \end{quote}
+\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract class for 3D Landmarks. 
+
+It contains a 6DoF pose and a 3D model for a general formulation. It also contains a set of features that are associated to the landmark. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classisae_1_1_a_landmark_a2766f0b1732fa9290eda3946d9eb6c77}\label{classisae_1_1_a_landmark_a2766f0b1732fa9290eda3946d9eb6c77}} 
+\index{isae::ALandmark@{isae::ALandmark}!ALandmark@{ALandmark}}
+\index{ALandmark@{ALandmark}!isae::ALandmark@{isae::ALandmark}}
+\doxysubsubsection{\texorpdfstring{ALandmark()}{ALandmark()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily isae\+::\+A\+Landmark\+::\+A\+Landmark (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_a_landmark_ae6e2a2f7258f1f7763e382862b4ae2a2}\label{classisae_1_1_a_landmark_ae6e2a2f7258f1f7763e382862b4ae2a2}} 
+\index{isae::ALandmark@{isae::ALandmark}!ALandmark@{ALandmark}}
+\index{ALandmark@{ALandmark}!isae::ALandmark@{isae::ALandmark}}
+\doxysubsubsection{\texorpdfstring{ALandmark()}{ALandmark()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily isae\+::\+A\+Landmark\+::\+A\+Landmark (\begin{DoxyParamCaption}\item[{Eigen\+::\+Affine3d}]{T\+\_\+w\+\_\+l,  }\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{isae\+::\+A\+Feature}} $>$$>$}]{features }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classisae_1_1_a_landmark_a1b21660268f3c1de285eb975ec620541}\label{classisae_1_1_a_landmark_a1b21660268f3c1de285eb975ec620541}} 
+\index{isae::ALandmark@{isae::ALandmark}!````~ALandmark@{$\sim$ALandmark}}
+\index{````~ALandmark@{$\sim$ALandmark}!isae::ALandmark@{isae::ALandmark}}
+\doxysubsubsection{\texorpdfstring{$\sim$ALandmark()}{~ALandmark()}}
+{\footnotesize\ttfamily isae\+::\+A\+Landmark\+::$\sim$\+A\+Landmark (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classisae_1_1_a_landmark_a51486bb5d3a1b3cdcc8735e9eb86a314}\label{classisae_1_1_a_landmark_a51486bb5d3a1b3cdcc8735e9eb86a314}} 
+\index{isae::ALandmark@{isae::ALandmark}!addFeature@{addFeature}}
+\index{addFeature@{addFeature}!isae::ALandmark@{isae::ALandmark}}
+\doxysubsubsection{\texorpdfstring{addFeature()}{addFeature()}}
+{\footnotesize\ttfamily void isae\+::\+A\+Landmark\+::add\+Feature (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$}]{feature }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classisae_1_1_a_landmark_a46f59893cd8c79bdf026e723c80bf15d}\label{classisae_1_1_a_landmark_a46f59893cd8c79bdf026e723c80bf15d}} 
+\index{isae::ALandmark@{isae::ALandmark}!avgChi2err@{avgChi2err}}
+\index{avgChi2err@{avgChi2err}!isae::ALandmark@{isae::ALandmark}}
+\doxysubsubsection{\texorpdfstring{avgChi2err()}{avgChi2err()}}
+{\footnotesize\ttfamily double isae\+::\+A\+Landmark\+::avg\+Chi2err (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Compute the average chi2 error for all features associated to the landmark. 
+
+\mbox{\Hypertarget{classisae_1_1_a_landmark_a1e8fdd01e6194fd7e40f8687f0f3a550}\label{classisae_1_1_a_landmark_a1e8fdd01e6194fd7e40f8687f0f3a550}} 
+\index{isae::ALandmark@{isae::ALandmark}!chi2err@{chi2err}}
+\index{chi2err@{chi2err}!isae::ALandmark@{isae::ALandmark}}
+\doxysubsubsection{\texorpdfstring{chi2err()}{chi2err()}}
+{\footnotesize\ttfamily double isae\+::\+A\+Landmark\+::chi2err (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Compute the chi2 error for a given feature. 
+
+
+
+Reimplemented in \mbox{\hyperlink{classisae_1_1_line3_d_abf827ec15335a99e08e919eba063556a}{isae\+::\+Line3D}}.
+
+\mbox{\Hypertarget{classisae_1_1_a_landmark_ad1e0d7fe372877e3cde6e1a0fd525f1b}\label{classisae_1_1_a_landmark_ad1e0d7fe372877e3cde6e1a0fd525f1b}} 
+\index{isae::ALandmark@{isae::ALandmark}!fuseWithLandmark@{fuseWithLandmark}}
+\index{fuseWithLandmark@{fuseWithLandmark}!isae::ALandmark@{isae::ALandmark}}
+\doxysubsubsection{\texorpdfstring{fuseWithLandmark()}{fuseWithLandmark()}}
+{\footnotesize\ttfamily bool isae\+::\+A\+Landmark\+::fuse\+With\+Landmark (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_landmark}{A\+Landmark}} $>$}]{landmark }\end{DoxyParamCaption})}
+
+
+
+Fuse this landmark with another one, the feature sets are merged. 
+
+If there is a wrong behavior in the association, it returns false \mbox{\Hypertarget{classisae_1_1_a_landmark_a92c6f1d092c040417e192721630209e3}\label{classisae_1_1_a_landmark_a92c6f1d092c040417e192721630209e3}} 
+\index{isae::ALandmark@{isae::ALandmark}!getDescriptor@{getDescriptor}}
+\index{getDescriptor@{getDescriptor}!isae::ALandmark@{isae::ALandmark}}
+\doxysubsubsection{\texorpdfstring{getDescriptor()}{getDescriptor()}}
+{\footnotesize\ttfamily cv\+::\+Mat isae\+::\+A\+Landmark\+::get\+Descriptor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_a_landmark_a73d4f95ecd8e03f3d5376984114d53d2}\label{classisae_1_1_a_landmark_a73d4f95ecd8e03f3d5376984114d53d2}} 
+\index{isae::ALandmark@{isae::ALandmark}!getFeatures@{getFeatures}}
+\index{getFeatures@{getFeatures}!isae::ALandmark@{isae::ALandmark}}
+\doxysubsubsection{\texorpdfstring{getFeatures()}{getFeatures()}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::weak\+\_\+ptr$<$\mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}}$>$ $>$ isae\+::\+A\+Landmark\+::get\+Features (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_a_landmark_a3a4450ca551e32e149d173a905b27cb4}\label{classisae_1_1_a_landmark_a3a4450ca551e32e149d173a905b27cb4}} 
+\index{isae::ALandmark@{isae::ALandmark}!getModel@{getModel}}
+\index{getModel@{getModel}!isae::ALandmark@{isae::ALandmark}}
+\doxysubsubsection{\texorpdfstring{getModel()}{getModel()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classisae_1_1_a_model3d}{A\+Model3d}}$>$ isae\+::\+A\+Landmark\+::get\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_a_landmark_a846ef94c3c455fd553aad1fe1a79039e}\label{classisae_1_1_a_landmark_a846ef94c3c455fd553aad1fe1a79039e}} 
+\index{isae::ALandmark@{isae::ALandmark}!getModelPoints@{getModelPoints}}
+\index{getModelPoints@{getModelPoints}!isae::ALandmark@{isae::ALandmark}}
+\doxysubsubsection{\texorpdfstring{getModelPoints()}{getModelPoints()}}
+{\footnotesize\ttfamily std\+::vector$<$Eigen\+::\+Vector3d$>$ isae\+::\+A\+Landmark\+::get\+Model\+Points (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_a_landmark_a722c605a3586c87e3076977a85eba991}\label{classisae_1_1_a_landmark_a722c605a3586c87e3076977a85eba991}} 
+\index{isae::ALandmark@{isae::ALandmark}!getPose@{getPose}}
+\index{getPose@{getPose}!isae::ALandmark@{isae::ALandmark}}
+\doxysubsubsection{\texorpdfstring{getPose()}{getPose()}}
+{\footnotesize\ttfamily Eigen\+::\+Affine3d isae\+::\+A\+Landmark\+::get\+Pose (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_a_landmark_aed185d8f74787c611cc240b38c2cc345}\label{classisae_1_1_a_landmark_aed185d8f74787c611cc240b38c2cc345}} 
+\index{isae::ALandmark@{isae::ALandmark}!hasPrior@{hasPrior}}
+\index{hasPrior@{hasPrior}!isae::ALandmark@{isae::ALandmark}}
+\doxysubsubsection{\texorpdfstring{hasPrior()}{hasPrior()}}
+{\footnotesize\ttfamily bool isae\+::\+A\+Landmark\+::has\+Prior (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_a_landmark_adc4394a72a1079cf8d6c26bd7e28aa5b}\label{classisae_1_1_a_landmark_adc4394a72a1079cf8d6c26bd7e28aa5b}} 
+\index{isae::ALandmark@{isae::ALandmark}!init@{init}}
+\index{init@{init}!isae::ALandmark@{isae::ALandmark}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void isae\+::\+A\+Landmark\+::init (\begin{DoxyParamCaption}\item[{Eigen\+::\+Affine3d}]{T\+\_\+w\+\_\+l,  }\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{isae\+::\+A\+Feature}} $>$$>$}]{features }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Virtual Function to properly initialize a landmark. 
+
+\mbox{\Hypertarget{classisae_1_1_a_landmark_ac55e0d26fdac4fd084617dff12f04cbd}\label{classisae_1_1_a_landmark_ac55e0d26fdac4fd084617dff12f04cbd}} 
+\index{isae::ALandmark@{isae::ALandmark}!isInitialized@{isInitialized}}
+\index{isInitialized@{isInitialized}!isae::ALandmark@{isae::ALandmark}}
+\doxysubsubsection{\texorpdfstring{isInitialized()}{isInitialized()}}
+{\footnotesize\ttfamily bool isae\+::\+A\+Landmark\+::is\+Initialized (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_a_landmark_a5d5114231615a7bf3cdd32752ee8d4f7}\label{classisae_1_1_a_landmark_a5d5114231615a7bf3cdd32752ee8d4f7}} 
+\index{isae::ALandmark@{isae::ALandmark}!isInMap@{isInMap}}
+\index{isInMap@{isInMap}!isae::ALandmark@{isae::ALandmark}}
+\doxysubsubsection{\texorpdfstring{isInMap()}{isInMap()}}
+{\footnotesize\ttfamily bool isae\+::\+A\+Landmark\+::is\+In\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_a_landmark_a65d82f88a26cbf3482a5f43b3b5868c5}\label{classisae_1_1_a_landmark_a65d82f88a26cbf3482a5f43b3b5868c5}} 
+\index{isae::ALandmark@{isae::ALandmark}!isMarg@{isMarg}}
+\index{isMarg@{isMarg}!isae::ALandmark@{isae::ALandmark}}
+\doxysubsubsection{\texorpdfstring{isMarg()}{isMarg()}}
+{\footnotesize\ttfamily bool isae\+::\+A\+Landmark\+::is\+Marg (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_a_landmark_ad20146a713e3541f28ca3b033447b0d3}\label{classisae_1_1_a_landmark_ad20146a713e3541f28ca3b033447b0d3}} 
+\index{isae::ALandmark@{isae::ALandmark}!isOutlier@{isOutlier}}
+\index{isOutlier@{isOutlier}!isae::ALandmark@{isae::ALandmark}}
+\doxysubsubsection{\texorpdfstring{isOutlier()}{isOutlier()}}
+{\footnotesize\ttfamily bool isae\+::\+A\+Landmark\+::is\+Outlier (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_a_landmark_a084e6883cbcc5753fd4eb0bce45f8316}\label{classisae_1_1_a_landmark_a084e6883cbcc5753fd4eb0bce45f8316}} 
+\index{isae::ALandmark@{isae::ALandmark}!isResurected@{isResurected}}
+\index{isResurected@{isResurected}!isae::ALandmark@{isae::ALandmark}}
+\doxysubsubsection{\texorpdfstring{isResurected()}{isResurected()}}
+{\footnotesize\ttfamily bool isae\+::\+A\+Landmark\+::is\+Resurected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_a_landmark_ad886d66d2f97e7ddd92c7b5b0641ef10}\label{classisae_1_1_a_landmark_ad886d66d2f97e7ddd92c7b5b0641ef10}} 
+\index{isae::ALandmark@{isae::ALandmark}!removeExpiredFeatures@{removeExpiredFeatures}}
+\index{removeExpiredFeatures@{removeExpiredFeatures}!isae::ALandmark@{isae::ALandmark}}
+\doxysubsubsection{\texorpdfstring{removeExpiredFeatures()}{removeExpiredFeatures()}}
+{\footnotesize\ttfamily void isae\+::\+A\+Landmark\+::remove\+Expired\+Features (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Remove features that are not linked to anything. 
+
+\mbox{\Hypertarget{classisae_1_1_a_landmark_a81740c845cfa8a332fb9ce40286eef2f}\label{classisae_1_1_a_landmark_a81740c845cfa8a332fb9ce40286eef2f}} 
+\index{isae::ALandmark@{isae::ALandmark}!removeFeature@{removeFeature}}
+\index{removeFeature@{removeFeature}!isae::ALandmark@{isae::ALandmark}}
+\doxysubsubsection{\texorpdfstring{removeFeature()}{removeFeature()}}
+{\footnotesize\ttfamily void isae\+::\+A\+Landmark\+::remove\+Feature (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$}]{f }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classisae_1_1_a_landmark_aa7e1af2bb1ba9197bf0370383f34b6c6}\label{classisae_1_1_a_landmark_aa7e1af2bb1ba9197bf0370383f34b6c6}} 
+\index{isae::ALandmark@{isae::ALandmark}!sanityCheck@{sanityCheck}}
+\index{sanityCheck@{sanityCheck}!isae::ALandmark@{isae::ALandmark}}
+\doxysubsubsection{\texorpdfstring{sanityCheck()}{sanityCheck()}}
+{\footnotesize\ttfamily bool isae\+::\+A\+Landmark\+::sanity\+Check (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Check if the landmark is valid in terms of reprojection error and number of features. 
+
+\mbox{\Hypertarget{classisae_1_1_a_landmark_a65aa73f17273596c29f5496312fe883e}\label{classisae_1_1_a_landmark_a65aa73f17273596c29f5496312fe883e}} 
+\index{isae::ALandmark@{isae::ALandmark}!setDescriptor@{setDescriptor}}
+\index{setDescriptor@{setDescriptor}!isae::ALandmark@{isae::ALandmark}}
+\doxysubsubsection{\texorpdfstring{setDescriptor()}{setDescriptor()}}
+{\footnotesize\ttfamily void isae\+::\+A\+Landmark\+::set\+Descriptor (\begin{DoxyParamCaption}\item[{cv\+::\+Mat}]{descriptor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_a_landmark_a8b5392eb3afc1bb5ee1e8cbbb5fc85c7}\label{classisae_1_1_a_landmark_a8b5392eb3afc1bb5ee1e8cbbb5fc85c7}} 
+\index{isae::ALandmark@{isae::ALandmark}!setInlier@{setInlier}}
+\index{setInlier@{setInlier}!isae::ALandmark@{isae::ALandmark}}
+\doxysubsubsection{\texorpdfstring{setInlier()}{setInlier()}}
+{\footnotesize\ttfamily void isae\+::\+A\+Landmark\+::set\+Inlier (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_a_landmark_a9a72aab209dc950e80ace332bb6a9bbb}\label{classisae_1_1_a_landmark_a9a72aab209dc950e80ace332bb6a9bbb}} 
+\index{isae::ALandmark@{isae::ALandmark}!setInMap@{setInMap}}
+\index{setInMap@{setInMap}!isae::ALandmark@{isae::ALandmark}}
+\doxysubsubsection{\texorpdfstring{setInMap()}{setInMap()}}
+{\footnotesize\ttfamily void isae\+::\+A\+Landmark\+::set\+In\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_a_landmark_a3d206d3ca6753443a3a74993dae993f2}\label{classisae_1_1_a_landmark_a3d206d3ca6753443a3a74993dae993f2}} 
+\index{isae::ALandmark@{isae::ALandmark}!setMarg@{setMarg}}
+\index{setMarg@{setMarg}!isae::ALandmark@{isae::ALandmark}}
+\doxysubsubsection{\texorpdfstring{setMarg()}{setMarg()}}
+{\footnotesize\ttfamily void isae\+::\+A\+Landmark\+::set\+Marg (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_a_landmark_afac12a1bfd4bd4aa5b5f313765fab267}\label{classisae_1_1_a_landmark_afac12a1bfd4bd4aa5b5f313765fab267}} 
+\index{isae::ALandmark@{isae::ALandmark}!setOutlier@{setOutlier}}
+\index{setOutlier@{setOutlier}!isae::ALandmark@{isae::ALandmark}}
+\doxysubsubsection{\texorpdfstring{setOutlier()}{setOutlier()}}
+{\footnotesize\ttfamily void isae\+::\+A\+Landmark\+::set\+Outlier (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_a_landmark_a20c6b5925bd81a290307148e68f053f3}\label{classisae_1_1_a_landmark_a20c6b5925bd81a290307148e68f053f3}} 
+\index{isae::ALandmark@{isae::ALandmark}!setPose@{setPose}}
+\index{setPose@{setPose}!isae::ALandmark@{isae::ALandmark}}
+\doxysubsubsection{\texorpdfstring{setPose()}{setPose()}}
+{\footnotesize\ttfamily void isae\+::\+A\+Landmark\+::set\+Pose (\begin{DoxyParamCaption}\item[{Eigen\+::\+Affine3d}]{T\+\_\+w\+\_\+l }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_a_landmark_a41f17cad949963795191a545109aff1e}\label{classisae_1_1_a_landmark_a41f17cad949963795191a545109aff1e}} 
+\index{isae::ALandmark@{isae::ALandmark}!setPosition@{setPosition}}
+\index{setPosition@{setPosition}!isae::ALandmark@{isae::ALandmark}}
+\doxysubsubsection{\texorpdfstring{setPosition()}{setPosition()}}
+{\footnotesize\ttfamily void isae\+::\+A\+Landmark\+::set\+Position (\begin{DoxyParamCaption}\item[{Eigen\+::\+Vector3d}]{t\+\_\+w\+\_\+l }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set only the translation of the landmark pose. 
+
+\mbox{\Hypertarget{classisae_1_1_a_landmark_a89d65c2df01f852b2f2747e2dbc2baf2}\label{classisae_1_1_a_landmark_a89d65c2df01f852b2f2747e2dbc2baf2}} 
+\index{isae::ALandmark@{isae::ALandmark}!setPrior@{setPrior}}
+\index{setPrior@{setPrior}!isae::ALandmark@{isae::ALandmark}}
+\doxysubsubsection{\texorpdfstring{setPrior()}{setPrior()}}
+{\footnotesize\ttfamily void isae\+::\+A\+Landmark\+::set\+Prior (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_a_landmark_aaf0b02c544f045c86e2078f99c186e00}\label{classisae_1_1_a_landmark_aaf0b02c544f045c86e2078f99c186e00}} 
+\index{isae::ALandmark@{isae::ALandmark}!setResurected@{setResurected}}
+\index{setResurected@{setResurected}!isae::ALandmark@{isae::ALandmark}}
+\doxysubsubsection{\texorpdfstring{setResurected()}{setResurected()}}
+{\footnotesize\ttfamily void isae\+::\+A\+Landmark\+::set\+Resurected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_a_landmark_abeb8d9a8b2672fd27c139cb31067939f}\label{classisae_1_1_a_landmark_abeb8d9a8b2672fd27c139cb31067939f}} 
+\index{isae::ALandmark@{isae::ALandmark}!setUninitialized@{setUninitialized}}
+\index{setUninitialized@{setUninitialized}!isae::ALandmark@{isae::ALandmark}}
+\doxysubsubsection{\texorpdfstring{setUninitialized()}{setUninitialized()}}
+{\footnotesize\ttfamily void isae\+::\+A\+Landmark\+::set\+Uninitialized (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classisae_1_1_a_landmark_a680785fa4ffb87d3242007177543844b}\label{classisae_1_1_a_landmark_a680785fa4ffb87d3242007177543844b}} 
+\index{isae::ALandmark@{isae::ALandmark}!\_descriptor@{\_descriptor}}
+\index{\_descriptor@{\_descriptor}!isae::ALandmark@{isae::ALandmark}}
+\doxysubsubsection{\texorpdfstring{\_descriptor}{\_descriptor}}
+{\footnotesize\ttfamily cv\+::\+Mat isae\+::\+A\+Landmark\+::\+\_\+descriptor\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\begin{quote}
+Landmark pose in world frame \end{quote}
+
+
+\mbox{\Hypertarget{classisae_1_1_a_landmark_a8e825165b72999bf8ae050cfd52af030}\label{classisae_1_1_a_landmark_a8e825165b72999bf8ae050cfd52af030}} 
+\index{isae::ALandmark@{isae::ALandmark}!\_features@{\_features}}
+\index{\_features@{\_features}!isae::ALandmark@{isae::ALandmark}}
+\doxysubsubsection{\texorpdfstring{\_features}{\_features}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::weak\+\_\+ptr$<$\mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}}$>$ $>$ isae\+::\+A\+Landmark\+::\+\_\+features\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\begin{quote}
+3D model of the landmark \end{quote}
+
+
+\mbox{\Hypertarget{classisae_1_1_a_landmark_a07de8566703c03922b923b9d7db14e83}\label{classisae_1_1_a_landmark_a07de8566703c03922b923b9d7db14e83}} 
+\index{isae::ALandmark@{isae::ALandmark}!\_has\_prior@{\_has\_prior}}
+\index{\_has\_prior@{\_has\_prior}!isae::ALandmark@{isae::ALandmark}}
+\doxysubsubsection{\texorpdfstring{\_has\_prior}{\_has\_prior}}
+{\footnotesize\ttfamily bool isae\+::\+A\+Landmark\+::\+\_\+has\+\_\+prior = false\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\begin{quote}
+Flag to check if the landmark has been resurected \end{quote}
+
+
+\mbox{\Hypertarget{classisae_1_1_a_landmark_aae1ecd74591cf18787a7746fca7dd279}\label{classisae_1_1_a_landmark_aae1ecd74591cf18787a7746fca7dd279}} 
+\index{isae::ALandmark@{isae::ALandmark}!\_id@{\_id}}
+\index{\_id@{\_id}!isae::ALandmark@{isae::ALandmark}}
+\doxysubsubsection{\texorpdfstring{\_id}{\_id}}
+{\footnotesize\ttfamily int isae\+::\+A\+Landmark\+::\+\_\+id}
+
+
+
+\begin{quote}
+Static counter for landmarks, used for unique id generation \end{quote}
+
+
+\mbox{\Hypertarget{classisae_1_1_a_landmark_a3ff8a422e7ad62964b6736ec88c8d446}\label{classisae_1_1_a_landmark_a3ff8a422e7ad62964b6736ec88c8d446}} 
+\index{isae::ALandmark@{isae::ALandmark}!\_in\_map@{\_in\_map}}
+\index{\_in\_map@{\_in\_map}!isae::ALandmark@{isae::ALandmark}}
+\doxysubsubsection{\texorpdfstring{\_in\_map}{\_in\_map}}
+{\footnotesize\ttfamily bool isae\+::\+A\+Landmark\+::\+\_\+in\+\_\+map = false\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\begin{quote}
+Flag to check if the landmark is initialized \end{quote}
+
+
+\mbox{\Hypertarget{classisae_1_1_a_landmark_ab4a8edb6a3bdbecf76bfd0b933741e3a}\label{classisae_1_1_a_landmark_ab4a8edb6a3bdbecf76bfd0b933741e3a}} 
+\index{isae::ALandmark@{isae::ALandmark}!\_initialized@{\_initialized}}
+\index{\_initialized@{\_initialized}!isae::ALandmark@{isae::ALandmark}}
+\doxysubsubsection{\texorpdfstring{\_initialized}{\_initialized}}
+{\footnotesize\ttfamily bool isae\+::\+A\+Landmark\+::\+\_\+initialized = false\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\begin{quote}
+Label for the landmark \end{quote}
+
+
+\mbox{\Hypertarget{classisae_1_1_a_landmark_a61c8561d39b20fabc88a46cf07f1a708}\label{classisae_1_1_a_landmark_a61c8561d39b20fabc88a46cf07f1a708}} 
+\index{isae::ALandmark@{isae::ALandmark}!\_is\_marg@{\_is\_marg}}
+\index{\_is\_marg@{\_is\_marg}!isae::ALandmark@{isae::ALandmark}}
+\doxysubsubsection{\texorpdfstring{\_is\_marg}{\_is\_marg}}
+{\footnotesize\ttfamily bool isae\+::\+A\+Landmark\+::\+\_\+is\+\_\+marg = false\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\begin{quote}
+Flag to check if the landmark has a prior \end{quote}
+
+
+\mbox{\Hypertarget{classisae_1_1_a_landmark_a0d4f25ab5ded6a0d868f2f702b4a376e}\label{classisae_1_1_a_landmark_a0d4f25ab5ded6a0d868f2f702b4a376e}} 
+\index{isae::ALandmark@{isae::ALandmark}!\_is\_resurected@{\_is\_resurected}}
+\index{\_is\_resurected@{\_is\_resurected}!isae::ALandmark@{isae::ALandmark}}
+\doxysubsubsection{\texorpdfstring{\_is\_resurected}{\_is\_resurected}}
+{\footnotesize\ttfamily bool isae\+::\+A\+Landmark\+::\+\_\+is\+\_\+resurected = false\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\begin{quote}
+Flag to check if the landmark is an outlier \end{quote}
+
+
+\mbox{\Hypertarget{classisae_1_1_a_landmark_a00ebbfdaef535c8078e12d1361329771}\label{classisae_1_1_a_landmark_a00ebbfdaef535c8078e12d1361329771}} 
+\index{isae::ALandmark@{isae::ALandmark}!\_label@{\_label}}
+\index{\_label@{\_label}!isae::ALandmark@{isae::ALandmark}}
+\doxysubsubsection{\texorpdfstring{\_label}{\_label}}
+{\footnotesize\ttfamily std\+::string isae\+::\+A\+Landmark\+::\+\_\+label}
+
+
+
+\begin{quote}
+Unique id for the landmark, used for bookeeping \end{quote}
+
+
+\mbox{\Hypertarget{classisae_1_1_a_landmark_a6753849038ee686ddffd7079524814a1}\label{classisae_1_1_a_landmark_a6753849038ee686ddffd7079524814a1}} 
+\index{isae::ALandmark@{isae::ALandmark}!\_landmark\_count@{\_landmark\_count}}
+\index{\_landmark\_count@{\_landmark\_count}!isae::ALandmark@{isae::ALandmark}}
+\doxysubsubsection{\texorpdfstring{\_landmark\_count}{\_landmark\_count}}
+{\footnotesize\ttfamily int isae\+::\+A\+Landmark\+::\+\_\+landmark\+\_\+count = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classisae_1_1_a_landmark_a2095fa6737bf3806f18421d0ed3d8070}\label{classisae_1_1_a_landmark_a2095fa6737bf3806f18421d0ed3d8070}} 
+\index{isae::ALandmark@{isae::ALandmark}!\_lmk\_mtx@{\_lmk\_mtx}}
+\index{\_lmk\_mtx@{\_lmk\_mtx}!isae::ALandmark@{isae::ALandmark}}
+\doxysubsubsection{\texorpdfstring{\_lmk\_mtx}{\_lmk\_mtx}}
+{\footnotesize\ttfamily std\+::mutex isae\+::\+A\+Landmark\+::\+\_\+lmk\+\_\+mtx\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [protected]}}
+
+
+
+\begin{quote}
+Features associated to the landmark \end{quote}
+
+
+\mbox{\Hypertarget{classisae_1_1_a_landmark_a08610b87889eda176b56a72b7e9f8243}\label{classisae_1_1_a_landmark_a08610b87889eda176b56a72b7e9f8243}} 
+\index{isae::ALandmark@{isae::ALandmark}!\_model@{\_model}}
+\index{\_model@{\_model}!isae::ALandmark@{isae::ALandmark}}
+\doxysubsubsection{\texorpdfstring{\_model}{\_model}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classisae_1_1_a_model3d}{A\+Model3d}}$>$ isae\+::\+A\+Landmark\+::\+\_\+model\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\begin{quote}
+Descriptor of the landmark, used for matching \end{quote}
+
+
+\mbox{\Hypertarget{classisae_1_1_a_landmark_a397d0a9a693bc3faf77524bcb19f3ed2}\label{classisae_1_1_a_landmark_a397d0a9a693bc3faf77524bcb19f3ed2}} 
+\index{isae::ALandmark@{isae::ALandmark}!\_outlier@{\_outlier}}
+\index{\_outlier@{\_outlier}!isae::ALandmark@{isae::ALandmark}}
+\doxysubsubsection{\texorpdfstring{\_outlier}{\_outlier}}
+{\footnotesize\ttfamily bool isae\+::\+A\+Landmark\+::\+\_\+outlier = false\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\begin{quote}
+Flag to check if the landmark is in the map \end{quote}
+
+
+\mbox{\Hypertarget{classisae_1_1_a_landmark_aac46b3616425695ecd7a659ad622ddfe}\label{classisae_1_1_a_landmark_aac46b3616425695ecd7a659ad622ddfe}} 
+\index{isae::ALandmark@{isae::ALandmark}!\_T\_w\_l@{\_T\_w\_l}}
+\index{\_T\_w\_l@{\_T\_w\_l}!isae::ALandmark@{isae::ALandmark}}
+\doxysubsubsection{\texorpdfstring{\_T\_w\_l}{\_T\_w\_l}}
+{\footnotesize\ttfamily Eigen\+::\+Affine3d isae\+::\+A\+Landmark\+::\+\_\+\+T\+\_\+w\+\_\+l\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\begin{quote}
+Flag to check if the landmark is marginalised \end{quote}
+
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/deos/ce.\+debeunne/colcon\+\_\+ws/src/\+Sa\+D\+V\+I\+O/cpp/include/isaeslam/data/landmarks/\mbox{\hyperlink{_a_landmark_8h}{A\+Landmark.\+h}}\item 
+/home/deos/ce.\+debeunne/colcon\+\_\+ws/src/\+Sa\+D\+V\+I\+O/cpp/src/data/landmarks/\mbox{\hyperlink{_a_landmark_8cpp}{A\+Landmark.\+cpp}}\end{DoxyCompactItemize}

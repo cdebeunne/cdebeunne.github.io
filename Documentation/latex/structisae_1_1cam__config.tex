@@ -1,0 +1,135 @@
+\hypertarget{structisae_1_1cam__config}{}\doxysection{isae\+::cam\+\_\+config Struct Reference}
+\label{structisae_1_1cam__config}\index{isae::cam\_config@{isae::cam\_config}}
+
+
+\mbox{\hyperlink{classisae_1_1_camera}{Camera}} configuration.  
+
+
+
+
+{\ttfamily \#include $<$A\+Sensor.\+h$>$}
+
+
+
+Inheritance diagram for isae\+::cam\+\_\+config\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{structisae_1_1cam__config__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for isae\+::cam\+\_\+config\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{structisae_1_1cam__config__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Eigen\+::\+Matrix3d \mbox{\hyperlink{structisae_1_1cam__config_a14326f571c508c1288400fb856412604}{K}}
+\item 
+std\+::string \mbox{\hyperlink{structisae_1_1cam__config_a9525cf27fa1cbdf4cdaffca1086ea837}{proj\+\_\+model}}
+\item 
+int \mbox{\hyperlink{structisae_1_1cam__config_af06dd67f812df4698276fb7279a2b4a5}{width}}
+\item 
+int \mbox{\hyperlink{structisae_1_1cam__config_a33b22e149b55bf1f8451bf6de63ac835}{height}}
+\item 
+bool \mbox{\hyperlink{structisae_1_1cam__config_a94f301b9924a76dd22e2765ad0a42dca}{undistort}}
+\item 
+Eigen\+::\+Vector4d \mbox{\hyperlink{structisae_1_1cam__config_ae0c52d552764a5055796039b61e60b89}{d}}
+\item 
+cv\+::\+Mat \mbox{\hyperlink{structisae_1_1cam__config_a617d830c2584362cfe7b61ae699c6e98}{undist\+\_\+map\+\_\+x}}
+\item 
+cv\+::\+Mat \mbox{\hyperlink{structisae_1_1cam__config_adfe15bdb12bce87af197a524ad3b1660}{undist\+\_\+map\+\_\+y}}
+\item 
+double \mbox{\hyperlink{structisae_1_1cam__config_a3234196b04732bb60860a8780cc2bfcb}{rmax}}
+\item 
+double \mbox{\hyperlink{structisae_1_1cam__config_a467b592fd4763e61463174ef8519f0c3}{alpha}}
+\item 
+double \mbox{\hyperlink{structisae_1_1cam__config_a5df1703c3f1b0e2d7b3b9759bc1379a7}{xi}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classisae_1_1_camera}{Camera}} configuration. 
+
+This struct contains the intrinsic parameters of the camera, its projection model, its width and height, and parameters for distortion and fisheye models. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structisae_1_1cam__config_a467b592fd4763e61463174ef8519f0c3}\label{structisae_1_1cam__config_a467b592fd4763e61463174ef8519f0c3}} 
+\index{isae::cam\_config@{isae::cam\_config}!alpha@{alpha}}
+\index{alpha@{alpha}!isae::cam\_config@{isae::cam\_config}}
+\doxysubsubsection{\texorpdfstring{alpha}{alpha}}
+{\footnotesize\ttfamily double isae\+::cam\+\_\+config\+::alpha}
+
+\mbox{\Hypertarget{structisae_1_1cam__config_ae0c52d552764a5055796039b61e60b89}\label{structisae_1_1cam__config_ae0c52d552764a5055796039b61e60b89}} 
+\index{isae::cam\_config@{isae::cam\_config}!d@{d}}
+\index{d@{d}!isae::cam\_config@{isae::cam\_config}}
+\doxysubsubsection{\texorpdfstring{d}{d}}
+{\footnotesize\ttfamily Eigen\+::\+Vector4d isae\+::cam\+\_\+config\+::d}
+
+\mbox{\Hypertarget{structisae_1_1cam__config_a33b22e149b55bf1f8451bf6de63ac835}\label{structisae_1_1cam__config_a33b22e149b55bf1f8451bf6de63ac835}} 
+\index{isae::cam\_config@{isae::cam\_config}!height@{height}}
+\index{height@{height}!isae::cam\_config@{isae::cam\_config}}
+\doxysubsubsection{\texorpdfstring{height}{height}}
+{\footnotesize\ttfamily int isae\+::cam\+\_\+config\+::height}
+
+\mbox{\Hypertarget{structisae_1_1cam__config_a14326f571c508c1288400fb856412604}\label{structisae_1_1cam__config_a14326f571c508c1288400fb856412604}} 
+\index{isae::cam\_config@{isae::cam\_config}!K@{K}}
+\index{K@{K}!isae::cam\_config@{isae::cam\_config}}
+\doxysubsubsection{\texorpdfstring{K}{K}}
+{\footnotesize\ttfamily Eigen\+::\+Matrix3d isae\+::cam\+\_\+config\+::K}
+
+\mbox{\Hypertarget{structisae_1_1cam__config_a9525cf27fa1cbdf4cdaffca1086ea837}\label{structisae_1_1cam__config_a9525cf27fa1cbdf4cdaffca1086ea837}} 
+\index{isae::cam\_config@{isae::cam\_config}!proj\_model@{proj\_model}}
+\index{proj\_model@{proj\_model}!isae::cam\_config@{isae::cam\_config}}
+\doxysubsubsection{\texorpdfstring{proj\_model}{proj\_model}}
+{\footnotesize\ttfamily std\+::string isae\+::cam\+\_\+config\+::proj\+\_\+model}
+
+\mbox{\Hypertarget{structisae_1_1cam__config_a3234196b04732bb60860a8780cc2bfcb}\label{structisae_1_1cam__config_a3234196b04732bb60860a8780cc2bfcb}} 
+\index{isae::cam\_config@{isae::cam\_config}!rmax@{rmax}}
+\index{rmax@{rmax}!isae::cam\_config@{isae::cam\_config}}
+\doxysubsubsection{\texorpdfstring{rmax}{rmax}}
+{\footnotesize\ttfamily double isae\+::cam\+\_\+config\+::rmax}
+
+\mbox{\Hypertarget{structisae_1_1cam__config_a617d830c2584362cfe7b61ae699c6e98}\label{structisae_1_1cam__config_a617d830c2584362cfe7b61ae699c6e98}} 
+\index{isae::cam\_config@{isae::cam\_config}!undist\_map\_x@{undist\_map\_x}}
+\index{undist\_map\_x@{undist\_map\_x}!isae::cam\_config@{isae::cam\_config}}
+\doxysubsubsection{\texorpdfstring{undist\_map\_x}{undist\_map\_x}}
+{\footnotesize\ttfamily cv\+::\+Mat isae\+::cam\+\_\+config\+::undist\+\_\+map\+\_\+x}
+
+\mbox{\Hypertarget{structisae_1_1cam__config_adfe15bdb12bce87af197a524ad3b1660}\label{structisae_1_1cam__config_adfe15bdb12bce87af197a524ad3b1660}} 
+\index{isae::cam\_config@{isae::cam\_config}!undist\_map\_y@{undist\_map\_y}}
+\index{undist\_map\_y@{undist\_map\_y}!isae::cam\_config@{isae::cam\_config}}
+\doxysubsubsection{\texorpdfstring{undist\_map\_y}{undist\_map\_y}}
+{\footnotesize\ttfamily cv\+::\+Mat isae\+::cam\+\_\+config\+::undist\+\_\+map\+\_\+y}
+
+\mbox{\Hypertarget{structisae_1_1cam__config_a94f301b9924a76dd22e2765ad0a42dca}\label{structisae_1_1cam__config_a94f301b9924a76dd22e2765ad0a42dca}} 
+\index{isae::cam\_config@{isae::cam\_config}!undistort@{undistort}}
+\index{undistort@{undistort}!isae::cam\_config@{isae::cam\_config}}
+\doxysubsubsection{\texorpdfstring{undistort}{undistort}}
+{\footnotesize\ttfamily bool isae\+::cam\+\_\+config\+::undistort}
+
+\mbox{\Hypertarget{structisae_1_1cam__config_af06dd67f812df4698276fb7279a2b4a5}\label{structisae_1_1cam__config_af06dd67f812df4698276fb7279a2b4a5}} 
+\index{isae::cam\_config@{isae::cam\_config}!width@{width}}
+\index{width@{width}!isae::cam\_config@{isae::cam\_config}}
+\doxysubsubsection{\texorpdfstring{width}{width}}
+{\footnotesize\ttfamily int isae\+::cam\+\_\+config\+::width}
+
+\mbox{\Hypertarget{structisae_1_1cam__config_a5df1703c3f1b0e2d7b3b9759bc1379a7}\label{structisae_1_1cam__config_a5df1703c3f1b0e2d7b3b9759bc1379a7}} 
+\index{isae::cam\_config@{isae::cam\_config}!xi@{xi}}
+\index{xi@{xi}!isae::cam\_config@{isae::cam\_config}}
+\doxysubsubsection{\texorpdfstring{xi}{xi}}
+{\footnotesize\ttfamily double isae\+::cam\+\_\+config\+::xi}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/deos/ce.\+debeunne/colcon\+\_\+ws/src/\+Sa\+D\+V\+I\+O/cpp/include/isaeslam/data/sensors/\mbox{\hyperlink{_a_sensor_8h}{A\+Sensor.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,280 @@
+\hypertarget{classisae_1_1_frame}{}\doxysection{isae\+::Frame Class Reference}
+\label{classisae_1_1_frame}\index{isae::Frame@{isae::Frame}}
+
+
+{\ttfamily \#include $<$frame.\+h$>$}
+
+
+
+Inheritance diagram for isae\+::Frame\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{classisae_1_1_frame__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for isae\+::Frame\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{classisae_1_1_frame__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classisae_1_1_frame_a3668ac17874ef03416c80e5bc8382449}{Frame}} ()
+\item 
+void \mbox{\hyperlink{classisae_1_1_frame_ae36dcd629922573e1467cae0b97527a6}{init}} (const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_image_sensor}{Image\+Sensor}} $>$$>$ \&sensors, unsigned long long timestamp)
+\item 
+void \mbox{\hyperlink{classisae_1_1_frame_a42eda3609cf575dae0b3f3b42e6403ef}{init}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_i_m_u}{I\+MU}} $>$ \&imu, unsigned long long timestamp)
+\item 
+void \mbox{\hyperlink{classisae_1_1_frame_abad4a5fd26de05ea1193dd12fa159f15}{init}} (const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_sensor}{A\+Sensor}} $>$$>$ \&sensors, unsigned long long timestamp)
+\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_image_sensor}{Image\+Sensor}} $>$ $>$ \mbox{\hyperlink{classisae_1_1_frame_a1e2a391d00b61baeeb314087861a2386}{get\+Sensors}} () const
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_i_m_u}{I\+MU}} $>$ \mbox{\hyperlink{classisae_1_1_frame_a79a5dbf881e512de96f70d21ac513872}{get\+I\+MU}} () const
+\item 
+void \mbox{\hyperlink{classisae_1_1_frame_a761c6a37649e97c865f740f74b362192}{set\+I\+MU}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_i_m_u}{I\+MU}} $>$ \&imu, Eigen\+::\+Affine3d T\+\_\+s\+\_\+f)
+\item 
+void \mbox{\hyperlink{classisae_1_1_frame_a30805199addd2da2d62ddb68662cef6a}{clean\+Sensors}} ()
+\item 
+void \mbox{\hyperlink{classisae_1_1_frame_a4d38dac10478b0a40b983c40d7049b60}{set\+World2\+Frame\+Transform}} (Eigen\+::\+Affine3d T\+\_\+f\+\_\+w)
+\item 
+Eigen\+::\+Affine3d \mbox{\hyperlink{classisae_1_1_frame_ad74b730253d421a1dbe03c27c125a0fa}{get\+World2\+Frame\+Transform}} () const
+\item 
+Eigen\+::\+Affine3d \mbox{\hyperlink{classisae_1_1_frame_a2b9f26052f968d55c18a1160d88a7255}{get\+Frame2\+World\+Transform}} () const
+\item 
+void \mbox{\hyperlink{classisae_1_1_frame_a17e2046019db1bbe8a2d91f84cc3211f}{add\+Landmark}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_landmark}{A\+Landmark}} $>$ ldmk)
+\item 
+void \mbox{\hyperlink{classisae_1_1_frame_abdf16326f602a45cd5f1557e9b87c89d}{add\+Landmarks}} (\mbox{\hyperlink{namespaceisae_a4b744e0e080a733838eb133deda894aa}{isae\+::typed\+\_\+vec\+\_\+landmarks}} ldmks)
+\item 
+\mbox{\hyperlink{namespaceisae_a4b744e0e080a733838eb133deda894aa}{typed\+\_\+vec\+\_\+landmarks}} \mbox{\hyperlink{classisae_1_1_frame_a1b42548a175bd0befa603023a78f7db5}{get\+Landmarks}} () const
+\item 
+uint \mbox{\hyperlink{classisae_1_1_frame_a1e1fd548340f9617fd69dac8a2282ff8}{get\+In\+Map\+Landmarks\+Number}} () const
+\item 
+uint \mbox{\hyperlink{classisae_1_1_frame_a05cb4f4558531ba5567e510612ddb8f6}{get\+Landmarks\+Number}} () const
+\item 
+void \mbox{\hyperlink{classisae_1_1_frame_a877ff93de0695b6c99d60b8da77dcf4d}{clean\+Landmarks}} ()
+\item 
+unsigned long long \mbox{\hyperlink{classisae_1_1_frame_a44a0dbb13fbf0472a6d19bcdbcfd5467}{get\+Timestamp}} () const
+\item 
+void \mbox{\hyperlink{classisae_1_1_frame_a20be2dc1d5d93259a332b1f62e196172}{set\+Key\+Frame}} ()
+\item 
+void \mbox{\hyperlink{classisae_1_1_frame_a3ecd3692b6519b239e2b0ff33e991a82}{unset\+Key\+Frame}} ()
+\item 
+bool \mbox{\hyperlink{classisae_1_1_frame_a175151a6b731be7875d5e2ab3f09cb87}{is\+Key\+Frame}} () const
+\item 
+bool \mbox{\hyperlink{classisae_1_1_frame_a2f9ad57cd43a0b94accc4c306ca7160d}{has\+Prior}} () const
+\item 
+void \mbox{\hyperlink{classisae_1_1_frame_aac2cb6ed9e15cc188355847ff6eb5d61}{set\+Prior}} (Eigen\+::\+Affine3d T\+\_\+prior, \mbox{\hyperlink{namespaceisae_a381cf9a79c09e3831978a493e7a50552}{Vector6d}} inf\+\_\+prior)
+\item 
+Eigen\+::\+Affine3d \mbox{\hyperlink{classisae_1_1_frame_a3500aa9cd6edbc45c8c5c54f6eeeb2ae}{get\+Prior}} () const
+\item 
+\mbox{\hyperlink{namespaceisae_a381cf9a79c09e3831978a493e7a50552}{Vector6d}} \mbox{\hyperlink{classisae_1_1_frame_a1793ffcd6358fc3b8368fa81495bd02e}{get\+Inf\+Prior}} () const
+\item 
+void \mbox{\hyperlink{classisae_1_1_frame_a8ee5f76d2842d408908bd0e9843b7899}{setd\+T\+Cov}} (Eigen\+::\+Matrix\+Xd d\+T\+\_\+cov)
+\item 
+Eigen\+::\+Matrix\+Xd \mbox{\hyperlink{classisae_1_1_frame_ac888c419a565dd1740fdb893726d4179}{getd\+T\+Cov}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classisae_1_1_frame_ab01334ab8977b67dbf9fdeac3676c0b3}{\+\_\+id}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{classisae_1_1_frame_addc97d5c0c0fa01cc08108a4c19803c4}{\+\_\+frame\+\_\+count}} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classisae_1_1_frame_a3668ac17874ef03416c80e5bc8382449}\label{classisae_1_1_frame_a3668ac17874ef03416c80e5bc8382449}} 
+\index{isae::Frame@{isae::Frame}!Frame@{Frame}}
+\index{Frame@{Frame}!isae::Frame@{isae::Frame}}
+\doxysubsubsection{\texorpdfstring{Frame()}{Frame()}}
+{\footnotesize\ttfamily isae\+::\+Frame\+::\+Frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classisae_1_1_frame_a17e2046019db1bbe8a2d91f84cc3211f}\label{classisae_1_1_frame_a17e2046019db1bbe8a2d91f84cc3211f}} 
+\index{isae::Frame@{isae::Frame}!addLandmark@{addLandmark}}
+\index{addLandmark@{addLandmark}!isae::Frame@{isae::Frame}}
+\doxysubsubsection{\texorpdfstring{addLandmark()}{addLandmark()}}
+{\footnotesize\ttfamily void isae\+::\+Frame\+::add\+Landmark (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_landmark}{A\+Landmark}} $>$}]{ldmk }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_frame_abdf16326f602a45cd5f1557e9b87c89d}\label{classisae_1_1_frame_abdf16326f602a45cd5f1557e9b87c89d}} 
+\index{isae::Frame@{isae::Frame}!addLandmarks@{addLandmarks}}
+\index{addLandmarks@{addLandmarks}!isae::Frame@{isae::Frame}}
+\doxysubsubsection{\texorpdfstring{addLandmarks()}{addLandmarks()}}
+{\footnotesize\ttfamily void isae\+::\+Frame\+::add\+Landmarks (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceisae_a4b744e0e080a733838eb133deda894aa}{isae\+::typed\+\_\+vec\+\_\+landmarks}}}]{ldmks }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_frame_a877ff93de0695b6c99d60b8da77dcf4d}\label{classisae_1_1_frame_a877ff93de0695b6c99d60b8da77dcf4d}} 
+\index{isae::Frame@{isae::Frame}!cleanLandmarks@{cleanLandmarks}}
+\index{cleanLandmarks@{cleanLandmarks}!isae::Frame@{isae::Frame}}
+\doxysubsubsection{\texorpdfstring{cleanLandmarks()}{cleanLandmarks()}}
+{\footnotesize\ttfamily void isae\+::\+Frame\+::clean\+Landmarks (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classisae_1_1_frame_a30805199addd2da2d62ddb68662cef6a}\label{classisae_1_1_frame_a30805199addd2da2d62ddb68662cef6a}} 
+\index{isae::Frame@{isae::Frame}!cleanSensors@{cleanSensors}}
+\index{cleanSensors@{cleanSensors}!isae::Frame@{isae::Frame}}
+\doxysubsubsection{\texorpdfstring{cleanSensors()}{cleanSensors()}}
+{\footnotesize\ttfamily void isae\+::\+Frame\+::clean\+Sensors (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_frame_ac888c419a565dd1740fdb893726d4179}\label{classisae_1_1_frame_ac888c419a565dd1740fdb893726d4179}} 
+\index{isae::Frame@{isae::Frame}!getdTCov@{getdTCov}}
+\index{getdTCov@{getdTCov}!isae::Frame@{isae::Frame}}
+\doxysubsubsection{\texorpdfstring{getdTCov()}{getdTCov()}}
+{\footnotesize\ttfamily Eigen\+::\+Matrix\+Xd isae\+::\+Frame\+::getd\+T\+Cov (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_frame_a2b9f26052f968d55c18a1160d88a7255}\label{classisae_1_1_frame_a2b9f26052f968d55c18a1160d88a7255}} 
+\index{isae::Frame@{isae::Frame}!getFrame2WorldTransform@{getFrame2WorldTransform}}
+\index{getFrame2WorldTransform@{getFrame2WorldTransform}!isae::Frame@{isae::Frame}}
+\doxysubsubsection{\texorpdfstring{getFrame2WorldTransform()}{getFrame2WorldTransform()}}
+{\footnotesize\ttfamily Eigen\+::\+Affine3d isae\+::\+Frame\+::get\+Frame2\+World\+Transform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_frame_a79a5dbf881e512de96f70d21ac513872}\label{classisae_1_1_frame_a79a5dbf881e512de96f70d21ac513872}} 
+\index{isae::Frame@{isae::Frame}!getIMU@{getIMU}}
+\index{getIMU@{getIMU}!isae::Frame@{isae::Frame}}
+\doxysubsubsection{\texorpdfstring{getIMU()}{getIMU()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classisae_1_1_i_m_u}{I\+MU}}$>$ isae\+::\+Frame\+::get\+I\+MU (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_frame_a1793ffcd6358fc3b8368fa81495bd02e}\label{classisae_1_1_frame_a1793ffcd6358fc3b8368fa81495bd02e}} 
+\index{isae::Frame@{isae::Frame}!getInfPrior@{getInfPrior}}
+\index{getInfPrior@{getInfPrior}!isae::Frame@{isae::Frame}}
+\doxysubsubsection{\texorpdfstring{getInfPrior()}{getInfPrior()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceisae_a381cf9a79c09e3831978a493e7a50552}{Vector6d}} isae\+::\+Frame\+::get\+Inf\+Prior (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_frame_a1e1fd548340f9617fd69dac8a2282ff8}\label{classisae_1_1_frame_a1e1fd548340f9617fd69dac8a2282ff8}} 
+\index{isae::Frame@{isae::Frame}!getInMapLandmarksNumber@{getInMapLandmarksNumber}}
+\index{getInMapLandmarksNumber@{getInMapLandmarksNumber}!isae::Frame@{isae::Frame}}
+\doxysubsubsection{\texorpdfstring{getInMapLandmarksNumber()}{getInMapLandmarksNumber()}}
+{\footnotesize\ttfamily uint isae\+::\+Frame\+::get\+In\+Map\+Landmarks\+Number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classisae_1_1_frame_a1b42548a175bd0befa603023a78f7db5}\label{classisae_1_1_frame_a1b42548a175bd0befa603023a78f7db5}} 
+\index{isae::Frame@{isae::Frame}!getLandmarks@{getLandmarks}}
+\index{getLandmarks@{getLandmarks}!isae::Frame@{isae::Frame}}
+\doxysubsubsection{\texorpdfstring{getLandmarks()}{getLandmarks()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceisae_a4b744e0e080a733838eb133deda894aa}{typed\+\_\+vec\+\_\+landmarks}} isae\+::\+Frame\+::get\+Landmarks (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_frame_a05cb4f4558531ba5567e510612ddb8f6}\label{classisae_1_1_frame_a05cb4f4558531ba5567e510612ddb8f6}} 
+\index{isae::Frame@{isae::Frame}!getLandmarksNumber@{getLandmarksNumber}}
+\index{getLandmarksNumber@{getLandmarksNumber}!isae::Frame@{isae::Frame}}
+\doxysubsubsection{\texorpdfstring{getLandmarksNumber()}{getLandmarksNumber()}}
+{\footnotesize\ttfamily uint isae\+::\+Frame\+::get\+Landmarks\+Number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_frame_a3500aa9cd6edbc45c8c5c54f6eeeb2ae}\label{classisae_1_1_frame_a3500aa9cd6edbc45c8c5c54f6eeeb2ae}} 
+\index{isae::Frame@{isae::Frame}!getPrior@{getPrior}}
+\index{getPrior@{getPrior}!isae::Frame@{isae::Frame}}
+\doxysubsubsection{\texorpdfstring{getPrior()}{getPrior()}}
+{\footnotesize\ttfamily Eigen\+::\+Affine3d isae\+::\+Frame\+::get\+Prior (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_frame_a1e2a391d00b61baeeb314087861a2386}\label{classisae_1_1_frame_a1e2a391d00b61baeeb314087861a2386}} 
+\index{isae::Frame@{isae::Frame}!getSensors@{getSensors}}
+\index{getSensors@{getSensors}!isae::Frame@{isae::Frame}}
+\doxysubsubsection{\texorpdfstring{getSensors()}{getSensors()}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classisae_1_1_image_sensor}{Image\+Sensor}}$>$ $>$ isae\+::\+Frame\+::get\+Sensors (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_frame_a44a0dbb13fbf0472a6d19bcdbcfd5467}\label{classisae_1_1_frame_a44a0dbb13fbf0472a6d19bcdbcfd5467}} 
+\index{isae::Frame@{isae::Frame}!getTimestamp@{getTimestamp}}
+\index{getTimestamp@{getTimestamp}!isae::Frame@{isae::Frame}}
+\doxysubsubsection{\texorpdfstring{getTimestamp()}{getTimestamp()}}
+{\footnotesize\ttfamily unsigned long long isae\+::\+Frame\+::get\+Timestamp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_frame_ad74b730253d421a1dbe03c27c125a0fa}\label{classisae_1_1_frame_ad74b730253d421a1dbe03c27c125a0fa}} 
+\index{isae::Frame@{isae::Frame}!getWorld2FrameTransform@{getWorld2FrameTransform}}
+\index{getWorld2FrameTransform@{getWorld2FrameTransform}!isae::Frame@{isae::Frame}}
+\doxysubsubsection{\texorpdfstring{getWorld2FrameTransform()}{getWorld2FrameTransform()}}
+{\footnotesize\ttfamily Eigen\+::\+Affine3d isae\+::\+Frame\+::get\+World2\+Frame\+Transform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_frame_a2f9ad57cd43a0b94accc4c306ca7160d}\label{classisae_1_1_frame_a2f9ad57cd43a0b94accc4c306ca7160d}} 
+\index{isae::Frame@{isae::Frame}!hasPrior@{hasPrior}}
+\index{hasPrior@{hasPrior}!isae::Frame@{isae::Frame}}
+\doxysubsubsection{\texorpdfstring{hasPrior()}{hasPrior()}}
+{\footnotesize\ttfamily bool isae\+::\+Frame\+::has\+Prior (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_frame_abad4a5fd26de05ea1193dd12fa159f15}\label{classisae_1_1_frame_abad4a5fd26de05ea1193dd12fa159f15}} 
+\index{isae::Frame@{isae::Frame}!init@{init}}
+\index{init@{init}!isae::Frame@{isae::Frame}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void isae\+::\+Frame\+::init (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_sensor}{A\+Sensor}} $>$$>$ \&}]{sensors,  }\item[{unsigned long long}]{timestamp }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classisae_1_1_frame_ae36dcd629922573e1467cae0b97527a6}\label{classisae_1_1_frame_ae36dcd629922573e1467cae0b97527a6}} 
+\index{isae::Frame@{isae::Frame}!init@{init}}
+\index{init@{init}!isae::Frame@{isae::Frame}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void isae\+::\+Frame\+::init (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_image_sensor}{Image\+Sensor}} $>$$>$ \&}]{sensors,  }\item[{unsigned long long}]{timestamp }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classisae_1_1_frame_a42eda3609cf575dae0b3f3b42e6403ef}\label{classisae_1_1_frame_a42eda3609cf575dae0b3f3b42e6403ef}} 
+\index{isae::Frame@{isae::Frame}!init@{init}}
+\index{init@{init}!isae::Frame@{isae::Frame}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void isae\+::\+Frame\+::init (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_i_m_u}{I\+MU}} $>$ \&}]{imu,  }\item[{unsigned long long}]{timestamp }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classisae_1_1_frame_a175151a6b731be7875d5e2ab3f09cb87}\label{classisae_1_1_frame_a175151a6b731be7875d5e2ab3f09cb87}} 
+\index{isae::Frame@{isae::Frame}!isKeyFrame@{isKeyFrame}}
+\index{isKeyFrame@{isKeyFrame}!isae::Frame@{isae::Frame}}
+\doxysubsubsection{\texorpdfstring{isKeyFrame()}{isKeyFrame()}}
+{\footnotesize\ttfamily bool isae\+::\+Frame\+::is\+Key\+Frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_frame_a8ee5f76d2842d408908bd0e9843b7899}\label{classisae_1_1_frame_a8ee5f76d2842d408908bd0e9843b7899}} 
+\index{isae::Frame@{isae::Frame}!setdTCov@{setdTCov}}
+\index{setdTCov@{setdTCov}!isae::Frame@{isae::Frame}}
+\doxysubsubsection{\texorpdfstring{setdTCov()}{setdTCov()}}
+{\footnotesize\ttfamily void isae\+::\+Frame\+::setd\+T\+Cov (\begin{DoxyParamCaption}\item[{Eigen\+::\+Matrix\+Xd}]{d\+T\+\_\+cov }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_frame_a761c6a37649e97c865f740f74b362192}\label{classisae_1_1_frame_a761c6a37649e97c865f740f74b362192}} 
+\index{isae::Frame@{isae::Frame}!setIMU@{setIMU}}
+\index{setIMU@{setIMU}!isae::Frame@{isae::Frame}}
+\doxysubsubsection{\texorpdfstring{setIMU()}{setIMU()}}
+{\footnotesize\ttfamily void isae\+::\+Frame\+::set\+I\+MU (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_i_m_u}{I\+MU}} $>$ \&}]{imu,  }\item[{Eigen\+::\+Affine3d}]{T\+\_\+s\+\_\+f }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classisae_1_1_frame_a20be2dc1d5d93259a332b1f62e196172}\label{classisae_1_1_frame_a20be2dc1d5d93259a332b1f62e196172}} 
+\index{isae::Frame@{isae::Frame}!setKeyFrame@{setKeyFrame}}
+\index{setKeyFrame@{setKeyFrame}!isae::Frame@{isae::Frame}}
+\doxysubsubsection{\texorpdfstring{setKeyFrame()}{setKeyFrame()}}
+{\footnotesize\ttfamily void isae\+::\+Frame\+::set\+Key\+Frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_frame_aac2cb6ed9e15cc188355847ff6eb5d61}\label{classisae_1_1_frame_aac2cb6ed9e15cc188355847ff6eb5d61}} 
+\index{isae::Frame@{isae::Frame}!setPrior@{setPrior}}
+\index{setPrior@{setPrior}!isae::Frame@{isae::Frame}}
+\doxysubsubsection{\texorpdfstring{setPrior()}{setPrior()}}
+{\footnotesize\ttfamily void isae\+::\+Frame\+::set\+Prior (\begin{DoxyParamCaption}\item[{Eigen\+::\+Affine3d}]{T\+\_\+prior,  }\item[{\mbox{\hyperlink{namespaceisae_a381cf9a79c09e3831978a493e7a50552}{Vector6d}}}]{inf\+\_\+prior }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_frame_a4d38dac10478b0a40b983c40d7049b60}\label{classisae_1_1_frame_a4d38dac10478b0a40b983c40d7049b60}} 
+\index{isae::Frame@{isae::Frame}!setWorld2FrameTransform@{setWorld2FrameTransform}}
+\index{setWorld2FrameTransform@{setWorld2FrameTransform}!isae::Frame@{isae::Frame}}
+\doxysubsubsection{\texorpdfstring{setWorld2FrameTransform()}{setWorld2FrameTransform()}}
+{\footnotesize\ttfamily void isae\+::\+Frame\+::set\+World2\+Frame\+Transform (\begin{DoxyParamCaption}\item[{Eigen\+::\+Affine3d}]{T\+\_\+f\+\_\+w }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_frame_a3ecd3692b6519b239e2b0ff33e991a82}\label{classisae_1_1_frame_a3ecd3692b6519b239e2b0ff33e991a82}} 
+\index{isae::Frame@{isae::Frame}!unsetKeyFrame@{unsetKeyFrame}}
+\index{unsetKeyFrame@{unsetKeyFrame}!isae::Frame@{isae::Frame}}
+\doxysubsubsection{\texorpdfstring{unsetKeyFrame()}{unsetKeyFrame()}}
+{\footnotesize\ttfamily void isae\+::\+Frame\+::unset\+Key\+Frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classisae_1_1_frame_addc97d5c0c0fa01cc08108a4c19803c4}\label{classisae_1_1_frame_addc97d5c0c0fa01cc08108a4c19803c4}} 
+\index{isae::Frame@{isae::Frame}!\_frame\_count@{\_frame\_count}}
+\index{\_frame\_count@{\_frame\_count}!isae::Frame@{isae::Frame}}
+\doxysubsubsection{\texorpdfstring{\_frame\_count}{\_frame\_count}}
+{\footnotesize\ttfamily int isae\+::\+Frame\+::\+\_\+frame\+\_\+count = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classisae_1_1_frame_ab01334ab8977b67dbf9fdeac3676c0b3}\label{classisae_1_1_frame_ab01334ab8977b67dbf9fdeac3676c0b3}} 
+\index{isae::Frame@{isae::Frame}!\_id@{\_id}}
+\index{\_id@{\_id}!isae::Frame@{isae::Frame}}
+\doxysubsubsection{\texorpdfstring{\_id}{\_id}}
+{\footnotesize\ttfamily int isae\+::\+Frame\+::\+\_\+id}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/deos/ce.\+debeunne/colcon\+\_\+ws/src/\+Sa\+D\+V\+I\+O/cpp/include/isaeslam/data/\mbox{\hyperlink{frame_8h}{frame.\+h}}\item 
+/home/deos/ce.\+debeunne/colcon\+\_\+ws/src/\+Sa\+D\+V\+I\+O/cpp/src/data/\mbox{\hyperlink{frame_8cpp}{frame.\+cpp}}\end{DoxyCompactItemize}

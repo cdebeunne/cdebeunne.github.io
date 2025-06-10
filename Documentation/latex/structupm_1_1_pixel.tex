@@ -1,0 +1,93 @@
+\hypertarget{structupm_1_1_pixel}{}\doxysection{upm\+::Pixel Struct Reference}
+\label{structupm_1_1_pixel}\index{upm::Pixel@{upm::Pixel}}
+
+
+{\ttfamily \#include $<$Utils.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structupm_1_1_pixel_a21173e4055dc48eedf8bee9a7cfe6d2c}{Pixel}} ()=default
+\item 
+\mbox{\hyperlink{structupm_1_1_pixel_ab58cb325f040bf62bbdd6601276a5f6c}{Pixel}} (int \mbox{\hyperlink{structupm_1_1_pixel_af478bd249282e1b9f18576479c43ccdf}{x}}, int \mbox{\hyperlink{structupm_1_1_pixel_af9745c4a18bc48e213753393a961110c}{y}})
+\item 
+\mbox{\hyperlink{structupm_1_1_pixel_a5e97655d40cf4749ad77587f127fa96c}{Pixel}} (const cv\+::\+Point \&p)
+\item 
+bool \mbox{\hyperlink{structupm_1_1_pixel_a2fc165a8b00bc7ccf554fdc40ceb0d32}{operator==}} (const \mbox{\hyperlink{structupm_1_1_pixel}{Pixel}} \&rhs) const
+\item 
+bool \mbox{\hyperlink{structupm_1_1_pixel_a0ee275045e5468d825dc4ca7245914ac}{operator!=}} (const \mbox{\hyperlink{structupm_1_1_pixel}{Pixel}} \&rhs) const
+\item 
+bool \mbox{\hyperlink{structupm_1_1_pixel_aa9ee45737c56f482a84fd53fdd6e4a4c}{operator$<$}} (const \mbox{\hyperlink{structupm_1_1_pixel}{Pixel}} \&px2) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{structupm_1_1_pixel_af478bd249282e1b9f18576479c43ccdf}{x}}
+\item 
+int \mbox{\hyperlink{structupm_1_1_pixel_af9745c4a18bc48e213753393a961110c}{y}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Simple data structure representing a pixel. Unlike cv\+::\+Point2i this class is trivial (trivially copyable and has a trivial default constructor). 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structupm_1_1_pixel_a21173e4055dc48eedf8bee9a7cfe6d2c}\label{structupm_1_1_pixel_a21173e4055dc48eedf8bee9a7cfe6d2c}} 
+\index{upm::Pixel@{upm::Pixel}!Pixel@{Pixel}}
+\index{Pixel@{Pixel}!upm::Pixel@{upm::Pixel}}
+\doxysubsubsection{\texorpdfstring{Pixel()}{Pixel()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily upm\+::\+Pixel\+::\+Pixel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{structupm_1_1_pixel_ab58cb325f040bf62bbdd6601276a5f6c}\label{structupm_1_1_pixel_ab58cb325f040bf62bbdd6601276a5f6c}} 
+\index{upm::Pixel@{upm::Pixel}!Pixel@{Pixel}}
+\index{Pixel@{Pixel}!upm::Pixel@{upm::Pixel}}
+\doxysubsubsection{\texorpdfstring{Pixel()}{Pixel()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily upm\+::\+Pixel\+::\+Pixel (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structupm_1_1_pixel_a5e97655d40cf4749ad77587f127fa96c}\label{structupm_1_1_pixel_a5e97655d40cf4749ad77587f127fa96c}} 
+\index{upm::Pixel@{upm::Pixel}!Pixel@{Pixel}}
+\index{Pixel@{Pixel}!upm::Pixel@{upm::Pixel}}
+\doxysubsubsection{\texorpdfstring{Pixel()}{Pixel()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily upm\+::\+Pixel\+::\+Pixel (\begin{DoxyParamCaption}\item[{const cv\+::\+Point \&}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structupm_1_1_pixel_a0ee275045e5468d825dc4ca7245914ac}\label{structupm_1_1_pixel_a0ee275045e5468d825dc4ca7245914ac}} 
+\index{upm::Pixel@{upm::Pixel}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!upm::Pixel@{upm::Pixel}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool upm\+::\+Pixel\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structupm_1_1_pixel}{Pixel}} \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structupm_1_1_pixel_aa9ee45737c56f482a84fd53fdd6e4a4c}\label{structupm_1_1_pixel_aa9ee45737c56f482a84fd53fdd6e4a4c}} 
+\index{upm::Pixel@{upm::Pixel}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!upm::Pixel@{upm::Pixel}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool upm\+::\+Pixel\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structupm_1_1_pixel}{Pixel}} \&}]{px2 }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structupm_1_1_pixel_a2fc165a8b00bc7ccf554fdc40ceb0d32}\label{structupm_1_1_pixel_a2fc165a8b00bc7ccf554fdc40ceb0d32}} 
+\index{upm::Pixel@{upm::Pixel}!operator==@{operator==}}
+\index{operator==@{operator==}!upm::Pixel@{upm::Pixel}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool upm\+::\+Pixel\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structupm_1_1_pixel}{Pixel}} \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structupm_1_1_pixel_af478bd249282e1b9f18576479c43ccdf}\label{structupm_1_1_pixel_af478bd249282e1b9f18576479c43ccdf}} 
+\index{upm::Pixel@{upm::Pixel}!x@{x}}
+\index{x@{x}!upm::Pixel@{upm::Pixel}}
+\doxysubsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily int upm\+::\+Pixel\+::x}
+
+\mbox{\Hypertarget{structupm_1_1_pixel_af9745c4a18bc48e213753393a961110c}\label{structupm_1_1_pixel_af9745c4a18bc48e213753393a961110c}} 
+\index{upm::Pixel@{upm::Pixel}!y@{y}}
+\index{y@{y}!upm::Pixel@{upm::Pixel}}
+\doxysubsubsection{\texorpdfstring{y}{y}}
+{\footnotesize\ttfamily int upm\+::\+Pixel\+::y}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/deos/ce.\+debeunne/colcon\+\_\+ws/src/\+Sa\+D\+V\+I\+O/cpp/thirdparty/\+E\+L\+S\+E\+D/src/\mbox{\hyperlink{_utils_8h}{Utils.\+h}}\end{DoxyCompactItemize}

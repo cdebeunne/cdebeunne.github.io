@@ -1,0 +1,39 @@
+<map id="/home/deos/ce.debeunne/colcon_ws/src/SaDVIO/cpp/tests/marginalization_test.cpp" name="/home/deos/ce.debeunne/colcon_ws/src/SaDVIO/cpp/tests/marginalization_test.cpp">
+<area shape="rect" id="node1" title=" " alt="" coords="841,5,1031,76"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,131,109,158"/>
+<area shape="rect" id="node3" title=" " alt="" coords="75,817,213,843"/>
+<area shape="rect" id="node4" href="$_point2_d_8h.html" title=" " alt="" coords="974,213,1146,255"/>
+<area shape="rect" id="node21" href="$frame_8h.html" title=" " alt="" coords="1261,571,1430,597"/>
+<area shape="rect" id="node26" href="$_point3_d_8h.html" title=" " alt="" coords="843,303,1029,344"/>
+<area shape="rect" id="node27" href="$_camera_8h.html" title=" " alt="" coords="539,392,707,433"/>
+<area shape="rect" id="node28" href="$_bundle_adjustment_c_e_r_e_s_analytic_8h.html" title=" " alt="" coords="1231,124,1486,165"/>
+<area shape="rect" id="node5" href="$_a_feature2_d_8h.html" title=" " alt="" coords="974,392,1146,433"/>
+<area shape="rect" id="node6" href="$_a_landmark_8h.html" title=" " alt="" coords="1101,645,1288,687"/>
+<area shape="rect" id="node12" href="$geometry_8h.html" title=" " alt="" coords="1121,735,1269,761"/>
+<area shape="rect" id="node20" href="$_a_sensor_8h.html" title=" " alt="" coords="879,481,1047,523"/>
+<area shape="rect" id="node7" href="$_model3_d_8h.html" title=" " alt="" coords="789,809,976,851"/>
+<area shape="rect" id="node8" title=" " alt="" coords="1274,899,1366,925"/>
+<area shape="rect" id="node9" title=" " alt="" coords="819,899,946,925"/>
+<area shape="rect" id="node10" title=" " alt="" coords="1121,899,1247,925"/>
+<area shape="rect" id="node11" title=" " alt="" coords="1015,899,1092,925"/>
+<area shape="rect" id="node13" title=" " alt="" coords="1299,817,1362,843"/>
+<area shape="rect" id="node14" title=" " alt="" coords="1051,817,1109,843"/>
+<area shape="rect" id="node15" title=" " alt="" coords="1133,817,1275,843"/>
+<area shape="rect" id="node16" href="$typedefs_8h.html" title=" " alt="" coords="1387,817,1541,843"/>
+<area shape="rect" id="node17" title=" " alt="" coords="1475,899,1538,925"/>
+<area shape="rect" id="node18" title=" " alt="" coords="1391,899,1451,925"/>
+<area shape="rect" id="node19" title=" " alt="" coords="1677,899,1801,925"/>
+<area shape="rect" id="node22" href="$img_processing_8h.html" title=" " alt="" coords="623,571,806,597"/>
+<area shape="rect" id="node23" title=" " alt="" coords="715,653,925,679"/>
+<area shape="rect" id="node24" title=" " alt="" coords="285,653,504,679"/>
+<area shape="rect" id="node25" title=" " alt="" coords="528,653,691,679"/>
+<area shape="rect" id="node29" href="$_a_optimizer_8h.html" title=" " alt="" coords="1291,213,1445,255"/>
+<area shape="rect" id="node30" href="$localmap_8h.html" title=" " alt="" coords="1608,392,1763,433"/>
+<area shape="rect" id="node33" href="$marginalization_8hpp.html" title=" " alt="" coords="1406,303,1562,344"/>
+<area shape="rect" id="node34" title=" " alt="" coords="1222,399,1330,426"/>
+<area shape="rect" id="node35" href="$parameters_block_8hpp.html" title=" " alt="" coords="1608,645,1773,687"/>
+<area shape="rect" id="node36" href="$residuals_8hpp.html" title=" " alt="" coords="664,303,819,344"/>
+<area shape="rect" id="node31" href="$amap_8h.html" title=" " alt="" coords="1560,481,1715,523"/>
+<area shape="rect" id="node32" title=" " alt="" coords="1609,571,1671,597"/>
+<area shape="rect" id="node37" href="$_i_m_u_8h.html" title=" " alt="" coords="731,392,899,433"/>
+</map>

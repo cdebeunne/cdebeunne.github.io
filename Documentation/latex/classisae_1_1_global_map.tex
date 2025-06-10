@@ -1,0 +1,70 @@
+\hypertarget{classisae_1_1_global_map}{}\doxysection{isae\+::Global\+Map Class Reference}
+\label{classisae_1_1_global_map}\index{isae::GlobalMap@{isae::GlobalMap}}
+
+
+Class for a Global Map.  
+
+
+
+
+{\ttfamily \#include $<$globalmap.\+h$>$}
+
+
+
+Inheritance diagram for isae\+::Global\+Map\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=175pt]{classisae_1_1_global_map__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for isae\+::Global\+Map\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=175pt]{classisae_1_1_global_map__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classisae_1_1_global_map_afd6930f76e1ab72f6d747b5ec8c7caf0}{Global\+Map}} ()=default
+\item 
+void \mbox{\hyperlink{classisae_1_1_global_map_a37295bb0ab99854be503d2245043dc86}{add\+Frame}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&frame) override
+\begin{DoxyCompactList}\small\item\em Add a frame to the global map. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Class for a Global Map. 
+
+This is a simple map with no particular strategy 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classisae_1_1_global_map_afd6930f76e1ab72f6d747b5ec8c7caf0}\label{classisae_1_1_global_map_afd6930f76e1ab72f6d747b5ec8c7caf0}} 
+\index{isae::GlobalMap@{isae::GlobalMap}!GlobalMap@{GlobalMap}}
+\index{GlobalMap@{GlobalMap}!isae::GlobalMap@{isae::GlobalMap}}
+\doxysubsubsection{\texorpdfstring{GlobalMap()}{GlobalMap()}}
+{\footnotesize\ttfamily isae\+::\+Global\+Map\+::\+Global\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classisae_1_1_global_map_a37295bb0ab99854be503d2245043dc86}\label{classisae_1_1_global_map_a37295bb0ab99854be503d2245043dc86}} 
+\index{isae::GlobalMap@{isae::GlobalMap}!addFrame@{addFrame}}
+\index{addFrame@{addFrame}!isae::GlobalMap@{isae::GlobalMap}}
+\doxysubsubsection{\texorpdfstring{addFrame()}{addFrame()}}
+{\footnotesize\ttfamily void isae\+::\+Global\+Map\+::add\+Frame (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&}]{frame }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Add a frame to the global map. 
+
+This method adds a frame to the global map and also pushes its landmarks into the map. It is a simple implementation that does not enforce any sliding window or other constraints. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/deos/ce.\+debeunne/colcon\+\_\+ws/src/\+Sa\+D\+V\+I\+O/cpp/include/isaeslam/data/maps/\mbox{\hyperlink{globalmap_8h}{globalmap.\+h}}\item 
+/home/deos/ce.\+debeunne/colcon\+\_\+ws/src/\+Sa\+D\+V\+I\+O/cpp/src/data/maps/\mbox{\hyperlink{globalmap_8cpp}{globalmap.\+cpp}}\end{DoxyCompactItemize}

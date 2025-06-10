@@ -1,0 +1,7 @@
+<map id="isae::AFeature" name="isae::AFeature">
+<area shape="rect" id="node1" title="Abstract class for 2D features." alt="" coords="133,95,248,121"/>
+<area shape="rect" id="node3" href="$classisae_1_1_b_box2_d.html" title="A 2D bounding box feature class." alt="" coords="5,169,115,196"/>
+<area shape="rect" id="node4" href="$classisae_1_1_line2_d.html" title="A 2D line feature class." alt="" coords="139,169,242,196"/>
+<area shape="rect" id="node5" href="$classisae_1_1_point2_d.html" title="A single 2D point feature class." alt="" coords="266,169,374,196"/>
+<area shape="rect" id="node2" title=" " alt="" coords="101,5,280,47"/>
+</map>

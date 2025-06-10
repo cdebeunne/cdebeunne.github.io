@@ -1,0 +1,68 @@
+\hypertarget{classisae_1_1_epipolar_pose_estimator}{}\doxysection{isae\+::Epipolar\+Pose\+Estimator Class Reference}
+\label{classisae_1_1_epipolar_pose_estimator}\index{isae::EpipolarPoseEstimator@{isae::EpipolarPoseEstimator}}
+
+
+{\ttfamily \#include $<$Epipolar\+Pose\+Estimator.\+h$>$}
+
+
+
+Inheritance diagram for isae\+::Epipolar\+Pose\+Estimator\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=233pt]{classisae_1_1_epipolar_pose_estimator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for isae\+::Epipolar\+Pose\+Estimator\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=233pt]{classisae_1_1_epipolar_pose_estimator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classisae_1_1_epipolar_pose_estimator_aaceae25fec5ab70abb36804b23d2b8b9}{estimate\+Transform\+Between}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&frame1, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&frame2, \mbox{\hyperlink{namespaceisae_ac61c2f881f902dbfef491caaa5135c9c}{vec\+\_\+match}} \&matches, Eigen\+::\+Affine3d \&dT, Eigen\+::\+Matrix\+Xd \&covdT) override
+\item 
+bool \mbox{\hyperlink{classisae_1_1_epipolar_pose_estimator_a8effa7b7d2fd51095ff7556664a617af}{estimate\+Transform\+Between}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&frame1, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&frame2, \mbox{\hyperlink{namespaceisae_a70bf0a9838eb50b6a3fe2be9b79e25be}{typed\+\_\+vec\+\_\+match}} \&typed\+\_\+matches, Eigen\+::\+Affine3d \&dT, Eigen\+::\+Matrix\+Xd \&covdT) override
+\item 
+bool \mbox{\hyperlink{classisae_1_1_epipolar_pose_estimator_aedf72ca0cefc598b2a6bebfd52f22c1e}{estimate\+Transform\+Sensors}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_image_sensor}{Image\+Sensor}} $>$ \&sensor1, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_image_sensor}{Image\+Sensor}} $>$ \&sensor2, \mbox{\hyperlink{namespaceisae_ac61c2f881f902dbfef491caaa5135c9c}{vec\+\_\+match}} \&matches, Eigen\+::\+Affine3d \&dT, Eigen\+::\+Matrix\+Xd \&covdT)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classisae_1_1_epipolar_pose_estimator_a8effa7b7d2fd51095ff7556664a617af}\label{classisae_1_1_epipolar_pose_estimator_a8effa7b7d2fd51095ff7556664a617af}} 
+\index{isae::EpipolarPoseEstimator@{isae::EpipolarPoseEstimator}!estimateTransformBetween@{estimateTransformBetween}}
+\index{estimateTransformBetween@{estimateTransformBetween}!isae::EpipolarPoseEstimator@{isae::EpipolarPoseEstimator}}
+\doxysubsubsection{\texorpdfstring{estimateTransformBetween()}{estimateTransformBetween()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool isae\+::\+Epipolar\+Pose\+Estimator\+::estimate\+Transform\+Between (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&}]{frame1,  }\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&}]{frame2,  }\item[{\mbox{\hyperlink{namespaceisae_a70bf0a9838eb50b6a3fe2be9b79e25be}{typed\+\_\+vec\+\_\+match}} \&}]{typed\+\_\+matches,  }\item[{Eigen\+::\+Affine3d \&}]{dT,  }\item[{Eigen\+::\+Matrix\+Xd \&}]{covdT }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classisae_1_1_a_pose_estimator_abde86e1cab23cdcabf36dfe9810fa203}{isae\+::\+A\+Pose\+Estimator}}.
+
+\mbox{\Hypertarget{classisae_1_1_epipolar_pose_estimator_aaceae25fec5ab70abb36804b23d2b8b9}\label{classisae_1_1_epipolar_pose_estimator_aaceae25fec5ab70abb36804b23d2b8b9}} 
+\index{isae::EpipolarPoseEstimator@{isae::EpipolarPoseEstimator}!estimateTransformBetween@{estimateTransformBetween}}
+\index{estimateTransformBetween@{estimateTransformBetween}!isae::EpipolarPoseEstimator@{isae::EpipolarPoseEstimator}}
+\doxysubsubsection{\texorpdfstring{estimateTransformBetween()}{estimateTransformBetween()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool isae\+::\+Epipolar\+Pose\+Estimator\+::estimate\+Transform\+Between (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&}]{frame1,  }\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&}]{frame2,  }\item[{\mbox{\hyperlink{namespaceisae_ac61c2f881f902dbfef491caaa5135c9c}{vec\+\_\+match}} \&}]{matches,  }\item[{Eigen\+::\+Affine3d \&}]{dT,  }\item[{Eigen\+::\+Matrix\+Xd \&}]{covdT }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classisae_1_1_a_pose_estimator_a8bf763cb7583be98c0e0329cbecee206}{isae\+::\+A\+Pose\+Estimator}}.
+
+\mbox{\Hypertarget{classisae_1_1_epipolar_pose_estimator_aedf72ca0cefc598b2a6bebfd52f22c1e}\label{classisae_1_1_epipolar_pose_estimator_aedf72ca0cefc598b2a6bebfd52f22c1e}} 
+\index{isae::EpipolarPoseEstimator@{isae::EpipolarPoseEstimator}!estimateTransformSensors@{estimateTransformSensors}}
+\index{estimateTransformSensors@{estimateTransformSensors}!isae::EpipolarPoseEstimator@{isae::EpipolarPoseEstimator}}
+\doxysubsubsection{\texorpdfstring{estimateTransformSensors()}{estimateTransformSensors()}}
+{\footnotesize\ttfamily bool isae\+::\+Epipolar\+Pose\+Estimator\+::estimate\+Transform\+Sensors (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_image_sensor}{Image\+Sensor}} $>$ \&}]{sensor1,  }\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_image_sensor}{Image\+Sensor}} $>$ \&}]{sensor2,  }\item[{\mbox{\hyperlink{namespaceisae_ac61c2f881f902dbfef491caaa5135c9c}{vec\+\_\+match}} \&}]{matches,  }\item[{Eigen\+::\+Affine3d \&}]{dT,  }\item[{Eigen\+::\+Matrix\+Xd \&}]{covdT }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/deos/ce.\+debeunne/colcon\+\_\+ws/src/\+Sa\+D\+V\+I\+O/cpp/include/isaeslam/estimator/\mbox{\hyperlink{_epipolar_pose_estimator_8h}{Epipolar\+Pose\+Estimator.\+h}}\item 
+/home/deos/ce.\+debeunne/colcon\+\_\+ws/src/\+Sa\+D\+V\+I\+O/cpp/src/estimator/\mbox{\hyperlink{_epipolar_pose_estimator_8cpp}{Epipolar\+Pose\+Estimator.\+cpp}}\end{DoxyCompactItemize}

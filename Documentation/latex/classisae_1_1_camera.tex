@@ -1,0 +1,162 @@
+\hypertarget{classisae_1_1_camera}{}\doxysection{isae\+::Camera Class Reference}
+\label{classisae_1_1_camera}\index{isae::Camera@{isae::Camera}}
+
+
+A pinhole camera sensor class.  
+
+
+
+
+{\ttfamily \#include $<$Camera.\+h$>$}
+
+
+
+Inheritance diagram for isae\+::Camera\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{classisae_1_1_camera__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for isae\+::Camera\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{classisae_1_1_camera__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classisae_1_1_camera_abc6f6b2c53b63d4f8cf4a609ea7ecd2f}{Camera}} (const cv\+::\+Mat \&image, Eigen\+::\+Matrix3d K)
+\item 
+\mbox{\hyperlink{classisae_1_1_camera_a2f28b92b6e57d11c1f29ee84d6b618bf}{Camera}} (const cv\+::\+Mat \&image, const cv\+::\+Mat mask, Eigen\+::\+Matrix3d K)
+\item 
+bool \mbox{\hyperlink{classisae_1_1_camera_a7b5de9c54c4e634147932a7074d88906}{project}} (const Eigen\+::\+Affine3d \&T\+\_\+w\+\_\+lmk, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_model3d}{A\+Model3d}} $>$ ldmk\+\_\+model, std\+::vector$<$ Eigen\+::\+Vector2d $>$ \&p2ds) override
+\begin{DoxyCompactList}\small\item\em Virtual function to project a landmark in the image plane. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classisae_1_1_camera_aba58ab12815b3d0fc8a0716333074515}{project}} (const Eigen\+::\+Affine3d \&T\+\_\+w\+\_\+lmk, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_model3d}{A\+Model3d}} $>$ ldmk\+\_\+model, const Eigen\+::\+Affine3d \&T\+\_\+f\+\_\+w, std\+::vector$<$ Eigen\+::\+Vector2d $>$ \&p2ds) override
+\begin{DoxyCompactList}\small\item\em Virtual function to project a landmark in the image plane with the pose of the frame. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classisae_1_1_camera_a00e0669fb4c075d6c8dab3287cfc0141}{project}} (const Eigen\+::\+Affine3d \&T\+\_\+w\+\_\+lmk, const Eigen\+::\+Affine3d \&T\+\_\+f\+\_\+w, const Eigen\+::\+Matrix2d sqrt\+\_\+info, Eigen\+::\+Vector2d \&p2d, double $\ast$J\+\_\+proj\+\_\+frame, double $\ast$J\+\_\+proj\+\_\+lmk) override
+\begin{DoxyCompactList}\small\item\em Virtual function to project a landmark and compute the Jacobian of the projection. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector3d \mbox{\hyperlink{classisae_1_1_camera_a589eefc1a508d196abc3eeb581031a74}{get\+Ray\+Camera}} (Eigen\+::\+Vector2d f)
+\begin{DoxyCompactList}\small\item\em Get the ray in camera coordinates. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector3d \mbox{\hyperlink{classisae_1_1_camera_a84dd576f780a545d6ee18fd5b60d1ba1}{get\+Ray}} (Eigen\+::\+Vector2d f)
+\begin{DoxyCompactList}\small\item\em Get the ray in world coordinates. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classisae_1_1_camera_a809315d16e4032175bcb72cf669c42f9}{get\+Focal}} () override
+\begin{DoxyCompactList}\small\item\em Compute the focal length of the camera. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A pinhole camera sensor class. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classisae_1_1_camera_abc6f6b2c53b63d4f8cf4a609ea7ecd2f}\label{classisae_1_1_camera_abc6f6b2c53b63d4f8cf4a609ea7ecd2f}} 
+\index{isae::Camera@{isae::Camera}!Camera@{Camera}}
+\index{Camera@{Camera}!isae::Camera@{isae::Camera}}
+\doxysubsubsection{\texorpdfstring{Camera()}{Camera()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily isae\+::\+Camera\+::\+Camera (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{image,  }\item[{Eigen\+::\+Matrix3d}]{K }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_camera_a2f28b92b6e57d11c1f29ee84d6b618bf}\label{classisae_1_1_camera_a2f28b92b6e57d11c1f29ee84d6b618bf}} 
+\index{isae::Camera@{isae::Camera}!Camera@{Camera}}
+\index{Camera@{Camera}!isae::Camera@{isae::Camera}}
+\doxysubsubsection{\texorpdfstring{Camera()}{Camera()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily isae\+::\+Camera\+::\+Camera (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{image,  }\item[{const cv\+::\+Mat}]{mask,  }\item[{Eigen\+::\+Matrix3d}]{K }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classisae_1_1_camera_a809315d16e4032175bcb72cf669c42f9}\label{classisae_1_1_camera_a809315d16e4032175bcb72cf669c42f9}} 
+\index{isae::Camera@{isae::Camera}!getFocal@{getFocal}}
+\index{getFocal@{getFocal}!isae::Camera@{isae::Camera}}
+\doxysubsubsection{\texorpdfstring{getFocal()}{getFocal()}}
+{\footnotesize\ttfamily double isae\+::\+Camera\+::get\+Focal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Compute the focal length of the camera. 
+
+Virtual function because it depends on the camera model. 
+
+Implements \mbox{\hyperlink{classisae_1_1_image_sensor_a94b4863ade24b7b1a5b5e619d87a1174}{isae\+::\+Image\+Sensor}}.
+
+\mbox{\Hypertarget{classisae_1_1_camera_a84dd576f780a545d6ee18fd5b60d1ba1}\label{classisae_1_1_camera_a84dd576f780a545d6ee18fd5b60d1ba1}} 
+\index{isae::Camera@{isae::Camera}!getRay@{getRay}}
+\index{getRay@{getRay}!isae::Camera@{isae::Camera}}
+\doxysubsubsection{\texorpdfstring{getRay()}{getRay()}}
+{\footnotesize\ttfamily Eigen\+::\+Vector3d isae\+::\+Camera\+::get\+Ray (\begin{DoxyParamCaption}\item[{Eigen\+::\+Vector2d}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get the ray in world coordinates. 
+
+
+
+Implements \mbox{\hyperlink{classisae_1_1_image_sensor_adb7b31c8cc57c2f9b46ab774d7d58a50}{isae\+::\+Image\+Sensor}}.
+
+\mbox{\Hypertarget{classisae_1_1_camera_a589eefc1a508d196abc3eeb581031a74}\label{classisae_1_1_camera_a589eefc1a508d196abc3eeb581031a74}} 
+\index{isae::Camera@{isae::Camera}!getRayCamera@{getRayCamera}}
+\index{getRayCamera@{getRayCamera}!isae::Camera@{isae::Camera}}
+\doxysubsubsection{\texorpdfstring{getRayCamera()}{getRayCamera()}}
+{\footnotesize\ttfamily Eigen\+::\+Vector3d isae\+::\+Camera\+::get\+Ray\+Camera (\begin{DoxyParamCaption}\item[{Eigen\+::\+Vector2d}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get the ray in camera coordinates. 
+
+
+
+Implements \mbox{\hyperlink{classisae_1_1_image_sensor_a549c54cc43deeb09b9cf7e770a6235fc}{isae\+::\+Image\+Sensor}}.
+
+\mbox{\Hypertarget{classisae_1_1_camera_a00e0669fb4c075d6c8dab3287cfc0141}\label{classisae_1_1_camera_a00e0669fb4c075d6c8dab3287cfc0141}} 
+\index{isae::Camera@{isae::Camera}!project@{project}}
+\index{project@{project}!isae::Camera@{isae::Camera}}
+\doxysubsubsection{\texorpdfstring{project()}{project()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily bool isae\+::\+Camera\+::project (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Affine3d \&}]{T\+\_\+w\+\_\+lmk,  }\item[{const Eigen\+::\+Affine3d \&}]{T\+\_\+f\+\_\+w,  }\item[{const Eigen\+::\+Matrix2d}]{sqrt\+\_\+info,  }\item[{Eigen\+::\+Vector2d \&}]{p2d,  }\item[{double $\ast$}]{J\+\_\+proj\+\_\+frame,  }\item[{double $\ast$}]{J\+\_\+proj\+\_\+lmk }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Virtual function to project a landmark and compute the Jacobian of the projection. 
+
+
+
+Implements \mbox{\hyperlink{classisae_1_1_image_sensor_aaee29b0f9f3e91755ed067b2bc10d764}{isae\+::\+Image\+Sensor}}.
+
+\mbox{\Hypertarget{classisae_1_1_camera_aba58ab12815b3d0fc8a0716333074515}\label{classisae_1_1_camera_aba58ab12815b3d0fc8a0716333074515}} 
+\index{isae::Camera@{isae::Camera}!project@{project}}
+\index{project@{project}!isae::Camera@{isae::Camera}}
+\doxysubsubsection{\texorpdfstring{project()}{project()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily bool isae\+::\+Camera\+::project (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Affine3d \&}]{T\+\_\+w\+\_\+lmk,  }\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_model3d}{A\+Model3d}} $>$}]{ldmk\+\_\+model,  }\item[{const Eigen\+::\+Affine3d \&}]{T\+\_\+f\+\_\+w,  }\item[{std\+::vector$<$ Eigen\+::\+Vector2d $>$ \&}]{p2d\+\_\+vector }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Virtual function to project a landmark in the image plane with the pose of the frame. 
+
+
+
+Implements \mbox{\hyperlink{classisae_1_1_image_sensor_a09938e96fa7e4abccf265c59ace0fd3c}{isae\+::\+Image\+Sensor}}.
+
+\mbox{\Hypertarget{classisae_1_1_camera_a7b5de9c54c4e634147932a7074d88906}\label{classisae_1_1_camera_a7b5de9c54c4e634147932a7074d88906}} 
+\index{isae::Camera@{isae::Camera}!project@{project}}
+\index{project@{project}!isae::Camera@{isae::Camera}}
+\doxysubsubsection{\texorpdfstring{project()}{project()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily bool isae\+::\+Camera\+::project (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Affine3d \&}]{T\+\_\+w\+\_\+lmk,  }\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_model3d}{A\+Model3d}} $>$}]{ldmk\+\_\+model,  }\item[{std\+::vector$<$ Eigen\+::\+Vector2d $>$ \&}]{p2d\+\_\+vector }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Virtual function to project a landmark in the image plane. 
+
+
+
+Implements \mbox{\hyperlink{classisae_1_1_image_sensor_ae22669e1ffbfa927864068468d011628}{isae\+::\+Image\+Sensor}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/deos/ce.\+debeunne/colcon\+\_\+ws/src/\+Sa\+D\+V\+I\+O/cpp/include/isaeslam/data/sensors/\mbox{\hyperlink{_camera_8h}{Camera.\+h}}\item 
+/home/deos/ce.\+debeunne/colcon\+\_\+ws/src/\+Sa\+D\+V\+I\+O/cpp/src/data/sensors/\mbox{\hyperlink{_camera_8cpp}{Camera.\+cpp}}\end{DoxyCompactItemize}

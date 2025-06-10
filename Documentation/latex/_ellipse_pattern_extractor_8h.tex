@@ -1,0 +1,94 @@
+\hypertarget{_ellipse_pattern_extractor_8h}{}\doxysection{/home/deos/ce.debeunne/colcon\+\_\+ws/src/\+Sa\+D\+V\+I\+O/cpp/include/isaeslam/featuredetectors/custom\+\_\+detectors/extractor/ellipsepattern/\+Ellipse\+Pattern\+Extractor.h File Reference}
+\label{_ellipse_pattern_extractor_8h}\index{/home/deos/ce.debeunne/colcon\_ws/src/SaDVIO/cpp/include/isaeslam/featuredetectors/custom\_detectors/extractor/ellipsepattern/EllipsePatternExtractor.h@{/home/deos/ce.debeunne/colcon\_ws/src/SaDVIO/cpp/include/isaeslam/featuredetectors/custom\_detectors/extractor/ellipsepattern/EllipsePatternExtractor.h}}
+{\ttfamily \#include $<$opencv2/core/mat.\+hpp$>$}\newline
+{\ttfamily \#include $<$opencv2/core/types.\+hpp$>$}\newline
+{\ttfamily \#include $<$opencv2/opencv.\+hpp$>$}\newline
+{\ttfamily \#include $<$opencv2/highgui/highgui.\+hpp$>$}\newline
+{\ttfamily \#include \char`\"{}isaeslam/typedefs.\+h\char`\"{}}\newline
+Include dependency graph for Ellipse\+Pattern\+Extractor.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_ellipse_pattern_extractor_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_ellipse_pattern_extractor_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classisae_1_1_ellipse}{isae\+::\+Ellipse}}
+\item 
+class \mbox{\hyperlink{classisae_1_1_ellipse_pattern}{isae\+::\+Ellipse\+Pattern}}
+\item 
+class \mbox{\hyperlink{classisae_1_1_ellipse_pattern_parameters}{isae\+::\+Ellipse\+Pattern\+Parameters}}
+\item 
+class \mbox{\hyperlink{classisae_1_1_ellipse_pattern_extractor}{isae\+::\+Ellipse\+Pattern\+Extractor}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceisae}{isae}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{_ellipse_pattern_extractor_8h_afc4bfb3b35403999d09327bce00a7417}{interp2}} (const cv\+::\+Mat \&I, const cv\+::\+Point2d \&pp, const uint \&depth)
+\item 
+double \mbox{\hyperlink{_ellipse_pattern_extractor_8h_a657edcd8805dd5080dd6ac603115a004}{mean\+\_\+interp2}} (const cv\+::\+Mat \&I, const std\+::vector$<$ cv\+::\+Point2d $>$ \&pps, const uchar \&depth)
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{_ellipse_pattern_extractor_8h_af01d54f968ea26ab8983182962a7b56b}{median}} (std\+::vector$<$ T $>$ \&v)
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{_ellipse_pattern_extractor_8h_a9fcdfa496a37d69be08dfbba31d7f9a7}{mean}} (std\+::vector$<$ T $>$ \&v)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{_ellipse_pattern_extractor_8h_a2e138e11d6d5f6b8c6f63b3ab0335441}{linspace}} (T a, T b, size\+\_\+t N)
+\item 
+uint \mbox{\hyperlink{_ellipse_pattern_extractor_8h_a744739e85bc55830757022a956636846}{binary\+\_\+to\+\_\+decimal}} (const std\+::vector$<$ uint $>$ \&binary, const bool \&have\+\_\+parity)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_ellipse_pattern_extractor_8h_a744739e85bc55830757022a956636846}\label{_ellipse_pattern_extractor_8h_a744739e85bc55830757022a956636846}} 
+\index{EllipsePatternExtractor.h@{EllipsePatternExtractor.h}!binary\_to\_decimal@{binary\_to\_decimal}}
+\index{binary\_to\_decimal@{binary\_to\_decimal}!EllipsePatternExtractor.h@{EllipsePatternExtractor.h}}
+\doxysubsubsection{\texorpdfstring{binary\_to\_decimal()}{binary\_to\_decimal()}}
+{\footnotesize\ttfamily uint binary\+\_\+to\+\_\+decimal (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ uint $>$ \&}]{binary,  }\item[{const bool \&}]{have\+\_\+parity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{_ellipse_pattern_extractor_8h_afc4bfb3b35403999d09327bce00a7417}\label{_ellipse_pattern_extractor_8h_afc4bfb3b35403999d09327bce00a7417}} 
+\index{EllipsePatternExtractor.h@{EllipsePatternExtractor.h}!interp2@{interp2}}
+\index{interp2@{interp2}!EllipsePatternExtractor.h@{EllipsePatternExtractor.h}}
+\doxysubsubsection{\texorpdfstring{interp2()}{interp2()}}
+{\footnotesize\ttfamily double interp2 (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{I,  }\item[{const cv\+::\+Point2d \&}]{pp,  }\item[{const uint \&}]{depth }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{_ellipse_pattern_extractor_8h_a2e138e11d6d5f6b8c6f63b3ab0335441}\label{_ellipse_pattern_extractor_8h_a2e138e11d6d5f6b8c6f63b3ab0335441}} 
+\index{EllipsePatternExtractor.h@{EllipsePatternExtractor.h}!linspace@{linspace}}
+\index{linspace@{linspace}!EllipsePatternExtractor.h@{EllipsePatternExtractor.h}}
+\doxysubsubsection{\texorpdfstring{linspace()}{linspace()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::vector$<$T$>$ linspace (\begin{DoxyParamCaption}\item[{T}]{a,  }\item[{T}]{b,  }\item[{size\+\_\+t}]{N }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{_ellipse_pattern_extractor_8h_a9fcdfa496a37d69be08dfbba31d7f9a7}\label{_ellipse_pattern_extractor_8h_a9fcdfa496a37d69be08dfbba31d7f9a7}} 
+\index{EllipsePatternExtractor.h@{EllipsePatternExtractor.h}!mean@{mean}}
+\index{mean@{mean}!EllipsePatternExtractor.h@{EllipsePatternExtractor.h}}
+\doxysubsubsection{\texorpdfstring{mean()}{mean()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T mean (\begin{DoxyParamCaption}\item[{std\+::vector$<$ T $>$ \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{_ellipse_pattern_extractor_8h_a657edcd8805dd5080dd6ac603115a004}\label{_ellipse_pattern_extractor_8h_a657edcd8805dd5080dd6ac603115a004}} 
+\index{EllipsePatternExtractor.h@{EllipsePatternExtractor.h}!mean\_interp2@{mean\_interp2}}
+\index{mean\_interp2@{mean\_interp2}!EllipsePatternExtractor.h@{EllipsePatternExtractor.h}}
+\doxysubsubsection{\texorpdfstring{mean\_interp2()}{mean\_interp2()}}
+{\footnotesize\ttfamily double mean\+\_\+interp2 (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{I,  }\item[{const std\+::vector$<$ cv\+::\+Point2d $>$ \&}]{pps,  }\item[{const uchar \&}]{depth }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{_ellipse_pattern_extractor_8h_af01d54f968ea26ab8983182962a7b56b}\label{_ellipse_pattern_extractor_8h_af01d54f968ea26ab8983182962a7b56b}} 
+\index{EllipsePatternExtractor.h@{EllipsePatternExtractor.h}!median@{median}}
+\index{median@{median}!EllipsePatternExtractor.h@{EllipsePatternExtractor.h}}
+\doxysubsubsection{\texorpdfstring{median()}{median()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T median (\begin{DoxyParamCaption}\item[{std\+::vector$<$ T $>$ \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+

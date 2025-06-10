@@ -1,0 +1,68 @@
+\hypertarget{classisae_1_1_point2_d_feature_tracker}{}\doxysection{isae\+::Point2\+D\+Feature\+Tracker Class Reference}
+\label{classisae_1_1_point2_d_feature_tracker}\index{isae::Point2DFeatureTracker@{isae::Point2DFeatureTracker}}
+
+
+{\ttfamily \#include $<$Point2\+D\+Feature\+Tracker.\+h$>$}
+
+
+
+Inheritance diagram for isae\+::Point2\+D\+Feature\+Tracker\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=233pt]{classisae_1_1_point2_d_feature_tracker__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for isae\+::Point2\+D\+Feature\+Tracker\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=233pt]{classisae_1_1_point2_d_feature_tracker__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classisae_1_1_point2_d_feature_tracker_a5ac382785aa55e6ba179d32d9228a60a}{Point2\+D\+Feature\+Tracker}} ()
+\item 
+\mbox{\hyperlink{classisae_1_1_point2_d_feature_tracker_aae4bbab230afbd5caae4534cd42af4c2}{Point2\+D\+Feature\+Tracker}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature_detector}{A\+Feature\+Detector}} $>$ detector)
+\item 
+uint \mbox{\hyperlink{classisae_1_1_point2_d_feature_tracker_adf319ea9a428db3ee456eefded0f5d3e}{track}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_image_sensor}{isae\+::\+Image\+Sensor}} $>$ \&sensor1, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_image_sensor}{isae\+::\+Image\+Sensor}} $>$ \&sensor2, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$ \&features\+\_\+to\+\_\+track, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$ \&features\+\_\+init, \mbox{\hyperlink{namespaceisae_ac61c2f881f902dbfef491caaa5135c9c}{vec\+\_\+match}} \&tracks, \mbox{\hyperlink{namespaceisae_ac61c2f881f902dbfef491caaa5135c9c}{vec\+\_\+match}} \&tracks\+\_\+with\+\_\+ldmk, int search\+\_\+width=21, int search\+\_\+height=21, int nlvls\+\_\+pyramids=3, double max\+\_\+err=10, bool backward=false) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classisae_1_1_point2_d_feature_tracker_a5ac382785aa55e6ba179d32d9228a60a}\label{classisae_1_1_point2_d_feature_tracker_a5ac382785aa55e6ba179d32d9228a60a}} 
+\index{isae::Point2DFeatureTracker@{isae::Point2DFeatureTracker}!Point2DFeatureTracker@{Point2DFeatureTracker}}
+\index{Point2DFeatureTracker@{Point2DFeatureTracker}!isae::Point2DFeatureTracker@{isae::Point2DFeatureTracker}}
+\doxysubsubsection{\texorpdfstring{Point2DFeatureTracker()}{Point2DFeatureTracker()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily isae\+::\+Point2\+D\+Feature\+Tracker\+::\+Point2\+D\+Feature\+Tracker (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_point2_d_feature_tracker_aae4bbab230afbd5caae4534cd42af4c2}\label{classisae_1_1_point2_d_feature_tracker_aae4bbab230afbd5caae4534cd42af4c2}} 
+\index{isae::Point2DFeatureTracker@{isae::Point2DFeatureTracker}!Point2DFeatureTracker@{Point2DFeatureTracker}}
+\index{Point2DFeatureTracker@{Point2DFeatureTracker}!isae::Point2DFeatureTracker@{isae::Point2DFeatureTracker}}
+\doxysubsubsection{\texorpdfstring{Point2DFeatureTracker()}{Point2DFeatureTracker()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily isae\+::\+Point2\+D\+Feature\+Tracker\+::\+Point2\+D\+Feature\+Tracker (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature_detector}{A\+Feature\+Detector}} $>$}]{detector }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classisae_1_1_point2_d_feature_tracker_adf319ea9a428db3ee456eefded0f5d3e}\label{classisae_1_1_point2_d_feature_tracker_adf319ea9a428db3ee456eefded0f5d3e}} 
+\index{isae::Point2DFeatureTracker@{isae::Point2DFeatureTracker}!track@{track}}
+\index{track@{track}!isae::Point2DFeatureTracker@{isae::Point2DFeatureTracker}}
+\doxysubsubsection{\texorpdfstring{track()}{track()}}
+{\footnotesize\ttfamily uint isae\+::\+Point2\+D\+Feature\+Tracker\+::track (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_image_sensor}{isae\+::\+Image\+Sensor}} $>$ \&}]{sensor1,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_image_sensor}{isae\+::\+Image\+Sensor}} $>$ \&}]{sensor2,  }\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$ \&}]{features\+\_\+to\+\_\+track,  }\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$ \&}]{features\+\_\+init,  }\item[{\mbox{\hyperlink{namespaceisae_ac61c2f881f902dbfef491caaa5135c9c}{vec\+\_\+match}} \&}]{tracks,  }\item[{\mbox{\hyperlink{namespaceisae_ac61c2f881f902dbfef491caaa5135c9c}{vec\+\_\+match}} \&}]{tracks\+\_\+with\+\_\+ldmk,  }\item[{int}]{search\+\_\+width = {\ttfamily 21},  }\item[{int}]{search\+\_\+height = {\ttfamily 21},  }\item[{int}]{nlvls\+\_\+pyramids = {\ttfamily 3},  }\item[{double}]{max\+\_\+err = {\ttfamily 10},  }\item[{bool}]{backward = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classisae_1_1_a_feature_tracker_a0d8602a7f6a388354886f8ddb7e3087d}{isae\+::\+A\+Feature\+Tracker}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/deos/ce.\+debeunne/colcon\+\_\+ws/src/\+Sa\+D\+V\+I\+O/cpp/include/isaeslam/featurematchers/\mbox{\hyperlink{_point2_d_feature_tracker_8h}{Point2\+D\+Feature\+Tracker.\+h}}\item 
+/home/deos/ce.\+debeunne/colcon\+\_\+ws/src/\+Sa\+D\+V\+I\+O/cpp/src/featurematchers/\mbox{\hyperlink{_point2_d_feature_tracker_8cpp}{Point2\+D\+Feature\+Tracker.\+cpp}}\end{DoxyCompactItemize}

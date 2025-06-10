@@ -95,7 +95,7 @@ I am a post doc researcher at ISAE-SUPAERO. I am currently working on state-esti
 </p>
 
 <a
-                href="https://cdebeunne.github.io/main"
+                href="https://cdebeunne.github.io/Documentation/main"
                 target="_blank"
                 >View Project
 </a>

@@ -1,0 +1,5 @@
+<map id="isae::AMap" name="isae::AMap">
+<area shape="rect" id="node1" title="Abstract class for a Map." alt="" coords="95,5,189,32"/>
+<area shape="rect" id="node2" href="$classisae_1_1_global_map.html" title="Class for a Global Map." alt="" coords="5,80,132,107"/>
+<area shape="rect" id="node3" href="$classisae_1_1_local_map.html" title="Class for a Local Map." alt="" coords="156,80,275,107"/>
+</map>

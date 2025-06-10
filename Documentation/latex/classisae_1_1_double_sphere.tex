@@ -1,0 +1,156 @@
+\hypertarget{classisae_1_1_double_sphere}{}\doxysection{isae\+::Double\+Sphere Class Reference}
+\label{classisae_1_1_double_sphere}\index{isae::DoubleSphere@{isae::DoubleSphere}}
+
+
+An image sensor class that uses a double sphere model.  
+
+
+
+
+{\ttfamily \#include $<$Double\+Sphere.\+h$>$}
+
+
+
+Inheritance diagram for isae\+::Double\+Sphere\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{classisae_1_1_double_sphere__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for isae\+::Double\+Sphere\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{classisae_1_1_double_sphere__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classisae_1_1_double_sphere_abd4b5db11ebbba1536ca603ac830f24f}{Double\+Sphere}} (const cv\+::\+Mat \&image, Eigen\+::\+Matrix3d K, double alpha, double xi)
+\item 
+bool \mbox{\hyperlink{classisae_1_1_double_sphere_a57f4036519a95938e08baa3e05804556}{project}} (const Eigen\+::\+Affine3d \&T\+\_\+w\+\_\+lmk, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_model3d}{A\+Model3d}} $>$ ldmk\+\_\+model, std\+::vector$<$ Eigen\+::\+Vector2d $>$ \&p2ds) override
+\begin{DoxyCompactList}\small\item\em Virtual function to project a landmark in the image plane. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classisae_1_1_double_sphere_afbea509c13a0480060f46a43db956773}{project}} (const Eigen\+::\+Affine3d \&T\+\_\+w\+\_\+lmk, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_model3d}{A\+Model3d}} $>$ ldmk\+\_\+model, const Eigen\+::\+Affine3d \&T\+\_\+f\+\_\+w, std\+::vector$<$ Eigen\+::\+Vector2d $>$ \&p2ds) override
+\begin{DoxyCompactList}\small\item\em Virtual function to project a landmark in the image plane with the pose of the frame. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classisae_1_1_double_sphere_a87ac306742887120ada871001603f8b7}{project}} (const Eigen\+::\+Affine3d \&T\+\_\+w\+\_\+lmk, const Eigen\+::\+Affine3d \&T\+\_\+f\+\_\+w, const Eigen\+::\+Matrix2d sqrt\+\_\+info, Eigen\+::\+Vector2d \&p2d, double $\ast$J\+\_\+proj\+\_\+frame, double $\ast$J\+\_\+proj\+\_\+lmk) override
+\begin{DoxyCompactList}\small\item\em Virtual function to project a landmark and compute the Jacobian of the projection. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector3d \mbox{\hyperlink{classisae_1_1_double_sphere_a096678b22ce9c50c9d7282ac89c49838}{get\+Ray\+Camera}} (Eigen\+::\+Vector2d f)
+\begin{DoxyCompactList}\small\item\em Get the ray in camera coordinates. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector3d \mbox{\hyperlink{classisae_1_1_double_sphere_a6ef9ab1b8d0a6029ccd8469e15028e61}{get\+Ray}} (Eigen\+::\+Vector2d f)
+\begin{DoxyCompactList}\small\item\em Get the ray in world coordinates. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classisae_1_1_double_sphere_ae553f16b0267841a4dc2c5aee2797919}{get\+Focal}} () override
+\begin{DoxyCompactList}\small\item\em Compute the focal length of the camera. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+An image sensor class that uses a double sphere model. 
+
+The implmementation of the double sphere model is based on the paper\+: \char`\"{}\+The Double Sphere Camera Model\char`\"{} by Usenko et al. Available at \href{https://arxiv.org/abs/1807.08957}{\texttt{ https\+://arxiv.\+org/abs/1807.\+08957}} 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classisae_1_1_double_sphere_abd4b5db11ebbba1536ca603ac830f24f}\label{classisae_1_1_double_sphere_abd4b5db11ebbba1536ca603ac830f24f}} 
+\index{isae::DoubleSphere@{isae::DoubleSphere}!DoubleSphere@{DoubleSphere}}
+\index{DoubleSphere@{DoubleSphere}!isae::DoubleSphere@{isae::DoubleSphere}}
+\doxysubsubsection{\texorpdfstring{DoubleSphere()}{DoubleSphere()}}
+{\footnotesize\ttfamily isae\+::\+Double\+Sphere\+::\+Double\+Sphere (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{image,  }\item[{Eigen\+::\+Matrix3d}]{K,  }\item[{double}]{alpha,  }\item[{double}]{xi }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classisae_1_1_double_sphere_ae553f16b0267841a4dc2c5aee2797919}\label{classisae_1_1_double_sphere_ae553f16b0267841a4dc2c5aee2797919}} 
+\index{isae::DoubleSphere@{isae::DoubleSphere}!getFocal@{getFocal}}
+\index{getFocal@{getFocal}!isae::DoubleSphere@{isae::DoubleSphere}}
+\doxysubsubsection{\texorpdfstring{getFocal()}{getFocal()}}
+{\footnotesize\ttfamily double isae\+::\+Double\+Sphere\+::get\+Focal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Compute the focal length of the camera. 
+
+Virtual function because it depends on the camera model. 
+
+Implements \mbox{\hyperlink{classisae_1_1_image_sensor_a94b4863ade24b7b1a5b5e619d87a1174}{isae\+::\+Image\+Sensor}}.
+
+\mbox{\Hypertarget{classisae_1_1_double_sphere_a6ef9ab1b8d0a6029ccd8469e15028e61}\label{classisae_1_1_double_sphere_a6ef9ab1b8d0a6029ccd8469e15028e61}} 
+\index{isae::DoubleSphere@{isae::DoubleSphere}!getRay@{getRay}}
+\index{getRay@{getRay}!isae::DoubleSphere@{isae::DoubleSphere}}
+\doxysubsubsection{\texorpdfstring{getRay()}{getRay()}}
+{\footnotesize\ttfamily Eigen\+::\+Vector3d isae\+::\+Double\+Sphere\+::get\+Ray (\begin{DoxyParamCaption}\item[{Eigen\+::\+Vector2d}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get the ray in world coordinates. 
+
+
+
+Implements \mbox{\hyperlink{classisae_1_1_image_sensor_adb7b31c8cc57c2f9b46ab774d7d58a50}{isae\+::\+Image\+Sensor}}.
+
+\mbox{\Hypertarget{classisae_1_1_double_sphere_a096678b22ce9c50c9d7282ac89c49838}\label{classisae_1_1_double_sphere_a096678b22ce9c50c9d7282ac89c49838}} 
+\index{isae::DoubleSphere@{isae::DoubleSphere}!getRayCamera@{getRayCamera}}
+\index{getRayCamera@{getRayCamera}!isae::DoubleSphere@{isae::DoubleSphere}}
+\doxysubsubsection{\texorpdfstring{getRayCamera()}{getRayCamera()}}
+{\footnotesize\ttfamily Eigen\+::\+Vector3d isae\+::\+Double\+Sphere\+::get\+Ray\+Camera (\begin{DoxyParamCaption}\item[{Eigen\+::\+Vector2d}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get the ray in camera coordinates. 
+
+
+
+Implements \mbox{\hyperlink{classisae_1_1_image_sensor_a549c54cc43deeb09b9cf7e770a6235fc}{isae\+::\+Image\+Sensor}}.
+
+\mbox{\Hypertarget{classisae_1_1_double_sphere_a87ac306742887120ada871001603f8b7}\label{classisae_1_1_double_sphere_a87ac306742887120ada871001603f8b7}} 
+\index{isae::DoubleSphere@{isae::DoubleSphere}!project@{project}}
+\index{project@{project}!isae::DoubleSphere@{isae::DoubleSphere}}
+\doxysubsubsection{\texorpdfstring{project()}{project()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily bool isae\+::\+Double\+Sphere\+::project (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Affine3d \&}]{T\+\_\+w\+\_\+lmk,  }\item[{const Eigen\+::\+Affine3d \&}]{T\+\_\+f\+\_\+w,  }\item[{const Eigen\+::\+Matrix2d}]{sqrt\+\_\+info,  }\item[{Eigen\+::\+Vector2d \&}]{p2d,  }\item[{double $\ast$}]{J\+\_\+proj\+\_\+frame,  }\item[{double $\ast$}]{J\+\_\+proj\+\_\+lmk }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Virtual function to project a landmark and compute the Jacobian of the projection. 
+
+
+
+Implements \mbox{\hyperlink{classisae_1_1_image_sensor_aaee29b0f9f3e91755ed067b2bc10d764}{isae\+::\+Image\+Sensor}}.
+
+\mbox{\Hypertarget{classisae_1_1_double_sphere_afbea509c13a0480060f46a43db956773}\label{classisae_1_1_double_sphere_afbea509c13a0480060f46a43db956773}} 
+\index{isae::DoubleSphere@{isae::DoubleSphere}!project@{project}}
+\index{project@{project}!isae::DoubleSphere@{isae::DoubleSphere}}
+\doxysubsubsection{\texorpdfstring{project()}{project()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily bool isae\+::\+Double\+Sphere\+::project (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Affine3d \&}]{T\+\_\+w\+\_\+lmk,  }\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_model3d}{A\+Model3d}} $>$}]{ldmk\+\_\+model,  }\item[{const Eigen\+::\+Affine3d \&}]{T\+\_\+f\+\_\+w,  }\item[{std\+::vector$<$ Eigen\+::\+Vector2d $>$ \&}]{p2d\+\_\+vector }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Virtual function to project a landmark in the image plane with the pose of the frame. 
+
+
+
+Implements \mbox{\hyperlink{classisae_1_1_image_sensor_a09938e96fa7e4abccf265c59ace0fd3c}{isae\+::\+Image\+Sensor}}.
+
+\mbox{\Hypertarget{classisae_1_1_double_sphere_a57f4036519a95938e08baa3e05804556}\label{classisae_1_1_double_sphere_a57f4036519a95938e08baa3e05804556}} 
+\index{isae::DoubleSphere@{isae::DoubleSphere}!project@{project}}
+\index{project@{project}!isae::DoubleSphere@{isae::DoubleSphere}}
+\doxysubsubsection{\texorpdfstring{project()}{project()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily bool isae\+::\+Double\+Sphere\+::project (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Affine3d \&}]{T\+\_\+w\+\_\+lmk,  }\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_model3d}{A\+Model3d}} $>$}]{ldmk\+\_\+model,  }\item[{std\+::vector$<$ Eigen\+::\+Vector2d $>$ \&}]{p2d\+\_\+vector }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Virtual function to project a landmark in the image plane. 
+
+
+
+Implements \mbox{\hyperlink{classisae_1_1_image_sensor_ae22669e1ffbfa927864068468d011628}{isae\+::\+Image\+Sensor}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/deos/ce.\+debeunne/colcon\+\_\+ws/src/\+Sa\+D\+V\+I\+O/cpp/include/isaeslam/data/sensors/\mbox{\hyperlink{_double_sphere_8h}{Double\+Sphere.\+h}}\item 
+/home/deos/ce.\+debeunne/colcon\+\_\+ws/src/\+Sa\+D\+V\+I\+O/cpp/src/data/sensors/\mbox{\hyperlink{_double_sphere_8cpp}{Double\+Sphere.\+cpp}}\end{DoxyCompactItemize}

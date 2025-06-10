@@ -1,0 +1,140 @@
+\hypertarget{classisae_1_1_i_m_u_priordx}{}\doxysection{isae\+::I\+M\+U\+Priordx Class Reference}
+\label{classisae_1_1_i_m_u_priordx}\index{isae::IMUPriordx@{isae::IMUPriordx}}
+
+
+{\ttfamily \#include $<$residuals.\+hpp$>$}
+
+
+
+Inheritance diagram for isae\+::I\+M\+U\+Priordx\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{classisae_1_1_i_m_u_priordx__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for isae\+::I\+M\+U\+Priordx\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{classisae_1_1_i_m_u_priordx__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classisae_1_1_i_m_u_priordx_a12d60a84b9377c9b018c472399cdad78}{I\+M\+U\+Priordx}} (const Eigen\+::\+Affine3d T, const Eigen\+::\+Affine3d T\+\_\+prior, const Eigen\+::\+Vector3d v, const Eigen\+::\+Vector3d v\+\_\+prior, const Eigen\+::\+Vector3d ba, const Eigen\+::\+Vector3d ba\+\_\+prior, const Eigen\+::\+Vector3d bg, const Eigen\+::\+Vector3d bg\+\_\+prior, const Eigen\+::\+Matrix\+Xd sqrt\+\_\+inf)
+\item 
+\mbox{\hyperlink{classisae_1_1_i_m_u_priordx_abd2e3890c8fbcb101803f125a92eb471}{I\+M\+U\+Priordx}} ()
+\item 
+virtual bool \mbox{\hyperlink{classisae_1_1_i_m_u_priordx_a75fdba93492ada6feec8e3c3237b6761}{Evaluate}} (double const $\ast$const $\ast$parameters, double $\ast$residuals, double $\ast$$\ast$jacobians) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Eigen\+::\+Affine3d \mbox{\hyperlink{classisae_1_1_i_m_u_priordx_ae5fd2c9d2906bb1930608e9f332ece06}{\+\_\+T}}
+\item 
+Eigen\+::\+Affine3d \mbox{\hyperlink{classisae_1_1_i_m_u_priordx_adccdd2b79d0fbf2ab7da2c4b5b2f3de8}{\+\_\+\+T\+\_\+prior}}
+\item 
+Eigen\+::\+Vector3d \mbox{\hyperlink{classisae_1_1_i_m_u_priordx_af2c4f680ef3e8c9c17de70c633be24ca}{\+\_\+v}}
+\item 
+Eigen\+::\+Vector3d \mbox{\hyperlink{classisae_1_1_i_m_u_priordx_ac8aab50893a5328e8e5b8df15ca37910}{\+\_\+v\+\_\+prior}}
+\item 
+Eigen\+::\+Vector3d \mbox{\hyperlink{classisae_1_1_i_m_u_priordx_a7d9b36bd8e82364de3ecd6bec42d55ab}{\+\_\+ba}}
+\item 
+Eigen\+::\+Vector3d \mbox{\hyperlink{classisae_1_1_i_m_u_priordx_a62456ed7309a3387c39bae58fda54b32}{\+\_\+ba\+\_\+prior}}
+\item 
+Eigen\+::\+Vector3d \mbox{\hyperlink{classisae_1_1_i_m_u_priordx_a8c8cc7079674fbcdeb739deeec14c3a5}{\+\_\+bg}}
+\item 
+Eigen\+::\+Vector3d \mbox{\hyperlink{classisae_1_1_i_m_u_priordx_a63c9c51a21a0d3292a3e2d6d3875635f}{\+\_\+bg\+\_\+prior}}
+\item 
+Eigen\+::\+Matrix\+Xd \mbox{\hyperlink{classisae_1_1_i_m_u_priordx_a894d3043c372cd4a2d496d7696c4d3f6}{\+\_\+sqrt\+\_\+inf}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classisae_1_1_i_m_u_priordx_a12d60a84b9377c9b018c472399cdad78}\label{classisae_1_1_i_m_u_priordx_a12d60a84b9377c9b018c472399cdad78}} 
+\index{isae::IMUPriordx@{isae::IMUPriordx}!IMUPriordx@{IMUPriordx}}
+\index{IMUPriordx@{IMUPriordx}!isae::IMUPriordx@{isae::IMUPriordx}}
+\doxysubsubsection{\texorpdfstring{IMUPriordx()}{IMUPriordx()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily isae\+::\+I\+M\+U\+Priordx\+::\+I\+M\+U\+Priordx (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Affine3d}]{T,  }\item[{const Eigen\+::\+Affine3d}]{T\+\_\+prior,  }\item[{const Eigen\+::\+Vector3d}]{v,  }\item[{const Eigen\+::\+Vector3d}]{v\+\_\+prior,  }\item[{const Eigen\+::\+Vector3d}]{ba,  }\item[{const Eigen\+::\+Vector3d}]{ba\+\_\+prior,  }\item[{const Eigen\+::\+Vector3d}]{bg,  }\item[{const Eigen\+::\+Vector3d}]{bg\+\_\+prior,  }\item[{const Eigen\+::\+Matrix\+Xd}]{sqrt\+\_\+inf }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_i_m_u_priordx_abd2e3890c8fbcb101803f125a92eb471}\label{classisae_1_1_i_m_u_priordx_abd2e3890c8fbcb101803f125a92eb471}} 
+\index{isae::IMUPriordx@{isae::IMUPriordx}!IMUPriordx@{IMUPriordx}}
+\index{IMUPriordx@{IMUPriordx}!isae::IMUPriordx@{isae::IMUPriordx}}
+\doxysubsubsection{\texorpdfstring{IMUPriordx()}{IMUPriordx()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily isae\+::\+I\+M\+U\+Priordx\+::\+I\+M\+U\+Priordx (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classisae_1_1_i_m_u_priordx_a75fdba93492ada6feec8e3c3237b6761}\label{classisae_1_1_i_m_u_priordx_a75fdba93492ada6feec8e3c3237b6761}} 
+\index{isae::IMUPriordx@{isae::IMUPriordx}!Evaluate@{Evaluate}}
+\index{Evaluate@{Evaluate}!isae::IMUPriordx@{isae::IMUPriordx}}
+\doxysubsubsection{\texorpdfstring{Evaluate()}{Evaluate()}}
+{\footnotesize\ttfamily virtual bool isae\+::\+I\+M\+U\+Priordx\+::\+Evaluate (\begin{DoxyParamCaption}\item[{double const $\ast$const $\ast$}]{parameters,  }\item[{double $\ast$}]{residuals,  }\item[{double $\ast$$\ast$}]{jacobians }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classisae_1_1_i_m_u_priordx_a7d9b36bd8e82364de3ecd6bec42d55ab}\label{classisae_1_1_i_m_u_priordx_a7d9b36bd8e82364de3ecd6bec42d55ab}} 
+\index{isae::IMUPriordx@{isae::IMUPriordx}!\_ba@{\_ba}}
+\index{\_ba@{\_ba}!isae::IMUPriordx@{isae::IMUPriordx}}
+\doxysubsubsection{\texorpdfstring{\_ba}{\_ba}}
+{\footnotesize\ttfamily Eigen\+::\+Vector3d isae\+::\+I\+M\+U\+Priordx\+::\+\_\+ba}
+
+\mbox{\Hypertarget{classisae_1_1_i_m_u_priordx_a62456ed7309a3387c39bae58fda54b32}\label{classisae_1_1_i_m_u_priordx_a62456ed7309a3387c39bae58fda54b32}} 
+\index{isae::IMUPriordx@{isae::IMUPriordx}!\_ba\_prior@{\_ba\_prior}}
+\index{\_ba\_prior@{\_ba\_prior}!isae::IMUPriordx@{isae::IMUPriordx}}
+\doxysubsubsection{\texorpdfstring{\_ba\_prior}{\_ba\_prior}}
+{\footnotesize\ttfamily Eigen\+::\+Vector3d isae\+::\+I\+M\+U\+Priordx\+::\+\_\+ba\+\_\+prior}
+
+\mbox{\Hypertarget{classisae_1_1_i_m_u_priordx_a8c8cc7079674fbcdeb739deeec14c3a5}\label{classisae_1_1_i_m_u_priordx_a8c8cc7079674fbcdeb739deeec14c3a5}} 
+\index{isae::IMUPriordx@{isae::IMUPriordx}!\_bg@{\_bg}}
+\index{\_bg@{\_bg}!isae::IMUPriordx@{isae::IMUPriordx}}
+\doxysubsubsection{\texorpdfstring{\_bg}{\_bg}}
+{\footnotesize\ttfamily Eigen\+::\+Vector3d isae\+::\+I\+M\+U\+Priordx\+::\+\_\+bg}
+
+\mbox{\Hypertarget{classisae_1_1_i_m_u_priordx_a63c9c51a21a0d3292a3e2d6d3875635f}\label{classisae_1_1_i_m_u_priordx_a63c9c51a21a0d3292a3e2d6d3875635f}} 
+\index{isae::IMUPriordx@{isae::IMUPriordx}!\_bg\_prior@{\_bg\_prior}}
+\index{\_bg\_prior@{\_bg\_prior}!isae::IMUPriordx@{isae::IMUPriordx}}
+\doxysubsubsection{\texorpdfstring{\_bg\_prior}{\_bg\_prior}}
+{\footnotesize\ttfamily Eigen\+::\+Vector3d isae\+::\+I\+M\+U\+Priordx\+::\+\_\+bg\+\_\+prior}
+
+\mbox{\Hypertarget{classisae_1_1_i_m_u_priordx_a894d3043c372cd4a2d496d7696c4d3f6}\label{classisae_1_1_i_m_u_priordx_a894d3043c372cd4a2d496d7696c4d3f6}} 
+\index{isae::IMUPriordx@{isae::IMUPriordx}!\_sqrt\_inf@{\_sqrt\_inf}}
+\index{\_sqrt\_inf@{\_sqrt\_inf}!isae::IMUPriordx@{isae::IMUPriordx}}
+\doxysubsubsection{\texorpdfstring{\_sqrt\_inf}{\_sqrt\_inf}}
+{\footnotesize\ttfamily Eigen\+::\+Matrix\+Xd isae\+::\+I\+M\+U\+Priordx\+::\+\_\+sqrt\+\_\+inf}
+
+\mbox{\Hypertarget{classisae_1_1_i_m_u_priordx_ae5fd2c9d2906bb1930608e9f332ece06}\label{classisae_1_1_i_m_u_priordx_ae5fd2c9d2906bb1930608e9f332ece06}} 
+\index{isae::IMUPriordx@{isae::IMUPriordx}!\_T@{\_T}}
+\index{\_T@{\_T}!isae::IMUPriordx@{isae::IMUPriordx}}
+\doxysubsubsection{\texorpdfstring{\_T}{\_T}}
+{\footnotesize\ttfamily Eigen\+::\+Affine3d isae\+::\+I\+M\+U\+Priordx\+::\+\_\+T}
+
+\mbox{\Hypertarget{classisae_1_1_i_m_u_priordx_adccdd2b79d0fbf2ab7da2c4b5b2f3de8}\label{classisae_1_1_i_m_u_priordx_adccdd2b79d0fbf2ab7da2c4b5b2f3de8}} 
+\index{isae::IMUPriordx@{isae::IMUPriordx}!\_T\_prior@{\_T\_prior}}
+\index{\_T\_prior@{\_T\_prior}!isae::IMUPriordx@{isae::IMUPriordx}}
+\doxysubsubsection{\texorpdfstring{\_T\_prior}{\_T\_prior}}
+{\footnotesize\ttfamily Eigen\+::\+Affine3d isae\+::\+I\+M\+U\+Priordx\+::\+\_\+\+T\+\_\+prior}
+
+\mbox{\Hypertarget{classisae_1_1_i_m_u_priordx_af2c4f680ef3e8c9c17de70c633be24ca}\label{classisae_1_1_i_m_u_priordx_af2c4f680ef3e8c9c17de70c633be24ca}} 
+\index{isae::IMUPriordx@{isae::IMUPriordx}!\_v@{\_v}}
+\index{\_v@{\_v}!isae::IMUPriordx@{isae::IMUPriordx}}
+\doxysubsubsection{\texorpdfstring{\_v}{\_v}}
+{\footnotesize\ttfamily Eigen\+::\+Vector3d isae\+::\+I\+M\+U\+Priordx\+::\+\_\+v}
+
+\mbox{\Hypertarget{classisae_1_1_i_m_u_priordx_ac8aab50893a5328e8e5b8df15ca37910}\label{classisae_1_1_i_m_u_priordx_ac8aab50893a5328e8e5b8df15ca37910}} 
+\index{isae::IMUPriordx@{isae::IMUPriordx}!\_v\_prior@{\_v\_prior}}
+\index{\_v\_prior@{\_v\_prior}!isae::IMUPriordx@{isae::IMUPriordx}}
+\doxysubsubsection{\texorpdfstring{\_v\_prior}{\_v\_prior}}
+{\footnotesize\ttfamily Eigen\+::\+Vector3d isae\+::\+I\+M\+U\+Priordx\+::\+\_\+v\+\_\+prior}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/deos/ce.\+debeunne/colcon\+\_\+ws/src/\+Sa\+D\+V\+I\+O/cpp/include/isaeslam/optimizers/\mbox{\hyperlink{residuals_8hpp}{residuals.\+hpp}}\end{DoxyCompactItemize}
