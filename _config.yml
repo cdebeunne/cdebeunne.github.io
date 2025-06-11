@@ -38,3 +38,9 @@ defaults:
       type: post
     values:
       tags: Other
+
+---
+title: MAIN
+display: false
+category: portfolioProjects
+---
