@@ -39,8 +39,6 @@ defaults:
     values:
       tags: Other
 
----
-title: MAIN
-display: false
-category: portfolioProjects
----
+exclude:
+  - "MAIN.md"
+
