@@ -40,5 +40,5 @@ defaults:
       tags: Other
 
 exclude:
-  - "MAIN.md"
+  - "Documentation/*.md"
 
