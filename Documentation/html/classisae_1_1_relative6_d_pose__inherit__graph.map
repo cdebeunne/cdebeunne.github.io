@@ -1,4 +1,4 @@
 <map id="isae::Relative6DPose" name="isae::Relative6DPose">
-<area shape="rect" id="node1" title=" " alt="" coords="17,95,177,121"/>
+<area shape="rect" id="node1" title="A cost function for 6DoF relative pose constraint, the parameters are the delta pose of the two relat..." alt="" coords="17,95,177,121"/>
 <area shape="rect" id="node2" title=" " alt="" coords="5,5,189,47"/>
 </map>

@@ -2,7 +2,12 @@
 \label{structisae_1_1_feature_struct}\index{isae::FeatureStruct@{isae::FeatureStruct}}
 
 
-{\ttfamily \#include $<$Config\+File\+Reader.\+h$>$}
+A struct that gathers all the parameters for a feature.  
+
+
+
+
+{\ttfamily \#include $<$slam\+Parameters.\+h$>$}
 
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
@@ -10,34 +15,61 @@
 std\+::string \mbox{\hyperlink{structisae_1_1_feature_struct_aed9bef2ac935fa6825913f48444405d9}{label\+\_\+feature}}
 \item 
 std\+::string \mbox{\hyperlink{structisae_1_1_feature_struct_adb23a7c355a9112b2545d3fb7a884171}{detector\+\_\+label}}
-\item 
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+Label of the feature \end{quote}
+\end{DoxyCompactList}\item 
 int \mbox{\hyperlink{structisae_1_1_feature_struct_aed5b1c0debf0c2d144b32ebbfa5762a7}{number\+\_\+detected\+\_\+features}}
-\item 
-int \mbox{\hyperlink{structisae_1_1_feature_struct_a8b556b80f3c80470506349f46b78d009}{number\+\_\+kept\+\_\+features}}
-\item 
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+label of the feature detector \end{quote}
+\end{DoxyCompactList}\item 
 int \mbox{\hyperlink{structisae_1_1_feature_struct_ab620b208565c314de6509f9a6b782e30}{n\+\_\+features\+\_\+per\+\_\+cell}}
-\item 
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+number of features to be detected by the detector \end{quote}
+\end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{structisae_1_1_feature_struct_a450c71975df52834a9d1c945d7fb3c9c}{tracker\+\_\+label}}
-\item 
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+number of features per cell for bucketting \end{quote}
+\end{DoxyCompactList}\item 
 int \mbox{\hyperlink{structisae_1_1_feature_struct_af4ea2c3a6a6a056ae8326ad90a0faf42}{tracker\+\_\+height}}
-\item 
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+class name of the tracker we will use in our S\+L\+AM \end{quote}
+\end{DoxyCompactList}\item 
 int \mbox{\hyperlink{structisae_1_1_feature_struct_a1e1d0134ff05dfd46656b7fadcfe5323}{tracker\+\_\+width}}
-\item 
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+search\+Area\+Height of tracker \end{quote}
+\end{DoxyCompactList}\item 
 int \mbox{\hyperlink{structisae_1_1_feature_struct_a6152c942de7fda30cbbe4a09a04d25e1}{tracker\+\_\+nlvls\+\_\+pyramids}}
-\item 
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+search\+Area\+Width of tracker \end{quote}
+\end{DoxyCompactList}\item 
 double \mbox{\hyperlink{structisae_1_1_feature_struct_a3d4c29ef364ecf9352270cd5a1ec0bc7}{tracker\+\_\+max\+\_\+err}}
-\item 
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+nlevels of pyramids for klt tracking \end{quote}
+\end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{structisae_1_1_feature_struct_a0356297e6488eb29f2afbc20415bab6a}{matcher\+\_\+label}}
-\item 
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+error threshold for klt tracking \end{quote}
+\end{DoxyCompactList}\item 
 double \mbox{\hyperlink{structisae_1_1_feature_struct_a8a7016e6f89b820099d1a89737ecaeba}{max\+\_\+matching\+\_\+dist}}
-\item 
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+class name of the matcher we will use in our S\+L\+AM \end{quote}
+\end{DoxyCompactList}\item 
 int \mbox{\hyperlink{structisae_1_1_feature_struct_a8499e9c0879915008a1bd7bedf666bdc}{matcher\+\_\+height}}
-\item 
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+distance for matching \end{quote}
+\end{DoxyCompactList}\item 
 int \mbox{\hyperlink{structisae_1_1_feature_struct_ab8ef5c352fa5a3e1d95116b638591fe8}{matcher\+\_\+width}}
-\item 
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+search\+Area\+Height of tracker \end{quote}
+\end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{structisae_1_1_feature_struct_a3d7f76f0c7ff055404baface290b266e}{lmk\+\_\+triangulator}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+search\+Area\+Width of tracker \end{quote}
+\end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+A struct that gathers all the parameters for a feature. 
 
 \doxysubsection{Member Data Documentation}
 \mbox{\Hypertarget{structisae_1_1_feature_struct_adb23a7c355a9112b2545d3fb7a884171}\label{structisae_1_1_feature_struct_adb23a7c355a9112b2545d3fb7a884171}} 
@@ -45,6 +77,12 @@ std\+::string \mbox{\hyperlink{structisae_1_1_feature_struct_a3d7f76f0c7ff055404
 \index{detector\_label@{detector\_label}!isae::FeatureStruct@{isae::FeatureStruct}}
 \doxysubsubsection{\texorpdfstring{detector\_label}{detector\_label}}
 {\footnotesize\ttfamily std\+::string isae\+::\+Feature\+Struct\+::detector\+\_\+label}
+
+
+
+\begin{quote}
+Label of the feature \end{quote}
+
 
 \mbox{\Hypertarget{structisae_1_1_feature_struct_aed9bef2ac935fa6825913f48444405d9}\label{structisae_1_1_feature_struct_aed9bef2ac935fa6825913f48444405d9}} 
 \index{isae::FeatureStruct@{isae::FeatureStruct}!label\_feature@{label\_feature}}
@@ -58,11 +96,23 @@ std\+::string \mbox{\hyperlink{structisae_1_1_feature_struct_a3d7f76f0c7ff055404
 \doxysubsubsection{\texorpdfstring{lmk\_triangulator}{lmk\_triangulator}}
 {\footnotesize\ttfamily std\+::string isae\+::\+Feature\+Struct\+::lmk\+\_\+triangulator}
 
+
+
+\begin{quote}
+search\+Area\+Width of tracker \end{quote}
+
+
 \mbox{\Hypertarget{structisae_1_1_feature_struct_a8499e9c0879915008a1bd7bedf666bdc}\label{structisae_1_1_feature_struct_a8499e9c0879915008a1bd7bedf666bdc}} 
 \index{isae::FeatureStruct@{isae::FeatureStruct}!matcher\_height@{matcher\_height}}
 \index{matcher\_height@{matcher\_height}!isae::FeatureStruct@{isae::FeatureStruct}}
 \doxysubsubsection{\texorpdfstring{matcher\_height}{matcher\_height}}
 {\footnotesize\ttfamily int isae\+::\+Feature\+Struct\+::matcher\+\_\+height}
+
+
+
+\begin{quote}
+distance for matching \end{quote}
+
 
 \mbox{\Hypertarget{structisae_1_1_feature_struct_a0356297e6488eb29f2afbc20415bab6a}\label{structisae_1_1_feature_struct_a0356297e6488eb29f2afbc20415bab6a}} 
 \index{isae::FeatureStruct@{isae::FeatureStruct}!matcher\_label@{matcher\_label}}
@@ -70,11 +120,23 @@ std\+::string \mbox{\hyperlink{structisae_1_1_feature_struct_a3d7f76f0c7ff055404
 \doxysubsubsection{\texorpdfstring{matcher\_label}{matcher\_label}}
 {\footnotesize\ttfamily std\+::string isae\+::\+Feature\+Struct\+::matcher\+\_\+label}
 
+
+
+\begin{quote}
+error threshold for klt tracking \end{quote}
+
+
 \mbox{\Hypertarget{structisae_1_1_feature_struct_ab8ef5c352fa5a3e1d95116b638591fe8}\label{structisae_1_1_feature_struct_ab8ef5c352fa5a3e1d95116b638591fe8}} 
 \index{isae::FeatureStruct@{isae::FeatureStruct}!matcher\_width@{matcher\_width}}
 \index{matcher\_width@{matcher\_width}!isae::FeatureStruct@{isae::FeatureStruct}}
 \doxysubsubsection{\texorpdfstring{matcher\_width}{matcher\_width}}
 {\footnotesize\ttfamily int isae\+::\+Feature\+Struct\+::matcher\+\_\+width}
+
+
+
+\begin{quote}
+search\+Area\+Height of tracker \end{quote}
+
 
 \mbox{\Hypertarget{structisae_1_1_feature_struct_a8a7016e6f89b820099d1a89737ecaeba}\label{structisae_1_1_feature_struct_a8a7016e6f89b820099d1a89737ecaeba}} 
 \index{isae::FeatureStruct@{isae::FeatureStruct}!max\_matching\_dist@{max\_matching\_dist}}
@@ -82,11 +144,23 @@ std\+::string \mbox{\hyperlink{structisae_1_1_feature_struct_a3d7f76f0c7ff055404
 \doxysubsubsection{\texorpdfstring{max\_matching\_dist}{max\_matching\_dist}}
 {\footnotesize\ttfamily double isae\+::\+Feature\+Struct\+::max\+\_\+matching\+\_\+dist}
 
+
+
+\begin{quote}
+class name of the matcher we will use in our S\+L\+AM \end{quote}
+
+
 \mbox{\Hypertarget{structisae_1_1_feature_struct_ab620b208565c314de6509f9a6b782e30}\label{structisae_1_1_feature_struct_ab620b208565c314de6509f9a6b782e30}} 
 \index{isae::FeatureStruct@{isae::FeatureStruct}!n\_features\_per\_cell@{n\_features\_per\_cell}}
 \index{n\_features\_per\_cell@{n\_features\_per\_cell}!isae::FeatureStruct@{isae::FeatureStruct}}
 \doxysubsubsection{\texorpdfstring{n\_features\_per\_cell}{n\_features\_per\_cell}}
 {\footnotesize\ttfamily int isae\+::\+Feature\+Struct\+::n\+\_\+features\+\_\+per\+\_\+cell}
+
+
+
+\begin{quote}
+number of features to be detected by the detector \end{quote}
+
 
 \mbox{\Hypertarget{structisae_1_1_feature_struct_aed5b1c0debf0c2d144b32ebbfa5762a7}\label{structisae_1_1_feature_struct_aed5b1c0debf0c2d144b32ebbfa5762a7}} 
 \index{isae::FeatureStruct@{isae::FeatureStruct}!number\_detected\_features@{number\_detected\_features}}
@@ -94,11 +168,11 @@ std\+::string \mbox{\hyperlink{structisae_1_1_feature_struct_a3d7f76f0c7ff055404
 \doxysubsubsection{\texorpdfstring{number\_detected\_features}{number\_detected\_features}}
 {\footnotesize\ttfamily int isae\+::\+Feature\+Struct\+::number\+\_\+detected\+\_\+features}
 
-\mbox{\Hypertarget{structisae_1_1_feature_struct_a8b556b80f3c80470506349f46b78d009}\label{structisae_1_1_feature_struct_a8b556b80f3c80470506349f46b78d009}} 
-\index{isae::FeatureStruct@{isae::FeatureStruct}!number\_kept\_features@{number\_kept\_features}}
-\index{number\_kept\_features@{number\_kept\_features}!isae::FeatureStruct@{isae::FeatureStruct}}
-\doxysubsubsection{\texorpdfstring{number\_kept\_features}{number\_kept\_features}}
-{\footnotesize\ttfamily int isae\+::\+Feature\+Struct\+::number\+\_\+kept\+\_\+features}
+
+
+\begin{quote}
+label of the feature detector \end{quote}
+
 
 \mbox{\Hypertarget{structisae_1_1_feature_struct_af4ea2c3a6a6a056ae8326ad90a0faf42}\label{structisae_1_1_feature_struct_af4ea2c3a6a6a056ae8326ad90a0faf42}} 
 \index{isae::FeatureStruct@{isae::FeatureStruct}!tracker\_height@{tracker\_height}}
@@ -106,11 +180,23 @@ std\+::string \mbox{\hyperlink{structisae_1_1_feature_struct_a3d7f76f0c7ff055404
 \doxysubsubsection{\texorpdfstring{tracker\_height}{tracker\_height}}
 {\footnotesize\ttfamily int isae\+::\+Feature\+Struct\+::tracker\+\_\+height}
 
+
+
+\begin{quote}
+class name of the tracker we will use in our S\+L\+AM \end{quote}
+
+
 \mbox{\Hypertarget{structisae_1_1_feature_struct_a450c71975df52834a9d1c945d7fb3c9c}\label{structisae_1_1_feature_struct_a450c71975df52834a9d1c945d7fb3c9c}} 
 \index{isae::FeatureStruct@{isae::FeatureStruct}!tracker\_label@{tracker\_label}}
 \index{tracker\_label@{tracker\_label}!isae::FeatureStruct@{isae::FeatureStruct}}
 \doxysubsubsection{\texorpdfstring{tracker\_label}{tracker\_label}}
 {\footnotesize\ttfamily std\+::string isae\+::\+Feature\+Struct\+::tracker\+\_\+label}
+
+
+
+\begin{quote}
+number of features per cell for bucketting \end{quote}
+
 
 \mbox{\Hypertarget{structisae_1_1_feature_struct_a3d4c29ef364ecf9352270cd5a1ec0bc7}\label{structisae_1_1_feature_struct_a3d4c29ef364ecf9352270cd5a1ec0bc7}} 
 \index{isae::FeatureStruct@{isae::FeatureStruct}!tracker\_max\_err@{tracker\_max\_err}}
@@ -118,11 +204,23 @@ std\+::string \mbox{\hyperlink{structisae_1_1_feature_struct_a3d7f76f0c7ff055404
 \doxysubsubsection{\texorpdfstring{tracker\_max\_err}{tracker\_max\_err}}
 {\footnotesize\ttfamily double isae\+::\+Feature\+Struct\+::tracker\+\_\+max\+\_\+err}
 
+
+
+\begin{quote}
+nlevels of pyramids for klt tracking \end{quote}
+
+
 \mbox{\Hypertarget{structisae_1_1_feature_struct_a6152c942de7fda30cbbe4a09a04d25e1}\label{structisae_1_1_feature_struct_a6152c942de7fda30cbbe4a09a04d25e1}} 
 \index{isae::FeatureStruct@{isae::FeatureStruct}!tracker\_nlvls\_pyramids@{tracker\_nlvls\_pyramids}}
 \index{tracker\_nlvls\_pyramids@{tracker\_nlvls\_pyramids}!isae::FeatureStruct@{isae::FeatureStruct}}
 \doxysubsubsection{\texorpdfstring{tracker\_nlvls\_pyramids}{tracker\_nlvls\_pyramids}}
 {\footnotesize\ttfamily int isae\+::\+Feature\+Struct\+::tracker\+\_\+nlvls\+\_\+pyramids}
+
+
+
+\begin{quote}
+search\+Area\+Width of tracker \end{quote}
+
 
 \mbox{\Hypertarget{structisae_1_1_feature_struct_a1e1d0134ff05dfd46656b7fadcfe5323}\label{structisae_1_1_feature_struct_a1e1d0134ff05dfd46656b7fadcfe5323}} 
 \index{isae::FeatureStruct@{isae::FeatureStruct}!tracker\_width@{tracker\_width}}
@@ -132,6 +230,12 @@ std\+::string \mbox{\hyperlink{structisae_1_1_feature_struct_a3d7f76f0c7ff055404
 
 
 
+\begin{quote}
+search\+Area\+Height of tracker \end{quote}
+
+
+
+
 The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/home/deos/ce.\+debeunne/colcon\+\_\+ws/src/\+Sa\+D\+V\+I\+O/cpp/include/utilities/\mbox{\hyperlink{_config_file_reader_8h}{Config\+File\+Reader.\+h}}\end{DoxyCompactItemize}
+/home/deos/ce.\+debeunne/colcon\+\_\+ws/src/\+Sa\+D\+V\+I\+O/cpp/include/isaeslam/\mbox{\hyperlink{slam_parameters_8h}{slam\+Parameters.\+h}}\end{DoxyCompactItemize}

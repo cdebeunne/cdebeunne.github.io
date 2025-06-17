@@ -29,21 +29,15 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \doxysubsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename T $>$ }\\using \mbox{\hyperlink{namespaceisae_a77ff2ade1f4fd13fa30f33c347c0d635}{isae\+::vec\+\_\+shared}} = std\+::vector$<$ std\+::shared\+\_\+ptr$<$ T $>$ $>$
-\item 
-{\footnotesize template$<$class T $>$ }\\using \mbox{\hyperlink{namespaceisae_a3ce6bc1ec585985ccf6f71e24c51dae6}{isae\+::\+Aligned\+Vector}} = std\+::vector$<$ T, Eigen\+::aligned\+\_\+allocator$<$ T $>$ $>$
-\item 
-typedef Aligned\+Vector$<$ Eigen\+::\+Vector3d $>$ \mbox{\hyperlink{namespaceisae_a3252625a5e59fd7c0a194cc13f3fe79a}{isae\+::vec3d}}
-\item 
-typedef Eigen\+::\+Matrix$<$ double, 6, 1 $>$ \mbox{\hyperlink{namespaceisae_a381cf9a79c09e3831978a493e7a50552}{isae\+::\+Vector6d}}
-\item 
-using \mbox{\hyperlink{namespaceisae_ae9c6a8ee0303d61cb2823618735f2383}{isae\+::feature\+\_\+pair}} = std\+::pair$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{isae\+::\+A\+Feature}} $>$, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{isae\+::\+A\+Feature}} $>$ $>$
-\item 
-using \mbox{\hyperlink{namespaceisae_ac61c2f881f902dbfef491caaa5135c9c}{isae\+::vec\+\_\+match}} = std\+::vector$<$ feature\+\_\+pair $>$
-\item 
-using \mbox{\hyperlink{namespaceisae_a70bf0a9838eb50b6a3fe2be9b79e25be}{isae\+::typed\+\_\+vec\+\_\+match}} = std\+::unordered\+\_\+map$<$ std\+::string, vec\+\_\+match $>$
-\item 
+typedef Eigen\+::\+Matrix$<$ double, 6, 1 $>$ \mbox{\hyperlink{namespaceisae_a95b4efbae1379c1c22879954528d4008}{isae\+::\+Vector6d}}
+\begin{DoxyCompactList}\small\item\em A double Eigen vector in 6D. \end{DoxyCompactList}\item 
+typedef std\+::pair$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{isae\+::\+A\+Feature}} $>$, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{isae\+::\+A\+Feature}} $>$ $>$ \mbox{\hyperlink{namespaceisae_ab4a885dce1b03422dfcdfb9a4747aaef}{isae\+::feature\+\_\+pair}}
+\begin{DoxyCompactList}\small\item\em A pair of feature, useful to represent matches. \end{DoxyCompactList}\item 
+typedef std\+::vector$<$ feature\+\_\+pair $>$ \mbox{\hyperlink{namespaceisae_a018dfa0f3c618541bf2674aaefa20d61}{isae\+::vec\+\_\+match}}
+\begin{DoxyCompactList}\small\item\em A vector of feature pairs i.\+e. matches. \end{DoxyCompactList}\item 
+typedef std\+::unordered\+\_\+map$<$ std\+::string, vec\+\_\+match $>$ \mbox{\hyperlink{namespaceisae_a5d24f9da33ed2238fec0ac3f04cc8da5}{isae\+::typed\+\_\+vec\+\_\+match}}
+\begin{DoxyCompactList}\small\item\em An unordered map to link match vector with their type. \end{DoxyCompactList}\item 
 typedef std\+::unordered\+\_\+map$<$ std\+::string, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{isae\+::\+A\+Feature}} $>$ $>$ $>$ \mbox{\hyperlink{namespaceisae_aef749e9df97878dd2b7af968a4f64efd}{isae\+::typed\+\_\+vec\+\_\+features}}
-\begin{DoxyCompactList}\small\item\em A vector For heterogeneous features. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em A typed vector of features to handle hetereogeneous feature sets. \end{DoxyCompactList}\item 
 typedef std\+::unordered\+\_\+map$<$ std\+::string, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_landmark}{isae\+::\+A\+Landmark}} $>$ $>$ $>$ \mbox{\hyperlink{namespaceisae_a4b744e0e080a733838eb133deda894aa}{isae\+::typed\+\_\+vec\+\_\+landmarks}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em A typed vector of landmarks to handle hetereogeneous landmark sets. \end{DoxyCompactList}\end{DoxyCompactItemize}

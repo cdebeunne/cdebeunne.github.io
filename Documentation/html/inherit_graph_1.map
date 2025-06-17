@@ -9,7 +9,7 @@
 <area shape="rect" id="node8" title=" " alt="" coords="5,563,192,589"/>
 <area shape="rect" id="node9" href="$classisae_1_1_a_feature.html" title="Abstract class for 2D features." alt="" coords="279,284,393,311"/>
 <area shape="rect" id="node13" href="$classisae_1_1_a_landmark.html" title="Abstract class for 3D Landmarks." alt="" coords="271,436,401,463"/>
-<area shape="rect" id="node17" href="$classisae_1_1_a_landmark_initializer.html" title=" " alt="" coords="240,563,432,589"/>
+<area shape="rect" id="node17" href="$classisae_1_1_a_landmark_initializer.html" title="Abstract class for initializing landmarks." alt="" coords="240,563,432,589"/>
 <area shape="rect" id="node21" href="$classisae_1_1_a_model3d.html" title="Abstract class for 3D models." alt="" coords="275,647,397,673"/>
 <area shape="rect" id="node25" href="$classisae_1_1_frame.html" title="A Frame class representing a set of sensors and landmarks at a specific timestamp." alt="" coords="287,697,385,724"/>
 <area shape="rect" id="node26" href="$structisae_1_1_polygon.html" title=" " alt="" coords="281,748,391,775"/>
@@ -19,9 +19,9 @@
 <area shape="rect" id="node14" href="$classisae_1_1_b_box3_d.html" title="A 3D bounding box landmark class." alt="" coords="543,360,652,387"/>
 <area shape="rect" id="node15" href="$classisae_1_1_line3_d.html" title="A 3D Line landmark class." alt="" coords="546,411,649,437"/>
 <area shape="rect" id="node16" href="$classisae_1_1_point3_d.html" title="A 3D Point landmark class." alt="" coords="543,461,651,488"/>
-<area shape="rect" id="node18" href="$classisae_1_1_line3_d_landmark_initializer.html" title=" " alt="" coords="483,512,711,539"/>
-<area shape="rect" id="node19" href="$classisae_1_1_point3_d_landmark_initializer.html" title=" " alt="" coords="480,563,715,589"/>
-<area shape="rect" id="node20" href="$classisae_1_1semantic_b_box_landmark_initializer.html" title=" " alt="" coords="489,614,705,655"/>
+<area shape="rect" id="node18" href="$classisae_1_1_line3_d_landmark_initializer.html" title="Class for initializing 3D line landmarks." alt="" coords="483,512,711,539"/>
+<area shape="rect" id="node19" href="$classisae_1_1_point3_d_landmark_initializer.html" title="Class for initializing 3D point landmarks." alt="" coords="480,563,715,589"/>
+<area shape="rect" id="node20" href="$classisae_1_1semantic_b_box_landmark_initializer.html" title="Class for initializing semantic bounding box landmarks." alt="" coords="489,614,705,655"/>
 <area shape="rect" id="node22" href="$classisae_1_1_model_b_box3_d.html" title="Model for a 3D Bounding Box." alt="" coords="523,680,672,707"/>
 <area shape="rect" id="node23" href="$classisae_1_1_model_line3_d.html" title="Model for a 3D Line." alt="" coords="526,731,669,757"/>
 <area shape="rect" id="node24" href="$classisae_1_1_model_point3_d.html" title="Model for a 3D point." alt="" coords="523,781,671,808"/>

@@ -1,4 +1,4 @@
 <map id="isae::SLAMParameters" name="isae::SLAMParameters">
-<area shape="rect" id="node1" title=" " alt="" coords="5,95,175,121"/>
-<area shape="rect" id="node2" href="$structisae_1_1_config.html" title=" " alt="" coords="41,5,139,32"/>
+<area shape="rect" id="node1" title="A class that gathers most of the algorithmic blocks of the SLAM system that can be setup in the confi..." alt="" coords="5,95,175,121"/>
+<area shape="rect" id="node2" href="$structisae_1_1_config.html" title="This structure contains the configuration parameters located in the config file." alt="" coords="41,5,139,32"/>
 </map>

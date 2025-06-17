@@ -1,0 +1,4 @@
+<map id="isae::ReprojectionErrCeres_linexd_dx" name="isae::ReprojectionErrCeres_linexd_dx">
+<area shape="rect" id="node1" title="Reprojection error cost function for a line landmark. The parameters are the delta update of the fram..." alt="" coords="5,95,200,136"/>
+<area shape="rect" id="node2" title=" " alt="" coords="11,5,195,47"/>
+</map>

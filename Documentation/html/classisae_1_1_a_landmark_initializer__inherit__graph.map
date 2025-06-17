@@ -1,7 +1,7 @@
 <map id="isae::ALandmarkInitializer" name="isae::ALandmarkInitializer">
-<area shape="rect" id="node1" title=" " alt="" coords="309,56,501,83"/>
-<area shape="rect" id="node3" href="$classisae_1_1_line3_d_landmark_initializer.html" title=" " alt="" coords="553,5,781,32"/>
-<area shape="rect" id="node4" href="$classisae_1_1_point3_d_landmark_initializer.html" title=" " alt="" coords="549,56,784,83"/>
-<area shape="rect" id="node5" href="$classisae_1_1semantic_b_box_landmark_initializer.html" title=" " alt="" coords="559,107,775,149"/>
+<area shape="rect" id="node1" title="Abstract class for initializing landmarks." alt="" coords="309,56,501,83"/>
+<area shape="rect" id="node3" href="$classisae_1_1_line3_d_landmark_initializer.html" title="Class for initializing 3D line landmarks." alt="" coords="553,5,781,32"/>
+<area shape="rect" id="node4" href="$classisae_1_1_point3_d_landmark_initializer.html" title="Class for initializing 3D point landmarks." alt="" coords="549,56,784,83"/>
+<area shape="rect" id="node5" href="$classisae_1_1semantic_b_box_landmark_initializer.html" title="Class for initializing semantic bounding box landmarks." alt="" coords="559,107,775,149"/>
 <area shape="rect" id="node2" title=" " alt="" coords="5,49,261,90"/>
 </map>

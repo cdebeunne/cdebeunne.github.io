@@ -2,6 +2,11 @@
 \label{classisae_1_1_s_l_a_m_mono_v_i_o}\index{isae::SLAMMonoVIO@{isae::SLAMMonoVIO}}
 
 
+A S\+L\+AM class for monocular + \mbox{\hyperlink{classisae_1_1_i_m_u}{I\+MU}} setups.  
+
+
+
+
 {\ttfamily \#include $<$slam\+Core.\+h$>$}
 
 
@@ -28,15 +33,18 @@ Collaboration diagram for isae\+::S\+L\+A\+M\+Mono\+V\+IO\+:\nopagebreak
 \mbox{\hyperlink{classisae_1_1_s_l_a_m_mono_v_i_o_aecd42a1e3febe848bd9f79617f8e24fb}{S\+L\+A\+M\+Mono\+V\+IO}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_s_l_a_m_parameters}{S\+L\+A\+M\+Parameters}} $>$ slam\+\_\+param)
 \item 
 bool \mbox{\hyperlink{classisae_1_1_s_l_a_m_mono_v_i_o_abdafc17c144f9c25d9f8e4a4d2a51205}{init}} () override
-\item 
+\begin{DoxyCompactList}\small\item\em Initialization step \+: create the first 3D landmarks and keyframe(s) \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classisae_1_1_s_l_a_m_mono_v_i_o_a7903bf02532dc951b00445d3567bdfdd}{front\+End\+Step}} () override
-\item 
+\begin{DoxyCompactList}\small\item\em Front End\+: detection, tracking, pose estimation and landmark triangulation. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classisae_1_1_s_l_a_m_mono_v_i_o_a7509d89f0dc6cfde31ff66bb7b2ad06c}{back\+End\+Step}} () override
-\item 
+\begin{DoxyCompactList}\small\item\em brief description Back End\+: marginalization, local map optimization \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classisae_1_1_s_l_a_m_mono_v_i_o_a4b7c184d3de8fe75f5d6a62671261519}{step\+\_\+init}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Initialization steps with bi-\/monocular only for \mbox{\hyperlink{classisae_1_1_i_m_u}{I\+MU}} initialization. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
+
+\doxysubsection{Detailed Description}
+A S\+L\+AM class for monocular + \mbox{\hyperlink{classisae_1_1_i_m_u}{I\+MU}} setups. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classisae_1_1_s_l_a_m_mono_v_i_o_aecd42a1e3febe848bd9f79617f8e24fb}\label{classisae_1_1_s_l_a_m_mono_v_i_o_aecd42a1e3febe848bd9f79617f8e24fb}} 
@@ -56,6 +64,10 @@ bool \mbox{\hyperlink{classisae_1_1_s_l_a_m_mono_v_i_o_a4b7c184d3de8fe75f5d6a626
 
 
 
+brief description Back End\+: marginalization, local map optimization 
+
+
+
 Implements \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_aa378dd826e38a3bb5358a261466a97e3}{isae\+::\+S\+L\+A\+M\+Core}}.
 
 \mbox{\Hypertarget{classisae_1_1_s_l_a_m_mono_v_i_o_a7903bf02532dc951b00445d3567bdfdd}\label{classisae_1_1_s_l_a_m_mono_v_i_o_a7903bf02532dc951b00445d3567bdfdd}} 
@@ -63,6 +75,10 @@ Implements \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_aa378dd826e38a3bb5358a261
 \index{frontEndStep@{frontEndStep}!isae::SLAMMonoVIO@{isae::SLAMMonoVIO}}
 \doxysubsubsection{\texorpdfstring{frontEndStep()}{frontEndStep()}}
 {\footnotesize\ttfamily bool isae\+::\+S\+L\+A\+M\+Mono\+V\+I\+O\+::front\+End\+Step (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Front End\+: detection, tracking, pose estimation and landmark triangulation. 
 
 
 
@@ -76,6 +92,10 @@ Implements \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_ab97c16d22ca0c3d50c4ef63b
 
 
 
+Initialization step \+: create the first 3D landmarks and keyframe(s) 
+
+
+
 Implements \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_a87fdc0be9d6042436ff097b375f86b72}{isae\+::\+S\+L\+A\+M\+Core}}.
 
 \mbox{\Hypertarget{classisae_1_1_s_l_a_m_mono_v_i_o_a4b7c184d3de8fe75f5d6a62671261519}\label{classisae_1_1_s_l_a_m_mono_v_i_o_a4b7c184d3de8fe75f5d6a62671261519}} 
@@ -83,6 +103,10 @@ Implements \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_a87fdc0be9d6042436ff097b3
 \index{step\_init@{step\_init}!isae::SLAMMonoVIO@{isae::SLAMMonoVIO}}
 \doxysubsubsection{\texorpdfstring{step\_init()}{step\_init()}}
 {\footnotesize\ttfamily bool isae\+::\+S\+L\+A\+M\+Mono\+V\+I\+O\+::step\+\_\+init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initialization steps with bi-\/monocular only for \mbox{\hyperlink{classisae_1_1_i_m_u}{I\+MU}} initialization. 
 
 
 

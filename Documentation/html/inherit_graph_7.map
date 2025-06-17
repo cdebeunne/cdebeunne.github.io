@@ -1,6 +1,6 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classisae_1_1_a_optimizer.html" title=" " alt="" coords="5,56,136,83"/>
-<area shape="rect" id="node2" href="$classisae_1_1_angular_adjustment_c_e_r_e_s_analytic.html" title=" " alt="" coords="184,5,463,32"/>
-<area shape="rect" id="node3" href="$classisae_1_1_bundle_adjustment_c_e_r_e_s_analytic.html" title=" " alt="" coords="187,56,460,83"/>
-<area shape="rect" id="node4" href="$classisae_1_1_bundle_adjustment_c_e_r_e_s_numeric.html" title=" " alt="" coords="186,107,461,133"/>
+<area shape="rect" id="node1" href="$classisae_1_1_a_optimizer.html" title="Abstract class for optimization pipeline based on CERES." alt="" coords="5,56,136,83"/>
+<area shape="rect" id="node2" href="$classisae_1_1_angular_adjustment_c_e_r_e_s_analytic.html" title="An optimizer that uses Angular Cost function on the unit sphere for Bundle Adjustment and analytical ..." alt="" coords="184,5,463,32"/>
+<area shape="rect" id="node3" href="$classisae_1_1_bundle_adjustment_c_e_r_e_s_analytic.html" title="An optimizer that uses Angular Cost function on the unit sphere for Bundle Adjustment and analytical ..." alt="" coords="187,56,460,83"/>
+<area shape="rect" id="node4" href="$classisae_1_1_bundle_adjustment_c_e_r_e_s_numeric.html" title="An optimizer that uses Numeric Cost function for Bundle Adjustment." alt="" coords="186,107,461,133"/>
 </map>

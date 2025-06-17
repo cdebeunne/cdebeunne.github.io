@@ -12,14 +12,15 @@
 {\ttfamily \#include \char`\"{}isaeslam/data/mesh/mesher.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}isaeslam/data/sensors/\+A\+Sensor.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}isaeslam/data/sensors/\+Double\+Sphere.\+h\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}isaeslam/estimator/\+Epipolar\+Pose\+Estimator.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}isaeslam/estimator/\+E\+S\+K\+F\+Estimator.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}isaeslam/estimator/\+Epipolar\+Pose\+Estimator.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}isaeslam/featuredetectors/opencv\+\_\+detectors/cv\+O\+R\+B\+Feature\+Detector.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}isaeslam/featurematchers/\+Point2\+D\+Feature\+Matcher.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}isaeslam/featurematchers/\+Point2\+D\+Feature\+Tracker.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}isaeslam/landmarkinitializer/\+Point3\+Dlandmark\+Initializer.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}isaeslam/optimizers/\+Angular\+Adjustment\+C\+E\+R\+E\+S\+Analytic.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}isaeslam/slam\+Parameters.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}isaeslam/dataproviders/adataprovider.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}isaeslam/typedefs.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}utilities/timer.\+h\char`\"{}}\newline
 Include dependency graph for slam\+Core.\+h\+:\nopagebreak
@@ -40,17 +41,17 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \begin{DoxyCompactItemize}
 \item 
 class \mbox{\hyperlink{classisae_1_1_s_l_a_m_core}{isae\+::\+S\+L\+A\+M\+Core}}
-\item 
+\begin{DoxyCompactList}\small\item\em The core abstract class of the S\+L\+AM system. It handles front-\/end, back-\/end and initialization. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classisae_1_1_s_l_a_m_bi_mono}{isae\+::\+S\+L\+A\+M\+Bi\+Mono}}
-\item 
+\begin{DoxyCompactList}\small\item\em A S\+L\+AM class for bi-\/monocular setups. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classisae_1_1_s_l_a_m_bi_mono_v_i_o}{isae\+::\+S\+L\+A\+M\+Bi\+Mono\+V\+IO}}
-\item 
+\begin{DoxyCompactList}\small\item\em A S\+L\+AM class for bi-\/monocular + \mbox{\hyperlink{classisae_1_1_i_m_u}{I\+MU}} setups. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classisae_1_1_s_l_a_m_mono_v_i_o}{isae\+::\+S\+L\+A\+M\+Mono\+V\+IO}}
-\item 
+\begin{DoxyCompactList}\small\item\em A S\+L\+AM class for monocular + \mbox{\hyperlink{classisae_1_1_i_m_u}{I\+MU}} setups. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classisae_1_1_s_l_a_m_mono}{isae\+::\+S\+L\+A\+M\+Mono}}
-\item 
+\begin{DoxyCompactList}\small\item\em A S\+L\+AM class for monocular setups. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classisae_1_1_s_l_a_m_non_overlapping_fov}{isae\+::\+S\+L\+A\+M\+Non\+Overlapping\+Fov}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em A S\+L\+AM class for non overlapping FoV setups. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 

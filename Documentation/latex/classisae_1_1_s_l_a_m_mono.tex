@@ -2,6 +2,11 @@
 \label{classisae_1_1_s_l_a_m_mono}\index{isae::SLAMMono@{isae::SLAMMono}}
 
 
+A S\+L\+AM class for monocular setups.  
+
+
+
+
 {\ttfamily \#include $<$slam\+Core.\+h$>$}
 
 
@@ -28,13 +33,16 @@ Collaboration diagram for isae\+::S\+L\+A\+M\+Mono\+:\nopagebreak
 \mbox{\hyperlink{classisae_1_1_s_l_a_m_mono_a1ad2fcb2faa269c687786a598318493f}{S\+L\+A\+M\+Mono}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_s_l_a_m_parameters}{S\+L\+A\+M\+Parameters}} $>$ slam\+\_\+param)
 \item 
 bool \mbox{\hyperlink{classisae_1_1_s_l_a_m_mono_a82d52b190857d16d792c1dcd5fbdc6a6}{init}} () override
-\item 
+\begin{DoxyCompactList}\small\item\em Initialization step \+: create the first 3D landmarks and keyframe(s) \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classisae_1_1_s_l_a_m_mono_a7c7e349e065b3bea242b0a7a1a46f34a}{front\+End\+Step}} () override
-\item 
+\begin{DoxyCompactList}\small\item\em Front End\+: detection, tracking, pose estimation and landmark triangulation. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classisae_1_1_s_l_a_m_mono_a96b58f7c17099eefcaaf902c85422e6a}{back\+End\+Step}} () override
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em brief description Back End\+: marginalization, local map optimization \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
+
+\doxysubsection{Detailed Description}
+A S\+L\+AM class for monocular setups. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classisae_1_1_s_l_a_m_mono_a1ad2fcb2faa269c687786a598318493f}\label{classisae_1_1_s_l_a_m_mono_a1ad2fcb2faa269c687786a598318493f}} 
@@ -54,6 +62,10 @@ bool \mbox{\hyperlink{classisae_1_1_s_l_a_m_mono_a96b58f7c17099eefcaaf902c85422e
 
 
 
+brief description Back End\+: marginalization, local map optimization 
+
+
+
 Implements \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_aa378dd826e38a3bb5358a261466a97e3}{isae\+::\+S\+L\+A\+M\+Core}}.
 
 \mbox{\Hypertarget{classisae_1_1_s_l_a_m_mono_a7c7e349e065b3bea242b0a7a1a46f34a}\label{classisae_1_1_s_l_a_m_mono_a7c7e349e065b3bea242b0a7a1a46f34a}} 
@@ -64,6 +76,10 @@ Implements \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_aa378dd826e38a3bb5358a261
 
 
 
+Front End\+: detection, tracking, pose estimation and landmark triangulation. 
+
+
+
 Implements \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_ab97c16d22ca0c3d50c4ef63bcd6c88f7}{isae\+::\+S\+L\+A\+M\+Core}}.
 
 \mbox{\Hypertarget{classisae_1_1_s_l_a_m_mono_a82d52b190857d16d792c1dcd5fbdc6a6}\label{classisae_1_1_s_l_a_m_mono_a82d52b190857d16d792c1dcd5fbdc6a6}} 
@@ -71,6 +87,10 @@ Implements \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_ab97c16d22ca0c3d50c4ef63b
 \index{init@{init}!isae::SLAMMono@{isae::SLAMMono}}
 \doxysubsubsection{\texorpdfstring{init()}{init()}}
 {\footnotesize\ttfamily bool isae\+::\+S\+L\+A\+M\+Mono\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Initialization step \+: create the first 3D landmarks and keyframe(s) 
 
 
 

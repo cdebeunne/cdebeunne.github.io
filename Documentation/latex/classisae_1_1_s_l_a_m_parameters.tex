@@ -2,6 +2,11 @@
 \label{classisae_1_1_s_l_a_m_parameters}\index{isae::SLAMParameters@{isae::SLAMParameters}}
 
 
+A class that gathers most of the algorithmic blocks of the S\+L\+AM system that can be setup in the config file.  
+
+
+
+
 {\ttfamily \#include $<$slam\+Parameters.\+h$>$}
 
 
@@ -33,13 +38,20 @@ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_pose_estimator}{A\+Po
 std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_optimizer}{A\+Optimizer}} $>$ \mbox{\hyperlink{classisae_1_1_s_l_a_m_parameters_a004d5533484911160578ead162778de0}{get\+Optimizer\+Front}} ()
 \item 
 std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_optimizer}{A\+Optimizer}} $>$ \mbox{\hyperlink{classisae_1_1_s_l_a_m_parameters_a31427cb7d9ced07af2824c3bff823f80}{get\+Optimizer\+Back}} ()
+\item 
+void \mbox{\hyperlink{classisae_1_1_s_l_a_m_parameters_ac14e30a6ab6020a317c7064c5f46b570}{read\+Config\+File}} (const std\+::string \&path\+\_\+config\+\_\+folder)
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{structisae_1_1_config}{isae\+::\+Config}} \mbox{\hyperlink{classisae_1_1_s_l_a_m_parameters_a8c95d65757a932415d20e0e805256098}{\+\_\+config}}
+\mbox{\hyperlink{structisae_1_1_config}{Config}} \mbox{\hyperlink{classisae_1_1_s_l_a_m_parameters_a2e417bebdb5a08974f94868a8d33cf53}{\+\_\+config}}
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+A class that gathers most of the algorithmic blocks of the S\+L\+AM system that can be setup in the config file. 
+
+Some attributes are sets as unordered map because these depends on the feature type (e.\+g. matcher, detector...). Then the proper blocks can be called using the feature label. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classisae_1_1_s_l_a_m_parameters_a69f6583a607f2feeff71ea4f38658bb9}\label{classisae_1_1_s_l_a_m_parameters_a69f6583a607f2feeff71ea4f38658bb9}} 
@@ -99,14 +111,20 @@ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_optimizer}{A\+Optimiz
 \doxysubsubsection{\texorpdfstring{getPoseEstimator()}{getPoseEstimator()}}
 {\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classisae_1_1_a_pose_estimator}{A\+Pose\+Estimator}}$>$ isae\+::\+S\+L\+A\+M\+Parameters\+::get\+Pose\+Estimator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+\mbox{\Hypertarget{classisae_1_1_s_l_a_m_parameters_ac14e30a6ab6020a317c7064c5f46b570}\label{classisae_1_1_s_l_a_m_parameters_ac14e30a6ab6020a317c7064c5f46b570}} 
+\index{isae::SLAMParameters@{isae::SLAMParameters}!readConfigFile@{readConfigFile}}
+\index{readConfigFile@{readConfigFile}!isae::SLAMParameters@{isae::SLAMParameters}}
+\doxysubsubsection{\texorpdfstring{readConfigFile()}{readConfigFile()}}
+{\footnotesize\ttfamily void isae\+::\+S\+L\+A\+M\+Parameters\+::read\+Config\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path\+\_\+config\+\_\+folder }\end{DoxyParamCaption})}
+
 
 
 \doxysubsection{Member Data Documentation}
-\mbox{\Hypertarget{classisae_1_1_s_l_a_m_parameters_a8c95d65757a932415d20e0e805256098}\label{classisae_1_1_s_l_a_m_parameters_a8c95d65757a932415d20e0e805256098}} 
+\mbox{\Hypertarget{classisae_1_1_s_l_a_m_parameters_a2e417bebdb5a08974f94868a8d33cf53}\label{classisae_1_1_s_l_a_m_parameters_a2e417bebdb5a08974f94868a8d33cf53}} 
 \index{isae::SLAMParameters@{isae::SLAMParameters}!\_config@{\_config}}
 \index{\_config@{\_config}!isae::SLAMParameters@{isae::SLAMParameters}}
 \doxysubsubsection{\texorpdfstring{\_config}{\_config}}
-{\footnotesize\ttfamily \mbox{\hyperlink{structisae_1_1_config}{isae\+::\+Config}} isae\+::\+S\+L\+A\+M\+Parameters\+::\+\_\+config}
+{\footnotesize\ttfamily \mbox{\hyperlink{structisae_1_1_config}{Config}} isae\+::\+S\+L\+A\+M\+Parameters\+::\+\_\+config}
 
 
 

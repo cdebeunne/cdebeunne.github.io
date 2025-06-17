@@ -1,4 +1,4 @@
 <map id="isae::IMUFactorInit" name="isae::IMUFactorInit">
-<area shape="rect" id="node1" title=" " alt="" coords="25,95,169,121"/>
+<area shape="rect" id="node1" title="Pre integration IMU factor for initialization, the parameters optimized are: scale,..." alt="" coords="25,95,169,121"/>
 <area shape="rect" id="node2" title=" " alt="" coords="5,5,189,47"/>
 </map>

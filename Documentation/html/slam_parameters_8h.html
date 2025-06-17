@@ -72,62 +72,52 @@ $(function() {
 <div class="title">slamParameters.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;iostream&gt;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="_a_optimizer_8h_source.html">isaeslam/optimizers/AOptimizer.h</a>&quot;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
 <code>#include &lt;unordered_map&gt;</code><br />
-<code>#include &quot;<a class="el" href="adataprovider_8h_source.html">isaeslam/dataproviders/adataprovider.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="_a_optimizer_8h_source.html">isaeslam/optimizers/AOptimizer.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="_config_file_reader_8h_source.html">utilities/ConfigFileReader.h</a>&quot;</code><br />
+<code>#include &lt;yaml-cpp/yaml.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for slamParameters.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="slam_parameters_8h__incl.png" border="0" usemap="#_2home_2deos_2ce_8debeunne_2colcon__ws_2src_2_sa_d_v_i_o_2cpp_2include_2isaeslam_2slam_parameters_8h" alt=""/></div>
 <map name="_2home_2deos_2ce_8debeunne_2colcon__ws_2src_2_sa_d_v_i_o_2cpp_2include_2isaeslam_2slam_parameters_8h" id="_2home_2deos_2ce_8debeunne_2colcon__ws_2src_2_sa_d_v_i_o_2cpp_2include_2isaeslam_2slam_parameters_8h">
-<area shape="rect" title=" " alt="" coords="557,5,843,61"/>
-<area shape="rect" title=" " alt="" coords="5,295,85,322"/>
-<area shape="rect" title=" " alt="" coords="541,117,600,143"/>
-<area shape="rect" title=" " alt="" coords="2207,884,2331,911"/>
-<area shape="rect" href="adataprovider_8h.html" title=" " alt="" coords="675,199,850,240"/>
-<area shape="rect" href="_config_file_reader_8h.html" title=" " alt="" coords="109,295,307,322"/>
-<area shape="rect" href="_a_optimizer_8h.html" title=" " alt="" coords="1847,109,2001,151"/>
-<area shape="rect" title=" " alt="" coords="634,295,707,322"/>
-<area shape="rect" title=" " alt="" coords="731,295,794,322"/>
-<area shape="rect" title=" " alt="" coords="1215,884,1307,911"/>
-<area shape="rect" title=" " alt="" coords="1254,295,1410,322"/>
-<area shape="rect" title=" " alt="" coords="1086,802,1223,829"/>
-<area shape="rect" title=" " alt="" coords="433,295,610,322"/>
-<area shape="rect" title=" " alt="" coords="158,385,290,411"/>
-<area shape="rect" href="_camera_8h.html" title=" " alt="" coords="1435,288,1603,329"/>
-<area shape="rect" href="_double_sphere_8h.html" title=" " alt="" coords="869,288,1037,329"/>
-<area shape="rect" href="_fisheye_8h.html" title=" " alt="" coords="1061,288,1229,329"/>
-<area shape="rect" href="_i_m_u_8h.html" title=" " alt="" coords="1627,288,1795,329"/>
-<area shape="rect" href="_a_sensor_8h.html" title=" " alt="" coords="1435,377,1603,419"/>
-<area shape="rect" title=" " alt="" coords="1589,884,1715,911"/>
-<area shape="rect" href="_a_feature2_d_8h.html" title=" " alt="" coords="1755,541,1927,583"/>
-<area shape="rect" href="_model3_d_8h.html" title=" " alt="" coords="1685,795,1872,836"/>
-<area shape="rect" href="typedefs_8h.html" title=" " alt="" coords="1896,802,2051,829"/>
-<area shape="rect" href="frame_8h.html" title=" " alt="" coords="1910,467,2079,493"/>
-<area shape="rect" href="img_processing_8h.html" title=" " alt="" coords="1326,467,1509,493"/>
-<area shape="rect" href="_a_landmark_8h.html" title=" " alt="" coords="1755,631,1941,672"/>
-<area shape="rect" href="geometry_8h.html" title=" " alt="" coords="1473,720,1621,747"/>
-<area shape="rect" title=" " alt="" coords="1841,884,1967,911"/>
-<area shape="rect" title=" " alt="" coords="1740,884,1817,911"/>
-<area shape="rect" title=" " alt="" coords="1515,802,1578,829"/>
-<area shape="rect" title=" " alt="" coords="1603,802,1661,829"/>
-<area shape="rect" title=" " alt="" coords="1349,802,1491,829"/>
-<area shape="rect" title=" " alt="" coords="1991,884,2054,911"/>
-<area shape="rect" title=" " alt="" coords="2078,884,2138,911"/>
-<area shape="rect" title=" " alt="" coords="838,549,1047,575"/>
-<area shape="rect" title=" " alt="" coords="1411,549,1629,575"/>
-<area shape="rect" title=" " alt="" coords="1224,549,1387,575"/>
-<area shape="rect" title=" " alt="" coords="865,385,1042,411"/>
-<area shape="rect" href="localmap_8h.html" title=" " alt="" coords="2256,288,2411,329"/>
-<area shape="rect" href="marginalization_8hpp.html" title=" " alt="" coords="2054,199,2210,240"/>
-<area shape="rect" title=" " alt="" coords="1870,295,1978,322"/>
-<area shape="rect" href="parameters_block_8hpp.html" title=" " alt="" coords="1464,631,1629,672"/>
-<area shape="rect" href="residuals_8hpp.html" title=" " alt="" coords="1637,199,1792,240"/>
-<area shape="rect" href="amap_8h.html" title=" " alt="" coords="2256,377,2411,419"/>
-<area shape="rect" title=" " alt="" coords="2257,467,2319,493"/>
+<area shape="rect" title=" " alt="" coords="425,5,712,61"/>
+<area shape="rect" href="_a_optimizer_8h.html" title=" " alt="" coords="350,109,505,151"/>
+<area shape="rect" title=" " alt="" coords="5,899,129,925"/>
+<area shape="rect" title=" " alt="" coords="529,117,609,143"/>
+<area shape="rect" title=" " alt="" coords="633,117,691,143"/>
+<area shape="rect" title=" " alt="" coords="716,117,848,143"/>
+<area shape="rect" href="frame_8h.html" title=" " alt="" coords="487,467,656,493"/>
+<area shape="rect" href="localmap_8h.html" title=" " alt="" coords="206,288,361,329"/>
+<area shape="rect" href="marginalization_8hpp.html" title=" " alt="" coords="349,199,505,240"/>
+<area shape="rect" title=" " alt="" coords="537,295,645,322"/>
+<area shape="rect" href="parameters_block_8hpp.html" title=" " alt="" coords="105,631,270,672"/>
+<area shape="rect" href="residuals_8hpp.html" title=" " alt="" coords="749,199,903,240"/>
+<area shape="rect" href="_a_feature2_d_8h.html" title=" " alt="" coords="581,541,753,583"/>
+<area shape="rect" href="_a_landmark_8h.html" title=" " alt="" coords="446,631,633,672"/>
+<area shape="rect" href="typedefs_8h.html" title=" " alt="" coords="207,817,362,843"/>
+<area shape="rect" href="geometry_8h.html" title=" " alt="" coords="465,727,613,754"/>
+<area shape="rect" href="_a_sensor_8h.html" title=" " alt="" coords="813,720,981,761"/>
+<area shape="rect" href="_model3_d_8h.html" title=" " alt="" coords="934,809,1121,851"/>
+<area shape="rect" title=" " alt="" coords="504,899,596,925"/>
+<area shape="rect" title=" " alt="" coords="925,899,1052,925"/>
+<area shape="rect" title=" " alt="" coords="651,899,777,925"/>
+<area shape="rect" title=" " alt="" coords="815,899,893,925"/>
+<area shape="rect" title=" " alt="" coords="635,817,697,843"/>
+<area shape="rect" title=" " alt="" coords="386,817,445,843"/>
+<area shape="rect" title=" " alt="" coords="469,817,610,843"/>
+<area shape="rect" title=" " alt="" coords="721,817,859,843"/>
+<area shape="rect" title=" " alt="" coords="296,899,359,925"/>
+<area shape="rect" title=" " alt="" coords="212,899,272,925"/>
+<area shape="rect" href="img_processing_8h.html" title=" " alt="" coords="1272,817,1455,843"/>
+<area shape="rect" title=" " alt="" coords="1507,899,1716,925"/>
+<area shape="rect" title=" " alt="" coords="1077,899,1295,925"/>
+<area shape="rect" title=" " alt="" coords="1319,899,1482,925"/>
+<area shape="rect" href="amap_8h.html" title=" " alt="" coords="206,377,361,419"/>
+<area shape="rect" title=" " alt="" coords="207,467,269,493"/>
+<area shape="rect" href="_camera_8h.html" title=" " alt="" coords="935,377,1103,419"/>
+<area shape="rect" href="_i_m_u_8h.html" title=" " alt="" coords="829,541,997,583"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -135,18 +125,20 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="slam_parameters_8h__dep__incl.png" border="0" usemap="#_2home_2deos_2ce_8debeunne_2colcon__ws_2src_2_sa_d_v_i_o_2cpp_2include_2isaeslam_2slam_parameters_8hdep" alt=""/></div>
 <map name="_2home_2deos_2ce_8debeunne_2colcon__ws_2src_2_sa_d_v_i_o_2cpp_2include_2isaeslam_2slam_parameters_8hdep" id="_2home_2deos_2ce_8debeunne_2colcon__ws_2src_2_sa_d_v_i_o_2cpp_2include_2isaeslam_2slam_parameters_8hdep">
-<area shape="rect" title=" " alt="" coords="939,5,1225,61"/>
-<area shape="rect" href="slam_core_8h.html" title=" " alt="" coords="836,109,1077,165"/>
-<area shape="rect" href="slam_parameters_8cpp.html" title=" " alt="" coords="1102,109,1313,165"/>
-<area shape="rect" href="main_8cpp.html" title=" " alt="" coords="5,221,191,277"/>
-<area shape="rect" href="slam_bi_mono_8cpp.html" title=" " alt="" coords="215,221,400,277"/>
-<area shape="rect" href="slam_bi_mono_v_i_o_8cpp.html" title=" " alt="" coords="424,221,631,277"/>
-<area shape="rect" href="slam_core_8cpp.html" title=" " alt="" coords="655,221,840,277"/>
-<area shape="rect" href="slam_mono_8cpp.html" title=" " alt="" coords="864,221,1049,277"/>
-<area shape="rect" href="slam_mono_v_i_o_8cpp.html" title=" " alt="" coords="1074,221,1269,277"/>
-<area shape="rect" href="slam_non_overlapping_fov_8cpp.html" title=" " alt="" coords="1293,221,1556,277"/>
-<area shape="rect" href="association__test_8cpp.html" title=" " alt="" coords="1580,213,1765,284"/>
-<area shape="rect" href="nofov__test_8cpp.html" title=" " alt="" coords="1789,221,1975,277"/>
+<area shape="rect" title=" " alt="" coords="1051,5,1337,61"/>
+<area shape="rect" href="adataprovider_8h.html" title=" " alt="" coords="1065,109,1323,180"/>
+<area shape="rect" href="slam_core_8h.html" title=" " alt="" coords="836,235,1077,291"/>
+<area shape="rect" href="slam_parameters_8cpp.html" title=" " alt="" coords="1311,235,1522,291"/>
+<area shape="rect" href="adataprovider_8cpp.html" title=" " alt="" coords="1101,228,1287,299"/>
+<area shape="rect" href="main_8cpp.html" title=" " alt="" coords="5,354,191,410"/>
+<area shape="rect" href="slam_bi_mono_8cpp.html" title=" " alt="" coords="215,354,400,410"/>
+<area shape="rect" href="slam_bi_mono_v_i_o_8cpp.html" title=" " alt="" coords="424,354,631,410"/>
+<area shape="rect" href="slam_core_8cpp.html" title=" " alt="" coords="655,354,840,410"/>
+<area shape="rect" href="slam_mono_8cpp.html" title=" " alt="" coords="864,354,1049,410"/>
+<area shape="rect" href="slam_mono_v_i_o_8cpp.html" title=" " alt="" coords="1074,354,1269,410"/>
+<area shape="rect" href="slam_non_overlapping_fov_8cpp.html" title=" " alt="" coords="1293,354,1556,410"/>
+<area shape="rect" href="association__test_8cpp.html" title=" " alt="" coords="1580,347,1765,417"/>
+<area shape="rect" href="nofov__test_8cpp.html" title=" " alt="" coords="1789,354,1975,410"/>
 </map>
 </div>
 </div>
@@ -155,10 +147,19 @@ This graph shows which files directly or indirectly include this file:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structisae_1_1_feature_matcher_struct.html">isae::FeatureMatcherStruct</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A struct that contains a feature matcher and its parameters.  <a href="structisae_1_1_feature_matcher_struct.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structisae_1_1_feature_tracker_struct.html">isae::FeatureTrackerStruct</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A struct that contains a feature tracker and its parameters.  <a href="structisae_1_1_feature_tracker_struct.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structisae_1_1_feature_struct.html">isae::FeatureStruct</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A struct that gathers all the parameters for a feature.  <a href="structisae_1_1_feature_struct.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structisae_1_1_config.html">isae::Config</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This structure contains the configuration parameters located in the config file.  <a href="structisae_1_1_config.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_parameters.html">isae::SLAMParameters</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A class that gathers most of the algorithmic blocks of the SLAM system that can be setup in the config file.  <a href="classisae_1_1_s_l_a_m_parameters.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>

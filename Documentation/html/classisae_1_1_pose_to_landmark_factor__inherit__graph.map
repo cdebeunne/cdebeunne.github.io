@@ -1,4 +1,4 @@
 <map id="isae::PoseToLandmarkFactor" name="isae::PoseToLandmarkFactor">
-<area shape="rect" id="node1" title=" " alt="" coords="5,95,212,121"/>
+<area shape="rect" id="node1" title="Relative 3D translation between a 6DoF frame and a punctual landmark." alt="" coords="5,95,212,121"/>
 <area shape="rect" id="node2" title=" " alt="" coords="17,5,201,47"/>
 </map>

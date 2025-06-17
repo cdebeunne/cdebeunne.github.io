@@ -2,6 +2,11 @@
 \label{classisae_1_1_csv_keypoint_detector}\index{isae::CsvKeypointDetector@{isae::CsvKeypointDetector}}
 
 
+This Class is design for C\+SV reading features.  
+
+
+
+
 {\ttfamily \#include $<$csv\+Keypoint\+Detector.\+h$>$}
 
 
@@ -37,6 +42,17 @@ double \mbox{\hyperlink{classisae_1_1_csv_keypoint_detector_ab0cda30f1ba46c3a477
 \begin{DoxyCompactList}\small\item\em Virtual function to compute the distance between two feature descriptors. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
+
+\doxysubsection{Detailed Description}
+This Class is design for C\+SV reading features. 
+
+This is how it should be used\+: -\/$>$ The convention is\+: timestamp.\+csv for each image -\/$>$ The variable \+\_\+folder\+\_\+path indicates the folder where the csv are stored -\/$>$ in customdetect\+And\+Compute the cv\+::\+Mat contains a double with the timestamp of the image
+
+Thus \mbox{\hyperlink{classisae_1_1_s_l_a_m_core}{S\+L\+A\+M\+Core}} should be slightly edited to create the timestamp cv\+::\+Mat and pass it as argument in detectfeatures Moreover, klt tracking cannot be used because detect\+And\+Compute\+Additionnal won\textquotesingle{}t work
+
+Example\+:
+
+\mbox{\hyperlink{classisae_1_1_csv_keypoint_detector}{Csv\+Keypoint\+Detector}} csv\+\_\+detector(1000); cv\+::\+Mat ts\+\_\+mat = cv\+::\+Mat\+::zeros(1,1,\+C\+V\+\_\+32\+F); ts\+\_\+mat.\+at$<$double$>$(0,0) = (double)f-\/$>$get\+Timestamp(); csv\+\_\+detector.\+custom\+Detect\+And\+Compute(ts\+\_\+mat, ts\+\_\+mat, features); f-\/$>$get\+Sensors().at(i)-\/$>$add\+Features(\char`\"{}pointxd\char`\"{}, features); 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classisae_1_1_csv_keypoint_detector_a9832b70f8acbe514f761b40b10713fa9}\label{classisae_1_1_csv_keypoint_detector_a9832b70f8acbe514f761b40b10713fa9}} 

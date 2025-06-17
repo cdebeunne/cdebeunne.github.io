@@ -4,17 +4,11 @@
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{namespaceisae_1_1imgproc_aa3e9e65c4c57abf96b1d3554f707e57f}{histogram\+Equalization\+C\+L\+A\+HE}} (cv\+::\+Mat \&image, float clahe\+\_\+clip=2)
-\item 
+\begin{DoxyCompactList}\small\item\em Apply C\+L\+A\+HE to the image passed as parameter. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{namespaceisae_1_1imgproc_ab4d6aea964b40537d097abc0ef9bda8c}{A\+G\+C\+WD}} (const cv\+::\+Mat \&src, cv\+::\+Mat \&dst, double alpha)
-\item 
-void \mbox{\hyperlink{namespaceisae_1_1imgproc_a5dc5f3256f9a1270f8cada4b9b35c526}{high\+Boost\+Filtering}} (cv\+::\+Mat \&I, cv\+::\+Mat \&Ires, float scale)
-\item 
-void \mbox{\hyperlink{namespaceisae_1_1imgproc_ae865284e5a884bbec1ad67d9adb78965}{image\+Improvment}} (cv\+::\+Mat \&image, cv\+::\+Mat \&result)
-\item 
+\begin{DoxyCompactList}\small\item\em Apply adaptive gamma correction. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{namespaceisae_1_1imgproc_a0a1ca595a8481a35ed7f3695f4986451}{Z\+N\+CC}} (cv\+::\+Mat I0, cv\+::\+Mat I1)
-\item 
-double \mbox{\hyperlink{namespaceisae_1_1imgproc_aea856e4519ac910a6427d2017679ea6a}{Z\+N\+C\+C2}} (cv\+::\+Mat I0, cv\+::\+Mat I1)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Computes the Zero Normalized Cross Corelation between two images (usually small patches) \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Function Documentation}
@@ -24,33 +18,36 @@ double \mbox{\hyperlink{namespaceisae_1_1imgproc_aea856e4519ac910a6427d2017679ea
 \doxysubsubsection{\texorpdfstring{AGCWD()}{AGCWD()}}
 {\footnotesize\ttfamily void isae\+::imgproc\+::\+A\+G\+C\+WD (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{src,  }\item[{cv\+::\+Mat \&}]{dst,  }\item[{double}]{alpha }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-\mbox{\Hypertarget{namespaceisae_1_1imgproc_a5dc5f3256f9a1270f8cada4b9b35c526}\label{namespaceisae_1_1imgproc_a5dc5f3256f9a1270f8cada4b9b35c526}} 
-\index{isae::imgproc@{isae::imgproc}!highBoostFiltering@{highBoostFiltering}}
-\index{highBoostFiltering@{highBoostFiltering}!isae::imgproc@{isae::imgproc}}
-\doxysubsubsection{\texorpdfstring{highBoostFiltering()}{highBoostFiltering()}}
-{\footnotesize\ttfamily void isae\+::imgproc\+::high\+Boost\+Filtering (\begin{DoxyParamCaption}\item[{cv\+::\+Mat \&}]{I,  }\item[{cv\+::\+Mat \&}]{Ires,  }\item[{float}]{scale }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+
+Apply adaptive gamma correction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & Source image \\
+\hline
+{\em dst} & Destination image passed as reference \\
+\hline
+{\em alpha} & Alpha parameter \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{namespaceisae_1_1imgproc_aa3e9e65c4c57abf96b1d3554f707e57f}\label{namespaceisae_1_1imgproc_aa3e9e65c4c57abf96b1d3554f707e57f}} 
 \index{isae::imgproc@{isae::imgproc}!histogramEqualizationCLAHE@{histogramEqualizationCLAHE}}
 \index{histogramEqualizationCLAHE@{histogramEqualizationCLAHE}!isae::imgproc@{isae::imgproc}}
 \doxysubsubsection{\texorpdfstring{histogramEqualizationCLAHE()}{histogramEqualizationCLAHE()}}
 {\footnotesize\ttfamily void isae\+::imgproc\+::histogram\+Equalization\+C\+L\+A\+HE (\begin{DoxyParamCaption}\item[{cv\+::\+Mat \&}]{image,  }\item[{float}]{clahe\+\_\+clip = {\ttfamily 2} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-\mbox{\Hypertarget{namespaceisae_1_1imgproc_ae865284e5a884bbec1ad67d9adb78965}\label{namespaceisae_1_1imgproc_ae865284e5a884bbec1ad67d9adb78965}} 
-\index{isae::imgproc@{isae::imgproc}!imageImprovment@{imageImprovment}}
-\index{imageImprovment@{imageImprovment}!isae::imgproc@{isae::imgproc}}
-\doxysubsubsection{\texorpdfstring{imageImprovment()}{imageImprovment()}}
-{\footnotesize\ttfamily void isae\+::imgproc\+::image\+Improvment (\begin{DoxyParamCaption}\item[{cv\+::\+Mat \&}]{image,  }\item[{cv\+::\+Mat \&}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-Image improvment\mbox{\Hypertarget{namespaceisae_1_1imgproc_a0a1ca595a8481a35ed7f3695f4986451}\label{namespaceisae_1_1imgproc_a0a1ca595a8481a35ed7f3695f4986451}} 
+
+Apply C\+L\+A\+HE to the image passed as parameter. 
+
+\mbox{\Hypertarget{namespaceisae_1_1imgproc_a0a1ca595a8481a35ed7f3695f4986451}\label{namespaceisae_1_1imgproc_a0a1ca595a8481a35ed7f3695f4986451}} 
 \index{isae::imgproc@{isae::imgproc}!ZNCC@{ZNCC}}
 \index{ZNCC@{ZNCC}!isae::imgproc@{isae::imgproc}}
 \doxysubsubsection{\texorpdfstring{ZNCC()}{ZNCC()}}
 {\footnotesize\ttfamily double isae\+::imgproc\+::\+Z\+N\+CC (\begin{DoxyParamCaption}\item[{cv\+::\+Mat}]{I0,  }\item[{cv\+::\+Mat}]{I1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-\mbox{\Hypertarget{namespaceisae_1_1imgproc_aea856e4519ac910a6427d2017679ea6a}\label{namespaceisae_1_1imgproc_aea856e4519ac910a6427d2017679ea6a}} 
-\index{isae::imgproc@{isae::imgproc}!ZNCC2@{ZNCC2}}
-\index{ZNCC2@{ZNCC2}!isae::imgproc@{isae::imgproc}}
-\doxysubsubsection{\texorpdfstring{ZNCC2()}{ZNCC2()}}
-{\footnotesize\ttfamily double isae\+::imgproc\+::\+Z\+N\+C\+C2 (\begin{DoxyParamCaption}\item[{cv\+::\+Mat}]{I0,  }\item[{cv\+::\+Mat}]{I1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+Computes the Zero Normalized Cross Corelation between two images (usually small patches) 
 

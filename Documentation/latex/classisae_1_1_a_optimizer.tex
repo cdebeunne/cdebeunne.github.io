@@ -2,6 +2,11 @@
 \label{classisae_1_1_a_optimizer}\index{isae::AOptimizer@{isae::AOptimizer}}
 
 
+Abstract class for optimization pipeline based on C\+E\+R\+ES.  
+
+
+
+
 {\ttfamily \#include $<$A\+Optimizer.\+h$>$}
 
 
@@ -21,62 +26,75 @@ Inheritance diagram for isae\+::A\+Optimizer\+:\nopagebreak
 void \mbox{\hyperlink{classisae_1_1_a_optimizer_a204f4c5a3202822209ee897088e5c630}{reset\+Marginalization}} ()
 \item 
 bool \mbox{\hyperlink{classisae_1_1_a_optimizer_a274ac0e977d5878b82d70acbb5af131d}{landmark\+Optimization}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&frame)
-\item 
+\begin{DoxyCompactList}\small\item\em Structure only Bundle Adjustment for a frame. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classisae_1_1_a_optimizer_a6550dcf1ea5599b61763432778e3bfdc}{single\+Frame\+Optimization}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&moving\+\_\+frame)
-\item 
+\begin{DoxyCompactList}\small\item\em Motion only Bundle Adjustment for a frame. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classisae_1_1_a_optimizer_a8e52bd65aa73af04da7f64098a444723}{single\+Frame\+V\+I\+Optimization}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{isae\+::\+Frame}} $>$ \&moving\+\_\+frame)
-\item 
+\begin{DoxyCompactList}\small\item\em Visual-\/\+Inertial Motion only Bundle Adjustment for a frame. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classisae_1_1_a_optimizer_ad6d932373df51235d3834b0fc8b38bef}{local\+Map\+BA}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_local_map}{isae\+::\+Local\+Map}} $>$ \&local\+\_\+map, const size\+\_\+t fixed\+\_\+frame\+\_\+number=0)
-\item 
+\begin{DoxyCompactList}\small\item\em Bundle Adjustment for a local map. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classisae_1_1_a_optimizer_aeb4e5c6dbed715fb3d36b27e63d04e09}{local\+Map\+V\+I\+Optimization}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_local_map}{isae\+::\+Local\+Map}} $>$ \&local\+\_\+map, const size\+\_\+t fixed\+\_\+frame\+\_\+number=0)
-\item 
+\begin{DoxyCompactList}\small\item\em Visual-\/\+Inertial Bundle Adjustment for a local map. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{classisae_1_1_a_optimizer_ab295a1cd0d7fcaf22a6040a04b69fb03}{V\+I\+Init}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_local_map}{isae\+::\+Local\+Map}} $>$ \&local\+\_\+map, Eigen\+::\+Matrix3d \&R\+\_\+w\+\_\+i, bool optim\+\_\+scale=false)
-\item 
+\begin{DoxyCompactList}\small\item\em Visual-\/\+Inertial Initialization for a local map. \end{DoxyCompactList}\item 
 virtual bool \mbox{\hyperlink{classisae_1_1_a_optimizer_af5aece35985878a1af6989dc47c799e8}{landmark\+Optimization\+No\+Fov}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&f, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&fp, Eigen\+::\+Affine3d \&T\+\_\+cam0\+\_\+cam0p, double info\+\_\+scale)
-\item 
+\begin{DoxyCompactList}\small\item\em Structure only Bundle Adjustment for a frame with non overlapping fields of view sensors. \end{DoxyCompactList}\item 
 virtual bool \mbox{\hyperlink{classisae_1_1_a_optimizer_a009b26589c47e46be1b722c9824361ec}{marginalize}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&frame0, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&frame1, bool enable\+\_\+sparsif)
-\item 
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classisae_1_1_marginalization}{Marginalization}} of a frame and its landmarks. \end{DoxyCompactList}\item 
 virtual Eigen\+::\+Matrix\+Xd \mbox{\hyperlink{classisae_1_1_a_optimizer_ad6985d97b625025955ed106ed2195f23}{marginalize\+Relative}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&frame0, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&frame1)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classisae_1_1_marginalization}{Marginalization}} of all the landmarks linked to two frame and computation of the information matrix of the relative pose. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-bool \mbox{\hyperlink{classisae_1_1_a_optimizer_a8f2bbf735f7a12949149dba05c8452ea}{is\+Moving\+Frame}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{isae\+::\+Frame}} $>$ \&frame, const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{isae\+::\+Frame}} $>$$>$ \&frame\+\_\+vector)
-\item 
-bool \mbox{\hyperlink{classisae_1_1_a_optimizer_a424b6ccab23e863ffd63c1879a34da66}{is\+Moving\+Landmark}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_landmark}{isae\+::\+A\+Landmark}} $>$ \&ldmk, const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_landmark}{isae\+::\+A\+Landmark}} $>$$>$ \&cloud\+\_\+to\+\_\+optimize)
-\item 
 virtual uint \mbox{\hyperlink{classisae_1_1_a_optimizer_ab4a33aa6977b4d88e7fd3da45f496975}{add\+Residuals\+Local\+Map}} (ceres\+::\+Problem \&problem, ceres\+::\+Loss\+Function $\ast$loss\+\_\+function, ceres\+::\+Parameter\+Block\+Ordering $\ast$ordering, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$$>$ \&frame\+\_\+vector, size\+\_\+t fixed\+\_\+frame\+\_\+number, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_local_map}{isae\+::\+Local\+Map}} $>$ \&local\+\_\+map)=0
-\item 
+\begin{DoxyCompactList}\small\item\em Add visual residuals to a C\+E\+R\+ES problem for a local map. \end{DoxyCompactList}\item 
 virtual uint \mbox{\hyperlink{classisae_1_1_a_optimizer_ab200573dfb0edebe7b2628e28f9cefef}{add\+Landmark\+Residuals}} (ceres\+::\+Problem \&problem, ceres\+::\+Loss\+Function $\ast$loss\+\_\+function, \mbox{\hyperlink{namespaceisae_a4b744e0e080a733838eb133deda894aa}{typed\+\_\+vec\+\_\+landmarks}} \&cloud\+\_\+to\+\_\+optimize)=0
-\item 
+\begin{DoxyCompactList}\small\item\em Add visual residuals to a C\+E\+R\+ES problem for structure only BA. \end{DoxyCompactList}\item 
 virtual uint \mbox{\hyperlink{classisae_1_1_a_optimizer_a06ac6ce2c1121790ad7b28ae0c36de78}{add\+Single\+Frame\+Residuals}} (ceres\+::\+Problem \&problem, ceres\+::\+Loss\+Function $\ast$loss\+\_\+function, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&frame, \mbox{\hyperlink{namespaceisae_a4b744e0e080a733838eb133deda894aa}{typed\+\_\+vec\+\_\+landmarks}} \&cloud\+\_\+to\+\_\+optimize)=0
-\item 
+\begin{DoxyCompactList}\small\item\em Add visual residuals to a C\+E\+R\+ES problem for a motion only BA. \end{DoxyCompactList}\item 
 virtual uint \mbox{\hyperlink{classisae_1_1_a_optimizer_a61bad18320dd6d0863f48cdbb738c5c1}{add\+Marginalization\+Residuals}} (ceres\+::\+Problem \&problem, ceres\+::\+Loss\+Function $\ast$loss\+\_\+function, ceres\+::\+Parameter\+Block\+Ordering $\ast$ordering)
-\item 
+\begin{DoxyCompactList}\small\item\em Add marginalization residuals to a C\+E\+R\+ES problem. \end{DoxyCompactList}\item 
 uint \mbox{\hyperlink{classisae_1_1_a_optimizer_a8bca26ef94fe6325a39316f4d3a64377}{add\+I\+M\+U\+Residuals}} (ceres\+::\+Problem \&problem, ceres\+::\+Loss\+Function $\ast$loss\+\_\+function, ceres\+::\+Parameter\+Block\+Ordering $\ast$ordering, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$$>$ \&frame\+\_\+vector, size\+\_\+t fixed\+\_\+frame\+\_\+number)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Add \mbox{\hyperlink{classisae_1_1_i_m_u}{I\+MU}} residuals to a C\+E\+R\+ES problem. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
 std\+::unordered\+\_\+map$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$, \mbox{\hyperlink{classisae_1_1_pose_parameters_block}{Pose\+Parameters\+Block}} $>$ \mbox{\hyperlink{classisae_1_1_a_optimizer_a6f5351077b37b7364d0373b066016658}{\+\_\+map\+\_\+frame\+\_\+posepar}}
 \item 
 std\+::unordered\+\_\+map$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$, \mbox{\hyperlink{classisae_1_1_point_x_y_z_parameters_block}{Point\+X\+Y\+Z\+Parameters\+Block}} $>$ \mbox{\hyperlink{classisae_1_1_a_optimizer_adbd3c532d0349c9fa81a102afdcdef2b}{\+\_\+map\+\_\+frame\+\_\+velpar}}
-\item 
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+map for pose parameters \end{quote}
+\end{DoxyCompactList}\item 
 std\+::unordered\+\_\+map$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$, \mbox{\hyperlink{classisae_1_1_point_x_y_z_parameters_block}{Point\+X\+Y\+Z\+Parameters\+Block}} $>$ \mbox{\hyperlink{classisae_1_1_a_optimizer_a13d29d8bf1207b4dacfc735910281fd9}{\+\_\+map\+\_\+frame\+\_\+dbapar}}
-\item 
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+map for velocity parameters \end{quote}
+\end{DoxyCompactList}\item 
 std\+::unordered\+\_\+map$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$, \mbox{\hyperlink{classisae_1_1_point_x_y_z_parameters_block}{Point\+X\+Y\+Z\+Parameters\+Block}} $>$ \mbox{\hyperlink{classisae_1_1_a_optimizer_ab4e0dd85ed92061b4e05dc277c66667d}{\+\_\+map\+\_\+frame\+\_\+dbgpar}}
-\item 
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+map for accelerometer bias parameters \end{quote}
+\end{DoxyCompactList}\item 
 std\+::unordered\+\_\+map$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_landmark}{A\+Landmark}} $>$, \mbox{\hyperlink{classisae_1_1_point_x_y_z_parameters_block}{Point\+X\+Y\+Z\+Parameters\+Block}} $>$ \mbox{\hyperlink{classisae_1_1_a_optimizer_a32237b262d7c38ba0ddb5605701083a2}{\+\_\+map\+\_\+lmk\+\_\+ptpar}}
-\item 
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+map for gyroscope bias parameters \end{quote}
+\end{DoxyCompactList}\item 
 std\+::unordered\+\_\+map$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_landmark}{A\+Landmark}} $>$, \mbox{\hyperlink{classisae_1_1_pose_parameters_block}{Pose\+Parameters\+Block}} $>$ \mbox{\hyperlink{classisae_1_1_a_optimizer_a59d1a335979957a419c965dcd9b684ac}{\+\_\+map\+\_\+lmk\+\_\+posepar}}
-\item 
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+map for landmark point parameters \end{quote}
+\end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classisae_1_1_a_optimizer_aa4286b1fbe0da006f275565d62fbd307}{\+\_\+enable\+\_\+sparsif}} = false
-\item 
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+map for landmark pose parameters \end{quote}
+\end{DoxyCompactList}\item 
 std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_marginalization}{Marginalization}} $>$ \mbox{\hyperlink{classisae_1_1_a_optimizer_a5f7bc835fcae19f16d7506c7bc6f2a18}{\+\_\+marginalization}}
-\item 
+\begin{DoxyCompactList}\small\item\em marginalization object \end{DoxyCompactList}\item 
 std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_marginalization}{Marginalization}} $>$ \mbox{\hyperlink{classisae_1_1_a_optimizer_ac29361036986a42cc80aae14163dbeb0}{\+\_\+marginalization\+\_\+last}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em marginalization object of the last optimization \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Abstract class for optimization pipeline based on C\+E\+R\+ES. 
+
+This class provides methods for optimizing frames, landmarks, and local maps. It also implements methods involving factors such as initialization and marginalization. This virtual formulation allows for different optimization scheme with different cost functions, different parameterization or different C\+E\+R\+ES settings (e.\+g. numerical or analytic Jacobians). 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classisae_1_1_a_optimizer_af2d6979354277889eed151037e8920db}\label{classisae_1_1_a_optimizer_af2d6979354277889eed151037e8920db}} 
@@ -94,12 +112,45 @@ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_marginalization}{Margin
 \doxysubsubsection{\texorpdfstring{addIMUResiduals()}{addIMUResiduals()}}
 {\footnotesize\ttfamily uint isae\+::\+A\+Optimizer\+::add\+I\+M\+U\+Residuals (\begin{DoxyParamCaption}\item[{ceres\+::\+Problem \&}]{problem,  }\item[{ceres\+::\+Loss\+Function $\ast$}]{loss\+\_\+function,  }\item[{ceres\+::\+Parameter\+Block\+Ordering $\ast$}]{ordering,  }\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$$>$ \&}]{frame\+\_\+vector,  }\item[{size\+\_\+t}]{fixed\+\_\+frame\+\_\+number }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
 
+
+
+Add \mbox{\hyperlink{classisae_1_1_i_m_u}{I\+MU}} residuals to a C\+E\+R\+ES problem. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em problem} & The C\+E\+R\+ES problem to which the residuals will be added. \\
+\hline
+{\em loss\+\_\+function} & The loss function to be used for the residuals. \\
+\hline
+{\em ordering} & The parameter block ordering for the problem. \\
+\hline
+{\em frame\+\_\+vector} & The vector of frames in the local map. \\
+\hline
+{\em fixed\+\_\+frame\+\_\+number} & The number of frames to fix during optimization. \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classisae_1_1_a_optimizer_ab200573dfb0edebe7b2628e28f9cefef}\label{classisae_1_1_a_optimizer_ab200573dfb0edebe7b2628e28f9cefef}} 
 \index{isae::AOptimizer@{isae::AOptimizer}!addLandmarkResiduals@{addLandmarkResiduals}}
 \index{addLandmarkResiduals@{addLandmarkResiduals}!isae::AOptimizer@{isae::AOptimizer}}
 \doxysubsubsection{\texorpdfstring{addLandmarkResiduals()}{addLandmarkResiduals()}}
 {\footnotesize\ttfamily virtual uint isae\+::\+A\+Optimizer\+::add\+Landmark\+Residuals (\begin{DoxyParamCaption}\item[{ceres\+::\+Problem \&}]{problem,  }\item[{ceres\+::\+Loss\+Function $\ast$}]{loss\+\_\+function,  }\item[{\mbox{\hyperlink{namespaceisae_a4b744e0e080a733838eb133deda894aa}{typed\+\_\+vec\+\_\+landmarks}} \&}]{cloud\+\_\+to\+\_\+optimize }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
 
+
+
+Add visual residuals to a C\+E\+R\+ES problem for structure only BA. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em problem} & The C\+E\+R\+ES problem to which the residuals will be added. \\
+\hline
+{\em loss\+\_\+function} & The loss function to be used for the residuals. \\
+\hline
+{\em cloud\+\_\+to\+\_\+optimize} & The landmarks to be optimized. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of residuals added. 
+\end{DoxyReturn}
 
 
 Implemented in \mbox{\hyperlink{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_abff839c4c8fdcf5b1818e1a08759c570}{isae\+::\+Angular\+Adjustment\+C\+E\+R\+E\+S\+Analytic}}, \mbox{\hyperlink{classisae_1_1_bundle_adjustment_c_e_r_e_s_analytic_a66907e754927d50e5d0313597e5fbf93}{isae\+::\+Bundle\+Adjustment\+C\+E\+R\+E\+S\+Analytic}}, and \mbox{\hyperlink{classisae_1_1_bundle_adjustment_c_e_r_e_s_numeric_a1f25241602882e67ec2954f10e25ad4f}{isae\+::\+Bundle\+Adjustment\+C\+E\+R\+E\+S\+Numeric}}.
@@ -112,6 +163,22 @@ Implemented in \mbox{\hyperlink{classisae_1_1_angular_adjustment_c_e_r_e_s_analy
 
 
 
+Add marginalization residuals to a C\+E\+R\+ES problem. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em problem} & The C\+E\+R\+ES problem to which the residuals will be added. \\
+\hline
+{\em loss\+\_\+function} & The loss function to be used for the residuals. \\
+\hline
+{\em ordering} & The parameter block ordering for the problem. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of marginalization residuals added. 
+\end{DoxyReturn}
+
+
 Reimplemented in \mbox{\hyperlink{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_a312119c24d1e5999447cdd57a5ed6e99}{isae\+::\+Angular\+Adjustment\+C\+E\+R\+E\+S\+Analytic}}, and \mbox{\hyperlink{classisae_1_1_bundle_adjustment_c_e_r_e_s_analytic_a2e4aadc4e03a9a1f098770d32a56aa49}{isae\+::\+Bundle\+Adjustment\+C\+E\+R\+E\+S\+Analytic}}.
 
 \mbox{\Hypertarget{classisae_1_1_a_optimizer_ab4a33aa6977b4d88e7fd3da45f496975}\label{classisae_1_1_a_optimizer_ab4a33aa6977b4d88e7fd3da45f496975}} 
@@ -120,6 +187,28 @@ Reimplemented in \mbox{\hyperlink{classisae_1_1_angular_adjustment_c_e_r_e_s_ana
 \doxysubsubsection{\texorpdfstring{addResidualsLocalMap()}{addResidualsLocalMap()}}
 {\footnotesize\ttfamily virtual uint isae\+::\+A\+Optimizer\+::add\+Residuals\+Local\+Map (\begin{DoxyParamCaption}\item[{ceres\+::\+Problem \&}]{problem,  }\item[{ceres\+::\+Loss\+Function $\ast$}]{loss\+\_\+function,  }\item[{ceres\+::\+Parameter\+Block\+Ordering $\ast$}]{ordering,  }\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$$>$ \&}]{frame\+\_\+vector,  }\item[{size\+\_\+t}]{fixed\+\_\+frame\+\_\+number,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_local_map}{isae\+::\+Local\+Map}} $>$ \&}]{local\+\_\+map }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
 
+
+
+Add visual residuals to a C\+E\+R\+ES problem for a local map. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em problem} & The C\+E\+R\+ES problem to which the residuals will be added. \\
+\hline
+{\em loss\+\_\+function} & The loss function to be used for the residuals. \\
+\hline
+{\em ordering} & The parameter block ordering for the problem. \\
+\hline
+{\em frame\+\_\+vector} & The vector of frames in the local map. \\
+\hline
+{\em fixed\+\_\+frame\+\_\+number} & The number of frames to fix during optimization. \\
+\hline
+{\em local\+\_\+map} & The local map to which the residuals will be added. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of residuals added. 
+\end{DoxyReturn}
 
 
 Implemented in \mbox{\hyperlink{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_a5f716c2a2cf4becdb99bdb6c34d606e3}{isae\+::\+Angular\+Adjustment\+C\+E\+R\+E\+S\+Analytic}}, \mbox{\hyperlink{classisae_1_1_bundle_adjustment_c_e_r_e_s_analytic_adca2a0348ef53521bc1d4f011ef3be5f}{isae\+::\+Bundle\+Adjustment\+C\+E\+R\+E\+S\+Analytic}}, and \mbox{\hyperlink{classisae_1_1_bundle_adjustment_c_e_r_e_s_numeric_a7800b926b6c85d26770586b06b4622a4}{isae\+::\+Bundle\+Adjustment\+C\+E\+R\+E\+S\+Numeric}}.
@@ -132,19 +221,25 @@ Implemented in \mbox{\hyperlink{classisae_1_1_angular_adjustment_c_e_r_e_s_analy
 
 
 
+Add visual residuals to a C\+E\+R\+ES problem for a motion only BA. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em problem} & The C\+E\+R\+ES problem to which the residuals will be added. \\
+\hline
+{\em loss\+\_\+function} & The loss function to be used for the residuals. \\
+\hline
+{\em frame} & The frame to which the residuals will be added. \\
+\hline
+{\em cloud\+\_\+to\+\_\+optimize} & The landmarks belonging to the frame. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of residuals added. 
+\end{DoxyReturn}
+
+
 Implemented in \mbox{\hyperlink{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_af3fb18984ee9f4a0d4bbc291358ef2a3}{isae\+::\+Angular\+Adjustment\+C\+E\+R\+E\+S\+Analytic}}, \mbox{\hyperlink{classisae_1_1_bundle_adjustment_c_e_r_e_s_analytic_a106a9651d7783b34578ecf2c7797a84d}{isae\+::\+Bundle\+Adjustment\+C\+E\+R\+E\+S\+Analytic}}, and \mbox{\hyperlink{classisae_1_1_bundle_adjustment_c_e_r_e_s_numeric_a114d33fe6832de709f1ebe67baf25991}{isae\+::\+Bundle\+Adjustment\+C\+E\+R\+E\+S\+Numeric}}.
-
-\mbox{\Hypertarget{classisae_1_1_a_optimizer_a8f2bbf735f7a12949149dba05c8452ea}\label{classisae_1_1_a_optimizer_a8f2bbf735f7a12949149dba05c8452ea}} 
-\index{isae::AOptimizer@{isae::AOptimizer}!isMovingFrame@{isMovingFrame}}
-\index{isMovingFrame@{isMovingFrame}!isae::AOptimizer@{isae::AOptimizer}}
-\doxysubsubsection{\texorpdfstring{isMovingFrame()}{isMovingFrame()}}
-{\footnotesize\ttfamily bool isae\+::\+A\+Optimizer\+::is\+Moving\+Frame (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{isae\+::\+Frame}} $>$ \&}]{frame,  }\item[{const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{isae\+::\+Frame}} $>$$>$ \&}]{frame\+\_\+vector }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
-
-\mbox{\Hypertarget{classisae_1_1_a_optimizer_a424b6ccab23e863ffd63c1879a34da66}\label{classisae_1_1_a_optimizer_a424b6ccab23e863ffd63c1879a34da66}} 
-\index{isae::AOptimizer@{isae::AOptimizer}!isMovingLandmark@{isMovingLandmark}}
-\index{isMovingLandmark@{isMovingLandmark}!isae::AOptimizer@{isae::AOptimizer}}
-\doxysubsubsection{\texorpdfstring{isMovingLandmark()}{isMovingLandmark()}}
-{\footnotesize\ttfamily bool isae\+::\+A\+Optimizer\+::is\+Moving\+Landmark (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_landmark}{isae\+::\+A\+Landmark}} $>$ \&}]{ldmk,  }\item[{const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_landmark}{isae\+::\+A\+Landmark}} $>$$>$ \&}]{cloud\+\_\+to\+\_\+optimize }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
 
 \mbox{\Hypertarget{classisae_1_1_a_optimizer_a274ac0e977d5878b82d70acbb5af131d}\label{classisae_1_1_a_optimizer_a274ac0e977d5878b82d70acbb5af131d}} 
 \index{isae::AOptimizer@{isae::AOptimizer}!landmarkOptimization@{landmarkOptimization}}
@@ -152,12 +247,36 @@ Implemented in \mbox{\hyperlink{classisae_1_1_angular_adjustment_c_e_r_e_s_analy
 \doxysubsubsection{\texorpdfstring{landmarkOptimization()}{landmarkOptimization()}}
 {\footnotesize\ttfamily bool isae\+::\+A\+Optimizer\+::landmark\+Optimization (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&}]{frame }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{classisae_1_1_a_optimizer_af5aece35985878a1af6989dc47c799e8}\label{classisae_1_1_a_optimizer_af5aece35985878a1af6989dc47c799e8}} 
+
+
+Structure only Bundle Adjustment for a frame. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em frame} & The frame to optimize.\\
+\hline
+\end{DoxyParams}
+This method optimize the landmarks associated to the frame, setting static the pose parameters. It can be used to refine the triangulation of new landmarks. \mbox{\Hypertarget{classisae_1_1_a_optimizer_af5aece35985878a1af6989dc47c799e8}\label{classisae_1_1_a_optimizer_af5aece35985878a1af6989dc47c799e8}} 
 \index{isae::AOptimizer@{isae::AOptimizer}!landmarkOptimizationNoFov@{landmarkOptimizationNoFov}}
 \index{landmarkOptimizationNoFov@{landmarkOptimizationNoFov}!isae::AOptimizer@{isae::AOptimizer}}
 \doxysubsubsection{\texorpdfstring{landmarkOptimizationNoFov()}{landmarkOptimizationNoFov()}}
 {\footnotesize\ttfamily bool isae\+::\+A\+Optimizer\+::landmark\+Optimization\+No\+Fov (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&}]{f,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&}]{fp,  }\item[{Eigen\+::\+Affine3d \&}]{T\+\_\+cam0\+\_\+cam0p,  }\item[{double}]{info\+\_\+scale }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
+
+
+Structure only Bundle Adjustment for a frame with non overlapping fields of view sensors. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & The frame to optimize. \\
+\hline
+{\em fp} & The previous frame to optimize. \\
+\hline
+{\em T\+\_\+cam0\+\_\+cam0p} & The transformation from the current frame to the previous frame. \\
+\hline
+{\em info\+\_\+scale} & The scale factor for the information matrix. \\
+\hline
+\end{DoxyParams}
 
 
 Reimplemented in \mbox{\hyperlink{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_aadce5fdf2492782169622579cb3574d0}{isae\+::\+Angular\+Adjustment\+C\+E\+R\+E\+S\+Analytic}}.
@@ -168,12 +287,34 @@ Reimplemented in \mbox{\hyperlink{classisae_1_1_angular_adjustment_c_e_r_e_s_ana
 \doxysubsubsection{\texorpdfstring{localMapBA()}{localMapBA()}}
 {\footnotesize\ttfamily bool isae\+::\+A\+Optimizer\+::local\+Map\+BA (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_local_map}{isae\+::\+Local\+Map}} $>$ \&}]{local\+\_\+map,  }\item[{const size\+\_\+t}]{fixed\+\_\+frame\+\_\+number = {\ttfamily 0} }\end{DoxyParamCaption})}
 
+
+
+Bundle Adjustment for a local map. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em local\+\_\+map} & The local map to optimize. \\
+\hline
+{\em fixed\+\_\+frame\+\_\+number} & The frame number to fix during optimization (default is 0). \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classisae_1_1_a_optimizer_aeb4e5c6dbed715fb3d36b27e63d04e09}\label{classisae_1_1_a_optimizer_aeb4e5c6dbed715fb3d36b27e63d04e09}} 
 \index{isae::AOptimizer@{isae::AOptimizer}!localMapVIOptimization@{localMapVIOptimization}}
 \index{localMapVIOptimization@{localMapVIOptimization}!isae::AOptimizer@{isae::AOptimizer}}
 \doxysubsubsection{\texorpdfstring{localMapVIOptimization()}{localMapVIOptimization()}}
 {\footnotesize\ttfamily bool isae\+::\+A\+Optimizer\+::local\+Map\+V\+I\+Optimization (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_local_map}{isae\+::\+Local\+Map}} $>$ \&}]{local\+\_\+map,  }\item[{const size\+\_\+t}]{fixed\+\_\+frame\+\_\+number = {\ttfamily 0} }\end{DoxyParamCaption})}
 
+
+
+Visual-\/\+Inertial Bundle Adjustment for a local map. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em local\+\_\+map} & The local map to optimize. \\
+\hline
+{\em fixed\+\_\+frame\+\_\+number} & The frame number to fix during optimization (default is 0). \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classisae_1_1_a_optimizer_a009b26589c47e46be1b722c9824361ec}\label{classisae_1_1_a_optimizer_a009b26589c47e46be1b722c9824361ec}} 
 \index{isae::AOptimizer@{isae::AOptimizer}!marginalize@{marginalize}}
 \index{marginalize@{marginalize}!isae::AOptimizer@{isae::AOptimizer}}
@@ -181,6 +322,19 @@ Reimplemented in \mbox{\hyperlink{classisae_1_1_angular_adjustment_c_e_r_e_s_ana
 {\footnotesize\ttfamily virtual bool isae\+::\+A\+Optimizer\+::marginalize (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&}]{frame0,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&}]{frame1,  }\item[{bool}]{enable\+\_\+sparsif }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
 
 
+
+\mbox{\hyperlink{classisae_1_1_marginalization}{Marginalization}} of a frame and its landmarks. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em frame0} & The frame to marginalize. \\
+\hline
+{\em frame1} & The frame to keep connected to frame0. \\
+\hline
+{\em enable\+\_\+sparsif} & Whether to enable sparsification (default is false).\\
+\hline
+\end{DoxyParams}
+Perform all the marginalization steps for a given frame. A marginalization object deals with all these steps 
 
 Reimplemented in \mbox{\hyperlink{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_ac25d688767a95ceea6b1d224c4451cdd}{isae\+::\+Angular\+Adjustment\+C\+E\+R\+E\+S\+Analytic}}, and \mbox{\hyperlink{classisae_1_1_bundle_adjustment_c_e_r_e_s_analytic_ab6739aac0d7d5e95b090d40d1b915075}{isae\+::\+Bundle\+Adjustment\+C\+E\+R\+E\+S\+Analytic}}.
 
@@ -191,6 +345,20 @@ Reimplemented in \mbox{\hyperlink{classisae_1_1_angular_adjustment_c_e_r_e_s_ana
 {\footnotesize\ttfamily virtual Eigen\+::\+Matrix\+Xd isae\+::\+A\+Optimizer\+::marginalize\+Relative (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&}]{frame0,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&}]{frame1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
 
 
+
+\mbox{\hyperlink{classisae_1_1_marginalization}{Marginalization}} of all the landmarks linked to two frame and computation of the information matrix of the relative pose. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em frame0} & The first frame to marginalize. \\
+\hline
+{\em frame1} & The second frame to marginalize. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The information matrix of the relative pose between frame0 and frame1.
+\end{DoxyReturn}
+This method computes the information matrix of the relative pose between two frames and marginalizes the landmarks linked to them. It uses N\+FR to extract a relative pose factor and to derive its information matrix. 
 
 Reimplemented in \mbox{\hyperlink{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_a8ba91de25b2f5d5fff2612b82c8168ff}{isae\+::\+Angular\+Adjustment\+C\+E\+R\+E\+S\+Analytic}}, and \mbox{\hyperlink{classisae_1_1_bundle_adjustment_c_e_r_e_s_analytic_af3de7ecaa58f8d584bd3e411bbd31778}{isae\+::\+Bundle\+Adjustment\+C\+E\+R\+E\+S\+Analytic}}.
 
@@ -206,18 +374,52 @@ Reimplemented in \mbox{\hyperlink{classisae_1_1_angular_adjustment_c_e_r_e_s_ana
 \doxysubsubsection{\texorpdfstring{singleFrameOptimization()}{singleFrameOptimization()}}
 {\footnotesize\ttfamily bool isae\+::\+A\+Optimizer\+::single\+Frame\+Optimization (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&}]{moving\+\_\+frame }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{classisae_1_1_a_optimizer_a8e52bd65aa73af04da7f64098a444723}\label{classisae_1_1_a_optimizer_a8e52bd65aa73af04da7f64098a444723}} 
+
+
+Motion only Bundle Adjustment for a frame. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em moving\+\_\+frame} & The frame to optimize.\\
+\hline
+\end{DoxyParams}
+This method optimizes the frame\textquotesingle{}s pose parameters only, setting static the landmarks. \mbox{\Hypertarget{classisae_1_1_a_optimizer_a8e52bd65aa73af04da7f64098a444723}\label{classisae_1_1_a_optimizer_a8e52bd65aa73af04da7f64098a444723}} 
 \index{isae::AOptimizer@{isae::AOptimizer}!singleFrameVIOptimization@{singleFrameVIOptimization}}
 \index{singleFrameVIOptimization@{singleFrameVIOptimization}!isae::AOptimizer@{isae::AOptimizer}}
 \doxysubsubsection{\texorpdfstring{singleFrameVIOptimization()}{singleFrameVIOptimization()}}
 {\footnotesize\ttfamily bool isae\+::\+A\+Optimizer\+::single\+Frame\+V\+I\+Optimization (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{isae\+::\+Frame}} $>$ \&}]{moving\+\_\+frame }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{classisae_1_1_a_optimizer_ab295a1cd0d7fcaf22a6040a04b69fb03}\label{classisae_1_1_a_optimizer_ab295a1cd0d7fcaf22a6040a04b69fb03}} 
+
+
+Visual-\/\+Inertial Motion only Bundle Adjustment for a frame. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em moving\+\_\+frame} & The frame to optimize.\\
+\hline
+\end{DoxyParams}
+This method optimizes the frame\textquotesingle{}s pose and velocity parameters. \mbox{\Hypertarget{classisae_1_1_a_optimizer_ab295a1cd0d7fcaf22a6040a04b69fb03}\label{classisae_1_1_a_optimizer_ab295a1cd0d7fcaf22a6040a04b69fb03}} 
 \index{isae::AOptimizer@{isae::AOptimizer}!VIInit@{VIInit}}
 \index{VIInit@{VIInit}!isae::AOptimizer@{isae::AOptimizer}}
 \doxysubsubsection{\texorpdfstring{VIInit()}{VIInit()}}
 {\footnotesize\ttfamily double isae\+::\+A\+Optimizer\+::\+V\+I\+Init (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_local_map}{isae\+::\+Local\+Map}} $>$ \&}]{local\+\_\+map,  }\item[{Eigen\+::\+Matrix3d \&}]{R\+\_\+w\+\_\+i,  }\item[{bool}]{optim\+\_\+scale = {\ttfamily false} }\end{DoxyParamCaption})}
 
+
+
+Visual-\/\+Inertial Initialization for a local map. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em local\+\_\+map} & The local map to initialize. \\
+\hline
+{\em R\+\_\+w\+\_\+i} & The initial rotation of the world frame with respect to the inertial frame. \\
+\hline
+{\em optim\+\_\+scale} & Whether to optimize the scale (default is false). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The scale factor used for initialization. 
+\end{DoxyReturn}
 
 
 \doxysubsection{Member Data Documentation}
@@ -227,17 +429,35 @@ Reimplemented in \mbox{\hyperlink{classisae_1_1_angular_adjustment_c_e_r_e_s_ana
 \doxysubsubsection{\texorpdfstring{\_enable\_sparsif}{\_enable\_sparsif}}
 {\footnotesize\ttfamily bool isae\+::\+A\+Optimizer\+::\+\_\+enable\+\_\+sparsif = false\hspace{0.3cm}{\ttfamily [protected]}}
 
-\mbox{\Hypertarget{classisae_1_1_a_optimizer_a13d29d8bf1207b4dacfc735910281fd9}\label{classisae_1_1_a_optimizer_a13d29d8bf1207b4dacfc735910281fd9}} 
+
+
+\begin{quote}
+map for landmark pose parameters \end{quote}
+
+
+enable sparsification of the marginalization \mbox{\Hypertarget{classisae_1_1_a_optimizer_a13d29d8bf1207b4dacfc735910281fd9}\label{classisae_1_1_a_optimizer_a13d29d8bf1207b4dacfc735910281fd9}} 
 \index{isae::AOptimizer@{isae::AOptimizer}!\_map\_frame\_dbapar@{\_map\_frame\_dbapar}}
 \index{\_map\_frame\_dbapar@{\_map\_frame\_dbapar}!isae::AOptimizer@{isae::AOptimizer}}
 \doxysubsubsection{\texorpdfstring{\_map\_frame\_dbapar}{\_map\_frame\_dbapar}}
 {\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classisae_1_1_frame}{Frame}}$>$, \mbox{\hyperlink{classisae_1_1_point_x_y_z_parameters_block}{Point\+X\+Y\+Z\+Parameters\+Block}}$>$ isae\+::\+A\+Optimizer\+::\+\_\+map\+\_\+frame\+\_\+dbapar\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\begin{quote}
+map for velocity parameters \end{quote}
+
 
 \mbox{\Hypertarget{classisae_1_1_a_optimizer_ab4e0dd85ed92061b4e05dc277c66667d}\label{classisae_1_1_a_optimizer_ab4e0dd85ed92061b4e05dc277c66667d}} 
 \index{isae::AOptimizer@{isae::AOptimizer}!\_map\_frame\_dbgpar@{\_map\_frame\_dbgpar}}
 \index{\_map\_frame\_dbgpar@{\_map\_frame\_dbgpar}!isae::AOptimizer@{isae::AOptimizer}}
 \doxysubsubsection{\texorpdfstring{\_map\_frame\_dbgpar}{\_map\_frame\_dbgpar}}
 {\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classisae_1_1_frame}{Frame}}$>$, \mbox{\hyperlink{classisae_1_1_point_x_y_z_parameters_block}{Point\+X\+Y\+Z\+Parameters\+Block}}$>$ isae\+::\+A\+Optimizer\+::\+\_\+map\+\_\+frame\+\_\+dbgpar\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\begin{quote}
+map for accelerometer bias parameters \end{quote}
+
 
 \mbox{\Hypertarget{classisae_1_1_a_optimizer_a6f5351077b37b7364d0373b066016658}\label{classisae_1_1_a_optimizer_a6f5351077b37b7364d0373b066016658}} 
 \index{isae::AOptimizer@{isae::AOptimizer}!\_map\_frame\_posepar@{\_map\_frame\_posepar}}
@@ -251,11 +471,23 @@ Reimplemented in \mbox{\hyperlink{classisae_1_1_angular_adjustment_c_e_r_e_s_ana
 \doxysubsubsection{\texorpdfstring{\_map\_frame\_velpar}{\_map\_frame\_velpar}}
 {\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classisae_1_1_frame}{Frame}}$>$, \mbox{\hyperlink{classisae_1_1_point_x_y_z_parameters_block}{Point\+X\+Y\+Z\+Parameters\+Block}}$>$ isae\+::\+A\+Optimizer\+::\+\_\+map\+\_\+frame\+\_\+velpar\hspace{0.3cm}{\ttfamily [protected]}}
 
+
+
+\begin{quote}
+map for pose parameters \end{quote}
+
+
 \mbox{\Hypertarget{classisae_1_1_a_optimizer_a59d1a335979957a419c965dcd9b684ac}\label{classisae_1_1_a_optimizer_a59d1a335979957a419c965dcd9b684ac}} 
 \index{isae::AOptimizer@{isae::AOptimizer}!\_map\_lmk\_posepar@{\_map\_lmk\_posepar}}
 \index{\_map\_lmk\_posepar@{\_map\_lmk\_posepar}!isae::AOptimizer@{isae::AOptimizer}}
 \doxysubsubsection{\texorpdfstring{\_map\_lmk\_posepar}{\_map\_lmk\_posepar}}
 {\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classisae_1_1_a_landmark}{A\+Landmark}}$>$, \mbox{\hyperlink{classisae_1_1_pose_parameters_block}{Pose\+Parameters\+Block}}$>$ isae\+::\+A\+Optimizer\+::\+\_\+map\+\_\+lmk\+\_\+posepar\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\begin{quote}
+map for landmark point parameters \end{quote}
+
 
 \mbox{\Hypertarget{classisae_1_1_a_optimizer_a32237b262d7c38ba0ddb5605701083a2}\label{classisae_1_1_a_optimizer_a32237b262d7c38ba0ddb5605701083a2}} 
 \index{isae::AOptimizer@{isae::AOptimizer}!\_map\_lmk\_ptpar@{\_map\_lmk\_ptpar}}
@@ -263,17 +495,31 @@ Reimplemented in \mbox{\hyperlink{classisae_1_1_angular_adjustment_c_e_r_e_s_ana
 \doxysubsubsection{\texorpdfstring{\_map\_lmk\_ptpar}{\_map\_lmk\_ptpar}}
 {\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classisae_1_1_a_landmark}{A\+Landmark}}$>$, \mbox{\hyperlink{classisae_1_1_point_x_y_z_parameters_block}{Point\+X\+Y\+Z\+Parameters\+Block}}$>$ isae\+::\+A\+Optimizer\+::\+\_\+map\+\_\+lmk\+\_\+ptpar\hspace{0.3cm}{\ttfamily [protected]}}
 
+
+
+\begin{quote}
+map for gyroscope bias parameters \end{quote}
+
+
 \mbox{\Hypertarget{classisae_1_1_a_optimizer_a5f7bc835fcae19f16d7506c7bc6f2a18}\label{classisae_1_1_a_optimizer_a5f7bc835fcae19f16d7506c7bc6f2a18}} 
 \index{isae::AOptimizer@{isae::AOptimizer}!\_marginalization@{\_marginalization}}
 \index{\_marginalization@{\_marginalization}!isae::AOptimizer@{isae::AOptimizer}}
 \doxysubsubsection{\texorpdfstring{\_marginalization}{\_marginalization}}
 {\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classisae_1_1_marginalization}{Marginalization}}$>$ isae\+::\+A\+Optimizer\+::\+\_\+marginalization\hspace{0.3cm}{\ttfamily [protected]}}
 
+
+
+marginalization object 
+
 \mbox{\Hypertarget{classisae_1_1_a_optimizer_ac29361036986a42cc80aae14163dbeb0}\label{classisae_1_1_a_optimizer_ac29361036986a42cc80aae14163dbeb0}} 
 \index{isae::AOptimizer@{isae::AOptimizer}!\_marginalization\_last@{\_marginalization\_last}}
 \index{\_marginalization\_last@{\_marginalization\_last}!isae::AOptimizer@{isae::AOptimizer}}
 \doxysubsubsection{\texorpdfstring{\_marginalization\_last}{\_marginalization\_last}}
 {\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classisae_1_1_marginalization}{Marginalization}}$>$ isae\+::\+A\+Optimizer\+::\+\_\+marginalization\+\_\+last\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+marginalization object of the last optimization 
 
 
 

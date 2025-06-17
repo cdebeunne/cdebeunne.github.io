@@ -1,4 +1,4 @@
 <map id="isae::BundleAdjustmentCERESAnalytic" name="isae::BundleAdjustmentCERESAnalytic">
-<area shape="rect" id="node1" title=" " alt="" coords="5,80,279,107"/>
-<area shape="rect" id="node2" href="$classisae_1_1_a_optimizer.html" title=" " alt="" coords="77,5,207,32"/>
+<area shape="rect" id="node1" title="An optimizer that uses Angular Cost function on the unit sphere for Bundle Adjustment and analytical ..." alt="" coords="5,80,279,107"/>
+<area shape="rect" id="node2" href="$classisae_1_1_a_optimizer.html" title="Abstract class for optimization pipeline based on CERES." alt="" coords="77,5,207,32"/>
 </map>

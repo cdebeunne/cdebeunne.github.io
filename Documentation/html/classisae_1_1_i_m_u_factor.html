@@ -74,13 +74,16 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>A cost function for <a class="el" href="classisae_1_1_i_m_u.html" title="An Inertial Measurement Unit (IMU) sensor class.">IMU</a> pre-integration factor, parameters are delta updates.  
+ <a href="classisae_1_1_i_m_u_factor.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="residuals_8hpp_source.html">residuals.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for isae::IMUFactor:</div>
 <div class="dyncontent">
 <div class="center"><img src="classisae_1_1_i_m_u_factor__inherit__graph.png" border="0" usemap="#isae_1_1_i_m_u_factor_inherit__map" alt="Inheritance graph"/></div>
 <map name="isae_1_1_i_m_u_factor_inherit__map" id="isae_1_1_i_m_u_factor_inherit__map">
-<area shape="rect" title=" " alt="" coords="36,95,159,121"/>
+<area shape="rect" title="A cost function for IMU pre&#45;integration factor, parameters are delta updates." alt="" coords="36,95,159,121"/>
 <area shape="rect" title=" " alt="" coords="5,5,189,47"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
@@ -89,7 +92,7 @@ Collaboration diagram for isae::IMUFactor:</div>
 <div class="dyncontent">
 <div class="center"><img src="classisae_1_1_i_m_u_factor__coll__graph.png" border="0" usemap="#isae_1_1_i_m_u_factor_coll__map" alt="Collaboration graph"/></div>
 <map name="isae_1_1_i_m_u_factor_coll__map" id="isae_1_1_i_m_u_factor_coll__map">
-<area shape="rect" title=" " alt="" coords="36,95,159,121"/>
+<area shape="rect" title="A cost function for IMU pre&#45;integration factor, parameters are delta updates." alt="" coords="36,95,159,121"/>
 <area shape="rect" title=" " alt="" coords="5,5,189,47"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
@@ -108,7 +111,11 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:ac1a71a638a51ea8242d3c7742b833213"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classisae_1_1_i_m_u.html">IMU</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_i_m_u_factor.html#ac1a71a638a51ea8242d3c7742b833213">_imu_j</a></td></tr>
 <tr class="separator:ac1a71a638a51ea8242d3c7742b833213"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A cost function for <a class="el" href="classisae_1_1_i_m_u.html" title="An Inertial Measurement Unit (IMU) sensor class.">IMU</a> pre-integration factor, parameters are delta updates. </p>
+<p>The expression and the analytical jacobians are inspired by on "On-Manifold Preintegration for Real-Time
+Visual-Inertial Odometry" by Forster et al. Source: <a href="https://arxiv.org/abs/1512.02363">https://arxiv.org/abs/1512.02363</a> </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a34afb92befae7644a807289de78dd77c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a34afb92befae7644a807289de78dd77c">&#9670;&nbsp;</a></span>IMUFactor()</h2>
 

@@ -73,58 +73,151 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="_config_file_reader_8h_source.html">ConfigFileReader.h</a>&gt;</code></p>
+<p>This structure contains the configuration parameters located in the config file.  
+ <a href="structisae_1_1_config.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="slam_parameters_8h_source.html">slamParameters.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a10e0978ad4ca51239077a1c6a2b5b31a"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structisae_1_1_config.html#a10e0978ad4ca51239077a1c6a2b5b31a">dataset_path</a></td></tr>
 <tr class="separator:a10e0978ad4ca51239077a1c6a2b5b31a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:affb2739adecadc2f8d951fc36d4667b7"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structisae_1_1_config.html#affb2739adecadc2f8d951fc36d4667b7">dataset_id</a></td></tr>
+<tr class="memdesc:affb2739adecadc2f8d951fc36d4667b7"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p>Path to the dataset </p>
+</blockquote>
+ <a href="structisae_1_1_config.html#affb2739adecadc2f8d951fc36d4667b7">More...</a><br /></td></tr>
 <tr class="separator:affb2739adecadc2f8d951fc36d4667b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a135286d1cd6545c07ec3821631675e8f"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structisae_1_1_config.html#a135286d1cd6545c07ec3821631675e8f">slam_mode</a></td></tr>
+<tr class="memdesc:a135286d1cd6545c07ec3821631675e8f"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p>Id of the dataset </p>
+</blockquote>
+ <a href="structisae_1_1_config.html#a135286d1cd6545c07ec3821631675e8f">More...</a><br /></td></tr>
 <tr class="separator:a135286d1cd6545c07ec3821631675e8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4be128c4437ee4362fdd5ced4ea7a56b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structisae_1_1_config.html#a4be128c4437ee4362fdd5ced4ea7a56b">multithreading</a></td></tr>
+<tr class="memdesc:a4be128c4437ee4362fdd5ced4ea7a56b"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p>SLAM mode (mono, bimono, monovio...) </p>
+</blockquote>
+ <a href="structisae_1_1_config.html#a4be128c4437ee4362fdd5ced4ea7a56b">More...</a><br /></td></tr>
 <tr class="separator:a4be128c4437ee4362fdd5ced4ea7a56b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a120073d23bf9a50839e0c33068b6070c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structisae_1_1_config.html#a120073d23bf9a50839e0c33068b6070c">enable_visu</a></td></tr>
+<tr class="memdesc:a120073d23bf9a50839e0c33068b6070c"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p>Allow to run front-end and back-end on different threads (unstable...) </p>
+</blockquote>
+ <a href="structisae_1_1_config.html#a120073d23bf9a50839e0c33068b6070c">More...</a><br /></td></tr>
 <tr class="separator:a120073d23bf9a50839e0c33068b6070c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeed2138f18471c54a64167aa79386273"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structisae_1_1_config.html#aeed2138f18471c54a64167aa79386273">optimizer</a></td></tr>
+<tr class="memdesc:aeed2138f18471c54a64167aa79386273"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p>Allow visualization </p>
+</blockquote>
+ <a href="structisae_1_1_config.html#aeed2138f18471c54a64167aa79386273">More...</a><br /></td></tr>
 <tr class="separator:aeed2138f18471c54a64167aa79386273"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8377fbb90063c74e14de8206cf7494cb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structisae_1_1_config.html#a8377fbb90063c74e14de8206cf7494cb">contrast_enhancer</a></td></tr>
+<tr class="memdesc:a8377fbb90063c74e14de8206cf7494cb"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p>Optimizer type (ReprojectionError, AngularError...) </p>
+</blockquote>
+ <a href="structisae_1_1_config.html#a8377fbb90063c74e14de8206cf7494cb">More...</a><br /></td></tr>
 <tr class="separator:a8377fbb90063c74e14de8206cf7494cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a75baa21879670e087412210f2de5b83c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structisae_1_1_config.html#a75baa21879670e087412210f2de5b83c">clahe_clip</a></td></tr>
+<tr class="memdesc:a75baa21879670e087412210f2de5b83c"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p>integer to choose the contrast enhancement algorithm </p>
+</blockquote>
+ <a href="structisae_1_1_config.html#a75baa21879670e087412210f2de5b83c">More...</a><br /></td></tr>
 <tr class="separator:a75baa21879670e087412210f2de5b83c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b84d6dc962007d3490d021312557cae"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structisae_1_1_config.html#a1b84d6dc962007d3490d021312557cae">downsampling</a></td></tr>
+<tr class="memdesc:a1b84d6dc962007d3490d021312557cae"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p>Clip of CLAHE (useful only if it is chosen for contrast enhancement) </p>
+</blockquote>
+ <a href="structisae_1_1_config.html#a1b84d6dc962007d3490d021312557cae">More...</a><br /></td></tr>
 <tr class="separator:a1b84d6dc962007d3490d021312557cae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a327a1dbc966f3a4bf9b7084da7a633a0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structisae_1_1_config.html#a327a1dbc966f3a4bf9b7084da7a633a0">marginalization</a></td></tr>
+<tr class="memdesc:a327a1dbc966f3a4bf9b7084da7a633a0"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p>Float to reduce the size of the image (0,5 = half the size of the img) </p>
+</blockquote>
+ <a href="structisae_1_1_config.html#a327a1dbc966f3a4bf9b7084da7a633a0">More...</a><br /></td></tr>
 <tr class="separator:a327a1dbc966f3a4bf9b7084da7a633a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a620f65f9f3e337dcb692114bf465b4d1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structisae_1_1_config.html#a620f65f9f3e337dcb692114bf465b4d1">sparsification</a></td></tr>
+<tr class="memdesc:a620f65f9f3e337dcb692114bf465b4d1"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p>0 no marginalization, 1 marginalization </p>
+</blockquote>
+ <a href="structisae_1_1_config.html#a620f65f9f3e337dcb692114bf465b4d1">More...</a><br /></td></tr>
 <tr class="separator:a620f65f9f3e337dcb692114bf465b4d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a67960a5776073f3da1f1c1238b300b17"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structisae_1_1_config.html#a67960a5776073f3da1f1c1238b300b17">pose_estimator</a></td></tr>
+<tr class="memdesc:a67960a5776073f3da1f1c1238b300b17"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p>0 no sparsification, 1 sparsification </p>
+</blockquote>
+ <a href="structisae_1_1_config.html#a67960a5776073f3da1f1c1238b300b17">More...</a><br /></td></tr>
 <tr class="separator:a67960a5776073f3da1f1c1238b300b17"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adbd202e384159f21f3ff5a32254cd86a"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structisae_1_1_config.html#adbd202e384159f21f3ff5a32254cd86a">tracker</a></td></tr>
+<tr class="memdesc:adbd202e384159f21f3ff5a32254cd86a"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p>Type of pose estimator </p>
+</blockquote>
+ <a href="structisae_1_1_config.html#adbd202e384159f21f3ff5a32254cd86a">More...</a><br /></td></tr>
 <tr class="separator:adbd202e384159f21f3ff5a32254cd86a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afa14d7801fc2e7f9cc0d59b22b062b0c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structisae_1_1_config.html#afa14d7801fc2e7f9cc0d59b22b062b0c">min_kf_number</a></td></tr>
+<tr class="memdesc:afa14d7801fc2e7f9cc0d59b22b062b0c"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p>Type of tracking (matcher or klt) </p>
+</blockquote>
+ <a href="structisae_1_1_config.html#afa14d7801fc2e7f9cc0d59b22b062b0c">More...</a><br /></td></tr>
 <tr class="separator:afa14d7801fc2e7f9cc0d59b22b062b0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa0e2c6092ecfffa24cd50713ba14db81"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structisae_1_1_config.html#aa0e2c6092ecfffa24cd50713ba14db81">max_kf_number</a></td></tr>
+<tr class="memdesc:aa0e2c6092ecfffa24cd50713ba14db81"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p>Minimum KF for optimization </p>
+</blockquote>
+ <a href="structisae_1_1_config.html#aa0e2c6092ecfffa24cd50713ba14db81">More...</a><br /></td></tr>
 <tr class="separator:aa0e2c6092ecfffa24cd50713ba14db81"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a81e78c0fae5c7ef397969d9d788164"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structisae_1_1_config.html#a6a81e78c0fae5c7ef397969d9d788164">fixed_frame_number</a></td></tr>
+<tr class="memdesc:a6a81e78c0fae5c7ef397969d9d788164"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p>Size maximum of the sliding windown </p>
+</blockquote>
+ <a href="structisae_1_1_config.html#a6a81e78c0fae5c7ef397969d9d788164">More...</a><br /></td></tr>
 <tr class="separator:a6a81e78c0fae5c7ef397969d9d788164"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adeada101c8bd5025cc0a372499dfd223"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structisae_1_1_config.html#adeada101c8bd5025cc0a372499dfd223">min_lmk_number</a></td></tr>
+<tr class="memdesc:adeada101c8bd5025cc0a372499dfd223"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p>Number of fixed frame for gauge fixing </p>
+</blockquote>
+ <a href="structisae_1_1_config.html#adeada101c8bd5025cc0a372499dfd223">More...</a><br /></td></tr>
 <tr class="separator:adeada101c8bd5025cc0a372499dfd223"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af3f3c2e778413f7b9b715ee773fcb6b1"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structisae_1_1_config.html#af3f3c2e778413f7b9b715ee773fcb6b1">min_movement_parallax</a></td></tr>
+<tr class="memdesc:af3f3c2e778413f7b9b715ee773fcb6b1"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p>Below this number of landmark, a KF is voted </p>
+</blockquote>
+ <a href="structisae_1_1_config.html#af3f3c2e778413f7b9b715ee773fcb6b1">More...</a><br /></td></tr>
 <tr class="separator:af3f3c2e778413f7b9b715ee773fcb6b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a34497c04afba80a03541342190c79a8c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structisae_1_1_config.html#a34497c04afba80a03541342190c79a8c">max_movement_parallax</a></td></tr>
+<tr class="memdesc:a34497c04afba80a03541342190c79a8c"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p>Below this parallax, no motion is considered </p>
+</blockquote>
+ <a href="structisae_1_1_config.html#a34497c04afba80a03541342190c79a8c">More...</a><br /></td></tr>
 <tr class="separator:a34497c04afba80a03541342190c79a8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa92b004a71992e70494d41672c53e2c4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structisae_1_1_config.html#aa92b004a71992e70494d41672c53e2c4">mesh3D</a></td></tr>
+<tr class="memdesc:aa92b004a71992e70494d41672c53e2c4"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p>Over this parallax, a KF is voted </p>
+</blockquote>
+ <a href="structisae_1_1_config.html#aa92b004a71992e70494d41672c53e2c4">More...</a><br /></td></tr>
 <tr class="separator:aa92b004a71992e70494d41672c53e2c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6d1d7c12feb89008fa45fa4282c31d45"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structisae_1_1_config.html#a6d1d7c12feb89008fa45fa4282c31d45">ZNCC_tsh</a></td></tr>
+<tr class="memdesc:a6d1d7c12feb89008fa45fa4282c31d45"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p>0 no 3D mesh, 1 3D mesh </p>
+</blockquote>
+ <a href="structisae_1_1_config.html#a6d1d7c12feb89008fa45fa4282c31d45">More...</a><br /></td></tr>
 <tr class="separator:a6d1d7c12feb89008fa45fa4282c31d45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaf5721dd1b10b94303e6971966444c8a"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structisae_1_1_config.html#aaf5721dd1b10b94303e6971966444c8a">max_length_tsh</a></td></tr>
+<tr class="memdesc:aaf5721dd1b10b94303e6971966444c8a"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p>Threshold on ZNCC for triangle filtering </p>
+</blockquote>
+ <a href="structisae_1_1_config.html#aaf5721dd1b10b94303e6971966444c8a">More...</a><br /></td></tr>
 <tr class="separator:aaf5721dd1b10b94303e6971966444c8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a586b1391bf3ae15e551b26861a916231"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structisae_1_1_feature_struct.html">isae::FeatureStruct</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structisae_1_1_config.html#a586b1391bf3ae15e551b26861a916231">features_handled</a></td></tr>
-<tr class="separator:a586b1391bf3ae15e551b26861a916231"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a0730ae467445546a8fc2a15b3ac35d"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structisae_1_1_feature_struct.html">FeatureStruct</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structisae_1_1_config.html#a4a0730ae467445546a8fc2a15b3ac35d">features_handled</a></td></tr>
+<tr class="memdesc:a4a0730ae467445546a8fc2a15b3ac35d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p>Threshold on maximum length for triangle filtering </p>
+</blockquote>
+ <a href="structisae_1_1_config.html#a4a0730ae467445546a8fc2a15b3ac35d">More...</a><br /></td></tr>
+<tr class="separator:a4a0730ae467445546a8fc2a15b3ac35d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Data Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>This structure contains the configuration parameters located in the config file. </p>
+</div><h2 class="groupheader">Member Data Documentation</h2>
 <a id="a75baa21879670e087412210f2de5b83c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a75baa21879670e087412210f2de5b83c">&#9670;&nbsp;</a></span>clahe_clip</h2>
 
@@ -136,6 +229,11 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p><blockquote class="doxtable">
+<p>integer to choose the contrast enhancement algorithm </p>
+</blockquote>
+</p>
 
 </div>
 </div>
@@ -151,6 +249,11 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p><blockquote class="doxtable">
+<p>Optimizer type (ReprojectionError, AngularError...) </p>
+</blockquote>
+</p>
+
 </div>
 </div>
 <a id="affb2739adecadc2f8d951fc36d4667b7"></a>
@@ -164,6 +267,11 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p><blockquote class="doxtable">
+<p>Path to the dataset </p>
+</blockquote>
+</p>
 
 </div>
 </div>
@@ -193,6 +301,11 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p><blockquote class="doxtable">
+<p>Clip of CLAHE (useful only if it is chosen for contrast enhancement) </p>
+</blockquote>
+</p>
+
 </div>
 </div>
 <a id="a120073d23bf9a50839e0c33068b6070c"></a>
@@ -207,19 +320,29 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p><blockquote class="doxtable">
+<p>Allow to run front-end and back-end on different threads (unstable...) </p>
+</blockquote>
+</p>
+
 </div>
 </div>
-<a id="a586b1391bf3ae15e551b26861a916231"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a586b1391bf3ae15e551b26861a916231">&#9670;&nbsp;</a></span>features_handled</h2>
+<a id="a4a0730ae467445546a8fc2a15b3ac35d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a0730ae467445546a8fc2a15b3ac35d">&#9670;&nbsp;</a></span>features_handled</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="structisae_1_1_feature_struct.html">isae::FeatureStruct</a>&gt; isae::Config::features_handled</td>
+          <td class="memname">std::vector&lt;<a class="el" href="structisae_1_1_feature_struct.html">FeatureStruct</a>&gt; isae::Config::features_handled</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p><blockquote class="doxtable">
+<p>Threshold on maximum length for triangle filtering </p>
+</blockquote>
+</p>
 
 </div>
 </div>
@@ -235,6 +358,11 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p><blockquote class="doxtable">
+<p>Size maximum of the sliding windown </p>
+</blockquote>
+</p>
+
 </div>
 </div>
 <a id="a327a1dbc966f3a4bf9b7084da7a633a0"></a>
@@ -248,6 +376,11 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p><blockquote class="doxtable">
+<p>Float to reduce the size of the image (0,5 = half the size of the img) </p>
+</blockquote>
+</p>
 
 </div>
 </div>
@@ -263,6 +396,11 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p><blockquote class="doxtable">
+<p>Minimum KF for optimization </p>
+</blockquote>
+</p>
+
 </div>
 </div>
 <a id="aaf5721dd1b10b94303e6971966444c8a"></a>
@@ -276,6 +414,11 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p><blockquote class="doxtable">
+<p>Threshold on ZNCC for triangle filtering </p>
+</blockquote>
+</p>
 
 </div>
 </div>
@@ -291,6 +434,11 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p><blockquote class="doxtable">
+<p>Below this parallax, no motion is considered </p>
+</blockquote>
+</p>
+
 </div>
 </div>
 <a id="aa92b004a71992e70494d41672c53e2c4"></a>
@@ -304,6 +452,11 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p><blockquote class="doxtable">
+<p>Over this parallax, a KF is voted </p>
+</blockquote>
+</p>
 
 </div>
 </div>
@@ -319,6 +472,11 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p><blockquote class="doxtable">
+<p>Type of tracking (matcher or klt) </p>
+</blockquote>
+</p>
+
 </div>
 </div>
 <a id="adeada101c8bd5025cc0a372499dfd223"></a>
@@ -332,6 +490,11 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p><blockquote class="doxtable">
+<p>Number of fixed frame for gauge fixing </p>
+</blockquote>
+</p>
 
 </div>
 </div>
@@ -347,6 +510,11 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p><blockquote class="doxtable">
+<p>Below this number of landmark, a KF is voted </p>
+</blockquote>
+</p>
+
 </div>
 </div>
 <a id="a4be128c4437ee4362fdd5ced4ea7a56b"></a>
@@ -360,6 +528,11 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p><blockquote class="doxtable">
+<p>SLAM mode (mono, bimono, monovio...) </p>
+</blockquote>
+</p>
 
 </div>
 </div>
@@ -375,6 +548,11 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p><blockquote class="doxtable">
+<p>Allow visualization </p>
+</blockquote>
+</p>
+
 </div>
 </div>
 <a id="a67960a5776073f3da1f1c1238b300b17"></a>
@@ -388,6 +566,11 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p><blockquote class="doxtable">
+<p>0 no sparsification, 1 sparsification </p>
+</blockquote>
+</p>
 
 </div>
 </div>
@@ -403,6 +586,11 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p><blockquote class="doxtable">
+<p>Id of the dataset </p>
+</blockquote>
+</p>
+
 </div>
 </div>
 <a id="a620f65f9f3e337dcb692114bf465b4d1"></a>
@@ -416,6 +604,11 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p><blockquote class="doxtable">
+<p>0 no marginalization, 1 marginalization </p>
+</blockquote>
+</p>
 
 </div>
 </div>
@@ -431,6 +624,11 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p><blockquote class="doxtable">
+<p>Type of pose estimator </p>
+</blockquote>
+</p>
+
 </div>
 </div>
 <a id="a6d1d7c12feb89008fa45fa4282c31d45"></a>
@@ -445,10 +643,15 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p><blockquote class="doxtable">
+<p>0 no 3D mesh, 1 3D mesh </p>
+</blockquote>
+</p>
+
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>/home/deos/ce.debeunne/colcon_ws/src/SaDVIO/cpp/include/utilities/<a class="el" href="_config_file_reader_8h_source.html">ConfigFileReader.h</a></li>
+<li>/home/deos/ce.debeunne/colcon_ws/src/SaDVIO/cpp/include/isaeslam/<a class="el" href="slam_parameters_8h_source.html">slamParameters.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

@@ -1,0 +1,124 @@
+\hypertarget{classisae_1_1_angular_error_scale_cam0}{}\doxysection{isae\+::Angular\+Error\+Scale\+Cam0 Class Reference}
+\label{classisae_1_1_angular_error_scale_cam0}\index{isae::AngularErrorScaleCam0@{isae::AngularErrorScaleCam0}}
+
+
+An angular cost function that depends on the scale of the motion.  
+
+
+
+
+{\ttfamily \#include $<$Angular\+Adjustment\+C\+E\+R\+E\+S\+Analytic.\+h$>$}
+
+
+
+Inheritance diagram for isae\+::Angular\+Error\+Scale\+Cam0\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{classisae_1_1_angular_error_scale_cam0__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for isae\+::Angular\+Error\+Scale\+Cam0\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{classisae_1_1_angular_error_scale_cam0__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classisae_1_1_angular_error_scale_cam0_a1dbb6ada3dd7caab1802774faa2a8189}{Angular\+Error\+Scale\+Cam0}} (const Eigen\+::\+Vector3d \&bearing\+\_\+vector, const Eigen\+::\+Vector3d \&t\+\_\+w\+\_\+lmk, const Eigen\+::\+Affine3d \&T\+\_\+cam0\+\_\+w, const Eigen\+::\+Affine3d \&T\+\_\+cam0\+\_\+cam0p, const Eigen\+::\+Affine3d \&T\+\_\+cam\+\_\+cam0, const double sigma)
+\item 
+\mbox{\hyperlink{classisae_1_1_angular_error_scale_cam0_ab481ea262da6e0b541e204b61d643b6f}{Angular\+Error\+Scale\+Cam0}} ()
+\item 
+virtual bool \mbox{\hyperlink{classisae_1_1_angular_error_scale_cam0_a08db31c8d6d44aaa512c6779a455ca57}{Evaluate}} (double const $\ast$const $\ast$parameters, double $\ast$residuals, double $\ast$$\ast$jacobians) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const Eigen\+::\+Vector3d \mbox{\hyperlink{classisae_1_1_angular_error_scale_cam0_a046a1b378332be6ff6bb4c5dfc62285d}{\+\_\+bearing\+\_\+vector}}
+\item 
+const Eigen\+::\+Vector3d \mbox{\hyperlink{classisae_1_1_angular_error_scale_cam0_a746c241e3433834dffcf0190ee186b36}{\+\_\+t\+\_\+w\+\_\+lmk}}
+\item 
+const Eigen\+::\+Affine3d \mbox{\hyperlink{classisae_1_1_angular_error_scale_cam0_ab3384a1489acd61b01a8e6d3d18b0557}{\+\_\+\+T\+\_\+cam0\+\_\+w}}
+\item 
+const Eigen\+::\+Affine3d \mbox{\hyperlink{classisae_1_1_angular_error_scale_cam0_a32d6710a64f998ab4e8c7620d51114f4}{\+\_\+\+T\+\_\+cam0\+\_\+cam0p}}
+\item 
+const Eigen\+::\+Affine3d \mbox{\hyperlink{classisae_1_1_angular_error_scale_cam0_a14fc8444642c6246ed8322c765bf4d00}{\+\_\+\+T\+\_\+cam\+\_\+cam0}}
+\item 
+double \mbox{\hyperlink{classisae_1_1_angular_error_scale_cam0_afa14323e35c14812aee9fec1e8749ac2}{\+\_\+sigma}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An angular cost function that depends on the scale of the motion. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classisae_1_1_angular_error_scale_cam0_a1dbb6ada3dd7caab1802774faa2a8189}\label{classisae_1_1_angular_error_scale_cam0_a1dbb6ada3dd7caab1802774faa2a8189}} 
+\index{isae::AngularErrorScaleCam0@{isae::AngularErrorScaleCam0}!AngularErrorScaleCam0@{AngularErrorScaleCam0}}
+\index{AngularErrorScaleCam0@{AngularErrorScaleCam0}!isae::AngularErrorScaleCam0@{isae::AngularErrorScaleCam0}}
+\doxysubsubsection{\texorpdfstring{AngularErrorScaleCam0()}{AngularErrorScaleCam0()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily isae\+::\+Angular\+Error\+Scale\+Cam0\+::\+Angular\+Error\+Scale\+Cam0 (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Vector3d \&}]{bearing\+\_\+vector,  }\item[{const Eigen\+::\+Vector3d \&}]{t\+\_\+w\+\_\+lmk,  }\item[{const Eigen\+::\+Affine3d \&}]{T\+\_\+cam0\+\_\+w,  }\item[{const Eigen\+::\+Affine3d \&}]{T\+\_\+cam0\+\_\+cam0p,  }\item[{const Eigen\+::\+Affine3d \&}]{T\+\_\+cam\+\_\+cam0,  }\item[{const double}]{sigma }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_angular_error_scale_cam0_ab481ea262da6e0b541e204b61d643b6f}\label{classisae_1_1_angular_error_scale_cam0_ab481ea262da6e0b541e204b61d643b6f}} 
+\index{isae::AngularErrorScaleCam0@{isae::AngularErrorScaleCam0}!AngularErrorScaleCam0@{AngularErrorScaleCam0}}
+\index{AngularErrorScaleCam0@{AngularErrorScaleCam0}!isae::AngularErrorScaleCam0@{isae::AngularErrorScaleCam0}}
+\doxysubsubsection{\texorpdfstring{AngularErrorScaleCam0()}{AngularErrorScaleCam0()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily isae\+::\+Angular\+Error\+Scale\+Cam0\+::\+Angular\+Error\+Scale\+Cam0 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classisae_1_1_angular_error_scale_cam0_a08db31c8d6d44aaa512c6779a455ca57}\label{classisae_1_1_angular_error_scale_cam0_a08db31c8d6d44aaa512c6779a455ca57}} 
+\index{isae::AngularErrorScaleCam0@{isae::AngularErrorScaleCam0}!Evaluate@{Evaluate}}
+\index{Evaluate@{Evaluate}!isae::AngularErrorScaleCam0@{isae::AngularErrorScaleCam0}}
+\doxysubsubsection{\texorpdfstring{Evaluate()}{Evaluate()}}
+{\footnotesize\ttfamily virtual bool isae\+::\+Angular\+Error\+Scale\+Cam0\+::\+Evaluate (\begin{DoxyParamCaption}\item[{double const $\ast$const $\ast$}]{parameters,  }\item[{double $\ast$}]{residuals,  }\item[{double $\ast$$\ast$}]{jacobians }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classisae_1_1_angular_error_scale_cam0_a046a1b378332be6ff6bb4c5dfc62285d}\label{classisae_1_1_angular_error_scale_cam0_a046a1b378332be6ff6bb4c5dfc62285d}} 
+\index{isae::AngularErrorScaleCam0@{isae::AngularErrorScaleCam0}!\_bearing\_vector@{\_bearing\_vector}}
+\index{\_bearing\_vector@{\_bearing\_vector}!isae::AngularErrorScaleCam0@{isae::AngularErrorScaleCam0}}
+\doxysubsubsection{\texorpdfstring{\_bearing\_vector}{\_bearing\_vector}}
+{\footnotesize\ttfamily const Eigen\+::\+Vector3d isae\+::\+Angular\+Error\+Scale\+Cam0\+::\+\_\+bearing\+\_\+vector}
+
+\mbox{\Hypertarget{classisae_1_1_angular_error_scale_cam0_afa14323e35c14812aee9fec1e8749ac2}\label{classisae_1_1_angular_error_scale_cam0_afa14323e35c14812aee9fec1e8749ac2}} 
+\index{isae::AngularErrorScaleCam0@{isae::AngularErrorScaleCam0}!\_sigma@{\_sigma}}
+\index{\_sigma@{\_sigma}!isae::AngularErrorScaleCam0@{isae::AngularErrorScaleCam0}}
+\doxysubsubsection{\texorpdfstring{\_sigma}{\_sigma}}
+{\footnotesize\ttfamily double isae\+::\+Angular\+Error\+Scale\+Cam0\+::\+\_\+sigma}
+
+\mbox{\Hypertarget{classisae_1_1_angular_error_scale_cam0_a32d6710a64f998ab4e8c7620d51114f4}\label{classisae_1_1_angular_error_scale_cam0_a32d6710a64f998ab4e8c7620d51114f4}} 
+\index{isae::AngularErrorScaleCam0@{isae::AngularErrorScaleCam0}!\_T\_cam0\_cam0p@{\_T\_cam0\_cam0p}}
+\index{\_T\_cam0\_cam0p@{\_T\_cam0\_cam0p}!isae::AngularErrorScaleCam0@{isae::AngularErrorScaleCam0}}
+\doxysubsubsection{\texorpdfstring{\_T\_cam0\_cam0p}{\_T\_cam0\_cam0p}}
+{\footnotesize\ttfamily const Eigen\+::\+Affine3d isae\+::\+Angular\+Error\+Scale\+Cam0\+::\+\_\+\+T\+\_\+cam0\+\_\+cam0p}
+
+\mbox{\Hypertarget{classisae_1_1_angular_error_scale_cam0_ab3384a1489acd61b01a8e6d3d18b0557}\label{classisae_1_1_angular_error_scale_cam0_ab3384a1489acd61b01a8e6d3d18b0557}} 
+\index{isae::AngularErrorScaleCam0@{isae::AngularErrorScaleCam0}!\_T\_cam0\_w@{\_T\_cam0\_w}}
+\index{\_T\_cam0\_w@{\_T\_cam0\_w}!isae::AngularErrorScaleCam0@{isae::AngularErrorScaleCam0}}
+\doxysubsubsection{\texorpdfstring{\_T\_cam0\_w}{\_T\_cam0\_w}}
+{\footnotesize\ttfamily const Eigen\+::\+Affine3d isae\+::\+Angular\+Error\+Scale\+Cam0\+::\+\_\+\+T\+\_\+cam0\+\_\+w}
+
+\mbox{\Hypertarget{classisae_1_1_angular_error_scale_cam0_a14fc8444642c6246ed8322c765bf4d00}\label{classisae_1_1_angular_error_scale_cam0_a14fc8444642c6246ed8322c765bf4d00}} 
+\index{isae::AngularErrorScaleCam0@{isae::AngularErrorScaleCam0}!\_T\_cam\_cam0@{\_T\_cam\_cam0}}
+\index{\_T\_cam\_cam0@{\_T\_cam\_cam0}!isae::AngularErrorScaleCam0@{isae::AngularErrorScaleCam0}}
+\doxysubsubsection{\texorpdfstring{\_T\_cam\_cam0}{\_T\_cam\_cam0}}
+{\footnotesize\ttfamily const Eigen\+::\+Affine3d isae\+::\+Angular\+Error\+Scale\+Cam0\+::\+\_\+\+T\+\_\+cam\+\_\+cam0}
+
+\mbox{\Hypertarget{classisae_1_1_angular_error_scale_cam0_a746c241e3433834dffcf0190ee186b36}\label{classisae_1_1_angular_error_scale_cam0_a746c241e3433834dffcf0190ee186b36}} 
+\index{isae::AngularErrorScaleCam0@{isae::AngularErrorScaleCam0}!\_t\_w\_lmk@{\_t\_w\_lmk}}
+\index{\_t\_w\_lmk@{\_t\_w\_lmk}!isae::AngularErrorScaleCam0@{isae::AngularErrorScaleCam0}}
+\doxysubsubsection{\texorpdfstring{\_t\_w\_lmk}{\_t\_w\_lmk}}
+{\footnotesize\ttfamily const Eigen\+::\+Vector3d isae\+::\+Angular\+Error\+Scale\+Cam0\+::\+\_\+t\+\_\+w\+\_\+lmk}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/deos/ce.\+debeunne/colcon\+\_\+ws/src/\+Sa\+D\+V\+I\+O/cpp/include/isaeslam/optimizers/\mbox{\hyperlink{_angular_adjustment_c_e_r_e_s_analytic_8h}{Angular\+Adjustment\+C\+E\+R\+E\+S\+Analytic.\+h}}\end{DoxyCompactItemize}

@@ -2,6 +2,11 @@
 \label{classisae_1_1_a_landmark_initializer}\index{isae::ALandmarkInitializer@{isae::ALandmarkInitializer}}
 
 
+Abstract class for initializing landmarks.  
+
+
+
+
 {\ttfamily \#include $<$alandmarkinitializer.\+h$>$}
 
 
@@ -25,38 +30,41 @@ Collaboration diagram for isae\+::A\+Landmark\+Initializer\+:\nopagebreak
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classisae_1_1_a_landmark_initializer_a68287d3e69d9b643546b66de679fce94}{A\+Landmark\+Initializer}} (uint nb\+\_\+requiered\+\_\+ldmk)
+\mbox{\hyperlink{classisae_1_1_a_landmark_initializer_a6a5b7040081ed679f8aa9809898a1931}{A\+Landmark\+Initializer}} ()=default
 \item 
 \mbox{\hyperlink{classisae_1_1_a_landmark_initializer_ab8b6a5a967b110556f69b8cff6cc398c}{$\sim$\+A\+Landmark\+Initializer}} ()
 \item 
-\mbox{\hyperlink{namespaceisae_a4b744e0e080a733838eb133deda894aa}{typed\+\_\+vec\+\_\+landmarks}} \mbox{\hyperlink{classisae_1_1_a_landmark_initializer_a4ed49c6370c59622a778043ce25ca506}{get\+Initialized\+Landmarks}} ()
-\item 
-uint \mbox{\hyperlink{classisae_1_1_a_landmark_initializer_ae85976440b4267eef8f75d39ff4275cb}{init\+From\+Match}} (\mbox{\hyperlink{namespaceisae_ae9c6a8ee0303d61cb2823618735f2383}{feature\+\_\+pair}} match)
-\item 
-uint \mbox{\hyperlink{classisae_1_1_a_landmark_initializer_ad2a636ba13118854ef32ce55d94b2a7f}{init\+From\+Matches}} (\mbox{\hyperlink{namespaceisae_ac61c2f881f902dbfef491caaa5135c9c}{vec\+\_\+match}} matches)
-\item 
+uint \mbox{\hyperlink{classisae_1_1_a_landmark_initializer_ae85976440b4267eef8f75d39ff4275cb}{init\+From\+Match}} (\mbox{\hyperlink{namespaceisae_ab4a885dce1b03422dfcdfb9a4747aaef}{feature\+\_\+pair}} match)
+\begin{DoxyCompactList}\small\item\em Initialize landmarks from a feature pair. \end{DoxyCompactList}\item 
+uint \mbox{\hyperlink{classisae_1_1_a_landmark_initializer_ad2a636ba13118854ef32ce55d94b2a7f}{init\+From\+Matches}} (\mbox{\hyperlink{namespaceisae_a018dfa0f3c618541bf2674aaefa20d61}{vec\+\_\+match}} matches)
+\begin{DoxyCompactList}\small\item\em Initialize landmarks from a vector of feature matches. \end{DoxyCompactList}\item 
 uint \mbox{\hyperlink{classisae_1_1_a_landmark_initializer_a50d34d811bd78bd50917b857f9aaaebc}{init\+From\+Features}} (std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$ feats)
-\item 
-uint \mbox{\hyperlink{classisae_1_1_a_landmark_initializer_a3e014fc60de61d2d08c837e9bec37ae5}{get\+Nb\+Requiered\+Ldmk}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Initialize landmarks from a vector of feature tracks. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_landmark}{A\+Landmark}} $>$ \mbox{\hyperlink{classisae_1_1_a_landmark_initializer_abb82840c8ffef4c51f225ee8b4a623ce}{create\+New\+Landmark}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$ f1, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$ f2)
-\end{DoxyCompactItemize}
-\doxysubsection*{Protected Attributes}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\hyperlink{namespaceisae_a4b744e0e080a733838eb133deda894aa}{typed\+\_\+vec\+\_\+landmarks}} \mbox{\hyperlink{classisae_1_1_a_landmark_initializer_a055929c8ebd9c1ba6f9cdffde49cc2de}{\+\_\+initialized\+\_\+landmarks}}
+\begin{DoxyCompactList}\small\item\em Create a new landmark from a pair of features. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classisae_1_1_a_landmark_initializer_a30140cfc14757d3fd4370c7193a75855}{init\+Landmark}} (std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$ features, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_landmark}{A\+Landmark}} $>$ \&landmark)=0
+\begin{DoxyCompactList}\small\item\em Initialize a landmark from a set of features. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classisae_1_1_a_landmark_initializer_a51ff8f1380bac34586c4ce7fbd0e7f0d}{init\+Landmark\+With\+Depth}} (std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$ features, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_landmark}{A\+Landmark}} $>$ \&landmark)=0
+\begin{DoxyCompactList}\small\item\em Initialize a landmark from a set of features with depth information. \end{DoxyCompactList}\item 
+virtual std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_landmark}{A\+Landmark}} $>$ \mbox{\hyperlink{classisae_1_1_a_landmark_initializer_a173e502dd5417437013b275b733a1d0a}{create\+New\+Landmark}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$ f)=0
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Abstract class for initializing landmarks. 
+
+This class provides methods to initialize landmarks from feature matches or to update existing landmarks Each novel type of landmark must have its own derived class that implements the specific initialization logic. ~\newline
+ 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classisae_1_1_a_landmark_initializer_a68287d3e69d9b643546b66de679fce94}\label{classisae_1_1_a_landmark_initializer_a68287d3e69d9b643546b66de679fce94}} 
+\mbox{\Hypertarget{classisae_1_1_a_landmark_initializer_a6a5b7040081ed679f8aa9809898a1931}\label{classisae_1_1_a_landmark_initializer_a6a5b7040081ed679f8aa9809898a1931}} 
 \index{isae::ALandmarkInitializer@{isae::ALandmarkInitializer}!ALandmarkInitializer@{ALandmarkInitializer}}
 \index{ALandmarkInitializer@{ALandmarkInitializer}!isae::ALandmarkInitializer@{isae::ALandmarkInitializer}}
 \doxysubsubsection{\texorpdfstring{ALandmarkInitializer()}{ALandmarkInitializer()}}
-{\footnotesize\ttfamily isae\+::\+A\+Landmark\+Initializer\+::\+A\+Landmark\+Initializer (\begin{DoxyParamCaption}\item[{uint}]{nb\+\_\+requiered\+\_\+ldmk }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily isae\+::\+A\+Landmark\+Initializer\+::\+A\+Landmark\+Initializer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
 
 \mbox{\Hypertarget{classisae_1_1_a_landmark_initializer_ab8b6a5a967b110556f69b8cff6cc398c}\label{classisae_1_1_a_landmark_initializer_ab8b6a5a967b110556f69b8cff6cc398c}} 
 \index{isae::ALandmarkInitializer@{isae::ALandmarkInitializer}!````~ALandmarkInitializer@{$\sim$ALandmarkInitializer}}
@@ -67,50 +75,137 @@ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_landmark}{A\+Landmark
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classisae_1_1_a_landmark_initializer_a173e502dd5417437013b275b733a1d0a}\label{classisae_1_1_a_landmark_initializer_a173e502dd5417437013b275b733a1d0a}} 
+\index{isae::ALandmarkInitializer@{isae::ALandmarkInitializer}!createNewLandmark@{createNewLandmark}}
+\index{createNewLandmark@{createNewLandmark}!isae::ALandmarkInitializer@{isae::ALandmarkInitializer}}
+\doxysubsubsection{\texorpdfstring{createNewLandmark()}{createNewLandmark()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classisae_1_1_a_landmark}{A\+Landmark}}$>$ isae\+::\+A\+Landmark\+Initializer\+::create\+New\+Landmark (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classisae_1_1_line3_d_landmark_initializer_aa9a109ea766a7d6067491f48b59d14c9}{isae\+::\+Line3\+D\+Landmark\+Initializer}}.
+
 \mbox{\Hypertarget{classisae_1_1_a_landmark_initializer_abb82840c8ffef4c51f225ee8b4a623ce}\label{classisae_1_1_a_landmark_initializer_abb82840c8ffef4c51f225ee8b4a623ce}} 
 \index{isae::ALandmarkInitializer@{isae::ALandmarkInitializer}!createNewLandmark@{createNewLandmark}}
 \index{createNewLandmark@{createNewLandmark}!isae::ALandmarkInitializer@{isae::ALandmarkInitializer}}
-\doxysubsubsection{\texorpdfstring{createNewLandmark()}{createNewLandmark()}}
+\doxysubsubsection{\texorpdfstring{createNewLandmark()}{createNewLandmark()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_landmark}{A\+Landmark}} $>$ isae\+::\+A\+Landmark\+Initializer\+::create\+New\+Landmark (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$}]{f1,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$}]{f2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
 
-\mbox{\Hypertarget{classisae_1_1_a_landmark_initializer_a4ed49c6370c59622a778043ce25ca506}\label{classisae_1_1_a_landmark_initializer_a4ed49c6370c59622a778043ce25ca506}} 
-\index{isae::ALandmarkInitializer@{isae::ALandmarkInitializer}!getInitializedLandmarks@{getInitializedLandmarks}}
-\index{getInitializedLandmarks@{getInitializedLandmarks}!isae::ALandmarkInitializer@{isae::ALandmarkInitializer}}
-\doxysubsubsection{\texorpdfstring{getInitializedLandmarks()}{getInitializedLandmarks()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{namespaceisae_a4b744e0e080a733838eb133deda894aa}{typed\+\_\+vec\+\_\+landmarks}} isae\+::\+A\+Landmark\+Initializer\+::get\+Initialized\+Landmarks (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-\mbox{\Hypertarget{classisae_1_1_a_landmark_initializer_a3e014fc60de61d2d08c837e9bec37ae5}\label{classisae_1_1_a_landmark_initializer_a3e014fc60de61d2d08c837e9bec37ae5}} 
-\index{isae::ALandmarkInitializer@{isae::ALandmarkInitializer}!getNbRequieredLdmk@{getNbRequieredLdmk}}
-\index{getNbRequieredLdmk@{getNbRequieredLdmk}!isae::ALandmarkInitializer@{isae::ALandmarkInitializer}}
-\doxysubsubsection{\texorpdfstring{getNbRequieredLdmk()}{getNbRequieredLdmk()}}
-{\footnotesize\ttfamily uint isae\+::\+A\+Landmark\+Initializer\+::get\+Nb\+Requiered\+Ldmk (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+Create a new landmark from a pair of features. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f1} & The first feature. \\
+\hline
+{\em f2} & The second feature. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A shared pointer to the newly created landmark. 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classisae_1_1_a_landmark_initializer_a50d34d811bd78bd50917b857f9aaaebc}\label{classisae_1_1_a_landmark_initializer_a50d34d811bd78bd50917b857f9aaaebc}} 
 \index{isae::ALandmarkInitializer@{isae::ALandmarkInitializer}!initFromFeatures@{initFromFeatures}}
 \index{initFromFeatures@{initFromFeatures}!isae::ALandmarkInitializer@{isae::ALandmarkInitializer}}
 \doxysubsubsection{\texorpdfstring{initFromFeatures()}{initFromFeatures()}}
 {\footnotesize\ttfamily uint isae\+::\+A\+Landmark\+Initializer\+::init\+From\+Features (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$}]{feats }\end{DoxyParamCaption})}
 
+
+
+Initialize landmarks from a vector of feature tracks. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tracks} & The vector of feature tracks to initialize the landmarks from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of initialized landmarks. 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classisae_1_1_a_landmark_initializer_ae85976440b4267eef8f75d39ff4275cb}\label{classisae_1_1_a_landmark_initializer_ae85976440b4267eef8f75d39ff4275cb}} 
 \index{isae::ALandmarkInitializer@{isae::ALandmarkInitializer}!initFromMatch@{initFromMatch}}
 \index{initFromMatch@{initFromMatch}!isae::ALandmarkInitializer@{isae::ALandmarkInitializer}}
 \doxysubsubsection{\texorpdfstring{initFromMatch()}{initFromMatch()}}
-{\footnotesize\ttfamily uint isae\+::\+A\+Landmark\+Initializer\+::init\+From\+Match (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceisae_ae9c6a8ee0303d61cb2823618735f2383}{feature\+\_\+pair}}}]{match }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily uint isae\+::\+A\+Landmark\+Initializer\+::init\+From\+Match (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceisae_ab4a885dce1b03422dfcdfb9a4747aaef}{feature\+\_\+pair}}}]{match }\end{DoxyParamCaption})}
 
+
+
+Initialize landmarks from a feature pair. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em match} & The feature pair to initialize the landmark from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of initialized landmarks. 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classisae_1_1_a_landmark_initializer_ad2a636ba13118854ef32ce55d94b2a7f}\label{classisae_1_1_a_landmark_initializer_ad2a636ba13118854ef32ce55d94b2a7f}} 
 \index{isae::ALandmarkInitializer@{isae::ALandmarkInitializer}!initFromMatches@{initFromMatches}}
 \index{initFromMatches@{initFromMatches}!isae::ALandmarkInitializer@{isae::ALandmarkInitializer}}
 \doxysubsubsection{\texorpdfstring{initFromMatches()}{initFromMatches()}}
-{\footnotesize\ttfamily uint isae\+::\+A\+Landmark\+Initializer\+::init\+From\+Matches (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceisae_ac61c2f881f902dbfef491caaa5135c9c}{vec\+\_\+match}}}]{matches }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily uint isae\+::\+A\+Landmark\+Initializer\+::init\+From\+Matches (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceisae_a018dfa0f3c618541bf2674aaefa20d61}{vec\+\_\+match}}}]{matches }\end{DoxyParamCaption})}
 
 
 
-\doxysubsection{Member Data Documentation}
-\mbox{\Hypertarget{classisae_1_1_a_landmark_initializer_a055929c8ebd9c1ba6f9cdffde49cc2de}\label{classisae_1_1_a_landmark_initializer_a055929c8ebd9c1ba6f9cdffde49cc2de}} 
-\index{isae::ALandmarkInitializer@{isae::ALandmarkInitializer}!\_initialized\_landmarks@{\_initialized\_landmarks}}
-\index{\_initialized\_landmarks@{\_initialized\_landmarks}!isae::ALandmarkInitializer@{isae::ALandmarkInitializer}}
-\doxysubsubsection{\texorpdfstring{\_initialized\_landmarks}{\_initialized\_landmarks}}
-{\footnotesize\ttfamily \mbox{\hyperlink{namespaceisae_a4b744e0e080a733838eb133deda894aa}{typed\+\_\+vec\+\_\+landmarks}} isae\+::\+A\+Landmark\+Initializer\+::\+\_\+initialized\+\_\+landmarks\hspace{0.3cm}{\ttfamily [protected]}}
+Initialize landmarks from a vector of feature matches. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matches} & The vector of feature matches to initialize the landmarks from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of initialized landmarks. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classisae_1_1_a_landmark_initializer_a30140cfc14757d3fd4370c7193a75855}\label{classisae_1_1_a_landmark_initializer_a30140cfc14757d3fd4370c7193a75855}} 
+\index{isae::ALandmarkInitializer@{isae::ALandmarkInitializer}!initLandmark@{initLandmark}}
+\index{initLandmark@{initLandmark}!isae::ALandmarkInitializer@{isae::ALandmarkInitializer}}
+\doxysubsubsection{\texorpdfstring{initLandmark()}{initLandmark()}}
+{\footnotesize\ttfamily virtual bool isae\+::\+A\+Landmark\+Initializer\+::init\+Landmark (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$}]{features,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_landmark}{A\+Landmark}} $>$ \&}]{landmark }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Initialize a landmark from a set of features. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em features} & A vector of features. \\
+\hline
+{\em landmark} & A shared pointer to the landmark to be initialized. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the landmark was successfully initialized, false otherwise. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classisae_1_1_line3_d_landmark_initializer_aac7da7796b2034f4f6d36fb1bc95a3e8}{isae\+::\+Line3\+D\+Landmark\+Initializer}}.
+
+\mbox{\Hypertarget{classisae_1_1_a_landmark_initializer_a51ff8f1380bac34586c4ce7fbd0e7f0d}\label{classisae_1_1_a_landmark_initializer_a51ff8f1380bac34586c4ce7fbd0e7f0d}} 
+\index{isae::ALandmarkInitializer@{isae::ALandmarkInitializer}!initLandmarkWithDepth@{initLandmarkWithDepth}}
+\index{initLandmarkWithDepth@{initLandmarkWithDepth}!isae::ALandmarkInitializer@{isae::ALandmarkInitializer}}
+\doxysubsubsection{\texorpdfstring{initLandmarkWithDepth()}{initLandmarkWithDepth()}}
+{\footnotesize\ttfamily virtual bool isae\+::\+A\+Landmark\+Initializer\+::init\+Landmark\+With\+Depth (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$}]{features,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_landmark}{A\+Landmark}} $>$ \&}]{landmark }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Initialize a landmark from a set of features with depth information. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em features} & A vector of features. \\
+\hline
+{\em landmark} & A shared pointer to the landmark to be initialized. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the landmark was successfully initialized with depth, false otherwise. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classisae_1_1_line3_d_landmark_initializer_a0539eea96575803681a4f1c399dcba46}{isae\+::\+Line3\+D\+Landmark\+Initializer}}.
 
 
 

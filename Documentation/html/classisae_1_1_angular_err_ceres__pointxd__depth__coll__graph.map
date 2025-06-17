@@ -1,0 +1,4 @@
+<map id="isae::AngularErrCeres_pointxd_depth" name="isae::AngularErrCeres_pointxd_depth">
+<area shape="rect" id="node1" title="An angular cost function that depends on the depth of the landmark, the current frame pose and the an..." alt="" coords="16,95,179,136"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,5,189,47"/>
+</map>

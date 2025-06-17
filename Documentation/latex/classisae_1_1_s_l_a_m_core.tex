@@ -2,6 +2,11 @@
 \label{classisae_1_1_s_l_a_m_core}\index{isae::SLAMCore@{isae::SLAMCore}}
 
 
+The core abstract class of the S\+L\+AM system. It handles front-\/end, back-\/end and initialization.  
+
+
+
+
 {\ttfamily \#include $<$slam\+Core.\+h$>$}
 
 
@@ -21,54 +26,58 @@ Inheritance diagram for isae\+::S\+L\+A\+M\+Core\+:\nopagebreak
 \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_a5e59849481ace40b62c7f9606d1c5dd9}{S\+L\+A\+M\+Core}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_s_l_a_m_parameters}{isae\+::\+S\+L\+A\+M\+Parameters}} $>$ slam\+\_\+param)
 \item 
 virtual bool \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_a87fdc0be9d6042436ff097b375f86b72}{init}} ()=0
-\item 
+\begin{DoxyCompactList}\small\item\em Initialization step \+: create the first 3D landmarks and keyframe(s) \end{DoxyCompactList}\item 
 virtual bool \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_ab97c16d22ca0c3d50c4ef63bcd6c88f7}{front\+End\+Step}} ()=0
-\item 
+\begin{DoxyCompactList}\small\item\em Front End\+: detection, tracking, pose estimation and landmark triangulation. \end{DoxyCompactList}\item 
 virtual bool \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_aa378dd826e38a3bb5358a261466a97e3}{back\+End\+Step}} ()=0
-\item 
+\begin{DoxyCompactList}\small\item\em brief description Back End\+: marginalization, local map optimization \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_a59e46556af840efd280b4715f372e623}{run\+Back\+End}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Thread for the backend. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_a68a0dcc63d80450d36237a2e9a4b5ad1}{run\+Front\+End}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Thread for the frontend. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_a086ca26cc3db8a700c763228d1b739c0}{run\+Full\+Odom}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Thread for the backend. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{namespaceisae_aef749e9df97878dd2b7af968a4f64efd}{typed\+\_\+vec\+\_\+features}} \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_ab0de2d2b0de545f6a1ecc793c7f5ffee}{detect\+Features}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_image_sensor}{Image\+Sensor}} $>$ \&sensor)
-\item 
+\begin{DoxyCompactList}\small\item\em Detect all types of features for a given sensor with bucketting. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_a4038c62e84822504b5a040765d397a45}{clean\+Features}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&f)
-\item 
-uint \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_a248df2fe323e26cd3bb8edeb4a9a3fe8}{match\+Features}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_image_sensor}{Image\+Sensor}} $>$ \&sensor0, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_image_sensor}{Image\+Sensor}} $>$ \&sensor1, \mbox{\hyperlink{namespaceisae_a70bf0a9838eb50b6a3fe2be9b79e25be}{typed\+\_\+vec\+\_\+match}} \&matches, \mbox{\hyperlink{namespaceisae_a70bf0a9838eb50b6a3fe2be9b79e25be}{typed\+\_\+vec\+\_\+match}} \&matches\+\_\+lmk, \mbox{\hyperlink{namespaceisae_aef749e9df97878dd2b7af968a4f64efd}{typed\+\_\+vec\+\_\+features}} features\+\_\+to\+\_\+track)
-\item 
-uint \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_a129f18068b1b1169de97dcd0ac54664a}{track\+Features}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_image_sensor}{Image\+Sensor}} $>$ \&sensor0, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_image_sensor}{Image\+Sensor}} $>$ \&sensor1, \mbox{\hyperlink{namespaceisae_a70bf0a9838eb50b6a3fe2be9b79e25be}{typed\+\_\+vec\+\_\+match}} \&matches, \mbox{\hyperlink{namespaceisae_a70bf0a9838eb50b6a3fe2be9b79e25be}{typed\+\_\+vec\+\_\+match}} \&matches\+\_\+lmk, \mbox{\hyperlink{namespaceisae_aef749e9df97878dd2b7af968a4f64efd}{typed\+\_\+vec\+\_\+features}} features\+\_\+to\+\_\+track)
-\item 
-void \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_a7297bc12be525944176f4303b29272d2}{predict\+Feature}} (std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$ features, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_image_sensor}{Image\+Sensor}} $>$ sensor, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$ \&features\+\_\+init, \mbox{\hyperlink{namespaceisae_ac61c2f881f902dbfef491caaa5135c9c}{vec\+\_\+match}} previous\+\_\+matches)
-\item 
-\mbox{\hyperlink{namespaceisae_a70bf0a9838eb50b6a3fe2be9b79e25be}{typed\+\_\+vec\+\_\+match}} \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_a69fcf76a00dca3e5240b31b5c27562b7}{epipolar\+Filtering}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_image_sensor}{Image\+Sensor}} $>$ \&cam0, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_image_sensor}{Image\+Sensor}} $>$ \&cam1, \mbox{\hyperlink{namespaceisae_a70bf0a9838eb50b6a3fe2be9b79e25be}{typed\+\_\+vec\+\_\+match}} matches)
-\item 
+\begin{DoxyCompactList}\small\item\em Clean all the features that are outliers or are linked to outlier landmark. \end{DoxyCompactList}\item 
+uint \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_a248df2fe323e26cd3bb8edeb4a9a3fe8}{match\+Features}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_image_sensor}{Image\+Sensor}} $>$ \&sensor0, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_image_sensor}{Image\+Sensor}} $>$ \&sensor1, \mbox{\hyperlink{namespaceisae_a5d24f9da33ed2238fec0ac3f04cc8da5}{typed\+\_\+vec\+\_\+match}} \&matches, \mbox{\hyperlink{namespaceisae_a5d24f9da33ed2238fec0ac3f04cc8da5}{typed\+\_\+vec\+\_\+match}} \&matches\+\_\+lmk, \mbox{\hyperlink{namespaceisae_aef749e9df97878dd2b7af968a4f64efd}{typed\+\_\+vec\+\_\+features}} features\+\_\+to\+\_\+track)
+\begin{DoxyCompactList}\small\item\em Predicts the position of the features and matches all the features between sensors. \end{DoxyCompactList}\item 
+uint \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_a129f18068b1b1169de97dcd0ac54664a}{track\+Features}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_image_sensor}{Image\+Sensor}} $>$ \&sensor0, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_image_sensor}{Image\+Sensor}} $>$ \&sensor1, \mbox{\hyperlink{namespaceisae_a5d24f9da33ed2238fec0ac3f04cc8da5}{typed\+\_\+vec\+\_\+match}} \&matches, \mbox{\hyperlink{namespaceisae_a5d24f9da33ed2238fec0ac3f04cc8da5}{typed\+\_\+vec\+\_\+match}} \&matches\+\_\+lmk, \mbox{\hyperlink{namespaceisae_aef749e9df97878dd2b7af968a4f64efd}{typed\+\_\+vec\+\_\+features}} features\+\_\+to\+\_\+track)
+\begin{DoxyCompactList}\small\item\em Predicts the position of the features and tracks all the features. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_a7297bc12be525944176f4303b29272d2}{predict\+Feature}} (std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$ features, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_image_sensor}{Image\+Sensor}} $>$ sensor, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$ \&features\+\_\+init, \mbox{\hyperlink{namespaceisae_a018dfa0f3c618541bf2674aaefa20d61}{vec\+\_\+match}} previous\+\_\+matches)
+\begin{DoxyCompactList}\small\item\em Predicts the position of a set of features on a given sensor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceisae_a5d24f9da33ed2238fec0ac3f04cc8da5}{typed\+\_\+vec\+\_\+match}} \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_a69fcf76a00dca3e5240b31b5c27562b7}{epipolar\+Filtering}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_image_sensor}{Image\+Sensor}} $>$ \&cam0, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_image_sensor}{Image\+Sensor}} $>$ \&cam1, \mbox{\hyperlink{namespaceisae_a5d24f9da33ed2238fec0ac3f04cc8da5}{typed\+\_\+vec\+\_\+match}} matches)
+\begin{DoxyCompactList}\small\item\em Filters the matches between two sensors (with consistent pose estimates) using epipolar plane check. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_a930d35825bd9e4622b76fdf7dede7275}{outlier\+Removal}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Remove all the outlier features of \+\_\+frame. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_ad1c8355572701919add16b874c3de7f1}{predict}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&f)
-\item 
+\begin{DoxyCompactList}\small\item\em Estimates the pose of a given frame. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_aafc0e7155f3348a4383d1cd178a47103}{init\+Landmarks}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&f)
-\item 
-void \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_ae0786a5e2ebcf4b3b9e9bb4c680cf28f}{update\+Landmarks}} (\mbox{\hyperlink{namespaceisae_a70bf0a9838eb50b6a3fe2be9b79e25be}{typed\+\_\+vec\+\_\+match}} matches\+\_\+lmk)
+\begin{DoxyCompactList}\small\item\em Initialize all the landmarks of the current frame using \+\_\+matches\+\_\+in\+\_\+time and \+\_\+matches\+\_\+in\+\_\+frame. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_ae0786a5e2ebcf4b3b9e9bb4c680cf28f}{update\+Landmarks}} (\mbox{\hyperlink{namespaceisae_a5d24f9da33ed2238fec0ac3f04cc8da5}{typed\+\_\+vec\+\_\+match}} matches\+\_\+lmk)
 \item 
 uint \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_a3bd589ad8aa6cd7d0f8cc1c4a9fab001}{recover\+Feature\+From\+Map\+Landmarks}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_map}{isae\+::\+A\+Map}} $>$ localmap, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&f)
-\item 
+\begin{DoxyCompactList}\small\item\em Performs landmark resurection. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_adf3895f1262e39e2fb288cb57aa3f4e5}{should\+Insert\+Keyframe}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&f)
-\item 
+\begin{DoxyCompactList}\small\item\em Determines if the frame in argument is a KF. \end{DoxyCompactList}\item 
 std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_a33a7053a9e08bbe72477d5a24234f05b}{get\+Last\+KF}} ()
 \item 
 void \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_a5ebbc2ac160e1bcf300909718c68cb44}{profiling}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em A function to monitor the S\+L\+AM behaviour. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 bool \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_a8cbe6932796ead5c22a42f098bb5e49e}{\+\_\+is\+\_\+init}} = false
 \item 
 int \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_a0b839e70c15c76939af97ee99927dfc3}{\+\_\+successive\+\_\+fails}} = 0
-\item 
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+Flag for initialization \end{quote}
+\end{DoxyCompactList}\item 
 std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_s_l_a_m_parameters}{isae\+::\+S\+L\+A\+M\+Parameters}} $>$ \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_ad02358a54782ca107f3d5e99a108d612}{\+\_\+slam\+\_\+param}}
-\item 
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+Number of successive failure to trigger reinitialization \end{quote}
+\end{DoxyCompactList}\item 
 std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_a7d09de0fa22c576eaa18922d2f8e7617}{\+\_\+frame\+\_\+to\+\_\+display}}
 \item 
 std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_local_map}{isae\+::\+Local\+Map}} $>$ \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_aeb154e22d37ba97da4983f644ca2c6bf}{\+\_\+local\+\_\+map\+\_\+to\+\_\+display}}
@@ -82,36 +91,64 @@ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_mesh3_d}{Mesh3D}} $>$ \
 \item 
 std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_a30ca343387baa2bb2c8fcb48ed9300e5}{\+\_\+frame}}
 \item 
-\mbox{\hyperlink{namespaceisae_a70bf0a9838eb50b6a3fe2be9b79e25be}{typed\+\_\+vec\+\_\+match}} \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_abca11aeefa4bb0850ca34658566c7e5b}{\+\_\+matches\+\_\+in\+\_\+time}}
-\item 
-\mbox{\hyperlink{namespaceisae_a70bf0a9838eb50b6a3fe2be9b79e25be}{typed\+\_\+vec\+\_\+match}} \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_a7c4e463d6cdd2083db3de4100a1885dc}{\+\_\+matches\+\_\+in\+\_\+time\+\_\+lmk}}
-\item 
-\mbox{\hyperlink{namespaceisae_a70bf0a9838eb50b6a3fe2be9b79e25be}{typed\+\_\+vec\+\_\+match}} \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_af9705993f210ffcbffb8a3895e12958f}{\+\_\+matches\+\_\+in\+\_\+frame}}
-\item 
-\mbox{\hyperlink{namespaceisae_a70bf0a9838eb50b6a3fe2be9b79e25be}{typed\+\_\+vec\+\_\+match}} \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_a048d35a0f87be36c46f81dcc646391fc}{\+\_\+matches\+\_\+in\+\_\+frame\+\_\+lmk}}
-\item 
+\mbox{\hyperlink{namespaceisae_a5d24f9da33ed2238fec0ac3f04cc8da5}{typed\+\_\+vec\+\_\+match}} \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_abca11aeefa4bb0850ca34658566c7e5b}{\+\_\+matches\+\_\+in\+\_\+time}}
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+Current frame \end{quote}
+\end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceisae_a5d24f9da33ed2238fec0ac3f04cc8da5}{typed\+\_\+vec\+\_\+match}} \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_a7c4e463d6cdd2083db3de4100a1885dc}{\+\_\+matches\+\_\+in\+\_\+time\+\_\+lmk}}
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+Typed vector of the matches between the last KF and \+\_\+frame \end{quote}
+\end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceisae_a5d24f9da33ed2238fec0ac3f04cc8da5}{typed\+\_\+vec\+\_\+match}} \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_af9705993f210ffcbffb8a3895e12958f}{\+\_\+matches\+\_\+in\+\_\+frame}}
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+Typed vector of the matches with landmarks between the last KF and \+\_\+frame \end{quote}
+\end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceisae_a5d24f9da33ed2238fec0ac3f04cc8da5}{typed\+\_\+vec\+\_\+match}} \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_a048d35a0f87be36c46f81dcc646391fc}{\+\_\+matches\+\_\+in\+\_\+frame\+\_\+lmk}}
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+Typed vector of the matches between the sensors of \+\_\+frame \end{quote}
+\end{DoxyCompactList}\item 
 std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_local_map}{isae\+::\+Local\+Map}} $>$ \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_ad3641feb65214860635525bb28027995}{\+\_\+local\+\_\+map}}
-\item 
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+Typed vector of the matches with landmarks between the sensors of \+\_\+frame \end{quote}
+\end{DoxyCompactList}\item 
 std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_global_map}{isae\+::\+Global\+Map}} $>$ \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_a48e025ba0497eafdd57cfe766d524ce5}{\+\_\+global\+\_\+map}}
-\item 
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+Current local map \end{quote}
+\end{DoxyCompactList}\item 
 std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_mesher}{Mesher}} $>$ \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_ade0ce23e8b63a59eae7418a80d6b7baf}{\+\_\+mesher}}
-\item 
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+Current global map \end{quote}
+\end{DoxyCompactList}\item 
 double \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_a6a5a97f9b6370b3a26405c0692f3b639}{\+\_\+max\+\_\+movement\+\_\+parallax}}
-\item 
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+\mbox{\hyperlink{classisae_1_1_mesher}{Mesher}} of the S\+L\+AM \end{quote}
+\end{DoxyCompactList}\item 
 double \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_a1e49528324b8e9392ac52955e3fab7fc}{\+\_\+min\+\_\+movement\+\_\+parallax}}
-\item 
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+Max parallax until a KF is voted \end{quote}
+\end{DoxyCompactList}\item 
 double \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_aea597da6a069fb9f86daa3c9abaa9dee}{\+\_\+min\+\_\+lmk\+\_\+number}}
-\item 
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+Under this parallax, no motion is considered \end{quote}
+\end{DoxyCompactList}\item 
 double \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_ab707aa5b340fb77057d5b7820f045efd}{\+\_\+parallax}}
-\item 
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+Under this number of landmark in \+\_\+frame a KF is voted \end{quote}
+\end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceisae_a95b4efbae1379c1c22879954528d4008}{Vector6d}} \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_ad0262a6c57ffaac910b899fb52d3e3eb}{\+\_\+6d\+\_\+velocity}}
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+Parallax between the last KF and \+\_\+frame \end{quote}
+\end{DoxyCompactList}\item 
 std\+::mutex \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_a38f045ef945c97cde0feebeb0ad9fc3a}{\+\_\+map\+\_\+mutex}}
-\item 
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+Current Velocity as a Twist vector \end{quote}
+\end{DoxyCompactList}\item 
 std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_ac26724bbd8a5f479e148ba0c89bce551}{\+\_\+frame\+\_\+to\+\_\+optim}}
 \item 
-\mbox{\hyperlink{namespaceisae_a381cf9a79c09e3831978a493e7a50552}{Vector6d}} \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_ad0262a6c57ffaac910b899fb52d3e3eb}{\+\_\+6d\+\_\+velocity}}
-\item 
 uint \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_a5c4e9ed9200240c6c3169876842606fd}{\+\_\+nframes}}
-\item 
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+For communication between front-\/end and back-\/end \end{quote}
+\end{DoxyCompactList}\item 
 uint \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_a12bf771db26400d29fb14d2635779d88}{\+\_\+nkeyframes}}
 \item 
 float \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_ae744e98470e43bae86630b47f47d913f}{\+\_\+avg\+\_\+detect\+\_\+t}}
@@ -158,6 +195,11 @@ std\+::vector$<$ std\+::vector$<$ float $>$ $>$ \mbox{\hyperlink{classisae_1_1_s
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Detailed Description}
+The core abstract class of the S\+L\+AM system. It handles front-\/end, back-\/end and initialization. 
+
+This is the skeleton of the S\+L\+AM system that will call all the subsystems (sensor processing, optimizer, map processing...) It loads all the parameters of the S\+L\+AM and implements front\+End and back\+Ends that must be called in a separated thread. A few important methods relative to feature processing and pose estimation are implemented as well to make the \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_ab97c16d22ca0c3d50c4ef63bcd6c88f7}{front\+End\+Step()}} and \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_aa378dd826e38a3bb5358a261466a97e3}{back\+End\+Step()}} methods readable. Also, a few profiling variables and methods are implemented to monitor the performances. 
+
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classisae_1_1_s_l_a_m_core_af683a1806d10d2277e5989ef6edac5e2}\label{classisae_1_1_s_l_a_m_core_af683a1806d10d2277e5989ef6edac5e2}} 
 \index{isae::SLAMCore@{isae::SLAMCore}!SLAMCore@{SLAMCore}}
@@ -182,6 +224,10 @@ std\+::vector$<$ std\+::vector$<$ float $>$ $>$ \mbox{\hyperlink{classisae_1_1_s
 
 
 
+brief description Back End\+: marginalization, local map optimization 
+
+
+
 Implemented in \mbox{\hyperlink{classisae_1_1_s_l_a_m_non_overlapping_fov_a6d2ac5be38cd5d523340da2defbb13a0}{isae\+::\+S\+L\+A\+M\+Non\+Overlapping\+Fov}}, \mbox{\hyperlink{classisae_1_1_s_l_a_m_mono_a96b58f7c17099eefcaaf902c85422e6a}{isae\+::\+S\+L\+A\+M\+Mono}}, \mbox{\hyperlink{classisae_1_1_s_l_a_m_mono_v_i_o_a7509d89f0dc6cfde31ff66bb7b2ad06c}{isae\+::\+S\+L\+A\+M\+Mono\+V\+IO}}, \mbox{\hyperlink{classisae_1_1_s_l_a_m_bi_mono_v_i_o_a904b857304c5b93322238e75dc0f5cf7}{isae\+::\+S\+L\+A\+M\+Bi\+Mono\+V\+IO}}, and \mbox{\hyperlink{classisae_1_1_s_l_a_m_bi_mono_a28b090a5d72f4608990981eb6febfa61}{isae\+::\+S\+L\+A\+M\+Bi\+Mono}}.
 
 \mbox{\Hypertarget{classisae_1_1_s_l_a_m_core_a4038c62e84822504b5a040765d397a45}\label{classisae_1_1_s_l_a_m_core_a4038c62e84822504b5a040765d397a45}} 
@@ -190,23 +236,51 @@ Implemented in \mbox{\hyperlink{classisae_1_1_s_l_a_m_non_overlapping_fov_a6d2ac
 \doxysubsubsection{\texorpdfstring{cleanFeatures()}{cleanFeatures()}}
 {\footnotesize\ttfamily void isae\+::\+S\+L\+A\+M\+Core\+::clean\+Features (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&}]{f }\end{DoxyParamCaption})}
 
+
+
+Clean all the features that are outliers or are linked to outlier landmark. 
+
 \mbox{\Hypertarget{classisae_1_1_s_l_a_m_core_ab0de2d2b0de545f6a1ecc793c7f5ffee}\label{classisae_1_1_s_l_a_m_core_ab0de2d2b0de545f6a1ecc793c7f5ffee}} 
 \index{isae::SLAMCore@{isae::SLAMCore}!detectFeatures@{detectFeatures}}
 \index{detectFeatures@{detectFeatures}!isae::SLAMCore@{isae::SLAMCore}}
 \doxysubsubsection{\texorpdfstring{detectFeatures()}{detectFeatures()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{namespaceisae_aef749e9df97878dd2b7af968a4f64efd}{typed\+\_\+vec\+\_\+features}} isae\+::\+S\+L\+A\+M\+Core\+::detect\+Features (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_image_sensor}{Image\+Sensor}} $>$ \&}]{sensor }\end{DoxyParamCaption})}
 
+
+
+Detect all types of features for a given sensor with bucketting. 
+
 \mbox{\Hypertarget{classisae_1_1_s_l_a_m_core_a69fcf76a00dca3e5240b31b5c27562b7}\label{classisae_1_1_s_l_a_m_core_a69fcf76a00dca3e5240b31b5c27562b7}} 
 \index{isae::SLAMCore@{isae::SLAMCore}!epipolarFiltering@{epipolarFiltering}}
 \index{epipolarFiltering@{epipolarFiltering}!isae::SLAMCore@{isae::SLAMCore}}
 \doxysubsubsection{\texorpdfstring{epipolarFiltering()}{epipolarFiltering()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{namespaceisae_a70bf0a9838eb50b6a3fe2be9b79e25be}{typed\+\_\+vec\+\_\+match}} isae\+::\+S\+L\+A\+M\+Core\+::epipolar\+Filtering (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_image_sensor}{Image\+Sensor}} $>$ \&}]{cam0,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_image_sensor}{Image\+Sensor}} $>$ \&}]{cam1,  }\item[{\mbox{\hyperlink{namespaceisae_a70bf0a9838eb50b6a3fe2be9b79e25be}{typed\+\_\+vec\+\_\+match}}}]{matches }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceisae_a5d24f9da33ed2238fec0ac3f04cc8da5}{typed\+\_\+vec\+\_\+match}} isae\+::\+S\+L\+A\+M\+Core\+::epipolar\+Filtering (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_image_sensor}{Image\+Sensor}} $>$ \&}]{cam0,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_image_sensor}{Image\+Sensor}} $>$ \&}]{cam1,  }\item[{\mbox{\hyperlink{namespaceisae_a5d24f9da33ed2238fec0ac3f04cc8da5}{typed\+\_\+vec\+\_\+match}}}]{matches }\end{DoxyParamCaption})}
 
+
+
+Filters the matches between two sensors (with consistent pose estimates) using epipolar plane check. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cam0} & First sensor \\
+\hline
+{\em cam1} & Second sensor \\
+\hline
+{\em matches} & Typed vector of matches to be filtered\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A Typed vector of the valid matches 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classisae_1_1_s_l_a_m_core_ab97c16d22ca0c3d50c4ef63bcd6c88f7}\label{classisae_1_1_s_l_a_m_core_ab97c16d22ca0c3d50c4ef63bcd6c88f7}} 
 \index{isae::SLAMCore@{isae::SLAMCore}!frontEndStep@{frontEndStep}}
 \index{frontEndStep@{frontEndStep}!isae::SLAMCore@{isae::SLAMCore}}
 \doxysubsubsection{\texorpdfstring{frontEndStep()}{frontEndStep()}}
 {\footnotesize\ttfamily virtual bool isae\+::\+S\+L\+A\+M\+Core\+::front\+End\+Step (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Front End\+: detection, tracking, pose estimation and landmark triangulation. 
 
 
 
@@ -226,6 +300,10 @@ Implemented in \mbox{\hyperlink{classisae_1_1_s_l_a_m_non_overlapping_fov_a47d9e
 
 
 
+Initialization step \+: create the first 3D landmarks and keyframe(s) 
+
+
+
 Implemented in \mbox{\hyperlink{classisae_1_1_s_l_a_m_non_overlapping_fov_ac1c9b85d5d1715ae562861b74454ec10}{isae\+::\+S\+L\+A\+M\+Non\+Overlapping\+Fov}}, \mbox{\hyperlink{classisae_1_1_s_l_a_m_mono_a82d52b190857d16d792c1dcd5fbdc6a6}{isae\+::\+S\+L\+A\+M\+Mono}}, \mbox{\hyperlink{classisae_1_1_s_l_a_m_mono_v_i_o_abdafc17c144f9c25d9f8e4a4d2a51205}{isae\+::\+S\+L\+A\+M\+Mono\+V\+IO}}, \mbox{\hyperlink{classisae_1_1_s_l_a_m_bi_mono_v_i_o_a7d0c7f373d14291e59f806e9b5fe54fe}{isae\+::\+S\+L\+A\+M\+Bi\+Mono\+V\+IO}}, and \mbox{\hyperlink{classisae_1_1_s_l_a_m_bi_mono_a55a578f3f1f1b7fb64ea6ec6e978d9eb}{isae\+::\+S\+L\+A\+M\+Bi\+Mono}}.
 
 \mbox{\Hypertarget{classisae_1_1_s_l_a_m_core_aafc0e7155f3348a4383d1cd178a47103}\label{classisae_1_1_s_l_a_m_core_aafc0e7155f3348a4383d1cd178a47103}} 
@@ -234,17 +312,45 @@ Implemented in \mbox{\hyperlink{classisae_1_1_s_l_a_m_non_overlapping_fov_ac1c9b
 \doxysubsubsection{\texorpdfstring{initLandmarks()}{initLandmarks()}}
 {\footnotesize\ttfamily void isae\+::\+S\+L\+A\+M\+Core\+::init\+Landmarks (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&}]{f }\end{DoxyParamCaption})}
 
+
+
+Initialize all the landmarks of the current frame using \+\_\+matches\+\_\+in\+\_\+time and \+\_\+matches\+\_\+in\+\_\+frame. 
+
 \mbox{\Hypertarget{classisae_1_1_s_l_a_m_core_a248df2fe323e26cd3bb8edeb4a9a3fe8}\label{classisae_1_1_s_l_a_m_core_a248df2fe323e26cd3bb8edeb4a9a3fe8}} 
 \index{isae::SLAMCore@{isae::SLAMCore}!matchFeatures@{matchFeatures}}
 \index{matchFeatures@{matchFeatures}!isae::SLAMCore@{isae::SLAMCore}}
 \doxysubsubsection{\texorpdfstring{matchFeatures()}{matchFeatures()}}
-{\footnotesize\ttfamily uint isae\+::\+S\+L\+A\+M\+Core\+::match\+Features (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_image_sensor}{Image\+Sensor}} $>$ \&}]{sensor0,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_image_sensor}{Image\+Sensor}} $>$ \&}]{sensor1,  }\item[{\mbox{\hyperlink{namespaceisae_a70bf0a9838eb50b6a3fe2be9b79e25be}{typed\+\_\+vec\+\_\+match}} \&}]{matches,  }\item[{\mbox{\hyperlink{namespaceisae_a70bf0a9838eb50b6a3fe2be9b79e25be}{typed\+\_\+vec\+\_\+match}} \&}]{matches\+\_\+lmk,  }\item[{\mbox{\hyperlink{namespaceisae_aef749e9df97878dd2b7af968a4f64efd}{typed\+\_\+vec\+\_\+features}}}]{features\+\_\+to\+\_\+track }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily uint isae\+::\+S\+L\+A\+M\+Core\+::match\+Features (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_image_sensor}{Image\+Sensor}} $>$ \&}]{sensor0,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_image_sensor}{Image\+Sensor}} $>$ \&}]{sensor1,  }\item[{\mbox{\hyperlink{namespaceisae_a5d24f9da33ed2238fec0ac3f04cc8da5}{typed\+\_\+vec\+\_\+match}} \&}]{matches,  }\item[{\mbox{\hyperlink{namespaceisae_a5d24f9da33ed2238fec0ac3f04cc8da5}{typed\+\_\+vec\+\_\+match}} \&}]{matches\+\_\+lmk,  }\item[{\mbox{\hyperlink{namespaceisae_aef749e9df97878dd2b7af968a4f64efd}{typed\+\_\+vec\+\_\+features}}}]{features\+\_\+to\+\_\+track }\end{DoxyParamCaption})}
 
+
+
+Predicts the position of the features and matches all the features between sensors. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sensor0} & First sensor \\
+\hline
+{\em sensor1} & Second sensor \\
+\hline
+{\em matches} & Typed vector of matches without landmarks passed as reference \\
+\hline
+{\em matches\+\_\+lmk} & Typed vector of matches with landmarks passed as reference \\
+\hline
+{\em features\+\_\+to\+\_\+track} & Typed vector of the features on sensor0 that will be matched for prediction\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of tracks 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classisae_1_1_s_l_a_m_core_a930d35825bd9e4622b76fdf7dede7275}\label{classisae_1_1_s_l_a_m_core_a930d35825bd9e4622b76fdf7dede7275}} 
 \index{isae::SLAMCore@{isae::SLAMCore}!outlierRemoval@{outlierRemoval}}
 \index{outlierRemoval@{outlierRemoval}!isae::SLAMCore@{isae::SLAMCore}}
 \doxysubsubsection{\texorpdfstring{outlierRemoval()}{outlierRemoval()}}
 {\footnotesize\ttfamily void isae\+::\+S\+L\+A\+M\+Core\+::outlier\+Removal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Remove all the outlier features of \+\_\+frame. 
 
 \mbox{\Hypertarget{classisae_1_1_s_l_a_m_core_ad1c8355572701919add16b874c3de7f1}\label{classisae_1_1_s_l_a_m_core_ad1c8355572701919add16b874c3de7f1}} 
 \index{isae::SLAMCore@{isae::SLAMCore}!predict@{predict}}
@@ -252,17 +358,48 @@ Implemented in \mbox{\hyperlink{classisae_1_1_s_l_a_m_non_overlapping_fov_ac1c9b
 \doxysubsubsection{\texorpdfstring{predict()}{predict()}}
 {\footnotesize\ttfamily bool isae\+::\+S\+L\+A\+M\+Core\+::predict (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&}]{f }\end{DoxyParamCaption})}
 
+
+
+Estimates the pose of a given frame. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & The frame whose pose is estimated passed as a reference\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the prediction is a success, False otherwise 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classisae_1_1_s_l_a_m_core_a7297bc12be525944176f4303b29272d2}\label{classisae_1_1_s_l_a_m_core_a7297bc12be525944176f4303b29272d2}} 
 \index{isae::SLAMCore@{isae::SLAMCore}!predictFeature@{predictFeature}}
 \index{predictFeature@{predictFeature}!isae::SLAMCore@{isae::SLAMCore}}
 \doxysubsubsection{\texorpdfstring{predictFeature()}{predictFeature()}}
-{\footnotesize\ttfamily void isae\+::\+S\+L\+A\+M\+Core\+::predict\+Feature (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$}]{features,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_image_sensor}{Image\+Sensor}} $>$}]{sensor,  }\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$ \&}]{features\+\_\+init,  }\item[{\mbox{\hyperlink{namespaceisae_ac61c2f881f902dbfef491caaa5135c9c}{vec\+\_\+match}}}]{previous\+\_\+matches = {\ttfamily \{\}} }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void isae\+::\+S\+L\+A\+M\+Core\+::predict\+Feature (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$}]{features,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_image_sensor}{Image\+Sensor}} $>$}]{sensor,  }\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$ \&}]{features\+\_\+init,  }\item[{\mbox{\hyperlink{namespaceisae_a018dfa0f3c618541bf2674aaefa20d61}{vec\+\_\+match}}}]{previous\+\_\+matches = {\ttfamily \{\}} }\end{DoxyParamCaption})}
 
+
+
+Predicts the position of a set of features on a given sensor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em features} & Set of features to be predicted \\
+\hline
+{\em sensor} & Sensor on which the features has to be predicted \\
+\hline
+{\em features\+\_\+init} & The set of features predicted passed as a reference \\
+\hline
+{\em previous\+\_\+matches} & A prior on features\+\_\+init that can eventually be used default is an empty set \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classisae_1_1_s_l_a_m_core_a5ebbc2ac160e1bcf300909718c68cb44}\label{classisae_1_1_s_l_a_m_core_a5ebbc2ac160e1bcf300909718c68cb44}} 
 \index{isae::SLAMCore@{isae::SLAMCore}!profiling@{profiling}}
 \index{profiling@{profiling}!isae::SLAMCore@{isae::SLAMCore}}
 \doxysubsubsection{\texorpdfstring{profiling()}{profiling()}}
 {\footnotesize\ttfamily void isae\+::\+S\+L\+A\+M\+Core\+::profiling (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+A function to monitor the S\+L\+AM behaviour. 
 
 \mbox{\Hypertarget{classisae_1_1_s_l_a_m_core_a3bd589ad8aa6cd7d0f8cc1c4a9fab001}\label{classisae_1_1_s_l_a_m_core_a3bd589ad8aa6cd7d0f8cc1c4a9fab001}} 
 \index{isae::SLAMCore@{isae::SLAMCore}!recoverFeatureFromMapLandmarks@{recoverFeatureFromMapLandmarks}}
@@ -270,11 +407,29 @@ Implemented in \mbox{\hyperlink{classisae_1_1_s_l_a_m_non_overlapping_fov_ac1c9b
 \doxysubsubsection{\texorpdfstring{recoverFeatureFromMapLandmarks()}{recoverFeatureFromMapLandmarks()}}
 {\footnotesize\ttfamily uint isae\+::\+S\+L\+A\+M\+Core\+::recover\+Feature\+From\+Map\+Landmarks (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_map}{isae\+::\+A\+Map}} $>$}]{localmap,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&}]{f }\end{DoxyParamCaption})}
 
+
+
+Performs landmark resurection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em localmap} & Local maps that contains the landmark to project \\
+\hline
+{\em f} & \mbox{\hyperlink{classisae_1_1_frame}{Frame}} on which the landmarks are resurected\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of resurected landmarks 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classisae_1_1_s_l_a_m_core_a59e46556af840efd280b4715f372e623}\label{classisae_1_1_s_l_a_m_core_a59e46556af840efd280b4715f372e623}} 
 \index{isae::SLAMCore@{isae::SLAMCore}!runBackEnd@{runBackEnd}}
 \index{runBackEnd@{runBackEnd}!isae::SLAMCore@{isae::SLAMCore}}
 \doxysubsubsection{\texorpdfstring{runBackEnd()}{runBackEnd()}}
 {\footnotesize\ttfamily void isae\+::\+S\+L\+A\+M\+Core\+::run\+Back\+End (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Thread for the backend. 
 
 \mbox{\Hypertarget{classisae_1_1_s_l_a_m_core_a68a0dcc63d80450d36237a2e9a4b5ad1}\label{classisae_1_1_s_l_a_m_core_a68a0dcc63d80450d36237a2e9a4b5ad1}} 
 \index{isae::SLAMCore@{isae::SLAMCore}!runFrontEnd@{runFrontEnd}}
@@ -282,11 +437,19 @@ Implemented in \mbox{\hyperlink{classisae_1_1_s_l_a_m_non_overlapping_fov_ac1c9b
 \doxysubsubsection{\texorpdfstring{runFrontEnd()}{runFrontEnd()}}
 {\footnotesize\ttfamily void isae\+::\+S\+L\+A\+M\+Core\+::run\+Front\+End (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+Thread for the frontend. 
+
 \mbox{\Hypertarget{classisae_1_1_s_l_a_m_core_a086ca26cc3db8a700c763228d1b739c0}\label{classisae_1_1_s_l_a_m_core_a086ca26cc3db8a700c763228d1b739c0}} 
 \index{isae::SLAMCore@{isae::SLAMCore}!runFullOdom@{runFullOdom}}
 \index{runFullOdom@{runFullOdom}!isae::SLAMCore@{isae::SLAMCore}}
 \doxysubsubsection{\texorpdfstring{runFullOdom()}{runFullOdom()}}
 {\footnotesize\ttfamily void isae\+::\+S\+L\+A\+M\+Core\+::run\+Full\+Odom (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Thread for the backend. 
 
 \mbox{\Hypertarget{classisae_1_1_s_l_a_m_core_adf3895f1262e39e2fb288cb57aa3f4e5}\label{classisae_1_1_s_l_a_m_core_adf3895f1262e39e2fb288cb57aa3f4e5}} 
 \index{isae::SLAMCore@{isae::SLAMCore}!shouldInsertKeyframe@{shouldInsertKeyframe}}
@@ -294,17 +457,41 @@ Implemented in \mbox{\hyperlink{classisae_1_1_s_l_a_m_non_overlapping_fov_ac1c9b
 \doxysubsubsection{\texorpdfstring{shouldInsertKeyframe()}{shouldInsertKeyframe()}}
 {\footnotesize\ttfamily bool isae\+::\+S\+L\+A\+M\+Core\+::should\+Insert\+Keyframe (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&}]{f }\end{DoxyParamCaption})}
 
+
+
+Determines if the frame in argument is a KF. 
+
 \mbox{\Hypertarget{classisae_1_1_s_l_a_m_core_a129f18068b1b1169de97dcd0ac54664a}\label{classisae_1_1_s_l_a_m_core_a129f18068b1b1169de97dcd0ac54664a}} 
 \index{isae::SLAMCore@{isae::SLAMCore}!trackFeatures@{trackFeatures}}
 \index{trackFeatures@{trackFeatures}!isae::SLAMCore@{isae::SLAMCore}}
 \doxysubsubsection{\texorpdfstring{trackFeatures()}{trackFeatures()}}
-{\footnotesize\ttfamily uint isae\+::\+S\+L\+A\+M\+Core\+::track\+Features (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_image_sensor}{Image\+Sensor}} $>$ \&}]{sensor0,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_image_sensor}{Image\+Sensor}} $>$ \&}]{sensor1,  }\item[{\mbox{\hyperlink{namespaceisae_a70bf0a9838eb50b6a3fe2be9b79e25be}{typed\+\_\+vec\+\_\+match}} \&}]{matches,  }\item[{\mbox{\hyperlink{namespaceisae_a70bf0a9838eb50b6a3fe2be9b79e25be}{typed\+\_\+vec\+\_\+match}} \&}]{matches\+\_\+lmk,  }\item[{\mbox{\hyperlink{namespaceisae_aef749e9df97878dd2b7af968a4f64efd}{typed\+\_\+vec\+\_\+features}}}]{features\+\_\+to\+\_\+track }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily uint isae\+::\+S\+L\+A\+M\+Core\+::track\+Features (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_image_sensor}{Image\+Sensor}} $>$ \&}]{sensor0,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_image_sensor}{Image\+Sensor}} $>$ \&}]{sensor1,  }\item[{\mbox{\hyperlink{namespaceisae_a5d24f9da33ed2238fec0ac3f04cc8da5}{typed\+\_\+vec\+\_\+match}} \&}]{matches,  }\item[{\mbox{\hyperlink{namespaceisae_a5d24f9da33ed2238fec0ac3f04cc8da5}{typed\+\_\+vec\+\_\+match}} \&}]{matches\+\_\+lmk,  }\item[{\mbox{\hyperlink{namespaceisae_aef749e9df97878dd2b7af968a4f64efd}{typed\+\_\+vec\+\_\+features}}}]{features\+\_\+to\+\_\+track }\end{DoxyParamCaption})}
 
+
+
+Predicts the position of the features and tracks all the features. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sensor0} & First sensor \\
+\hline
+{\em sensor1} & Second sensor \\
+\hline
+{\em matches} & Typed vector of matches without landmarks passed as reference \\
+\hline
+{\em matches\+\_\+lmk} & Typed vector of matches with landmarks passed as reference \\
+\hline
+{\em features\+\_\+to\+\_\+track} & Typed vector of the features on sensor0 that will be tracked for prediction\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of tracks 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classisae_1_1_s_l_a_m_core_ae0786a5e2ebcf4b3b9e9bb4c680cf28f}\label{classisae_1_1_s_l_a_m_core_ae0786a5e2ebcf4b3b9e9bb4c680cf28f}} 
 \index{isae::SLAMCore@{isae::SLAMCore}!updateLandmarks@{updateLandmarks}}
 \index{updateLandmarks@{updateLandmarks}!isae::SLAMCore@{isae::SLAMCore}}
 \doxysubsubsection{\texorpdfstring{updateLandmarks()}{updateLandmarks()}}
-{\footnotesize\ttfamily void isae\+::\+S\+L\+A\+M\+Core\+::update\+Landmarks (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceisae_a70bf0a9838eb50b6a3fe2be9b79e25be}{typed\+\_\+vec\+\_\+match}}}]{matches\+\_\+lmk }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void isae\+::\+S\+L\+A\+M\+Core\+::update\+Landmarks (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceisae_a5d24f9da33ed2238fec0ac3f04cc8da5}{typed\+\_\+vec\+\_\+match}}}]{matches\+\_\+lmk }\end{DoxyParamCaption})}
 
 
 
@@ -313,7 +500,13 @@ Implemented in \mbox{\hyperlink{classisae_1_1_s_l_a_m_non_overlapping_fov_ac1c9b
 \index{isae::SLAMCore@{isae::SLAMCore}!\_6d\_velocity@{\_6d\_velocity}}
 \index{\_6d\_velocity@{\_6d\_velocity}!isae::SLAMCore@{isae::SLAMCore}}
 \doxysubsubsection{\texorpdfstring{\_6d\_velocity}{\_6d\_velocity}}
-{\footnotesize\ttfamily \mbox{\hyperlink{namespaceisae_a381cf9a79c09e3831978a493e7a50552}{Vector6d}} isae\+::\+S\+L\+A\+M\+Core\+::\+\_\+6d\+\_\+velocity\hspace{0.3cm}{\ttfamily [protected]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceisae_a95b4efbae1379c1c22879954528d4008}{Vector6d}} isae\+::\+S\+L\+A\+M\+Core\+::\+\_\+6d\+\_\+velocity\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\begin{quote}
+Parallax between the last KF and \+\_\+frame \end{quote}
+
 
 \mbox{\Hypertarget{classisae_1_1_s_l_a_m_core_a6514bcca5985ed726a7f2d63c6beb359}\label{classisae_1_1_s_l_a_m_core_a6514bcca5985ed726a7f2d63c6beb359}} 
 \index{isae::SLAMCore@{isae::SLAMCore}!\_avg\_clean\_t@{\_avg\_clean\_t}}
@@ -429,6 +622,12 @@ Implemented in \mbox{\hyperlink{classisae_1_1_s_l_a_m_non_overlapping_fov_ac1c9b
 \doxysubsubsection{\texorpdfstring{\_global\_map}{\_global\_map}}
 {\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classisae_1_1_global_map}{isae\+::\+Global\+Map}}$>$ isae\+::\+S\+L\+A\+M\+Core\+::\+\_\+global\+\_\+map\hspace{0.3cm}{\ttfamily [protected]}}
 
+
+
+\begin{quote}
+Current local map \end{quote}
+
+
 \mbox{\Hypertarget{classisae_1_1_s_l_a_m_core_a32e03c93a419de8aa3086c56689f964d}\label{classisae_1_1_s_l_a_m_core_a32e03c93a419de8aa3086c56689f964d}} 
 \index{isae::SLAMCore@{isae::SLAMCore}!\_global\_map\_to\_display@{\_global\_map\_to\_display}}
 \index{\_global\_map\_to\_display@{\_global\_map\_to\_display}!isae::SLAMCore@{isae::SLAMCore}}
@@ -453,6 +652,12 @@ Implemented in \mbox{\hyperlink{classisae_1_1_s_l_a_m_non_overlapping_fov_ac1c9b
 \doxysubsubsection{\texorpdfstring{\_local\_map}{\_local\_map}}
 {\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classisae_1_1_local_map}{isae\+::\+Local\+Map}}$>$ isae\+::\+S\+L\+A\+M\+Core\+::\+\_\+local\+\_\+map\hspace{0.3cm}{\ttfamily [protected]}}
 
+
+
+\begin{quote}
+Typed vector of the matches with landmarks between the sensors of \+\_\+frame \end{quote}
+
+
 \mbox{\Hypertarget{classisae_1_1_s_l_a_m_core_aeb154e22d37ba97da4983f644ca2c6bf}\label{classisae_1_1_s_l_a_m_core_aeb154e22d37ba97da4983f644ca2c6bf}} 
 \index{isae::SLAMCore@{isae::SLAMCore}!\_local\_map\_to\_display@{\_local\_map\_to\_display}}
 \index{\_local\_map\_to\_display@{\_local\_map\_to\_display}!isae::SLAMCore@{isae::SLAMCore}}
@@ -465,35 +670,71 @@ Implemented in \mbox{\hyperlink{classisae_1_1_s_l_a_m_non_overlapping_fov_ac1c9b
 \doxysubsubsection{\texorpdfstring{\_map\_mutex}{\_map\_mutex}}
 {\footnotesize\ttfamily std\+::mutex isae\+::\+S\+L\+A\+M\+Core\+::\+\_\+map\+\_\+mutex\hspace{0.3cm}{\ttfamily [protected]}}
 
+
+
+\begin{quote}
+Current Velocity as a Twist vector \end{quote}
+
+
 \mbox{\Hypertarget{classisae_1_1_s_l_a_m_core_af9705993f210ffcbffb8a3895e12958f}\label{classisae_1_1_s_l_a_m_core_af9705993f210ffcbffb8a3895e12958f}} 
 \index{isae::SLAMCore@{isae::SLAMCore}!\_matches\_in\_frame@{\_matches\_in\_frame}}
 \index{\_matches\_in\_frame@{\_matches\_in\_frame}!isae::SLAMCore@{isae::SLAMCore}}
 \doxysubsubsection{\texorpdfstring{\_matches\_in\_frame}{\_matches\_in\_frame}}
-{\footnotesize\ttfamily \mbox{\hyperlink{namespaceisae_a70bf0a9838eb50b6a3fe2be9b79e25be}{typed\+\_\+vec\+\_\+match}} isae\+::\+S\+L\+A\+M\+Core\+::\+\_\+matches\+\_\+in\+\_\+frame\hspace{0.3cm}{\ttfamily [protected]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceisae_a5d24f9da33ed2238fec0ac3f04cc8da5}{typed\+\_\+vec\+\_\+match}} isae\+::\+S\+L\+A\+M\+Core\+::\+\_\+matches\+\_\+in\+\_\+frame\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\begin{quote}
+Typed vector of the matches with landmarks between the last KF and \+\_\+frame \end{quote}
+
 
 \mbox{\Hypertarget{classisae_1_1_s_l_a_m_core_a048d35a0f87be36c46f81dcc646391fc}\label{classisae_1_1_s_l_a_m_core_a048d35a0f87be36c46f81dcc646391fc}} 
 \index{isae::SLAMCore@{isae::SLAMCore}!\_matches\_in\_frame\_lmk@{\_matches\_in\_frame\_lmk}}
 \index{\_matches\_in\_frame\_lmk@{\_matches\_in\_frame\_lmk}!isae::SLAMCore@{isae::SLAMCore}}
 \doxysubsubsection{\texorpdfstring{\_matches\_in\_frame\_lmk}{\_matches\_in\_frame\_lmk}}
-{\footnotesize\ttfamily \mbox{\hyperlink{namespaceisae_a70bf0a9838eb50b6a3fe2be9b79e25be}{typed\+\_\+vec\+\_\+match}} isae\+::\+S\+L\+A\+M\+Core\+::\+\_\+matches\+\_\+in\+\_\+frame\+\_\+lmk\hspace{0.3cm}{\ttfamily [protected]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceisae_a5d24f9da33ed2238fec0ac3f04cc8da5}{typed\+\_\+vec\+\_\+match}} isae\+::\+S\+L\+A\+M\+Core\+::\+\_\+matches\+\_\+in\+\_\+frame\+\_\+lmk\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\begin{quote}
+Typed vector of the matches between the sensors of \+\_\+frame \end{quote}
+
 
 \mbox{\Hypertarget{classisae_1_1_s_l_a_m_core_abca11aeefa4bb0850ca34658566c7e5b}\label{classisae_1_1_s_l_a_m_core_abca11aeefa4bb0850ca34658566c7e5b}} 
 \index{isae::SLAMCore@{isae::SLAMCore}!\_matches\_in\_time@{\_matches\_in\_time}}
 \index{\_matches\_in\_time@{\_matches\_in\_time}!isae::SLAMCore@{isae::SLAMCore}}
 \doxysubsubsection{\texorpdfstring{\_matches\_in\_time}{\_matches\_in\_time}}
-{\footnotesize\ttfamily \mbox{\hyperlink{namespaceisae_a70bf0a9838eb50b6a3fe2be9b79e25be}{typed\+\_\+vec\+\_\+match}} isae\+::\+S\+L\+A\+M\+Core\+::\+\_\+matches\+\_\+in\+\_\+time\hspace{0.3cm}{\ttfamily [protected]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceisae_a5d24f9da33ed2238fec0ac3f04cc8da5}{typed\+\_\+vec\+\_\+match}} isae\+::\+S\+L\+A\+M\+Core\+::\+\_\+matches\+\_\+in\+\_\+time\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\begin{quote}
+Current frame \end{quote}
+
 
 \mbox{\Hypertarget{classisae_1_1_s_l_a_m_core_a7c4e463d6cdd2083db3de4100a1885dc}\label{classisae_1_1_s_l_a_m_core_a7c4e463d6cdd2083db3de4100a1885dc}} 
 \index{isae::SLAMCore@{isae::SLAMCore}!\_matches\_in\_time\_lmk@{\_matches\_in\_time\_lmk}}
 \index{\_matches\_in\_time\_lmk@{\_matches\_in\_time\_lmk}!isae::SLAMCore@{isae::SLAMCore}}
 \doxysubsubsection{\texorpdfstring{\_matches\_in\_time\_lmk}{\_matches\_in\_time\_lmk}}
-{\footnotesize\ttfamily \mbox{\hyperlink{namespaceisae_a70bf0a9838eb50b6a3fe2be9b79e25be}{typed\+\_\+vec\+\_\+match}} isae\+::\+S\+L\+A\+M\+Core\+::\+\_\+matches\+\_\+in\+\_\+time\+\_\+lmk\hspace{0.3cm}{\ttfamily [protected]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceisae_a5d24f9da33ed2238fec0ac3f04cc8da5}{typed\+\_\+vec\+\_\+match}} isae\+::\+S\+L\+A\+M\+Core\+::\+\_\+matches\+\_\+in\+\_\+time\+\_\+lmk\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\begin{quote}
+Typed vector of the matches between the last KF and \+\_\+frame \end{quote}
+
 
 \mbox{\Hypertarget{classisae_1_1_s_l_a_m_core_a6a5a97f9b6370b3a26405c0692f3b639}\label{classisae_1_1_s_l_a_m_core_a6a5a97f9b6370b3a26405c0692f3b639}} 
 \index{isae::SLAMCore@{isae::SLAMCore}!\_max\_movement\_parallax@{\_max\_movement\_parallax}}
 \index{\_max\_movement\_parallax@{\_max\_movement\_parallax}!isae::SLAMCore@{isae::SLAMCore}}
 \doxysubsubsection{\texorpdfstring{\_max\_movement\_parallax}{\_max\_movement\_parallax}}
 {\footnotesize\ttfamily double isae\+::\+S\+L\+A\+M\+Core\+::\+\_\+max\+\_\+movement\+\_\+parallax\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\begin{quote}
+\mbox{\hyperlink{classisae_1_1_mesher}{Mesher}} of the S\+L\+AM \end{quote}
+
 
 \mbox{\Hypertarget{classisae_1_1_s_l_a_m_core_ace61752eecd0f4c5bf4d1db8646e09f2}\label{classisae_1_1_s_l_a_m_core_ace61752eecd0f4c5bf4d1db8646e09f2}} 
 \index{isae::SLAMCore@{isae::SLAMCore}!\_mesh\_to\_display@{\_mesh\_to\_display}}
@@ -507,11 +748,23 @@ Implemented in \mbox{\hyperlink{classisae_1_1_s_l_a_m_non_overlapping_fov_ac1c9b
 \doxysubsubsection{\texorpdfstring{\_mesher}{\_mesher}}
 {\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classisae_1_1_mesher}{Mesher}}$>$ isae\+::\+S\+L\+A\+M\+Core\+::\+\_\+mesher\hspace{0.3cm}{\ttfamily [protected]}}
 
+
+
+\begin{quote}
+Current global map \end{quote}
+
+
 \mbox{\Hypertarget{classisae_1_1_s_l_a_m_core_aea597da6a069fb9f86daa3c9abaa9dee}\label{classisae_1_1_s_l_a_m_core_aea597da6a069fb9f86daa3c9abaa9dee}} 
 \index{isae::SLAMCore@{isae::SLAMCore}!\_min\_lmk\_number@{\_min\_lmk\_number}}
 \index{\_min\_lmk\_number@{\_min\_lmk\_number}!isae::SLAMCore@{isae::SLAMCore}}
 \doxysubsubsection{\texorpdfstring{\_min\_lmk\_number}{\_min\_lmk\_number}}
 {\footnotesize\ttfamily double isae\+::\+S\+L\+A\+M\+Core\+::\+\_\+min\+\_\+lmk\+\_\+number\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\begin{quote}
+Under this parallax, no motion is considered \end{quote}
+
 
 \mbox{\Hypertarget{classisae_1_1_s_l_a_m_core_a1e49528324b8e9392ac52955e3fab7fc}\label{classisae_1_1_s_l_a_m_core_a1e49528324b8e9392ac52955e3fab7fc}} 
 \index{isae::SLAMCore@{isae::SLAMCore}!\_min\_movement\_parallax@{\_min\_movement\_parallax}}
@@ -519,11 +772,23 @@ Implemented in \mbox{\hyperlink{classisae_1_1_s_l_a_m_non_overlapping_fov_ac1c9b
 \doxysubsubsection{\texorpdfstring{\_min\_movement\_parallax}{\_min\_movement\_parallax}}
 {\footnotesize\ttfamily double isae\+::\+S\+L\+A\+M\+Core\+::\+\_\+min\+\_\+movement\+\_\+parallax\hspace{0.3cm}{\ttfamily [protected]}}
 
+
+
+\begin{quote}
+Max parallax until a KF is voted \end{quote}
+
+
 \mbox{\Hypertarget{classisae_1_1_s_l_a_m_core_a5c4e9ed9200240c6c3169876842606fd}\label{classisae_1_1_s_l_a_m_core_a5c4e9ed9200240c6c3169876842606fd}} 
 \index{isae::SLAMCore@{isae::SLAMCore}!\_nframes@{\_nframes}}
 \index{\_nframes@{\_nframes}!isae::SLAMCore@{isae::SLAMCore}}
 \doxysubsubsection{\texorpdfstring{\_nframes}{\_nframes}}
 {\footnotesize\ttfamily uint isae\+::\+S\+L\+A\+M\+Core\+::\+\_\+nframes\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\begin{quote}
+For communication between front-\/end and back-\/end \end{quote}
+
 
 \mbox{\Hypertarget{classisae_1_1_s_l_a_m_core_a12bf771db26400d29fb14d2635779d88}\label{classisae_1_1_s_l_a_m_core_a12bf771db26400d29fb14d2635779d88}} 
 \index{isae::SLAMCore@{isae::SLAMCore}!\_nkeyframes@{\_nkeyframes}}
@@ -536,6 +801,12 @@ Implemented in \mbox{\hyperlink{classisae_1_1_s_l_a_m_non_overlapping_fov_ac1c9b
 \index{\_parallax@{\_parallax}!isae::SLAMCore@{isae::SLAMCore}}
 \doxysubsubsection{\texorpdfstring{\_parallax}{\_parallax}}
 {\footnotesize\ttfamily double isae\+::\+S\+L\+A\+M\+Core\+::\+\_\+parallax\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\begin{quote}
+Under this number of landmark in \+\_\+frame a KF is voted \end{quote}
+
 
 \mbox{\Hypertarget{classisae_1_1_s_l_a_m_core_ae092c8eb71bfa2f29ab5e0db55ebbd8f}\label{classisae_1_1_s_l_a_m_core_ae092c8eb71bfa2f29ab5e0db55ebbd8f}} 
 \index{isae::SLAMCore@{isae::SLAMCore}!\_removed\_feat@{\_removed\_feat}}
@@ -555,11 +826,23 @@ Implemented in \mbox{\hyperlink{classisae_1_1_s_l_a_m_non_overlapping_fov_ac1c9b
 \doxysubsubsection{\texorpdfstring{\_slam\_param}{\_slam\_param}}
 {\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classisae_1_1_s_l_a_m_parameters}{isae\+::\+S\+L\+A\+M\+Parameters}}$>$ isae\+::\+S\+L\+A\+M\+Core\+::\+\_\+slam\+\_\+param}
 
+
+
+\begin{quote}
+Number of successive failure to trigger reinitialization \end{quote}
+
+
 \mbox{\Hypertarget{classisae_1_1_s_l_a_m_core_a0b839e70c15c76939af97ee99927dfc3}\label{classisae_1_1_s_l_a_m_core_a0b839e70c15c76939af97ee99927dfc3}} 
 \index{isae::SLAMCore@{isae::SLAMCore}!\_successive\_fails@{\_successive\_fails}}
 \index{\_successive\_fails@{\_successive\_fails}!isae::SLAMCore@{isae::SLAMCore}}
 \doxysubsubsection{\texorpdfstring{\_successive\_fails}{\_successive\_fails}}
 {\footnotesize\ttfamily int isae\+::\+S\+L\+A\+M\+Core\+::\+\_\+successive\+\_\+fails = 0}
+
+
+
+\begin{quote}
+Flag for initialization \end{quote}
+
 
 \mbox{\Hypertarget{classisae_1_1_s_l_a_m_core_a315c5ae2b674006024e9848e24192607}\label{classisae_1_1_s_l_a_m_core_a315c5ae2b674006024e9848e24192607}} 
 \index{isae::SLAMCore@{isae::SLAMCore}!\_timings\_frate@{\_timings\_frate}}

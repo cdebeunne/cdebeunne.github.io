@@ -1,4 +1,4 @@
 <map id="isae::SLAMBiMonoVIO" name="isae::SLAMBiMonoVIO">
-<area shape="rect" id="node1" title=" " alt="" coords="5,80,172,107"/>
-<area shape="rect" id="node2" href="$classisae_1_1_s_l_a_m_core.html" title=" " alt="" coords="27,5,151,32"/>
+<area shape="rect" id="node1" title="A SLAM class for bi&#45;monocular + IMU setups." alt="" coords="5,80,172,107"/>
+<area shape="rect" id="node2" href="$classisae_1_1_s_l_a_m_core.html" title="The core abstract class of the SLAM system. It handles front&#45;end, back&#45;end and initialization." alt="" coords="27,5,151,32"/>
 </map>

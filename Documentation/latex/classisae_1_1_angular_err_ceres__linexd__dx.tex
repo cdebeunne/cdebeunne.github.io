@@ -1,0 +1,136 @@
+\hypertarget{classisae_1_1_angular_err_ceres__linexd__dx}{}\doxysection{isae\+::Angular\+Err\+Ceres\+\_\+linexd\+\_\+dx Class Reference}
+\label{classisae_1_1_angular_err_ceres__linexd__dx}\index{isae::AngularErrCeres\_linexd\_dx@{isae::AngularErrCeres\_linexd\_dx}}
+
+
+An angular cost function for line landmarks that depends on the delta update of the frame pose and the line parameters.  
+
+
+
+
+{\ttfamily \#include $<$Angular\+Adjustment\+C\+E\+R\+E\+S\+Analytic.\+h$>$}
+
+
+
+Inheritance diagram for isae\+::Angular\+Err\+Ceres\+\_\+linexd\+\_\+dx\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{classisae_1_1_angular_err_ceres__linexd__dx__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for isae\+::Angular\+Err\+Ceres\+\_\+linexd\+\_\+dx\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{classisae_1_1_angular_err_ceres__linexd__dx__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classisae_1_1_angular_err_ceres__linexd__dx_ae24da75b5d4383740b1fc6050a40c5bf}{Angular\+Err\+Ceres\+\_\+linexd\+\_\+dx}} (const std\+::vector$<$ Eigen\+::\+Vector3d $>$ \&bearing\+\_\+vectors, const Eigen\+::\+Affine3d \&T\+\_\+s\+\_\+f, const Eigen\+::\+Affine3d \&T\+\_\+f\+\_\+w, const Eigen\+::\+Affine3d \&T\+\_\+w\+\_\+lmk, const double sigma=1)
+\item 
+\mbox{\hyperlink{classisae_1_1_angular_err_ceres__linexd__dx_a4e4ddb371201901190ff4639001e27e5}{$\sim$\+Angular\+Err\+Ceres\+\_\+linexd\+\_\+dx}} ()
+\item 
+virtual bool \mbox{\hyperlink{classisae_1_1_angular_err_ceres__linexd__dx_ac0a97dda3216ecc699430612a3cac4d1}{Evaluate}} (double const $\ast$const $\ast$parameters, double $\ast$residuals, double $\ast$$\ast$jacobians) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const std\+::vector$<$ Eigen\+::\+Vector3d $>$ \mbox{\hyperlink{classisae_1_1_angular_err_ceres__linexd__dx_a18a52a4fd9920932dc7624e8f3133bdc}{\+\_\+bearing\+\_\+vectors}}
+\begin{DoxyCompactList}\small\item\em Bearing vectors of the line in the sensor frame. \end{DoxyCompactList}\item 
+const Eigen\+::\+Affine3d \mbox{\hyperlink{classisae_1_1_angular_err_ceres__linexd__dx_ace6134d6a87604b7338c5ded0153a9a9}{\+\_\+\+T\+\_\+s\+\_\+f}}
+\begin{DoxyCompactList}\small\item\em Transform of the frame w.\+r.\+t. the sensor. \end{DoxyCompactList}\item 
+const Eigen\+::\+Affine3d \mbox{\hyperlink{classisae_1_1_angular_err_ceres__linexd__dx_af7d7f4ab8ac9bebb7d71ca497da9f4bd}{\+\_\+\+T\+\_\+f\+\_\+w}}
+\item 
+const Eigen\+::\+Affine3d \mbox{\hyperlink{classisae_1_1_angular_err_ceres__linexd__dx_a003e8d2cee1f279cd77bfd60f0baf21e}{\+\_\+\+T\+\_\+w\+\_\+lmk}}
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+Transform of the world w.\+r.\+t. the frame \end{quote}
+\end{DoxyCompactList}\item 
+const double \mbox{\hyperlink{classisae_1_1_angular_err_ceres__linexd__dx_afeaa6e369d58cf345417670d65a4de5d}{\+\_\+sigma}}
+\begin{DoxyCompactList}\small\item\em Standard deviation for the residuals, used as a weight. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An angular cost function for line landmarks that depends on the delta update of the frame pose and the line parameters. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classisae_1_1_angular_err_ceres__linexd__dx_ae24da75b5d4383740b1fc6050a40c5bf}\label{classisae_1_1_angular_err_ceres__linexd__dx_ae24da75b5d4383740b1fc6050a40c5bf}} 
+\index{isae::AngularErrCeres\_linexd\_dx@{isae::AngularErrCeres\_linexd\_dx}!AngularErrCeres\_linexd\_dx@{AngularErrCeres\_linexd\_dx}}
+\index{AngularErrCeres\_linexd\_dx@{AngularErrCeres\_linexd\_dx}!isae::AngularErrCeres\_linexd\_dx@{isae::AngularErrCeres\_linexd\_dx}}
+\doxysubsubsection{\texorpdfstring{AngularErrCeres\_linexd\_dx()}{AngularErrCeres\_linexd\_dx()}}
+{\footnotesize\ttfamily isae\+::\+Angular\+Err\+Ceres\+\_\+linexd\+\_\+dx\+::\+Angular\+Err\+Ceres\+\_\+linexd\+\_\+dx (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ Eigen\+::\+Vector3d $>$ \&}]{bearing\+\_\+vectors,  }\item[{const Eigen\+::\+Affine3d \&}]{T\+\_\+s\+\_\+f,  }\item[{const Eigen\+::\+Affine3d \&}]{T\+\_\+f\+\_\+w,  }\item[{const Eigen\+::\+Affine3d \&}]{T\+\_\+w\+\_\+lmk,  }\item[{const double}]{sigma = {\ttfamily 1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_angular_err_ceres__linexd__dx_a4e4ddb371201901190ff4639001e27e5}\label{classisae_1_1_angular_err_ceres__linexd__dx_a4e4ddb371201901190ff4639001e27e5}} 
+\index{isae::AngularErrCeres\_linexd\_dx@{isae::AngularErrCeres\_linexd\_dx}!````~AngularErrCeres\_linexd\_dx@{$\sim$AngularErrCeres\_linexd\_dx}}
+\index{````~AngularErrCeres\_linexd\_dx@{$\sim$AngularErrCeres\_linexd\_dx}!isae::AngularErrCeres\_linexd\_dx@{isae::AngularErrCeres\_linexd\_dx}}
+\doxysubsubsection{\texorpdfstring{$\sim$AngularErrCeres\_linexd\_dx()}{~AngularErrCeres\_linexd\_dx()}}
+{\footnotesize\ttfamily isae\+::\+Angular\+Err\+Ceres\+\_\+linexd\+\_\+dx\+::$\sim$\+Angular\+Err\+Ceres\+\_\+linexd\+\_\+dx (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classisae_1_1_angular_err_ceres__linexd__dx_ac0a97dda3216ecc699430612a3cac4d1}\label{classisae_1_1_angular_err_ceres__linexd__dx_ac0a97dda3216ecc699430612a3cac4d1}} 
+\index{isae::AngularErrCeres\_linexd\_dx@{isae::AngularErrCeres\_linexd\_dx}!Evaluate@{Evaluate}}
+\index{Evaluate@{Evaluate}!isae::AngularErrCeres\_linexd\_dx@{isae::AngularErrCeres\_linexd\_dx}}
+\doxysubsubsection{\texorpdfstring{Evaluate()}{Evaluate()}}
+{\footnotesize\ttfamily virtual bool isae\+::\+Angular\+Err\+Ceres\+\_\+linexd\+\_\+dx\+::\+Evaluate (\begin{DoxyParamCaption}\item[{double const $\ast$const $\ast$}]{parameters,  }\item[{double $\ast$}]{residuals,  }\item[{double $\ast$$\ast$}]{jacobians }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classisae_1_1_angular_err_ceres__linexd__dx_a18a52a4fd9920932dc7624e8f3133bdc}\label{classisae_1_1_angular_err_ceres__linexd__dx_a18a52a4fd9920932dc7624e8f3133bdc}} 
+\index{isae::AngularErrCeres\_linexd\_dx@{isae::AngularErrCeres\_linexd\_dx}!\_bearing\_vectors@{\_bearing\_vectors}}
+\index{\_bearing\_vectors@{\_bearing\_vectors}!isae::AngularErrCeres\_linexd\_dx@{isae::AngularErrCeres\_linexd\_dx}}
+\doxysubsubsection{\texorpdfstring{\_bearing\_vectors}{\_bearing\_vectors}}
+{\footnotesize\ttfamily const std\+::vector$<$Eigen\+::\+Vector3d$>$ isae\+::\+Angular\+Err\+Ceres\+\_\+linexd\+\_\+dx\+::\+\_\+bearing\+\_\+vectors\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Bearing vectors of the line in the sensor frame. 
+
+\mbox{\Hypertarget{classisae_1_1_angular_err_ceres__linexd__dx_afeaa6e369d58cf345417670d65a4de5d}\label{classisae_1_1_angular_err_ceres__linexd__dx_afeaa6e369d58cf345417670d65a4de5d}} 
+\index{isae::AngularErrCeres\_linexd\_dx@{isae::AngularErrCeres\_linexd\_dx}!\_sigma@{\_sigma}}
+\index{\_sigma@{\_sigma}!isae::AngularErrCeres\_linexd\_dx@{isae::AngularErrCeres\_linexd\_dx}}
+\doxysubsubsection{\texorpdfstring{\_sigma}{\_sigma}}
+{\footnotesize\ttfamily const double isae\+::\+Angular\+Err\+Ceres\+\_\+linexd\+\_\+dx\+::\+\_\+sigma\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Standard deviation for the residuals, used as a weight. 
+
+\mbox{\Hypertarget{classisae_1_1_angular_err_ceres__linexd__dx_af7d7f4ab8ac9bebb7d71ca497da9f4bd}\label{classisae_1_1_angular_err_ceres__linexd__dx_af7d7f4ab8ac9bebb7d71ca497da9f4bd}} 
+\index{isae::AngularErrCeres\_linexd\_dx@{isae::AngularErrCeres\_linexd\_dx}!\_T\_f\_w@{\_T\_f\_w}}
+\index{\_T\_f\_w@{\_T\_f\_w}!isae::AngularErrCeres\_linexd\_dx@{isae::AngularErrCeres\_linexd\_dx}}
+\doxysubsubsection{\texorpdfstring{\_T\_f\_w}{\_T\_f\_w}}
+{\footnotesize\ttfamily const Eigen\+::\+Affine3d isae\+::\+Angular\+Err\+Ceres\+\_\+linexd\+\_\+dx\+::\+\_\+\+T\+\_\+f\+\_\+w\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classisae_1_1_angular_err_ceres__linexd__dx_ace6134d6a87604b7338c5ded0153a9a9}\label{classisae_1_1_angular_err_ceres__linexd__dx_ace6134d6a87604b7338c5ded0153a9a9}} 
+\index{isae::AngularErrCeres\_linexd\_dx@{isae::AngularErrCeres\_linexd\_dx}!\_T\_s\_f@{\_T\_s\_f}}
+\index{\_T\_s\_f@{\_T\_s\_f}!isae::AngularErrCeres\_linexd\_dx@{isae::AngularErrCeres\_linexd\_dx}}
+\doxysubsubsection{\texorpdfstring{\_T\_s\_f}{\_T\_s\_f}}
+{\footnotesize\ttfamily const Eigen\+::\+Affine3d isae\+::\+Angular\+Err\+Ceres\+\_\+linexd\+\_\+dx\+::\+\_\+\+T\+\_\+s\+\_\+f\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Transform of the frame w.\+r.\+t. the sensor. 
+
+\mbox{\Hypertarget{classisae_1_1_angular_err_ceres__linexd__dx_a003e8d2cee1f279cd77bfd60f0baf21e}\label{classisae_1_1_angular_err_ceres__linexd__dx_a003e8d2cee1f279cd77bfd60f0baf21e}} 
+\index{isae::AngularErrCeres\_linexd\_dx@{isae::AngularErrCeres\_linexd\_dx}!\_T\_w\_lmk@{\_T\_w\_lmk}}
+\index{\_T\_w\_lmk@{\_T\_w\_lmk}!isae::AngularErrCeres\_linexd\_dx@{isae::AngularErrCeres\_linexd\_dx}}
+\doxysubsubsection{\texorpdfstring{\_T\_w\_lmk}{\_T\_w\_lmk}}
+{\footnotesize\ttfamily const Eigen\+::\+Affine3d isae\+::\+Angular\+Err\+Ceres\+\_\+linexd\+\_\+dx\+::\+\_\+\+T\+\_\+w\+\_\+lmk\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\begin{quote}
+Transform of the world w.\+r.\+t. the frame \end{quote}
+
+
+Pose of the landmark in the world frame 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/deos/ce.\+debeunne/colcon\+\_\+ws/src/\+Sa\+D\+V\+I\+O/cpp/include/isaeslam/optimizers/\mbox{\hyperlink{_angular_adjustment_c_e_r_e_s_analytic_8h}{Angular\+Adjustment\+C\+E\+R\+E\+S\+Analytic.\+h}}\end{DoxyCompactItemize}

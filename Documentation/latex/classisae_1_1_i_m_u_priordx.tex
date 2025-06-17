@@ -2,6 +2,11 @@
 \label{classisae_1_1_i_m_u_priordx}\index{isae::IMUPriordx@{isae::IMUPriordx}}
 
 
+An absolute prior on an Inertial state, including pose, velocity and biases.  
+
+
+
+
 {\ttfamily \#include $<$residuals.\+hpp$>$}
 
 
@@ -39,7 +44,9 @@ Eigen\+::\+Affine3d \mbox{\hyperlink{classisae_1_1_i_m_u_priordx_ae5fd2c9d2906bb
 Eigen\+::\+Affine3d \mbox{\hyperlink{classisae_1_1_i_m_u_priordx_adccdd2b79d0fbf2ab7da2c4b5b2f3de8}{\+\_\+\+T\+\_\+prior}}
 \item 
 Eigen\+::\+Vector3d \mbox{\hyperlink{classisae_1_1_i_m_u_priordx_af2c4f680ef3e8c9c17de70c633be24ca}{\+\_\+v}}
-\item 
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+Pose prior and current value \end{quote}
+\end{DoxyCompactList}\item 
 Eigen\+::\+Vector3d \mbox{\hyperlink{classisae_1_1_i_m_u_priordx_ac8aab50893a5328e8e5b8df15ca37910}{\+\_\+v\+\_\+prior}}
 \item 
 Eigen\+::\+Vector3d \mbox{\hyperlink{classisae_1_1_i_m_u_priordx_a7d9b36bd8e82364de3ecd6bec42d55ab}{\+\_\+ba}}
@@ -51,8 +58,13 @@ Eigen\+::\+Vector3d \mbox{\hyperlink{classisae_1_1_i_m_u_priordx_a8c8cc7079674fb
 Eigen\+::\+Vector3d \mbox{\hyperlink{classisae_1_1_i_m_u_priordx_a63c9c51a21a0d3292a3e2d6d3875635f}{\+\_\+bg\+\_\+prior}}
 \item 
 Eigen\+::\+Matrix\+Xd \mbox{\hyperlink{classisae_1_1_i_m_u_priordx_a894d3043c372cd4a2d496d7696c4d3f6}{\+\_\+sqrt\+\_\+inf}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+Prior and current value for velocity and biases \end{quote}
+\end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+An absolute prior on an Inertial state, including pose, velocity and biases. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classisae_1_1_i_m_u_priordx_a12d60a84b9377c9b018c472399cdad78}\label{classisae_1_1_i_m_u_priordx_a12d60a84b9377c9b018c472399cdad78}} 
@@ -109,6 +121,12 @@ Eigen\+::\+Matrix\+Xd \mbox{\hyperlink{classisae_1_1_i_m_u_priordx_a894d3043c372
 \doxysubsubsection{\texorpdfstring{\_sqrt\_inf}{\_sqrt\_inf}}
 {\footnotesize\ttfamily Eigen\+::\+Matrix\+Xd isae\+::\+I\+M\+U\+Priordx\+::\+\_\+sqrt\+\_\+inf}
 
+
+
+\begin{quote}
+Prior and current value for velocity and biases \end{quote}
+
+
 \mbox{\Hypertarget{classisae_1_1_i_m_u_priordx_ae5fd2c9d2906bb1930608e9f332ece06}\label{classisae_1_1_i_m_u_priordx_ae5fd2c9d2906bb1930608e9f332ece06}} 
 \index{isae::IMUPriordx@{isae::IMUPriordx}!\_T@{\_T}}
 \index{\_T@{\_T}!isae::IMUPriordx@{isae::IMUPriordx}}
@@ -126,6 +144,12 @@ Eigen\+::\+Matrix\+Xd \mbox{\hyperlink{classisae_1_1_i_m_u_priordx_a894d3043c372
 \index{\_v@{\_v}!isae::IMUPriordx@{isae::IMUPriordx}}
 \doxysubsubsection{\texorpdfstring{\_v}{\_v}}
 {\footnotesize\ttfamily Eigen\+::\+Vector3d isae\+::\+I\+M\+U\+Priordx\+::\+\_\+v}
+
+
+
+\begin{quote}
+Pose prior and current value \end{quote}
+
 
 \mbox{\Hypertarget{classisae_1_1_i_m_u_priordx_ac8aab50893a5328e8e5b8df15ca37910}\label{classisae_1_1_i_m_u_priordx_ac8aab50893a5328e8e5b8df15ca37910}} 
 \index{isae::IMUPriordx@{isae::IMUPriordx}!\_v\_prior@{\_v\_prior}}

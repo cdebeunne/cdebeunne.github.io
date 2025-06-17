@@ -2,104 +2,158 @@
 \label{classisae_1_1_marginalization}\index{isae::Marginalization@{isae::Marginalization}}
 
 
+\mbox{\hyperlink{classisae_1_1_marginalization}{Marginalization}} class that handles marginalization (and sparsification) for fixed-\/lag smoothing.  
+
+
+
+
 {\ttfamily \#include $<$marginalization.\+hpp$>$}
 
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{classisae_1_1_marginalization_acd138d7d0fad8fe0eb2f5b3d6178cc60}{pre\+Marginalize}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&frame0, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&frame1, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_marginalization}{Marginalization}} $>$ \&marginalization\+\_\+last)
-\item 
+\begin{DoxyCompactList}\small\item\em Select all the variables to keep and to marginalize in the Markov Blanket for fixed lag smoothing. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classisae_1_1_marginalization_a2123a5bdbcf4684790c2e103c9b47cd9}{pre\+Marginalize\+Relative}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&frame0, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&frame1)
-\item 
-void \mbox{\hyperlink{classisae_1_1_marginalization_a2453ce54f9cdf7361d541f938ed5ec0d}{add\+Marginalization\+Block}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structisae_1_1_marginalization_block_info}{Marginalization\+Block\+Info}} $>$ marginalization\+\_\+block)
-\item 
+\begin{DoxyCompactList}\small\item\em Select all the variables to keep and marginalize to derive the relative pose factor between two frames. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classisae_1_1_marginalization_a33e8b408c886823385e2d4ff75d681db}{sparsify\+V\+IO}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Sparsify the dense prior factor in the V\+IO case. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classisae_1_1_marginalization_acae6b1b8caabcaf3dadd874aeb03585b}{sparsify\+VO}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Sparsify the dense prior factor in the VO case. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classisae_1_1_marginalization_a320b8f5a3afd8aee001909d16d74d4d2}{compute\+Information\+And\+Gradient}} (std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structisae_1_1_marginalization_block_info}{Marginalization\+Block\+Info}} $>$$>$ blocks, Eigen\+::\+Matrix\+Xd \&A, Eigen\+::\+Vector\+Xd \&b)
-\item 
+\begin{DoxyCompactList}\small\item\em Compute the information matrix and the gradient for a set of factors. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classisae_1_1_marginalization_ad8304e2b3aa3f0f3da3ffecbbd0b0bf7}{rank\+Revealling\+Decomposition}} (Eigen\+::\+Matrix\+Xd A, Eigen\+::\+Matrix\+Xd \&U, Eigen\+::\+Vector\+Xd \&d)
-\item 
+\begin{DoxyCompactList}\small\item\em Compute the S\+VD of a given matrix to reveal its rank. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classisae_1_1_marginalization_ad7e4c7a85f72fbc22a57788831f785a5}{compute\+Schur\+Complement}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Compute the dense prior with the Schur complement on \+\_\+\+Ak. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classisae_1_1_marginalization_adf14f1ba8d991053500ecabe070153e6}{compute\+Jacobians\+And\+Residuals}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Compute the jacobian and the residual of the dense prior factor. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{classisae_1_1_marginalization_a4ad7242cf2161f5eb9a241898e8f3119}{compute\+Entropy}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_landmark}{A\+Landmark}} $>$ lmk)
-\item 
+\begin{DoxyCompactList}\small\item\em Compute the Entropy of a given landmark. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{classisae_1_1_marginalization_a94bd1c1c456e7f73fe4b0b81f12431ca}{compute\+Mutual\+Information}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_landmark}{A\+Landmark}} $>$ lmk\+\_\+i, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_landmark}{A\+Landmark}} $>$ lmk\+\_\+j)
-\item 
+\begin{DoxyCompactList}\small\item\em Compute the Mutual Information between two landmarks. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{classisae_1_1_marginalization_a430a7a0c88d74c07886349f49a2547a3}{compute\+Off\+Diag}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_landmark}{A\+Landmark}} $>$ lmk\+\_\+i, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_landmark}{A\+Landmark}} $>$ lmk\+\_\+j)
-\item 
+\begin{DoxyCompactList}\small\item\em Approximate the Mutual Information between two landmarks using off diagonal blocks of \+\_\+\+Ak. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{classisae_1_1_marginalization_a6ba683f779c8e9906dd6600dadfc8059}{compute\+K\+LD}} (Eigen\+::\+Matrix\+Xd A\+\_\+p, Eigen\+::\+Matrix\+Xd A\+\_\+q)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Compute the K\+LD between the multivariate Gaussian with their Information Matrix assuming their mean is equal. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 int \mbox{\hyperlink{classisae_1_1_marginalization_a5b9106683d3ebf42a6044c80d86daa26}{\+\_\+m}}
 \item 
 int \mbox{\hyperlink{classisae_1_1_marginalization_a5fa0eefed32070e5200a03053e390672}{\+\_\+n}}
-\item 
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+Parametric size of the variables to marginalize \end{quote}
+\end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classisae_1_1_marginalization_a101d4f5e54f669137848ed9ed5c7daf1}{\+\_\+n\+\_\+full}}
-\item 
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+Parametric size of the variables to keep \end{quote}
+\end{DoxyCompactList}\item 
 const double \mbox{\hyperlink{classisae_1_1_marginalization_ae65774c8d79dfc03d8ef86c74af5833c}{\+\_\+eps}} = 1e-\/12
-\item 
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+Parametric size of the variables to keep after rank reveilling \end{quote}
+\end{DoxyCompactList}\item 
 std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \mbox{\hyperlink{classisae_1_1_marginalization_a19f0f7175c624347ed4bef17451b4e7a}{\+\_\+frame\+\_\+to\+\_\+marg}}
-\item 
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+Threshold to consider a null eigen value \end{quote}
+\end{DoxyCompactList}\item 
 std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \mbox{\hyperlink{classisae_1_1_marginalization_a87e8637cbcb52f9a3014c0dfce077b5a}{\+\_\+frame\+\_\+to\+\_\+keep}}
-\item 
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+\mbox{\hyperlink{classisae_1_1_frame}{Frame}} to marginalize \end{quote}
+\end{DoxyCompactList}\item 
 \mbox{\hyperlink{namespaceisae_a4b744e0e080a733838eb133deda894aa}{typed\+\_\+vec\+\_\+landmarks}} \mbox{\hyperlink{classisae_1_1_marginalization_abf678dc12a0eb7ac313eddc58e3ae973}{\+\_\+lmk\+\_\+to\+\_\+keep}}
-\item 
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+\mbox{\hyperlink{classisae_1_1_frame}{Frame}} to keep \end{quote}
+\end{DoxyCompactList}\item 
 \mbox{\hyperlink{namespaceisae_a4b744e0e080a733838eb133deda894aa}{typed\+\_\+vec\+\_\+landmarks}} \mbox{\hyperlink{classisae_1_1_marginalization_a52aa845eebd0798dc3ac6437a90f8a22}{\+\_\+lmk\+\_\+to\+\_\+marg}}
-\item 
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+Set of landmarks to keep \end{quote}
+\end{DoxyCompactList}\item 
 std\+::unordered\+\_\+map$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$, int $>$ \mbox{\hyperlink{classisae_1_1_marginalization_a0fb0e2599f2c1f2834ea0e9003efefdd}{\+\_\+map\+\_\+frame\+\_\+idx}}
-\item 
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+Set of landmarks to marginalize \end{quote}
+\end{DoxyCompactList}\item 
 std\+::unordered\+\_\+map$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_landmark}{A\+Landmark}} $>$, int $>$ \mbox{\hyperlink{classisae_1_1_marginalization_aa2b364c8de398dcacff9b8edae53adc5}{\+\_\+map\+\_\+lmk\+\_\+idx}}
-\item 
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+Map between frames and indices in \+\_\+\+Ak \end{quote}
+\end{DoxyCompactList}\item 
 std\+::unordered\+\_\+map$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$, Eigen\+::\+Matrix\+Xd $>$ \mbox{\hyperlink{classisae_1_1_marginalization_a09117ead54dcc44d16ebfa0d244eb86b}{\+\_\+map\+\_\+frame\+\_\+inf}}
-\item 
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+Map between landmarks and indices in \+\_\+\+Ak \end{quote}
+\end{DoxyCompactList}\item 
 std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structisae_1_1_marginalization_block_info}{Marginalization\+Block\+Info}} $>$ $>$ \mbox{\hyperlink{classisae_1_1_marginalization_a8263d8ff60d0eb4af4d1583091b05864}{\+\_\+marginalization\+\_\+blocks}}
-\item 
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+Map between frame and their marginal information matrix \end{quote}
+\end{DoxyCompactList}\item 
 std\+::unordered\+\_\+map$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_landmark}{A\+Landmark}} $>$, Eigen\+::\+Matrix3d $>$ \mbox{\hyperlink{classisae_1_1_marginalization_ae666a7e62f196220eb4c0ea0b8bf2320}{\+\_\+map\+\_\+lmk\+\_\+inf}}
-\item 
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+Vector of \mbox{\hyperlink{classisae_1_1_marginalization}{Marginalization}} blocks to derive \+\_\+\+Ak \end{quote}
+\end{DoxyCompactList}\item 
 std\+::unordered\+\_\+map$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_landmark}{A\+Landmark}} $>$, Eigen\+::\+Vector3d $>$ \mbox{\hyperlink{classisae_1_1_marginalization_a4e8a0c9b57d20c1b24abba640e823397}{\+\_\+map\+\_\+lmk\+\_\+prior}}
-\item 
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+Map between landmarks and info mat of sparse relative prior factors \end{quote}
+\end{DoxyCompactList}\item 
 std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_landmark}{A\+Landmark}} $>$ \mbox{\hyperlink{classisae_1_1_marginalization_a439bc93ad1daac7fb58f8e46176b22c9}{\+\_\+lmk\+\_\+with\+\_\+prior}}
-\item 
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+Map between landmarks and priors of sparse prior relative factors \end{quote}
+\end{DoxyCompactList}\item 
 Eigen\+::\+Matrix3d \mbox{\hyperlink{classisae_1_1_marginalization_a5d1cfb5d9d6b39c46ca189bfca92b64b}{\+\_\+info\+\_\+lmk}}
-\item 
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+Landmark that has an absolute prior factor \end{quote}
+\end{DoxyCompactList}\item 
 Eigen\+::\+Vector3d \mbox{\hyperlink{classisae_1_1_marginalization_af5a6b29051e12cc034338e3c7548fac1}{\+\_\+prior\+\_\+lmk}}
-\item 
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+Information matrix of the landmark absolute prior \end{quote}
+\end{DoxyCompactList}\item 
 Eigen\+::\+Matrix\+Xd \mbox{\hyperlink{classisae_1_1_marginalization_aef7b9eebb23f5ee9fb85bfe1e4f5bda1}{\+\_\+\+Ak}}
-\item 
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+Prior of the landmark absolute prior \end{quote}
+\end{DoxyCompactList}\item 
 Eigen\+::\+Vector\+Xd \mbox{\hyperlink{classisae_1_1_marginalization_aff1a083d46a3aa2b581c372fb6024a91}{\+\_\+bk}}
-\item 
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+Information matrix of the subproblem \end{quote}
+\end{DoxyCompactList}\item 
 Eigen\+::\+Matrix\+Xd \mbox{\hyperlink{classisae_1_1_marginalization_a783077c6a6cccc6c1809dd6cea759656}{\+\_\+\+Sigma\+\_\+k}}
-\item 
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+Gradient of the subproblem \end{quote}
+\end{DoxyCompactList}\item 
 Eigen\+::\+Matrix\+Xd \mbox{\hyperlink{classisae_1_1_marginalization_a73cb280873cff9625069d747c19c614e}{\+\_\+U}}
-\item 
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+Covariance of the dense prior \end{quote}
+\end{DoxyCompactList}\item 
 Eigen\+::\+Vector\+Xd \mbox{\hyperlink{classisae_1_1_marginalization_a7c5d5cc89812b9b844b7894eccf8bb82}{\+\_\+\+Lambda}}
-\item 
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+Eigen vectors that have non null eigen values \end{quote}
+\end{DoxyCompactList}\item 
 Eigen\+::\+Vector\+Xd \mbox{\hyperlink{classisae_1_1_marginalization_ac5dc8cc3ab1e4f802b1fc0703e77623f}{\+\_\+\+Sigma}}
-\item 
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+Non null Eigen values \end{quote}
+\end{DoxyCompactList}\item 
 Eigen\+::\+Matrix\+Xd \mbox{\hyperlink{classisae_1_1_marginalization_a4b642d48616608aa6e94ff61978b491e}{\+\_\+marginalization\+\_\+jacobian}}
-\item 
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+Inverse of \+\_\+\+Lambda \end{quote}
+\end{DoxyCompactList}\item 
 Eigen\+::\+Vector\+Xd \mbox{\hyperlink{classisae_1_1_marginalization_a9343606535c39563abfdf09d20782c77}{\+\_\+marginalization\+\_\+residual}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+Jacobian of the dense prior factor \end{quote}
+\end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classisae_1_1_marginalization}{Marginalization}} class that handles marginalization (and sparsification) for fixed-\/lag smoothing. 
+
+This class is responsible for selecting the variables to keep and to marginalize, computing the information matrix, computing the Schur complement, and computing the Jacobians and residuals for the marginalization. It also provides methods for sparsifying the dense prior in the case of V\+IO and VO. 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classisae_1_1_marginalization_a2453ce54f9cdf7361d541f938ed5ec0d}\label{classisae_1_1_marginalization_a2453ce54f9cdf7361d541f938ed5ec0d}} 
-\index{isae::Marginalization@{isae::Marginalization}!addMarginalizationBlock@{addMarginalizationBlock}}
-\index{addMarginalizationBlock@{addMarginalizationBlock}!isae::Marginalization@{isae::Marginalization}}
-\doxysubsubsection{\texorpdfstring{addMarginalizationBlock()}{addMarginalizationBlock()}}
-{\footnotesize\ttfamily void isae\+::\+Marginalization\+::add\+Marginalization\+Block (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structisae_1_1_marginalization_block_info}{Marginalization\+Block\+Info}} $>$}]{marginalization\+\_\+block }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
 \mbox{\Hypertarget{classisae_1_1_marginalization_a4ad7242cf2161f5eb9a241898e8f3119}\label{classisae_1_1_marginalization_a4ad7242cf2161f5eb9a241898e8f3119}} 
 \index{isae::Marginalization@{isae::Marginalization}!computeEntropy@{computeEntropy}}
 \index{computeEntropy@{computeEntropy}!isae::Marginalization@{isae::Marginalization}}
 \doxysubsubsection{\texorpdfstring{computeEntropy()}{computeEntropy()}}
 {\footnotesize\ttfamily double isae\+::\+Marginalization\+::compute\+Entropy (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_landmark}{A\+Landmark}} $>$}]{lmk }\end{DoxyParamCaption})}
+
+
+
+Compute the Entropy of a given landmark. 
 
 \mbox{\Hypertarget{classisae_1_1_marginalization_a320b8f5a3afd8aee001909d16d74d4d2}\label{classisae_1_1_marginalization_a320b8f5a3afd8aee001909d16d74d4d2}} 
 \index{isae::Marginalization@{isae::Marginalization}!computeInformationAndGradient@{computeInformationAndGradient}}
@@ -107,11 +161,28 @@ Eigen\+::\+Vector\+Xd \mbox{\hyperlink{classisae_1_1_marginalization_a9343606535
 \doxysubsubsection{\texorpdfstring{computeInformationAndGradient()}{computeInformationAndGradient()}}
 {\footnotesize\ttfamily void isae\+::\+Marginalization\+::compute\+Information\+And\+Gradient (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structisae_1_1_marginalization_block_info}{Marginalization\+Block\+Info}} $>$$>$}]{blocks,  }\item[{Eigen\+::\+Matrix\+Xd \&}]{A,  }\item[{Eigen\+::\+Vector\+Xd \&}]{b }\end{DoxyParamCaption})}
 
+
+
+Compute the information matrix and the gradient for a set of factors. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em blocks} & The vector of factors stored in \mbox{\hyperlink{classisae_1_1_marginalization}{Marginalization}} Blocks \\
+\hline
+{\em A} & The information matrix \\
+\hline
+{\em B} & The gradient \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classisae_1_1_marginalization_adf14f1ba8d991053500ecabe070153e6}\label{classisae_1_1_marginalization_adf14f1ba8d991053500ecabe070153e6}} 
 \index{isae::Marginalization@{isae::Marginalization}!computeJacobiansAndResiduals@{computeJacobiansAndResiduals}}
 \index{computeJacobiansAndResiduals@{computeJacobiansAndResiduals}!isae::Marginalization@{isae::Marginalization}}
 \doxysubsubsection{\texorpdfstring{computeJacobiansAndResiduals()}{computeJacobiansAndResiduals()}}
 {\footnotesize\ttfamily bool isae\+::\+Marginalization\+::compute\+Jacobians\+And\+Residuals (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Compute the jacobian and the residual of the dense prior factor. 
 
 \mbox{\Hypertarget{classisae_1_1_marginalization_a6ba683f779c8e9906dd6600dadfc8059}\label{classisae_1_1_marginalization_a6ba683f779c8e9906dd6600dadfc8059}} 
 \index{isae::Marginalization@{isae::Marginalization}!computeKLD@{computeKLD}}
@@ -119,11 +190,19 @@ Eigen\+::\+Vector\+Xd \mbox{\hyperlink{classisae_1_1_marginalization_a9343606535
 \doxysubsubsection{\texorpdfstring{computeKLD()}{computeKLD()}}
 {\footnotesize\ttfamily double isae\+::\+Marginalization\+::compute\+K\+LD (\begin{DoxyParamCaption}\item[{Eigen\+::\+Matrix\+Xd}]{A\+\_\+p,  }\item[{Eigen\+::\+Matrix\+Xd}]{A\+\_\+q }\end{DoxyParamCaption})}
 
+
+
+Compute the K\+LD between the multivariate Gaussian with their Information Matrix assuming their mean is equal. 
+
 \mbox{\Hypertarget{classisae_1_1_marginalization_a94bd1c1c456e7f73fe4b0b81f12431ca}\label{classisae_1_1_marginalization_a94bd1c1c456e7f73fe4b0b81f12431ca}} 
 \index{isae::Marginalization@{isae::Marginalization}!computeMutualInformation@{computeMutualInformation}}
 \index{computeMutualInformation@{computeMutualInformation}!isae::Marginalization@{isae::Marginalization}}
 \doxysubsubsection{\texorpdfstring{computeMutualInformation()}{computeMutualInformation()}}
 {\footnotesize\ttfamily double isae\+::\+Marginalization\+::compute\+Mutual\+Information (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_landmark}{A\+Landmark}} $>$}]{lmk\+\_\+i,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_landmark}{A\+Landmark}} $>$}]{lmk\+\_\+j }\end{DoxyParamCaption})}
+
+
+
+Compute the Mutual Information between two landmarks. 
 
 \mbox{\Hypertarget{classisae_1_1_marginalization_a430a7a0c88d74c07886349f49a2547a3}\label{classisae_1_1_marginalization_a430a7a0c88d74c07886349f49a2547a3}} 
 \index{isae::Marginalization@{isae::Marginalization}!computeOffDiag@{computeOffDiag}}
@@ -131,11 +210,19 @@ Eigen\+::\+Vector\+Xd \mbox{\hyperlink{classisae_1_1_marginalization_a9343606535
 \doxysubsubsection{\texorpdfstring{computeOffDiag()}{computeOffDiag()}}
 {\footnotesize\ttfamily double isae\+::\+Marginalization\+::compute\+Off\+Diag (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_landmark}{A\+Landmark}} $>$}]{lmk\+\_\+i,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_landmark}{A\+Landmark}} $>$}]{lmk\+\_\+j }\end{DoxyParamCaption})}
 
+
+
+Approximate the Mutual Information between two landmarks using off diagonal blocks of \+\_\+\+Ak. 
+
 \mbox{\Hypertarget{classisae_1_1_marginalization_ad7e4c7a85f72fbc22a57788831f785a5}\label{classisae_1_1_marginalization_ad7e4c7a85f72fbc22a57788831f785a5}} 
 \index{isae::Marginalization@{isae::Marginalization}!computeSchurComplement@{computeSchurComplement}}
 \index{computeSchurComplement@{computeSchurComplement}!isae::Marginalization@{isae::Marginalization}}
 \doxysubsubsection{\texorpdfstring{computeSchurComplement()}{computeSchurComplement()}}
 {\footnotesize\ttfamily bool isae\+::\+Marginalization\+::compute\+Schur\+Complement (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Compute the dense prior with the Schur complement on \+\_\+\+Ak. 
 
 \mbox{\Hypertarget{classisae_1_1_marginalization_acd138d7d0fad8fe0eb2f5b3d6178cc60}\label{classisae_1_1_marginalization_acd138d7d0fad8fe0eb2f5b3d6178cc60}} 
 \index{isae::Marginalization@{isae::Marginalization}!preMarginalize@{preMarginalize}}
@@ -143,29 +230,74 @@ Eigen\+::\+Vector\+Xd \mbox{\hyperlink{classisae_1_1_marginalization_a9343606535
 \doxysubsubsection{\texorpdfstring{preMarginalize()}{preMarginalize()}}
 {\footnotesize\ttfamily void isae\+::\+Marginalization\+::pre\+Marginalize (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&}]{frame0,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&}]{frame1,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_marginalization}{Marginalization}} $>$ \&}]{marginalization\+\_\+last }\end{DoxyParamCaption})}
 
+
+
+Select all the variables to keep and to marginalize in the Markov Blanket for fixed lag smoothing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em frame0} & frame to marginalize \\
+\hline
+{\em frame1} & frame linked to frame0 \\
+\hline
+{\em marginalization\+\_\+last} & previous marginalization scheme \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classisae_1_1_marginalization_a2123a5bdbcf4684790c2e103c9b47cd9}\label{classisae_1_1_marginalization_a2123a5bdbcf4684790c2e103c9b47cd9}} 
 \index{isae::Marginalization@{isae::Marginalization}!preMarginalizeRelative@{preMarginalizeRelative}}
 \index{preMarginalizeRelative@{preMarginalizeRelative}!isae::Marginalization@{isae::Marginalization}}
 \doxysubsubsection{\texorpdfstring{preMarginalizeRelative()}{preMarginalizeRelative()}}
 {\footnotesize\ttfamily void isae\+::\+Marginalization\+::pre\+Marginalize\+Relative (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&}]{frame0,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&}]{frame1 }\end{DoxyParamCaption})}
 
+
+
+Select all the variables to keep and marginalize to derive the relative pose factor between two frames. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em frame0} & The first frame \\
+\hline
+{\em frame1} & The second frame \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classisae_1_1_marginalization_ad8304e2b3aa3f0f3da3ffecbbd0b0bf7}\label{classisae_1_1_marginalization_ad8304e2b3aa3f0f3da3ffecbbd0b0bf7}} 
 \index{isae::Marginalization@{isae::Marginalization}!rankReveallingDecomposition@{rankReveallingDecomposition}}
 \index{rankReveallingDecomposition@{rankReveallingDecomposition}!isae::Marginalization@{isae::Marginalization}}
 \doxysubsubsection{\texorpdfstring{rankReveallingDecomposition()}{rankReveallingDecomposition()}}
 {\footnotesize\ttfamily void isae\+::\+Marginalization\+::rank\+Revealling\+Decomposition (\begin{DoxyParamCaption}\item[{Eigen\+::\+Matrix\+Xd}]{A,  }\item[{Eigen\+::\+Matrix\+Xd \&}]{U,  }\item[{Eigen\+::\+Vector\+Xd \&}]{d }\end{DoxyParamCaption})}
 
+
+
+Compute the S\+VD of a given matrix to reveal its rank. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em A} & The input matrix \\
+\hline
+{\em U} & The Eigen vectors of non null eigen values (up to a threshold) \\
+\hline
+{\em d} & Non null Eigen values \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classisae_1_1_marginalization_a33e8b408c886823385e2d4ff75d681db}\label{classisae_1_1_marginalization_a33e8b408c886823385e2d4ff75d681db}} 
 \index{isae::Marginalization@{isae::Marginalization}!sparsifyVIO@{sparsifyVIO}}
 \index{sparsifyVIO@{sparsifyVIO}!isae::Marginalization@{isae::Marginalization}}
 \doxysubsubsection{\texorpdfstring{sparsifyVIO()}{sparsifyVIO()}}
 {\footnotesize\ttfamily bool isae\+::\+Marginalization\+::sparsify\+V\+IO (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+Sparsify the dense prior factor in the V\+IO case. 
+
 \mbox{\Hypertarget{classisae_1_1_marginalization_acae6b1b8caabcaf3dadd874aeb03585b}\label{classisae_1_1_marginalization_acae6b1b8caabcaf3dadd874aeb03585b}} 
 \index{isae::Marginalization@{isae::Marginalization}!sparsifyVO@{sparsifyVO}}
 \index{sparsifyVO@{sparsifyVO}!isae::Marginalization@{isae::Marginalization}}
 \doxysubsubsection{\texorpdfstring{sparsifyVO()}{sparsifyVO()}}
 {\footnotesize\ttfamily bool isae\+::\+Marginalization\+::sparsify\+VO (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Sparsify the dense prior factor in the VO case. 
 
 C\+H\+OW L\+IU T\+R\+EE R\+E\+O\+R\+D\+E\+R\+I\+NG ///
 
@@ -178,11 +310,23 @@ L\+A\+N\+D\+M\+A\+RK C\+H\+A\+IN ///
 \doxysubsubsection{\texorpdfstring{\_Ak}{\_Ak}}
 {\footnotesize\ttfamily Eigen\+::\+Matrix\+Xd isae\+::\+Marginalization\+::\+\_\+\+Ak}
 
+
+
+\begin{quote}
+Prior of the landmark absolute prior \end{quote}
+
+
 \mbox{\Hypertarget{classisae_1_1_marginalization_aff1a083d46a3aa2b581c372fb6024a91}\label{classisae_1_1_marginalization_aff1a083d46a3aa2b581c372fb6024a91}} 
 \index{isae::Marginalization@{isae::Marginalization}!\_bk@{\_bk}}
 \index{\_bk@{\_bk}!isae::Marginalization@{isae::Marginalization}}
 \doxysubsubsection{\texorpdfstring{\_bk}{\_bk}}
 {\footnotesize\ttfamily Eigen\+::\+Vector\+Xd isae\+::\+Marginalization\+::\+\_\+bk}
+
+
+
+\begin{quote}
+Information matrix of the subproblem \end{quote}
+
 
 \mbox{\Hypertarget{classisae_1_1_marginalization_ae65774c8d79dfc03d8ef86c74af5833c}\label{classisae_1_1_marginalization_ae65774c8d79dfc03d8ef86c74af5833c}} 
 \index{isae::Marginalization@{isae::Marginalization}!\_eps@{\_eps}}
@@ -190,11 +334,23 @@ L\+A\+N\+D\+M\+A\+RK C\+H\+A\+IN ///
 \doxysubsubsection{\texorpdfstring{\_eps}{\_eps}}
 {\footnotesize\ttfamily const double isae\+::\+Marginalization\+::\+\_\+eps = 1e-\/12}
 
+
+
+\begin{quote}
+Parametric size of the variables to keep after rank reveilling \end{quote}
+
+
 \mbox{\Hypertarget{classisae_1_1_marginalization_a87e8637cbcb52f9a3014c0dfce077b5a}\label{classisae_1_1_marginalization_a87e8637cbcb52f9a3014c0dfce077b5a}} 
 \index{isae::Marginalization@{isae::Marginalization}!\_frame\_to\_keep@{\_frame\_to\_keep}}
 \index{\_frame\_to\_keep@{\_frame\_to\_keep}!isae::Marginalization@{isae::Marginalization}}
 \doxysubsubsection{\texorpdfstring{\_frame\_to\_keep}{\_frame\_to\_keep}}
 {\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classisae_1_1_frame}{Frame}}$>$ isae\+::\+Marginalization\+::\+\_\+frame\+\_\+to\+\_\+keep}
+
+
+
+\begin{quote}
+\mbox{\hyperlink{classisae_1_1_frame}{Frame}} to marginalize \end{quote}
+
 
 \mbox{\Hypertarget{classisae_1_1_marginalization_a19f0f7175c624347ed4bef17451b4e7a}\label{classisae_1_1_marginalization_a19f0f7175c624347ed4bef17451b4e7a}} 
 \index{isae::Marginalization@{isae::Marginalization}!\_frame\_to\_marg@{\_frame\_to\_marg}}
@@ -202,11 +358,23 @@ L\+A\+N\+D\+M\+A\+RK C\+H\+A\+IN ///
 \doxysubsubsection{\texorpdfstring{\_frame\_to\_marg}{\_frame\_to\_marg}}
 {\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classisae_1_1_frame}{Frame}}$>$ isae\+::\+Marginalization\+::\+\_\+frame\+\_\+to\+\_\+marg}
 
+
+
+\begin{quote}
+Threshold to consider a null eigen value \end{quote}
+
+
 \mbox{\Hypertarget{classisae_1_1_marginalization_a5d1cfb5d9d6b39c46ca189bfca92b64b}\label{classisae_1_1_marginalization_a5d1cfb5d9d6b39c46ca189bfca92b64b}} 
 \index{isae::Marginalization@{isae::Marginalization}!\_info\_lmk@{\_info\_lmk}}
 \index{\_info\_lmk@{\_info\_lmk}!isae::Marginalization@{isae::Marginalization}}
 \doxysubsubsection{\texorpdfstring{\_info\_lmk}{\_info\_lmk}}
 {\footnotesize\ttfamily Eigen\+::\+Matrix3d isae\+::\+Marginalization\+::\+\_\+info\+\_\+lmk}
+
+
+
+\begin{quote}
+Landmark that has an absolute prior factor \end{quote}
+
 
 \mbox{\Hypertarget{classisae_1_1_marginalization_a7c5d5cc89812b9b844b7894eccf8bb82}\label{classisae_1_1_marginalization_a7c5d5cc89812b9b844b7894eccf8bb82}} 
 \index{isae::Marginalization@{isae::Marginalization}!\_Lambda@{\_Lambda}}
@@ -214,11 +382,23 @@ L\+A\+N\+D\+M\+A\+RK C\+H\+A\+IN ///
 \doxysubsubsection{\texorpdfstring{\_Lambda}{\_Lambda}}
 {\footnotesize\ttfamily Eigen\+::\+Vector\+Xd isae\+::\+Marginalization\+::\+\_\+\+Lambda}
 
+
+
+\begin{quote}
+Eigen vectors that have non null eigen values \end{quote}
+
+
 \mbox{\Hypertarget{classisae_1_1_marginalization_abf678dc12a0eb7ac313eddc58e3ae973}\label{classisae_1_1_marginalization_abf678dc12a0eb7ac313eddc58e3ae973}} 
 \index{isae::Marginalization@{isae::Marginalization}!\_lmk\_to\_keep@{\_lmk\_to\_keep}}
 \index{\_lmk\_to\_keep@{\_lmk\_to\_keep}!isae::Marginalization@{isae::Marginalization}}
 \doxysubsubsection{\texorpdfstring{\_lmk\_to\_keep}{\_lmk\_to\_keep}}
 {\footnotesize\ttfamily \mbox{\hyperlink{namespaceisae_a4b744e0e080a733838eb133deda894aa}{typed\+\_\+vec\+\_\+landmarks}} isae\+::\+Marginalization\+::\+\_\+lmk\+\_\+to\+\_\+keep}
+
+
+
+\begin{quote}
+\mbox{\hyperlink{classisae_1_1_frame}{Frame}} to keep \end{quote}
+
 
 \mbox{\Hypertarget{classisae_1_1_marginalization_a52aa845eebd0798dc3ac6437a90f8a22}\label{classisae_1_1_marginalization_a52aa845eebd0798dc3ac6437a90f8a22}} 
 \index{isae::Marginalization@{isae::Marginalization}!\_lmk\_to\_marg@{\_lmk\_to\_marg}}
@@ -226,11 +406,23 @@ L\+A\+N\+D\+M\+A\+RK C\+H\+A\+IN ///
 \doxysubsubsection{\texorpdfstring{\_lmk\_to\_marg}{\_lmk\_to\_marg}}
 {\footnotesize\ttfamily \mbox{\hyperlink{namespaceisae_a4b744e0e080a733838eb133deda894aa}{typed\+\_\+vec\+\_\+landmarks}} isae\+::\+Marginalization\+::\+\_\+lmk\+\_\+to\+\_\+marg}
 
+
+
+\begin{quote}
+Set of landmarks to keep \end{quote}
+
+
 \mbox{\Hypertarget{classisae_1_1_marginalization_a439bc93ad1daac7fb58f8e46176b22c9}\label{classisae_1_1_marginalization_a439bc93ad1daac7fb58f8e46176b22c9}} 
 \index{isae::Marginalization@{isae::Marginalization}!\_lmk\_with\_prior@{\_lmk\_with\_prior}}
 \index{\_lmk\_with\_prior@{\_lmk\_with\_prior}!isae::Marginalization@{isae::Marginalization}}
 \doxysubsubsection{\texorpdfstring{\_lmk\_with\_prior}{\_lmk\_with\_prior}}
 {\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classisae_1_1_a_landmark}{A\+Landmark}}$>$ isae\+::\+Marginalization\+::\+\_\+lmk\+\_\+with\+\_\+prior}
+
+
+
+\begin{quote}
+Map between landmarks and priors of sparse prior relative factors \end{quote}
+
 
 \mbox{\Hypertarget{classisae_1_1_marginalization_a5b9106683d3ebf42a6044c80d86daa26}\label{classisae_1_1_marginalization_a5b9106683d3ebf42a6044c80d86daa26}} 
 \index{isae::Marginalization@{isae::Marginalization}!\_m@{\_m}}
@@ -244,11 +436,23 @@ L\+A\+N\+D\+M\+A\+RK C\+H\+A\+IN ///
 \doxysubsubsection{\texorpdfstring{\_map\_frame\_idx}{\_map\_frame\_idx}}
 {\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classisae_1_1_frame}{Frame}}$>$, int$>$ isae\+::\+Marginalization\+::\+\_\+map\+\_\+frame\+\_\+idx}
 
+
+
+\begin{quote}
+Set of landmarks to marginalize \end{quote}
+
+
 \mbox{\Hypertarget{classisae_1_1_marginalization_a09117ead54dcc44d16ebfa0d244eb86b}\label{classisae_1_1_marginalization_a09117ead54dcc44d16ebfa0d244eb86b}} 
 \index{isae::Marginalization@{isae::Marginalization}!\_map\_frame\_inf@{\_map\_frame\_inf}}
 \index{\_map\_frame\_inf@{\_map\_frame\_inf}!isae::Marginalization@{isae::Marginalization}}
 \doxysubsubsection{\texorpdfstring{\_map\_frame\_inf}{\_map\_frame\_inf}}
 {\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classisae_1_1_frame}{Frame}}$>$, Eigen\+::\+Matrix\+Xd$>$ isae\+::\+Marginalization\+::\+\_\+map\+\_\+frame\+\_\+inf}
+
+
+
+\begin{quote}
+Map between landmarks and indices in \+\_\+\+Ak \end{quote}
+
 
 \mbox{\Hypertarget{classisae_1_1_marginalization_aa2b364c8de398dcacff9b8edae53adc5}\label{classisae_1_1_marginalization_aa2b364c8de398dcacff9b8edae53adc5}} 
 \index{isae::Marginalization@{isae::Marginalization}!\_map\_lmk\_idx@{\_map\_lmk\_idx}}
@@ -256,11 +460,23 @@ L\+A\+N\+D\+M\+A\+RK C\+H\+A\+IN ///
 \doxysubsubsection{\texorpdfstring{\_map\_lmk\_idx}{\_map\_lmk\_idx}}
 {\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classisae_1_1_a_landmark}{A\+Landmark}}$>$, int$>$ isae\+::\+Marginalization\+::\+\_\+map\+\_\+lmk\+\_\+idx}
 
+
+
+\begin{quote}
+Map between frames and indices in \+\_\+\+Ak \end{quote}
+
+
 \mbox{\Hypertarget{classisae_1_1_marginalization_ae666a7e62f196220eb4c0ea0b8bf2320}\label{classisae_1_1_marginalization_ae666a7e62f196220eb4c0ea0b8bf2320}} 
 \index{isae::Marginalization@{isae::Marginalization}!\_map\_lmk\_inf@{\_map\_lmk\_inf}}
 \index{\_map\_lmk\_inf@{\_map\_lmk\_inf}!isae::Marginalization@{isae::Marginalization}}
 \doxysubsubsection{\texorpdfstring{\_map\_lmk\_inf}{\_map\_lmk\_inf}}
 {\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classisae_1_1_a_landmark}{A\+Landmark}}$>$, Eigen\+::\+Matrix3d$>$ isae\+::\+Marginalization\+::\+\_\+map\+\_\+lmk\+\_\+inf}
+
+
+
+\begin{quote}
+Vector of \mbox{\hyperlink{classisae_1_1_marginalization}{Marginalization}} blocks to derive \+\_\+\+Ak \end{quote}
+
 
 \mbox{\Hypertarget{classisae_1_1_marginalization_a4e8a0c9b57d20c1b24abba640e823397}\label{classisae_1_1_marginalization_a4e8a0c9b57d20c1b24abba640e823397}} 
 \index{isae::Marginalization@{isae::Marginalization}!\_map\_lmk\_prior@{\_map\_lmk\_prior}}
@@ -268,11 +484,23 @@ L\+A\+N\+D\+M\+A\+RK C\+H\+A\+IN ///
 \doxysubsubsection{\texorpdfstring{\_map\_lmk\_prior}{\_map\_lmk\_prior}}
 {\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classisae_1_1_a_landmark}{A\+Landmark}}$>$, Eigen\+::\+Vector3d$>$ isae\+::\+Marginalization\+::\+\_\+map\+\_\+lmk\+\_\+prior}
 
+
+
+\begin{quote}
+Map between landmarks and info mat of sparse relative prior factors \end{quote}
+
+
 \mbox{\Hypertarget{classisae_1_1_marginalization_a8263d8ff60d0eb4af4d1583091b05864}\label{classisae_1_1_marginalization_a8263d8ff60d0eb4af4d1583091b05864}} 
 \index{isae::Marginalization@{isae::Marginalization}!\_marginalization\_blocks@{\_marginalization\_blocks}}
 \index{\_marginalization\_blocks@{\_marginalization\_blocks}!isae::Marginalization@{isae::Marginalization}}
 \doxysubsubsection{\texorpdfstring{\_marginalization\_blocks}{\_marginalization\_blocks}}
 {\footnotesize\ttfamily std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structisae_1_1_marginalization_block_info}{Marginalization\+Block\+Info}}$>$ $>$ isae\+::\+Marginalization\+::\+\_\+marginalization\+\_\+blocks}
+
+
+
+\begin{quote}
+Map between frame and their marginal information matrix \end{quote}
+
 
 \mbox{\Hypertarget{classisae_1_1_marginalization_a4b642d48616608aa6e94ff61978b491e}\label{classisae_1_1_marginalization_a4b642d48616608aa6e94ff61978b491e}} 
 \index{isae::Marginalization@{isae::Marginalization}!\_marginalization\_jacobian@{\_marginalization\_jacobian}}
@@ -280,11 +508,23 @@ L\+A\+N\+D\+M\+A\+RK C\+H\+A\+IN ///
 \doxysubsubsection{\texorpdfstring{\_marginalization\_jacobian}{\_marginalization\_jacobian}}
 {\footnotesize\ttfamily Eigen\+::\+Matrix\+Xd isae\+::\+Marginalization\+::\+\_\+marginalization\+\_\+jacobian}
 
+
+
+\begin{quote}
+Inverse of \+\_\+\+Lambda \end{quote}
+
+
 \mbox{\Hypertarget{classisae_1_1_marginalization_a9343606535c39563abfdf09d20782c77}\label{classisae_1_1_marginalization_a9343606535c39563abfdf09d20782c77}} 
 \index{isae::Marginalization@{isae::Marginalization}!\_marginalization\_residual@{\_marginalization\_residual}}
 \index{\_marginalization\_residual@{\_marginalization\_residual}!isae::Marginalization@{isae::Marginalization}}
 \doxysubsubsection{\texorpdfstring{\_marginalization\_residual}{\_marginalization\_residual}}
 {\footnotesize\ttfamily Eigen\+::\+Vector\+Xd isae\+::\+Marginalization\+::\+\_\+marginalization\+\_\+residual}
+
+
+
+\begin{quote}
+Jacobian of the dense prior factor \end{quote}
+
 
 \mbox{\Hypertarget{classisae_1_1_marginalization_a5fa0eefed32070e5200a03053e390672}\label{classisae_1_1_marginalization_a5fa0eefed32070e5200a03053e390672}} 
 \index{isae::Marginalization@{isae::Marginalization}!\_n@{\_n}}
@@ -292,11 +532,23 @@ L\+A\+N\+D\+M\+A\+RK C\+H\+A\+IN ///
 \doxysubsubsection{\texorpdfstring{\_n}{\_n}}
 {\footnotesize\ttfamily int isae\+::\+Marginalization\+::\+\_\+n}
 
+
+
+\begin{quote}
+Parametric size of the variables to marginalize \end{quote}
+
+
 \mbox{\Hypertarget{classisae_1_1_marginalization_a101d4f5e54f669137848ed9ed5c7daf1}\label{classisae_1_1_marginalization_a101d4f5e54f669137848ed9ed5c7daf1}} 
 \index{isae::Marginalization@{isae::Marginalization}!\_n\_full@{\_n\_full}}
 \index{\_n\_full@{\_n\_full}!isae::Marginalization@{isae::Marginalization}}
 \doxysubsubsection{\texorpdfstring{\_n\_full}{\_n\_full}}
 {\footnotesize\ttfamily int isae\+::\+Marginalization\+::\+\_\+n\+\_\+full}
+
+
+
+\begin{quote}
+Parametric size of the variables to keep \end{quote}
+
 
 \mbox{\Hypertarget{classisae_1_1_marginalization_af5a6b29051e12cc034338e3c7548fac1}\label{classisae_1_1_marginalization_af5a6b29051e12cc034338e3c7548fac1}} 
 \index{isae::Marginalization@{isae::Marginalization}!\_prior\_lmk@{\_prior\_lmk}}
@@ -304,11 +556,23 @@ L\+A\+N\+D\+M\+A\+RK C\+H\+A\+IN ///
 \doxysubsubsection{\texorpdfstring{\_prior\_lmk}{\_prior\_lmk}}
 {\footnotesize\ttfamily Eigen\+::\+Vector3d isae\+::\+Marginalization\+::\+\_\+prior\+\_\+lmk}
 
+
+
+\begin{quote}
+Information matrix of the landmark absolute prior \end{quote}
+
+
 \mbox{\Hypertarget{classisae_1_1_marginalization_ac5dc8cc3ab1e4f802b1fc0703e77623f}\label{classisae_1_1_marginalization_ac5dc8cc3ab1e4f802b1fc0703e77623f}} 
 \index{isae::Marginalization@{isae::Marginalization}!\_Sigma@{\_Sigma}}
 \index{\_Sigma@{\_Sigma}!isae::Marginalization@{isae::Marginalization}}
 \doxysubsubsection{\texorpdfstring{\_Sigma}{\_Sigma}}
 {\footnotesize\ttfamily Eigen\+::\+Vector\+Xd isae\+::\+Marginalization\+::\+\_\+\+Sigma}
+
+
+
+\begin{quote}
+Non null Eigen values \end{quote}
+
 
 \mbox{\Hypertarget{classisae_1_1_marginalization_a783077c6a6cccc6c1809dd6cea759656}\label{classisae_1_1_marginalization_a783077c6a6cccc6c1809dd6cea759656}} 
 \index{isae::Marginalization@{isae::Marginalization}!\_Sigma\_k@{\_Sigma\_k}}
@@ -316,11 +580,23 @@ L\+A\+N\+D\+M\+A\+RK C\+H\+A\+IN ///
 \doxysubsubsection{\texorpdfstring{\_Sigma\_k}{\_Sigma\_k}}
 {\footnotesize\ttfamily Eigen\+::\+Matrix\+Xd isae\+::\+Marginalization\+::\+\_\+\+Sigma\+\_\+k}
 
+
+
+\begin{quote}
+Gradient of the subproblem \end{quote}
+
+
 \mbox{\Hypertarget{classisae_1_1_marginalization_a73cb280873cff9625069d747c19c614e}\label{classisae_1_1_marginalization_a73cb280873cff9625069d747c19c614e}} 
 \index{isae::Marginalization@{isae::Marginalization}!\_U@{\_U}}
 \index{\_U@{\_U}!isae::Marginalization@{isae::Marginalization}}
 \doxysubsubsection{\texorpdfstring{\_U}{\_U}}
 {\footnotesize\ttfamily Eigen\+::\+Matrix\+Xd isae\+::\+Marginalization\+::\+\_\+U}
+
+
+
+\begin{quote}
+Covariance of the dense prior \end{quote}
+
 
 
 

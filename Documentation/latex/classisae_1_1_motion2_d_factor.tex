@@ -2,6 +2,11 @@
 \label{classisae_1_1_motion2_d_factor}\index{isae::Motion2DFactor@{isae::Motion2DFactor}}
 
 
+A cost function to impose a constraint on 2D motion.  
+
+
+
+
 {\ttfamily \#include $<$residuals.\+hpp$>$}
 
 
@@ -37,14 +42,25 @@ virtual bool \mbox{\hyperlink{classisae_1_1_motion2_d_factor_aa46e226bec04c19636
 Eigen\+::\+Vector2d \mbox{\hyperlink{classisae_1_1_motion2_d_factor_a82ff083d821e447f7e082cac62f39909}{\+\_\+motion\+\_\+2d}}
 \item 
 Eigen\+::\+Matrix\+Xd \mbox{\hyperlink{classisae_1_1_motion2_d_factor_a3165679ff9311e8f9f56b2ab9c9dac61}{\+\_\+sqrt\+\_\+inf}}
-\item 
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+The velocity on the 2D plane \end{quote}
+\end{DoxyCompactList}\item 
 double \mbox{\hyperlink{classisae_1_1_motion2_d_factor_aff78787cf9d6cf68c39d0d11901e051d}{\+\_\+dt}}
-\item 
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+The square root informatino matrix of the measurement \end{quote}
+\end{DoxyCompactList}\item 
 double \mbox{\hyperlink{classisae_1_1_motion2_d_factor_a6b835a92ce0e467062ba6428750ecc9c}{\+\_\+dx}}
-\item 
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+The integration time \end{quote}
+\end{DoxyCompactList}\item 
 double \mbox{\hyperlink{classisae_1_1_motion2_d_factor_ade8db41dd60981199df6f20aadcbbef9}{\+\_\+dtheta}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+The forward displacement \end{quote}
+\end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+A cost function to impose a constraint on 2D motion. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classisae_1_1_motion2_d_factor_ab485c1ac3c2b78049f6c03e59fb8ddf2}\label{classisae_1_1_motion2_d_factor_ab485c1ac3c2b78049f6c03e59fb8ddf2}} 
@@ -77,17 +93,35 @@ double \mbox{\hyperlink{classisae_1_1_motion2_d_factor_ade8db41dd60981199df6f20a
 \doxysubsubsection{\texorpdfstring{\_dt}{\_dt}}
 {\footnotesize\ttfamily double isae\+::\+Motion2\+D\+Factor\+::\+\_\+dt}
 
+
+
+\begin{quote}
+The square root informatino matrix of the measurement \end{quote}
+
+
 \mbox{\Hypertarget{classisae_1_1_motion2_d_factor_ade8db41dd60981199df6f20aadcbbef9}\label{classisae_1_1_motion2_d_factor_ade8db41dd60981199df6f20aadcbbef9}} 
 \index{isae::Motion2DFactor@{isae::Motion2DFactor}!\_dtheta@{\_dtheta}}
 \index{\_dtheta@{\_dtheta}!isae::Motion2DFactor@{isae::Motion2DFactor}}
 \doxysubsubsection{\texorpdfstring{\_dtheta}{\_dtheta}}
 {\footnotesize\ttfamily double isae\+::\+Motion2\+D\+Factor\+::\+\_\+dtheta}
 
+
+
+\begin{quote}
+The forward displacement \end{quote}
+
+
 \mbox{\Hypertarget{classisae_1_1_motion2_d_factor_a6b835a92ce0e467062ba6428750ecc9c}\label{classisae_1_1_motion2_d_factor_a6b835a92ce0e467062ba6428750ecc9c}} 
 \index{isae::Motion2DFactor@{isae::Motion2DFactor}!\_dx@{\_dx}}
 \index{\_dx@{\_dx}!isae::Motion2DFactor@{isae::Motion2DFactor}}
 \doxysubsubsection{\texorpdfstring{\_dx}{\_dx}}
 {\footnotesize\ttfamily double isae\+::\+Motion2\+D\+Factor\+::\+\_\+dx}
+
+
+
+\begin{quote}
+The integration time \end{quote}
+
 
 \mbox{\Hypertarget{classisae_1_1_motion2_d_factor_a82ff083d821e447f7e082cac62f39909}\label{classisae_1_1_motion2_d_factor_a82ff083d821e447f7e082cac62f39909}} 
 \index{isae::Motion2DFactor@{isae::Motion2DFactor}!\_motion\_2d@{\_motion\_2d}}
@@ -100,6 +134,12 @@ double \mbox{\hyperlink{classisae_1_1_motion2_d_factor_ade8db41dd60981199df6f20a
 \index{\_sqrt\_inf@{\_sqrt\_inf}!isae::Motion2DFactor@{isae::Motion2DFactor}}
 \doxysubsubsection{\texorpdfstring{\_sqrt\_inf}{\_sqrt\_inf}}
 {\footnotesize\ttfamily Eigen\+::\+Matrix\+Xd isae\+::\+Motion2\+D\+Factor\+::\+\_\+sqrt\+\_\+inf}
+
+
+
+\begin{quote}
+The velocity on the 2D plane \end{quote}
+
 
 
 

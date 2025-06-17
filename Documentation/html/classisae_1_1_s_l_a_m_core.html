@@ -75,18 +75,21 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>The core abstract class of the SLAM system. It handles front-end, back-end and initialization.  
+ <a href="classisae_1_1_s_l_a_m_core.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="slam_core_8h_source.html">slamCore.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for isae::SLAMCore:</div>
 <div class="dyncontent">
 <div class="center"><img src="classisae_1_1_s_l_a_m_core__inherit__graph.png" border="0" usemap="#isae_1_1_s_l_a_m_core_inherit__map" alt="Inheritance graph"/></div>
 <map name="isae_1_1_s_l_a_m_core_inherit__map" id="isae_1_1_s_l_a_m_core_inherit__map">
-<area shape="rect" title=" " alt="" coords="5,107,129,133"/>
-<area shape="rect" href="classisae_1_1_s_l_a_m_bi_mono.html" title=" " alt="" coords="217,5,360,32"/>
-<area shape="rect" href="classisae_1_1_s_l_a_m_bi_mono_v_i_o.html" title=" " alt="" coords="205,56,372,83"/>
-<area shape="rect" href="classisae_1_1_s_l_a_m_mono.html" title=" " alt="" coords="223,107,354,133"/>
-<area shape="rect" href="classisae_1_1_s_l_a_m_mono_v_i_o.html" title=" " alt="" coords="212,157,365,184"/>
-<area shape="rect" href="classisae_1_1_s_l_a_m_non_overlapping_fov.html" title=" " alt="" coords="177,208,400,235"/>
+<area shape="rect" title="The core abstract class of the SLAM system. It handles front&#45;end, back&#45;end and initialization." alt="" coords="5,107,129,133"/>
+<area shape="rect" href="classisae_1_1_s_l_a_m_bi_mono.html" title="A SLAM class for bi&#45;monocular setups." alt="" coords="217,5,360,32"/>
+<area shape="rect" href="classisae_1_1_s_l_a_m_bi_mono_v_i_o.html" title="A SLAM class for bi&#45;monocular + IMU setups." alt="" coords="205,56,372,83"/>
+<area shape="rect" href="classisae_1_1_s_l_a_m_mono.html" title="A SLAM class for monocular setups." alt="" coords="223,107,354,133"/>
+<area shape="rect" href="classisae_1_1_s_l_a_m_mono_v_i_o.html" title="A SLAM class for monocular + IMU setups." alt="" coords="212,157,365,184"/>
+<area shape="rect" href="classisae_1_1_s_l_a_m_non_overlapping_fov.html" title="A SLAM class for non overlapping FoV setups." alt="" coords="177,208,400,235"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -97,44 +100,62 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5e59849481ace40b62c7f9606d1c5dd9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#a5e59849481ace40b62c7f9606d1c5dd9">SLAMCore</a> (std::shared_ptr&lt; <a class="el" href="classisae_1_1_s_l_a_m_parameters.html">isae::SLAMParameters</a> &gt; slam_param)</td></tr>
 <tr class="separator:a5e59849481ace40b62c7f9606d1c5dd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a87fdc0be9d6042436ff097b375f86b72"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#a87fdc0be9d6042436ff097b375f86b72">init</a> ()=0</td></tr>
+<tr class="memdesc:a87fdc0be9d6042436ff097b375f86b72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialization step : create the first 3D landmarks and keyframe(s)  <a href="classisae_1_1_s_l_a_m_core.html#a87fdc0be9d6042436ff097b375f86b72">More...</a><br /></td></tr>
 <tr class="separator:a87fdc0be9d6042436ff097b375f86b72"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab97c16d22ca0c3d50c4ef63bcd6c88f7"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#ab97c16d22ca0c3d50c4ef63bcd6c88f7">frontEndStep</a> ()=0</td></tr>
+<tr class="memdesc:ab97c16d22ca0c3d50c4ef63bcd6c88f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Front End: detection, tracking, pose estimation and landmark triangulation.  <a href="classisae_1_1_s_l_a_m_core.html#ab97c16d22ca0c3d50c4ef63bcd6c88f7">More...</a><br /></td></tr>
 <tr class="separator:ab97c16d22ca0c3d50c4ef63bcd6c88f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa378dd826e38a3bb5358a261466a97e3"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#aa378dd826e38a3bb5358a261466a97e3">backEndStep</a> ()=0</td></tr>
+<tr class="memdesc:aa378dd826e38a3bb5358a261466a97e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">brief description Back End: marginalization, local map optimization  <a href="classisae_1_1_s_l_a_m_core.html#aa378dd826e38a3bb5358a261466a97e3">More...</a><br /></td></tr>
 <tr class="separator:aa378dd826e38a3bb5358a261466a97e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a59e46556af840efd280b4715f372e623"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#a59e46556af840efd280b4715f372e623">runBackEnd</a> ()</td></tr>
+<tr class="memdesc:a59e46556af840efd280b4715f372e623"><td class="mdescLeft">&#160;</td><td class="mdescRight">Thread for the backend.  <a href="classisae_1_1_s_l_a_m_core.html#a59e46556af840efd280b4715f372e623">More...</a><br /></td></tr>
 <tr class="separator:a59e46556af840efd280b4715f372e623"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a68a0dcc63d80450d36237a2e9a4b5ad1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#a68a0dcc63d80450d36237a2e9a4b5ad1">runFrontEnd</a> ()</td></tr>
+<tr class="memdesc:a68a0dcc63d80450d36237a2e9a4b5ad1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Thread for the frontend.  <a href="classisae_1_1_s_l_a_m_core.html#a68a0dcc63d80450d36237a2e9a4b5ad1">More...</a><br /></td></tr>
 <tr class="separator:a68a0dcc63d80450d36237a2e9a4b5ad1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a086ca26cc3db8a700c763228d1b739c0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#a086ca26cc3db8a700c763228d1b739c0">runFullOdom</a> ()</td></tr>
+<tr class="memdesc:a086ca26cc3db8a700c763228d1b739c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Thread for the backend.  <a href="classisae_1_1_s_l_a_m_core.html#a086ca26cc3db8a700c763228d1b739c0">More...</a><br /></td></tr>
 <tr class="separator:a086ca26cc3db8a700c763228d1b739c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab0de2d2b0de545f6a1ecc793c7f5ffee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceisae.html#aef749e9df97878dd2b7af968a4f64efd">typed_vec_features</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#ab0de2d2b0de545f6a1ecc793c7f5ffee">detectFeatures</a> (std::shared_ptr&lt; <a class="el" href="classisae_1_1_image_sensor.html">ImageSensor</a> &gt; &amp;sensor)</td></tr>
+<tr class="memdesc:ab0de2d2b0de545f6a1ecc793c7f5ffee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Detect all types of features for a given sensor with bucketting.  <a href="classisae_1_1_s_l_a_m_core.html#ab0de2d2b0de545f6a1ecc793c7f5ffee">More...</a><br /></td></tr>
 <tr class="separator:ab0de2d2b0de545f6a1ecc793c7f5ffee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4038c62e84822504b5a040765d397a45"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#a4038c62e84822504b5a040765d397a45">cleanFeatures</a> (std::shared_ptr&lt; <a class="el" href="classisae_1_1_frame.html">Frame</a> &gt; &amp;f)</td></tr>
+<tr class="memdesc:a4038c62e84822504b5a040765d397a45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clean all the features that are outliers or are linked to outlier landmark.  <a href="classisae_1_1_s_l_a_m_core.html#a4038c62e84822504b5a040765d397a45">More...</a><br /></td></tr>
 <tr class="separator:a4038c62e84822504b5a040765d397a45"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a248df2fe323e26cd3bb8edeb4a9a3fe8"><td class="memItemLeft" align="right" valign="top">uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#a248df2fe323e26cd3bb8edeb4a9a3fe8">matchFeatures</a> (std::shared_ptr&lt; <a class="el" href="classisae_1_1_image_sensor.html">ImageSensor</a> &gt; &amp;sensor0, std::shared_ptr&lt; <a class="el" href="classisae_1_1_image_sensor.html">ImageSensor</a> &gt; &amp;sensor1, <a class="el" href="namespaceisae.html#a70bf0a9838eb50b6a3fe2be9b79e25be">typed_vec_match</a> &amp;matches, <a class="el" href="namespaceisae.html#a70bf0a9838eb50b6a3fe2be9b79e25be">typed_vec_match</a> &amp;matches_lmk, <a class="el" href="namespaceisae.html#aef749e9df97878dd2b7af968a4f64efd">typed_vec_features</a> features_to_track)</td></tr>
+<tr class="memitem:a248df2fe323e26cd3bb8edeb4a9a3fe8"><td class="memItemLeft" align="right" valign="top">uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#a248df2fe323e26cd3bb8edeb4a9a3fe8">matchFeatures</a> (std::shared_ptr&lt; <a class="el" href="classisae_1_1_image_sensor.html">ImageSensor</a> &gt; &amp;sensor0, std::shared_ptr&lt; <a class="el" href="classisae_1_1_image_sensor.html">ImageSensor</a> &gt; &amp;sensor1, <a class="el" href="namespaceisae.html#a5d24f9da33ed2238fec0ac3f04cc8da5">typed_vec_match</a> &amp;matches, <a class="el" href="namespaceisae.html#a5d24f9da33ed2238fec0ac3f04cc8da5">typed_vec_match</a> &amp;matches_lmk, <a class="el" href="namespaceisae.html#aef749e9df97878dd2b7af968a4f64efd">typed_vec_features</a> features_to_track)</td></tr>
+<tr class="memdesc:a248df2fe323e26cd3bb8edeb4a9a3fe8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Predicts the position of the features and matches all the features between sensors.  <a href="classisae_1_1_s_l_a_m_core.html#a248df2fe323e26cd3bb8edeb4a9a3fe8">More...</a><br /></td></tr>
 <tr class="separator:a248df2fe323e26cd3bb8edeb4a9a3fe8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a129f18068b1b1169de97dcd0ac54664a"><td class="memItemLeft" align="right" valign="top">uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#a129f18068b1b1169de97dcd0ac54664a">trackFeatures</a> (std::shared_ptr&lt; <a class="el" href="classisae_1_1_image_sensor.html">ImageSensor</a> &gt; &amp;sensor0, std::shared_ptr&lt; <a class="el" href="classisae_1_1_image_sensor.html">ImageSensor</a> &gt; &amp;sensor1, <a class="el" href="namespaceisae.html#a70bf0a9838eb50b6a3fe2be9b79e25be">typed_vec_match</a> &amp;matches, <a class="el" href="namespaceisae.html#a70bf0a9838eb50b6a3fe2be9b79e25be">typed_vec_match</a> &amp;matches_lmk, <a class="el" href="namespaceisae.html#aef749e9df97878dd2b7af968a4f64efd">typed_vec_features</a> features_to_track)</td></tr>
+<tr class="memitem:a129f18068b1b1169de97dcd0ac54664a"><td class="memItemLeft" align="right" valign="top">uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#a129f18068b1b1169de97dcd0ac54664a">trackFeatures</a> (std::shared_ptr&lt; <a class="el" href="classisae_1_1_image_sensor.html">ImageSensor</a> &gt; &amp;sensor0, std::shared_ptr&lt; <a class="el" href="classisae_1_1_image_sensor.html">ImageSensor</a> &gt; &amp;sensor1, <a class="el" href="namespaceisae.html#a5d24f9da33ed2238fec0ac3f04cc8da5">typed_vec_match</a> &amp;matches, <a class="el" href="namespaceisae.html#a5d24f9da33ed2238fec0ac3f04cc8da5">typed_vec_match</a> &amp;matches_lmk, <a class="el" href="namespaceisae.html#aef749e9df97878dd2b7af968a4f64efd">typed_vec_features</a> features_to_track)</td></tr>
+<tr class="memdesc:a129f18068b1b1169de97dcd0ac54664a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Predicts the position of the features and tracks all the features.  <a href="classisae_1_1_s_l_a_m_core.html#a129f18068b1b1169de97dcd0ac54664a">More...</a><br /></td></tr>
 <tr class="separator:a129f18068b1b1169de97dcd0ac54664a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7297bc12be525944176f4303b29272d2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#a7297bc12be525944176f4303b29272d2">predictFeature</a> (std::vector&lt; std::shared_ptr&lt; <a class="el" href="classisae_1_1_a_feature.html">AFeature</a> &gt;&gt; features, std::shared_ptr&lt; <a class="el" href="classisae_1_1_image_sensor.html">ImageSensor</a> &gt; sensor, std::vector&lt; std::shared_ptr&lt; <a class="el" href="classisae_1_1_a_feature.html">AFeature</a> &gt;&gt; &amp;features_init, <a class="el" href="namespaceisae.html#ac61c2f881f902dbfef491caaa5135c9c">vec_match</a> previous_matches)</td></tr>
+<tr class="memitem:a7297bc12be525944176f4303b29272d2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#a7297bc12be525944176f4303b29272d2">predictFeature</a> (std::vector&lt; std::shared_ptr&lt; <a class="el" href="classisae_1_1_a_feature.html">AFeature</a> &gt;&gt; features, std::shared_ptr&lt; <a class="el" href="classisae_1_1_image_sensor.html">ImageSensor</a> &gt; sensor, std::vector&lt; std::shared_ptr&lt; <a class="el" href="classisae_1_1_a_feature.html">AFeature</a> &gt;&gt; &amp;features_init, <a class="el" href="namespaceisae.html#a018dfa0f3c618541bf2674aaefa20d61">vec_match</a> previous_matches)</td></tr>
+<tr class="memdesc:a7297bc12be525944176f4303b29272d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Predicts the position of a set of features on a given sensor.  <a href="classisae_1_1_s_l_a_m_core.html#a7297bc12be525944176f4303b29272d2">More...</a><br /></td></tr>
 <tr class="separator:a7297bc12be525944176f4303b29272d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a69fcf76a00dca3e5240b31b5c27562b7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceisae.html#a70bf0a9838eb50b6a3fe2be9b79e25be">typed_vec_match</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#a69fcf76a00dca3e5240b31b5c27562b7">epipolarFiltering</a> (std::shared_ptr&lt; <a class="el" href="classisae_1_1_image_sensor.html">ImageSensor</a> &gt; &amp;cam0, std::shared_ptr&lt; <a class="el" href="classisae_1_1_image_sensor.html">ImageSensor</a> &gt; &amp;cam1, <a class="el" href="namespaceisae.html#a70bf0a9838eb50b6a3fe2be9b79e25be">typed_vec_match</a> matches)</td></tr>
+<tr class="memitem:a69fcf76a00dca3e5240b31b5c27562b7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceisae.html#a5d24f9da33ed2238fec0ac3f04cc8da5">typed_vec_match</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#a69fcf76a00dca3e5240b31b5c27562b7">epipolarFiltering</a> (std::shared_ptr&lt; <a class="el" href="classisae_1_1_image_sensor.html">ImageSensor</a> &gt; &amp;cam0, std::shared_ptr&lt; <a class="el" href="classisae_1_1_image_sensor.html">ImageSensor</a> &gt; &amp;cam1, <a class="el" href="namespaceisae.html#a5d24f9da33ed2238fec0ac3f04cc8da5">typed_vec_match</a> matches)</td></tr>
+<tr class="memdesc:a69fcf76a00dca3e5240b31b5c27562b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Filters the matches between two sensors (with consistent pose estimates) using epipolar plane check.  <a href="classisae_1_1_s_l_a_m_core.html#a69fcf76a00dca3e5240b31b5c27562b7">More...</a><br /></td></tr>
 <tr class="separator:a69fcf76a00dca3e5240b31b5c27562b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a930d35825bd9e4622b76fdf7dede7275"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#a930d35825bd9e4622b76fdf7dede7275">outlierRemoval</a> ()</td></tr>
+<tr class="memdesc:a930d35825bd9e4622b76fdf7dede7275"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove all the outlier features of _frame.  <a href="classisae_1_1_s_l_a_m_core.html#a930d35825bd9e4622b76fdf7dede7275">More...</a><br /></td></tr>
 <tr class="separator:a930d35825bd9e4622b76fdf7dede7275"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad1c8355572701919add16b874c3de7f1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#ad1c8355572701919add16b874c3de7f1">predict</a> (std::shared_ptr&lt; <a class="el" href="classisae_1_1_frame.html">Frame</a> &gt; &amp;f)</td></tr>
+<tr class="memdesc:ad1c8355572701919add16b874c3de7f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Estimates the pose of a given frame.  <a href="classisae_1_1_s_l_a_m_core.html#ad1c8355572701919add16b874c3de7f1">More...</a><br /></td></tr>
 <tr class="separator:ad1c8355572701919add16b874c3de7f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aafc0e7155f3348a4383d1cd178a47103"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#aafc0e7155f3348a4383d1cd178a47103">initLandmarks</a> (std::shared_ptr&lt; <a class="el" href="classisae_1_1_frame.html">Frame</a> &gt; &amp;f)</td></tr>
+<tr class="memdesc:aafc0e7155f3348a4383d1cd178a47103"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize all the landmarks of the current frame using _matches_in_time and _matches_in_frame.  <a href="classisae_1_1_s_l_a_m_core.html#aafc0e7155f3348a4383d1cd178a47103">More...</a><br /></td></tr>
 <tr class="separator:aafc0e7155f3348a4383d1cd178a47103"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae0786a5e2ebcf4b3b9e9bb4c680cf28f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#ae0786a5e2ebcf4b3b9e9bb4c680cf28f">updateLandmarks</a> (<a class="el" href="namespaceisae.html#a70bf0a9838eb50b6a3fe2be9b79e25be">typed_vec_match</a> matches_lmk)</td></tr>
+<tr class="memitem:ae0786a5e2ebcf4b3b9e9bb4c680cf28f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#ae0786a5e2ebcf4b3b9e9bb4c680cf28f">updateLandmarks</a> (<a class="el" href="namespaceisae.html#a5d24f9da33ed2238fec0ac3f04cc8da5">typed_vec_match</a> matches_lmk)</td></tr>
 <tr class="separator:ae0786a5e2ebcf4b3b9e9bb4c680cf28f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3bd589ad8aa6cd7d0f8cc1c4a9fab001"><td class="memItemLeft" align="right" valign="top">uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#a3bd589ad8aa6cd7d0f8cc1c4a9fab001">recoverFeatureFromMapLandmarks</a> (std::shared_ptr&lt; <a class="el" href="classisae_1_1_a_map.html">isae::AMap</a> &gt; localmap, std::shared_ptr&lt; <a class="el" href="classisae_1_1_frame.html">Frame</a> &gt; &amp;f)</td></tr>
+<tr class="memdesc:a3bd589ad8aa6cd7d0f8cc1c4a9fab001"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs landmark resurection.  <a href="classisae_1_1_s_l_a_m_core.html#a3bd589ad8aa6cd7d0f8cc1c4a9fab001">More...</a><br /></td></tr>
 <tr class="separator:a3bd589ad8aa6cd7d0f8cc1c4a9fab001"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf3895f1262e39e2fb288cb57aa3f4e5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#adf3895f1262e39e2fb288cb57aa3f4e5">shouldInsertKeyframe</a> (std::shared_ptr&lt; <a class="el" href="classisae_1_1_frame.html">Frame</a> &gt; &amp;f)</td></tr>
+<tr class="memdesc:adf3895f1262e39e2fb288cb57aa3f4e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines if the frame in argument is a KF.  <a href="classisae_1_1_s_l_a_m_core.html#adf3895f1262e39e2fb288cb57aa3f4e5">More...</a><br /></td></tr>
 <tr class="separator:adf3895f1262e39e2fb288cb57aa3f4e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a33a7053a9e08bbe72477d5a24234f05b"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classisae_1_1_frame.html">Frame</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#a33a7053a9e08bbe72477d5a24234f05b">getLastKF</a> ()</td></tr>
 <tr class="separator:a33a7053a9e08bbe72477d5a24234f05b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ebbc2ac160e1bcf300909718c68cb44"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#a5ebbc2ac160e1bcf300909718c68cb44">profiling</a> ()</td></tr>
+<tr class="memdesc:a5ebbc2ac160e1bcf300909718c68cb44"><td class="mdescLeft">&#160;</td><td class="mdescRight">A function to monitor the SLAM behaviour.  <a href="classisae_1_1_s_l_a_m_core.html#a5ebbc2ac160e1bcf300909718c68cb44">More...</a><br /></td></tr>
 <tr class="separator:a5ebbc2ac160e1bcf300909718c68cb44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
@@ -142,8 +163,16 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a8cbe6932796ead5c22a42f098bb5e49e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#a8cbe6932796ead5c22a42f098bb5e49e">_is_init</a> = false</td></tr>
 <tr class="separator:a8cbe6932796ead5c22a42f098bb5e49e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b839e70c15c76939af97ee99927dfc3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#a0b839e70c15c76939af97ee99927dfc3">_successive_fails</a> = 0</td></tr>
+<tr class="memdesc:a0b839e70c15c76939af97ee99927dfc3"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p>Flag for initialization </p>
+</blockquote>
+ <a href="classisae_1_1_s_l_a_m_core.html#a0b839e70c15c76939af97ee99927dfc3">More...</a><br /></td></tr>
 <tr class="separator:a0b839e70c15c76939af97ee99927dfc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad02358a54782ca107f3d5e99a108d612"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classisae_1_1_s_l_a_m_parameters.html">isae::SLAMParameters</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#ad02358a54782ca107f3d5e99a108d612">_slam_param</a></td></tr>
+<tr class="memdesc:ad02358a54782ca107f3d5e99a108d612"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p>Number of successive failure to trigger reinitialization </p>
+</blockquote>
+ <a href="classisae_1_1_s_l_a_m_core.html#ad02358a54782ca107f3d5e99a108d612">More...</a><br /></td></tr>
 <tr class="separator:ad02358a54782ca107f3d5e99a108d612"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d09de0fa22c576eaa18922d2f8e7617"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classisae_1_1_frame.html">Frame</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#a7d09de0fa22c576eaa18922d2f8e7617">_frame_to_display</a></td></tr>
 <tr class="separator:a7d09de0fa22c576eaa18922d2f8e7617"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -158,35 +187,91 @@ Public Attributes</h2></td></tr>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:a30ca343387baa2bb2c8fcb48ed9300e5"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classisae_1_1_frame.html">Frame</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#a30ca343387baa2bb2c8fcb48ed9300e5">_frame</a></td></tr>
 <tr class="separator:a30ca343387baa2bb2c8fcb48ed9300e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abca11aeefa4bb0850ca34658566c7e5b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceisae.html#a70bf0a9838eb50b6a3fe2be9b79e25be">typed_vec_match</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#abca11aeefa4bb0850ca34658566c7e5b">_matches_in_time</a></td></tr>
+<tr class="memitem:abca11aeefa4bb0850ca34658566c7e5b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceisae.html#a5d24f9da33ed2238fec0ac3f04cc8da5">typed_vec_match</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#abca11aeefa4bb0850ca34658566c7e5b">_matches_in_time</a></td></tr>
+<tr class="memdesc:abca11aeefa4bb0850ca34658566c7e5b"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p>Current frame </p>
+</blockquote>
+ <a href="classisae_1_1_s_l_a_m_core.html#abca11aeefa4bb0850ca34658566c7e5b">More...</a><br /></td></tr>
 <tr class="separator:abca11aeefa4bb0850ca34658566c7e5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c4e463d6cdd2083db3de4100a1885dc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceisae.html#a70bf0a9838eb50b6a3fe2be9b79e25be">typed_vec_match</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#a7c4e463d6cdd2083db3de4100a1885dc">_matches_in_time_lmk</a></td></tr>
+<tr class="memitem:a7c4e463d6cdd2083db3de4100a1885dc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceisae.html#a5d24f9da33ed2238fec0ac3f04cc8da5">typed_vec_match</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#a7c4e463d6cdd2083db3de4100a1885dc">_matches_in_time_lmk</a></td></tr>
+<tr class="memdesc:a7c4e463d6cdd2083db3de4100a1885dc"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p>Typed vector of the matches between the last KF and _frame </p>
+</blockquote>
+ <a href="classisae_1_1_s_l_a_m_core.html#a7c4e463d6cdd2083db3de4100a1885dc">More...</a><br /></td></tr>
 <tr class="separator:a7c4e463d6cdd2083db3de4100a1885dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af9705993f210ffcbffb8a3895e12958f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceisae.html#a70bf0a9838eb50b6a3fe2be9b79e25be">typed_vec_match</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#af9705993f210ffcbffb8a3895e12958f">_matches_in_frame</a></td></tr>
+<tr class="memitem:af9705993f210ffcbffb8a3895e12958f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceisae.html#a5d24f9da33ed2238fec0ac3f04cc8da5">typed_vec_match</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#af9705993f210ffcbffb8a3895e12958f">_matches_in_frame</a></td></tr>
+<tr class="memdesc:af9705993f210ffcbffb8a3895e12958f"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p>Typed vector of the matches with landmarks between the last KF and _frame </p>
+</blockquote>
+ <a href="classisae_1_1_s_l_a_m_core.html#af9705993f210ffcbffb8a3895e12958f">More...</a><br /></td></tr>
 <tr class="separator:af9705993f210ffcbffb8a3895e12958f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a048d35a0f87be36c46f81dcc646391fc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceisae.html#a70bf0a9838eb50b6a3fe2be9b79e25be">typed_vec_match</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#a048d35a0f87be36c46f81dcc646391fc">_matches_in_frame_lmk</a></td></tr>
+<tr class="memitem:a048d35a0f87be36c46f81dcc646391fc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceisae.html#a5d24f9da33ed2238fec0ac3f04cc8da5">typed_vec_match</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#a048d35a0f87be36c46f81dcc646391fc">_matches_in_frame_lmk</a></td></tr>
+<tr class="memdesc:a048d35a0f87be36c46f81dcc646391fc"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p>Typed vector of the matches between the sensors of _frame </p>
+</blockquote>
+ <a href="classisae_1_1_s_l_a_m_core.html#a048d35a0f87be36c46f81dcc646391fc">More...</a><br /></td></tr>
 <tr class="separator:a048d35a0f87be36c46f81dcc646391fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad3641feb65214860635525bb28027995"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classisae_1_1_local_map.html">isae::LocalMap</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#ad3641feb65214860635525bb28027995">_local_map</a></td></tr>
+<tr class="memdesc:ad3641feb65214860635525bb28027995"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p>Typed vector of the matches with landmarks between the sensors of _frame </p>
+</blockquote>
+ <a href="classisae_1_1_s_l_a_m_core.html#ad3641feb65214860635525bb28027995">More...</a><br /></td></tr>
 <tr class="separator:ad3641feb65214860635525bb28027995"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48e025ba0497eafdd57cfe766d524ce5"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classisae_1_1_global_map.html">isae::GlobalMap</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#a48e025ba0497eafdd57cfe766d524ce5">_global_map</a></td></tr>
+<tr class="memdesc:a48e025ba0497eafdd57cfe766d524ce5"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p>Current local map </p>
+</blockquote>
+ <a href="classisae_1_1_s_l_a_m_core.html#a48e025ba0497eafdd57cfe766d524ce5">More...</a><br /></td></tr>
 <tr class="separator:a48e025ba0497eafdd57cfe766d524ce5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade0ce23e8b63a59eae7418a80d6b7baf"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classisae_1_1_mesher.html">Mesher</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#ade0ce23e8b63a59eae7418a80d6b7baf">_mesher</a></td></tr>
+<tr class="memdesc:ade0ce23e8b63a59eae7418a80d6b7baf"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p>Current global map </p>
+</blockquote>
+ <a href="classisae_1_1_s_l_a_m_core.html#ade0ce23e8b63a59eae7418a80d6b7baf">More...</a><br /></td></tr>
 <tr class="separator:ade0ce23e8b63a59eae7418a80d6b7baf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a5a97f9b6370b3a26405c0692f3b639"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#a6a5a97f9b6370b3a26405c0692f3b639">_max_movement_parallax</a></td></tr>
+<tr class="memdesc:a6a5a97f9b6370b3a26405c0692f3b639"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p><a class="el" href="classisae_1_1_mesher.html">Mesher</a> of the SLAM </p>
+</blockquote>
+ <a href="classisae_1_1_s_l_a_m_core.html#a6a5a97f9b6370b3a26405c0692f3b639">More...</a><br /></td></tr>
 <tr class="separator:a6a5a97f9b6370b3a26405c0692f3b639"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e49528324b8e9392ac52955e3fab7fc"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#a1e49528324b8e9392ac52955e3fab7fc">_min_movement_parallax</a></td></tr>
+<tr class="memdesc:a1e49528324b8e9392ac52955e3fab7fc"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p>Max parallax until a KF is voted </p>
+</blockquote>
+ <a href="classisae_1_1_s_l_a_m_core.html#a1e49528324b8e9392ac52955e3fab7fc">More...</a><br /></td></tr>
 <tr class="separator:a1e49528324b8e9392ac52955e3fab7fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea597da6a069fb9f86daa3c9abaa9dee"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#aea597da6a069fb9f86daa3c9abaa9dee">_min_lmk_number</a></td></tr>
+<tr class="memdesc:aea597da6a069fb9f86daa3c9abaa9dee"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p>Under this parallax, no motion is considered </p>
+</blockquote>
+ <a href="classisae_1_1_s_l_a_m_core.html#aea597da6a069fb9f86daa3c9abaa9dee">More...</a><br /></td></tr>
 <tr class="separator:aea597da6a069fb9f86daa3c9abaa9dee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab707aa5b340fb77057d5b7820f045efd"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#ab707aa5b340fb77057d5b7820f045efd">_parallax</a></td></tr>
+<tr class="memdesc:ab707aa5b340fb77057d5b7820f045efd"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p>Under this number of landmark in _frame a KF is voted </p>
+</blockquote>
+ <a href="classisae_1_1_s_l_a_m_core.html#ab707aa5b340fb77057d5b7820f045efd">More...</a><br /></td></tr>
 <tr class="separator:ab707aa5b340fb77057d5b7820f045efd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0262a6c57ffaac910b899fb52d3e3eb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceisae.html#a95b4efbae1379c1c22879954528d4008">Vector6d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#ad0262a6c57ffaac910b899fb52d3e3eb">_6d_velocity</a></td></tr>
+<tr class="memdesc:ad0262a6c57ffaac910b899fb52d3e3eb"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p>Parallax between the last KF and _frame </p>
+</blockquote>
+ <a href="classisae_1_1_s_l_a_m_core.html#ad0262a6c57ffaac910b899fb52d3e3eb">More...</a><br /></td></tr>
+<tr class="separator:ad0262a6c57ffaac910b899fb52d3e3eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a38f045ef945c97cde0feebeb0ad9fc3a"><td class="memItemLeft" align="right" valign="top">std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#a38f045ef945c97cde0feebeb0ad9fc3a">_map_mutex</a></td></tr>
+<tr class="memdesc:a38f045ef945c97cde0feebeb0ad9fc3a"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p>Current Velocity as a Twist vector </p>
+</blockquote>
+ <a href="classisae_1_1_s_l_a_m_core.html#a38f045ef945c97cde0feebeb0ad9fc3a">More...</a><br /></td></tr>
 <tr class="separator:a38f045ef945c97cde0feebeb0ad9fc3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac26724bbd8a5f479e148ba0c89bce551"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classisae_1_1_frame.html">Frame</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#ac26724bbd8a5f479e148ba0c89bce551">_frame_to_optim</a></td></tr>
 <tr class="separator:ac26724bbd8a5f479e148ba0c89bce551"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad0262a6c57ffaac910b899fb52d3e3eb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceisae.html#a381cf9a79c09e3831978a493e7a50552">Vector6d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#ad0262a6c57ffaac910b899fb52d3e3eb">_6d_velocity</a></td></tr>
-<tr class="separator:ad0262a6c57ffaac910b899fb52d3e3eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5c4e9ed9200240c6c3169876842606fd"><td class="memItemLeft" align="right" valign="top">uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#a5c4e9ed9200240c6c3169876842606fd">_nframes</a></td></tr>
+<tr class="memdesc:a5c4e9ed9200240c6c3169876842606fd"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p>For communication between front-end and back-end </p>
+</blockquote>
+ <a href="classisae_1_1_s_l_a_m_core.html#a5c4e9ed9200240c6c3169876842606fd">More...</a><br /></td></tr>
 <tr class="separator:a5c4e9ed9200240c6c3169876842606fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a12bf771db26400d29fb14d2635779d88"><td class="memItemLeft" align="right" valign="top">uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#a12bf771db26400d29fb14d2635779d88">_nkeyframes</a></td></tr>
 <tr class="separator:a12bf771db26400d29fb14d2635779d88"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -233,7 +318,10 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a1cb2b696e843a343df5956622a82074a"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; float &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#a1cb2b696e843a343df5956622a82074a">_timings_kfrate_be</a></td></tr>
 <tr class="separator:a1cb2b696e843a343df5956622a82074a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The core abstract class of the SLAM system. It handles front-end, back-end and initialization. </p>
+<p>This is the skeleton of the SLAM system that will call all the subsystems (sensor processing, optimizer, map processing...) It loads all the parameters of the SLAM and implements frontEnd and backEnds that must be called in a separated thread. A few important methods relative to feature processing and pose estimation are implemented as well to make the <a class="el" href="classisae_1_1_s_l_a_m_core.html#ab97c16d22ca0c3d50c4ef63bcd6c88f7" title="Front End: detection, tracking, pose estimation and landmark triangulation.">frontEndStep()</a> and <a class="el" href="classisae_1_1_s_l_a_m_core.html#aa378dd826e38a3bb5358a261466a97e3" title="brief description Back End: marginalization, local map optimization">backEndStep()</a> methods readable. Also, a few profiling variables and methods are implemented to monitor the performances. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="af683a1806d10d2277e5989ef6edac5e2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af683a1806d10d2277e5989ef6edac5e2">&#9670;&nbsp;</a></span>SLAMCore() <span class="overload">[1/2]</span></h2>
 
@@ -301,6 +389,8 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>brief description Back End: marginalization, local map optimization </p>
+
 <p>Implemented in <a class="el" href="classisae_1_1_s_l_a_m_non_overlapping_fov.html#a6d2ac5be38cd5d523340da2defbb13a0">isae::SLAMNonOverlappingFov</a>, <a class="el" href="classisae_1_1_s_l_a_m_mono.html#a96b58f7c17099eefcaaf902c85422e6a">isae::SLAMMono</a>, <a class="el" href="classisae_1_1_s_l_a_m_mono_v_i_o.html#a7509d89f0dc6cfde31ff66bb7b2ad06c">isae::SLAMMonoVIO</a>, <a class="el" href="classisae_1_1_s_l_a_m_bi_mono_v_i_o.html#a904b857304c5b93322238e75dc0f5cf7">isae::SLAMBiMonoVIO</a>, and <a class="el" href="classisae_1_1_s_l_a_m_bi_mono.html#a28b090a5d72f4608990981eb6febfa61">isae::SLAMBiMono</a>.</p>
 
 </div>
@@ -321,6 +411,8 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Clean all the features that are outliers or are linked to outlier landmark. </p>
+
 </div>
 </div>
 <a id="ab0de2d2b0de545f6a1ecc793c7f5ffee"></a>
@@ -339,6 +431,8 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Detect all types of features for a given sensor with bucketting. </p>
+
 </div>
 </div>
 <a id="a69fcf76a00dca3e5240b31b5c27562b7"></a>
@@ -348,7 +442,7 @@ Protected Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespaceisae.html#a70bf0a9838eb50b6a3fe2be9b79e25be">typed_vec_match</a> isae::SLAMCore::epipolarFiltering </td>
+          <td class="memname"><a class="el" href="namespaceisae.html#a5d24f9da33ed2238fec0ac3f04cc8da5">typed_vec_match</a> isae::SLAMCore::epipolarFiltering </td>
           <td>(</td>
           <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classisae_1_1_image_sensor.html">ImageSensor</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>cam0</em>, </td>
@@ -362,7 +456,7 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespaceisae.html#a70bf0a9838eb50b6a3fe2be9b79e25be">typed_vec_match</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="namespaceisae.html#a5d24f9da33ed2238fec0ac3f04cc8da5">typed_vec_match</a>&#160;</td>
           <td class="paramname"><em>matches</em>&#160;</td>
         </tr>
         <tr>
@@ -372,6 +466,17 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Filters the matches between two sensors (with consistent pose estimates) using epipolar plane check. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cam0</td><td>First sensor </td></tr>
+    <tr><td class="paramname">cam1</td><td>Second sensor </td></tr>
+    <tr><td class="paramname">matches</td><td>Typed vector of matches to be filtered</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A Typed vector of the valid matches </dd></dl>
 
 </div>
 </div>
@@ -397,6 +502,8 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Front End: detection, tracking, pose estimation and landmark triangulation. </p>
 
 <p>Implemented in <a class="el" href="classisae_1_1_s_l_a_m_non_overlapping_fov.html#a47d9eb6a203183c1ad1cdb8654ec571b">isae::SLAMNonOverlappingFov</a>, <a class="el" href="classisae_1_1_s_l_a_m_mono.html#a7c7e349e065b3bea242b0a7a1a46f34a">isae::SLAMMono</a>, <a class="el" href="classisae_1_1_s_l_a_m_mono_v_i_o.html#a7903bf02532dc951b00445d3567bdfdd">isae::SLAMMonoVIO</a>, <a class="el" href="classisae_1_1_s_l_a_m_bi_mono_v_i_o.html#a8e84fc03c0c12baae880583bff7abdae">isae::SLAMBiMonoVIO</a>, and <a class="el" href="classisae_1_1_s_l_a_m_bi_mono.html#a4fddf4db022c15b2d7d785465f488c9a">isae::SLAMBiMono</a>.</p>
 
@@ -450,6 +557,8 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Initialization step : create the first 3D landmarks and keyframe(s) </p>
+
 <p>Implemented in <a class="el" href="classisae_1_1_s_l_a_m_non_overlapping_fov.html#ac1c9b85d5d1715ae562861b74454ec10">isae::SLAMNonOverlappingFov</a>, <a class="el" href="classisae_1_1_s_l_a_m_mono.html#a82d52b190857d16d792c1dcd5fbdc6a6">isae::SLAMMono</a>, <a class="el" href="classisae_1_1_s_l_a_m_mono_v_i_o.html#abdafc17c144f9c25d9f8e4a4d2a51205">isae::SLAMMonoVIO</a>, <a class="el" href="classisae_1_1_s_l_a_m_bi_mono_v_i_o.html#a7d0c7f373d14291e59f806e9b5fe54fe">isae::SLAMBiMonoVIO</a>, and <a class="el" href="classisae_1_1_s_l_a_m_bi_mono.html#a55a578f3f1f1b7fb64ea6ec6e978d9eb">isae::SLAMBiMono</a>.</p>
 
 </div>
@@ -469,6 +578,8 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Initialize all the landmarks of the current frame using _matches_in_time and _matches_in_frame. </p>
 
 </div>
 </div>
@@ -493,13 +604,13 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespaceisae.html#a70bf0a9838eb50b6a3fe2be9b79e25be">typed_vec_match</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="namespaceisae.html#a5d24f9da33ed2238fec0ac3f04cc8da5">typed_vec_match</a> &amp;&#160;</td>
           <td class="paramname"><em>matches</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespaceisae.html#a70bf0a9838eb50b6a3fe2be9b79e25be">typed_vec_match</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="namespaceisae.html#a5d24f9da33ed2238fec0ac3f04cc8da5">typed_vec_match</a> &amp;&#160;</td>
           <td class="paramname"><em>matches_lmk</em>, </td>
         </tr>
         <tr>
@@ -515,6 +626,19 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Predicts the position of the features and matches all the features between sensors. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sensor0</td><td>First sensor </td></tr>
+    <tr><td class="paramname">sensor1</td><td>Second sensor </td></tr>
+    <tr><td class="paramname">matches</td><td>Typed vector of matches without landmarks passed as reference </td></tr>
+    <tr><td class="paramname">matches_lmk</td><td>Typed vector of matches with landmarks passed as reference </td></tr>
+    <tr><td class="paramname">features_to_track</td><td>Typed vector of the features on sensor0 that will be matched for prediction</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The number of tracks </dd></dl>
 
 </div>
 </div>
@@ -533,6 +657,8 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Remove all the outlier features of _frame. </p>
+
 </div>
 </div>
 <a id="ad1c8355572701919add16b874c3de7f1"></a>
@@ -550,6 +676,15 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Estimates the pose of a given frame. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">f</td><td>The frame whose pose is estimated passed as a reference</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the prediction is a success, False otherwise </dd></dl>
 
 </div>
 </div>
@@ -580,7 +715,7 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespaceisae.html#ac61c2f881f902dbfef491caaa5135c9c">vec_match</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="namespaceisae.html#a018dfa0f3c618541bf2674aaefa20d61">vec_match</a>&#160;</td>
           <td class="paramname"><em>previous_matches</em> = <code>{}</code>&#160;</td>
         </tr>
         <tr>
@@ -590,6 +725,17 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Predicts the position of a set of features on a given sensor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">features</td><td>Set of features to be predicted </td></tr>
+    <tr><td class="paramname">sensor</td><td>Sensor on which the features has to be predicted </td></tr>
+    <tr><td class="paramname">features_init</td><td>The set of features predicted passed as a reference </td></tr>
+    <tr><td class="paramname">previous_matches</td><td>A prior on features_init that can eventually be used default is an empty set </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -607,6 +753,8 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>A function to monitor the SLAM behaviour. </p>
 
 </div>
 </div>
@@ -636,6 +784,16 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Performs landmark resurection. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">localmap</td><td>Local maps that contains the landmark to project </td></tr>
+    <tr><td class="paramname">f</td><td><a class="el" href="classisae_1_1_frame.html" title="A Frame class representing a set of sensors and landmarks at a specific timestamp.">Frame</a> on which the landmarks are resurected</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The number of resurected landmarks </dd></dl>
+
 </div>
 </div>
 <a id="a59e46556af840efd280b4715f372e623"></a>
@@ -652,6 +810,8 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Thread for the backend. </p>
 
 </div>
 </div>
@@ -670,6 +830,8 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Thread for the frontend. </p>
+
 </div>
 </div>
 <a id="a086ca26cc3db8a700c763228d1b739c0"></a>
@@ -686,6 +848,8 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Thread for the backend. </p>
 
 </div>
 </div>
@@ -704,6 +868,8 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Determines if the frame in argument is a KF. </p>
 
 </div>
 </div>
@@ -728,13 +894,13 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespaceisae.html#a70bf0a9838eb50b6a3fe2be9b79e25be">typed_vec_match</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="namespaceisae.html#a5d24f9da33ed2238fec0ac3f04cc8da5">typed_vec_match</a> &amp;&#160;</td>
           <td class="paramname"><em>matches</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespaceisae.html#a70bf0a9838eb50b6a3fe2be9b79e25be">typed_vec_match</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="namespaceisae.html#a5d24f9da33ed2238fec0ac3f04cc8da5">typed_vec_match</a> &amp;&#160;</td>
           <td class="paramname"><em>matches_lmk</em>, </td>
         </tr>
         <tr>
@@ -751,6 +917,19 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Predicts the position of the features and tracks all the features. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sensor0</td><td>First sensor </td></tr>
+    <tr><td class="paramname">sensor1</td><td>Second sensor </td></tr>
+    <tr><td class="paramname">matches</td><td>Typed vector of matches without landmarks passed as reference </td></tr>
+    <tr><td class="paramname">matches_lmk</td><td>Typed vector of matches with landmarks passed as reference </td></tr>
+    <tr><td class="paramname">features_to_track</td><td>Typed vector of the features on sensor0 that will be tracked for prediction</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The number of tracks </dd></dl>
+
 </div>
 </div>
 <a id="ae0786a5e2ebcf4b3b9e9bb4c680cf28f"></a>
@@ -762,7 +941,7 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="memname">void isae::SLAMCore::updateLandmarks </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespaceisae.html#a70bf0a9838eb50b6a3fe2be9b79e25be">typed_vec_match</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="namespaceisae.html#a5d24f9da33ed2238fec0ac3f04cc8da5">typed_vec_match</a>&#160;</td>
           <td class="paramname"><em>matches_lmk</em></td><td>)</td>
           <td></td>
         </tr>
@@ -782,7 +961,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespaceisae.html#a381cf9a79c09e3831978a493e7a50552">Vector6d</a> isae::SLAMCore::_6d_velocity</td>
+          <td class="memname"><a class="el" href="namespaceisae.html#a95b4efbae1379c1c22879954528d4008">Vector6d</a> isae::SLAMCore::_6d_velocity</td>
         </tr>
       </table>
   </td>
@@ -791,6 +970,11 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p><blockquote class="doxtable">
+<p>Parallax between the last KF and _frame </p>
+</blockquote>
+</p>
 
 </div>
 </div>
@@ -1202,6 +1386,11 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p><blockquote class="doxtable">
+<p>Current local map </p>
+</blockquote>
+</p>
+
 </div>
 </div>
 <a id="a32e03c93a419de8aa3086c56689f964d"></a>
@@ -1274,6 +1463,11 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p><blockquote class="doxtable">
+<p>Typed vector of the matches with landmarks between the sensors of _frame </p>
+</blockquote>
+</p>
+
 </div>
 </div>
 <a id="aeb154e22d37ba97da4983f644ca2c6bf"></a>
@@ -1310,6 +1504,11 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p><blockquote class="doxtable">
+<p>Current Velocity as a Twist vector </p>
+</blockquote>
+</p>
+
 </div>
 </div>
 <a id="af9705993f210ffcbffb8a3895e12958f"></a>
@@ -1322,7 +1521,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespaceisae.html#a70bf0a9838eb50b6a3fe2be9b79e25be">typed_vec_match</a> isae::SLAMCore::_matches_in_frame</td>
+          <td class="memname"><a class="el" href="namespaceisae.html#a5d24f9da33ed2238fec0ac3f04cc8da5">typed_vec_match</a> isae::SLAMCore::_matches_in_frame</td>
         </tr>
       </table>
   </td>
@@ -1331,6 +1530,11 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p><blockquote class="doxtable">
+<p>Typed vector of the matches with landmarks between the last KF and _frame </p>
+</blockquote>
+</p>
 
 </div>
 </div>
@@ -1344,7 +1548,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespaceisae.html#a70bf0a9838eb50b6a3fe2be9b79e25be">typed_vec_match</a> isae::SLAMCore::_matches_in_frame_lmk</td>
+          <td class="memname"><a class="el" href="namespaceisae.html#a5d24f9da33ed2238fec0ac3f04cc8da5">typed_vec_match</a> isae::SLAMCore::_matches_in_frame_lmk</td>
         </tr>
       </table>
   </td>
@@ -1353,6 +1557,11 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p><blockquote class="doxtable">
+<p>Typed vector of the matches between the sensors of _frame </p>
+</blockquote>
+</p>
 
 </div>
 </div>
@@ -1366,7 +1575,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespaceisae.html#a70bf0a9838eb50b6a3fe2be9b79e25be">typed_vec_match</a> isae::SLAMCore::_matches_in_time</td>
+          <td class="memname"><a class="el" href="namespaceisae.html#a5d24f9da33ed2238fec0ac3f04cc8da5">typed_vec_match</a> isae::SLAMCore::_matches_in_time</td>
         </tr>
       </table>
   </td>
@@ -1375,6 +1584,11 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p><blockquote class="doxtable">
+<p>Current frame </p>
+</blockquote>
+</p>
 
 </div>
 </div>
@@ -1388,7 +1602,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespaceisae.html#a70bf0a9838eb50b6a3fe2be9b79e25be">typed_vec_match</a> isae::SLAMCore::_matches_in_time_lmk</td>
+          <td class="memname"><a class="el" href="namespaceisae.html#a5d24f9da33ed2238fec0ac3f04cc8da5">typed_vec_match</a> isae::SLAMCore::_matches_in_time_lmk</td>
         </tr>
       </table>
   </td>
@@ -1397,6 +1611,11 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p><blockquote class="doxtable">
+<p>Typed vector of the matches between the last KF and _frame </p>
+</blockquote>
+</p>
 
 </div>
 </div>
@@ -1419,6 +1638,11 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p><blockquote class="doxtable">
+<p><a class="el" href="classisae_1_1_mesher.html">Mesher</a> of the SLAM </p>
+</blockquote>
+</p>
 
 </div>
 </div>
@@ -1456,6 +1680,11 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p><blockquote class="doxtable">
+<p>Current global map </p>
+</blockquote>
+</p>
+
 </div>
 </div>
 <a id="aea597da6a069fb9f86daa3c9abaa9dee"></a>
@@ -1477,6 +1706,11 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p><blockquote class="doxtable">
+<p>Under this parallax, no motion is considered </p>
+</blockquote>
+</p>
 
 </div>
 </div>
@@ -1500,6 +1734,11 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p><blockquote class="doxtable">
+<p>Max parallax until a KF is voted </p>
+</blockquote>
+</p>
+
 </div>
 </div>
 <a id="a5c4e9ed9200240c6c3169876842606fd"></a>
@@ -1521,6 +1760,11 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p><blockquote class="doxtable">
+<p>For communication between front-end and back-end </p>
+</blockquote>
+</p>
 
 </div>
 </div>
@@ -1565,6 +1809,11 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p><blockquote class="doxtable">
+<p>Under this number of landmark in _frame a KF is voted </p>
+</blockquote>
+</p>
 
 </div>
 </div>
@@ -1624,6 +1873,11 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p><blockquote class="doxtable">
+<p>Number of successive failure to trigger reinitialization </p>
+</blockquote>
+</p>
+
 </div>
 </div>
 <a id="a0b839e70c15c76939af97ee99927dfc3"></a>
@@ -1637,6 +1891,11 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p><blockquote class="doxtable">
+<p>Flag for initialization </p>
+</blockquote>
+</p>
 
 </div>
 </div>

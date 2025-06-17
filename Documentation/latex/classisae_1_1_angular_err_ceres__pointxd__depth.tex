@@ -1,0 +1,132 @@
+\hypertarget{classisae_1_1_angular_err_ceres__pointxd__depth}{}\doxysection{isae\+::Angular\+Err\+Ceres\+\_\+pointxd\+\_\+depth Class Reference}
+\label{classisae_1_1_angular_err_ceres__pointxd__depth}\index{isae::AngularErrCeres\_pointxd\_depth@{isae::AngularErrCeres\_pointxd\_depth}}
+
+
+An angular cost function that depends on the depth of the landmark, the current frame pose and the anchor frame pose.  
+
+
+
+
+{\ttfamily \#include $<$Angular\+Adjustment\+C\+E\+R\+E\+S\+Analytic.\+h$>$}
+
+
+
+Inheritance diagram for isae\+::Angular\+Err\+Ceres\+\_\+pointxd\+\_\+depth\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{classisae_1_1_angular_err_ceres__pointxd__depth__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for isae\+::Angular\+Err\+Ceres\+\_\+pointxd\+\_\+depth\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{classisae_1_1_angular_err_ceres__pointxd__depth__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classisae_1_1_angular_err_ceres__pointxd__depth_ad812dcffa069e09b1d5c1cb259bba901}{Angular\+Err\+Ceres\+\_\+pointxd\+\_\+depth}} (const Eigen\+::\+Vector3d \&bearing\+\_\+vector, const Eigen\+::\+Vector3d \&bearing\+\_\+vector\+\_\+cam, const Eigen\+::\+Affine3d \&T\+\_\+s\+\_\+f, const Eigen\+::\+Affine3d \&T\+\_\+fa\+\_\+w, const Eigen\+::\+Affine3d \&T\+\_\+f\+\_\+w, const double depth, const double sigma=1)
+\item 
+\mbox{\hyperlink{classisae_1_1_angular_err_ceres__pointxd__depth_a30ff39eb8f730f4e9e998cac8805fbd7}{$\sim$\+Angular\+Err\+Ceres\+\_\+pointxd\+\_\+depth}} ()
+\item 
+virtual bool \mbox{\hyperlink{classisae_1_1_angular_err_ceres__pointxd__depth_ae6639c3273a0fdd488b318ff2c966f85}{Evaluate}} (double const $\ast$const $\ast$parameters, double $\ast$residuals, double $\ast$$\ast$jacobians) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Eigen\+::\+Vector3d \mbox{\hyperlink{classisae_1_1_angular_err_ceres__pointxd__depth_a34ea11f8271a8af599e954486d583dc0}{\+\_\+bearing\+\_\+vector}}
+\item 
+Eigen\+::\+Vector3d \mbox{\hyperlink{classisae_1_1_angular_err_ceres__pointxd__depth_ab79ce0ccb79797f8b32af6d16ade2321}{\+\_\+bearing\+\_\+vector\+\_\+cam}}
+\item 
+const Eigen\+::\+Affine3d \mbox{\hyperlink{classisae_1_1_angular_err_ceres__pointxd__depth_a55330cdc1c0c1701cdb54ca0edc4e7d1}{\+\_\+\+T\+\_\+s\+\_\+f}}
+\item 
+const Eigen\+::\+Affine3d \mbox{\hyperlink{classisae_1_1_angular_err_ceres__pointxd__depth_a7772b87b9f3a700f916d1efb745fc94f}{\+\_\+\+T\+\_\+f\+\_\+w}}
+\item 
+const Eigen\+::\+Affine3d \mbox{\hyperlink{classisae_1_1_angular_err_ceres__pointxd__depth_af285a4da183b791cc57507931c27a53d}{\+\_\+\+T\+\_\+fa\+\_\+w}}
+\item 
+const double \mbox{\hyperlink{classisae_1_1_angular_err_ceres__pointxd__depth_ab2032b38b08321b13d0df2748313ed73}{\+\_\+depth}}
+\item 
+const double \mbox{\hyperlink{classisae_1_1_angular_err_ceres__pointxd__depth_ac697f7ff293be06da24ae2b783afe335}{\+\_\+sigma}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An angular cost function that depends on the depth of the landmark, the current frame pose and the anchor frame pose. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classisae_1_1_angular_err_ceres__pointxd__depth_ad812dcffa069e09b1d5c1cb259bba901}\label{classisae_1_1_angular_err_ceres__pointxd__depth_ad812dcffa069e09b1d5c1cb259bba901}} 
+\index{isae::AngularErrCeres\_pointxd\_depth@{isae::AngularErrCeres\_pointxd\_depth}!AngularErrCeres\_pointxd\_depth@{AngularErrCeres\_pointxd\_depth}}
+\index{AngularErrCeres\_pointxd\_depth@{AngularErrCeres\_pointxd\_depth}!isae::AngularErrCeres\_pointxd\_depth@{isae::AngularErrCeres\_pointxd\_depth}}
+\doxysubsubsection{\texorpdfstring{AngularErrCeres\_pointxd\_depth()}{AngularErrCeres\_pointxd\_depth()}}
+{\footnotesize\ttfamily isae\+::\+Angular\+Err\+Ceres\+\_\+pointxd\+\_\+depth\+::\+Angular\+Err\+Ceres\+\_\+pointxd\+\_\+depth (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Vector3d \&}]{bearing\+\_\+vector,  }\item[{const Eigen\+::\+Vector3d \&}]{bearing\+\_\+vector\+\_\+cam,  }\item[{const Eigen\+::\+Affine3d \&}]{T\+\_\+s\+\_\+f,  }\item[{const Eigen\+::\+Affine3d \&}]{T\+\_\+fa\+\_\+w,  }\item[{const Eigen\+::\+Affine3d \&}]{T\+\_\+f\+\_\+w,  }\item[{const double}]{depth,  }\item[{const double}]{sigma = {\ttfamily 1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_angular_err_ceres__pointxd__depth_a30ff39eb8f730f4e9e998cac8805fbd7}\label{classisae_1_1_angular_err_ceres__pointxd__depth_a30ff39eb8f730f4e9e998cac8805fbd7}} 
+\index{isae::AngularErrCeres\_pointxd\_depth@{isae::AngularErrCeres\_pointxd\_depth}!````~AngularErrCeres\_pointxd\_depth@{$\sim$AngularErrCeres\_pointxd\_depth}}
+\index{````~AngularErrCeres\_pointxd\_depth@{$\sim$AngularErrCeres\_pointxd\_depth}!isae::AngularErrCeres\_pointxd\_depth@{isae::AngularErrCeres\_pointxd\_depth}}
+\doxysubsubsection{\texorpdfstring{$\sim$AngularErrCeres\_pointxd\_depth()}{~AngularErrCeres\_pointxd\_depth()}}
+{\footnotesize\ttfamily isae\+::\+Angular\+Err\+Ceres\+\_\+pointxd\+\_\+depth\+::$\sim$\+Angular\+Err\+Ceres\+\_\+pointxd\+\_\+depth (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classisae_1_1_angular_err_ceres__pointxd__depth_ae6639c3273a0fdd488b318ff2c966f85}\label{classisae_1_1_angular_err_ceres__pointxd__depth_ae6639c3273a0fdd488b318ff2c966f85}} 
+\index{isae::AngularErrCeres\_pointxd\_depth@{isae::AngularErrCeres\_pointxd\_depth}!Evaluate@{Evaluate}}
+\index{Evaluate@{Evaluate}!isae::AngularErrCeres\_pointxd\_depth@{isae::AngularErrCeres\_pointxd\_depth}}
+\doxysubsubsection{\texorpdfstring{Evaluate()}{Evaluate()}}
+{\footnotesize\ttfamily virtual bool isae\+::\+Angular\+Err\+Ceres\+\_\+pointxd\+\_\+depth\+::\+Evaluate (\begin{DoxyParamCaption}\item[{double const $\ast$const $\ast$}]{parameters,  }\item[{double $\ast$}]{residuals,  }\item[{double $\ast$$\ast$}]{jacobians }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classisae_1_1_angular_err_ceres__pointxd__depth_a34ea11f8271a8af599e954486d583dc0}\label{classisae_1_1_angular_err_ceres__pointxd__depth_a34ea11f8271a8af599e954486d583dc0}} 
+\index{isae::AngularErrCeres\_pointxd\_depth@{isae::AngularErrCeres\_pointxd\_depth}!\_bearing\_vector@{\_bearing\_vector}}
+\index{\_bearing\_vector@{\_bearing\_vector}!isae::AngularErrCeres\_pointxd\_depth@{isae::AngularErrCeres\_pointxd\_depth}}
+\doxysubsubsection{\texorpdfstring{\_bearing\_vector}{\_bearing\_vector}}
+{\footnotesize\ttfamily Eigen\+::\+Vector3d isae\+::\+Angular\+Err\+Ceres\+\_\+pointxd\+\_\+depth\+::\+\_\+bearing\+\_\+vector\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classisae_1_1_angular_err_ceres__pointxd__depth_ab79ce0ccb79797f8b32af6d16ade2321}\label{classisae_1_1_angular_err_ceres__pointxd__depth_ab79ce0ccb79797f8b32af6d16ade2321}} 
+\index{isae::AngularErrCeres\_pointxd\_depth@{isae::AngularErrCeres\_pointxd\_depth}!\_bearing\_vector\_cam@{\_bearing\_vector\_cam}}
+\index{\_bearing\_vector\_cam@{\_bearing\_vector\_cam}!isae::AngularErrCeres\_pointxd\_depth@{isae::AngularErrCeres\_pointxd\_depth}}
+\doxysubsubsection{\texorpdfstring{\_bearing\_vector\_cam}{\_bearing\_vector\_cam}}
+{\footnotesize\ttfamily Eigen\+::\+Vector3d isae\+::\+Angular\+Err\+Ceres\+\_\+pointxd\+\_\+depth\+::\+\_\+bearing\+\_\+vector\+\_\+cam\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classisae_1_1_angular_err_ceres__pointxd__depth_ab2032b38b08321b13d0df2748313ed73}\label{classisae_1_1_angular_err_ceres__pointxd__depth_ab2032b38b08321b13d0df2748313ed73}} 
+\index{isae::AngularErrCeres\_pointxd\_depth@{isae::AngularErrCeres\_pointxd\_depth}!\_depth@{\_depth}}
+\index{\_depth@{\_depth}!isae::AngularErrCeres\_pointxd\_depth@{isae::AngularErrCeres\_pointxd\_depth}}
+\doxysubsubsection{\texorpdfstring{\_depth}{\_depth}}
+{\footnotesize\ttfamily const double isae\+::\+Angular\+Err\+Ceres\+\_\+pointxd\+\_\+depth\+::\+\_\+depth\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classisae_1_1_angular_err_ceres__pointxd__depth_ac697f7ff293be06da24ae2b783afe335}\label{classisae_1_1_angular_err_ceres__pointxd__depth_ac697f7ff293be06da24ae2b783afe335}} 
+\index{isae::AngularErrCeres\_pointxd\_depth@{isae::AngularErrCeres\_pointxd\_depth}!\_sigma@{\_sigma}}
+\index{\_sigma@{\_sigma}!isae::AngularErrCeres\_pointxd\_depth@{isae::AngularErrCeres\_pointxd\_depth}}
+\doxysubsubsection{\texorpdfstring{\_sigma}{\_sigma}}
+{\footnotesize\ttfamily const double isae\+::\+Angular\+Err\+Ceres\+\_\+pointxd\+\_\+depth\+::\+\_\+sigma\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classisae_1_1_angular_err_ceres__pointxd__depth_a7772b87b9f3a700f916d1efb745fc94f}\label{classisae_1_1_angular_err_ceres__pointxd__depth_a7772b87b9f3a700f916d1efb745fc94f}} 
+\index{isae::AngularErrCeres\_pointxd\_depth@{isae::AngularErrCeres\_pointxd\_depth}!\_T\_f\_w@{\_T\_f\_w}}
+\index{\_T\_f\_w@{\_T\_f\_w}!isae::AngularErrCeres\_pointxd\_depth@{isae::AngularErrCeres\_pointxd\_depth}}
+\doxysubsubsection{\texorpdfstring{\_T\_f\_w}{\_T\_f\_w}}
+{\footnotesize\ttfamily const Eigen\+::\+Affine3d isae\+::\+Angular\+Err\+Ceres\+\_\+pointxd\+\_\+depth\+::\+\_\+\+T\+\_\+f\+\_\+w\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classisae_1_1_angular_err_ceres__pointxd__depth_af285a4da183b791cc57507931c27a53d}\label{classisae_1_1_angular_err_ceres__pointxd__depth_af285a4da183b791cc57507931c27a53d}} 
+\index{isae::AngularErrCeres\_pointxd\_depth@{isae::AngularErrCeres\_pointxd\_depth}!\_T\_fa\_w@{\_T\_fa\_w}}
+\index{\_T\_fa\_w@{\_T\_fa\_w}!isae::AngularErrCeres\_pointxd\_depth@{isae::AngularErrCeres\_pointxd\_depth}}
+\doxysubsubsection{\texorpdfstring{\_T\_fa\_w}{\_T\_fa\_w}}
+{\footnotesize\ttfamily const Eigen\+::\+Affine3d isae\+::\+Angular\+Err\+Ceres\+\_\+pointxd\+\_\+depth\+::\+\_\+\+T\+\_\+fa\+\_\+w\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classisae_1_1_angular_err_ceres__pointxd__depth_a55330cdc1c0c1701cdb54ca0edc4e7d1}\label{classisae_1_1_angular_err_ceres__pointxd__depth_a55330cdc1c0c1701cdb54ca0edc4e7d1}} 
+\index{isae::AngularErrCeres\_pointxd\_depth@{isae::AngularErrCeres\_pointxd\_depth}!\_T\_s\_f@{\_T\_s\_f}}
+\index{\_T\_s\_f@{\_T\_s\_f}!isae::AngularErrCeres\_pointxd\_depth@{isae::AngularErrCeres\_pointxd\_depth}}
+\doxysubsubsection{\texorpdfstring{\_T\_s\_f}{\_T\_s\_f}}
+{\footnotesize\ttfamily const Eigen\+::\+Affine3d isae\+::\+Angular\+Err\+Ceres\+\_\+pointxd\+\_\+depth\+::\+\_\+\+T\+\_\+s\+\_\+f\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/deos/ce.\+debeunne/colcon\+\_\+ws/src/\+Sa\+D\+V\+I\+O/cpp/include/isaeslam/optimizers/\mbox{\hyperlink{_angular_adjustment_c_e_r_e_s_analytic_8h}{Angular\+Adjustment\+C\+E\+R\+E\+S\+Analytic.\+h}}\end{DoxyCompactItemize}

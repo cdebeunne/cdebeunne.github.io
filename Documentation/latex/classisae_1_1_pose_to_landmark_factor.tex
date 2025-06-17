@@ -2,6 +2,11 @@
 \label{classisae_1_1_pose_to_landmark_factor}\index{isae::PoseToLandmarkFactor@{isae::PoseToLandmarkFactor}}
 
 
+Relative 3D translation between a 6DoF frame and a punctual landmark.  
+
+
+
+
 {\ttfamily \#include $<$residuals.\+hpp$>$}
 
 
@@ -39,10 +44,17 @@ Eigen\+::\+Vector3d \mbox{\hyperlink{classisae_1_1_pose_to_landmark_factor_ac773
 Eigen\+::\+Vector3d \mbox{\hyperlink{classisae_1_1_pose_to_landmark_factor_a51f4f2b979e8629947a5921ef2fe3808}{\+\_\+t\+\_\+w\+\_\+lmk}}
 \item 
 Eigen\+::\+Affine3d \mbox{\hyperlink{classisae_1_1_pose_to_landmark_factor_a014d45795552bfcbe124b87905663065}{\+\_\+\+T\+\_\+f\+\_\+w}}
-\item 
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+The prior delta and the landmark 3D position \end{quote}
+\end{DoxyCompactList}\item 
 Eigen\+::\+Matrix3d \mbox{\hyperlink{classisae_1_1_pose_to_landmark_factor_aaa1c55a9c3f0d27143e4c33e4d61e2ae}{\+\_\+sqrt\+\_\+inf}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+The pose of the linked frame \end{quote}
+\end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Relative 3D translation between a 6DoF frame and a punctual landmark. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classisae_1_1_pose_to_landmark_factor_a3d43eeb9e955a9a7a3359a4aab66906c}\label{classisae_1_1_pose_to_landmark_factor_a3d43eeb9e955a9a7a3359a4aab66906c}} 
@@ -81,11 +93,23 @@ Eigen\+::\+Matrix3d \mbox{\hyperlink{classisae_1_1_pose_to_landmark_factor_aaa1c
 \doxysubsubsection{\texorpdfstring{\_sqrt\_inf}{\_sqrt\_inf}}
 {\footnotesize\ttfamily Eigen\+::\+Matrix3d isae\+::\+Pose\+To\+Landmark\+Factor\+::\+\_\+sqrt\+\_\+inf}
 
+
+
+\begin{quote}
+The pose of the linked frame \end{quote}
+
+
 \mbox{\Hypertarget{classisae_1_1_pose_to_landmark_factor_a014d45795552bfcbe124b87905663065}\label{classisae_1_1_pose_to_landmark_factor_a014d45795552bfcbe124b87905663065}} 
 \index{isae::PoseToLandmarkFactor@{isae::PoseToLandmarkFactor}!\_T\_f\_w@{\_T\_f\_w}}
 \index{\_T\_f\_w@{\_T\_f\_w}!isae::PoseToLandmarkFactor@{isae::PoseToLandmarkFactor}}
 \doxysubsubsection{\texorpdfstring{\_T\_f\_w}{\_T\_f\_w}}
 {\footnotesize\ttfamily Eigen\+::\+Affine3d isae\+::\+Pose\+To\+Landmark\+Factor\+::\+\_\+\+T\+\_\+f\+\_\+w}
+
+
+
+\begin{quote}
+The prior delta and the landmark 3D position \end{quote}
+
 
 \mbox{\Hypertarget{classisae_1_1_pose_to_landmark_factor_a51f4f2b979e8629947a5921ef2fe3808}\label{classisae_1_1_pose_to_landmark_factor_a51f4f2b979e8629947a5921ef2fe3808}} 
 \index{isae::PoseToLandmarkFactor@{isae::PoseToLandmarkFactor}!\_t\_w\_lmk@{\_t\_w\_lmk}}

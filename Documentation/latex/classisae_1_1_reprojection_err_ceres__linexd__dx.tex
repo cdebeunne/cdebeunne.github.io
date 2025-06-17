@@ -1,0 +1,138 @@
+\hypertarget{classisae_1_1_reprojection_err_ceres__linexd__dx}{}\doxysection{isae\+::Reprojection\+Err\+Ceres\+\_\+linexd\+\_\+dx Class Reference}
+\label{classisae_1_1_reprojection_err_ceres__linexd__dx}\index{isae::ReprojectionErrCeres\_linexd\_dx@{isae::ReprojectionErrCeres\_linexd\_dx}}
+
+
+Reprojection error cost function for a line landmark. The parameters are the delta update of the frame and the delta update of the line 3D parametrization.  
+
+
+
+
+{\ttfamily \#include $<$Bundle\+Adjustment\+C\+E\+R\+E\+S\+Analytic.\+h$>$}
+
+
+
+Inheritance diagram for isae\+::Reprojection\+Err\+Ceres\+\_\+linexd\+\_\+dx\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{classisae_1_1_reprojection_err_ceres__linexd__dx__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for isae\+::Reprojection\+Err\+Ceres\+\_\+linexd\+\_\+dx\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{classisae_1_1_reprojection_err_ceres__linexd__dx__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classisae_1_1_reprojection_err_ceres__linexd__dx_a4b680c5df1be15f38be77832b8869da3}{Reprojection\+Err\+Ceres\+\_\+linexd\+\_\+dx}} (const std\+::vector$<$ Eigen\+::\+Vector2d $>$ \&p2ds, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_image_sensor}{Image\+Sensor}} $>$ \&cam, const Eigen\+::\+Affine3d \&T\+\_\+w\+\_\+lmk, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_model3d}{A\+Model3d}} $>$ \&model3d, const double sigma=1.\+0)
+\item 
+\mbox{\hyperlink{classisae_1_1_reprojection_err_ceres__linexd__dx_ad5452b43d170bc07b9cfdde8ec7df7f2}{$\sim$\+Reprojection\+Err\+Ceres\+\_\+linexd\+\_\+dx}} ()
+\item 
+virtual bool \mbox{\hyperlink{classisae_1_1_reprojection_err_ceres__linexd__dx_ac2ddf9a3e1031a90507eabc29d010bb3}{Evaluate}} (double const $\ast$const $\ast$parameters, double $\ast$residuals, double $\ast$$\ast$jacobians) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const std\+::vector$<$ Eigen\+::\+Vector2d $>$ \mbox{\hyperlink{classisae_1_1_reprojection_err_ceres__linexd__dx_af95b1fe323b4ba61a27eed7d73c20fef}{p2ds\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 2D point observations of the line landmark \end{DoxyCompactList}\item 
+const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_image_sensor}{Image\+Sensor}} $>$ \mbox{\hyperlink{classisae_1_1_reprojection_err_ceres__linexd__dx_a8f9419900487013e923e6d9364986cbb}{cam\+\_\+}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classisae_1_1_camera}{Camera}} sensor used to project the landmark. \end{DoxyCompactList}\item 
+const Eigen\+::\+Affine3d \mbox{\hyperlink{classisae_1_1_reprojection_err_ceres__linexd__dx_abfaaeedb13bd2f890ba9a7cbedbf656f}{T\+\_\+w\+\_\+lmk\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Transform of the landmark in the world frame. \end{DoxyCompactList}\item 
+const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_model3d}{A\+Model3d}} $>$ \mbox{\hyperlink{classisae_1_1_reprojection_err_ceres__linexd__dx_a662ecb5f88c286e51c792aa6adfc7a61}{model3d\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 3D model of the line landmark \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix2d \mbox{\hyperlink{classisae_1_1_reprojection_err_ceres__linexd__dx_a9199d7f0ac8abfda2b13f2d60f39eec9}{info\+\_\+sqrt\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Square root of the information matrix for the residuals. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Reprojection error cost function for a line landmark. The parameters are the delta update of the frame and the delta update of the line 3D parametrization. 
+
+B\+E\+W\+A\+RE\+: This funciton requires that the jacobians are derived in the projection function of the camera model. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classisae_1_1_reprojection_err_ceres__linexd__dx_a4b680c5df1be15f38be77832b8869da3}\label{classisae_1_1_reprojection_err_ceres__linexd__dx_a4b680c5df1be15f38be77832b8869da3}} 
+\index{isae::ReprojectionErrCeres\_linexd\_dx@{isae::ReprojectionErrCeres\_linexd\_dx}!ReprojectionErrCeres\_linexd\_dx@{ReprojectionErrCeres\_linexd\_dx}}
+\index{ReprojectionErrCeres\_linexd\_dx@{ReprojectionErrCeres\_linexd\_dx}!isae::ReprojectionErrCeres\_linexd\_dx@{isae::ReprojectionErrCeres\_linexd\_dx}}
+\doxysubsubsection{\texorpdfstring{ReprojectionErrCeres\_linexd\_dx()}{ReprojectionErrCeres\_linexd\_dx()}}
+{\footnotesize\ttfamily isae\+::\+Reprojection\+Err\+Ceres\+\_\+linexd\+\_\+dx\+::\+Reprojection\+Err\+Ceres\+\_\+linexd\+\_\+dx (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ Eigen\+::\+Vector2d $>$ \&}]{p2ds,  }\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_image_sensor}{Image\+Sensor}} $>$ \&}]{cam,  }\item[{const Eigen\+::\+Affine3d \&}]{T\+\_\+w\+\_\+lmk,  }\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_model3d}{A\+Model3d}} $>$ \&}]{model3d,  }\item[{const double}]{sigma = {\ttfamily 1.0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classisae_1_1_reprojection_err_ceres__linexd__dx_ad5452b43d170bc07b9cfdde8ec7df7f2}\label{classisae_1_1_reprojection_err_ceres__linexd__dx_ad5452b43d170bc07b9cfdde8ec7df7f2}} 
+\index{isae::ReprojectionErrCeres\_linexd\_dx@{isae::ReprojectionErrCeres\_linexd\_dx}!````~ReprojectionErrCeres\_linexd\_dx@{$\sim$ReprojectionErrCeres\_linexd\_dx}}
+\index{````~ReprojectionErrCeres\_linexd\_dx@{$\sim$ReprojectionErrCeres\_linexd\_dx}!isae::ReprojectionErrCeres\_linexd\_dx@{isae::ReprojectionErrCeres\_linexd\_dx}}
+\doxysubsubsection{\texorpdfstring{$\sim$ReprojectionErrCeres\_linexd\_dx()}{~ReprojectionErrCeres\_linexd\_dx()}}
+{\footnotesize\ttfamily isae\+::\+Reprojection\+Err\+Ceres\+\_\+linexd\+\_\+dx\+::$\sim$\+Reprojection\+Err\+Ceres\+\_\+linexd\+\_\+dx (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classisae_1_1_reprojection_err_ceres__linexd__dx_ac2ddf9a3e1031a90507eabc29d010bb3}\label{classisae_1_1_reprojection_err_ceres__linexd__dx_ac2ddf9a3e1031a90507eabc29d010bb3}} 
+\index{isae::ReprojectionErrCeres\_linexd\_dx@{isae::ReprojectionErrCeres\_linexd\_dx}!Evaluate@{Evaluate}}
+\index{Evaluate@{Evaluate}!isae::ReprojectionErrCeres\_linexd\_dx@{isae::ReprojectionErrCeres\_linexd\_dx}}
+\doxysubsubsection{\texorpdfstring{Evaluate()}{Evaluate()}}
+{\footnotesize\ttfamily virtual bool isae\+::\+Reprojection\+Err\+Ceres\+\_\+linexd\+\_\+dx\+::\+Evaluate (\begin{DoxyParamCaption}\item[{double const $\ast$const $\ast$}]{parameters,  }\item[{double $\ast$}]{residuals,  }\item[{double $\ast$$\ast$}]{jacobians }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classisae_1_1_reprojection_err_ceres__linexd__dx_a8f9419900487013e923e6d9364986cbb}\label{classisae_1_1_reprojection_err_ceres__linexd__dx_a8f9419900487013e923e6d9364986cbb}} 
+\index{isae::ReprojectionErrCeres\_linexd\_dx@{isae::ReprojectionErrCeres\_linexd\_dx}!cam\_@{cam\_}}
+\index{cam\_@{cam\_}!isae::ReprojectionErrCeres\_linexd\_dx@{isae::ReprojectionErrCeres\_linexd\_dx}}
+\doxysubsubsection{\texorpdfstring{cam\_}{cam\_}}
+{\footnotesize\ttfamily const std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classisae_1_1_image_sensor}{Image\+Sensor}}$>$ isae\+::\+Reprojection\+Err\+Ceres\+\_\+linexd\+\_\+dx\+::cam\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\mbox{\hyperlink{classisae_1_1_camera}{Camera}} sensor used to project the landmark. 
+
+\mbox{\Hypertarget{classisae_1_1_reprojection_err_ceres__linexd__dx_a9199d7f0ac8abfda2b13f2d60f39eec9}\label{classisae_1_1_reprojection_err_ceres__linexd__dx_a9199d7f0ac8abfda2b13f2d60f39eec9}} 
+\index{isae::ReprojectionErrCeres\_linexd\_dx@{isae::ReprojectionErrCeres\_linexd\_dx}!info\_sqrt\_@{info\_sqrt\_}}
+\index{info\_sqrt\_@{info\_sqrt\_}!isae::ReprojectionErrCeres\_linexd\_dx@{isae::ReprojectionErrCeres\_linexd\_dx}}
+\doxysubsubsection{\texorpdfstring{info\_sqrt\_}{info\_sqrt\_}}
+{\footnotesize\ttfamily Eigen\+::\+Matrix2d isae\+::\+Reprojection\+Err\+Ceres\+\_\+linexd\+\_\+dx\+::info\+\_\+sqrt\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Square root of the information matrix for the residuals. 
+
+\mbox{\Hypertarget{classisae_1_1_reprojection_err_ceres__linexd__dx_a662ecb5f88c286e51c792aa6adfc7a61}\label{classisae_1_1_reprojection_err_ceres__linexd__dx_a662ecb5f88c286e51c792aa6adfc7a61}} 
+\index{isae::ReprojectionErrCeres\_linexd\_dx@{isae::ReprojectionErrCeres\_linexd\_dx}!model3d\_@{model3d\_}}
+\index{model3d\_@{model3d\_}!isae::ReprojectionErrCeres\_linexd\_dx@{isae::ReprojectionErrCeres\_linexd\_dx}}
+\doxysubsubsection{\texorpdfstring{model3d\_}{model3d\_}}
+{\footnotesize\ttfamily const std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classisae_1_1_a_model3d}{A\+Model3d}}$>$ isae\+::\+Reprojection\+Err\+Ceres\+\_\+linexd\+\_\+dx\+::model3d\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+3D model of the line landmark 
+
+\mbox{\Hypertarget{classisae_1_1_reprojection_err_ceres__linexd__dx_af95b1fe323b4ba61a27eed7d73c20fef}\label{classisae_1_1_reprojection_err_ceres__linexd__dx_af95b1fe323b4ba61a27eed7d73c20fef}} 
+\index{isae::ReprojectionErrCeres\_linexd\_dx@{isae::ReprojectionErrCeres\_linexd\_dx}!p2ds\_@{p2ds\_}}
+\index{p2ds\_@{p2ds\_}!isae::ReprojectionErrCeres\_linexd\_dx@{isae::ReprojectionErrCeres\_linexd\_dx}}
+\doxysubsubsection{\texorpdfstring{p2ds\_}{p2ds\_}}
+{\footnotesize\ttfamily const std\+::vector$<$Eigen\+::\+Vector2d$>$ isae\+::\+Reprojection\+Err\+Ceres\+\_\+linexd\+\_\+dx\+::p2ds\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+2D point observations of the line landmark 
+
+\mbox{\Hypertarget{classisae_1_1_reprojection_err_ceres__linexd__dx_abfaaeedb13bd2f890ba9a7cbedbf656f}\label{classisae_1_1_reprojection_err_ceres__linexd__dx_abfaaeedb13bd2f890ba9a7cbedbf656f}} 
+\index{isae::ReprojectionErrCeres\_linexd\_dx@{isae::ReprojectionErrCeres\_linexd\_dx}!T\_w\_lmk\_@{T\_w\_lmk\_}}
+\index{T\_w\_lmk\_@{T\_w\_lmk\_}!isae::ReprojectionErrCeres\_linexd\_dx@{isae::ReprojectionErrCeres\_linexd\_dx}}
+\doxysubsubsection{\texorpdfstring{T\_w\_lmk\_}{T\_w\_lmk\_}}
+{\footnotesize\ttfamily const Eigen\+::\+Affine3d isae\+::\+Reprojection\+Err\+Ceres\+\_\+linexd\+\_\+dx\+::\+T\+\_\+w\+\_\+lmk\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Transform of the landmark in the world frame. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/deos/ce.\+debeunne/colcon\+\_\+ws/src/\+Sa\+D\+V\+I\+O/cpp/include/isaeslam/optimizers/\mbox{\hyperlink{_bundle_adjustment_c_e_r_e_s_analytic_8h}{Bundle\+Adjustment\+C\+E\+R\+E\+S\+Analytic.\+h}}\end{DoxyCompactItemize}

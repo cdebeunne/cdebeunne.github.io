@@ -1,11 +1,10 @@
 \hypertarget{slam_parameters_8h}{}\doxysection{/home/deos/ce.debeunne/colcon\+\_\+ws/src/\+Sa\+D\+V\+I\+O/cpp/include/isaeslam/slam\+Parameters.h File Reference}
 \label{slam_parameters_8h}\index{/home/deos/ce.debeunne/colcon\_ws/src/SaDVIO/cpp/include/isaeslam/slamParameters.h@{/home/deos/ce.debeunne/colcon\_ws/src/SaDVIO/cpp/include/isaeslam/slamParameters.h}}
+{\ttfamily \#include \char`\"{}isaeslam/optimizers/\+A\+Optimizer.\+h\char`\"{}}\newline
 {\ttfamily \#include $<$iostream$>$}\newline
 {\ttfamily \#include $<$string$>$}\newline
 {\ttfamily \#include $<$unordered\+\_\+map$>$}\newline
-{\ttfamily \#include \char`\"{}isaeslam/dataproviders/adataprovider.\+h\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}isaeslam/optimizers/\+A\+Optimizer.\+h\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}utilities/\+Config\+File\+Reader.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$yaml-\/cpp/yaml.\+h$>$}\newline
 Include dependency graph for slam\+Parameters.\+h\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -24,11 +23,15 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \begin{DoxyCompactItemize}
 \item 
 struct \mbox{\hyperlink{structisae_1_1_feature_matcher_struct}{isae\+::\+Feature\+Matcher\+Struct}}
-\item 
+\begin{DoxyCompactList}\small\item\em A struct that contains a feature matcher and its parameters. \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{structisae_1_1_feature_tracker_struct}{isae\+::\+Feature\+Tracker\+Struct}}
-\item 
+\begin{DoxyCompactList}\small\item\em A struct that contains a feature tracker and its parameters. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structisae_1_1_feature_struct}{isae\+::\+Feature\+Struct}}
+\begin{DoxyCompactList}\small\item\em A struct that gathers all the parameters for a feature. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structisae_1_1_config}{isae\+::\+Config}}
+\begin{DoxyCompactList}\small\item\em This structure contains the configuration parameters located in the config file. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classisae_1_1_s_l_a_m_parameters}{isae\+::\+S\+L\+A\+M\+Parameters}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em A class that gathers most of the algorithmic blocks of the S\+L\+AM system that can be setup in the config file. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 

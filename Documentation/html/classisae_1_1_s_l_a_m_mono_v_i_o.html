@@ -73,14 +73,17 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>A SLAM class for monocular + <a class="el" href="classisae_1_1_i_m_u.html" title="An Inertial Measurement Unit (IMU) sensor class.">IMU</a> setups.  
+ <a href="classisae_1_1_s_l_a_m_mono_v_i_o.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="slam_core_8h_source.html">slamCore.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for isae::SLAMMonoVIO:</div>
 <div class="dyncontent">
 <div class="center"><img src="classisae_1_1_s_l_a_m_mono_v_i_o__inherit__graph.png" border="0" usemap="#isae_1_1_s_l_a_m_mono_v_i_o_inherit__map" alt="Inheritance graph"/></div>
 <map name="isae_1_1_s_l_a_m_mono_v_i_o_inherit__map" id="isae_1_1_s_l_a_m_mono_v_i_o_inherit__map">
-<area shape="rect" title=" " alt="" coords="5,80,159,107"/>
-<area shape="rect" href="classisae_1_1_s_l_a_m_core.html" title=" " alt="" coords="20,5,144,32"/>
+<area shape="rect" title="A SLAM class for monocular + IMU setups." alt="" coords="5,80,159,107"/>
+<area shape="rect" href="classisae_1_1_s_l_a_m_core.html" title="The core abstract class of the SLAM system. It handles front&#45;end, back&#45;end and initialization." alt="" coords="20,5,144,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -88,8 +91,8 @@ Collaboration diagram for isae::SLAMMonoVIO:</div>
 <div class="dyncontent">
 <div class="center"><img src="classisae_1_1_s_l_a_m_mono_v_i_o__coll__graph.png" border="0" usemap="#isae_1_1_s_l_a_m_mono_v_i_o_coll__map" alt="Collaboration graph"/></div>
 <map name="isae_1_1_s_l_a_m_mono_v_i_o_coll__map" id="isae_1_1_s_l_a_m_mono_v_i_o_coll__map">
-<area shape="rect" title=" " alt="" coords="5,80,159,107"/>
-<area shape="rect" href="classisae_1_1_s_l_a_m_core.html" title=" " alt="" coords="20,5,144,32"/>
+<area shape="rect" title="A SLAM class for monocular + IMU setups." alt="" coords="5,80,159,107"/>
+<area shape="rect" href="classisae_1_1_s_l_a_m_core.html" title="The core abstract class of the SLAM system. It handles front&#45;end, back&#45;end and initialization." alt="" coords="20,5,144,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -98,12 +101,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aecd42a1e3febe848bd9f79617f8e24fb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_mono_v_i_o.html#aecd42a1e3febe848bd9f79617f8e24fb">SLAMMonoVIO</a> (std::shared_ptr&lt; <a class="el" href="classisae_1_1_s_l_a_m_parameters.html">SLAMParameters</a> &gt; slam_param)</td></tr>
 <tr class="separator:aecd42a1e3febe848bd9f79617f8e24fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abdafc17c144f9c25d9f8e4a4d2a51205"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_mono_v_i_o.html#abdafc17c144f9c25d9f8e4a4d2a51205">init</a> () override</td></tr>
+<tr class="memdesc:abdafc17c144f9c25d9f8e4a4d2a51205"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialization step : create the first 3D landmarks and keyframe(s)  <a href="classisae_1_1_s_l_a_m_mono_v_i_o.html#abdafc17c144f9c25d9f8e4a4d2a51205">More...</a><br /></td></tr>
 <tr class="separator:abdafc17c144f9c25d9f8e4a4d2a51205"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7903bf02532dc951b00445d3567bdfdd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_mono_v_i_o.html#a7903bf02532dc951b00445d3567bdfdd">frontEndStep</a> () override</td></tr>
+<tr class="memdesc:a7903bf02532dc951b00445d3567bdfdd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Front End: detection, tracking, pose estimation and landmark triangulation.  <a href="classisae_1_1_s_l_a_m_mono_v_i_o.html#a7903bf02532dc951b00445d3567bdfdd">More...</a><br /></td></tr>
 <tr class="separator:a7903bf02532dc951b00445d3567bdfdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7509d89f0dc6cfde31ff66bb7b2ad06c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_mono_v_i_o.html#a7509d89f0dc6cfde31ff66bb7b2ad06c">backEndStep</a> () override</td></tr>
+<tr class="memdesc:a7509d89f0dc6cfde31ff66bb7b2ad06c"><td class="mdescLeft">&#160;</td><td class="mdescRight">brief description Back End: marginalization, local map optimization  <a href="classisae_1_1_s_l_a_m_mono_v_i_o.html#a7509d89f0dc6cfde31ff66bb7b2ad06c">More...</a><br /></td></tr>
 <tr class="separator:a7509d89f0dc6cfde31ff66bb7b2ad06c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4b7c184d3de8fe75f5d6a62671261519"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_mono_v_i_o.html#a4b7c184d3de8fe75f5d6a62671261519">step_init</a> ()</td></tr>
+<tr class="memdesc:a4b7c184d3de8fe75f5d6a62671261519"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialization steps with bi-monocular only for <a class="el" href="classisae_1_1_i_m_u.html" title="An Inertial Measurement Unit (IMU) sensor class.">IMU</a> initialization.  <a href="classisae_1_1_s_l_a_m_mono_v_i_o.html#a4b7c184d3de8fe75f5d6a62671261519">More...</a><br /></td></tr>
 <tr class="separator:a4b7c184d3de8fe75f5d6a62671261519"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classisae_1_1_s_l_a_m_core"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classisae_1_1_s_l_a_m_core')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classisae_1_1_s_l_a_m_core.html">isae::SLAMCore</a></td></tr>
 <tr class="memitem:af683a1806d10d2277e5989ef6edac5e2 inherit pub_methods_classisae_1_1_s_l_a_m_core"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#af683a1806d10d2277e5989ef6edac5e2">SLAMCore</a> ()</td></tr>
@@ -111,38 +118,53 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5e59849481ace40b62c7f9606d1c5dd9 inherit pub_methods_classisae_1_1_s_l_a_m_core"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#a5e59849481ace40b62c7f9606d1c5dd9">SLAMCore</a> (std::shared_ptr&lt; <a class="el" href="classisae_1_1_s_l_a_m_parameters.html">isae::SLAMParameters</a> &gt; slam_param)</td></tr>
 <tr class="separator:a5e59849481ace40b62c7f9606d1c5dd9 inherit pub_methods_classisae_1_1_s_l_a_m_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a59e46556af840efd280b4715f372e623 inherit pub_methods_classisae_1_1_s_l_a_m_core"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#a59e46556af840efd280b4715f372e623">runBackEnd</a> ()</td></tr>
+<tr class="memdesc:a59e46556af840efd280b4715f372e623 inherit pub_methods_classisae_1_1_s_l_a_m_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">Thread for the backend.  <a href="classisae_1_1_s_l_a_m_core.html#a59e46556af840efd280b4715f372e623">More...</a><br /></td></tr>
 <tr class="separator:a59e46556af840efd280b4715f372e623 inherit pub_methods_classisae_1_1_s_l_a_m_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a68a0dcc63d80450d36237a2e9a4b5ad1 inherit pub_methods_classisae_1_1_s_l_a_m_core"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#a68a0dcc63d80450d36237a2e9a4b5ad1">runFrontEnd</a> ()</td></tr>
+<tr class="memdesc:a68a0dcc63d80450d36237a2e9a4b5ad1 inherit pub_methods_classisae_1_1_s_l_a_m_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">Thread for the frontend.  <a href="classisae_1_1_s_l_a_m_core.html#a68a0dcc63d80450d36237a2e9a4b5ad1">More...</a><br /></td></tr>
 <tr class="separator:a68a0dcc63d80450d36237a2e9a4b5ad1 inherit pub_methods_classisae_1_1_s_l_a_m_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a086ca26cc3db8a700c763228d1b739c0 inherit pub_methods_classisae_1_1_s_l_a_m_core"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#a086ca26cc3db8a700c763228d1b739c0">runFullOdom</a> ()</td></tr>
+<tr class="memdesc:a086ca26cc3db8a700c763228d1b739c0 inherit pub_methods_classisae_1_1_s_l_a_m_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">Thread for the backend.  <a href="classisae_1_1_s_l_a_m_core.html#a086ca26cc3db8a700c763228d1b739c0">More...</a><br /></td></tr>
 <tr class="separator:a086ca26cc3db8a700c763228d1b739c0 inherit pub_methods_classisae_1_1_s_l_a_m_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab0de2d2b0de545f6a1ecc793c7f5ffee inherit pub_methods_classisae_1_1_s_l_a_m_core"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceisae.html#aef749e9df97878dd2b7af968a4f64efd">typed_vec_features</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#ab0de2d2b0de545f6a1ecc793c7f5ffee">detectFeatures</a> (std::shared_ptr&lt; <a class="el" href="classisae_1_1_image_sensor.html">ImageSensor</a> &gt; &amp;sensor)</td></tr>
+<tr class="memdesc:ab0de2d2b0de545f6a1ecc793c7f5ffee inherit pub_methods_classisae_1_1_s_l_a_m_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">Detect all types of features for a given sensor with bucketting.  <a href="classisae_1_1_s_l_a_m_core.html#ab0de2d2b0de545f6a1ecc793c7f5ffee">More...</a><br /></td></tr>
 <tr class="separator:ab0de2d2b0de545f6a1ecc793c7f5ffee inherit pub_methods_classisae_1_1_s_l_a_m_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4038c62e84822504b5a040765d397a45 inherit pub_methods_classisae_1_1_s_l_a_m_core"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#a4038c62e84822504b5a040765d397a45">cleanFeatures</a> (std::shared_ptr&lt; <a class="el" href="classisae_1_1_frame.html">Frame</a> &gt; &amp;f)</td></tr>
+<tr class="memdesc:a4038c62e84822504b5a040765d397a45 inherit pub_methods_classisae_1_1_s_l_a_m_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clean all the features that are outliers or are linked to outlier landmark.  <a href="classisae_1_1_s_l_a_m_core.html#a4038c62e84822504b5a040765d397a45">More...</a><br /></td></tr>
 <tr class="separator:a4038c62e84822504b5a040765d397a45 inherit pub_methods_classisae_1_1_s_l_a_m_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a248df2fe323e26cd3bb8edeb4a9a3fe8 inherit pub_methods_classisae_1_1_s_l_a_m_core"><td class="memItemLeft" align="right" valign="top">uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#a248df2fe323e26cd3bb8edeb4a9a3fe8">matchFeatures</a> (std::shared_ptr&lt; <a class="el" href="classisae_1_1_image_sensor.html">ImageSensor</a> &gt; &amp;sensor0, std::shared_ptr&lt; <a class="el" href="classisae_1_1_image_sensor.html">ImageSensor</a> &gt; &amp;sensor1, <a class="el" href="namespaceisae.html#a70bf0a9838eb50b6a3fe2be9b79e25be">typed_vec_match</a> &amp;matches, <a class="el" href="namespaceisae.html#a70bf0a9838eb50b6a3fe2be9b79e25be">typed_vec_match</a> &amp;matches_lmk, <a class="el" href="namespaceisae.html#aef749e9df97878dd2b7af968a4f64efd">typed_vec_features</a> features_to_track)</td></tr>
+<tr class="memitem:a248df2fe323e26cd3bb8edeb4a9a3fe8 inherit pub_methods_classisae_1_1_s_l_a_m_core"><td class="memItemLeft" align="right" valign="top">uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#a248df2fe323e26cd3bb8edeb4a9a3fe8">matchFeatures</a> (std::shared_ptr&lt; <a class="el" href="classisae_1_1_image_sensor.html">ImageSensor</a> &gt; &amp;sensor0, std::shared_ptr&lt; <a class="el" href="classisae_1_1_image_sensor.html">ImageSensor</a> &gt; &amp;sensor1, <a class="el" href="namespaceisae.html#a5d24f9da33ed2238fec0ac3f04cc8da5">typed_vec_match</a> &amp;matches, <a class="el" href="namespaceisae.html#a5d24f9da33ed2238fec0ac3f04cc8da5">typed_vec_match</a> &amp;matches_lmk, <a class="el" href="namespaceisae.html#aef749e9df97878dd2b7af968a4f64efd">typed_vec_features</a> features_to_track)</td></tr>
+<tr class="memdesc:a248df2fe323e26cd3bb8edeb4a9a3fe8 inherit pub_methods_classisae_1_1_s_l_a_m_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">Predicts the position of the features and matches all the features between sensors.  <a href="classisae_1_1_s_l_a_m_core.html#a248df2fe323e26cd3bb8edeb4a9a3fe8">More...</a><br /></td></tr>
 <tr class="separator:a248df2fe323e26cd3bb8edeb4a9a3fe8 inherit pub_methods_classisae_1_1_s_l_a_m_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a129f18068b1b1169de97dcd0ac54664a inherit pub_methods_classisae_1_1_s_l_a_m_core"><td class="memItemLeft" align="right" valign="top">uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#a129f18068b1b1169de97dcd0ac54664a">trackFeatures</a> (std::shared_ptr&lt; <a class="el" href="classisae_1_1_image_sensor.html">ImageSensor</a> &gt; &amp;sensor0, std::shared_ptr&lt; <a class="el" href="classisae_1_1_image_sensor.html">ImageSensor</a> &gt; &amp;sensor1, <a class="el" href="namespaceisae.html#a70bf0a9838eb50b6a3fe2be9b79e25be">typed_vec_match</a> &amp;matches, <a class="el" href="namespaceisae.html#a70bf0a9838eb50b6a3fe2be9b79e25be">typed_vec_match</a> &amp;matches_lmk, <a class="el" href="namespaceisae.html#aef749e9df97878dd2b7af968a4f64efd">typed_vec_features</a> features_to_track)</td></tr>
+<tr class="memitem:a129f18068b1b1169de97dcd0ac54664a inherit pub_methods_classisae_1_1_s_l_a_m_core"><td class="memItemLeft" align="right" valign="top">uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#a129f18068b1b1169de97dcd0ac54664a">trackFeatures</a> (std::shared_ptr&lt; <a class="el" href="classisae_1_1_image_sensor.html">ImageSensor</a> &gt; &amp;sensor0, std::shared_ptr&lt; <a class="el" href="classisae_1_1_image_sensor.html">ImageSensor</a> &gt; &amp;sensor1, <a class="el" href="namespaceisae.html#a5d24f9da33ed2238fec0ac3f04cc8da5">typed_vec_match</a> &amp;matches, <a class="el" href="namespaceisae.html#a5d24f9da33ed2238fec0ac3f04cc8da5">typed_vec_match</a> &amp;matches_lmk, <a class="el" href="namespaceisae.html#aef749e9df97878dd2b7af968a4f64efd">typed_vec_features</a> features_to_track)</td></tr>
+<tr class="memdesc:a129f18068b1b1169de97dcd0ac54664a inherit pub_methods_classisae_1_1_s_l_a_m_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">Predicts the position of the features and tracks all the features.  <a href="classisae_1_1_s_l_a_m_core.html#a129f18068b1b1169de97dcd0ac54664a">More...</a><br /></td></tr>
 <tr class="separator:a129f18068b1b1169de97dcd0ac54664a inherit pub_methods_classisae_1_1_s_l_a_m_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7297bc12be525944176f4303b29272d2 inherit pub_methods_classisae_1_1_s_l_a_m_core"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#a7297bc12be525944176f4303b29272d2">predictFeature</a> (std::vector&lt; std::shared_ptr&lt; <a class="el" href="classisae_1_1_a_feature.html">AFeature</a> &gt;&gt; features, std::shared_ptr&lt; <a class="el" href="classisae_1_1_image_sensor.html">ImageSensor</a> &gt; sensor, std::vector&lt; std::shared_ptr&lt; <a class="el" href="classisae_1_1_a_feature.html">AFeature</a> &gt;&gt; &amp;features_init, <a class="el" href="namespaceisae.html#ac61c2f881f902dbfef491caaa5135c9c">vec_match</a> previous_matches)</td></tr>
+<tr class="memitem:a7297bc12be525944176f4303b29272d2 inherit pub_methods_classisae_1_1_s_l_a_m_core"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#a7297bc12be525944176f4303b29272d2">predictFeature</a> (std::vector&lt; std::shared_ptr&lt; <a class="el" href="classisae_1_1_a_feature.html">AFeature</a> &gt;&gt; features, std::shared_ptr&lt; <a class="el" href="classisae_1_1_image_sensor.html">ImageSensor</a> &gt; sensor, std::vector&lt; std::shared_ptr&lt; <a class="el" href="classisae_1_1_a_feature.html">AFeature</a> &gt;&gt; &amp;features_init, <a class="el" href="namespaceisae.html#a018dfa0f3c618541bf2674aaefa20d61">vec_match</a> previous_matches)</td></tr>
+<tr class="memdesc:a7297bc12be525944176f4303b29272d2 inherit pub_methods_classisae_1_1_s_l_a_m_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">Predicts the position of a set of features on a given sensor.  <a href="classisae_1_1_s_l_a_m_core.html#a7297bc12be525944176f4303b29272d2">More...</a><br /></td></tr>
 <tr class="separator:a7297bc12be525944176f4303b29272d2 inherit pub_methods_classisae_1_1_s_l_a_m_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a69fcf76a00dca3e5240b31b5c27562b7 inherit pub_methods_classisae_1_1_s_l_a_m_core"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceisae.html#a70bf0a9838eb50b6a3fe2be9b79e25be">typed_vec_match</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#a69fcf76a00dca3e5240b31b5c27562b7">epipolarFiltering</a> (std::shared_ptr&lt; <a class="el" href="classisae_1_1_image_sensor.html">ImageSensor</a> &gt; &amp;cam0, std::shared_ptr&lt; <a class="el" href="classisae_1_1_image_sensor.html">ImageSensor</a> &gt; &amp;cam1, <a class="el" href="namespaceisae.html#a70bf0a9838eb50b6a3fe2be9b79e25be">typed_vec_match</a> matches)</td></tr>
+<tr class="memitem:a69fcf76a00dca3e5240b31b5c27562b7 inherit pub_methods_classisae_1_1_s_l_a_m_core"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceisae.html#a5d24f9da33ed2238fec0ac3f04cc8da5">typed_vec_match</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#a69fcf76a00dca3e5240b31b5c27562b7">epipolarFiltering</a> (std::shared_ptr&lt; <a class="el" href="classisae_1_1_image_sensor.html">ImageSensor</a> &gt; &amp;cam0, std::shared_ptr&lt; <a class="el" href="classisae_1_1_image_sensor.html">ImageSensor</a> &gt; &amp;cam1, <a class="el" href="namespaceisae.html#a5d24f9da33ed2238fec0ac3f04cc8da5">typed_vec_match</a> matches)</td></tr>
+<tr class="memdesc:a69fcf76a00dca3e5240b31b5c27562b7 inherit pub_methods_classisae_1_1_s_l_a_m_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">Filters the matches between two sensors (with consistent pose estimates) using epipolar plane check.  <a href="classisae_1_1_s_l_a_m_core.html#a69fcf76a00dca3e5240b31b5c27562b7">More...</a><br /></td></tr>
 <tr class="separator:a69fcf76a00dca3e5240b31b5c27562b7 inherit pub_methods_classisae_1_1_s_l_a_m_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a930d35825bd9e4622b76fdf7dede7275 inherit pub_methods_classisae_1_1_s_l_a_m_core"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#a930d35825bd9e4622b76fdf7dede7275">outlierRemoval</a> ()</td></tr>
+<tr class="memdesc:a930d35825bd9e4622b76fdf7dede7275 inherit pub_methods_classisae_1_1_s_l_a_m_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove all the outlier features of _frame.  <a href="classisae_1_1_s_l_a_m_core.html#a930d35825bd9e4622b76fdf7dede7275">More...</a><br /></td></tr>
 <tr class="separator:a930d35825bd9e4622b76fdf7dede7275 inherit pub_methods_classisae_1_1_s_l_a_m_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad1c8355572701919add16b874c3de7f1 inherit pub_methods_classisae_1_1_s_l_a_m_core"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#ad1c8355572701919add16b874c3de7f1">predict</a> (std::shared_ptr&lt; <a class="el" href="classisae_1_1_frame.html">Frame</a> &gt; &amp;f)</td></tr>
+<tr class="memdesc:ad1c8355572701919add16b874c3de7f1 inherit pub_methods_classisae_1_1_s_l_a_m_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">Estimates the pose of a given frame.  <a href="classisae_1_1_s_l_a_m_core.html#ad1c8355572701919add16b874c3de7f1">More...</a><br /></td></tr>
 <tr class="separator:ad1c8355572701919add16b874c3de7f1 inherit pub_methods_classisae_1_1_s_l_a_m_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aafc0e7155f3348a4383d1cd178a47103 inherit pub_methods_classisae_1_1_s_l_a_m_core"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#aafc0e7155f3348a4383d1cd178a47103">initLandmarks</a> (std::shared_ptr&lt; <a class="el" href="classisae_1_1_frame.html">Frame</a> &gt; &amp;f)</td></tr>
+<tr class="memdesc:aafc0e7155f3348a4383d1cd178a47103 inherit pub_methods_classisae_1_1_s_l_a_m_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize all the landmarks of the current frame using _matches_in_time and _matches_in_frame.  <a href="classisae_1_1_s_l_a_m_core.html#aafc0e7155f3348a4383d1cd178a47103">More...</a><br /></td></tr>
 <tr class="separator:aafc0e7155f3348a4383d1cd178a47103 inherit pub_methods_classisae_1_1_s_l_a_m_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae0786a5e2ebcf4b3b9e9bb4c680cf28f inherit pub_methods_classisae_1_1_s_l_a_m_core"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#ae0786a5e2ebcf4b3b9e9bb4c680cf28f">updateLandmarks</a> (<a class="el" href="namespaceisae.html#a70bf0a9838eb50b6a3fe2be9b79e25be">typed_vec_match</a> matches_lmk)</td></tr>
+<tr class="memitem:ae0786a5e2ebcf4b3b9e9bb4c680cf28f inherit pub_methods_classisae_1_1_s_l_a_m_core"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#ae0786a5e2ebcf4b3b9e9bb4c680cf28f">updateLandmarks</a> (<a class="el" href="namespaceisae.html#a5d24f9da33ed2238fec0ac3f04cc8da5">typed_vec_match</a> matches_lmk)</td></tr>
 <tr class="separator:ae0786a5e2ebcf4b3b9e9bb4c680cf28f inherit pub_methods_classisae_1_1_s_l_a_m_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3bd589ad8aa6cd7d0f8cc1c4a9fab001 inherit pub_methods_classisae_1_1_s_l_a_m_core"><td class="memItemLeft" align="right" valign="top">uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#a3bd589ad8aa6cd7d0f8cc1c4a9fab001">recoverFeatureFromMapLandmarks</a> (std::shared_ptr&lt; <a class="el" href="classisae_1_1_a_map.html">isae::AMap</a> &gt; localmap, std::shared_ptr&lt; <a class="el" href="classisae_1_1_frame.html">Frame</a> &gt; &amp;f)</td></tr>
+<tr class="memdesc:a3bd589ad8aa6cd7d0f8cc1c4a9fab001 inherit pub_methods_classisae_1_1_s_l_a_m_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs landmark resurection.  <a href="classisae_1_1_s_l_a_m_core.html#a3bd589ad8aa6cd7d0f8cc1c4a9fab001">More...</a><br /></td></tr>
 <tr class="separator:a3bd589ad8aa6cd7d0f8cc1c4a9fab001 inherit pub_methods_classisae_1_1_s_l_a_m_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf3895f1262e39e2fb288cb57aa3f4e5 inherit pub_methods_classisae_1_1_s_l_a_m_core"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#adf3895f1262e39e2fb288cb57aa3f4e5">shouldInsertKeyframe</a> (std::shared_ptr&lt; <a class="el" href="classisae_1_1_frame.html">Frame</a> &gt; &amp;f)</td></tr>
+<tr class="memdesc:adf3895f1262e39e2fb288cb57aa3f4e5 inherit pub_methods_classisae_1_1_s_l_a_m_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines if the frame in argument is a KF.  <a href="classisae_1_1_s_l_a_m_core.html#adf3895f1262e39e2fb288cb57aa3f4e5">More...</a><br /></td></tr>
 <tr class="separator:adf3895f1262e39e2fb288cb57aa3f4e5 inherit pub_methods_classisae_1_1_s_l_a_m_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a33a7053a9e08bbe72477d5a24234f05b inherit pub_methods_classisae_1_1_s_l_a_m_core"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classisae_1_1_frame.html">Frame</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#a33a7053a9e08bbe72477d5a24234f05b">getLastKF</a> ()</td></tr>
 <tr class="separator:a33a7053a9e08bbe72477d5a24234f05b inherit pub_methods_classisae_1_1_s_l_a_m_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ebbc2ac160e1bcf300909718c68cb44 inherit pub_methods_classisae_1_1_s_l_a_m_core"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#a5ebbc2ac160e1bcf300909718c68cb44">profiling</a> ()</td></tr>
+<tr class="memdesc:a5ebbc2ac160e1bcf300909718c68cb44 inherit pub_methods_classisae_1_1_s_l_a_m_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">A function to monitor the SLAM behaviour.  <a href="classisae_1_1_s_l_a_m_core.html#a5ebbc2ac160e1bcf300909718c68cb44">More...</a><br /></td></tr>
 <tr class="separator:a5ebbc2ac160e1bcf300909718c68cb44 inherit pub_methods_classisae_1_1_s_l_a_m_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
@@ -151,8 +173,16 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:a8cbe6932796ead5c22a42f098bb5e49e inherit pub_attribs_classisae_1_1_s_l_a_m_core"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#a8cbe6932796ead5c22a42f098bb5e49e">_is_init</a> = false</td></tr>
 <tr class="separator:a8cbe6932796ead5c22a42f098bb5e49e inherit pub_attribs_classisae_1_1_s_l_a_m_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b839e70c15c76939af97ee99927dfc3 inherit pub_attribs_classisae_1_1_s_l_a_m_core"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#a0b839e70c15c76939af97ee99927dfc3">_successive_fails</a> = 0</td></tr>
+<tr class="memdesc:a0b839e70c15c76939af97ee99927dfc3 inherit pub_attribs_classisae_1_1_s_l_a_m_core"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p>Flag for initialization </p>
+</blockquote>
+ <a href="classisae_1_1_s_l_a_m_core.html#a0b839e70c15c76939af97ee99927dfc3">More...</a><br /></td></tr>
 <tr class="separator:a0b839e70c15c76939af97ee99927dfc3 inherit pub_attribs_classisae_1_1_s_l_a_m_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad02358a54782ca107f3d5e99a108d612 inherit pub_attribs_classisae_1_1_s_l_a_m_core"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classisae_1_1_s_l_a_m_parameters.html">isae::SLAMParameters</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#ad02358a54782ca107f3d5e99a108d612">_slam_param</a></td></tr>
+<tr class="memdesc:ad02358a54782ca107f3d5e99a108d612 inherit pub_attribs_classisae_1_1_s_l_a_m_core"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p>Number of successive failure to trigger reinitialization </p>
+</blockquote>
+ <a href="classisae_1_1_s_l_a_m_core.html#ad02358a54782ca107f3d5e99a108d612">More...</a><br /></td></tr>
 <tr class="separator:ad02358a54782ca107f3d5e99a108d612 inherit pub_attribs_classisae_1_1_s_l_a_m_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d09de0fa22c576eaa18922d2f8e7617 inherit pub_attribs_classisae_1_1_s_l_a_m_core"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classisae_1_1_frame.html">Frame</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#a7d09de0fa22c576eaa18922d2f8e7617">_frame_to_display</a></td></tr>
 <tr class="separator:a7d09de0fa22c576eaa18922d2f8e7617 inherit pub_attribs_classisae_1_1_s_l_a_m_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -165,35 +195,91 @@ Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_attribs_classisae_1_1_s_l_a_m_core"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classisae_1_1_s_l_a_m_core')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classisae_1_1_s_l_a_m_core.html">isae::SLAMCore</a></td></tr>
 <tr class="memitem:a30ca343387baa2bb2c8fcb48ed9300e5 inherit pro_attribs_classisae_1_1_s_l_a_m_core"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classisae_1_1_frame.html">Frame</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#a30ca343387baa2bb2c8fcb48ed9300e5">_frame</a></td></tr>
 <tr class="separator:a30ca343387baa2bb2c8fcb48ed9300e5 inherit pro_attribs_classisae_1_1_s_l_a_m_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abca11aeefa4bb0850ca34658566c7e5b inherit pro_attribs_classisae_1_1_s_l_a_m_core"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceisae.html#a70bf0a9838eb50b6a3fe2be9b79e25be">typed_vec_match</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#abca11aeefa4bb0850ca34658566c7e5b">_matches_in_time</a></td></tr>
+<tr class="memitem:abca11aeefa4bb0850ca34658566c7e5b inherit pro_attribs_classisae_1_1_s_l_a_m_core"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceisae.html#a5d24f9da33ed2238fec0ac3f04cc8da5">typed_vec_match</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#abca11aeefa4bb0850ca34658566c7e5b">_matches_in_time</a></td></tr>
+<tr class="memdesc:abca11aeefa4bb0850ca34658566c7e5b inherit pro_attribs_classisae_1_1_s_l_a_m_core"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p>Current frame </p>
+</blockquote>
+ <a href="classisae_1_1_s_l_a_m_core.html#abca11aeefa4bb0850ca34658566c7e5b">More...</a><br /></td></tr>
 <tr class="separator:abca11aeefa4bb0850ca34658566c7e5b inherit pro_attribs_classisae_1_1_s_l_a_m_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c4e463d6cdd2083db3de4100a1885dc inherit pro_attribs_classisae_1_1_s_l_a_m_core"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceisae.html#a70bf0a9838eb50b6a3fe2be9b79e25be">typed_vec_match</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#a7c4e463d6cdd2083db3de4100a1885dc">_matches_in_time_lmk</a></td></tr>
+<tr class="memitem:a7c4e463d6cdd2083db3de4100a1885dc inherit pro_attribs_classisae_1_1_s_l_a_m_core"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceisae.html#a5d24f9da33ed2238fec0ac3f04cc8da5">typed_vec_match</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#a7c4e463d6cdd2083db3de4100a1885dc">_matches_in_time_lmk</a></td></tr>
+<tr class="memdesc:a7c4e463d6cdd2083db3de4100a1885dc inherit pro_attribs_classisae_1_1_s_l_a_m_core"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p>Typed vector of the matches between the last KF and _frame </p>
+</blockquote>
+ <a href="classisae_1_1_s_l_a_m_core.html#a7c4e463d6cdd2083db3de4100a1885dc">More...</a><br /></td></tr>
 <tr class="separator:a7c4e463d6cdd2083db3de4100a1885dc inherit pro_attribs_classisae_1_1_s_l_a_m_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af9705993f210ffcbffb8a3895e12958f inherit pro_attribs_classisae_1_1_s_l_a_m_core"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceisae.html#a70bf0a9838eb50b6a3fe2be9b79e25be">typed_vec_match</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#af9705993f210ffcbffb8a3895e12958f">_matches_in_frame</a></td></tr>
+<tr class="memitem:af9705993f210ffcbffb8a3895e12958f inherit pro_attribs_classisae_1_1_s_l_a_m_core"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceisae.html#a5d24f9da33ed2238fec0ac3f04cc8da5">typed_vec_match</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#af9705993f210ffcbffb8a3895e12958f">_matches_in_frame</a></td></tr>
+<tr class="memdesc:af9705993f210ffcbffb8a3895e12958f inherit pro_attribs_classisae_1_1_s_l_a_m_core"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p>Typed vector of the matches with landmarks between the last KF and _frame </p>
+</blockquote>
+ <a href="classisae_1_1_s_l_a_m_core.html#af9705993f210ffcbffb8a3895e12958f">More...</a><br /></td></tr>
 <tr class="separator:af9705993f210ffcbffb8a3895e12958f inherit pro_attribs_classisae_1_1_s_l_a_m_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a048d35a0f87be36c46f81dcc646391fc inherit pro_attribs_classisae_1_1_s_l_a_m_core"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceisae.html#a70bf0a9838eb50b6a3fe2be9b79e25be">typed_vec_match</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#a048d35a0f87be36c46f81dcc646391fc">_matches_in_frame_lmk</a></td></tr>
+<tr class="memitem:a048d35a0f87be36c46f81dcc646391fc inherit pro_attribs_classisae_1_1_s_l_a_m_core"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceisae.html#a5d24f9da33ed2238fec0ac3f04cc8da5">typed_vec_match</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#a048d35a0f87be36c46f81dcc646391fc">_matches_in_frame_lmk</a></td></tr>
+<tr class="memdesc:a048d35a0f87be36c46f81dcc646391fc inherit pro_attribs_classisae_1_1_s_l_a_m_core"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p>Typed vector of the matches between the sensors of _frame </p>
+</blockquote>
+ <a href="classisae_1_1_s_l_a_m_core.html#a048d35a0f87be36c46f81dcc646391fc">More...</a><br /></td></tr>
 <tr class="separator:a048d35a0f87be36c46f81dcc646391fc inherit pro_attribs_classisae_1_1_s_l_a_m_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad3641feb65214860635525bb28027995 inherit pro_attribs_classisae_1_1_s_l_a_m_core"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classisae_1_1_local_map.html">isae::LocalMap</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#ad3641feb65214860635525bb28027995">_local_map</a></td></tr>
+<tr class="memdesc:ad3641feb65214860635525bb28027995 inherit pro_attribs_classisae_1_1_s_l_a_m_core"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p>Typed vector of the matches with landmarks between the sensors of _frame </p>
+</blockquote>
+ <a href="classisae_1_1_s_l_a_m_core.html#ad3641feb65214860635525bb28027995">More...</a><br /></td></tr>
 <tr class="separator:ad3641feb65214860635525bb28027995 inherit pro_attribs_classisae_1_1_s_l_a_m_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48e025ba0497eafdd57cfe766d524ce5 inherit pro_attribs_classisae_1_1_s_l_a_m_core"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classisae_1_1_global_map.html">isae::GlobalMap</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#a48e025ba0497eafdd57cfe766d524ce5">_global_map</a></td></tr>
+<tr class="memdesc:a48e025ba0497eafdd57cfe766d524ce5 inherit pro_attribs_classisae_1_1_s_l_a_m_core"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p>Current local map </p>
+</blockquote>
+ <a href="classisae_1_1_s_l_a_m_core.html#a48e025ba0497eafdd57cfe766d524ce5">More...</a><br /></td></tr>
 <tr class="separator:a48e025ba0497eafdd57cfe766d524ce5 inherit pro_attribs_classisae_1_1_s_l_a_m_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade0ce23e8b63a59eae7418a80d6b7baf inherit pro_attribs_classisae_1_1_s_l_a_m_core"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classisae_1_1_mesher.html">Mesher</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#ade0ce23e8b63a59eae7418a80d6b7baf">_mesher</a></td></tr>
+<tr class="memdesc:ade0ce23e8b63a59eae7418a80d6b7baf inherit pro_attribs_classisae_1_1_s_l_a_m_core"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p>Current global map </p>
+</blockquote>
+ <a href="classisae_1_1_s_l_a_m_core.html#ade0ce23e8b63a59eae7418a80d6b7baf">More...</a><br /></td></tr>
 <tr class="separator:ade0ce23e8b63a59eae7418a80d6b7baf inherit pro_attribs_classisae_1_1_s_l_a_m_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a5a97f9b6370b3a26405c0692f3b639 inherit pro_attribs_classisae_1_1_s_l_a_m_core"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#a6a5a97f9b6370b3a26405c0692f3b639">_max_movement_parallax</a></td></tr>
+<tr class="memdesc:a6a5a97f9b6370b3a26405c0692f3b639 inherit pro_attribs_classisae_1_1_s_l_a_m_core"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p><a class="el" href="classisae_1_1_mesher.html">Mesher</a> of the SLAM </p>
+</blockquote>
+ <a href="classisae_1_1_s_l_a_m_core.html#a6a5a97f9b6370b3a26405c0692f3b639">More...</a><br /></td></tr>
 <tr class="separator:a6a5a97f9b6370b3a26405c0692f3b639 inherit pro_attribs_classisae_1_1_s_l_a_m_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e49528324b8e9392ac52955e3fab7fc inherit pro_attribs_classisae_1_1_s_l_a_m_core"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#a1e49528324b8e9392ac52955e3fab7fc">_min_movement_parallax</a></td></tr>
+<tr class="memdesc:a1e49528324b8e9392ac52955e3fab7fc inherit pro_attribs_classisae_1_1_s_l_a_m_core"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p>Max parallax until a KF is voted </p>
+</blockquote>
+ <a href="classisae_1_1_s_l_a_m_core.html#a1e49528324b8e9392ac52955e3fab7fc">More...</a><br /></td></tr>
 <tr class="separator:a1e49528324b8e9392ac52955e3fab7fc inherit pro_attribs_classisae_1_1_s_l_a_m_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea597da6a069fb9f86daa3c9abaa9dee inherit pro_attribs_classisae_1_1_s_l_a_m_core"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#aea597da6a069fb9f86daa3c9abaa9dee">_min_lmk_number</a></td></tr>
+<tr class="memdesc:aea597da6a069fb9f86daa3c9abaa9dee inherit pro_attribs_classisae_1_1_s_l_a_m_core"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p>Under this parallax, no motion is considered </p>
+</blockquote>
+ <a href="classisae_1_1_s_l_a_m_core.html#aea597da6a069fb9f86daa3c9abaa9dee">More...</a><br /></td></tr>
 <tr class="separator:aea597da6a069fb9f86daa3c9abaa9dee inherit pro_attribs_classisae_1_1_s_l_a_m_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab707aa5b340fb77057d5b7820f045efd inherit pro_attribs_classisae_1_1_s_l_a_m_core"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#ab707aa5b340fb77057d5b7820f045efd">_parallax</a></td></tr>
+<tr class="memdesc:ab707aa5b340fb77057d5b7820f045efd inherit pro_attribs_classisae_1_1_s_l_a_m_core"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p>Under this number of landmark in _frame a KF is voted </p>
+</blockquote>
+ <a href="classisae_1_1_s_l_a_m_core.html#ab707aa5b340fb77057d5b7820f045efd">More...</a><br /></td></tr>
 <tr class="separator:ab707aa5b340fb77057d5b7820f045efd inherit pro_attribs_classisae_1_1_s_l_a_m_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0262a6c57ffaac910b899fb52d3e3eb inherit pro_attribs_classisae_1_1_s_l_a_m_core"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceisae.html#a95b4efbae1379c1c22879954528d4008">Vector6d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#ad0262a6c57ffaac910b899fb52d3e3eb">_6d_velocity</a></td></tr>
+<tr class="memdesc:ad0262a6c57ffaac910b899fb52d3e3eb inherit pro_attribs_classisae_1_1_s_l_a_m_core"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p>Parallax between the last KF and _frame </p>
+</blockquote>
+ <a href="classisae_1_1_s_l_a_m_core.html#ad0262a6c57ffaac910b899fb52d3e3eb">More...</a><br /></td></tr>
+<tr class="separator:ad0262a6c57ffaac910b899fb52d3e3eb inherit pro_attribs_classisae_1_1_s_l_a_m_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a38f045ef945c97cde0feebeb0ad9fc3a inherit pro_attribs_classisae_1_1_s_l_a_m_core"><td class="memItemLeft" align="right" valign="top">std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#a38f045ef945c97cde0feebeb0ad9fc3a">_map_mutex</a></td></tr>
+<tr class="memdesc:a38f045ef945c97cde0feebeb0ad9fc3a inherit pro_attribs_classisae_1_1_s_l_a_m_core"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p>Current Velocity as a Twist vector </p>
+</blockquote>
+ <a href="classisae_1_1_s_l_a_m_core.html#a38f045ef945c97cde0feebeb0ad9fc3a">More...</a><br /></td></tr>
 <tr class="separator:a38f045ef945c97cde0feebeb0ad9fc3a inherit pro_attribs_classisae_1_1_s_l_a_m_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac26724bbd8a5f479e148ba0c89bce551 inherit pro_attribs_classisae_1_1_s_l_a_m_core"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classisae_1_1_frame.html">Frame</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#ac26724bbd8a5f479e148ba0c89bce551">_frame_to_optim</a></td></tr>
 <tr class="separator:ac26724bbd8a5f479e148ba0c89bce551 inherit pro_attribs_classisae_1_1_s_l_a_m_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad0262a6c57ffaac910b899fb52d3e3eb inherit pro_attribs_classisae_1_1_s_l_a_m_core"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceisae.html#a381cf9a79c09e3831978a493e7a50552">Vector6d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#ad0262a6c57ffaac910b899fb52d3e3eb">_6d_velocity</a></td></tr>
-<tr class="separator:ad0262a6c57ffaac910b899fb52d3e3eb inherit pro_attribs_classisae_1_1_s_l_a_m_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5c4e9ed9200240c6c3169876842606fd inherit pro_attribs_classisae_1_1_s_l_a_m_core"><td class="memItemLeft" align="right" valign="top">uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#a5c4e9ed9200240c6c3169876842606fd">_nframes</a></td></tr>
+<tr class="memdesc:a5c4e9ed9200240c6c3169876842606fd inherit pro_attribs_classisae_1_1_s_l_a_m_core"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p>For communication between front-end and back-end </p>
+</blockquote>
+ <a href="classisae_1_1_s_l_a_m_core.html#a5c4e9ed9200240c6c3169876842606fd">More...</a><br /></td></tr>
 <tr class="separator:a5c4e9ed9200240c6c3169876842606fd inherit pro_attribs_classisae_1_1_s_l_a_m_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a12bf771db26400d29fb14d2635779d88 inherit pro_attribs_classisae_1_1_s_l_a_m_core"><td class="memItemLeft" align="right" valign="top">uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#a12bf771db26400d29fb14d2635779d88">_nkeyframes</a></td></tr>
 <tr class="separator:a12bf771db26400d29fb14d2635779d88 inherit pro_attribs_classisae_1_1_s_l_a_m_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -240,7 +326,9 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:a1cb2b696e843a343df5956622a82074a inherit pro_attribs_classisae_1_1_s_l_a_m_core"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; float &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_core.html#a1cb2b696e843a343df5956622a82074a">_timings_kfrate_be</a></td></tr>
 <tr class="separator:a1cb2b696e843a343df5956622a82074a inherit pro_attribs_classisae_1_1_s_l_a_m_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A SLAM class for monocular + <a class="el" href="classisae_1_1_i_m_u.html" title="An Inertial Measurement Unit (IMU) sensor class.">IMU</a> setups. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aecd42a1e3febe848bd9f79617f8e24fb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aecd42a1e3febe848bd9f79617f8e24fb">&#9670;&nbsp;</a></span>SLAMMonoVIO()</h2>
 
@@ -291,6 +379,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>brief description Back End: marginalization, local map optimization </p>
+
 <p>Implements <a class="el" href="classisae_1_1_s_l_a_m_core.html#aa378dd826e38a3bb5358a261466a97e3">isae::SLAMCore</a>.</p>
 
 </div>
@@ -317,6 +407,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Front End: detection, tracking, pose estimation and landmark triangulation. </p>
 
 <p>Implements <a class="el" href="classisae_1_1_s_l_a_m_core.html#ab97c16d22ca0c3d50c4ef63bcd6c88f7">isae::SLAMCore</a>.</p>
 
@@ -345,6 +437,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Initialization step : create the first 3D landmarks and keyframe(s) </p>
+
 <p>Implements <a class="el" href="classisae_1_1_s_l_a_m_core.html#a87fdc0be9d6042436ff097b375f86b72">isae::SLAMCore</a>.</p>
 
 </div>
@@ -363,6 +457,8 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Initialization steps with bi-monocular only for <a class="el" href="classisae_1_1_i_m_u.html" title="An Inertial Measurement Unit (IMU) sensor class.">IMU</a> initialization. </p>
 
 </div>
 </div>

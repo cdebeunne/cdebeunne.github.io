@@ -34,9 +34,9 @@ Collaboration diagram for isae\+::Line2\+D\+Feature\+Matcher\+:\nopagebreak
 \item 
 \mbox{\hyperlink{classisae_1_1_line2_d_feature_matcher_aa02d4b1f6cfa4e7a5de9ec4aaed0f547}{Line2\+D\+Feature\+Matcher}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature_detector}{A\+Feature\+Detector}} $>$ detector)
 \item 
-uint \mbox{\hyperlink{classisae_1_1_line2_d_feature_matcher_affa35be6319d23d865807ef880eead2a}{match}} (std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$ \&features1, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$ \&features2, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$ \&features\+\_\+init, \mbox{\hyperlink{namespaceisae_ac61c2f881f902dbfef491caaa5135c9c}{vec\+\_\+match}} \&matches, \mbox{\hyperlink{namespaceisae_ac61c2f881f902dbfef491caaa5135c9c}{vec\+\_\+match}} \&matches\+\_\+with\+\_\+ldmks, int search\+Area\+Width=51, int search\+Area\+Height=51) override
+uint \mbox{\hyperlink{classisae_1_1_line2_d_feature_matcher_affa35be6319d23d865807ef880eead2a}{match}} (std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$ \&features1, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$ \&features2, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$ \&features\+\_\+init, \mbox{\hyperlink{namespaceisae_a018dfa0f3c618541bf2674aaefa20d61}{vec\+\_\+match}} \&matches, \mbox{\hyperlink{namespaceisae_a018dfa0f3c618541bf2674aaefa20d61}{vec\+\_\+match}} \&matches\+\_\+with\+\_\+ldmks, int search\+Area\+Width=51, int search\+Area\+Height=51) override
 \begin{DoxyCompactList}\small\item\em Match features between two sets of features. \end{DoxyCompactList}\item 
-uint \mbox{\hyperlink{classisae_1_1_line2_d_feature_matcher_a55027f6dec0c0e54a66c2e4c01728e92}{ldmk\+\_\+match}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_image_sensor}{Image\+Sensor}} $>$ \&sensor1, \mbox{\hyperlink{namespaceisae_a77ff2ade1f4fd13fa30f33c347c0d635}{vec\+\_\+shared}}$<$ \mbox{\hyperlink{classisae_1_1_a_landmark}{A\+Landmark}} $>$ \&ldmks, int search\+Area\+Width=51, int search\+Area\+Height=51) override
+uint \mbox{\hyperlink{classisae_1_1_line2_d_feature_matcher_a2637a5a3cc0b70b7131707579284cccd}{ldmk\+\_\+match}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_image_sensor}{Image\+Sensor}} $>$ \&sensor1, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_landmark}{A\+Landmark}} $>$$>$ \&ldmks, int search\+Area\+Width=51, int search\+Area\+Height=51) override
 \begin{DoxyCompactList}\small\item\em Match landmarks with features in a given sensor. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
@@ -60,11 +60,11 @@ Class for matching 2D line features.
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classisae_1_1_line2_d_feature_matcher_a55027f6dec0c0e54a66c2e4c01728e92}\label{classisae_1_1_line2_d_feature_matcher_a55027f6dec0c0e54a66c2e4c01728e92}} 
+\mbox{\Hypertarget{classisae_1_1_line2_d_feature_matcher_a2637a5a3cc0b70b7131707579284cccd}\label{classisae_1_1_line2_d_feature_matcher_a2637a5a3cc0b70b7131707579284cccd}} 
 \index{isae::Line2DFeatureMatcher@{isae::Line2DFeatureMatcher}!ldmk\_match@{ldmk\_match}}
 \index{ldmk\_match@{ldmk\_match}!isae::Line2DFeatureMatcher@{isae::Line2DFeatureMatcher}}
 \doxysubsubsection{\texorpdfstring{ldmk\_match()}{ldmk\_match()}}
-{\footnotesize\ttfamily uint isae\+::\+Line2\+D\+Feature\+Matcher\+::ldmk\+\_\+match (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_image_sensor}{Image\+Sensor}} $>$ \&}]{sensor1,  }\item[{\mbox{\hyperlink{namespaceisae_a77ff2ade1f4fd13fa30f33c347c0d635}{vec\+\_\+shared}}$<$ \mbox{\hyperlink{classisae_1_1_a_landmark}{A\+Landmark}} $>$ \&}]{ldmks,  }\item[{int}]{search\+Area\+Width = {\ttfamily 51},  }\item[{int}]{search\+Area\+Height = {\ttfamily 51} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily uint isae\+::\+Line2\+D\+Feature\+Matcher\+::ldmk\+\_\+match (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_image_sensor}{Image\+Sensor}} $>$ \&}]{sensor1,  }\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_landmark}{A\+Landmark}} $>$$>$ \&}]{ldmks,  }\item[{int}]{search\+Area\+Width = {\ttfamily 51},  }\item[{int}]{search\+Area\+Height = {\ttfamily 51} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -86,13 +86,13 @@ The number of matched landmarks.
 \end{DoxyReturn}
 
 
-Reimplemented from \mbox{\hyperlink{classisae_1_1_a_feature_matcher_a5ff0e10928bec401e8a720333b0f5eee}{isae\+::\+A\+Feature\+Matcher}}.
+Reimplemented from \mbox{\hyperlink{classisae_1_1_a_feature_matcher_aa443e3facdc351b7e33cc4e1a9bad517}{isae\+::\+A\+Feature\+Matcher}}.
 
 \mbox{\Hypertarget{classisae_1_1_line2_d_feature_matcher_affa35be6319d23d865807ef880eead2a}\label{classisae_1_1_line2_d_feature_matcher_affa35be6319d23d865807ef880eead2a}} 
 \index{isae::Line2DFeatureMatcher@{isae::Line2DFeatureMatcher}!match@{match}}
 \index{match@{match}!isae::Line2DFeatureMatcher@{isae::Line2DFeatureMatcher}}
 \doxysubsubsection{\texorpdfstring{match()}{match()}}
-{\footnotesize\ttfamily uint isae\+::\+Line2\+D\+Feature\+Matcher\+::match (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$ \&}]{features1,  }\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$ \&}]{features2,  }\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$ \&}]{features\+\_\+init,  }\item[{\mbox{\hyperlink{namespaceisae_ac61c2f881f902dbfef491caaa5135c9c}{vec\+\_\+match}} \&}]{matches,  }\item[{\mbox{\hyperlink{namespaceisae_ac61c2f881f902dbfef491caaa5135c9c}{vec\+\_\+match}} \&}]{matches\+\_\+with\+\_\+ldmks,  }\item[{int}]{search\+Area\+Width = {\ttfamily 51},  }\item[{int}]{search\+Area\+Height = {\ttfamily 51} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily uint isae\+::\+Line2\+D\+Feature\+Matcher\+::match (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$ \&}]{features1,  }\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$ \&}]{features2,  }\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$ \&}]{features\+\_\+init,  }\item[{\mbox{\hyperlink{namespaceisae_a018dfa0f3c618541bf2674aaefa20d61}{vec\+\_\+match}} \&}]{matches,  }\item[{\mbox{\hyperlink{namespaceisae_a018dfa0f3c618541bf2674aaefa20d61}{vec\+\_\+match}} \&}]{matches\+\_\+with\+\_\+ldmks,  }\item[{int}]{search\+Area\+Width = {\ttfamily 51},  }\item[{int}]{search\+Area\+Height = {\ttfamily 51} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 

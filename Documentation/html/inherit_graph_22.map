@@ -1,3 +1,5 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classisae_1_1_pose_parameters_block.html" title=" " alt="" coords="5,5,204,32"/>
+<area shape="rect" id="node1" href="$structisae_1_1sensor__config.html" title="Abstract struct of a sensor." alt="" coords="5,31,152,57"/>
+<area shape="rect" id="node2" href="$structisae_1_1cam__config.html" title="Camera configuration." alt="" coords="200,5,332,32"/>
+<area shape="rect" id="node3" href="$structisae_1_1imu__config.html" title="Config strucuture for an IMU." alt="" coords="201,56,331,83"/>
 </map>

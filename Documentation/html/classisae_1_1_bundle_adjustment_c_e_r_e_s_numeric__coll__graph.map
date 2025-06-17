@@ -1,4 +1,4 @@
 <map id="isae::BundleAdjustmentCERESNumeric" name="isae::BundleAdjustmentCERESNumeric">
-<area shape="rect" id="node1" title=" " alt="" coords="5,80,280,107"/>
-<area shape="rect" id="node2" href="$classisae_1_1_a_optimizer.html" title=" " alt="" coords="77,5,208,32"/>
+<area shape="rect" id="node1" title="An optimizer that uses Numeric Cost function for Bundle Adjustment." alt="" coords="5,80,280,107"/>
+<area shape="rect" id="node2" href="$classisae_1_1_a_optimizer.html" title="Abstract class for optimization pipeline based on CERES." alt="" coords="77,5,208,32"/>
 </map>

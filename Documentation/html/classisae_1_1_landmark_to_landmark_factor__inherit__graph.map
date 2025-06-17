@@ -1,4 +1,4 @@
 <map id="isae::LandmarkToLandmarkFactor" name="isae::LandmarkToLandmarkFactor">
-<area shape="rect" id="node1" title=" " alt="" coords="5,95,207,136"/>
+<area shape="rect" id="node1" title="3D relative translation factor between 3D punctual landmarks" alt="" coords="5,95,207,136"/>
 <area shape="rect" id="node2" title=" " alt="" coords="14,5,198,47"/>
 </map>

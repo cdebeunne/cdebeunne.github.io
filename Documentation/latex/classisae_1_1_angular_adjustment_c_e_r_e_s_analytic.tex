@@ -2,6 +2,11 @@
 \label{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic}\index{isae::AngularAdjustmentCERESAnalytic@{isae::AngularAdjustmentCERESAnalytic}}
 
 
+An optimizer that uses Angular Cost function on the unit sphere for Bundle Adjustment and analytical jacobian derivation.  
+
+
+
+
 {\ttfamily \#include $<$Angular\+Adjustment\+C\+E\+R\+E\+S\+Analytic.\+h$>$}
 
 
@@ -22,19 +27,6 @@ Collaboration diagram for isae\+::Angular\+Adjustment\+C\+E\+R\+E\+S\+Analytic\+
 \includegraphics[width=289pt]{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic__coll__graph}
 \end{center}
 \end{figure}
-\doxysubsection*{Classes}
-\begin{DoxyCompactItemize}
-\item 
-class \mbox{\hyperlink{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_1_1_angular_err_ceres__linexd__dx}{Angular\+Err\+Ceres\+\_\+linexd\+\_\+dx}}
-\item 
-class \mbox{\hyperlink{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_1_1_angular_err_ceres__pointxd__depth}{Angular\+Err\+Ceres\+\_\+pointxd\+\_\+depth}}
-\item 
-class \mbox{\hyperlink{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_1_1_angular_err_ceres__pointxd__dx}{Angular\+Err\+Ceres\+\_\+pointxd\+\_\+dx}}
-\item 
-class \mbox{\hyperlink{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_1_1_angular_error_scale_cam0}{Angular\+Error\+Scale\+Cam0}}
-\item 
-class \mbox{\hyperlink{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_1_1_angular_error_scale_depth}{Angular\+Error\+Scale\+Depth}}
-\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -43,24 +35,27 @@ class \mbox{\hyperlink{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_1_1_a
 \mbox{\hyperlink{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_a69fd33a7b5a3010a58739606921a57d2}{$\sim$\+Angular\+Adjustment\+C\+E\+R\+E\+S\+Analytic}} ()=default
 \item 
 virtual bool \mbox{\hyperlink{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_ac25d688767a95ceea6b1d224c4451cdd}{marginalize}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&frame0, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&frame1, bool enable\+\_\+sparsif) override
-\item 
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classisae_1_1_marginalization}{Marginalization}} of a frame and its landmarks. \end{DoxyCompactList}\item 
 virtual Eigen\+::\+Matrix\+Xd \mbox{\hyperlink{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_a8ba91de25b2f5d5fff2612b82c8168ff}{marginalize\+Relative}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&frame0, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&frame1) override
-\item 
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classisae_1_1_marginalization}{Marginalization}} of all the landmarks linked to two frame and computation of the information matrix of the relative pose. \end{DoxyCompactList}\item 
 virtual bool \mbox{\hyperlink{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_aadce5fdf2492782169622579cb3574d0}{landmark\+Optimization\+No\+Fov}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&f, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&fp, Eigen\+::\+Affine3d \&T\+\_\+cam0\+\_\+cam0p, double info\+\_\+scale) override
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Structure only Bundle Adjustment for a frame with non overlapping fields of view sensors. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 uint \mbox{\hyperlink{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_a5f716c2a2cf4becdb99bdb6c34d606e3}{add\+Residuals\+Local\+Map}} (ceres\+::\+Problem \&problem, ceres\+::\+Loss\+Function $\ast$loss\+\_\+function, ceres\+::\+Parameter\+Block\+Ordering $\ast$ordering, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$$>$ \&frame\+\_\+vector, size\+\_\+t fixed\+\_\+frame\+\_\+number, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_local_map}{isae\+::\+Local\+Map}} $>$ \&local\+\_\+map) override
-\item 
+\begin{DoxyCompactList}\small\item\em Add visual residuals to a C\+E\+R\+ES problem for a local map. \end{DoxyCompactList}\item 
 uint \mbox{\hyperlink{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_af3fb18984ee9f4a0d4bbc291358ef2a3}{add\+Single\+Frame\+Residuals}} (ceres\+::\+Problem \&problem, ceres\+::\+Loss\+Function $\ast$loss\+\_\+function, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&frame, \mbox{\hyperlink{namespaceisae_a4b744e0e080a733838eb133deda894aa}{typed\+\_\+vec\+\_\+landmarks}} \&cloud\+\_\+to\+\_\+optimize) override
-\item 
+\begin{DoxyCompactList}\small\item\em Add visual residuals to a C\+E\+R\+ES problem for a motion only BA. \end{DoxyCompactList}\item 
 uint \mbox{\hyperlink{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_abff839c4c8fdcf5b1818e1a08759c570}{add\+Landmark\+Residuals}} (ceres\+::\+Problem \&problem, ceres\+::\+Loss\+Function $\ast$loss\+\_\+function, \mbox{\hyperlink{namespaceisae_a4b744e0e080a733838eb133deda894aa}{typed\+\_\+vec\+\_\+landmarks}} \&cloud\+\_\+to\+\_\+optimize) override
-\item 
+\begin{DoxyCompactList}\small\item\em Add visual residuals to a C\+E\+R\+ES problem for structure only BA. \end{DoxyCompactList}\item 
 uint \mbox{\hyperlink{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_a312119c24d1e5999447cdd57a5ed6e99}{add\+Marginalization\+Residuals}} (ceres\+::\+Problem \&problem, ceres\+::\+Loss\+Function $\ast$loss\+\_\+function, ceres\+::\+Parameter\+Block\+Ordering $\ast$ordering) override
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Add marginalization residuals to a C\+E\+R\+ES problem. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
+
+\doxysubsection{Detailed Description}
+An optimizer that uses Angular Cost function on the unit sphere for Bundle Adjustment and analytical jacobian derivation. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_a73859278f85449e13c82727a473a46ae}\label{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_a73859278f85449e13c82727a473a46ae}} 
@@ -86,6 +81,22 @@ uint \mbox{\hyperlink{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_a31211
 
 
 
+Add visual residuals to a C\+E\+R\+ES problem for structure only BA. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em problem} & The C\+E\+R\+ES problem to which the residuals will be added. \\
+\hline
+{\em loss\+\_\+function} & The loss function to be used for the residuals. \\
+\hline
+{\em cloud\+\_\+to\+\_\+optimize} & The landmarks to be optimized. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of residuals added. 
+\end{DoxyReturn}
+
+
 Implements \mbox{\hyperlink{classisae_1_1_a_optimizer_ab200573dfb0edebe7b2628e28f9cefef}{isae\+::\+A\+Optimizer}}.
 
 \mbox{\Hypertarget{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_a312119c24d1e5999447cdd57a5ed6e99}\label{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_a312119c24d1e5999447cdd57a5ed6e99}} 
@@ -94,6 +105,22 @@ Implements \mbox{\hyperlink{classisae_1_1_a_optimizer_ab200573dfb0edebe7b2628e28
 \doxysubsubsection{\texorpdfstring{addMarginalizationResiduals()}{addMarginalizationResiduals()}}
 {\footnotesize\ttfamily uint isae\+::\+Angular\+Adjustment\+C\+E\+R\+E\+S\+Analytic\+::add\+Marginalization\+Residuals (\begin{DoxyParamCaption}\item[{ceres\+::\+Problem \&}]{problem,  }\item[{ceres\+::\+Loss\+Function $\ast$}]{loss\+\_\+function,  }\item[{ceres\+::\+Parameter\+Block\+Ordering $\ast$}]{ordering }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
 
+
+
+Add marginalization residuals to a C\+E\+R\+ES problem. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em problem} & The C\+E\+R\+ES problem to which the residuals will be added. \\
+\hline
+{\em loss\+\_\+function} & The loss function to be used for the residuals. \\
+\hline
+{\em ordering} & The parameter block ordering for the problem. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of marginalization residuals added. 
+\end{DoxyReturn}
 C\+A\+SE 1 V\+IO ///
 
 C\+A\+SE 2 VO ///
@@ -108,6 +135,28 @@ Reimplemented from \mbox{\hyperlink{classisae_1_1_a_optimizer_a61bad18320dd6d086
 
 
 
+Add visual residuals to a C\+E\+R\+ES problem for a local map. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em problem} & The C\+E\+R\+ES problem to which the residuals will be added. \\
+\hline
+{\em loss\+\_\+function} & The loss function to be used for the residuals. \\
+\hline
+{\em ordering} & The parameter block ordering for the problem. \\
+\hline
+{\em frame\+\_\+vector} & The vector of frames in the local map. \\
+\hline
+{\em fixed\+\_\+frame\+\_\+number} & The number of frames to fix during optimization. \\
+\hline
+{\em local\+\_\+map} & The local map to which the residuals will be added. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of residuals added. 
+\end{DoxyReturn}
+
+
 Implements \mbox{\hyperlink{classisae_1_1_a_optimizer_ab4a33aa6977b4d88e7fd3da45f496975}{isae\+::\+A\+Optimizer}}.
 
 \mbox{\Hypertarget{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_af3fb18984ee9f4a0d4bbc291358ef2a3}\label{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_af3fb18984ee9f4a0d4bbc291358ef2a3}} 
@@ -116,6 +165,24 @@ Implements \mbox{\hyperlink{classisae_1_1_a_optimizer_ab4a33aa6977b4d88e7fd3da45
 \doxysubsubsection{\texorpdfstring{addSingleFrameResiduals()}{addSingleFrameResiduals()}}
 {\footnotesize\ttfamily uint isae\+::\+Angular\+Adjustment\+C\+E\+R\+E\+S\+Analytic\+::add\+Single\+Frame\+Residuals (\begin{DoxyParamCaption}\item[{ceres\+::\+Problem \&}]{problem,  }\item[{ceres\+::\+Loss\+Function $\ast$}]{loss\+\_\+function,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&}]{frame,  }\item[{\mbox{\hyperlink{namespaceisae_a4b744e0e080a733838eb133deda894aa}{typed\+\_\+vec\+\_\+landmarks}} \&}]{cloud\+\_\+to\+\_\+optimize }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
 
+
+
+Add visual residuals to a C\+E\+R\+ES problem for a motion only BA. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em problem} & The C\+E\+R\+ES problem to which the residuals will be added. \\
+\hline
+{\em loss\+\_\+function} & The loss function to be used for the residuals. \\
+\hline
+{\em frame} & The frame to which the residuals will be added. \\
+\hline
+{\em cloud\+\_\+to\+\_\+optimize} & The landmarks belonging to the frame. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of residuals added. 
+\end{DoxyReturn}
 
 
 Implements \mbox{\hyperlink{classisae_1_1_a_optimizer_a06ac6ce2c1121790ad7b28ae0c36de78}{isae\+::\+A\+Optimizer}}.
@@ -128,6 +195,21 @@ Implements \mbox{\hyperlink{classisae_1_1_a_optimizer_a06ac6ce2c1121790ad7b28ae0
 
 
 
+Structure only Bundle Adjustment for a frame with non overlapping fields of view sensors. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & The frame to optimize. \\
+\hline
+{\em fp} & The previous frame to optimize. \\
+\hline
+{\em T\+\_\+cam0\+\_\+cam0p} & The transformation from the current frame to the previous frame. \\
+\hline
+{\em info\+\_\+scale} & The scale factor for the information matrix. \\
+\hline
+\end{DoxyParams}
+
+
 Reimplemented from \mbox{\hyperlink{classisae_1_1_a_optimizer_af5aece35985878a1af6989dc47c799e8}{isae\+::\+A\+Optimizer}}.
 
 \mbox{\Hypertarget{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_ac25d688767a95ceea6b1d224c4451cdd}\label{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_ac25d688767a95ceea6b1d224c4451cdd}} 
@@ -138,6 +220,19 @@ Reimplemented from \mbox{\hyperlink{classisae_1_1_a_optimizer_af5aece35985878a1a
 
 
 
+\mbox{\hyperlink{classisae_1_1_marginalization}{Marginalization}} of a frame and its landmarks. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em frame0} & The frame to marginalize. \\
+\hline
+{\em frame1} & The frame to keep connected to frame0. \\
+\hline
+{\em enable\+\_\+sparsif} & Whether to enable sparsification (default is false).\\
+\hline
+\end{DoxyParams}
+Perform all the marginalization steps for a given frame. A marginalization object deals with all these steps 
+
 Reimplemented from \mbox{\hyperlink{classisae_1_1_a_optimizer_a009b26589c47e46be1b722c9824361ec}{isae\+::\+A\+Optimizer}}.
 
 \mbox{\Hypertarget{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_a8ba91de25b2f5d5fff2612b82c8168ff}\label{classisae_1_1_angular_adjustment_c_e_r_e_s_analytic_a8ba91de25b2f5d5fff2612b82c8168ff}} 
@@ -147,6 +242,20 @@ Reimplemented from \mbox{\hyperlink{classisae_1_1_a_optimizer_a009b26589c47e46be
 {\footnotesize\ttfamily Eigen\+::\+Matrix\+Xd isae\+::\+Angular\+Adjustment\+C\+E\+R\+E\+S\+Analytic\+::marginalize\+Relative (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&}]{frame0,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&}]{frame1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
+
+\mbox{\hyperlink{classisae_1_1_marginalization}{Marginalization}} of all the landmarks linked to two frame and computation of the information matrix of the relative pose. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em frame0} & The first frame to marginalize. \\
+\hline
+{\em frame1} & The second frame to marginalize. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The information matrix of the relative pose between frame0 and frame1.
+\end{DoxyReturn}
+This method computes the information matrix of the relative pose between two frames and marginalizes the landmarks linked to them. It uses N\+FR to extract a relative pose factor and to derive its information matrix. 
 
 Reimplemented from \mbox{\hyperlink{classisae_1_1_a_optimizer_ad6985d97b625025955ed106ed2195f23}{isae\+::\+A\+Optimizer}}.
 

@@ -2,6 +2,11 @@
 \label{classisae_1_1_line3_d_landmark_initializer}\index{isae::Line3DLandmarkInitializer@{isae::Line3DLandmarkInitializer}}
 
 
+Class for initializing 3D line landmarks.  
+
+
+
+
 {\ttfamily \#include $<$Line3\+Dlandmark\+Initializer.\+h$>$}
 
 
@@ -25,15 +30,15 @@ Collaboration diagram for isae\+::Line3\+D\+Landmark\+Initializer\+:\nopagebreak
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classisae_1_1_line3_d_landmark_initializer_a50f31b006c3e5c2d4f7bc0266e7b81a1}{Line3\+D\+Landmark\+Initializer}} (uint nb\+\_\+requiered\+\_\+ldmk)
+\mbox{\hyperlink{classisae_1_1_line3_d_landmark_initializer_a72c294b9f25e54600b719083dfe378cc}{Line3\+D\+Landmark\+Initializer}} ()=default
 \end{DoxyCompactItemize}
 \doxysubsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 bool \mbox{\hyperlink{classisae_1_1_line3_d_landmark_initializer_aac7da7796b2034f4f6d36fb1bc95a3e8}{init\+Landmark}} (std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$ features, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_landmark}{A\+Landmark}} $>$ \&landmark) override
-\item 
+\begin{DoxyCompactList}\small\item\em Initialize a landmark from a set of features. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classisae_1_1_line3_d_landmark_initializer_a0539eea96575803681a4f1c399dcba46}{init\+Landmark\+With\+Depth}} (std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$$>$ features, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_landmark}{A\+Landmark}} $>$ \&landmark) override
-\item 
+\begin{DoxyCompactList}\small\item\em Initialize a landmark from a set of features with depth information. \end{DoxyCompactList}\item 
 std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_landmark}{A\+Landmark}} $>$ \mbox{\hyperlink{classisae_1_1_line3_d_landmark_initializer_aa9a109ea766a7d6067491f48b59d14c9}{create\+New\+Landmark}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$ f) override
 \end{DoxyCompactItemize}
 \doxysubsection*{Static Protected Member Functions}
@@ -45,15 +50,17 @@ static Eigen\+::\+Vector3d \mbox{\hyperlink{classisae_1_1_line3_d_landmark_initi
 \item 
 static void \mbox{\hyperlink{classisae_1_1_line3_d_landmark_initializer_a225ddf3a1b12c7ccc455e28054cbfbc1}{process\+Segment\+Points}} (Eigen\+::\+Vector3d position, Eigen\+::\+Vector3d direction, std\+::vector$<$ Eigen\+::\+Vector3d $>$ Os, std\+::vector$<$ Eigen\+::\+Vector3d $>$ rays\+\_\+s, std\+::vector$<$ Eigen\+::\+Vector3d $>$ rays\+\_\+e, Eigen\+::\+Vector3d \&start, Eigen\+::\+Vector3d \&end)
 \end{DoxyCompactItemize}
-\doxysubsection*{Additional Inherited Members}
 
+
+\doxysubsection{Detailed Description}
+Class for initializing 3D line landmarks. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classisae_1_1_line3_d_landmark_initializer_a50f31b006c3e5c2d4f7bc0266e7b81a1}\label{classisae_1_1_line3_d_landmark_initializer_a50f31b006c3e5c2d4f7bc0266e7b81a1}} 
+\mbox{\Hypertarget{classisae_1_1_line3_d_landmark_initializer_a72c294b9f25e54600b719083dfe378cc}\label{classisae_1_1_line3_d_landmark_initializer_a72c294b9f25e54600b719083dfe378cc}} 
 \index{isae::Line3DLandmarkInitializer@{isae::Line3DLandmarkInitializer}!Line3DLandmarkInitializer@{Line3DLandmarkInitializer}}
 \index{Line3DLandmarkInitializer@{Line3DLandmarkInitializer}!isae::Line3DLandmarkInitializer@{isae::Line3DLandmarkInitializer}}
 \doxysubsubsection{\texorpdfstring{Line3DLandmarkInitializer()}{Line3DLandmarkInitializer()}}
-{\footnotesize\ttfamily isae\+::\+Line3\+D\+Landmark\+Initializer\+::\+Line3\+D\+Landmark\+Initializer (\begin{DoxyParamCaption}\item[{uint}]{nb\+\_\+requiered\+\_\+ldmk }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily isae\+::\+Line3\+D\+Landmark\+Initializer\+::\+Line3\+D\+Landmark\+Initializer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
 
 
 
@@ -66,7 +73,7 @@ static void \mbox{\hyperlink{classisae_1_1_line3_d_landmark_initializer_a225ddf3
 
 
 
-Implements \mbox{\hyperlink{classisae_1_1_a_landmark_initializer}{isae\+::\+A\+Landmark\+Initializer}}.
+Implements \mbox{\hyperlink{classisae_1_1_a_landmark_initializer_a173e502dd5417437013b275b733a1d0a}{isae\+::\+A\+Landmark\+Initializer}}.
 
 \mbox{\Hypertarget{classisae_1_1_line3_d_landmark_initializer_aac7da7796b2034f4f6d36fb1bc95a3e8}\label{classisae_1_1_line3_d_landmark_initializer_aac7da7796b2034f4f6d36fb1bc95a3e8}} 
 \index{isae::Line3DLandmarkInitializer@{isae::Line3DLandmarkInitializer}!initLandmark@{initLandmark}}
@@ -76,7 +83,21 @@ Implements \mbox{\hyperlink{classisae_1_1_a_landmark_initializer}{isae\+::\+A\+L
 
 
 
-Implements \mbox{\hyperlink{classisae_1_1_a_landmark_initializer}{isae\+::\+A\+Landmark\+Initializer}}.
+Initialize a landmark from a set of features. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em features} & A vector of features. \\
+\hline
+{\em landmark} & A shared pointer to the landmark to be initialized. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the landmark was successfully initialized, false otherwise. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classisae_1_1_a_landmark_initializer_a30140cfc14757d3fd4370c7193a75855}{isae\+::\+A\+Landmark\+Initializer}}.
 
 \mbox{\Hypertarget{classisae_1_1_line3_d_landmark_initializer_a0539eea96575803681a4f1c399dcba46}\label{classisae_1_1_line3_d_landmark_initializer_a0539eea96575803681a4f1c399dcba46}} 
 \index{isae::Line3DLandmarkInitializer@{isae::Line3DLandmarkInitializer}!initLandmarkWithDepth@{initLandmarkWithDepth}}
@@ -86,7 +107,21 @@ Implements \mbox{\hyperlink{classisae_1_1_a_landmark_initializer}{isae\+::\+A\+L
 
 
 
-Implements \mbox{\hyperlink{classisae_1_1_a_landmark_initializer}{isae\+::\+A\+Landmark\+Initializer}}.
+Initialize a landmark from a set of features with depth information. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em features} & A vector of features. \\
+\hline
+{\em landmark} & A shared pointer to the landmark to be initialized. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the landmark was successfully initialized with depth, false otherwise. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classisae_1_1_a_landmark_initializer_a51ff8f1380bac34586c4ce7fbd0e7f0d}{isae\+::\+A\+Landmark\+Initializer}}.
 
 \mbox{\Hypertarget{classisae_1_1_line3_d_landmark_initializer_af67679da2e3123d74b7208b9413536a5}\label{classisae_1_1_line3_d_landmark_initializer_af67679da2e3123d74b7208b9413536a5}} 
 \index{isae::Line3DLandmarkInitializer@{isae::Line3DLandmarkInitializer}!processOrientation@{processOrientation}}

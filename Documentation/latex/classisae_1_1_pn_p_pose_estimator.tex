@@ -30,9 +30,9 @@ Collaboration diagram for isae\+::Pn\+P\+Pose\+Estimator\+:\nopagebreak
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-bool \mbox{\hyperlink{classisae_1_1_pn_p_pose_estimator_a6f709bb548fb67cbe58fda2d332f5f4e}{estimate\+Transform\+Between}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&frame1, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&frame2, \mbox{\hyperlink{namespaceisae_ac61c2f881f902dbfef491caaa5135c9c}{vec\+\_\+match}} \&matches, Eigen\+::\+Affine3d \&dT, Eigen\+::\+Matrix\+Xd \&covdT) override
+bool \mbox{\hyperlink{classisae_1_1_pn_p_pose_estimator_a6f709bb548fb67cbe58fda2d332f5f4e}{estimate\+Transform\+Between}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&frame1, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&frame2, \mbox{\hyperlink{namespaceisae_a018dfa0f3c618541bf2674aaefa20d61}{vec\+\_\+match}} \&matches, Eigen\+::\+Affine3d \&dT, Eigen\+::\+Matrix\+Xd \&covdT) override
 \item 
-bool \mbox{\hyperlink{classisae_1_1_pn_p_pose_estimator_a5788750162991c248749a352dfdeab88}{estimate\+Transform\+Between}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&frame1, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&frame2, \mbox{\hyperlink{namespaceisae_a70bf0a9838eb50b6a3fe2be9b79e25be}{typed\+\_\+vec\+\_\+match}} \&typed\+\_\+matches, Eigen\+::\+Affine3d \&dT, Eigen\+::\+Matrix\+Xd \&covdT) override
+bool \mbox{\hyperlink{classisae_1_1_pn_p_pose_estimator_a5788750162991c248749a352dfdeab88}{estimate\+Transform\+Between}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&frame1, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&frame2, \mbox{\hyperlink{namespaceisae_a5d24f9da33ed2238fec0ac3f04cc8da5}{typed\+\_\+vec\+\_\+match}} \&typed\+\_\+matches, Eigen\+::\+Affine3d \&dT, Eigen\+::\+Matrix\+Xd \&covdT) override
 \end{DoxyCompactItemize}
 
 
@@ -46,7 +46,7 @@ The estimation is done by using the PnP algorithm on the matches between the two
 \index{isae::PnPPoseEstimator@{isae::PnPPoseEstimator}!estimateTransformBetween@{estimateTransformBetween}}
 \index{estimateTransformBetween@{estimateTransformBetween}!isae::PnPPoseEstimator@{isae::PnPPoseEstimator}}
 \doxysubsubsection{\texorpdfstring{estimateTransformBetween()}{estimateTransformBetween()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily bool isae\+::\+Pn\+P\+Pose\+Estimator\+::estimate\+Transform\+Between (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&}]{frame1,  }\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&}]{frame2,  }\item[{\mbox{\hyperlink{namespaceisae_a70bf0a9838eb50b6a3fe2be9b79e25be}{typed\+\_\+vec\+\_\+match}} \&}]{typed\+\_\+matches,  }\item[{Eigen\+::\+Affine3d \&}]{dT,  }\item[{Eigen\+::\+Matrix\+Xd \&}]{covdT }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily bool isae\+::\+Pn\+P\+Pose\+Estimator\+::estimate\+Transform\+Between (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&}]{frame1,  }\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&}]{frame2,  }\item[{\mbox{\hyperlink{namespaceisae_a5d24f9da33ed2238fec0ac3f04cc8da5}{typed\+\_\+vec\+\_\+match}} \&}]{typed\+\_\+matches,  }\item[{Eigen\+::\+Affine3d \&}]{dT,  }\item[{Eigen\+::\+Matrix\+Xd \&}]{covdT }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -56,7 +56,7 @@ Implements \mbox{\hyperlink{classisae_1_1_a_pose_estimator_abde86e1cab23cdcabf36
 \index{isae::PnPPoseEstimator@{isae::PnPPoseEstimator}!estimateTransformBetween@{estimateTransformBetween}}
 \index{estimateTransformBetween@{estimateTransformBetween}!isae::PnPPoseEstimator@{isae::PnPPoseEstimator}}
 \doxysubsubsection{\texorpdfstring{estimateTransformBetween()}{estimateTransformBetween()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily bool isae\+::\+Pn\+P\+Pose\+Estimator\+::estimate\+Transform\+Between (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&}]{frame1,  }\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&}]{frame2,  }\item[{\mbox{\hyperlink{namespaceisae_ac61c2f881f902dbfef491caaa5135c9c}{vec\+\_\+match}} \&}]{matches,  }\item[{Eigen\+::\+Affine3d \&}]{dT,  }\item[{Eigen\+::\+Matrix\+Xd \&}]{covdT }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily bool isae\+::\+Pn\+P\+Pose\+Estimator\+::estimate\+Transform\+Between (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&}]{frame1,  }\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \&}]{frame2,  }\item[{\mbox{\hyperlink{namespaceisae_a018dfa0f3c618541bf2674aaefa20d61}{vec\+\_\+match}} \&}]{matches,  }\item[{Eigen\+::\+Affine3d \&}]{dT,  }\item[{Eigen\+::\+Matrix\+Xd \&}]{covdT }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 

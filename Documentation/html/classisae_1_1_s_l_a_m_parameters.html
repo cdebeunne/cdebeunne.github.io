@@ -74,14 +74,17 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>A class that gathers most of the algorithmic blocks of the SLAM system that can be setup in the config file.  
+ <a href="classisae_1_1_s_l_a_m_parameters.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="slam_parameters_8h_source.html">slamParameters.h</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for isae::SLAMParameters:</div>
 <div class="dyncontent">
 <div class="center"><img src="classisae_1_1_s_l_a_m_parameters__coll__graph.png" border="0" usemap="#isae_1_1_s_l_a_m_parameters_coll__map" alt="Collaboration graph"/></div>
 <map name="isae_1_1_s_l_a_m_parameters_coll__map" id="isae_1_1_s_l_a_m_parameters_coll__map">
-<area shape="rect" title=" " alt="" coords="5,95,175,121"/>
-<area shape="rect" href="structisae_1_1_config.html" title=" " alt="" coords="41,5,139,32"/>
+<area shape="rect" title="A class that gathers most of the algorithmic blocks of the SLAM system that can be setup in the confi..." alt="" coords="5,95,175,121"/>
+<area shape="rect" href="structisae_1_1_config.html" title="This structure contains the configuration parameters located in the config file." alt="" coords="41,5,139,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -105,13 +108,18 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a004d5533484911160578ead162778de0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a31427cb7d9ced07af2824c3bff823f80"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classisae_1_1_a_optimizer.html">AOptimizer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_parameters.html#a31427cb7d9ced07af2824c3bff823f80">getOptimizerBack</a> ()</td></tr>
 <tr class="separator:a31427cb7d9ced07af2824c3bff823f80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac14e30a6ab6020a317c7064c5f46b570"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_parameters.html#ac14e30a6ab6020a317c7064c5f46b570">readConfigFile</a> (const std::string &amp;path_config_folder)</td></tr>
+<tr class="separator:ac14e30a6ab6020a317c7064c5f46b570"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a8c95d65757a932415d20e0e805256098"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structisae_1_1_config.html">isae::Config</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_parameters.html#a8c95d65757a932415d20e0e805256098">_config</a></td></tr>
-<tr class="separator:a8c95d65757a932415d20e0e805256098"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e417bebdb5a08974f94868a8d33cf53"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structisae_1_1_config.html">Config</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_s_l_a_m_parameters.html#a2e417bebdb5a08974f94868a8d33cf53">_config</a></td></tr>
+<tr class="separator:a2e417bebdb5a08974f94868a8d33cf53"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A class that gathers most of the algorithmic blocks of the SLAM system that can be setup in the config file. </p>
+<p>Some attributes are sets as unordered map because these depends on the feature type (e.g. matcher, detector...). Then the proper blocks can be called using the feature label. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a69f6583a607f2feeff71ea4f38658bb9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a69f6583a607f2feeff71ea4f38658bb9">&#9670;&nbsp;</a></span>SLAMParameters()</h2>
 
@@ -331,15 +339,33 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="a8c95d65757a932415d20e0e805256098"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8c95d65757a932415d20e0e805256098">&#9670;&nbsp;</a></span>_config</h2>
+<a id="ac14e30a6ab6020a317c7064c5f46b570"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac14e30a6ab6020a317c7064c5f46b570">&#9670;&nbsp;</a></span>readConfigFile()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structisae_1_1_config.html">isae::Config</a> isae::SLAMParameters::_config</td>
+          <td class="memname">void isae::SLAMParameters::readConfigFile </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>path_config_folder</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a2e417bebdb5a08974f94868a8d33cf53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e417bebdb5a08974f94868a8d33cf53">&#9670;&nbsp;</a></span>_config</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structisae_1_1_config.html">Config</a> isae::SLAMParameters::_config</td>
         </tr>
       </table>
 </div><div class="memdoc">

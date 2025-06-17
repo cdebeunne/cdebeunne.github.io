@@ -74,35 +74,48 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p><a class="el" href="classisae_1_1_marginalization.html" title="Marginalization class that handles marginalization (and sparsification) for fixed-lag smoothing.">Marginalization</a> class that handles marginalization (and sparsification) for fixed-lag smoothing.  
+ <a href="classisae_1_1_marginalization.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="marginalization_8hpp_source.html">marginalization.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:acd138d7d0fad8fe0eb2f5b3d6178cc60"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_marginalization.html#acd138d7d0fad8fe0eb2f5b3d6178cc60">preMarginalize</a> (std::shared_ptr&lt; <a class="el" href="classisae_1_1_frame.html">Frame</a> &gt; &amp;frame0, std::shared_ptr&lt; <a class="el" href="classisae_1_1_frame.html">Frame</a> &gt; &amp;frame1, std::shared_ptr&lt; <a class="el" href="classisae_1_1_marginalization.html">Marginalization</a> &gt; &amp;marginalization_last)</td></tr>
+<tr class="memdesc:acd138d7d0fad8fe0eb2f5b3d6178cc60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Select all the variables to keep and to marginalize in the Markov Blanket for fixed lag smoothing.  <a href="classisae_1_1_marginalization.html#acd138d7d0fad8fe0eb2f5b3d6178cc60">More...</a><br /></td></tr>
 <tr class="separator:acd138d7d0fad8fe0eb2f5b3d6178cc60"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2123a5bdbcf4684790c2e103c9b47cd9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_marginalization.html#a2123a5bdbcf4684790c2e103c9b47cd9">preMarginalizeRelative</a> (std::shared_ptr&lt; <a class="el" href="classisae_1_1_frame.html">Frame</a> &gt; &amp;frame0, std::shared_ptr&lt; <a class="el" href="classisae_1_1_frame.html">Frame</a> &gt; &amp;frame1)</td></tr>
+<tr class="memdesc:a2123a5bdbcf4684790c2e103c9b47cd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Select all the variables to keep and marginalize to derive the relative pose factor between two frames.  <a href="classisae_1_1_marginalization.html#a2123a5bdbcf4684790c2e103c9b47cd9">More...</a><br /></td></tr>
 <tr class="separator:a2123a5bdbcf4684790c2e103c9b47cd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2453ce54f9cdf7361d541f938ed5ec0d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_marginalization.html#a2453ce54f9cdf7361d541f938ed5ec0d">addMarginalizationBlock</a> (std::shared_ptr&lt; <a class="el" href="structisae_1_1_marginalization_block_info.html">MarginalizationBlockInfo</a> &gt; marginalization_block)</td></tr>
-<tr class="separator:a2453ce54f9cdf7361d541f938ed5ec0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a33e8b408c886823385e2d4ff75d681db"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_marginalization.html#a33e8b408c886823385e2d4ff75d681db">sparsifyVIO</a> ()</td></tr>
+<tr class="memdesc:a33e8b408c886823385e2d4ff75d681db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sparsify the dense prior factor in the VIO case.  <a href="classisae_1_1_marginalization.html#a33e8b408c886823385e2d4ff75d681db">More...</a><br /></td></tr>
 <tr class="separator:a33e8b408c886823385e2d4ff75d681db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acae6b1b8caabcaf3dadd874aeb03585b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_marginalization.html#acae6b1b8caabcaf3dadd874aeb03585b">sparsifyVO</a> ()</td></tr>
+<tr class="memdesc:acae6b1b8caabcaf3dadd874aeb03585b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sparsify the dense prior factor in the VO case.  <a href="classisae_1_1_marginalization.html#acae6b1b8caabcaf3dadd874aeb03585b">More...</a><br /></td></tr>
 <tr class="separator:acae6b1b8caabcaf3dadd874aeb03585b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a320b8f5a3afd8aee001909d16d74d4d2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_marginalization.html#a320b8f5a3afd8aee001909d16d74d4d2">computeInformationAndGradient</a> (std::vector&lt; std::shared_ptr&lt; <a class="el" href="structisae_1_1_marginalization_block_info.html">MarginalizationBlockInfo</a> &gt;&gt; blocks, Eigen::MatrixXd &amp;A, Eigen::VectorXd &amp;b)</td></tr>
+<tr class="memdesc:a320b8f5a3afd8aee001909d16d74d4d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the information matrix and the gradient for a set of factors.  <a href="classisae_1_1_marginalization.html#a320b8f5a3afd8aee001909d16d74d4d2">More...</a><br /></td></tr>
 <tr class="separator:a320b8f5a3afd8aee001909d16d74d4d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8304e2b3aa3f0f3da3ffecbbd0b0bf7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_marginalization.html#ad8304e2b3aa3f0f3da3ffecbbd0b0bf7">rankReveallingDecomposition</a> (Eigen::MatrixXd A, Eigen::MatrixXd &amp;U, Eigen::VectorXd &amp;d)</td></tr>
+<tr class="memdesc:ad8304e2b3aa3f0f3da3ffecbbd0b0bf7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the SVD of a given matrix to reveal its rank.  <a href="classisae_1_1_marginalization.html#ad8304e2b3aa3f0f3da3ffecbbd0b0bf7">More...</a><br /></td></tr>
 <tr class="separator:ad8304e2b3aa3f0f3da3ffecbbd0b0bf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad7e4c7a85f72fbc22a57788831f785a5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_marginalization.html#ad7e4c7a85f72fbc22a57788831f785a5">computeSchurComplement</a> ()</td></tr>
+<tr class="memdesc:ad7e4c7a85f72fbc22a57788831f785a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the dense prior with the Schur complement on _Ak.  <a href="classisae_1_1_marginalization.html#ad7e4c7a85f72fbc22a57788831f785a5">More...</a><br /></td></tr>
 <tr class="separator:ad7e4c7a85f72fbc22a57788831f785a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf14f1ba8d991053500ecabe070153e6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_marginalization.html#adf14f1ba8d991053500ecabe070153e6">computeJacobiansAndResiduals</a> ()</td></tr>
+<tr class="memdesc:adf14f1ba8d991053500ecabe070153e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the jacobian and the residual of the dense prior factor.  <a href="classisae_1_1_marginalization.html#adf14f1ba8d991053500ecabe070153e6">More...</a><br /></td></tr>
 <tr class="separator:adf14f1ba8d991053500ecabe070153e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ad7242cf2161f5eb9a241898e8f3119"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_marginalization.html#a4ad7242cf2161f5eb9a241898e8f3119">computeEntropy</a> (std::shared_ptr&lt; <a class="el" href="classisae_1_1_a_landmark.html">ALandmark</a> &gt; lmk)</td></tr>
+<tr class="memdesc:a4ad7242cf2161f5eb9a241898e8f3119"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the Entropy of a given landmark.  <a href="classisae_1_1_marginalization.html#a4ad7242cf2161f5eb9a241898e8f3119">More...</a><br /></td></tr>
 <tr class="separator:a4ad7242cf2161f5eb9a241898e8f3119"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a94bd1c1c456e7f73fe4b0b81f12431ca"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_marginalization.html#a94bd1c1c456e7f73fe4b0b81f12431ca">computeMutualInformation</a> (std::shared_ptr&lt; <a class="el" href="classisae_1_1_a_landmark.html">ALandmark</a> &gt; lmk_i, std::shared_ptr&lt; <a class="el" href="classisae_1_1_a_landmark.html">ALandmark</a> &gt; lmk_j)</td></tr>
+<tr class="memdesc:a94bd1c1c456e7f73fe4b0b81f12431ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the Mutual Information between two landmarks.  <a href="classisae_1_1_marginalization.html#a94bd1c1c456e7f73fe4b0b81f12431ca">More...</a><br /></td></tr>
 <tr class="separator:a94bd1c1c456e7f73fe4b0b81f12431ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a430a7a0c88d74c07886349f49a2547a3"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_marginalization.html#a430a7a0c88d74c07886349f49a2547a3">computeOffDiag</a> (std::shared_ptr&lt; <a class="el" href="classisae_1_1_a_landmark.html">ALandmark</a> &gt; lmk_i, std::shared_ptr&lt; <a class="el" href="classisae_1_1_a_landmark.html">ALandmark</a> &gt; lmk_j)</td></tr>
+<tr class="memdesc:a430a7a0c88d74c07886349f49a2547a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Approximate the Mutual Information between two landmarks using off diagonal blocks of _Ak.  <a href="classisae_1_1_marginalization.html#a430a7a0c88d74c07886349f49a2547a3">More...</a><br /></td></tr>
 <tr class="separator:a430a7a0c88d74c07886349f49a2547a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ba683f779c8e9906dd6600dadfc8059"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_marginalization.html#a6ba683f779c8e9906dd6600dadfc8059">computeKLD</a> (Eigen::MatrixXd A_p, Eigen::MatrixXd A_q)</td></tr>
+<tr class="memdesc:a6ba683f779c8e9906dd6600dadfc8059"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the KLD between the multivariate Gaussian with their Information Matrix assuming their mean is equal.  <a href="classisae_1_1_marginalization.html#a6ba683f779c8e9906dd6600dadfc8059">More...</a><br /></td></tr>
 <tr class="separator:a6ba683f779c8e9906dd6600dadfc8059"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
@@ -110,81 +123,154 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a5b9106683d3ebf42a6044c80d86daa26"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_marginalization.html#a5b9106683d3ebf42a6044c80d86daa26">_m</a></td></tr>
 <tr class="separator:a5b9106683d3ebf42a6044c80d86daa26"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5fa0eefed32070e5200a03053e390672"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_marginalization.html#a5fa0eefed32070e5200a03053e390672">_n</a></td></tr>
+<tr class="memdesc:a5fa0eefed32070e5200a03053e390672"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p>Parametric size of the variables to marginalize </p>
+</blockquote>
+ <a href="classisae_1_1_marginalization.html#a5fa0eefed32070e5200a03053e390672">More...</a><br /></td></tr>
 <tr class="separator:a5fa0eefed32070e5200a03053e390672"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a101d4f5e54f669137848ed9ed5c7daf1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_marginalization.html#a101d4f5e54f669137848ed9ed5c7daf1">_n_full</a></td></tr>
+<tr class="memdesc:a101d4f5e54f669137848ed9ed5c7daf1"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p>Parametric size of the variables to keep </p>
+</blockquote>
+ <a href="classisae_1_1_marginalization.html#a101d4f5e54f669137848ed9ed5c7daf1">More...</a><br /></td></tr>
 <tr class="separator:a101d4f5e54f669137848ed9ed5c7daf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae65774c8d79dfc03d8ef86c74af5833c"><td class="memItemLeft" align="right" valign="top">const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_marginalization.html#ae65774c8d79dfc03d8ef86c74af5833c">_eps</a> = 1e-12</td></tr>
+<tr class="memdesc:ae65774c8d79dfc03d8ef86c74af5833c"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p>Parametric size of the variables to keep after rank reveilling </p>
+</blockquote>
+ <a href="classisae_1_1_marginalization.html#ae65774c8d79dfc03d8ef86c74af5833c">More...</a><br /></td></tr>
 <tr class="separator:ae65774c8d79dfc03d8ef86c74af5833c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a19f0f7175c624347ed4bef17451b4e7a"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classisae_1_1_frame.html">Frame</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_marginalization.html#a19f0f7175c624347ed4bef17451b4e7a">_frame_to_marg</a></td></tr>
+<tr class="memdesc:a19f0f7175c624347ed4bef17451b4e7a"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p>Threshold to consider a null eigen value </p>
+</blockquote>
+ <a href="classisae_1_1_marginalization.html#a19f0f7175c624347ed4bef17451b4e7a">More...</a><br /></td></tr>
 <tr class="separator:a19f0f7175c624347ed4bef17451b4e7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a87e8637cbcb52f9a3014c0dfce077b5a"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classisae_1_1_frame.html">Frame</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_marginalization.html#a87e8637cbcb52f9a3014c0dfce077b5a">_frame_to_keep</a></td></tr>
+<tr class="memdesc:a87e8637cbcb52f9a3014c0dfce077b5a"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p><a class="el" href="classisae_1_1_frame.html" title="A Frame class representing a set of sensors and landmarks at a specific timestamp.">Frame</a> to marginalize </p>
+</blockquote>
+ <a href="classisae_1_1_marginalization.html#a87e8637cbcb52f9a3014c0dfce077b5a">More...</a><br /></td></tr>
 <tr class="separator:a87e8637cbcb52f9a3014c0dfce077b5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf678dc12a0eb7ac313eddc58e3ae973"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceisae.html#a4b744e0e080a733838eb133deda894aa">typed_vec_landmarks</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_marginalization.html#abf678dc12a0eb7ac313eddc58e3ae973">_lmk_to_keep</a></td></tr>
+<tr class="memdesc:abf678dc12a0eb7ac313eddc58e3ae973"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p><a class="el" href="classisae_1_1_frame.html" title="A Frame class representing a set of sensors and landmarks at a specific timestamp.">Frame</a> to keep </p>
+</blockquote>
+ <a href="classisae_1_1_marginalization.html#abf678dc12a0eb7ac313eddc58e3ae973">More...</a><br /></td></tr>
 <tr class="separator:abf678dc12a0eb7ac313eddc58e3ae973"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a52aa845eebd0798dc3ac6437a90f8a22"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceisae.html#a4b744e0e080a733838eb133deda894aa">typed_vec_landmarks</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_marginalization.html#a52aa845eebd0798dc3ac6437a90f8a22">_lmk_to_marg</a></td></tr>
+<tr class="memdesc:a52aa845eebd0798dc3ac6437a90f8a22"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p>Set of landmarks to keep </p>
+</blockquote>
+ <a href="classisae_1_1_marginalization.html#a52aa845eebd0798dc3ac6437a90f8a22">More...</a><br /></td></tr>
 <tr class="separator:a52aa845eebd0798dc3ac6437a90f8a22"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0fb0e2599f2c1f2834ea0e9003efefdd"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::shared_ptr&lt; <a class="el" href="classisae_1_1_frame.html">Frame</a> &gt;, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_marginalization.html#a0fb0e2599f2c1f2834ea0e9003efefdd">_map_frame_idx</a></td></tr>
+<tr class="memdesc:a0fb0e2599f2c1f2834ea0e9003efefdd"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p>Set of landmarks to marginalize </p>
+</blockquote>
+ <a href="classisae_1_1_marginalization.html#a0fb0e2599f2c1f2834ea0e9003efefdd">More...</a><br /></td></tr>
 <tr class="separator:a0fb0e2599f2c1f2834ea0e9003efefdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa2b364c8de398dcacff9b8edae53adc5"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::shared_ptr&lt; <a class="el" href="classisae_1_1_a_landmark.html">ALandmark</a> &gt;, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_marginalization.html#aa2b364c8de398dcacff9b8edae53adc5">_map_lmk_idx</a></td></tr>
+<tr class="memdesc:aa2b364c8de398dcacff9b8edae53adc5"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p>Map between frames and indices in _Ak </p>
+</blockquote>
+ <a href="classisae_1_1_marginalization.html#aa2b364c8de398dcacff9b8edae53adc5">More...</a><br /></td></tr>
 <tr class="separator:aa2b364c8de398dcacff9b8edae53adc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a09117ead54dcc44d16ebfa0d244eb86b"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::shared_ptr&lt; <a class="el" href="classisae_1_1_frame.html">Frame</a> &gt;, Eigen::MatrixXd &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_marginalization.html#a09117ead54dcc44d16ebfa0d244eb86b">_map_frame_inf</a></td></tr>
+<tr class="memdesc:a09117ead54dcc44d16ebfa0d244eb86b"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p>Map between landmarks and indices in _Ak </p>
+</blockquote>
+ <a href="classisae_1_1_marginalization.html#a09117ead54dcc44d16ebfa0d244eb86b">More...</a><br /></td></tr>
 <tr class="separator:a09117ead54dcc44d16ebfa0d244eb86b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8263d8ff60d0eb4af4d1583091b05864"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::shared_ptr&lt; <a class="el" href="structisae_1_1_marginalization_block_info.html">MarginalizationBlockInfo</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_marginalization.html#a8263d8ff60d0eb4af4d1583091b05864">_marginalization_blocks</a></td></tr>
+<tr class="memdesc:a8263d8ff60d0eb4af4d1583091b05864"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p>Map between frame and their marginal information matrix </p>
+</blockquote>
+ <a href="classisae_1_1_marginalization.html#a8263d8ff60d0eb4af4d1583091b05864">More...</a><br /></td></tr>
 <tr class="separator:a8263d8ff60d0eb4af4d1583091b05864"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae666a7e62f196220eb4c0ea0b8bf2320"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::shared_ptr&lt; <a class="el" href="classisae_1_1_a_landmark.html">ALandmark</a> &gt;, Eigen::Matrix3d &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_marginalization.html#ae666a7e62f196220eb4c0ea0b8bf2320">_map_lmk_inf</a></td></tr>
+<tr class="memdesc:ae666a7e62f196220eb4c0ea0b8bf2320"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p>Vector of <a class="el" href="classisae_1_1_marginalization.html" title="Marginalization class that handles marginalization (and sparsification) for fixed-lag smoothing.">Marginalization</a> blocks to derive _Ak </p>
+</blockquote>
+ <a href="classisae_1_1_marginalization.html#ae666a7e62f196220eb4c0ea0b8bf2320">More...</a><br /></td></tr>
 <tr class="separator:ae666a7e62f196220eb4c0ea0b8bf2320"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e8a0c9b57d20c1b24abba640e823397"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::shared_ptr&lt; <a class="el" href="classisae_1_1_a_landmark.html">ALandmark</a> &gt;, Eigen::Vector3d &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_marginalization.html#a4e8a0c9b57d20c1b24abba640e823397">_map_lmk_prior</a></td></tr>
+<tr class="memdesc:a4e8a0c9b57d20c1b24abba640e823397"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p>Map between landmarks and info mat of sparse relative prior factors </p>
+</blockquote>
+ <a href="classisae_1_1_marginalization.html#a4e8a0c9b57d20c1b24abba640e823397">More...</a><br /></td></tr>
 <tr class="separator:a4e8a0c9b57d20c1b24abba640e823397"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a439bc93ad1daac7fb58f8e46176b22c9"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classisae_1_1_a_landmark.html">ALandmark</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_marginalization.html#a439bc93ad1daac7fb58f8e46176b22c9">_lmk_with_prior</a></td></tr>
+<tr class="memdesc:a439bc93ad1daac7fb58f8e46176b22c9"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p>Map between landmarks and priors of sparse prior relative factors </p>
+</blockquote>
+ <a href="classisae_1_1_marginalization.html#a439bc93ad1daac7fb58f8e46176b22c9">More...</a><br /></td></tr>
 <tr class="separator:a439bc93ad1daac7fb58f8e46176b22c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5d1cfb5d9d6b39c46ca189bfca92b64b"><td class="memItemLeft" align="right" valign="top">Eigen::Matrix3d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_marginalization.html#a5d1cfb5d9d6b39c46ca189bfca92b64b">_info_lmk</a></td></tr>
+<tr class="memdesc:a5d1cfb5d9d6b39c46ca189bfca92b64b"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p>Landmark that has an absolute prior factor </p>
+</blockquote>
+ <a href="classisae_1_1_marginalization.html#a5d1cfb5d9d6b39c46ca189bfca92b64b">More...</a><br /></td></tr>
 <tr class="separator:a5d1cfb5d9d6b39c46ca189bfca92b64b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af5a6b29051e12cc034338e3c7548fac1"><td class="memItemLeft" align="right" valign="top">Eigen::Vector3d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_marginalization.html#af5a6b29051e12cc034338e3c7548fac1">_prior_lmk</a></td></tr>
+<tr class="memdesc:af5a6b29051e12cc034338e3c7548fac1"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p>Information matrix of the landmark absolute prior </p>
+</blockquote>
+ <a href="classisae_1_1_marginalization.html#af5a6b29051e12cc034338e3c7548fac1">More...</a><br /></td></tr>
 <tr class="separator:af5a6b29051e12cc034338e3c7548fac1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aef7b9eebb23f5ee9fb85bfe1e4f5bda1"><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_marginalization.html#aef7b9eebb23f5ee9fb85bfe1e4f5bda1">_Ak</a></td></tr>
+<tr class="memdesc:aef7b9eebb23f5ee9fb85bfe1e4f5bda1"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p>Prior of the landmark absolute prior </p>
+</blockquote>
+ <a href="classisae_1_1_marginalization.html#aef7b9eebb23f5ee9fb85bfe1e4f5bda1">More...</a><br /></td></tr>
 <tr class="separator:aef7b9eebb23f5ee9fb85bfe1e4f5bda1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff1a083d46a3aa2b581c372fb6024a91"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_marginalization.html#aff1a083d46a3aa2b581c372fb6024a91">_bk</a></td></tr>
+<tr class="memdesc:aff1a083d46a3aa2b581c372fb6024a91"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p>Information matrix of the subproblem </p>
+</blockquote>
+ <a href="classisae_1_1_marginalization.html#aff1a083d46a3aa2b581c372fb6024a91">More...</a><br /></td></tr>
 <tr class="separator:aff1a083d46a3aa2b581c372fb6024a91"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a783077c6a6cccc6c1809dd6cea759656"><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_marginalization.html#a783077c6a6cccc6c1809dd6cea759656">_Sigma_k</a></td></tr>
+<tr class="memdesc:a783077c6a6cccc6c1809dd6cea759656"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p>Gradient of the subproblem </p>
+</blockquote>
+ <a href="classisae_1_1_marginalization.html#a783077c6a6cccc6c1809dd6cea759656">More...</a><br /></td></tr>
 <tr class="separator:a783077c6a6cccc6c1809dd6cea759656"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73cb280873cff9625069d747c19c614e"><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_marginalization.html#a73cb280873cff9625069d747c19c614e">_U</a></td></tr>
+<tr class="memdesc:a73cb280873cff9625069d747c19c614e"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p>Covariance of the dense prior </p>
+</blockquote>
+ <a href="classisae_1_1_marginalization.html#a73cb280873cff9625069d747c19c614e">More...</a><br /></td></tr>
 <tr class="separator:a73cb280873cff9625069d747c19c614e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c5d5cc89812b9b844b7894eccf8bb82"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_marginalization.html#a7c5d5cc89812b9b844b7894eccf8bb82">_Lambda</a></td></tr>
+<tr class="memdesc:a7c5d5cc89812b9b844b7894eccf8bb82"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p>Eigen vectors that have non null eigen values </p>
+</blockquote>
+ <a href="classisae_1_1_marginalization.html#a7c5d5cc89812b9b844b7894eccf8bb82">More...</a><br /></td></tr>
 <tr class="separator:a7c5d5cc89812b9b844b7894eccf8bb82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5dc8cc3ab1e4f802b1fc0703e77623f"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_marginalization.html#ac5dc8cc3ab1e4f802b1fc0703e77623f">_Sigma</a></td></tr>
+<tr class="memdesc:ac5dc8cc3ab1e4f802b1fc0703e77623f"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p>Non null Eigen values </p>
+</blockquote>
+ <a href="classisae_1_1_marginalization.html#ac5dc8cc3ab1e4f802b1fc0703e77623f">More...</a><br /></td></tr>
 <tr class="separator:ac5dc8cc3ab1e4f802b1fc0703e77623f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4b642d48616608aa6e94ff61978b491e"><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_marginalization.html#a4b642d48616608aa6e94ff61978b491e">_marginalization_jacobian</a></td></tr>
+<tr class="memdesc:a4b642d48616608aa6e94ff61978b491e"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p>Inverse of _Lambda </p>
+</blockquote>
+ <a href="classisae_1_1_marginalization.html#a4b642d48616608aa6e94ff61978b491e">More...</a><br /></td></tr>
 <tr class="separator:a4b642d48616608aa6e94ff61978b491e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9343606535c39563abfdf09d20782c77"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_marginalization.html#a9343606535c39563abfdf09d20782c77">_marginalization_residual</a></td></tr>
+<tr class="memdesc:a9343606535c39563abfdf09d20782c77"><td class="mdescLeft">&#160;</td><td class="mdescRight"><blockquote class="doxtable">
+<p>Jacobian of the dense prior factor </p>
+</blockquote>
+ <a href="classisae_1_1_marginalization.html#a9343606535c39563abfdf09d20782c77">More...</a><br /></td></tr>
 <tr class="separator:a9343606535c39563abfdf09d20782c77"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="a2453ce54f9cdf7361d541f938ed5ec0d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2453ce54f9cdf7361d541f938ed5ec0d">&#9670;&nbsp;</a></span>addMarginalizationBlock()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void isae::Marginalization::addMarginalizationBlock </td>
-          <td>(</td>
-          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="structisae_1_1_marginalization_block_info.html">MarginalizationBlockInfo</a> &gt;&#160;</td>
-          <td class="paramname"><em>marginalization_block</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="classisae_1_1_marginalization.html" title="Marginalization class that handles marginalization (and sparsification) for fixed-lag smoothing.">Marginalization</a> class that handles marginalization (and sparsification) for fixed-lag smoothing. </p>
+<p>This class is responsible for selecting the variables to keep and to marginalize, computing the information matrix, computing the Schur complement, and computing the Jacobians and residuals for the marginalization. It also provides methods for sparsifying the dense prior in the case of VIO and VO. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a4ad7242cf2161f5eb9a241898e8f3119"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4ad7242cf2161f5eb9a241898e8f3119">&#9670;&nbsp;</a></span>computeEntropy()</h2>
 
@@ -200,6 +286,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Compute the Entropy of a given landmark. </p>
 
 </div>
 </div>
@@ -235,6 +323,16 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Compute the information matrix and the gradient for a set of factors. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">blocks</td><td>The vector of factors stored in <a class="el" href="classisae_1_1_marginalization.html" title="Marginalization class that handles marginalization (and sparsification) for fixed-lag smoothing.">Marginalization</a> Blocks </td></tr>
+    <tr><td class="paramname">A</td><td>The information matrix </td></tr>
+    <tr><td class="paramname">B</td><td>The gradient </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="adf14f1ba8d991053500ecabe070153e6"></a>
@@ -251,6 +349,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Compute the jacobian and the residual of the dense prior factor. </p>
 
 </div>
 </div>
@@ -280,6 +380,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Compute the KLD between the multivariate Gaussian with their Information Matrix assuming their mean is equal. </p>
+
 </div>
 </div>
 <a id="a94bd1c1c456e7f73fe4b0b81f12431ca"></a>
@@ -307,6 +409,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Compute the Mutual Information between two landmarks. </p>
 
 </div>
 </div>
@@ -336,6 +440,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Approximate the Mutual Information between two landmarks using off diagonal blocks of _Ak. </p>
+
 </div>
 </div>
 <a id="ad7e4c7a85f72fbc22a57788831f785a5"></a>
@@ -352,6 +458,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Compute the dense prior with the Schur complement on _Ak. </p>
 
 </div>
 </div>
@@ -387,6 +495,16 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Select all the variables to keep and to marginalize in the Markov Blanket for fixed lag smoothing. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">frame0</td><td>frame to marginalize </td></tr>
+    <tr><td class="paramname">frame1</td><td>frame linked to frame0 </td></tr>
+    <tr><td class="paramname">marginalization_last</td><td>previous marginalization scheme </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a2123a5bdbcf4684790c2e103c9b47cd9"></a>
@@ -414,6 +532,15 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Select all the variables to keep and marginalize to derive the relative pose factor between two frames. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">frame0</td><td>The first frame </td></tr>
+    <tr><td class="paramname">frame1</td><td>The second frame </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -449,6 +576,16 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Compute the SVD of a given matrix to reveal its rank. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">A</td><td>The input matrix </td></tr>
+    <tr><td class="paramname">U</td><td>The Eigen vectors of non null eigen values (up to a threshold) </td></tr>
+    <tr><td class="paramname">d</td><td>Non null Eigen values </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a33e8b408c886823385e2d4ff75d681db"></a>
@@ -466,6 +603,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Sparsify the dense prior factor in the VIO case. </p>
+
 </div>
 </div>
 <a id="acae6b1b8caabcaf3dadd874aeb03585b"></a>
@@ -482,6 +621,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Sparsify the dense prior factor in the VO case. </p>
 <p>CHOW LIU TREE REORDERING ///</p>
 <p>LANDMARK CHAIN ///</p>
 
@@ -500,6 +641,11 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p><blockquote class="doxtable">
+<p>Prior of the landmark absolute prior </p>
+</blockquote>
+</p>
+
 </div>
 </div>
 <a id="aff1a083d46a3aa2b581c372fb6024a91"></a>
@@ -513,6 +659,11 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p><blockquote class="doxtable">
+<p>Information matrix of the subproblem </p>
+</blockquote>
+</p>
 
 </div>
 </div>
@@ -528,6 +679,11 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p><blockquote class="doxtable">
+<p>Parametric size of the variables to keep after rank reveilling </p>
+</blockquote>
+</p>
+
 </div>
 </div>
 <a id="a87e8637cbcb52f9a3014c0dfce077b5a"></a>
@@ -541,6 +697,11 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p><blockquote class="doxtable">
+<p><a class="el" href="classisae_1_1_frame.html" title="A Frame class representing a set of sensors and landmarks at a specific timestamp.">Frame</a> to marginalize </p>
+</blockquote>
+</p>
 
 </div>
 </div>
@@ -556,6 +717,11 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p><blockquote class="doxtable">
+<p>Threshold to consider a null eigen value </p>
+</blockquote>
+</p>
+
 </div>
 </div>
 <a id="a5d1cfb5d9d6b39c46ca189bfca92b64b"></a>
@@ -569,6 +735,11 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p><blockquote class="doxtable">
+<p>Landmark that has an absolute prior factor </p>
+</blockquote>
+</p>
 
 </div>
 </div>
@@ -584,6 +755,11 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p><blockquote class="doxtable">
+<p>Eigen vectors that have non null eigen values </p>
+</blockquote>
+</p>
+
 </div>
 </div>
 <a id="abf678dc12a0eb7ac313eddc58e3ae973"></a>
@@ -597,6 +773,11 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p><blockquote class="doxtable">
+<p><a class="el" href="classisae_1_1_frame.html" title="A Frame class representing a set of sensors and landmarks at a specific timestamp.">Frame</a> to keep </p>
+</blockquote>
+</p>
 
 </div>
 </div>
@@ -612,6 +793,11 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p><blockquote class="doxtable">
+<p>Set of landmarks to keep </p>
+</blockquote>
+</p>
+
 </div>
 </div>
 <a id="a439bc93ad1daac7fb58f8e46176b22c9"></a>
@@ -625,6 +811,11 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p><blockquote class="doxtable">
+<p>Map between landmarks and priors of sparse prior relative factors </p>
+</blockquote>
+</p>
 
 </div>
 </div>
@@ -654,6 +845,11 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p><blockquote class="doxtable">
+<p>Set of landmarks to marginalize </p>
+</blockquote>
+</p>
+
 </div>
 </div>
 <a id="a09117ead54dcc44d16ebfa0d244eb86b"></a>
@@ -667,6 +863,11 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p><blockquote class="doxtable">
+<p>Map between landmarks and indices in _Ak </p>
+</blockquote>
+</p>
 
 </div>
 </div>
@@ -682,6 +883,11 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p><blockquote class="doxtable">
+<p>Map between frames and indices in _Ak </p>
+</blockquote>
+</p>
+
 </div>
 </div>
 <a id="ae666a7e62f196220eb4c0ea0b8bf2320"></a>
@@ -695,6 +901,11 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p><blockquote class="doxtable">
+<p>Vector of <a class="el" href="classisae_1_1_marginalization.html" title="Marginalization class that handles marginalization (and sparsification) for fixed-lag smoothing.">Marginalization</a> blocks to derive _Ak </p>
+</blockquote>
+</p>
 
 </div>
 </div>
@@ -710,6 +921,11 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p><blockquote class="doxtable">
+<p>Map between landmarks and info mat of sparse relative prior factors </p>
+</blockquote>
+</p>
+
 </div>
 </div>
 <a id="a8263d8ff60d0eb4af4d1583091b05864"></a>
@@ -723,6 +939,11 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p><blockquote class="doxtable">
+<p>Map between frame and their marginal information matrix </p>
+</blockquote>
+</p>
 
 </div>
 </div>
@@ -738,6 +959,11 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p><blockquote class="doxtable">
+<p>Inverse of _Lambda </p>
+</blockquote>
+</p>
+
 </div>
 </div>
 <a id="a9343606535c39563abfdf09d20782c77"></a>
@@ -751,6 +977,11 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p><blockquote class="doxtable">
+<p>Jacobian of the dense prior factor </p>
+</blockquote>
+</p>
 
 </div>
 </div>
@@ -766,6 +997,11 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p><blockquote class="doxtable">
+<p>Parametric size of the variables to marginalize </p>
+</blockquote>
+</p>
+
 </div>
 </div>
 <a id="a101d4f5e54f669137848ed9ed5c7daf1"></a>
@@ -779,6 +1015,11 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p><blockquote class="doxtable">
+<p>Parametric size of the variables to keep </p>
+</blockquote>
+</p>
 
 </div>
 </div>
@@ -794,6 +1035,11 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p><blockquote class="doxtable">
+<p>Information matrix of the landmark absolute prior </p>
+</blockquote>
+</p>
+
 </div>
 </div>
 <a id="ac5dc8cc3ab1e4f802b1fc0703e77623f"></a>
@@ -807,6 +1053,11 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p><blockquote class="doxtable">
+<p>Non null Eigen values </p>
+</blockquote>
+</p>
 
 </div>
 </div>
@@ -822,6 +1073,11 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p><blockquote class="doxtable">
+<p>Gradient of the subproblem </p>
+</blockquote>
+</p>
+
 </div>
 </div>
 <a id="a73cb280873cff9625069d747c19c614e"></a>
@@ -835,6 +1091,11 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p><blockquote class="doxtable">
+<p>Covariance of the dense prior </p>
+</blockquote>
+</p>
 
 </div>
 </div>

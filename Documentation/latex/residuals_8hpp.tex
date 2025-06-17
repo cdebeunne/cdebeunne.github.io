@@ -21,36 +21,31 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \begin{DoxyCompactItemize}
 \item 
 class \mbox{\hyperlink{classisae_1_1_motion2_d_factor}{isae\+::\+Motion2\+D\+Factor}}
-\item 
+\begin{DoxyCompactList}\small\item\em A cost function to impose a constraint on 2D motion. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classisae_1_1_relative6_d_pose}{isae\+::\+Relative6\+D\+Pose}}
-\item 
+\begin{DoxyCompactList}\small\item\em A cost function for 6DoF relative pose constraint, the parameters are the delta pose of the two related poses. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classisae_1_1_i_m_u_factor}{isae\+::\+I\+M\+U\+Factor}}
-\item 
+\begin{DoxyCompactList}\small\item\em A cost function for \mbox{\hyperlink{classisae_1_1_i_m_u}{I\+MU}} pre-\/integration factor, parameters are delta updates. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classisae_1_1_i_m_u_bias_factor}{isae\+::\+I\+M\+U\+Bias\+Factor}}
-\item 
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classisae_1_1_i_m_u}{I\+MU}} bias cost function that takes into account random walk behaviour. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classisae_1_1_i_m_u_factor_init}{isae\+::\+I\+M\+U\+Factor\+Init}}
-\item 
+\begin{DoxyCompactList}\small\item\em Pre integration \mbox{\hyperlink{classisae_1_1_i_m_u}{I\+MU}} factor for initialization, the parameters optimized are\+: scale, roll, pitch, velocities and biases. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classisae_1_1_i_m_u_factor_init_bis}{isae\+::\+I\+M\+U\+Factor\+Init\+Bis}}
-\item 
+\begin{DoxyCompactList}\small\item\em An experimental \mbox{\hyperlink{classisae_1_1_i_m_u}{I\+MU}} factor refining only roll, pitch, biases and scale. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classisae_1_1_landmark3_d_prior}{isae\+::\+Landmark3\+D\+Prior}}
-\item 
+\begin{DoxyCompactList}\small\item\em A factor for absolute 3D position constraint on a punctual landmark. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classisae_1_1_landmark_to_landmark_factor}{isae\+::\+Landmark\+To\+Landmark\+Factor}}
-\item 
+\begin{DoxyCompactList}\small\item\em 3D relative translation factor between 3D punctual landmarks \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classisae_1_1_pose_to_landmark_factor}{isae\+::\+Pose\+To\+Landmark\+Factor}}
-\item 
+\begin{DoxyCompactList}\small\item\em Relative 3D translation between a 6DoF frame and a punctual landmark. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classisae_1_1_pose_priordx}{isae\+::\+Pose\+Priordx}}
-\item 
+\begin{DoxyCompactList}\small\item\em Absolute 6DoF pose prior factor. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classisae_1_1_i_m_u_priordx}{isae\+::\+I\+M\+U\+Priordx}}
-\item 
+\begin{DoxyCompactList}\small\item\em An absolute prior on an Inertial state, including pose, velocity and biases. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classisae_1_1scale_prior}{isae\+::scale\+Prior}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Prior on a 1D parameter (e.\+g. scale) \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 
  \mbox{\hyperlink{namespaceisae}{isae}}
-\end{DoxyCompactItemize}
-\doxysubsection*{Functions}
-\begin{DoxyCompactItemize}
-\item 
-bool \mbox{\hyperlink{namespaceisae_add54039bc53fc227f5b68a6edd2f46ee}{isae\+::linexd\+Reprojection\+Error}} (const Eigen\+::\+Affine3d T\+\_\+w\+\_\+lmk, const std\+::shared\+\_\+ptr$<$ A\+Model3d $>$ model3d, const Eigen\+::\+Vector3d \&scale, const Eigen\+::\+Affine3d \&T\+\_\+s\+\_\+w, const std\+::shared\+\_\+ptr$<$ Image\+Sensor $>$ cam, const std\+::vector$<$ Eigen\+::\+Vector2d $>$ \&p2d, double $\ast$residual)
 \end{DoxyCompactItemize}
