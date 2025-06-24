@@ -147,9 +147,9 @@ class \mbox{\hyperlink{classisae_1_1_marginalization_factor}{Marginalization\+Fa
 class \mbox{\hyperlink{classisae_1_1_marginalization_test}{Marginalization\+Test}}
 \item 
 class \mbox{\hyperlink{classisae_1_1_mesh3_d}{Mesh3D}}
-\item 
+\begin{DoxyCompactList}\small\item\em A class to build and update a 3D mesh from 2D features and landmarks. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classisae_1_1_mesher}{Mesher}}
-\item 
+\begin{DoxyCompactList}\small\item\em A class to handles 3D meshing via 2D triangulation on successive K\+Fs. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classisae_1_1_mesh_test}{Mesh\+Test}}
 \item 
 class \mbox{\hyperlink{classisae_1_1_model_b_box3_d}{Model\+B\+Box3D}}
@@ -179,7 +179,7 @@ class \mbox{\hyperlink{classisae_1_1_point3_d_landmark_initializer}{Point3\+D\+L
 class \mbox{\hyperlink{classisae_1_1_point_x_y_z_parameters_block}{Point\+X\+Y\+Z\+Parameters\+Block}}
 \begin{DoxyCompactList}\small\item\em A Parameter block for 3D position that does the interface between a double$\ast$ and an Eigen\+::\+Vector3d. \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{structisae_1_1_polygon}{Polygon}}
-\item 
+\begin{DoxyCompactList}\small\item\em A polygon in the 3D mesh, representing a surface with its vertices, normal, barycenter, and covariance. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classisae_1_1_pose_parameters_block}{Pose\+Parameters\+Block}}
 \begin{DoxyCompactList}\small\item\em A Parameter block for pose that does the interface between a double$\ast$ and an Eigen\+::\+Affine3d. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classisae_1_1_pose_priordx}{Pose\+Priordx}}
@@ -221,14 +221,14 @@ class \mbox{\hyperlink{classisae_1_1_s_l_a_m_non_overlapping_fov}{S\+L\+A\+M\+No
 class \mbox{\hyperlink{classisae_1_1_s_l_a_m_parameters}{S\+L\+A\+M\+Parameters}}
 \begin{DoxyCompactList}\small\item\em A class that gathers most of the algorithmic blocks of the S\+L\+AM system that can be setup in the config file. \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{structisae_1_1_vertex}{Vertex}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em A vertex in the 3D mesh, representing a landmark and its associated polygons. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
 typedef std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$ $>$ \mbox{\hyperlink{namespaceisae_a96382cb94d4e3b90ed93ffc9715ef72d}{Feat\+Polygon}}
-\item 
+\begin{DoxyCompactList}\small\item\em A vector of features for 2D Meshing. \end{DoxyCompactList}\item 
 typedef std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_landmark}{A\+Landmark}} $>$ $>$ \mbox{\hyperlink{namespaceisae_af5a790670f7ac3ef3083b2437f725a0b}{Lmk\+Polygon}}
-\item 
+\begin{DoxyCompactList}\small\item\em A vector of landmarks for 3D Meshing. \end{DoxyCompactList}\item 
 typedef std\+::unordered\+\_\+map$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$ $>$ $>$ \mbox{\hyperlink{namespaceisae_a561b9d0acad2bfed893d1b94373ea053}{vec\+\_\+feat\+\_\+matches}}
 \begin{DoxyCompactList}\small\item\em Unordered map to store matches between two feature lists. \end{DoxyCompactList}\item 
 typedef std\+::unordered\+\_\+map$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$, std\+::vector$<$ double $>$ $>$ \mbox{\hyperlink{namespaceisae_a2393b0b6ff395b30a29fc580f092908b}{vec\+\_\+feat\+\_\+matches\+\_\+scores}}
@@ -343,6 +343,10 @@ void \mbox{\hyperlink{namespaceisae_a2e7cb25c5558603da7ea0ceb3f8ec47b}{write\+\_
 \doxysubsubsection{\texorpdfstring{FeatPolygon}{FeatPolygon}}
 {\footnotesize\ttfamily typedef std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}}$>$ $>$ \mbox{\hyperlink{namespaceisae_a96382cb94d4e3b90ed93ffc9715ef72d}{isae\+::\+Feat\+Polygon}}}
 
+
+
+A vector of features for 2D Meshing. 
+
 \mbox{\Hypertarget{namespaceisae_ab4a885dce1b03422dfcdfb9a4747aaef}\label{namespaceisae_ab4a885dce1b03422dfcdfb9a4747aaef}} 
 \index{isae@{isae}!feature\_pair@{feature\_pair}}
 \index{feature\_pair@{feature\_pair}!isae@{isae}}
@@ -358,6 +362,10 @@ A pair of feature, useful to represent matches.
 \index{LmkPolygon@{LmkPolygon}!isae@{isae}}
 \doxysubsubsection{\texorpdfstring{LmkPolygon}{LmkPolygon}}
 {\footnotesize\ttfamily typedef std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classisae_1_1_a_landmark}{A\+Landmark}}$>$ $>$ \mbox{\hyperlink{namespaceisae_af5a790670f7ac3ef3083b2437f725a0b}{isae\+::\+Lmk\+Polygon}}}
+
+
+
+A vector of landmarks for 3D Meshing. 
 
 \mbox{\Hypertarget{namespaceisae_aef749e9df97878dd2b7af968a4f64efd}\label{namespaceisae_aef749e9df97878dd2b7af968a4f64efd}} 
 \index{isae@{isae}!typed\_vec\_features@{typed\_vec\_features}}

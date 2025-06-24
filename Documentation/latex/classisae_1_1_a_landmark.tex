@@ -98,65 +98,39 @@ void \mbox{\hyperlink{classisae_1_1_a_landmark_a3d206d3ca6753443a3a74993dae993f2
 \begin{DoxyCompactItemize}
 \item 
 int \mbox{\hyperlink{classisae_1_1_a_landmark_aae1ecd74591cf18787a7746fca7dd279}{\+\_\+id}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-Static counter for landmarks, used for unique id generation \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Unique id for the landmark, used for bookeeping. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{classisae_1_1_a_landmark_a00ebbfdaef535c8078e12d1361329771}{\+\_\+label}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-Unique id for the landmark, used for bookeeping \end{quote}
-\end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Label for the landmark. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Static Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 static int \mbox{\hyperlink{classisae_1_1_a_landmark_a6753849038ee686ddffd7079524814a1}{\+\_\+landmark\+\_\+count}} = 0
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Static counter for landmarks, used for unique id generation. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
 bool \mbox{\hyperlink{classisae_1_1_a_landmark_ab4a8edb6a3bdbecf76bfd0b933741e3a}{\+\_\+initialized}} = false
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-Label for the landmark \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Flag to check if the landmark is initialized. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classisae_1_1_a_landmark_a3ff8a422e7ad62964b6736ec88c8d446}{\+\_\+in\+\_\+map}} = false
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-Flag to check if the landmark is initialized \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Flag to check if the landmark is in the map. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classisae_1_1_a_landmark_a397d0a9a693bc3faf77524bcb19f3ed2}{\+\_\+outlier}} = false
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-Flag to check if the landmark is in the map \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Flag to check if the landmark is an outlier. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classisae_1_1_a_landmark_a0d4f25ab5ded6a0d868f2f702b4a376e}{\+\_\+is\+\_\+resurected}} = false
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-Flag to check if the landmark is an outlier \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Flag to check if the landmark has been resurected. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classisae_1_1_a_landmark_a07de8566703c03922b923b9d7db14e83}{\+\_\+has\+\_\+prior}} = false
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-Flag to check if the landmark has been resurected \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Flag to check if the landmark has a prior. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classisae_1_1_a_landmark_a61c8561d39b20fabc88a46cf07f1a708}{\+\_\+is\+\_\+marg}} = false
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-Flag to check if the landmark has a prior \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Flag to check if the landmark is marginalised. \end{DoxyCompactList}\item 
 Eigen\+::\+Affine3d \mbox{\hyperlink{classisae_1_1_a_landmark_aac46b3616425695ecd7a659ad622ddfe}{\+\_\+\+T\+\_\+w\+\_\+l}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-Flag to check if the landmark is marginalised \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Landmark pose in world frame. \end{DoxyCompactList}\item 
 cv\+::\+Mat \mbox{\hyperlink{classisae_1_1_a_landmark_a680785fa4ffb87d3242007177543844b}{\+\_\+descriptor}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-Landmark pose in world frame \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Descriptor of the landmark, used for matching. \end{DoxyCompactList}\item 
 std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_model3d}{A\+Model3d}} $>$ \mbox{\hyperlink{classisae_1_1_a_landmark_a08610b87889eda176b56a72b7e9f8243}{\+\_\+model}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-Descriptor of the landmark, used for matching \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em 3D model of the landmark \end{DoxyCompactList}\item 
 std\+::vector$<$ std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_feature}{A\+Feature}} $>$ $>$ \mbox{\hyperlink{classisae_1_1_a_landmark_a8e825165b72999bf8ae050cfd52af030}{\+\_\+features}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-3D model of the landmark \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Features associated to the landmark. \end{DoxyCompactList}\item 
 std\+::mutex \mbox{\hyperlink{classisae_1_1_a_landmark_a2095fa6737bf3806f18421d0ed3d8070}{\+\_\+lmk\+\_\+mtx}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-Features associated to the landmark \end{quote}
-\end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -403,9 +377,7 @@ Set only the translation of the landmark pose.
 
 
 
-\begin{quote}
-Landmark pose in world frame \end{quote}
-
+Descriptor of the landmark, used for matching. 
 
 \mbox{\Hypertarget{classisae_1_1_a_landmark_a8e825165b72999bf8ae050cfd52af030}\label{classisae_1_1_a_landmark_a8e825165b72999bf8ae050cfd52af030}} 
 \index{isae::ALandmark@{isae::ALandmark}!\_features@{\_features}}
@@ -415,9 +387,7 @@ Landmark pose in world frame \end{quote}
 
 
 
-\begin{quote}
-3D model of the landmark \end{quote}
-
+Features associated to the landmark. 
 
 \mbox{\Hypertarget{classisae_1_1_a_landmark_a07de8566703c03922b923b9d7db14e83}\label{classisae_1_1_a_landmark_a07de8566703c03922b923b9d7db14e83}} 
 \index{isae::ALandmark@{isae::ALandmark}!\_has\_prior@{\_has\_prior}}
@@ -427,9 +397,7 @@ Landmark pose in world frame \end{quote}
 
 
 
-\begin{quote}
-Flag to check if the landmark has been resurected \end{quote}
-
+Flag to check if the landmark has a prior. 
 
 \mbox{\Hypertarget{classisae_1_1_a_landmark_aae1ecd74591cf18787a7746fca7dd279}\label{classisae_1_1_a_landmark_aae1ecd74591cf18787a7746fca7dd279}} 
 \index{isae::ALandmark@{isae::ALandmark}!\_id@{\_id}}
@@ -439,9 +407,7 @@ Flag to check if the landmark has been resurected \end{quote}
 
 
 
-\begin{quote}
-Static counter for landmarks, used for unique id generation \end{quote}
-
+Unique id for the landmark, used for bookeeping. 
 
 \mbox{\Hypertarget{classisae_1_1_a_landmark_a3ff8a422e7ad62964b6736ec88c8d446}\label{classisae_1_1_a_landmark_a3ff8a422e7ad62964b6736ec88c8d446}} 
 \index{isae::ALandmark@{isae::ALandmark}!\_in\_map@{\_in\_map}}
@@ -451,9 +417,7 @@ Static counter for landmarks, used for unique id generation \end{quote}
 
 
 
-\begin{quote}
-Flag to check if the landmark is initialized \end{quote}
-
+Flag to check if the landmark is in the map. 
 
 \mbox{\Hypertarget{classisae_1_1_a_landmark_ab4a8edb6a3bdbecf76bfd0b933741e3a}\label{classisae_1_1_a_landmark_ab4a8edb6a3bdbecf76bfd0b933741e3a}} 
 \index{isae::ALandmark@{isae::ALandmark}!\_initialized@{\_initialized}}
@@ -463,9 +427,7 @@ Flag to check if the landmark is initialized \end{quote}
 
 
 
-\begin{quote}
-Label for the landmark \end{quote}
-
+Flag to check if the landmark is initialized. 
 
 \mbox{\Hypertarget{classisae_1_1_a_landmark_a61c8561d39b20fabc88a46cf07f1a708}\label{classisae_1_1_a_landmark_a61c8561d39b20fabc88a46cf07f1a708}} 
 \index{isae::ALandmark@{isae::ALandmark}!\_is\_marg@{\_is\_marg}}
@@ -475,9 +437,7 @@ Label for the landmark \end{quote}
 
 
 
-\begin{quote}
-Flag to check if the landmark has a prior \end{quote}
-
+Flag to check if the landmark is marginalised. 
 
 \mbox{\Hypertarget{classisae_1_1_a_landmark_a0d4f25ab5ded6a0d868f2f702b4a376e}\label{classisae_1_1_a_landmark_a0d4f25ab5ded6a0d868f2f702b4a376e}} 
 \index{isae::ALandmark@{isae::ALandmark}!\_is\_resurected@{\_is\_resurected}}
@@ -487,9 +447,7 @@ Flag to check if the landmark has a prior \end{quote}
 
 
 
-\begin{quote}
-Flag to check if the landmark is an outlier \end{quote}
-
+Flag to check if the landmark has been resurected. 
 
 \mbox{\Hypertarget{classisae_1_1_a_landmark_a00ebbfdaef535c8078e12d1361329771}\label{classisae_1_1_a_landmark_a00ebbfdaef535c8078e12d1361329771}} 
 \index{isae::ALandmark@{isae::ALandmark}!\_label@{\_label}}
@@ -499,9 +457,7 @@ Flag to check if the landmark is an outlier \end{quote}
 
 
 
-\begin{quote}
-Unique id for the landmark, used for bookeeping \end{quote}
-
+Label for the landmark. 
 
 \mbox{\Hypertarget{classisae_1_1_a_landmark_a6753849038ee686ddffd7079524814a1}\label{classisae_1_1_a_landmark_a6753849038ee686ddffd7079524814a1}} 
 \index{isae::ALandmark@{isae::ALandmark}!\_landmark\_count@{\_landmark\_count}}
@@ -509,17 +465,15 @@ Unique id for the landmark, used for bookeeping \end{quote}
 \doxysubsubsection{\texorpdfstring{\_landmark\_count}{\_landmark\_count}}
 {\footnotesize\ttfamily int isae\+::\+A\+Landmark\+::\+\_\+landmark\+\_\+count = 0\hspace{0.3cm}{\ttfamily [static]}}
 
+
+
+Static counter for landmarks, used for unique id generation. 
+
 \mbox{\Hypertarget{classisae_1_1_a_landmark_a2095fa6737bf3806f18421d0ed3d8070}\label{classisae_1_1_a_landmark_a2095fa6737bf3806f18421d0ed3d8070}} 
 \index{isae::ALandmark@{isae::ALandmark}!\_lmk\_mtx@{\_lmk\_mtx}}
 \index{\_lmk\_mtx@{\_lmk\_mtx}!isae::ALandmark@{isae::ALandmark}}
 \doxysubsubsection{\texorpdfstring{\_lmk\_mtx}{\_lmk\_mtx}}
 {\footnotesize\ttfamily std\+::mutex isae\+::\+A\+Landmark\+::\+\_\+lmk\+\_\+mtx\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [protected]}}
-
-
-
-\begin{quote}
-Features associated to the landmark \end{quote}
-
 
 \mbox{\Hypertarget{classisae_1_1_a_landmark_a08610b87889eda176b56a72b7e9f8243}\label{classisae_1_1_a_landmark_a08610b87889eda176b56a72b7e9f8243}} 
 \index{isae::ALandmark@{isae::ALandmark}!\_model@{\_model}}
@@ -529,9 +483,7 @@ Features associated to the landmark \end{quote}
 
 
 
-\begin{quote}
-Descriptor of the landmark, used for matching \end{quote}
-
+3D model of the landmark 
 
 \mbox{\Hypertarget{classisae_1_1_a_landmark_a397d0a9a693bc3faf77524bcb19f3ed2}\label{classisae_1_1_a_landmark_a397d0a9a693bc3faf77524bcb19f3ed2}} 
 \index{isae::ALandmark@{isae::ALandmark}!\_outlier@{\_outlier}}
@@ -541,9 +493,7 @@ Descriptor of the landmark, used for matching \end{quote}
 
 
 
-\begin{quote}
-Flag to check if the landmark is in the map \end{quote}
-
+Flag to check if the landmark is an outlier. 
 
 \mbox{\Hypertarget{classisae_1_1_a_landmark_aac46b3616425695ecd7a659ad622ddfe}\label{classisae_1_1_a_landmark_aac46b3616425695ecd7a659ad622ddfe}} 
 \index{isae::ALandmark@{isae::ALandmark}!\_T\_w\_l@{\_T\_w\_l}}
@@ -553,9 +503,7 @@ Flag to check if the landmark is in the map \end{quote}
 
 
 
-\begin{quote}
-Flag to check if the landmark is marginalised \end{quote}
-
+Landmark pose in world frame. 
 
 
 

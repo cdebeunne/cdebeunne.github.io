@@ -13,95 +13,51 @@ This structure contains the configuration parameters located in the config file.
 \begin{DoxyCompactItemize}
 \item 
 std\+::string \mbox{\hyperlink{structisae_1_1_config_a10e0978ad4ca51239077a1c6a2b5b31a}{dataset\+\_\+path}}
-\item 
+\begin{DoxyCompactList}\small\item\em Path to the dataset. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{structisae_1_1_config_affb2739adecadc2f8d951fc36d4667b7}{dataset\+\_\+id}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-Path to the dataset \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Id of the dataset. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{structisae_1_1_config_a135286d1cd6545c07ec3821631675e8f}{slam\+\_\+mode}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-Id of the dataset \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em S\+L\+AM mode (mono, bimono, monovio...) \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{structisae_1_1_config_a4be128c4437ee4362fdd5ced4ea7a56b}{multithreading}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-S\+L\+AM mode (mono, bimono, monovio...) \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Allow to run front-\/end and back-\/end on different threads (unstable...) \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{structisae_1_1_config_a120073d23bf9a50839e0c33068b6070c}{enable\+\_\+visu}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-Allow to run front-\/end and back-\/end on different threads (unstable...) \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Allow visualization. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{structisae_1_1_config_aeed2138f18471c54a64167aa79386273}{optimizer}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-Allow visualization \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Optimizer type (Reprojection\+Error, Angular\+Error...) \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{structisae_1_1_config_a8377fbb90063c74e14de8206cf7494cb}{contrast\+\_\+enhancer}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-Optimizer type (Reprojection\+Error, Angular\+Error...) \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em integer to choose the contrast enhancement algorithm \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{structisae_1_1_config_a75baa21879670e087412210f2de5b83c}{clahe\+\_\+clip}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-integer to choose the contrast enhancement algorithm \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Clip of C\+L\+A\+HE (useful only if it is chosen for contrast enhancement) \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{structisae_1_1_config_a1b84d6dc962007d3490d021312557cae}{downsampling}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-Clip of C\+L\+A\+HE (useful only if it is chosen for contrast enhancement) \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Float to reduce the size of the image (0,5 = half the size of the img) \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{structisae_1_1_config_a327a1dbc966f3a4bf9b7084da7a633a0}{marginalization}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-Float to reduce the size of the image (0,5 = half the size of the img) \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em 0 no marginalization, 1 marginalization \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{structisae_1_1_config_a620f65f9f3e337dcb692114bf465b4d1}{sparsification}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-0 no marginalization, 1 marginalization \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em 0 no sparsification, 1 sparsification \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{structisae_1_1_config_a67960a5776073f3da1f1c1238b300b17}{pose\+\_\+estimator}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-0 no sparsification, 1 sparsification \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Type of pose estimator. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{structisae_1_1_config_adbd202e384159f21f3ff5a32254cd86a}{tracker}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-Type of pose estimator \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Type of tracking (matcher or klt) \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{structisae_1_1_config_afa14d7801fc2e7f9cc0d59b22b062b0c}{min\+\_\+kf\+\_\+number}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-Type of tracking (matcher or klt) \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Minimum KF for optimization. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{structisae_1_1_config_aa0e2c6092ecfffa24cd50713ba14db81}{max\+\_\+kf\+\_\+number}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-Minimum KF for optimization \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Size maximum of the sliding windown. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{structisae_1_1_config_a6a81e78c0fae5c7ef397969d9d788164}{fixed\+\_\+frame\+\_\+number}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-Size maximum of the sliding windown \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Number of fixed frame for gauge fixing. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{structisae_1_1_config_adeada101c8bd5025cc0a372499dfd223}{min\+\_\+lmk\+\_\+number}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-Number of fixed frame for gauge fixing \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Below this number of landmark, a KF is voted. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{structisae_1_1_config_af3f3c2e778413f7b9b715ee773fcb6b1}{min\+\_\+movement\+\_\+parallax}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-Below this number of landmark, a KF is voted \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Below this parallax, no motion is considered. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{structisae_1_1_config_a34497c04afba80a03541342190c79a8c}{max\+\_\+movement\+\_\+parallax}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-Below this parallax, no motion is considered \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Over this parallax, a KF is voted. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{structisae_1_1_config_aa92b004a71992e70494d41672c53e2c4}{mesh3D}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-Over this parallax, a KF is voted \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em 0 no 3D mesh, 1 3D mesh \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{structisae_1_1_config_a6d1d7c12feb89008fa45fa4282c31d45}{Z\+N\+C\+C\+\_\+tsh}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-0 no 3D mesh, 1 3D mesh \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Threshold on Z\+N\+CC for triangle filtering. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{structisae_1_1_config_aaf5721dd1b10b94303e6971966444c8a}{max\+\_\+length\+\_\+tsh}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-Threshold on Z\+N\+CC for triangle filtering \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Threshold on maximum length for triangle filtering. \end{DoxyCompactList}\item 
 std\+::vector$<$ \mbox{\hyperlink{structisae_1_1_feature_struct}{Feature\+Struct}} $>$ \mbox{\hyperlink{structisae_1_1_config_a4a0730ae467445546a8fc2a15b3ac35d}{features\+\_\+handled}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-Threshold on maximum length for triangle filtering \end{quote}
-\end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em types of features the slam will work on separated with commas (,) \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -116,9 +72,7 @@ This structure contains the configuration parameters located in the config file.
 
 
 
-\begin{quote}
-integer to choose the contrast enhancement algorithm \end{quote}
-
+Clip of C\+L\+A\+HE (useful only if it is chosen for contrast enhancement) 
 
 \mbox{\Hypertarget{structisae_1_1_config_a8377fbb90063c74e14de8206cf7494cb}\label{structisae_1_1_config_a8377fbb90063c74e14de8206cf7494cb}} 
 \index{isae::Config@{isae::Config}!contrast\_enhancer@{contrast\_enhancer}}
@@ -128,9 +82,7 @@ integer to choose the contrast enhancement algorithm \end{quote}
 
 
 
-\begin{quote}
-Optimizer type (Reprojection\+Error, Angular\+Error...) \end{quote}
-
+integer to choose the contrast enhancement algorithm 
 
 \mbox{\Hypertarget{structisae_1_1_config_affb2739adecadc2f8d951fc36d4667b7}\label{structisae_1_1_config_affb2739adecadc2f8d951fc36d4667b7}} 
 \index{isae::Config@{isae::Config}!dataset\_id@{dataset\_id}}
@@ -140,15 +92,17 @@ Optimizer type (Reprojection\+Error, Angular\+Error...) \end{quote}
 
 
 
-\begin{quote}
-Path to the dataset \end{quote}
-
+Id of the dataset. 
 
 \mbox{\Hypertarget{structisae_1_1_config_a10e0978ad4ca51239077a1c6a2b5b31a}\label{structisae_1_1_config_a10e0978ad4ca51239077a1c6a2b5b31a}} 
 \index{isae::Config@{isae::Config}!dataset\_path@{dataset\_path}}
 \index{dataset\_path@{dataset\_path}!isae::Config@{isae::Config}}
 \doxysubsubsection{\texorpdfstring{dataset\_path}{dataset\_path}}
 {\footnotesize\ttfamily std\+::string isae\+::\+Config\+::dataset\+\_\+path}
+
+
+
+Path to the dataset. 
 
 \mbox{\Hypertarget{structisae_1_1_config_a1b84d6dc962007d3490d021312557cae}\label{structisae_1_1_config_a1b84d6dc962007d3490d021312557cae}} 
 \index{isae::Config@{isae::Config}!downsampling@{downsampling}}
@@ -158,9 +112,7 @@ Path to the dataset \end{quote}
 
 
 
-\begin{quote}
-Clip of C\+L\+A\+HE (useful only if it is chosen for contrast enhancement) \end{quote}
-
+Float to reduce the size of the image (0,5 = half the size of the img) 
 
 \mbox{\Hypertarget{structisae_1_1_config_a120073d23bf9a50839e0c33068b6070c}\label{structisae_1_1_config_a120073d23bf9a50839e0c33068b6070c}} 
 \index{isae::Config@{isae::Config}!enable\_visu@{enable\_visu}}
@@ -170,9 +122,7 @@ Clip of C\+L\+A\+HE (useful only if it is chosen for contrast enhancement) \end{
 
 
 
-\begin{quote}
-Allow to run front-\/end and back-\/end on different threads (unstable...) \end{quote}
-
+Allow visualization. 
 
 \mbox{\Hypertarget{structisae_1_1_config_a4a0730ae467445546a8fc2a15b3ac35d}\label{structisae_1_1_config_a4a0730ae467445546a8fc2a15b3ac35d}} 
 \index{isae::Config@{isae::Config}!features\_handled@{features\_handled}}
@@ -182,9 +132,7 @@ Allow to run front-\/end and back-\/end on different threads (unstable...) \end{
 
 
 
-\begin{quote}
-Threshold on maximum length for triangle filtering \end{quote}
-
+types of features the slam will work on separated with commas (,) 
 
 \mbox{\Hypertarget{structisae_1_1_config_a6a81e78c0fae5c7ef397969d9d788164}\label{structisae_1_1_config_a6a81e78c0fae5c7ef397969d9d788164}} 
 \index{isae::Config@{isae::Config}!fixed\_frame\_number@{fixed\_frame\_number}}
@@ -194,9 +142,7 @@ Threshold on maximum length for triangle filtering \end{quote}
 
 
 
-\begin{quote}
-Size maximum of the sliding windown \end{quote}
-
+Number of fixed frame for gauge fixing. 
 
 \mbox{\Hypertarget{structisae_1_1_config_a327a1dbc966f3a4bf9b7084da7a633a0}\label{structisae_1_1_config_a327a1dbc966f3a4bf9b7084da7a633a0}} 
 \index{isae::Config@{isae::Config}!marginalization@{marginalization}}
@@ -206,9 +152,7 @@ Size maximum of the sliding windown \end{quote}
 
 
 
-\begin{quote}
-Float to reduce the size of the image (0,5 = half the size of the img) \end{quote}
-
+0 no marginalization, 1 marginalization 
 
 \mbox{\Hypertarget{structisae_1_1_config_aa0e2c6092ecfffa24cd50713ba14db81}\label{structisae_1_1_config_aa0e2c6092ecfffa24cd50713ba14db81}} 
 \index{isae::Config@{isae::Config}!max\_kf\_number@{max\_kf\_number}}
@@ -218,9 +162,7 @@ Float to reduce the size of the image (0,5 = half the size of the img) \end{quot
 
 
 
-\begin{quote}
-Minimum KF for optimization \end{quote}
-
+Size maximum of the sliding windown. 
 
 \mbox{\Hypertarget{structisae_1_1_config_aaf5721dd1b10b94303e6971966444c8a}\label{structisae_1_1_config_aaf5721dd1b10b94303e6971966444c8a}} 
 \index{isae::Config@{isae::Config}!max\_length\_tsh@{max\_length\_tsh}}
@@ -230,9 +172,7 @@ Minimum KF for optimization \end{quote}
 
 
 
-\begin{quote}
-Threshold on Z\+N\+CC for triangle filtering \end{quote}
-
+Threshold on maximum length for triangle filtering. 
 
 \mbox{\Hypertarget{structisae_1_1_config_a34497c04afba80a03541342190c79a8c}\label{structisae_1_1_config_a34497c04afba80a03541342190c79a8c}} 
 \index{isae::Config@{isae::Config}!max\_movement\_parallax@{max\_movement\_parallax}}
@@ -242,9 +182,7 @@ Threshold on Z\+N\+CC for triangle filtering \end{quote}
 
 
 
-\begin{quote}
-Below this parallax, no motion is considered \end{quote}
-
+Over this parallax, a KF is voted. 
 
 \mbox{\Hypertarget{structisae_1_1_config_aa92b004a71992e70494d41672c53e2c4}\label{structisae_1_1_config_aa92b004a71992e70494d41672c53e2c4}} 
 \index{isae::Config@{isae::Config}!mesh3D@{mesh3D}}
@@ -254,9 +192,7 @@ Below this parallax, no motion is considered \end{quote}
 
 
 
-\begin{quote}
-Over this parallax, a KF is voted \end{quote}
-
+0 no 3D mesh, 1 3D mesh 
 
 \mbox{\Hypertarget{structisae_1_1_config_afa14d7801fc2e7f9cc0d59b22b062b0c}\label{structisae_1_1_config_afa14d7801fc2e7f9cc0d59b22b062b0c}} 
 \index{isae::Config@{isae::Config}!min\_kf\_number@{min\_kf\_number}}
@@ -266,9 +202,7 @@ Over this parallax, a KF is voted \end{quote}
 
 
 
-\begin{quote}
-Type of tracking (matcher or klt) \end{quote}
-
+Minimum KF for optimization. 
 
 \mbox{\Hypertarget{structisae_1_1_config_adeada101c8bd5025cc0a372499dfd223}\label{structisae_1_1_config_adeada101c8bd5025cc0a372499dfd223}} 
 \index{isae::Config@{isae::Config}!min\_lmk\_number@{min\_lmk\_number}}
@@ -278,9 +212,7 @@ Type of tracking (matcher or klt) \end{quote}
 
 
 
-\begin{quote}
-Number of fixed frame for gauge fixing \end{quote}
-
+Below this number of landmark, a KF is voted. 
 
 \mbox{\Hypertarget{structisae_1_1_config_af3f3c2e778413f7b9b715ee773fcb6b1}\label{structisae_1_1_config_af3f3c2e778413f7b9b715ee773fcb6b1}} 
 \index{isae::Config@{isae::Config}!min\_movement\_parallax@{min\_movement\_parallax}}
@@ -290,9 +222,7 @@ Number of fixed frame for gauge fixing \end{quote}
 
 
 
-\begin{quote}
-Below this number of landmark, a KF is voted \end{quote}
-
+Below this parallax, no motion is considered. 
 
 \mbox{\Hypertarget{structisae_1_1_config_a4be128c4437ee4362fdd5ced4ea7a56b}\label{structisae_1_1_config_a4be128c4437ee4362fdd5ced4ea7a56b}} 
 \index{isae::Config@{isae::Config}!multithreading@{multithreading}}
@@ -302,9 +232,7 @@ Below this number of landmark, a KF is voted \end{quote}
 
 
 
-\begin{quote}
-S\+L\+AM mode (mono, bimono, monovio...) \end{quote}
-
+Allow to run front-\/end and back-\/end on different threads (unstable...) 
 
 \mbox{\Hypertarget{structisae_1_1_config_aeed2138f18471c54a64167aa79386273}\label{structisae_1_1_config_aeed2138f18471c54a64167aa79386273}} 
 \index{isae::Config@{isae::Config}!optimizer@{optimizer}}
@@ -314,9 +242,7 @@ S\+L\+AM mode (mono, bimono, monovio...) \end{quote}
 
 
 
-\begin{quote}
-Allow visualization \end{quote}
-
+Optimizer type (Reprojection\+Error, Angular\+Error...) 
 
 \mbox{\Hypertarget{structisae_1_1_config_a67960a5776073f3da1f1c1238b300b17}\label{structisae_1_1_config_a67960a5776073f3da1f1c1238b300b17}} 
 \index{isae::Config@{isae::Config}!pose\_estimator@{pose\_estimator}}
@@ -326,9 +252,7 @@ Allow visualization \end{quote}
 
 
 
-\begin{quote}
-0 no sparsification, 1 sparsification \end{quote}
-
+Type of pose estimator. 
 
 \mbox{\Hypertarget{structisae_1_1_config_a135286d1cd6545c07ec3821631675e8f}\label{structisae_1_1_config_a135286d1cd6545c07ec3821631675e8f}} 
 \index{isae::Config@{isae::Config}!slam\_mode@{slam\_mode}}
@@ -338,9 +262,7 @@ Allow visualization \end{quote}
 
 
 
-\begin{quote}
-Id of the dataset \end{quote}
-
+S\+L\+AM mode (mono, bimono, monovio...) 
 
 \mbox{\Hypertarget{structisae_1_1_config_a620f65f9f3e337dcb692114bf465b4d1}\label{structisae_1_1_config_a620f65f9f3e337dcb692114bf465b4d1}} 
 \index{isae::Config@{isae::Config}!sparsification@{sparsification}}
@@ -350,9 +272,7 @@ Id of the dataset \end{quote}
 
 
 
-\begin{quote}
-0 no marginalization, 1 marginalization \end{quote}
-
+0 no sparsification, 1 sparsification 
 
 \mbox{\Hypertarget{structisae_1_1_config_adbd202e384159f21f3ff5a32254cd86a}\label{structisae_1_1_config_adbd202e384159f21f3ff5a32254cd86a}} 
 \index{isae::Config@{isae::Config}!tracker@{tracker}}
@@ -362,9 +282,7 @@ Id of the dataset \end{quote}
 
 
 
-\begin{quote}
-Type of pose estimator \end{quote}
-
+Type of tracking (matcher or klt) 
 
 \mbox{\Hypertarget{structisae_1_1_config_a6d1d7c12feb89008fa45fa4282c31d45}\label{structisae_1_1_config_a6d1d7c12feb89008fa45fa4282c31d45}} 
 \index{isae::Config@{isae::Config}!ZNCC\_tsh@{ZNCC\_tsh}}
@@ -374,9 +292,7 @@ Type of pose estimator \end{quote}
 
 
 
-\begin{quote}
-0 no 3D mesh, 1 3D mesh \end{quote}
-
+Threshold on Z\+N\+CC for triangle filtering. 
 
 
 

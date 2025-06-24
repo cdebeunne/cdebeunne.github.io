@@ -74,6 +74,9 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>A class to handles 3D meshing via 2D triangulation on successive KFs.  
+ <a href="classisae_1_1_mesher.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="mesher_8h_source.html">mesher.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -81,34 +84,47 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a30f510a5a8d5ad57a5bcfcf7019382c6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_mesher.html#a30f510a5a8d5ad57a5bcfcf7019382c6">Mesher</a> (std::string slam_mode, double ZNCC_tsh, double max_length_tsh)</td></tr>
 <tr class="separator:a30f510a5a8d5ad57a5bcfcf7019382c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e13544b60c8d067425d028293001910"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="namespaceisae.html#a96382cb94d4e3b90ed93ffc9715ef72d">FeatPolygon</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_mesher.html#a5e13544b60c8d067425d028293001910">createMesh2D</a> (std::shared_ptr&lt; <a class="el" href="classisae_1_1_image_sensor.html">ImageSensor</a> &gt; sensor)</td></tr>
+<tr class="memdesc:a5e13544b60c8d067425d028293001910"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a 2D mesh for a given image sensor.  <a href="classisae_1_1_mesher.html#a5e13544b60c8d067425d028293001910">More...</a><br /></td></tr>
 <tr class="separator:a5e13544b60c8d067425d028293001910"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae6b84813ff2cb05b6f3052d1b9e36d2"><td class="memItemLeft" align="right" valign="top">std::vector&lt; cv::Vec6f &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_mesher.html#aae6b84813ff2cb05b6f3052d1b9e36d2">computeMesh2D</a> (const cv::Size img_size, const std::vector&lt; cv::Point2f &gt; p2f_to_triangulate)</td></tr>
+<tr class="memdesc:aae6b84813ff2cb05b6f3052d1b9e36d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the Delaunnay triangulation of a set of openCV points in an image.  <a href="classisae_1_1_mesher.html#aae6b84813ff2cb05b6f3052d1b9e36d2">More...</a><br /></td></tr>
 <tr class="separator:aae6b84813ff2cb05b6f3052d1b9e36d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc6eb7034e924285f6172b6281cc6c1d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_mesher.html#acc6eb7034e924285f6172b6281cc6c1d">addNewKF</a> (std::shared_ptr&lt; <a class="el" href="classisae_1_1_frame.html">Frame</a> &gt; frame)</td></tr>
+<tr class="memdesc:acc6eb7034e924285f6172b6281cc6c1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">add a new KF in the queue (for the thread)  <a href="classisae_1_1_mesher.html#acc6eb7034e924285f6172b6281cc6c1d">More...</a><br /></td></tr>
 <tr class="separator:acc6eb7034e924285f6172b6281cc6c1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad11d2776d59ac1eb82cb8946678d563"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_mesher.html#aad11d2776d59ac1eb82cb8946678d563">getNewKf</a> ()</td></tr>
 <tr class="separator:aad11d2776d59ac1eb82cb8946678d563"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab45fe75e8a5a3dfdb428a2a67f01da46"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_mesher.html#ab45fe75e8a5a3dfdb428a2a67f01da46">run</a> ()</td></tr>
+<tr class="memdesc:ab45fe75e8a5a3dfdb428a2a67f01da46"><td class="mdescLeft">&#160;</td><td class="mdescRight">The thread function.  <a href="classisae_1_1_mesher.html#ab45fe75e8a5a3dfdb428a2a67f01da46">More...</a><br /></td></tr>
 <tr class="separator:ab45fe75e8a5a3dfdb428a2a67f01da46"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a815ac3fb8fe0f8cd3d1908a1c45e3bf5"><td class="memItemLeft" align="right" valign="top">std::queue&lt; std::shared_ptr&lt; <a class="el" href="classisae_1_1_frame.html">Frame</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_mesher.html#a815ac3fb8fe0f8cd3d1908a1c45e3bf5">_kf_queue</a></td></tr>
+<tr class="memdesc:a815ac3fb8fe0f8cd3d1908a1c45e3bf5"><td class="mdescLeft">&#160;</td><td class="mdescRight">The queue of keyframes to process.  <a href="classisae_1_1_mesher.html#a815ac3fb8fe0f8cd3d1908a1c45e3bf5">More...</a><br /></td></tr>
 <tr class="separator:a815ac3fb8fe0f8cd3d1908a1c45e3bf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea385d63c066464523061c1796d603d3"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classisae_1_1_frame.html">Frame</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_mesher.html#aea385d63c066464523061c1796d603d3">_curr_kf</a></td></tr>
+<tr class="memdesc:aea385d63c066464523061c1796d603d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current keyframe being processed.  <a href="classisae_1_1_mesher.html#aea385d63c066464523061c1796d603d3">More...</a><br /></td></tr>
 <tr class="separator:aea385d63c066464523061c1796d603d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae7235a731907dc46268943fe959a696e"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classisae_1_1_mesh3_d.html">Mesh3D</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_mesher.html#ae7235a731907dc46268943fe959a696e">_mesh_3d</a></td></tr>
+<tr class="memdesc:ae7235a731907dc46268943fe959a696e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The 3D mesh object.  <a href="classisae_1_1_mesher.html#ae7235a731907dc46268943fe959a696e">More...</a><br /></td></tr>
 <tr class="separator:ae7235a731907dc46268943fe959a696e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae55d41730f2ac10c5e6f91e2be5f98e2"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_mesher.html#ae55d41730f2ac10c5e6f91e2be5f98e2">_slam_mode</a></td></tr>
+<tr class="memdesc:ae55d41730f2ac10c5e6f91e2be5f98e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">The SLAM mode (e.g., "nofov", "bimono", etc.)  <a href="classisae_1_1_mesher.html#ae55d41730f2ac10c5e6f91e2be5f98e2">More...</a><br /></td></tr>
 <tr class="separator:ae55d41730f2ac10c5e6f91e2be5f98e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad71af6cae5efe2feba19e2f6c941a2b6"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_mesher.html#ad71af6cae5efe2feba19e2f6c941a2b6">_avg_mesh_t</a></td></tr>
+<tr class="memdesc:ad71af6cae5efe2feba19e2f6c941a2b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Average time taken to process a mesh update for profiling.  <a href="classisae_1_1_mesher.html#ad71af6cae5efe2feba19e2f6c941a2b6">More...</a><br /></td></tr>
 <tr class="separator:ad71af6cae5efe2feba19e2f6c941a2b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af97ccde1434029674e8f47af40ae2e70"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_mesher.html#af97ccde1434029674e8f47af40ae2e70">_n_kf</a></td></tr>
+<tr class="memdesc:af97ccde1434029674e8f47af40ae2e70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of keyframes processed for profiling.  <a href="classisae_1_1_mesher.html#af97ccde1434029674e8f47af40ae2e70">More...</a><br /></td></tr>
 <tr class="separator:af97ccde1434029674e8f47af40ae2e70"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a756291448310f782c11aede751657518"><td class="memItemLeft" align="right" valign="top">std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_mesher.html#a756291448310f782c11aede751657518">_mesher_mtx</a></td></tr>
 <tr class="separator:a756291448310f782c11aede751657518"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A class to handles 3D meshing via 2D triangulation on successive KFs. </p>
+<p>It works as a thread that receives new KFs and computes the 2D mesh for each image sensor then update the 3D Mesh accordingly </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a30f510a5a8d5ad57a5bcfcf7019382c6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a30f510a5a8d5ad57a5bcfcf7019382c6">&#9670;&nbsp;</a></span>Mesher()</h2>
 
@@ -160,6 +176,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>add a new KF in the queue (for the thread) </p>
+
 </div>
 </div>
 <a id="aae6b84813ff2cb05b6f3052d1b9e36d2"></a>
@@ -188,6 +206,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Compute the Delaunnay triangulation of a set of openCV points in an image. </p>
+
 </div>
 </div>
 <a id="a5e13544b60c8d067425d028293001910"></a>
@@ -205,6 +225,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Create a 2D mesh for a given image sensor. </p>
 
 </div>
 </div>
@@ -240,6 +262,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>The thread function. </p>
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -255,6 +279,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Average time taken to process a mesh update for profiling. </p>
+
 </div>
 </div>
 <a id="aea385d63c066464523061c1796d603d3"></a>
@@ -268,6 +294,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>The current keyframe being processed. </p>
 
 </div>
 </div>
@@ -283,6 +311,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>The queue of keyframes to process. </p>
+
 </div>
 </div>
 <a id="ae7235a731907dc46268943fe959a696e"></a>
@@ -296,6 +326,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>The 3D mesh object. </p>
 
 </div>
 </div>
@@ -333,6 +365,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Number of keyframes processed for profiling. </p>
+
 </div>
 </div>
 <a id="ae55d41730f2ac10c5e6f91e2be5f98e2"></a>
@@ -346,6 +380,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>The SLAM mode (e.g., "nofov", "bimono", etc.) </p>
 
 </div>
 </div>

@@ -40,103 +40,55 @@ double \mbox{\hyperlink{classisae_1_1_marginalization_a6ba683f779c8e9906dd6600da
 \begin{DoxyCompactItemize}
 \item 
 int \mbox{\hyperlink{classisae_1_1_marginalization_a5b9106683d3ebf42a6044c80d86daa26}{\+\_\+m}}
-\item 
+\begin{DoxyCompactList}\small\item\em Parametric size of the variables to marginalize. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classisae_1_1_marginalization_a5fa0eefed32070e5200a03053e390672}{\+\_\+n}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-Parametric size of the variables to marginalize \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Parametric size of the variables to keep. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classisae_1_1_marginalization_a101d4f5e54f669137848ed9ed5c7daf1}{\+\_\+n\+\_\+full}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-Parametric size of the variables to keep \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Parametric size of the variables to keep after rank reveilling. \end{DoxyCompactList}\item 
 const double \mbox{\hyperlink{classisae_1_1_marginalization_ae65774c8d79dfc03d8ef86c74af5833c}{\+\_\+eps}} = 1e-\/12
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-Parametric size of the variables to keep after rank reveilling \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Threshold to consider a null eigen value. \end{DoxyCompactList}\item 
 std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \mbox{\hyperlink{classisae_1_1_marginalization_a19f0f7175c624347ed4bef17451b4e7a}{\+\_\+frame\+\_\+to\+\_\+marg}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-Threshold to consider a null eigen value \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classisae_1_1_frame}{Frame}} to marginalize. \end{DoxyCompactList}\item 
 std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \mbox{\hyperlink{classisae_1_1_marginalization_a87e8637cbcb52f9a3014c0dfce077b5a}{\+\_\+frame\+\_\+to\+\_\+keep}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-\mbox{\hyperlink{classisae_1_1_frame}{Frame}} to marginalize \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classisae_1_1_frame}{Frame}} to keep. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{namespaceisae_a4b744e0e080a733838eb133deda894aa}{typed\+\_\+vec\+\_\+landmarks}} \mbox{\hyperlink{classisae_1_1_marginalization_abf678dc12a0eb7ac313eddc58e3ae973}{\+\_\+lmk\+\_\+to\+\_\+keep}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-\mbox{\hyperlink{classisae_1_1_frame}{Frame}} to keep \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Set of landmarks to keep. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{namespaceisae_a4b744e0e080a733838eb133deda894aa}{typed\+\_\+vec\+\_\+landmarks}} \mbox{\hyperlink{classisae_1_1_marginalization_a52aa845eebd0798dc3ac6437a90f8a22}{\+\_\+lmk\+\_\+to\+\_\+marg}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-Set of landmarks to keep \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Set of landmarks to marginalize. \end{DoxyCompactList}\item 
 std\+::unordered\+\_\+map$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$, int $>$ \mbox{\hyperlink{classisae_1_1_marginalization_a0fb0e2599f2c1f2834ea0e9003efefdd}{\+\_\+map\+\_\+frame\+\_\+idx}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-Set of landmarks to marginalize \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Map between frames and indices in \+\_\+\+Ak. \end{DoxyCompactList}\item 
 std\+::unordered\+\_\+map$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_landmark}{A\+Landmark}} $>$, int $>$ \mbox{\hyperlink{classisae_1_1_marginalization_aa2b364c8de398dcacff9b8edae53adc5}{\+\_\+map\+\_\+lmk\+\_\+idx}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-Map between frames and indices in \+\_\+\+Ak \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Map between landmarks and indices in \+\_\+\+Ak. \end{DoxyCompactList}\item 
 std\+::unordered\+\_\+map$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$, Eigen\+::\+Matrix\+Xd $>$ \mbox{\hyperlink{classisae_1_1_marginalization_a09117ead54dcc44d16ebfa0d244eb86b}{\+\_\+map\+\_\+frame\+\_\+inf}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-Map between landmarks and indices in \+\_\+\+Ak \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Map between frame and their marginal information matrix. \end{DoxyCompactList}\item 
 std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structisae_1_1_marginalization_block_info}{Marginalization\+Block\+Info}} $>$ $>$ \mbox{\hyperlink{classisae_1_1_marginalization_a8263d8ff60d0eb4af4d1583091b05864}{\+\_\+marginalization\+\_\+blocks}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-Map between frame and their marginal information matrix \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Vector of \mbox{\hyperlink{classisae_1_1_marginalization}{Marginalization}} blocks to derive \+\_\+\+Ak. \end{DoxyCompactList}\item 
 std\+::unordered\+\_\+map$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_landmark}{A\+Landmark}} $>$, Eigen\+::\+Matrix3d $>$ \mbox{\hyperlink{classisae_1_1_marginalization_ae666a7e62f196220eb4c0ea0b8bf2320}{\+\_\+map\+\_\+lmk\+\_\+inf}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-Vector of \mbox{\hyperlink{classisae_1_1_marginalization}{Marginalization}} blocks to derive \+\_\+\+Ak \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Map between landmarks and info mat of sparse relative prior factors. \end{DoxyCompactList}\item 
 std\+::unordered\+\_\+map$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_landmark}{A\+Landmark}} $>$, Eigen\+::\+Vector3d $>$ \mbox{\hyperlink{classisae_1_1_marginalization_a4e8a0c9b57d20c1b24abba640e823397}{\+\_\+map\+\_\+lmk\+\_\+prior}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-Map between landmarks and info mat of sparse relative prior factors \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Map between landmarks and priors of sparse prior relative factors. \end{DoxyCompactList}\item 
 std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_landmark}{A\+Landmark}} $>$ \mbox{\hyperlink{classisae_1_1_marginalization_a439bc93ad1daac7fb58f8e46176b22c9}{\+\_\+lmk\+\_\+with\+\_\+prior}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-Map between landmarks and priors of sparse prior relative factors \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Landmark that has an absolute prior factor. \end{DoxyCompactList}\item 
 Eigen\+::\+Matrix3d \mbox{\hyperlink{classisae_1_1_marginalization_a5d1cfb5d9d6b39c46ca189bfca92b64b}{\+\_\+info\+\_\+lmk}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-Landmark that has an absolute prior factor \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Information matrix of the landmark absolute prior. \end{DoxyCompactList}\item 
 Eigen\+::\+Vector3d \mbox{\hyperlink{classisae_1_1_marginalization_af5a6b29051e12cc034338e3c7548fac1}{\+\_\+prior\+\_\+lmk}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-Information matrix of the landmark absolute prior \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Prior of the landmark absolute prior. \end{DoxyCompactList}\item 
 Eigen\+::\+Matrix\+Xd \mbox{\hyperlink{classisae_1_1_marginalization_aef7b9eebb23f5ee9fb85bfe1e4f5bda1}{\+\_\+\+Ak}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-Prior of the landmark absolute prior \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Information matrix of the subproblem. \end{DoxyCompactList}\item 
 Eigen\+::\+Vector\+Xd \mbox{\hyperlink{classisae_1_1_marginalization_aff1a083d46a3aa2b581c372fb6024a91}{\+\_\+bk}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-Information matrix of the subproblem \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Gradient of the subproblem. \end{DoxyCompactList}\item 
 Eigen\+::\+Matrix\+Xd \mbox{\hyperlink{classisae_1_1_marginalization_a783077c6a6cccc6c1809dd6cea759656}{\+\_\+\+Sigma\+\_\+k}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-Gradient of the subproblem \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Covariance of the dense prior. \end{DoxyCompactList}\item 
 Eigen\+::\+Matrix\+Xd \mbox{\hyperlink{classisae_1_1_marginalization_a73cb280873cff9625069d747c19c614e}{\+\_\+U}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-Covariance of the dense prior \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Eigen vectors that have non null eigen values. \end{DoxyCompactList}\item 
 Eigen\+::\+Vector\+Xd \mbox{\hyperlink{classisae_1_1_marginalization_a7c5d5cc89812b9b844b7894eccf8bb82}{\+\_\+\+Lambda}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-Eigen vectors that have non null eigen values \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Non null Eigen values. \end{DoxyCompactList}\item 
 Eigen\+::\+Vector\+Xd \mbox{\hyperlink{classisae_1_1_marginalization_ac5dc8cc3ab1e4f802b1fc0703e77623f}{\+\_\+\+Sigma}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-Non null Eigen values \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Inverse of \+\_\+\+Lambda. \end{DoxyCompactList}\item 
 Eigen\+::\+Matrix\+Xd \mbox{\hyperlink{classisae_1_1_marginalization_a4b642d48616608aa6e94ff61978b491e}{\+\_\+marginalization\+\_\+jacobian}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-Inverse of \+\_\+\+Lambda \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Jacobian of the dense prior factor. \end{DoxyCompactList}\item 
 Eigen\+::\+Vector\+Xd \mbox{\hyperlink{classisae_1_1_marginalization_a9343606535c39563abfdf09d20782c77}{\+\_\+marginalization\+\_\+residual}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-Jacobian of the dense prior factor \end{quote}
-\end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Residual of the dense prior factor. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -312,9 +264,7 @@ L\+A\+N\+D\+M\+A\+RK C\+H\+A\+IN ///
 
 
 
-\begin{quote}
-Prior of the landmark absolute prior \end{quote}
-
+Information matrix of the subproblem. 
 
 \mbox{\Hypertarget{classisae_1_1_marginalization_aff1a083d46a3aa2b581c372fb6024a91}\label{classisae_1_1_marginalization_aff1a083d46a3aa2b581c372fb6024a91}} 
 \index{isae::Marginalization@{isae::Marginalization}!\_bk@{\_bk}}
@@ -324,9 +274,7 @@ Prior of the landmark absolute prior \end{quote}
 
 
 
-\begin{quote}
-Information matrix of the subproblem \end{quote}
-
+Gradient of the subproblem. 
 
 \mbox{\Hypertarget{classisae_1_1_marginalization_ae65774c8d79dfc03d8ef86c74af5833c}\label{classisae_1_1_marginalization_ae65774c8d79dfc03d8ef86c74af5833c}} 
 \index{isae::Marginalization@{isae::Marginalization}!\_eps@{\_eps}}
@@ -336,9 +284,7 @@ Information matrix of the subproblem \end{quote}
 
 
 
-\begin{quote}
-Parametric size of the variables to keep after rank reveilling \end{quote}
-
+Threshold to consider a null eigen value. 
 
 \mbox{\Hypertarget{classisae_1_1_marginalization_a87e8637cbcb52f9a3014c0dfce077b5a}\label{classisae_1_1_marginalization_a87e8637cbcb52f9a3014c0dfce077b5a}} 
 \index{isae::Marginalization@{isae::Marginalization}!\_frame\_to\_keep@{\_frame\_to\_keep}}
@@ -348,9 +294,7 @@ Parametric size of the variables to keep after rank reveilling \end{quote}
 
 
 
-\begin{quote}
-\mbox{\hyperlink{classisae_1_1_frame}{Frame}} to marginalize \end{quote}
-
+\mbox{\hyperlink{classisae_1_1_frame}{Frame}} to keep. 
 
 \mbox{\Hypertarget{classisae_1_1_marginalization_a19f0f7175c624347ed4bef17451b4e7a}\label{classisae_1_1_marginalization_a19f0f7175c624347ed4bef17451b4e7a}} 
 \index{isae::Marginalization@{isae::Marginalization}!\_frame\_to\_marg@{\_frame\_to\_marg}}
@@ -360,9 +304,7 @@ Parametric size of the variables to keep after rank reveilling \end{quote}
 
 
 
-\begin{quote}
-Threshold to consider a null eigen value \end{quote}
-
+\mbox{\hyperlink{classisae_1_1_frame}{Frame}} to marginalize. 
 
 \mbox{\Hypertarget{classisae_1_1_marginalization_a5d1cfb5d9d6b39c46ca189bfca92b64b}\label{classisae_1_1_marginalization_a5d1cfb5d9d6b39c46ca189bfca92b64b}} 
 \index{isae::Marginalization@{isae::Marginalization}!\_info\_lmk@{\_info\_lmk}}
@@ -372,9 +314,7 @@ Threshold to consider a null eigen value \end{quote}
 
 
 
-\begin{quote}
-Landmark that has an absolute prior factor \end{quote}
-
+Information matrix of the landmark absolute prior. 
 
 \mbox{\Hypertarget{classisae_1_1_marginalization_a7c5d5cc89812b9b844b7894eccf8bb82}\label{classisae_1_1_marginalization_a7c5d5cc89812b9b844b7894eccf8bb82}} 
 \index{isae::Marginalization@{isae::Marginalization}!\_Lambda@{\_Lambda}}
@@ -384,9 +324,7 @@ Landmark that has an absolute prior factor \end{quote}
 
 
 
-\begin{quote}
-Eigen vectors that have non null eigen values \end{quote}
-
+Non null Eigen values. 
 
 \mbox{\Hypertarget{classisae_1_1_marginalization_abf678dc12a0eb7ac313eddc58e3ae973}\label{classisae_1_1_marginalization_abf678dc12a0eb7ac313eddc58e3ae973}} 
 \index{isae::Marginalization@{isae::Marginalization}!\_lmk\_to\_keep@{\_lmk\_to\_keep}}
@@ -396,9 +334,7 @@ Eigen vectors that have non null eigen values \end{quote}
 
 
 
-\begin{quote}
-\mbox{\hyperlink{classisae_1_1_frame}{Frame}} to keep \end{quote}
-
+Set of landmarks to keep. 
 
 \mbox{\Hypertarget{classisae_1_1_marginalization_a52aa845eebd0798dc3ac6437a90f8a22}\label{classisae_1_1_marginalization_a52aa845eebd0798dc3ac6437a90f8a22}} 
 \index{isae::Marginalization@{isae::Marginalization}!\_lmk\_to\_marg@{\_lmk\_to\_marg}}
@@ -408,9 +344,7 @@ Eigen vectors that have non null eigen values \end{quote}
 
 
 
-\begin{quote}
-Set of landmarks to keep \end{quote}
-
+Set of landmarks to marginalize. 
 
 \mbox{\Hypertarget{classisae_1_1_marginalization_a439bc93ad1daac7fb58f8e46176b22c9}\label{classisae_1_1_marginalization_a439bc93ad1daac7fb58f8e46176b22c9}} 
 \index{isae::Marginalization@{isae::Marginalization}!\_lmk\_with\_prior@{\_lmk\_with\_prior}}
@@ -420,15 +354,17 @@ Set of landmarks to keep \end{quote}
 
 
 
-\begin{quote}
-Map between landmarks and priors of sparse prior relative factors \end{quote}
-
+Landmark that has an absolute prior factor. 
 
 \mbox{\Hypertarget{classisae_1_1_marginalization_a5b9106683d3ebf42a6044c80d86daa26}\label{classisae_1_1_marginalization_a5b9106683d3ebf42a6044c80d86daa26}} 
 \index{isae::Marginalization@{isae::Marginalization}!\_m@{\_m}}
 \index{\_m@{\_m}!isae::Marginalization@{isae::Marginalization}}
 \doxysubsubsection{\texorpdfstring{\_m}{\_m}}
 {\footnotesize\ttfamily int isae\+::\+Marginalization\+::\+\_\+m}
+
+
+
+Parametric size of the variables to marginalize. 
 
 \mbox{\Hypertarget{classisae_1_1_marginalization_a0fb0e2599f2c1f2834ea0e9003efefdd}\label{classisae_1_1_marginalization_a0fb0e2599f2c1f2834ea0e9003efefdd}} 
 \index{isae::Marginalization@{isae::Marginalization}!\_map\_frame\_idx@{\_map\_frame\_idx}}
@@ -438,9 +374,7 @@ Map between landmarks and priors of sparse prior relative factors \end{quote}
 
 
 
-\begin{quote}
-Set of landmarks to marginalize \end{quote}
-
+Map between frames and indices in \+\_\+\+Ak. 
 
 \mbox{\Hypertarget{classisae_1_1_marginalization_a09117ead54dcc44d16ebfa0d244eb86b}\label{classisae_1_1_marginalization_a09117ead54dcc44d16ebfa0d244eb86b}} 
 \index{isae::Marginalization@{isae::Marginalization}!\_map\_frame\_inf@{\_map\_frame\_inf}}
@@ -450,9 +384,7 @@ Set of landmarks to marginalize \end{quote}
 
 
 
-\begin{quote}
-Map between landmarks and indices in \+\_\+\+Ak \end{quote}
-
+Map between frame and their marginal information matrix. 
 
 \mbox{\Hypertarget{classisae_1_1_marginalization_aa2b364c8de398dcacff9b8edae53adc5}\label{classisae_1_1_marginalization_aa2b364c8de398dcacff9b8edae53adc5}} 
 \index{isae::Marginalization@{isae::Marginalization}!\_map\_lmk\_idx@{\_map\_lmk\_idx}}
@@ -462,9 +394,7 @@ Map between landmarks and indices in \+\_\+\+Ak \end{quote}
 
 
 
-\begin{quote}
-Map between frames and indices in \+\_\+\+Ak \end{quote}
-
+Map between landmarks and indices in \+\_\+\+Ak. 
 
 \mbox{\Hypertarget{classisae_1_1_marginalization_ae666a7e62f196220eb4c0ea0b8bf2320}\label{classisae_1_1_marginalization_ae666a7e62f196220eb4c0ea0b8bf2320}} 
 \index{isae::Marginalization@{isae::Marginalization}!\_map\_lmk\_inf@{\_map\_lmk\_inf}}
@@ -474,9 +404,7 @@ Map between frames and indices in \+\_\+\+Ak \end{quote}
 
 
 
-\begin{quote}
-Vector of \mbox{\hyperlink{classisae_1_1_marginalization}{Marginalization}} blocks to derive \+\_\+\+Ak \end{quote}
-
+Map between landmarks and info mat of sparse relative prior factors. 
 
 \mbox{\Hypertarget{classisae_1_1_marginalization_a4e8a0c9b57d20c1b24abba640e823397}\label{classisae_1_1_marginalization_a4e8a0c9b57d20c1b24abba640e823397}} 
 \index{isae::Marginalization@{isae::Marginalization}!\_map\_lmk\_prior@{\_map\_lmk\_prior}}
@@ -486,9 +414,7 @@ Vector of \mbox{\hyperlink{classisae_1_1_marginalization}{Marginalization}} bloc
 
 
 
-\begin{quote}
-Map between landmarks and info mat of sparse relative prior factors \end{quote}
-
+Map between landmarks and priors of sparse prior relative factors. 
 
 \mbox{\Hypertarget{classisae_1_1_marginalization_a8263d8ff60d0eb4af4d1583091b05864}\label{classisae_1_1_marginalization_a8263d8ff60d0eb4af4d1583091b05864}} 
 \index{isae::Marginalization@{isae::Marginalization}!\_marginalization\_blocks@{\_marginalization\_blocks}}
@@ -498,9 +424,7 @@ Map between landmarks and info mat of sparse relative prior factors \end{quote}
 
 
 
-\begin{quote}
-Map between frame and their marginal information matrix \end{quote}
-
+Vector of \mbox{\hyperlink{classisae_1_1_marginalization}{Marginalization}} blocks to derive \+\_\+\+Ak. 
 
 \mbox{\Hypertarget{classisae_1_1_marginalization_a4b642d48616608aa6e94ff61978b491e}\label{classisae_1_1_marginalization_a4b642d48616608aa6e94ff61978b491e}} 
 \index{isae::Marginalization@{isae::Marginalization}!\_marginalization\_jacobian@{\_marginalization\_jacobian}}
@@ -510,9 +434,7 @@ Map between frame and their marginal information matrix \end{quote}
 
 
 
-\begin{quote}
-Inverse of \+\_\+\+Lambda \end{quote}
-
+Jacobian of the dense prior factor. 
 
 \mbox{\Hypertarget{classisae_1_1_marginalization_a9343606535c39563abfdf09d20782c77}\label{classisae_1_1_marginalization_a9343606535c39563abfdf09d20782c77}} 
 \index{isae::Marginalization@{isae::Marginalization}!\_marginalization\_residual@{\_marginalization\_residual}}
@@ -522,9 +444,7 @@ Inverse of \+\_\+\+Lambda \end{quote}
 
 
 
-\begin{quote}
-Jacobian of the dense prior factor \end{quote}
-
+Residual of the dense prior factor. 
 
 \mbox{\Hypertarget{classisae_1_1_marginalization_a5fa0eefed32070e5200a03053e390672}\label{classisae_1_1_marginalization_a5fa0eefed32070e5200a03053e390672}} 
 \index{isae::Marginalization@{isae::Marginalization}!\_n@{\_n}}
@@ -534,9 +454,7 @@ Jacobian of the dense prior factor \end{quote}
 
 
 
-\begin{quote}
-Parametric size of the variables to marginalize \end{quote}
-
+Parametric size of the variables to keep. 
 
 \mbox{\Hypertarget{classisae_1_1_marginalization_a101d4f5e54f669137848ed9ed5c7daf1}\label{classisae_1_1_marginalization_a101d4f5e54f669137848ed9ed5c7daf1}} 
 \index{isae::Marginalization@{isae::Marginalization}!\_n\_full@{\_n\_full}}
@@ -546,9 +464,7 @@ Parametric size of the variables to marginalize \end{quote}
 
 
 
-\begin{quote}
-Parametric size of the variables to keep \end{quote}
-
+Parametric size of the variables to keep after rank reveilling. 
 
 \mbox{\Hypertarget{classisae_1_1_marginalization_af5a6b29051e12cc034338e3c7548fac1}\label{classisae_1_1_marginalization_af5a6b29051e12cc034338e3c7548fac1}} 
 \index{isae::Marginalization@{isae::Marginalization}!\_prior\_lmk@{\_prior\_lmk}}
@@ -558,9 +474,7 @@ Parametric size of the variables to keep \end{quote}
 
 
 
-\begin{quote}
-Information matrix of the landmark absolute prior \end{quote}
-
+Prior of the landmark absolute prior. 
 
 \mbox{\Hypertarget{classisae_1_1_marginalization_ac5dc8cc3ab1e4f802b1fc0703e77623f}\label{classisae_1_1_marginalization_ac5dc8cc3ab1e4f802b1fc0703e77623f}} 
 \index{isae::Marginalization@{isae::Marginalization}!\_Sigma@{\_Sigma}}
@@ -570,9 +484,7 @@ Information matrix of the landmark absolute prior \end{quote}
 
 
 
-\begin{quote}
-Non null Eigen values \end{quote}
-
+Inverse of \+\_\+\+Lambda. 
 
 \mbox{\Hypertarget{classisae_1_1_marginalization_a783077c6a6cccc6c1809dd6cea759656}\label{classisae_1_1_marginalization_a783077c6a6cccc6c1809dd6cea759656}} 
 \index{isae::Marginalization@{isae::Marginalization}!\_Sigma\_k@{\_Sigma\_k}}
@@ -582,9 +494,7 @@ Non null Eigen values \end{quote}
 
 
 
-\begin{quote}
-Gradient of the subproblem \end{quote}
-
+Covariance of the dense prior. 
 
 \mbox{\Hypertarget{classisae_1_1_marginalization_a73cb280873cff9625069d747c19c614e}\label{classisae_1_1_marginalization_a73cb280873cff9625069d747c19c614e}} 
 \index{isae::Marginalization@{isae::Marginalization}!\_U@{\_U}}
@@ -594,9 +504,7 @@ Gradient of the subproblem \end{quote}
 
 
 
-\begin{quote}
-Covariance of the dense prior \end{quote}
-
+Eigen vectors that have non null eigen values. 
 
 
 

@@ -2,6 +2,11 @@
 \label{classisae_1_1_mesh3_d}\index{isae::Mesh3D@{isae::Mesh3D}}
 
 
+A class to build and update a 3D mesh from 2D features and landmarks.  
+
+
+
+
 {\ttfamily \#include $<$mesh.\+h$>$}
 
 \doxysubsection*{Public Member Functions}
@@ -19,28 +24,28 @@ std\+::vector$<$ Eigen\+::\+Vector3d $>$ \mbox{\hyperlink{classisae_1_1_mesh3_d_
 \item 
 std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \mbox{\hyperlink{classisae_1_1_mesh3_d_a3eac45e126653d6b0f251bf7f0ecb48c}{get\+Frame}} () const
 \item 
-void \mbox{\hyperlink{classisae_1_1_mesh3_d_aa06676f522f7983d927808a984766b23}{update\+Mesh}} (std\+::vector$<$ \mbox{\hyperlink{namespaceisae_a96382cb94d4e3b90ed93ffc9715ef72d}{Feat\+Polygon}} $>$ feats\+\_\+polygon, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ frame)
-\item 
 std\+::unordered\+\_\+map$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_landmark}{A\+Landmark}} $>$, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structisae_1_1_vertex}{Vertex}} $>$ $>$ \mbox{\hyperlink{classisae_1_1_mesh3_d_a9bcbc34724c8f81a04b209902c52f78f}{get\+Map}} ()
 \item 
+void \mbox{\hyperlink{classisae_1_1_mesh3_d_aa06676f522f7983d927808a984766b23}{update\+Mesh}} (std\+::vector$<$ \mbox{\hyperlink{namespaceisae_a96382cb94d4e3b90ed93ffc9715ef72d}{Feat\+Polygon}} $>$ feats\+\_\+polygon, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ frame)
+\begin{DoxyCompactList}\small\item\em Update the 3D mesh with a 2D Mesh of features for a given frame. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classisae_1_1_mesh3_d_a903ea16537daa5badd915ba7969f1e22}{check\+Triangle}} (std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structisae_1_1_vertex}{Vertex}} $>$$>$ vertices)
-\item 
+\begin{DoxyCompactList}\small\item\em Check if a triangle is valid. (i.\+e. no accute angles or too long edges) \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classisae_1_1_mesh3_d_a47c7f1fa5b9056b8bd6c03f0743da60e}{check\+Polygon}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structisae_1_1_polygon}{Polygon}} $>$ polygon)
-\item 
+\begin{DoxyCompactList}\small\item\em Photometric check of a polygon using Z\+N\+CC on a patch on the barycenter of the polygon. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classisae_1_1_mesh3_d_ab333a91ccc47d7f9f3faa5f5b5ddf3eb}{check\+Polygon\+Area}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structisae_1_1_polygon}{Polygon}} $>$ polygon, double area2d)
-\item 
+\begin{DoxyCompactList}\small\item\em E\+X\+P\+E\+R\+I\+M\+E\+N\+T\+AL Photometric check of a polygon using Z\+N\+CC on a patch on the barycenter of the polygon of a given 2D area. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classisae_1_1_mesh3_d_a2cad5dd3b15b223c194aac556dd5e316}{check\+Polygon\+Tri}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structisae_1_1_polygon}{Polygon}} $>$ polygon3d, \mbox{\hyperlink{namespaceisae_a96382cb94d4e3b90ed93ffc9715ef72d}{Feat\+Polygon}} polygon2d)
-\item 
+\begin{DoxyCompactList}\small\item\em E\+X\+P\+E\+R\+I\+M\+E\+N\+T\+AL Photometric check of a polygon using Z\+N\+CC on a patch with the full 2D polygon in it. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classisae_1_1_mesh3_d_a152af3be557b461881c88864b80161a4}{remove\+Polygon}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structisae_1_1_polygon}{Polygon}} $>$ polygon)
 \item 
 void \mbox{\hyperlink{classisae_1_1_mesh3_d_a1c94e8d04a9b89277dd166bde03bec57}{analyse\+Polygon}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structisae_1_1_polygon}{Polygon}} $>$ polygon)
-\item 
+\begin{DoxyCompactList}\small\item\em Compute the barycenter and the normal of a polygon. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classisae_1_1_mesh3_d_ace899911e2ec82ecbb9bd76c028db0f6}{filter\+Mesh}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Remove polygon outliers from the 3D mesh. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classisae_1_1_mesh3_d_a4fef060ea790799b71d2fb3440719934}{project\+Mesh}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Project the mesh on camera 0 of the current frame for raycasting. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classisae_1_1_mesh3_d_ad74058b7321efdb83391f1d38298a966}{generate\+Point\+Cloud}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Generate a point cloud from the mesh with raycasting. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -49,6 +54,11 @@ std\+::mutex \mbox{\hyperlink{classisae_1_1_mesh3_d_a7652022046149ebc291d07c5ae4
 std\+::mutex \mbox{\hyperlink{classisae_1_1_mesh3_d_a1019ba026181393369d32749a44437ca}{\+\_\+pc\+\_\+mtx}}
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+A class to build and update a 3D mesh from 2D features and landmarks. 
+
+It saves all the usefull variables of the current frame used to build / update the mesh. The Mesh data structure is pretty naive for now\+: it is a vector of polygons where each polygon is a vector of vertices. There is room for improvement here. Moreover, it contains all the methods to filter the mesh and to perform raycasting on it. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classisae_1_1_mesh3_d_a53f9126b340af1cd021297847c878738}\label{classisae_1_1_mesh3_d_a53f9126b340af1cd021297847c878738}} 
@@ -78,11 +88,19 @@ std\+::mutex \mbox{\hyperlink{classisae_1_1_mesh3_d_a1019ba026181393369d32749a44
 \doxysubsubsection{\texorpdfstring{analysePolygon()}{analysePolygon()}}
 {\footnotesize\ttfamily void isae\+::\+Mesh3\+D\+::analyse\+Polygon (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structisae_1_1_polygon}{Polygon}} $>$}]{polygon }\end{DoxyParamCaption})}
 
+
+
+Compute the barycenter and the normal of a polygon. 
+
 \mbox{\Hypertarget{classisae_1_1_mesh3_d_a47c7f1fa5b9056b8bd6c03f0743da60e}\label{classisae_1_1_mesh3_d_a47c7f1fa5b9056b8bd6c03f0743da60e}} 
 \index{isae::Mesh3D@{isae::Mesh3D}!checkPolygon@{checkPolygon}}
 \index{checkPolygon@{checkPolygon}!isae::Mesh3D@{isae::Mesh3D}}
 \doxysubsubsection{\texorpdfstring{checkPolygon()}{checkPolygon()}}
 {\footnotesize\ttfamily bool isae\+::\+Mesh3\+D\+::check\+Polygon (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structisae_1_1_polygon}{Polygon}} $>$}]{polygon }\end{DoxyParamCaption})}
+
+
+
+Photometric check of a polygon using Z\+N\+CC on a patch on the barycenter of the polygon. 
 
 \mbox{\Hypertarget{classisae_1_1_mesh3_d_ab333a91ccc47d7f9f3faa5f5b5ddf3eb}\label{classisae_1_1_mesh3_d_ab333a91ccc47d7f9f3faa5f5b5ddf3eb}} 
 \index{isae::Mesh3D@{isae::Mesh3D}!checkPolygonArea@{checkPolygonArea}}
@@ -90,11 +108,19 @@ std\+::mutex \mbox{\hyperlink{classisae_1_1_mesh3_d_a1019ba026181393369d32749a44
 \doxysubsubsection{\texorpdfstring{checkPolygonArea()}{checkPolygonArea()}}
 {\footnotesize\ttfamily bool isae\+::\+Mesh3\+D\+::check\+Polygon\+Area (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structisae_1_1_polygon}{Polygon}} $>$}]{polygon,  }\item[{double}]{area2d }\end{DoxyParamCaption})}
 
+
+
+E\+X\+P\+E\+R\+I\+M\+E\+N\+T\+AL Photometric check of a polygon using Z\+N\+CC on a patch on the barycenter of the polygon of a given 2D area. 
+
 \mbox{\Hypertarget{classisae_1_1_mesh3_d_a2cad5dd3b15b223c194aac556dd5e316}\label{classisae_1_1_mesh3_d_a2cad5dd3b15b223c194aac556dd5e316}} 
 \index{isae::Mesh3D@{isae::Mesh3D}!checkPolygonTri@{checkPolygonTri}}
 \index{checkPolygonTri@{checkPolygonTri}!isae::Mesh3D@{isae::Mesh3D}}
 \doxysubsubsection{\texorpdfstring{checkPolygonTri()}{checkPolygonTri()}}
 {\footnotesize\ttfamily bool isae\+::\+Mesh3\+D\+::check\+Polygon\+Tri (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structisae_1_1_polygon}{Polygon}} $>$}]{polygon3d,  }\item[{\mbox{\hyperlink{namespaceisae_a96382cb94d4e3b90ed93ffc9715ef72d}{Feat\+Polygon}}}]{polygon2d }\end{DoxyParamCaption})}
+
+
+
+E\+X\+P\+E\+R\+I\+M\+E\+N\+T\+AL Photometric check of a polygon using Z\+N\+CC on a patch with the full 2D polygon in it. 
 
 \mbox{\Hypertarget{classisae_1_1_mesh3_d_a903ea16537daa5badd915ba7969f1e22}\label{classisae_1_1_mesh3_d_a903ea16537daa5badd915ba7969f1e22}} 
 \index{isae::Mesh3D@{isae::Mesh3D}!checkTriangle@{checkTriangle}}
@@ -102,17 +128,29 @@ std\+::mutex \mbox{\hyperlink{classisae_1_1_mesh3_d_a1019ba026181393369d32749a44
 \doxysubsubsection{\texorpdfstring{checkTriangle()}{checkTriangle()}}
 {\footnotesize\ttfamily bool isae\+::\+Mesh3\+D\+::check\+Triangle (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structisae_1_1_vertex}{Vertex}} $>$$>$}]{vertices }\end{DoxyParamCaption})}
 
+
+
+Check if a triangle is valid. (i.\+e. no accute angles or too long edges) 
+
 \mbox{\Hypertarget{classisae_1_1_mesh3_d_ace899911e2ec82ecbb9bd76c028db0f6}\label{classisae_1_1_mesh3_d_ace899911e2ec82ecbb9bd76c028db0f6}} 
 \index{isae::Mesh3D@{isae::Mesh3D}!filterMesh@{filterMesh}}
 \index{filterMesh@{filterMesh}!isae::Mesh3D@{isae::Mesh3D}}
 \doxysubsubsection{\texorpdfstring{filterMesh()}{filterMesh()}}
 {\footnotesize\ttfamily void isae\+::\+Mesh3\+D\+::filter\+Mesh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+Remove polygon outliers from the 3D mesh. 
+
 \mbox{\Hypertarget{classisae_1_1_mesh3_d_ad74058b7321efdb83391f1d38298a966}\label{classisae_1_1_mesh3_d_ad74058b7321efdb83391f1d38298a966}} 
 \index{isae::Mesh3D@{isae::Mesh3D}!generatePointCloud@{generatePointCloud}}
 \index{generatePointCloud@{generatePointCloud}!isae::Mesh3D@{isae::Mesh3D}}
 \doxysubsubsection{\texorpdfstring{generatePointCloud()}{generatePointCloud()}}
 {\footnotesize\ttfamily void isae\+::\+Mesh3\+D\+::generate\+Point\+Cloud (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Generate a point cloud from the mesh with raycasting. 
 
 \mbox{\Hypertarget{classisae_1_1_mesh3_d_a3eac45e126653d6b0f251bf7f0ecb48c}\label{classisae_1_1_mesh3_d_a3eac45e126653d6b0f251bf7f0ecb48c}} 
 \index{isae::Mesh3D@{isae::Mesh3D}!getFrame@{getFrame}}
@@ -144,6 +182,10 @@ std\+::mutex \mbox{\hyperlink{classisae_1_1_mesh3_d_a1019ba026181393369d32749a44
 \doxysubsubsection{\texorpdfstring{projectMesh()}{projectMesh()}}
 {\footnotesize\ttfamily void isae\+::\+Mesh3\+D\+::project\+Mesh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+Project the mesh on camera 0 of the current frame for raycasting. 
+
 \mbox{\Hypertarget{classisae_1_1_mesh3_d_a152af3be557b461881c88864b80161a4}\label{classisae_1_1_mesh3_d_a152af3be557b461881c88864b80161a4}} 
 \index{isae::Mesh3D@{isae::Mesh3D}!removePolygon@{removePolygon}}
 \index{removePolygon@{removePolygon}!isae::Mesh3D@{isae::Mesh3D}}
@@ -156,6 +198,17 @@ std\+::mutex \mbox{\hyperlink{classisae_1_1_mesh3_d_a1019ba026181393369d32749a44
 \doxysubsubsection{\texorpdfstring{updateMesh()}{updateMesh()}}
 {\footnotesize\ttfamily void isae\+::\+Mesh3\+D\+::update\+Mesh (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{namespaceisae_a96382cb94d4e3b90ed93ffc9715ef72d}{Feat\+Polygon}} $>$}]{feats\+\_\+polygon,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$}]{frame }\end{DoxyParamCaption})}
 
+
+
+Update the 3D mesh with a 2D Mesh of features for a given frame. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em feats\+\_\+polygon} & A vector of features to build the mesh. \\
+\hline
+{\em frame} & A shared pointer to the frame containing the features. \\
+\hline
+\end{DoxyParams}
 
 
 \doxysubsection{Member Data Documentation}

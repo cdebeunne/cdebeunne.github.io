@@ -94,31 +94,19 @@ void \mbox{\hyperlink{classisae_1_1_i_m_u_ab36ef0bc113b3a31dea0e3c2d9f2e6f7}{upd
 \begin{DoxyCompactItemize}
 \item 
 Eigen\+::\+Matrix3d \mbox{\hyperlink{classisae_1_1_i_m_u_aea757fb6fb353612d81ccb30aa42371d}{\+\_\+\+J\+\_\+d\+R\+\_\+bg}}
-\item 
+\begin{DoxyCompactList}\small\item\em Jacobian of the delta rotation w.\+r.\+t the gyro bias. \end{DoxyCompactList}\item 
 Eigen\+::\+Matrix3d \mbox{\hyperlink{classisae_1_1_i_m_u_aebf1f508ae12fe5714700253094f6aac}{\+\_\+\+J\+\_\+dv\+\_\+ba}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-Jacobian of the delta rotation w.\+r.\+t the gyro bias \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Jacobian of the delta velocity w.\+r.\+t the accel bias. \end{DoxyCompactList}\item 
 Eigen\+::\+Matrix3d \mbox{\hyperlink{classisae_1_1_i_m_u_a2158e1c9f95b6adb19afdead9056362f}{\+\_\+\+J\+\_\+dv\+\_\+bg}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-Jacobian of the delta velocity w.\+r.\+t the accel bias \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Jacobian of the delta velocity w.\+r.\+t the gyro bias. \end{DoxyCompactList}\item 
 Eigen\+::\+Matrix3d \mbox{\hyperlink{classisae_1_1_i_m_u_a256c0ab7a9cfc8b74f9d1cd6ae6302ce}{\+\_\+\+J\+\_\+dp\+\_\+ba}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-Jacobian of the delta velocity w.\+r.\+t the gyro bias \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Jacobian of the delta position w.\+r.\+t the accel bias. \end{DoxyCompactList}\item 
 Eigen\+::\+Matrix3d \mbox{\hyperlink{classisae_1_1_i_m_u_aafe4d3f23dc321a0f3952204d059d8e9}{\+\_\+\+J\+\_\+dp\+\_\+bg}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-Jacobian of the delta position w.\+r.\+t the accel bias \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Jacobian of the delta position w.\+r.\+t the gyro bias. \end{DoxyCompactList}\item 
 unsigned long long \mbox{\hyperlink{classisae_1_1_i_m_u_aff4a022e41aa445998bb13e2c81afbc2}{\+\_\+timestamp\+\_\+imu}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-Jacobian of the delta position w.\+r.\+t the gyro bias \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Timestamp stored to avoid dependency on the frame. \end{DoxyCompactList}\item 
 Eigen\+::\+Affine3d \mbox{\hyperlink{classisae_1_1_i_m_u_adb9a2f9735174c7cffc5a1aa8da9c0d1}{\+\_\+\+T\+\_\+w\+\_\+f\+\_\+imu}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-Timestamp stored to avoid dependency on the frame \end{quote}
-\end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Transform from the world to the frame to avoid dependency on the frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
 
@@ -338,9 +326,7 @@ Update biases w.\+r.\+t the previous KF (e.\+g. after optimization)
 
 
 
-\begin{quote}
-Jacobian of the delta velocity w.\+r.\+t the gyro bias \end{quote}
-
+Jacobian of the delta position w.\+r.\+t the accel bias. 
 
 \mbox{\Hypertarget{classisae_1_1_i_m_u_aafe4d3f23dc321a0f3952204d059d8e9}\label{classisae_1_1_i_m_u_aafe4d3f23dc321a0f3952204d059d8e9}} 
 \index{isae::IMU@{isae::IMU}!\_J\_dp\_bg@{\_J\_dp\_bg}}
@@ -350,15 +336,17 @@ Jacobian of the delta velocity w.\+r.\+t the gyro bias \end{quote}
 
 
 
-\begin{quote}
-Jacobian of the delta position w.\+r.\+t the accel bias \end{quote}
-
+Jacobian of the delta position w.\+r.\+t the gyro bias. 
 
 \mbox{\Hypertarget{classisae_1_1_i_m_u_aea757fb6fb353612d81ccb30aa42371d}\label{classisae_1_1_i_m_u_aea757fb6fb353612d81ccb30aa42371d}} 
 \index{isae::IMU@{isae::IMU}!\_J\_dR\_bg@{\_J\_dR\_bg}}
 \index{\_J\_dR\_bg@{\_J\_dR\_bg}!isae::IMU@{isae::IMU}}
 \doxysubsubsection{\texorpdfstring{\_J\_dR\_bg}{\_J\_dR\_bg}}
 {\footnotesize\ttfamily Eigen\+::\+Matrix3d isae\+::\+I\+M\+U\+::\+\_\+\+J\+\_\+d\+R\+\_\+bg}
+
+
+
+Jacobian of the delta rotation w.\+r.\+t the gyro bias. 
 
 \mbox{\Hypertarget{classisae_1_1_i_m_u_aebf1f508ae12fe5714700253094f6aac}\label{classisae_1_1_i_m_u_aebf1f508ae12fe5714700253094f6aac}} 
 \index{isae::IMU@{isae::IMU}!\_J\_dv\_ba@{\_J\_dv\_ba}}
@@ -368,9 +356,7 @@ Jacobian of the delta position w.\+r.\+t the accel bias \end{quote}
 
 
 
-\begin{quote}
-Jacobian of the delta rotation w.\+r.\+t the gyro bias \end{quote}
-
+Jacobian of the delta velocity w.\+r.\+t the accel bias. 
 
 \mbox{\Hypertarget{classisae_1_1_i_m_u_a2158e1c9f95b6adb19afdead9056362f}\label{classisae_1_1_i_m_u_a2158e1c9f95b6adb19afdead9056362f}} 
 \index{isae::IMU@{isae::IMU}!\_J\_dv\_bg@{\_J\_dv\_bg}}
@@ -380,9 +366,7 @@ Jacobian of the delta rotation w.\+r.\+t the gyro bias \end{quote}
 
 
 
-\begin{quote}
-Jacobian of the delta velocity w.\+r.\+t the accel bias \end{quote}
-
+Jacobian of the delta velocity w.\+r.\+t the gyro bias. 
 
 \mbox{\Hypertarget{classisae_1_1_i_m_u_adb9a2f9735174c7cffc5a1aa8da9c0d1}\label{classisae_1_1_i_m_u_adb9a2f9735174c7cffc5a1aa8da9c0d1}} 
 \index{isae::IMU@{isae::IMU}!\_T\_w\_f\_imu@{\_T\_w\_f\_imu}}
@@ -392,9 +376,7 @@ Jacobian of the delta velocity w.\+r.\+t the accel bias \end{quote}
 
 
 
-\begin{quote}
-Timestamp stored to avoid dependency on the frame \end{quote}
-
+Transform from the world to the frame to avoid dependency on the frame. 
 
 \mbox{\Hypertarget{classisae_1_1_i_m_u_aff4a022e41aa445998bb13e2c81afbc2}\label{classisae_1_1_i_m_u_aff4a022e41aa445998bb13e2c81afbc2}} 
 \index{isae::IMU@{isae::IMU}!\_timestamp\_imu@{\_timestamp\_imu}}
@@ -404,9 +386,7 @@ Timestamp stored to avoid dependency on the frame \end{quote}
 
 
 
-\begin{quote}
-Jacobian of the delta position w.\+r.\+t the gyro bias \end{quote}
-
+Timestamp stored to avoid dependency on the frame. 
 
 
 

@@ -69,15 +69,11 @@ void \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_a5ebbc2ac160e1bcf300909718c68cb
 \begin{DoxyCompactItemize}
 \item 
 bool \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_a8cbe6932796ead5c22a42f098bb5e49e}{\+\_\+is\+\_\+init}} = false
-\item 
+\begin{DoxyCompactList}\small\item\em Flag for initialization. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_a0b839e70c15c76939af97ee99927dfc3}{\+\_\+successive\+\_\+fails}} = 0
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-Flag for initialization \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Number of successive failure to trigger reinitialization. \end{DoxyCompactList}\item 
 std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_s_l_a_m_parameters}{isae\+::\+S\+L\+A\+M\+Parameters}} $>$ \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_ad02358a54782ca107f3d5e99a108d612}{\+\_\+slam\+\_\+param}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-Number of successive failure to trigger reinitialization \end{quote}
-\end{DoxyCompactList}\item 
+\item 
 std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_a7d09de0fa22c576eaa18922d2f8e7617}{\+\_\+frame\+\_\+to\+\_\+display}}
 \item 
 std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_local_map}{isae\+::\+Local\+Map}} $>$ \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_aeb154e22d37ba97da4983f644ca2c6bf}{\+\_\+local\+\_\+map\+\_\+to\+\_\+display}}
@@ -90,65 +86,37 @@ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_mesh3_d}{Mesh3D}} $>$ \
 \begin{DoxyCompactItemize}
 \item 
 std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_a30ca343387baa2bb2c8fcb48ed9300e5}{\+\_\+frame}}
-\item 
+\begin{DoxyCompactList}\small\item\em Current frame. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{namespaceisae_a5d24f9da33ed2238fec0ac3f04cc8da5}{typed\+\_\+vec\+\_\+match}} \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_abca11aeefa4bb0850ca34658566c7e5b}{\+\_\+matches\+\_\+in\+\_\+time}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-Current frame \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Typed vector of the matches between the last KF and \+\_\+frame. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{namespaceisae_a5d24f9da33ed2238fec0ac3f04cc8da5}{typed\+\_\+vec\+\_\+match}} \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_a7c4e463d6cdd2083db3de4100a1885dc}{\+\_\+matches\+\_\+in\+\_\+time\+\_\+lmk}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-Typed vector of the matches between the last KF and \+\_\+frame \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Typed vector of the matches with landmarks between the last KF and \+\_\+frame. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{namespaceisae_a5d24f9da33ed2238fec0ac3f04cc8da5}{typed\+\_\+vec\+\_\+match}} \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_af9705993f210ffcbffb8a3895e12958f}{\+\_\+matches\+\_\+in\+\_\+frame}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-Typed vector of the matches with landmarks between the last KF and \+\_\+frame \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Typed vector of the matches between the sensors of \+\_\+frame. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{namespaceisae_a5d24f9da33ed2238fec0ac3f04cc8da5}{typed\+\_\+vec\+\_\+match}} \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_a048d35a0f87be36c46f81dcc646391fc}{\+\_\+matches\+\_\+in\+\_\+frame\+\_\+lmk}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-Typed vector of the matches between the sensors of \+\_\+frame \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Typed vector of the matches with landmarks between the sensors of \+\_\+frame. \end{DoxyCompactList}\item 
 std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_local_map}{isae\+::\+Local\+Map}} $>$ \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_ad3641feb65214860635525bb28027995}{\+\_\+local\+\_\+map}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-Typed vector of the matches with landmarks between the sensors of \+\_\+frame \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Current local map. \end{DoxyCompactList}\item 
 std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_global_map}{isae\+::\+Global\+Map}} $>$ \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_a48e025ba0497eafdd57cfe766d524ce5}{\+\_\+global\+\_\+map}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-Current local map \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Current global map. \end{DoxyCompactList}\item 
 std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_mesher}{Mesher}} $>$ \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_ade0ce23e8b63a59eae7418a80d6b7baf}{\+\_\+mesher}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-Current global map \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classisae_1_1_mesher}{Mesher}} of the S\+L\+AM. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_a6a5a97f9b6370b3a26405c0692f3b639}{\+\_\+max\+\_\+movement\+\_\+parallax}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-\mbox{\hyperlink{classisae_1_1_mesher}{Mesher}} of the S\+L\+AM \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Max parallax until a KF is voted. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_a1e49528324b8e9392ac52955e3fab7fc}{\+\_\+min\+\_\+movement\+\_\+parallax}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-Max parallax until a KF is voted \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Under this parallax, no motion is considered. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_aea597da6a069fb9f86daa3c9abaa9dee}{\+\_\+min\+\_\+lmk\+\_\+number}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-Under this parallax, no motion is considered \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Under this number of landmark in \+\_\+frame a KF is voted. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_ab707aa5b340fb77057d5b7820f045efd}{\+\_\+parallax}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-Under this number of landmark in \+\_\+frame a KF is voted \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Parallax between the last KF and \+\_\+frame. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{namespaceisae_a95b4efbae1379c1c22879954528d4008}{Vector6d}} \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_ad0262a6c57ffaac910b899fb52d3e3eb}{\+\_\+6d\+\_\+velocity}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-Parallax between the last KF and \+\_\+frame \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Current Velocity as a Twist vector. \end{DoxyCompactList}\item 
 std\+::mutex \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_a38f045ef945c97cde0feebeb0ad9fc3a}{\+\_\+map\+\_\+mutex}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-Current Velocity as a Twist vector \end{quote}
-\end{DoxyCompactList}\item 
-std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_ac26724bbd8a5f479e148ba0c89bce551}{\+\_\+frame\+\_\+to\+\_\+optim}}
 \item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_ac26724bbd8a5f479e148ba0c89bce551}{\+\_\+frame\+\_\+to\+\_\+optim}}
+\begin{DoxyCompactList}\small\item\em For communication between front-\/end and back-\/end. \end{DoxyCompactList}\item 
 uint \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_a5c4e9ed9200240c6c3169876842606fd}{\+\_\+nframes}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-For communication between front-\/end and back-\/end \end{quote}
-\end{DoxyCompactList}\item 
+\item 
 uint \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_a12bf771db26400d29fb14d2635779d88}{\+\_\+nkeyframes}}
 \item 
 float \mbox{\hyperlink{classisae_1_1_s_l_a_m_core_ae744e98470e43bae86630b47f47d913f}{\+\_\+avg\+\_\+detect\+\_\+t}}
@@ -504,9 +472,7 @@ The number of tracks
 
 
 
-\begin{quote}
-Parallax between the last KF and \+\_\+frame \end{quote}
-
+Current Velocity as a Twist vector. 
 
 \mbox{\Hypertarget{classisae_1_1_s_l_a_m_core_a6514bcca5985ed726a7f2d63c6beb359}\label{classisae_1_1_s_l_a_m_core_a6514bcca5985ed726a7f2d63c6beb359}} 
 \index{isae::SLAMCore@{isae::SLAMCore}!\_avg\_clean\_t@{\_avg\_clean\_t}}
@@ -604,6 +570,10 @@ Parallax between the last KF and \+\_\+frame \end{quote}
 \doxysubsubsection{\texorpdfstring{\_frame}{\_frame}}
 {\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classisae_1_1_frame}{Frame}}$>$ isae\+::\+S\+L\+A\+M\+Core\+::\+\_\+frame\hspace{0.3cm}{\ttfamily [protected]}}
 
+
+
+Current frame. 
+
 \mbox{\Hypertarget{classisae_1_1_s_l_a_m_core_a7d09de0fa22c576eaa18922d2f8e7617}\label{classisae_1_1_s_l_a_m_core_a7d09de0fa22c576eaa18922d2f8e7617}} 
 \index{isae::SLAMCore@{isae::SLAMCore}!\_frame\_to\_display@{\_frame\_to\_display}}
 \index{\_frame\_to\_display@{\_frame\_to\_display}!isae::SLAMCore@{isae::SLAMCore}}
@@ -616,6 +586,10 @@ Parallax between the last KF and \+\_\+frame \end{quote}
 \doxysubsubsection{\texorpdfstring{\_frame\_to\_optim}{\_frame\_to\_optim}}
 {\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classisae_1_1_frame}{Frame}}$>$ isae\+::\+S\+L\+A\+M\+Core\+::\+\_\+frame\+\_\+to\+\_\+optim\hspace{0.3cm}{\ttfamily [protected]}}
 
+
+
+For communication between front-\/end and back-\/end. 
+
 \mbox{\Hypertarget{classisae_1_1_s_l_a_m_core_a48e025ba0497eafdd57cfe766d524ce5}\label{classisae_1_1_s_l_a_m_core_a48e025ba0497eafdd57cfe766d524ce5}} 
 \index{isae::SLAMCore@{isae::SLAMCore}!\_global\_map@{\_global\_map}}
 \index{\_global\_map@{\_global\_map}!isae::SLAMCore@{isae::SLAMCore}}
@@ -624,9 +598,7 @@ Parallax between the last KF and \+\_\+frame \end{quote}
 
 
 
-\begin{quote}
-Current local map \end{quote}
-
+Current global map. 
 
 \mbox{\Hypertarget{classisae_1_1_s_l_a_m_core_a32e03c93a419de8aa3086c56689f964d}\label{classisae_1_1_s_l_a_m_core_a32e03c93a419de8aa3086c56689f964d}} 
 \index{isae::SLAMCore@{isae::SLAMCore}!\_global\_map\_to\_display@{\_global\_map\_to\_display}}
@@ -639,6 +611,10 @@ Current local map \end{quote}
 \index{\_is\_init@{\_is\_init}!isae::SLAMCore@{isae::SLAMCore}}
 \doxysubsubsection{\texorpdfstring{\_is\_init}{\_is\_init}}
 {\footnotesize\ttfamily bool isae\+::\+S\+L\+A\+M\+Core\+::\+\_\+is\+\_\+init = false}
+
+
+
+Flag for initialization. 
 
 \mbox{\Hypertarget{classisae_1_1_s_l_a_m_core_a030d300cc71c671225743487c9fef5e1}\label{classisae_1_1_s_l_a_m_core_a030d300cc71c671225743487c9fef5e1}} 
 \index{isae::SLAMCore@{isae::SLAMCore}!\_lmk\_inmap@{\_lmk\_inmap}}
@@ -654,9 +630,7 @@ Current local map \end{quote}
 
 
 
-\begin{quote}
-Typed vector of the matches with landmarks between the sensors of \+\_\+frame \end{quote}
-
+Current local map. 
 
 \mbox{\Hypertarget{classisae_1_1_s_l_a_m_core_aeb154e22d37ba97da4983f644ca2c6bf}\label{classisae_1_1_s_l_a_m_core_aeb154e22d37ba97da4983f644ca2c6bf}} 
 \index{isae::SLAMCore@{isae::SLAMCore}!\_local\_map\_to\_display@{\_local\_map\_to\_display}}
@@ -670,12 +644,6 @@ Typed vector of the matches with landmarks between the sensors of \+\_\+frame \e
 \doxysubsubsection{\texorpdfstring{\_map\_mutex}{\_map\_mutex}}
 {\footnotesize\ttfamily std\+::mutex isae\+::\+S\+L\+A\+M\+Core\+::\+\_\+map\+\_\+mutex\hspace{0.3cm}{\ttfamily [protected]}}
 
-
-
-\begin{quote}
-Current Velocity as a Twist vector \end{quote}
-
-
 \mbox{\Hypertarget{classisae_1_1_s_l_a_m_core_af9705993f210ffcbffb8a3895e12958f}\label{classisae_1_1_s_l_a_m_core_af9705993f210ffcbffb8a3895e12958f}} 
 \index{isae::SLAMCore@{isae::SLAMCore}!\_matches\_in\_frame@{\_matches\_in\_frame}}
 \index{\_matches\_in\_frame@{\_matches\_in\_frame}!isae::SLAMCore@{isae::SLAMCore}}
@@ -684,9 +652,7 @@ Current Velocity as a Twist vector \end{quote}
 
 
 
-\begin{quote}
-Typed vector of the matches with landmarks between the last KF and \+\_\+frame \end{quote}
-
+Typed vector of the matches between the sensors of \+\_\+frame. 
 
 \mbox{\Hypertarget{classisae_1_1_s_l_a_m_core_a048d35a0f87be36c46f81dcc646391fc}\label{classisae_1_1_s_l_a_m_core_a048d35a0f87be36c46f81dcc646391fc}} 
 \index{isae::SLAMCore@{isae::SLAMCore}!\_matches\_in\_frame\_lmk@{\_matches\_in\_frame\_lmk}}
@@ -696,9 +662,7 @@ Typed vector of the matches with landmarks between the last KF and \+\_\+frame \
 
 
 
-\begin{quote}
-Typed vector of the matches between the sensors of \+\_\+frame \end{quote}
-
+Typed vector of the matches with landmarks between the sensors of \+\_\+frame. 
 
 \mbox{\Hypertarget{classisae_1_1_s_l_a_m_core_abca11aeefa4bb0850ca34658566c7e5b}\label{classisae_1_1_s_l_a_m_core_abca11aeefa4bb0850ca34658566c7e5b}} 
 \index{isae::SLAMCore@{isae::SLAMCore}!\_matches\_in\_time@{\_matches\_in\_time}}
@@ -708,9 +672,7 @@ Typed vector of the matches between the sensors of \+\_\+frame \end{quote}
 
 
 
-\begin{quote}
-Current frame \end{quote}
-
+Typed vector of the matches between the last KF and \+\_\+frame. 
 
 \mbox{\Hypertarget{classisae_1_1_s_l_a_m_core_a7c4e463d6cdd2083db3de4100a1885dc}\label{classisae_1_1_s_l_a_m_core_a7c4e463d6cdd2083db3de4100a1885dc}} 
 \index{isae::SLAMCore@{isae::SLAMCore}!\_matches\_in\_time\_lmk@{\_matches\_in\_time\_lmk}}
@@ -720,9 +682,7 @@ Current frame \end{quote}
 
 
 
-\begin{quote}
-Typed vector of the matches between the last KF and \+\_\+frame \end{quote}
-
+Typed vector of the matches with landmarks between the last KF and \+\_\+frame. 
 
 \mbox{\Hypertarget{classisae_1_1_s_l_a_m_core_a6a5a97f9b6370b3a26405c0692f3b639}\label{classisae_1_1_s_l_a_m_core_a6a5a97f9b6370b3a26405c0692f3b639}} 
 \index{isae::SLAMCore@{isae::SLAMCore}!\_max\_movement\_parallax@{\_max\_movement\_parallax}}
@@ -732,9 +692,7 @@ Typed vector of the matches between the last KF and \+\_\+frame \end{quote}
 
 
 
-\begin{quote}
-\mbox{\hyperlink{classisae_1_1_mesher}{Mesher}} of the S\+L\+AM \end{quote}
-
+Max parallax until a KF is voted. 
 
 \mbox{\Hypertarget{classisae_1_1_s_l_a_m_core_ace61752eecd0f4c5bf4d1db8646e09f2}\label{classisae_1_1_s_l_a_m_core_ace61752eecd0f4c5bf4d1db8646e09f2}} 
 \index{isae::SLAMCore@{isae::SLAMCore}!\_mesh\_to\_display@{\_mesh\_to\_display}}
@@ -750,9 +708,7 @@ Typed vector of the matches between the last KF and \+\_\+frame \end{quote}
 
 
 
-\begin{quote}
-Current global map \end{quote}
-
+\mbox{\hyperlink{classisae_1_1_mesher}{Mesher}} of the S\+L\+AM. 
 
 \mbox{\Hypertarget{classisae_1_1_s_l_a_m_core_aea597da6a069fb9f86daa3c9abaa9dee}\label{classisae_1_1_s_l_a_m_core_aea597da6a069fb9f86daa3c9abaa9dee}} 
 \index{isae::SLAMCore@{isae::SLAMCore}!\_min\_lmk\_number@{\_min\_lmk\_number}}
@@ -762,9 +718,7 @@ Current global map \end{quote}
 
 
 
-\begin{quote}
-Under this parallax, no motion is considered \end{quote}
-
+Under this number of landmark in \+\_\+frame a KF is voted. 
 
 \mbox{\Hypertarget{classisae_1_1_s_l_a_m_core_a1e49528324b8e9392ac52955e3fab7fc}\label{classisae_1_1_s_l_a_m_core_a1e49528324b8e9392ac52955e3fab7fc}} 
 \index{isae::SLAMCore@{isae::SLAMCore}!\_min\_movement\_parallax@{\_min\_movement\_parallax}}
@@ -774,21 +728,13 @@ Under this parallax, no motion is considered \end{quote}
 
 
 
-\begin{quote}
-Max parallax until a KF is voted \end{quote}
-
+Under this parallax, no motion is considered. 
 
 \mbox{\Hypertarget{classisae_1_1_s_l_a_m_core_a5c4e9ed9200240c6c3169876842606fd}\label{classisae_1_1_s_l_a_m_core_a5c4e9ed9200240c6c3169876842606fd}} 
 \index{isae::SLAMCore@{isae::SLAMCore}!\_nframes@{\_nframes}}
 \index{\_nframes@{\_nframes}!isae::SLAMCore@{isae::SLAMCore}}
 \doxysubsubsection{\texorpdfstring{\_nframes}{\_nframes}}
 {\footnotesize\ttfamily uint isae\+::\+S\+L\+A\+M\+Core\+::\+\_\+nframes\hspace{0.3cm}{\ttfamily [protected]}}
-
-
-
-\begin{quote}
-For communication between front-\/end and back-\/end \end{quote}
-
 
 \mbox{\Hypertarget{classisae_1_1_s_l_a_m_core_a12bf771db26400d29fb14d2635779d88}\label{classisae_1_1_s_l_a_m_core_a12bf771db26400d29fb14d2635779d88}} 
 \index{isae::SLAMCore@{isae::SLAMCore}!\_nkeyframes@{\_nkeyframes}}
@@ -804,9 +750,7 @@ For communication between front-\/end and back-\/end \end{quote}
 
 
 
-\begin{quote}
-Under this number of landmark in \+\_\+frame a KF is voted \end{quote}
-
+Parallax between the last KF and \+\_\+frame. 
 
 \mbox{\Hypertarget{classisae_1_1_s_l_a_m_core_ae092c8eb71bfa2f29ab5e0db55ebbd8f}\label{classisae_1_1_s_l_a_m_core_ae092c8eb71bfa2f29ab5e0db55ebbd8f}} 
 \index{isae::SLAMCore@{isae::SLAMCore}!\_removed\_feat@{\_removed\_feat}}
@@ -826,12 +770,6 @@ Under this number of landmark in \+\_\+frame a KF is voted \end{quote}
 \doxysubsubsection{\texorpdfstring{\_slam\_param}{\_slam\_param}}
 {\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classisae_1_1_s_l_a_m_parameters}{isae\+::\+S\+L\+A\+M\+Parameters}}$>$ isae\+::\+S\+L\+A\+M\+Core\+::\+\_\+slam\+\_\+param}
 
-
-
-\begin{quote}
-Number of successive failure to trigger reinitialization \end{quote}
-
-
 \mbox{\Hypertarget{classisae_1_1_s_l_a_m_core_a0b839e70c15c76939af97ee99927dfc3}\label{classisae_1_1_s_l_a_m_core_a0b839e70c15c76939af97ee99927dfc3}} 
 \index{isae::SLAMCore@{isae::SLAMCore}!\_successive\_fails@{\_successive\_fails}}
 \index{\_successive\_fails@{\_successive\_fails}!isae::SLAMCore@{isae::SLAMCore}}
@@ -840,9 +778,7 @@ Number of successive failure to trigger reinitialization \end{quote}
 
 
 
-\begin{quote}
-Flag for initialization \end{quote}
-
+Number of successive failure to trigger reinitialization. 
 
 \mbox{\Hypertarget{classisae_1_1_s_l_a_m_core_a315c5ae2b674006024e9848e24192607}\label{classisae_1_1_s_l_a_m_core_a315c5ae2b674006024e9848e24192607}} 
 \index{isae::SLAMCore@{isae::SLAMCore}!\_timings\_frate@{\_timings\_frate}}

@@ -44,11 +44,9 @@ const std\+::vector$<$ Eigen\+::\+Vector3d $>$ \mbox{\hyperlink{classisae_1_1_an
 const Eigen\+::\+Affine3d \mbox{\hyperlink{classisae_1_1_angular_err_ceres__linexd__dx_ace6134d6a87604b7338c5ded0153a9a9}{\+\_\+\+T\+\_\+s\+\_\+f}}
 \begin{DoxyCompactList}\small\item\em Transform of the frame w.\+r.\+t. the sensor. \end{DoxyCompactList}\item 
 const Eigen\+::\+Affine3d \mbox{\hyperlink{classisae_1_1_angular_err_ceres__linexd__dx_af7d7f4ab8ac9bebb7d71ca497da9f4bd}{\+\_\+\+T\+\_\+f\+\_\+w}}
-\item 
+\begin{DoxyCompactList}\small\item\em Transform of the world w.\+r.\+t. the frame. \end{DoxyCompactList}\item 
 const Eigen\+::\+Affine3d \mbox{\hyperlink{classisae_1_1_angular_err_ceres__linexd__dx_a003e8d2cee1f279cd77bfd60f0baf21e}{\+\_\+\+T\+\_\+w\+\_\+lmk}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-Transform of the world w.\+r.\+t. the frame \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Pose of the landmark in the world frame. \end{DoxyCompactList}\item 
 const double \mbox{\hyperlink{classisae_1_1_angular_err_ceres__linexd__dx_afeaa6e369d58cf345417670d65a4de5d}{\+\_\+sigma}}
 \begin{DoxyCompactList}\small\item\em Standard deviation for the residuals, used as a weight. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -107,6 +105,10 @@ Standard deviation for the residuals, used as a weight.
 \doxysubsubsection{\texorpdfstring{\_T\_f\_w}{\_T\_f\_w}}
 {\footnotesize\ttfamily const Eigen\+::\+Affine3d isae\+::\+Angular\+Err\+Ceres\+\_\+linexd\+\_\+dx\+::\+\_\+\+T\+\_\+f\+\_\+w\hspace{0.3cm}{\ttfamily [protected]}}
 
+
+
+Transform of the world w.\+r.\+t. the frame. 
+
 \mbox{\Hypertarget{classisae_1_1_angular_err_ceres__linexd__dx_ace6134d6a87604b7338c5ded0153a9a9}\label{classisae_1_1_angular_err_ceres__linexd__dx_ace6134d6a87604b7338c5ded0153a9a9}} 
 \index{isae::AngularErrCeres\_linexd\_dx@{isae::AngularErrCeres\_linexd\_dx}!\_T\_s\_f@{\_T\_s\_f}}
 \index{\_T\_s\_f@{\_T\_s\_f}!isae::AngularErrCeres\_linexd\_dx@{isae::AngularErrCeres\_linexd\_dx}}
@@ -125,11 +127,9 @@ Transform of the frame w.\+r.\+t. the sensor.
 
 
 
-\begin{quote}
-Transform of the world w.\+r.\+t. the frame \end{quote}
+Pose of the landmark in the world frame. 
 
 
-Pose of the landmark in the world frame 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

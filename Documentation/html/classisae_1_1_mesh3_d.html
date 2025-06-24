@@ -74,6 +74,9 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>A class to build and update a 3D mesh from 2D features and landmarks.  
+ <a href="classisae_1_1_mesh3_d.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="mesh_8h_source.html">mesh.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -90,27 +93,36 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ab7b1d46cc6015338698bbb1cca831772"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3eac45e126653d6b0f251bf7f0ecb48c"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classisae_1_1_frame.html">Frame</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_mesh3_d.html#a3eac45e126653d6b0f251bf7f0ecb48c">getFrame</a> () const</td></tr>
 <tr class="separator:a3eac45e126653d6b0f251bf7f0ecb48c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa06676f522f7983d927808a984766b23"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_mesh3_d.html#aa06676f522f7983d927808a984766b23">updateMesh</a> (std::vector&lt; <a class="el" href="namespaceisae.html#a96382cb94d4e3b90ed93ffc9715ef72d">FeatPolygon</a> &gt; feats_polygon, std::shared_ptr&lt; <a class="el" href="classisae_1_1_frame.html">Frame</a> &gt; frame)</td></tr>
-<tr class="separator:aa06676f522f7983d927808a984766b23"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9bcbc34724c8f81a04b209902c52f78f"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::shared_ptr&lt; <a class="el" href="classisae_1_1_a_landmark.html">ALandmark</a> &gt;, std::shared_ptr&lt; <a class="el" href="structisae_1_1_vertex.html">Vertex</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_mesh3_d.html#a9bcbc34724c8f81a04b209902c52f78f">getMap</a> ()</td></tr>
 <tr class="separator:a9bcbc34724c8f81a04b209902c52f78f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa06676f522f7983d927808a984766b23"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_mesh3_d.html#aa06676f522f7983d927808a984766b23">updateMesh</a> (std::vector&lt; <a class="el" href="namespaceisae.html#a96382cb94d4e3b90ed93ffc9715ef72d">FeatPolygon</a> &gt; feats_polygon, std::shared_ptr&lt; <a class="el" href="classisae_1_1_frame.html">Frame</a> &gt; frame)</td></tr>
+<tr class="memdesc:aa06676f522f7983d927808a984766b23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the 3D mesh with a 2D Mesh of features for a given frame.  <a href="classisae_1_1_mesh3_d.html#aa06676f522f7983d927808a984766b23">More...</a><br /></td></tr>
+<tr class="separator:aa06676f522f7983d927808a984766b23"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a903ea16537daa5badd915ba7969f1e22"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_mesh3_d.html#a903ea16537daa5badd915ba7969f1e22">checkTriangle</a> (std::vector&lt; std::shared_ptr&lt; <a class="el" href="structisae_1_1_vertex.html">Vertex</a> &gt;&gt; vertices)</td></tr>
+<tr class="memdesc:a903ea16537daa5badd915ba7969f1e22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a triangle is valid. (i.e. no accute angles or too long edges)  <a href="classisae_1_1_mesh3_d.html#a903ea16537daa5badd915ba7969f1e22">More...</a><br /></td></tr>
 <tr class="separator:a903ea16537daa5badd915ba7969f1e22"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a47c7f1fa5b9056b8bd6c03f0743da60e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_mesh3_d.html#a47c7f1fa5b9056b8bd6c03f0743da60e">checkPolygon</a> (std::shared_ptr&lt; <a class="el" href="structisae_1_1_polygon.html">Polygon</a> &gt; polygon)</td></tr>
+<tr class="memdesc:a47c7f1fa5b9056b8bd6c03f0743da60e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Photometric check of a polygon using ZNCC on a patch on the barycenter of the polygon.  <a href="classisae_1_1_mesh3_d.html#a47c7f1fa5b9056b8bd6c03f0743da60e">More...</a><br /></td></tr>
 <tr class="separator:a47c7f1fa5b9056b8bd6c03f0743da60e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab333a91ccc47d7f9f3faa5f5b5ddf3eb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_mesh3_d.html#ab333a91ccc47d7f9f3faa5f5b5ddf3eb">checkPolygonArea</a> (std::shared_ptr&lt; <a class="el" href="structisae_1_1_polygon.html">Polygon</a> &gt; polygon, double area2d)</td></tr>
+<tr class="memdesc:ab333a91ccc47d7f9f3faa5f5b5ddf3eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">EXPERIMENTAL Photometric check of a polygon using ZNCC on a patch on the barycenter of the polygon of a given 2D area.  <a href="classisae_1_1_mesh3_d.html#ab333a91ccc47d7f9f3faa5f5b5ddf3eb">More...</a><br /></td></tr>
 <tr class="separator:ab333a91ccc47d7f9f3faa5f5b5ddf3eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2cad5dd3b15b223c194aac556dd5e316"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_mesh3_d.html#a2cad5dd3b15b223c194aac556dd5e316">checkPolygonTri</a> (std::shared_ptr&lt; <a class="el" href="structisae_1_1_polygon.html">Polygon</a> &gt; polygon3d, <a class="el" href="namespaceisae.html#a96382cb94d4e3b90ed93ffc9715ef72d">FeatPolygon</a> polygon2d)</td></tr>
+<tr class="memdesc:a2cad5dd3b15b223c194aac556dd5e316"><td class="mdescLeft">&#160;</td><td class="mdescRight">EXPERIMENTAL Photometric check of a polygon using ZNCC on a patch with the full 2D polygon in it.  <a href="classisae_1_1_mesh3_d.html#a2cad5dd3b15b223c194aac556dd5e316">More...</a><br /></td></tr>
 <tr class="separator:a2cad5dd3b15b223c194aac556dd5e316"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a152af3be557b461881c88864b80161a4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_mesh3_d.html#a152af3be557b461881c88864b80161a4">removePolygon</a> (std::shared_ptr&lt; <a class="el" href="structisae_1_1_polygon.html">Polygon</a> &gt; polygon)</td></tr>
 <tr class="separator:a152af3be557b461881c88864b80161a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c94e8d04a9b89277dd166bde03bec57"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_mesh3_d.html#a1c94e8d04a9b89277dd166bde03bec57">analysePolygon</a> (std::shared_ptr&lt; <a class="el" href="structisae_1_1_polygon.html">Polygon</a> &gt; polygon)</td></tr>
+<tr class="memdesc:a1c94e8d04a9b89277dd166bde03bec57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the barycenter and the normal of a polygon.  <a href="classisae_1_1_mesh3_d.html#a1c94e8d04a9b89277dd166bde03bec57">More...</a><br /></td></tr>
 <tr class="separator:a1c94e8d04a9b89277dd166bde03bec57"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace899911e2ec82ecbb9bd76c028db0f6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_mesh3_d.html#ace899911e2ec82ecbb9bd76c028db0f6">filterMesh</a> ()</td></tr>
+<tr class="memdesc:ace899911e2ec82ecbb9bd76c028db0f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove polygon outliers from the 3D mesh.  <a href="classisae_1_1_mesh3_d.html#ace899911e2ec82ecbb9bd76c028db0f6">More...</a><br /></td></tr>
 <tr class="separator:ace899911e2ec82ecbb9bd76c028db0f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4fef060ea790799b71d2fb3440719934"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_mesh3_d.html#a4fef060ea790799b71d2fb3440719934">projectMesh</a> ()</td></tr>
+<tr class="memdesc:a4fef060ea790799b71d2fb3440719934"><td class="mdescLeft">&#160;</td><td class="mdescRight">Project the mesh on camera 0 of the current frame for raycasting.  <a href="classisae_1_1_mesh3_d.html#a4fef060ea790799b71d2fb3440719934">More...</a><br /></td></tr>
 <tr class="separator:a4fef060ea790799b71d2fb3440719934"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad74058b7321efdb83391f1d38298a966"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_mesh3_d.html#ad74058b7321efdb83391f1d38298a966">generatePointCloud</a> ()</td></tr>
+<tr class="memdesc:ad74058b7321efdb83391f1d38298a966"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a point cloud from the mesh with raycasting.  <a href="classisae_1_1_mesh3_d.html#ad74058b7321efdb83391f1d38298a966">More...</a><br /></td></tr>
 <tr class="separator:ad74058b7321efdb83391f1d38298a966"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
@@ -120,7 +132,10 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a1019ba026181393369d32749a44437ca"><td class="memItemLeft" align="right" valign="top">std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_mesh3_d.html#a1019ba026181393369d32749a44437ca">_pc_mtx</a></td></tr>
 <tr class="separator:a1019ba026181393369d32749a44437ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A class to build and update a 3D mesh from 2D features and landmarks. </p>
+<p>It saves all the usefull variables of the current frame used to build / update the mesh. The Mesh data structure is pretty naive for now: it is a vector of polygons where each polygon is a vector of vertices. There is room for improvement here. Moreover, it contains all the methods to filter the mesh and to perform raycasting on it. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a53f9126b340af1cd021297847c878738"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a53f9126b340af1cd021297847c878738">&#9670;&nbsp;</a></span>Mesh3D() <span class="overload">[1/2]</span></h2>
 
@@ -224,6 +239,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Compute the barycenter and the normal of a polygon. </p>
+
 </div>
 </div>
 <a id="a47c7f1fa5b9056b8bd6c03f0743da60e"></a>
@@ -241,6 +258,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Photometric check of a polygon using ZNCC on a patch on the barycenter of the polygon. </p>
 
 </div>
 </div>
@@ -270,6 +289,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>EXPERIMENTAL Photometric check of a polygon using ZNCC on a patch on the barycenter of the polygon of a given 2D area. </p>
+
 </div>
 </div>
 <a id="a2cad5dd3b15b223c194aac556dd5e316"></a>
@@ -298,6 +319,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>EXPERIMENTAL Photometric check of a polygon using ZNCC on a patch with the full 2D polygon in it. </p>
+
 </div>
 </div>
 <a id="a903ea16537daa5badd915ba7969f1e22"></a>
@@ -316,6 +339,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Check if a triangle is valid. (i.e. no accute angles or too long edges) </p>
+
 </div>
 </div>
 <a id="ace899911e2ec82ecbb9bd76c028db0f6"></a>
@@ -333,6 +358,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Remove polygon outliers from the 3D mesh. </p>
+
 </div>
 </div>
 <a id="ad74058b7321efdb83391f1d38298a966"></a>
@@ -349,6 +376,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Generate a point cloud from the mesh with raycasting. </p>
 
 </div>
 </div>
@@ -467,6 +496,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Project the mesh on camera 0 of the current frame for raycasting. </p>
+
 </div>
 </div>
 <a id="a152af3be557b461881c88864b80161a4"></a>
@@ -520,6 +551,15 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Update the 3D mesh with a 2D Mesh of features for a given frame. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">feats_polygon</td><td>A vector of features to build the mesh. </td></tr>
+    <tr><td class="paramname">frame</td><td>A shared pointer to the frame containing the features. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

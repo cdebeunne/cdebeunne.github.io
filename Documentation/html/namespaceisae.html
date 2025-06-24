@@ -279,8 +279,10 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_marginalization_test.html">MarginalizationTest</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_mesh3_d.html">Mesh3D</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A class to build and update a 3D mesh from 2D features and landmarks.  <a href="classisae_1_1_mesh3_d.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_mesher.html">Mesher</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A class to handles 3D meshing via 2D triangulation on successive KFs.  <a href="classisae_1_1_mesher.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_mesh_test.html">MeshTest</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -323,6 +325,7 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A Parameter block for 3D position that does the interface between a double* and an Eigen::Vector3d.  <a href="classisae_1_1_point_x_y_z_parameters_block.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structisae_1_1_polygon.html">Polygon</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A polygon in the 3D mesh, representing a surface with its vertices, normal, barycenter, and covariance.  <a href="structisae_1_1_polygon.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classisae_1_1_pose_parameters_block.html">PoseParametersBlock</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A Parameter block for pose that does the interface between a double* and an Eigen::Affine3d.  <a href="classisae_1_1_pose_parameters_block.html#details">More...</a><br /></td></tr>
@@ -383,13 +386,16 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A class that gathers most of the algorithmic blocks of the SLAM system that can be setup in the config file.  <a href="classisae_1_1_s_l_a_m_parameters.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structisae_1_1_vertex.html">Vertex</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A vertex in the 3D mesh, representing a landmark and its associated polygons.  <a href="structisae_1_1_vertex.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
 <tr class="memitem:a96382cb94d4e3b90ed93ffc9715ef72d"><td class="memItemLeft" align="right" valign="top">typedef std::vector&lt; std::shared_ptr&lt; <a class="el" href="classisae_1_1_a_feature.html">AFeature</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceisae.html#a96382cb94d4e3b90ed93ffc9715ef72d">FeatPolygon</a></td></tr>
+<tr class="memdesc:a96382cb94d4e3b90ed93ffc9715ef72d"><td class="mdescLeft">&#160;</td><td class="mdescRight">A vector of features for 2D Meshing.  <a href="namespaceisae.html#a96382cb94d4e3b90ed93ffc9715ef72d">More...</a><br /></td></tr>
 <tr class="separator:a96382cb94d4e3b90ed93ffc9715ef72d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af5a790670f7ac3ef3083b2437f725a0b"><td class="memItemLeft" align="right" valign="top">typedef std::vector&lt; std::shared_ptr&lt; <a class="el" href="classisae_1_1_a_landmark.html">ALandmark</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceisae.html#af5a790670f7ac3ef3083b2437f725a0b">LmkPolygon</a></td></tr>
+<tr class="memdesc:af5a790670f7ac3ef3083b2437f725a0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">A vector of landmarks for 3D Meshing.  <a href="namespaceisae.html#af5a790670f7ac3ef3083b2437f725a0b">More...</a><br /></td></tr>
 <tr class="separator:af5a790670f7ac3ef3083b2437f725a0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a561b9d0acad2bfed893d1b94373ea053"><td class="memItemLeft" align="right" valign="top">typedef std::unordered_map&lt; std::shared_ptr&lt; <a class="el" href="classisae_1_1_a_feature.html">AFeature</a> &gt;, std::vector&lt; std::shared_ptr&lt; <a class="el" href="classisae_1_1_a_feature.html">AFeature</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceisae.html#a561b9d0acad2bfed893d1b94373ea053">vec_feat_matches</a></td></tr>
 <tr class="memdesc:a561b9d0acad2bfed893d1b94373ea053"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unordered map to store matches between two feature lists.  <a href="namespaceisae.html#a561b9d0acad2bfed893d1b94373ea053">More...</a><br /></td></tr>
@@ -518,6 +524,8 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>A vector of features for 2D Meshing. </p>
+
 </div>
 </div>
 <a id="ab4a885dce1b03422dfcdfb9a4747aaef"></a>
@@ -547,6 +555,8 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>A vector of landmarks for 3D Meshing. </p>
 
 </div>
 </div>

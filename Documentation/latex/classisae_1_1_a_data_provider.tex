@@ -52,27 +52,17 @@ void \mbox{\hyperlink{classisae_1_1_a_data_provider_a8724327081236326bda7d3c9619
 \begin{DoxyCompactItemize}
 \item 
 std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structisae_1_1imu__config}{imu\+\_\+config}} $>$ \mbox{\hyperlink{classisae_1_1_a_data_provider_a5308242300102a9c3065891b3df2550c}{\+\_\+imu\+\_\+config}}
-\item 
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classisae_1_1_i_m_u}{I\+MU}} configuration. \end{DoxyCompactList}\item 
 std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structisae_1_1cam__config}{cam\+\_\+config}} $>$ $>$ \mbox{\hyperlink{classisae_1_1_a_data_provider_a6a61549541316d87b018a903bf55b136}{\+\_\+cam\+\_\+configs}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-\mbox{\hyperlink{classisae_1_1_i_m_u}{I\+MU}} configuration \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Vector of camera configurations. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classisae_1_1_a_data_provider_a2e868593602b03cb8bb4cde1c2eef3b9}{\+\_\+ncam}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-Vector of camera configurations \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Number of Image Sensors. \end{DoxyCompactList}\item 
 std\+::queue$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$ $>$ \mbox{\hyperlink{classisae_1_1_a_data_provider_a02dd1cfaafea2c793933990acda6486d}{\+\_\+frame\+\_\+queue}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-Number of Image Sensors \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Queue of frames to be processed. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{structisae_1_1_config}{Config}} \mbox{\hyperlink{classisae_1_1_a_data_provider_af9f0cada9c02783e40496e9a88174fb1}{\+\_\+slam\+\_\+config}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-Queue of frames to be processed \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em S\+L\+AM configuration. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classisae_1_1_a_data_provider_a0d3abaa728e7033b023c068a75416ea1}{\+\_\+nframes}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-S\+L\+AM configuration \end{quote}
-\end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classisae_1_1_frame}{Frame}} counter. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -183,9 +173,7 @@ Return the next frame from the queue.
 
 
 
-\begin{quote}
-\mbox{\hyperlink{classisae_1_1_i_m_u}{I\+MU}} configuration \end{quote}
-
+Vector of camera configurations. 
 
 \mbox{\Hypertarget{classisae_1_1_a_data_provider_a02dd1cfaafea2c793933990acda6486d}\label{classisae_1_1_a_data_provider_a02dd1cfaafea2c793933990acda6486d}} 
 \index{isae::ADataProvider@{isae::ADataProvider}!\_frame\_queue@{\_frame\_queue}}
@@ -195,15 +183,17 @@ Return the next frame from the queue.
 
 
 
-\begin{quote}
-Number of Image Sensors \end{quote}
-
+Queue of frames to be processed. 
 
 \mbox{\Hypertarget{classisae_1_1_a_data_provider_a5308242300102a9c3065891b3df2550c}\label{classisae_1_1_a_data_provider_a5308242300102a9c3065891b3df2550c}} 
 \index{isae::ADataProvider@{isae::ADataProvider}!\_imu\_config@{\_imu\_config}}
 \index{\_imu\_config@{\_imu\_config}!isae::ADataProvider@{isae::ADataProvider}}
 \doxysubsubsection{\texorpdfstring{\_imu\_config}{\_imu\_config}}
 {\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structisae_1_1imu__config}{imu\+\_\+config}}$>$ isae\+::\+A\+Data\+Provider\+::\+\_\+imu\+\_\+config\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\mbox{\hyperlink{classisae_1_1_i_m_u}{I\+MU}} configuration. 
 
 \mbox{\Hypertarget{classisae_1_1_a_data_provider_a2e868593602b03cb8bb4cde1c2eef3b9}\label{classisae_1_1_a_data_provider_a2e868593602b03cb8bb4cde1c2eef3b9}} 
 \index{isae::ADataProvider@{isae::ADataProvider}!\_ncam@{\_ncam}}
@@ -213,9 +203,7 @@ Number of Image Sensors \end{quote}
 
 
 
-\begin{quote}
-Vector of camera configurations \end{quote}
-
+Number of Image Sensors. 
 
 \mbox{\Hypertarget{classisae_1_1_a_data_provider_a0d3abaa728e7033b023c068a75416ea1}\label{classisae_1_1_a_data_provider_a0d3abaa728e7033b023c068a75416ea1}} 
 \index{isae::ADataProvider@{isae::ADataProvider}!\_nframes@{\_nframes}}
@@ -225,9 +213,7 @@ Vector of camera configurations \end{quote}
 
 
 
-\begin{quote}
-S\+L\+AM configuration \end{quote}
-
+\mbox{\hyperlink{classisae_1_1_frame}{Frame}} counter. 
 
 \mbox{\Hypertarget{classisae_1_1_a_data_provider_af9f0cada9c02783e40496e9a88174fb1}\label{classisae_1_1_a_data_provider_af9f0cada9c02783e40496e9a88174fb1}} 
 \index{isae::ADataProvider@{isae::ADataProvider}!\_slam\_config@{\_slam\_config}}
@@ -237,9 +223,7 @@ S\+L\+AM configuration \end{quote}
 
 
 
-\begin{quote}
-Queue of frames to be processed \end{quote}
-
+S\+L\+AM configuration. 
 
 
 

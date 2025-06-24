@@ -60,31 +60,19 @@ uint \mbox{\hyperlink{classisae_1_1_a_optimizer_a8bca26ef94fe6325a39316f4d3a6437
 \begin{DoxyCompactItemize}
 \item 
 std\+::unordered\+\_\+map$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$, \mbox{\hyperlink{classisae_1_1_pose_parameters_block}{Pose\+Parameters\+Block}} $>$ \mbox{\hyperlink{classisae_1_1_a_optimizer_a6f5351077b37b7364d0373b066016658}{\+\_\+map\+\_\+frame\+\_\+posepar}}
-\item 
+\begin{DoxyCompactList}\small\item\em map for pose parameters \end{DoxyCompactList}\item 
 std\+::unordered\+\_\+map$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$, \mbox{\hyperlink{classisae_1_1_point_x_y_z_parameters_block}{Point\+X\+Y\+Z\+Parameters\+Block}} $>$ \mbox{\hyperlink{classisae_1_1_a_optimizer_adbd3c532d0349c9fa81a102afdcdef2b}{\+\_\+map\+\_\+frame\+\_\+velpar}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-map for pose parameters \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em map for velocity parameters \end{DoxyCompactList}\item 
 std\+::unordered\+\_\+map$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$, \mbox{\hyperlink{classisae_1_1_point_x_y_z_parameters_block}{Point\+X\+Y\+Z\+Parameters\+Block}} $>$ \mbox{\hyperlink{classisae_1_1_a_optimizer_a13d29d8bf1207b4dacfc735910281fd9}{\+\_\+map\+\_\+frame\+\_\+dbapar}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-map for velocity parameters \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em map for accelerometer bias parameters \end{DoxyCompactList}\item 
 std\+::unordered\+\_\+map$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_frame}{Frame}} $>$, \mbox{\hyperlink{classisae_1_1_point_x_y_z_parameters_block}{Point\+X\+Y\+Z\+Parameters\+Block}} $>$ \mbox{\hyperlink{classisae_1_1_a_optimizer_ab4e0dd85ed92061b4e05dc277c66667d}{\+\_\+map\+\_\+frame\+\_\+dbgpar}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-map for accelerometer bias parameters \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em map for gyroscope bias parameters \end{DoxyCompactList}\item 
 std\+::unordered\+\_\+map$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_landmark}{A\+Landmark}} $>$, \mbox{\hyperlink{classisae_1_1_point_x_y_z_parameters_block}{Point\+X\+Y\+Z\+Parameters\+Block}} $>$ \mbox{\hyperlink{classisae_1_1_a_optimizer_a32237b262d7c38ba0ddb5605701083a2}{\+\_\+map\+\_\+lmk\+\_\+ptpar}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-map for gyroscope bias parameters \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em map for landmark point parameters \end{DoxyCompactList}\item 
 std\+::unordered\+\_\+map$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_a_landmark}{A\+Landmark}} $>$, \mbox{\hyperlink{classisae_1_1_pose_parameters_block}{Pose\+Parameters\+Block}} $>$ \mbox{\hyperlink{classisae_1_1_a_optimizer_a59d1a335979957a419c965dcd9b684ac}{\+\_\+map\+\_\+lmk\+\_\+posepar}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-map for landmark point parameters \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em map for landmark pose parameters \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classisae_1_1_a_optimizer_aa4286b1fbe0da006f275565d62fbd307}{\+\_\+enable\+\_\+sparsif}} = false
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-map for landmark pose parameters \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em enable sparsification of the marginalization \end{DoxyCompactList}\item 
 std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_marginalization}{Marginalization}} $>$ \mbox{\hyperlink{classisae_1_1_a_optimizer_a5f7bc835fcae19f16d7506c7bc6f2a18}{\+\_\+marginalization}}
 \begin{DoxyCompactList}\small\item\em marginalization object \end{DoxyCompactList}\item 
 std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classisae_1_1_marginalization}{Marginalization}} $>$ \mbox{\hyperlink{classisae_1_1_a_optimizer_ac29361036986a42cc80aae14163dbeb0}{\+\_\+marginalization\+\_\+last}}
@@ -431,11 +419,9 @@ The scale factor used for initialization.
 
 
 
-\begin{quote}
-map for landmark pose parameters \end{quote}
+enable sparsification of the marginalization 
 
-
-enable sparsification of the marginalization \mbox{\Hypertarget{classisae_1_1_a_optimizer_a13d29d8bf1207b4dacfc735910281fd9}\label{classisae_1_1_a_optimizer_a13d29d8bf1207b4dacfc735910281fd9}} 
+\mbox{\Hypertarget{classisae_1_1_a_optimizer_a13d29d8bf1207b4dacfc735910281fd9}\label{classisae_1_1_a_optimizer_a13d29d8bf1207b4dacfc735910281fd9}} 
 \index{isae::AOptimizer@{isae::AOptimizer}!\_map\_frame\_dbapar@{\_map\_frame\_dbapar}}
 \index{\_map\_frame\_dbapar@{\_map\_frame\_dbapar}!isae::AOptimizer@{isae::AOptimizer}}
 \doxysubsubsection{\texorpdfstring{\_map\_frame\_dbapar}{\_map\_frame\_dbapar}}
@@ -443,9 +429,7 @@ enable sparsification of the marginalization \mbox{\Hypertarget{classisae_1_1_a_
 
 
 
-\begin{quote}
-map for velocity parameters \end{quote}
-
+map for accelerometer bias parameters 
 
 \mbox{\Hypertarget{classisae_1_1_a_optimizer_ab4e0dd85ed92061b4e05dc277c66667d}\label{classisae_1_1_a_optimizer_ab4e0dd85ed92061b4e05dc277c66667d}} 
 \index{isae::AOptimizer@{isae::AOptimizer}!\_map\_frame\_dbgpar@{\_map\_frame\_dbgpar}}
@@ -455,15 +439,17 @@ map for velocity parameters \end{quote}
 
 
 
-\begin{quote}
-map for accelerometer bias parameters \end{quote}
-
+map for gyroscope bias parameters 
 
 \mbox{\Hypertarget{classisae_1_1_a_optimizer_a6f5351077b37b7364d0373b066016658}\label{classisae_1_1_a_optimizer_a6f5351077b37b7364d0373b066016658}} 
 \index{isae::AOptimizer@{isae::AOptimizer}!\_map\_frame\_posepar@{\_map\_frame\_posepar}}
 \index{\_map\_frame\_posepar@{\_map\_frame\_posepar}!isae::AOptimizer@{isae::AOptimizer}}
 \doxysubsubsection{\texorpdfstring{\_map\_frame\_posepar}{\_map\_frame\_posepar}}
 {\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classisae_1_1_frame}{Frame}}$>$, \mbox{\hyperlink{classisae_1_1_pose_parameters_block}{Pose\+Parameters\+Block}}$>$ isae\+::\+A\+Optimizer\+::\+\_\+map\+\_\+frame\+\_\+posepar\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+map for pose parameters 
 
 \mbox{\Hypertarget{classisae_1_1_a_optimizer_adbd3c532d0349c9fa81a102afdcdef2b}\label{classisae_1_1_a_optimizer_adbd3c532d0349c9fa81a102afdcdef2b}} 
 \index{isae::AOptimizer@{isae::AOptimizer}!\_map\_frame\_velpar@{\_map\_frame\_velpar}}
@@ -473,9 +459,7 @@ map for accelerometer bias parameters \end{quote}
 
 
 
-\begin{quote}
-map for pose parameters \end{quote}
-
+map for velocity parameters 
 
 \mbox{\Hypertarget{classisae_1_1_a_optimizer_a59d1a335979957a419c965dcd9b684ac}\label{classisae_1_1_a_optimizer_a59d1a335979957a419c965dcd9b684ac}} 
 \index{isae::AOptimizer@{isae::AOptimizer}!\_map\_lmk\_posepar@{\_map\_lmk\_posepar}}
@@ -485,9 +469,7 @@ map for pose parameters \end{quote}
 
 
 
-\begin{quote}
-map for landmark point parameters \end{quote}
-
+map for landmark pose parameters 
 
 \mbox{\Hypertarget{classisae_1_1_a_optimizer_a32237b262d7c38ba0ddb5605701083a2}\label{classisae_1_1_a_optimizer_a32237b262d7c38ba0ddb5605701083a2}} 
 \index{isae::AOptimizer@{isae::AOptimizer}!\_map\_lmk\_ptpar@{\_map\_lmk\_ptpar}}
@@ -497,9 +479,7 @@ map for landmark point parameters \end{quote}
 
 
 
-\begin{quote}
-map for gyroscope bias parameters \end{quote}
-
+map for landmark point parameters 
 
 \mbox{\Hypertarget{classisae_1_1_a_optimizer_a5f7bc835fcae19f16d7506c7bc6f2a18}\label{classisae_1_1_a_optimizer_a5f7bc835fcae19f16d7506c7bc6f2a18}} 
 \index{isae::AOptimizer@{isae::AOptimizer}!\_marginalization@{\_marginalization}}

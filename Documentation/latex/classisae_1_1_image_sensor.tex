@@ -84,31 +84,19 @@ virtual bool \mbox{\hyperlink{classisae_1_1_image_sensor_aaee29b0f9f3e91755ed067
 \begin{DoxyCompactItemize}
 \item 
 Eigen\+::\+Matrix3d \mbox{\hyperlink{classisae_1_1_image_sensor_a164c13441b3cfa5a3730d6fecf3048fc}{\+\_\+calibration}}
-\item 
+\begin{DoxyCompactList}\small\item\em intrinsic matrix of the camera (sensor ?) \end{DoxyCompactList}\item 
 cv\+::\+Mat \mbox{\hyperlink{classisae_1_1_image_sensor_a28382de47bfca645ca7b8b73140adfb3}{\+\_\+raw\+\_\+data}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-intrinsic matrix of the camera (sensor ?) \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Raw image data. \end{DoxyCompactList}\item 
 std\+::vector$<$ cv\+::\+Mat $>$ \mbox{\hyperlink{classisae_1_1_image_sensor_a8e0cd62e9e3b991edf47f50c6820cbd6}{\+\_\+img\+\_\+pyr}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-Raw image data \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Image pyramid for multi-\/scale processing. \end{DoxyCompactList}\item 
 cv\+::\+Mat \mbox{\hyperlink{classisae_1_1_image_sensor_aa47a89f35f58da6230c1bf77df5476f8}{\+\_\+mask}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-Image pyramid for multi-\/scale processing \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Mask to ignore. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{namespaceisae_aef749e9df97878dd2b7af968a4f64efd}{typed\+\_\+vec\+\_\+features}} \mbox{\hyperlink{classisae_1_1_image_sensor_adc332f55f92e9209a5ea03bd2f0e82c6}{\+\_\+features}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-Mask to ignore \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Typed vector of features. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classisae_1_1_image_sensor_a15cbed078c3130dd40acd2efb858ff64}{\+\_\+has\+\_\+depth}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-Typed vector of features \end{quote}
-\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Is it a R\+G\+BD ? \end{DoxyCompactList}\item 
 std\+::mutex \mbox{\hyperlink{classisae_1_1_image_sensor_a3b9d44771694cab20993ff0f6893ea27}{\+\_\+cam\+\_\+mtx}}
-\begin{DoxyCompactList}\small\item\em \begin{quote}
-Is it a R\+G\+BD ? \end{quote}
-\end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -359,17 +347,15 @@ Clear all features of a specific type.
 \doxysubsubsection{\texorpdfstring{\_calibration}{\_calibration}}
 {\footnotesize\ttfamily Eigen\+::\+Matrix3d isae\+::\+Image\+Sensor\+::\+\_\+calibration\hspace{0.3cm}{\ttfamily [protected]}}
 
+
+
+intrinsic matrix of the camera (sensor ?) 
+
 \mbox{\Hypertarget{classisae_1_1_image_sensor_a3b9d44771694cab20993ff0f6893ea27}\label{classisae_1_1_image_sensor_a3b9d44771694cab20993ff0f6893ea27}} 
 \index{isae::ImageSensor@{isae::ImageSensor}!\_cam\_mtx@{\_cam\_mtx}}
 \index{\_cam\_mtx@{\_cam\_mtx}!isae::ImageSensor@{isae::ImageSensor}}
 \doxysubsubsection{\texorpdfstring{\_cam\_mtx}{\_cam\_mtx}}
 {\footnotesize\ttfamily std\+::mutex isae\+::\+Image\+Sensor\+::\+\_\+cam\+\_\+mtx\hspace{0.3cm}{\ttfamily [protected]}}
-
-
-
-\begin{quote}
-Is it a R\+G\+BD ? \end{quote}
-
 
 \mbox{\Hypertarget{classisae_1_1_image_sensor_adc332f55f92e9209a5ea03bd2f0e82c6}\label{classisae_1_1_image_sensor_adc332f55f92e9209a5ea03bd2f0e82c6}} 
 \index{isae::ImageSensor@{isae::ImageSensor}!\_features@{\_features}}
@@ -379,9 +365,7 @@ Is it a R\+G\+BD ? \end{quote}
 
 
 
-\begin{quote}
-Mask to ignore \end{quote}
-
+Typed vector of features. 
 
 \mbox{\Hypertarget{classisae_1_1_image_sensor_a15cbed078c3130dd40acd2efb858ff64}\label{classisae_1_1_image_sensor_a15cbed078c3130dd40acd2efb858ff64}} 
 \index{isae::ImageSensor@{isae::ImageSensor}!\_has\_depth@{\_has\_depth}}
@@ -391,9 +375,7 @@ Mask to ignore \end{quote}
 
 
 
-\begin{quote}
-Typed vector of features \end{quote}
-
+Is it a R\+G\+BD ? 
 
 \mbox{\Hypertarget{classisae_1_1_image_sensor_a8e0cd62e9e3b991edf47f50c6820cbd6}\label{classisae_1_1_image_sensor_a8e0cd62e9e3b991edf47f50c6820cbd6}} 
 \index{isae::ImageSensor@{isae::ImageSensor}!\_img\_pyr@{\_img\_pyr}}
@@ -403,9 +385,7 @@ Typed vector of features \end{quote}
 
 
 
-\begin{quote}
-Raw image data \end{quote}
-
+Image pyramid for multi-\/scale processing. 
 
 \mbox{\Hypertarget{classisae_1_1_image_sensor_aa47a89f35f58da6230c1bf77df5476f8}\label{classisae_1_1_image_sensor_aa47a89f35f58da6230c1bf77df5476f8}} 
 \index{isae::ImageSensor@{isae::ImageSensor}!\_mask@{\_mask}}
@@ -415,9 +395,7 @@ Raw image data \end{quote}
 
 
 
-\begin{quote}
-Image pyramid for multi-\/scale processing \end{quote}
-
+Mask to ignore. 
 
 \mbox{\Hypertarget{classisae_1_1_image_sensor_a28382de47bfca645ca7b8b73140adfb3}\label{classisae_1_1_image_sensor_a28382de47bfca645ca7b8b73140adfb3}} 
 \index{isae::ImageSensor@{isae::ImageSensor}!\_raw\_data@{\_raw\_data}}
@@ -427,9 +405,7 @@ Image pyramid for multi-\/scale processing \end{quote}
 
 
 
-\begin{quote}
-intrinsic matrix of the camera (sensor ?) \end{quote}
-
+Raw image data. 
 
 
 
