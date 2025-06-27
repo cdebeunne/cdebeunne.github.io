@@ -14,7 +14,7 @@ The configuration of your dataset should be stored in .yaml file, itself stored 
 The config.yaml file contains all the SLAM related parameters, and the dataset folder should contain a bunch of .yaml file that describes each dataset.
 For instance, the eth.yaml file (e.g. for the EUROC dataset) looks like:
 
-```
+~~~~~~~~~~~~~{.yaml}
 # General sensor definitions.
 dataset: EUROC
 ncam: 2
@@ -74,7 +74,7 @@ imu:
   accelerometer_noise_density: 2.0000e-2  # [ m / s^2 / sqrt(Hz) ]   ( accel "white noise" )
   accelerometer_random_walk: 3.0000e-1    # [ m / s^3 / sqrt(Hz) ]  ( accel bias diffusion )
   dt_imu_cam: 0.0                         # Temporal offset between IMU and camera in seconds
-``` 
+~~~~~~~~~~~~~
 
 So here you need to know precisely the transform between every sensor, as well as their intrinsic properties. A wonderfull toolbox that you can use for such a task is [kalibr](https://github.com/ethz-asl/kalibr) and [allan variance for ros](https://github.com/ori-drs/allan_variance_ros). Apart from that, a few parameters need some explanations:
 * SaDVIO supports several camera models such as double sphere or omni camera model, you can find some example in the dataset folder

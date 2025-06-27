@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SaDVIO: TUTOLIB</title>
+<title>SaDVIO: Use SaDVIO as a Library</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -62,12 +62,75 @@ $(function() {
 </div><!-- top -->
 <div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">TUTOLIB </div>  </div>
+<div class="title">Use SaDVIO as a Library </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>#Use SaDVIO as a Library </p>
+<div class="textblock"><p>Here is a small tutorial that shows how to use SaDVIO as an external C++ library, and eventually to run a VO/VIO thread in your code pipeline. A nice example can be found in the following <a href="https://github.com/cdebeunne/pg_fusion">code</a></p>
+<h1><a class="anchor" id="autotoc_md8"></a>
+Installation</h1>
+<p>First of all, you need to compile SaDVIO source code the <a href="https://github.com/ISAE-PNX/SaDVIO/tree/main/cpp">/cpp</a> folder as such </p><div class="fragment"><div class="line">mkdir build</div>
+<div class="line">cd build</div>
+<div class="line">cmake ..</div>
+<div class="line">sudo make install</div>
+</div><!-- fragment --><p>This will ensure that all the header are well installed on your machine</p>
+<h1><a class="anchor" id="autotoc_md9"></a>
+CMAKELISTS</h1>
+<p>In your <code>CMakeLists.txt</code> you can simply request the package with this line: </p><div class="fragment"><div class="line">find_package(isae_slam REQUIRED)</div>
+</div><!-- fragment --><p>And target link the library with the following tag: </p><div class="fragment"><div class="line">target_link_libraries(${PROJECT_NAME} ${ISAE_SLAM_LIBRARIES} ...)</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md10"></a>
+Handle a VO/VIO thread</h1>
+<p>To do so you simply need to load the config file and launch a thread from the <a href="https://github.com/ISAE-PNX/SaDVIO/blob/main/cpp/include/isaeslam/slamCore.h">SLAMCore</a> class. An example is provided in the following code snippet </p><div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="slam_parameters_8h.html">isaeslam/slamParameters.h</a>&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;yaml-cpp/yaml.h&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> <a class="code" href="_c_make_c_compiler_id_8c.html#a0ddf1224851353fc92bfbff6f499fa97">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> **argv) {</div>
+<div class="line">    rclcpp::init(argc, argv);</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Create the SLAM parameter object</span></div>
+<div class="line">    std::string path                                 = <span class="stringliteral">&quot;path/to/your/config/folder&quot;</span>;</div>
+<div class="line">    std::shared_ptr&lt;isae::SLAMParameters&gt; slam_param = std::make_shared&lt;isae::SLAMParameters&gt;(path);</div>
+<div class="line"> </div>
+<div class="line">    std::shared_ptr&lt;isae::SLAMCore&gt; SLAM;</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Load the proper SLAMCore depending on your config</span></div>
+<div class="line">    <span class="keywordflow">if</span> (slam_param-&gt;_config.slam_mode == <span class="stringliteral">&quot;bimono&quot;</span>)</div>
+<div class="line">        SLAM = std::make_shared&lt;isae::SLAMBiMono&gt;(slam_param);</div>
+<div class="line">    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (slam_param-&gt;_config.slam_mode == <span class="stringliteral">&quot;mono&quot;</span>)</div>
+<div class="line">        SLAM = std::make_shared&lt;isae::SLAMMono&gt;(slam_param);</div>
+<div class="line">    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (slam_param-&gt;_config.slam_mode == <span class="stringliteral">&quot;nofov&quot;</span>)</div>
+<div class="line">        SLAM = std::make_shared&lt;isae::SLAMNonOverlappingFov&gt;(slam_param);</div>
+<div class="line">    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (slam_param-&gt;_config.slam_mode == <span class="stringliteral">&quot;bimonovio&quot;</span>)</div>
+<div class="line">        SLAM = std::make_shared&lt;isae::SLAMBiMonoVIO&gt;(slam_param);</div>
+<div class="line">    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (slam_param-&gt;_config.slam_mode == <span class="stringliteral">&quot;monovio&quot;</span>)</div>
+<div class="line">        SLAM = std::make_shared&lt;isae::SLAMMonoVIO&gt;(slam_param);</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Launch SLAM thread</span></div>
+<div class="line">    std::thread odom_thread(&amp;<a class="code" href="classisae_1_1_s_l_a_m_core.html#a086ca26cc3db8a700c763228d1b739c0">isae::SLAMCore::runFullOdom</a>, SLAM);</div>
+<div class="line">    odom_thread.detach();</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Do things</span></div>
+<div class="line">    <span class="comment">// That you want</span></div>
+<div class="line">    <span class="comment">// To do</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>Once you have a thread that runs, you may develop your own SensorSubscriber to gather data, format them into frame and send them into the slam with the data provider: </p><div class="fragment"><div class="line">std::shared_ptr&lt;isae::Frame&gt; frame = getFrameFromData(data);</div>
+<div class="line">SLAM-&gt;_slam_param-&gt;getDataProvider()-&gt;addFrameToTheQueue(frame);</div>
+</div><!-- fragment --><p>Then, you can request the frames processed by the SLAM using the temporary variable <code>_frame_to_display</code> as such: </p><div class="fragment"><div class="line"><span class="comment">// Get the ouput from the SLAM</span></div>
+<div class="line">std::shared_ptr&lt;isae::Frame&gt; frame_ready  = _slam-&gt;_frame_to_display;;</div>
+<div class="line"><span class="keywordflow">while</span> (frame_ready == <span class="keyword">nullptr</span>) {</div>
+<div class="line">    frame_ready = _slam-&gt;_frame_to_display;</div>
+<div class="line">    std::this_thread::sleep_for(std::chrono::milliseconds(1));</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Get the pose of the frame (for instance)</span></div>
+<div class="line">Eigen::Affine3d T_w_f = frame_ready-&gt;getFrame2WorldTransform();</div>
+</div><!-- fragment --><p>A more complete example is given in the <a href="https://github.com/cdebeunne/pg_fusion/blob/main/pipeline.cpp">pipeline.cpp</a> source file of the pose graph fusion library. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
+<div class="ttc" id="a_c_make_c_compiler_id_8c_html_a0ddf1224851353fc92bfbff6f499fa97"><div class="ttname"><a href="_c_make_c_compiler_id_8c.html#a0ddf1224851353fc92bfbff6f499fa97">main</a></div><div class="ttdeci">int main(int argc, char *argv[])</div><div class="ttdef"><b>Definition:</b> CMakeCCompilerId.c:775</div></div>
+<div class="ttc" id="aslam_parameters_8h_html"><div class="ttname"><a href="slam_parameters_8h.html">slamParameters.h</a></div></div>
+<div class="ttc" id="aclassisae_1_1_s_l_a_m_core_html_a086ca26cc3db8a700c763228d1b739c0"><div class="ttname"><a href="classisae_1_1_s_l_a_m_core.html#a086ca26cc3db8a700c763228d1b739c0">isae::SLAMCore::runFullOdom</a></div><div class="ttdeci">void runFullOdom()</div><div class="ttdoc">Thread for the backend.</div><div class="ttdef"><b>Definition:</b> slamCore.cpp:607</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

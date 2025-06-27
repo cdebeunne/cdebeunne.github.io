@@ -1,1 +1,84 @@
-\#\+Use Sa\+D\+V\+IO as a Library 
+Here is a small tutorial that shows how to use Sa\+D\+V\+IO as an external C++ library, and eventually to run a V\+O/\+V\+IO thread in your code pipeline. A nice example can be found in the following \href{https://github.com/cdebeunne/pg_fusion}{\texttt{ code}}\hypertarget{md__t_u_t_o_l_i_b_autotoc_md8}{}\doxysection{Installation}\label{md__t_u_t_o_l_i_b_autotoc_md8}
+First of all, you need to compile Sa\+D\+V\+IO source code the \href{https://github.com/ISAE-PNX/SaDVIO/tree/main/cpp}{\texttt{ /cpp}} folder as such 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{mkdir build}
+\DoxyCodeLine{cd build}
+\DoxyCodeLine{cmake ..}
+\DoxyCodeLine{sudo make install}
+\end{DoxyCode}
+
+
+This will ensure that all the header are well installed on your machine\hypertarget{md__t_u_t_o_l_i_b_autotoc_md9}{}\doxysection{C\+M\+A\+K\+E\+L\+I\+S\+TS}\label{md__t_u_t_o_l_i_b_autotoc_md9}
+In your {\ttfamily C\+Make\+Lists.\+txt} you can simply request the package with this line\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{find\_package(isae\_slam REQUIRED)}
+\end{DoxyCode}
+
+
+And target link the library with the following tag\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{target\_link\_libraries(\$\{PROJECT\_NAME\} \$\{ISAE\_SLAM\_LIBRARIES\} ...)}
+\end{DoxyCode}
+\hypertarget{md__t_u_t_o_l_i_b_autotoc_md10}{}\doxysection{Handle a V\+O/\+V\+I\+O thread}\label{md__t_u_t_o_l_i_b_autotoc_md10}
+To do so you simply need to load the config file and launch a thread from the \href{https://github.com/ISAE-PNX/SaDVIO/blob/main/cpp/include/isaeslam/slamCore.h}{\texttt{ S\+L\+A\+M\+Core}} class. An example is provided in the following code snippet 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include "\mbox{\hyperlink{slam_parameters_8h}{isaeslam/slamParameters.h}}"}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include <yaml-\/cpp/yaml.h>}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{int} \mbox{\hyperlink{_c_make_c_compiler_id_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}}(\textcolor{keywordtype}{int} argc, \textcolor{keywordtype}{char} **argv) \{}
+\DoxyCodeLine{    rclcpp::init(argc, argv);}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{comment}{// Create the SLAM parameter object}}
+\DoxyCodeLine{    std::string path                                 = \textcolor{stringliteral}{"path/to/your/config/folder"};}
+\DoxyCodeLine{    std::shared\_ptr<isae::SLAMParameters> slam\_param = std::make\_shared<isae::SLAMParameters>(path);}
+\DoxyCodeLine{}
+\DoxyCodeLine{    std::shared\_ptr<isae::SLAMCore> SLAM;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{comment}{// Load the proper SLAMCore depending on your config}}
+\DoxyCodeLine{    \textcolor{keywordflow}{if} (slam\_param-\/>\_config.slam\_mode == \textcolor{stringliteral}{"bimono"})}
+\DoxyCodeLine{        SLAM = std::make\_shared<isae::SLAMBiMono>(slam\_param);}
+\DoxyCodeLine{    \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (slam\_param-\/>\_config.slam\_mode == \textcolor{stringliteral}{"mono"})}
+\DoxyCodeLine{        SLAM = std::make\_shared<isae::SLAMMono>(slam\_param);}
+\DoxyCodeLine{    \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (slam\_param-\/>\_config.slam\_mode == \textcolor{stringliteral}{"nofov"})}
+\DoxyCodeLine{        SLAM = std::make\_shared<isae::SLAMNonOverlappingFov>(slam\_param);}
+\DoxyCodeLine{    \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (slam\_param-\/>\_config.slam\_mode == \textcolor{stringliteral}{"bimonovio"})}
+\DoxyCodeLine{        SLAM = std::make\_shared<isae::SLAMBiMonoVIO>(slam\_param);}
+\DoxyCodeLine{    \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (slam\_param-\/>\_config.slam\_mode == \textcolor{stringliteral}{"monovio"})}
+\DoxyCodeLine{        SLAM = std::make\_shared<isae::SLAMMonoVIO>(slam\_param);}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{comment}{// Launch SLAM thread}}
+\DoxyCodeLine{    std::thread odom\_thread(\&\mbox{\hyperlink{classisae_1_1_s_l_a_m_core_a086ca26cc3db8a700c763228d1b739c0}{isae::SLAMCore::runFullOdom}}, SLAM);}
+\DoxyCodeLine{    odom\_thread.detach();}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{comment}{// Do things}}
+\DoxyCodeLine{    \textcolor{comment}{// That you want}}
+\DoxyCodeLine{    \textcolor{comment}{// To do}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+
+
+Once you have a thread that runs, you may develop your own Sensor\+Subscriber to gather data, format them into frame and send them into the slam with the data provider\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{std::shared\_ptr<isae::Frame> frame = getFrameFromData(data);}
+\DoxyCodeLine{SLAM-\/>\_slam\_param-\/>getDataProvider()-\/>addFrameToTheQueue(frame);}
+\end{DoxyCode}
+
+
+Then, you can request the frames processed by the S\+L\+AM using the temporary variable {\ttfamily \+\_\+frame\+\_\+to\+\_\+display} as such\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{// Get the ouput from the SLAM}}
+\DoxyCodeLine{std::shared\_ptr<isae::Frame> frame\_ready  = \_slam-\/>\_frame\_to\_display;;}
+\DoxyCodeLine{\textcolor{keywordflow}{while} (frame\_ready == \textcolor{keyword}{nullptr}) \{}
+\DoxyCodeLine{    frame\_ready = \_slam-\/>\_frame\_to\_display;}
+\DoxyCodeLine{    std::this\_thread::sleep\_for(std::chrono::milliseconds(1));}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// Get the pose of the frame (for instance)}}
+\DoxyCodeLine{Eigen::Affine3d T\_w\_f = frame\_ready-\/>getFrame2WorldTransform();}
+\end{DoxyCode}
+
+
+A more complete example is given in the \href{https://github.com/cdebeunne/pg_fusion/blob/main/pipeline.cpp}{\texttt{ pipeline.\+cpp}} source file of the pose graph fusion library. 

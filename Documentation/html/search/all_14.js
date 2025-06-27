@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['using_20sadvio_20with_20your_20own_20dataset_1032',['Using SaDVIO with your own Dataset',['../md__t_u_t_o.html',1,'']]],
+  ['using_20sadvio_20with_20your_20own_20dataset_1031',['Using SaDVIO with your own Dataset',['../md__t_u_t_o.html',1,'']]],
+  ['use_20sadvio_20as_20a_20library_1032',['Use SaDVIO as a Library',['../md__t_u_t_o_l_i_b.html',1,'']]],
   ['undist_5fmap_5fx_1033',['undist_map_x',['../structisae_1_1cam__config.html#a617d830c2584362cfe7b61ae699c6e98',1,'isae::cam_config']]],
   ['undist_5fmap_5fy_1034',['undist_map_y',['../structisae_1_1cam__config.html#adfe15bdb12bce87af197a524ad3b1660',1,'isae::cam_config']]],
   ['undistort_1035',['undistort',['../structisae_1_1cam__config.html#a94f301b9924a76dd22e2765ad0a42dca',1,'isae::cam_config']]],
